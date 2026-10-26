@@ -25,6 +25,7 @@
   ],
   "purpose": "846px popover card per nav trigger: two item groups (icon tile, title, description), optional featured item with thumbnail, a grey side column of links + arrow link, and a purple footer strip.",
   "retrievalEligible": false,
+  "placement": "chrome",
   "retrievalIneligibleReason": "Overlay popover that only exists while a nav trigger is hovered/clicked; it is navigation UI, not page content, and must never be retrieved as a section.",
   "variants": {
     "default": {
@@ -41,28 +42,74 @@
       },
       "observedOn": [
         "/",
+        "/about-us",
+        "/about-us/belonging",
+        "/about-us/careers",
+        "/about-us/values",
+        "/blog",
+        "/blog/lattice-joins-northwind",
+        "/blog/summit-announcements",
+        "/case-studies",
+        "/case-studies/basalt-health",
+        "/case-studies/halcyon",
+        "/case-studies/kestrel",
+        "/case-studies/meridian-partners",
+        "/certification",
+        "/champions",
+        "/community",
+        "/community/join",
+        "/contact",
         "/data-platforms/cobalt",
         "/data-platforms/driftway",
         "/data-platforms/helixa",
         "/data-platforms/northwind",
         "/data-platforms/quarry",
         "/data-platforms/stratus",
+        "/events",
         "/industry/energy-utilities",
         "/industry/financial-services",
         "/industry/healthcare",
         "/industry/manufacturing",
         "/industry/telecommunications",
+        "/learn",
+        "/legal/ai-principles",
+        "/modern-slavery-statement",
+        "/partners",
+        "/press",
+        "/pricing",
         "/product/ai",
+        "/product/analyst",
+        "/product/assistant",
         "/product/catalog",
+        "/product/charts",
         "/product/cost-optimization",
         "/product/data-modernization",
         "/product/data-trust",
         "/product/deploy",
         "/product/develop",
         "/product/embedded-analytics",
+        "/product/governance",
+        "/product/integrations",
+        "/product/lattice",
         "/product/mesh",
+        "/product/self-hosted-vs-platform",
         "/product/semantic-layer",
-        "/product/test-and-observe"
+        "/product/state",
+        "/product/test-and-observe",
+        "/product/what-is-lattice",
+        "/report-a-problem",
+        "/resources",
+        "/resources/analytics-lifecycle",
+        "/resources/on-demand",
+        "/resources/state-of-data-teams",
+        "/resources/webinars",
+        "/resources/webinars/charts-as-code",
+        "/resources/webinars/launch-showcase",
+        "/resources/whitepaper-control-plane",
+        "/security",
+        "/services",
+        "/signup",
+        "/terms-of-use"
       ]
     }
   },
@@ -73,24 +120,24 @@
         "type": "list",
         "minItems": 5,
         "maxItems": 5,
-        "observedIn": 23
+        "observedIn": 69
       },
       "menus[].featured.description": {
         "type": "text",
         "maxWords": 18,
         "maxChars": 98,
-        "observedIn": 23
+        "observedIn": 69
       },
       "menus[].featured.href": {
         "type": "link",
-        "observedIn": 23
+        "observedIn": 69
       },
       "menus[].featured.thumbnail": {
         "type": "asset",
         "referenceRoles": [
           "illustration.abstract"
         ],
-        "observedIn": 23,
+        "observedIn": 69,
         "generatedRoles": [
           "illustration.abstract"
         ]
@@ -99,42 +146,42 @@
         "type": "text",
         "maxWords": 0,
         "maxChars": 0,
-        "observedIn": 23
+        "observedIn": 69
       },
       "menus[].featured.title": {
         "type": "text",
         "maxWords": 3,
         "maxChars": 22,
-        "observedIn": 23
+        "observedIn": 69
       },
       "menus[].groups": {
         "type": "list",
         "minItems": 2,
         "maxItems": 2,
-        "observedIn": 115
+        "observedIn": 345
       },
       "menus[].groups[].items": {
         "type": "list",
         "minItems": 2,
         "maxItems": 6,
-        "observedIn": 230
+        "observedIn": 690
       },
       "menus[].groups[].items[].description": {
         "type": "text",
         "maxWords": 12,
         "maxChars": 66,
-        "observedIn": 736
+        "observedIn": 2208
       },
       "menus[].groups[].items[].href": {
         "type": "link",
-        "observedIn": 736
+        "observedIn": 2208
       },
       "menus[].groups[].items[].icon": {
         "type": "asset",
         "referenceRoles": [
           "icon.feature"
         ],
-        "observedIn": 736,
+        "observedIn": 2208,
         "generatedRoles": [
           "icon.feature"
         ]
@@ -143,67 +190,67 @@
         "type": "text",
         "maxWords": 0,
         "maxChars": 0,
-        "observedIn": 736
+        "observedIn": 2208
       },
       "menus[].groups[].items[].title": {
         "type": "text",
         "maxWords": 3,
         "maxChars": 14,
-        "observedIn": 736
+        "observedIn": 2208
       },
       "menus[].groups[].label": {
         "type": "text",
         "maxWords": 4,
         "maxChars": 21,
-        "observedIn": 230
+        "observedIn": 690
       },
       "menus[].side.action.href": {
         "type": "link",
-        "observedIn": 115
+        "observedIn": 345
       },
       "menus[].side.action.label": {
         "type": "text",
         "maxWords": 4,
         "maxChars": 20,
-        "observedIn": 115
+        "observedIn": 345
       },
       "menus[].side.label": {
         "type": "text",
         "maxWords": 2,
         "maxChars": 17,
-        "observedIn": 115
+        "observedIn": 345
       },
       "menus[].side.links": {
         "type": "list",
         "minItems": 6,
         "maxItems": 6,
-        "observedIn": 115
+        "observedIn": 345
       },
       "menus[].side.links[].href": {
         "type": "link",
-        "observedIn": 690
+        "observedIn": 2070
       },
       "menus[].side.links[].label": {
         "type": "text",
         "maxWords": 3,
         "maxChars": 15,
-        "observedIn": 690
+        "observedIn": 2070
       },
       "menus[].strip.href": {
         "type": "link",
-        "observedIn": 115
+        "observedIn": 345
       },
       "menus[].strip.label": {
         "type": "text",
         "maxWords": 12,
         "maxChars": 64,
-        "observedIn": 115
+        "observedIn": 345
       },
       "menus[].trigger": {
         "type": "text",
         "maxWords": 1,
         "maxChars": 9,
-        "observedIn": 115
+        "observedIn": 345
       }
     }
   },
@@ -214,7 +261,7 @@
         "referenceRoles": [
           "illustration.abstract"
         ],
-        "observedIn": 23,
+        "observedIn": 69,
         "generatedRoles": [
           "illustration.abstract"
         ]
@@ -224,7 +271,7 @@
         "referenceRoles": [
           "icon.feature"
         ],
-        "observedIn": 736,
+        "observedIn": 2208,
         "generatedRoles": [
           "icon.feature"
         ]
@@ -242,7 +289,8 @@
   },
   "constraints": {
     "position": "after:shell.navbar",
-    "maxPerPage": 1
+    "maxPerPage": 1,
+    "consecutiveVariants": []
   },
   "motion": {
     "allowedPatterns": [
@@ -266,6 +314,7 @@
       "behavior": "not rendered; items appear as drawer sub-levels"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "nav": 91,

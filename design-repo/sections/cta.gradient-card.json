@@ -16,6 +16,7 @@
   "additionalSources": [],
   "purpose": "Conversion card on gradient-05 with grain: heading-2, paragraph, primary.dark (+ optional tertiary.dark) large buttons.",
   "retrievalEligible": true,
+  "placement": "main",
   "variants": {
     "default": {
       "description": "single rendering",
@@ -34,7 +35,10 @@
         "/data-platforms/quarry",
         "/data-platforms/stratus",
         "/product/ai",
+        "/product/analyst",
+        "/product/assistant",
         "/product/catalog",
+        "/product/charts",
         "/product/deploy",
         "/product/develop",
         "/product/semantic-layer",
@@ -47,35 +51,35 @@
     "fields": {
       "body": {
         "type": "text",
-        "maxWords": 37,
+        "maxWords": 42,
         "maxChars": 227,
-        "observedIn": 12
+        "observedIn": 15
       },
       "primary.href": {
         "type": "link",
-        "observedIn": 12
+        "observedIn": 15
       },
       "primary.label": {
         "type": "text",
         "maxWords": 4,
         "maxChars": 17,
-        "observedIn": 12
+        "observedIn": 15
       },
       "tertiary.href": {
         "type": "link",
-        "observedIn": 5
+        "observedIn": 7
       },
       "tertiary.label": {
         "type": "text",
-        "maxWords": 2,
-        "maxChars": 11,
-        "observedIn": 5
+        "maxWords": 4,
+        "maxChars": 23,
+        "observedIn": 7
       },
       "title": {
         "type": "text",
         "maxWords": 13,
         "maxChars": 71,
-        "observedIn": 12
+        "observedIn": 15
       }
     }
   },
@@ -89,7 +93,8 @@
     "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
   },
   "constraints": {
-    "maxPerPage": 1
+    "maxPerPage": 1,
+    "consecutiveVariants": []
   },
   "motion": {
     "allowedPatterns": [
@@ -109,6 +114,7 @@
       "behavior": "p-40 card in the container; buttons stack full width below 768"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "/product/develop": [
@@ -129,9 +135,6 @@
       "/product/ai": [
         499.2
       ],
-      "/data-platforms/cobalt": [
-        417.6
-      ],
       "/data-platforms/northwind": [
         417.6
       ],
@@ -146,6 +149,18 @@
       ],
       "/data-platforms/driftway": [
         417.6
+      ],
+      "/data-platforms/cobalt": [
+        417.6
+      ],
+      "/product/assistant": [
+        441.6
+      ],
+      "/product/charts": [
+        475.2
+      ],
+      "/product/analyst": [
+        499.2
       ]
     }
   },

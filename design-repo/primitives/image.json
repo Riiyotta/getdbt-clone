@@ -6,6 +6,6 @@
     "image.radius"
   ],
   "evidence": [
-    "src/components/sections/parts.jsx:38-52"
+    "src/components/sections/parts.jsx:50-66"
   ]
 }

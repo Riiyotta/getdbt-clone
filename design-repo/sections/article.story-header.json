@@ -1,0 +1,192 @@
+{
+  "id": "article.story-header",
+  "title": "Customer-story header",
+  "semantic": {
+    "id": "article.story-header",
+    "category": "ARTICLE"
+  },
+  "source": {
+    "id": "component:StoryHeader",
+    "file": "src/components/article/StoryHeader.jsx",
+    "export": "StoryHeader",
+    "tag": "header",
+    "lines": "8-37",
+    "tagLine": 10
+  },
+  "additionalSources": [],
+  "purpose": "Page-opening header of a customer story: customer logo, H1 styled heading-2, a stats row (24/32 bold values) and a bg-blur quote card (4 cols); brush stroke behind. Classified ARTICLE, not HERO.",
+  "retrievalEligible": true,
+  "placement": "main",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "logo",
+        "name",
+        "quote",
+        "role",
+        "stats",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "stats": [
+          2,
+          3
+        ]
+      },
+      "observedOn": [
+        "/case-studies/basalt-health",
+        "/case-studies/halcyon",
+        "/case-studies/kestrel",
+        "/case-studies/meridian-partners"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "customer.logo"
+        ],
+        "observedIn": 4,
+        "generatedRoles": [
+          "customer.placeholder-logo"
+        ]
+      },
+      "logo.alt": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 17,
+        "observedIn": 4
+      },
+      "name": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 12,
+        "observedIn": 4
+      },
+      "quote": {
+        "type": "text",
+        "maxWords": 69,
+        "maxChars": 411,
+        "observedIn": 4
+      },
+      "role": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 30,
+        "observedIn": 4
+      },
+      "stats": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 3,
+        "observedIn": 4
+      },
+      "stats[].label": {
+        "type": "text",
+        "maxWords": 8,
+        "maxChars": 57,
+        "observedIn": 11
+      },
+      "stats[].value": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 11,
+        "observedIn": 11
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 17,
+        "maxChars": 108,
+        "observedIn": 4
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "customer.logo"
+        ],
+        "observedIn": 4,
+        "generatedRoles": [
+          "customer.placeholder-logo"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "customer.placeholder-logo"
+  ],
+  "style": {
+    "props": {
+      "strokeGradient": {
+        "kind": "token",
+        "allowed": [
+          "gradient.01"
+        ]
+      },
+      "strokeShape": {
+        "kind": "token",
+        "allowed": [
+          "stroke.s10",
+          "stroke.s5"
+        ]
+      }
+    },
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "position": "first-content",
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "stroke.draw-on"
+    ],
+    "requiredPatterns": [
+      "stroke.draw-on"
+    ],
+    "reducedMotionFallback": {
+      "stroke.draw-on": "render-final-state"
+    },
+    "stagger": "none"
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "8 cols text + 4 cols quote card, py 120"
+    },
+    {
+      "range": "<1024",
+      "behavior": "stacked; stats row scrolls horizontally below 640"
+    }
+  ],
+  "runtimeUi": [],
+  "measuredHeightsPx": {
+    "1440": {
+      "/case-studies/kestrel": [
+        626.5
+      ],
+      "/case-studies/meridian-partners": [
+        790
+      ],
+      "/case-studies/halcyon": [
+        650
+      ],
+      "/case-studies/basalt-health": [
+        622
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/article/StoryHeader.jsx:8-37"
+  ]
+}

@@ -16,6 +16,7 @@
   "additionalSources": [],
   "purpose": "Dark announcement band: co-brand lockup, one heading-3 news headline and a 'read more' link.",
   "retrievalEligible": true,
+  "placement": "main",
   "variants": {
     "default": {
       "description": "single rendering",
@@ -91,7 +92,8 @@
     "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
   },
   "constraints": {
-    "maxPerPage": 1
+    "maxPerPage": 1,
+    "consecutiveVariants": []
   },
   "motion": {
     "allowedPatterns": [
@@ -111,6 +113,7 @@
       "behavior": "py 40, flex column gap 24; headline wraps (3 lines at 375)"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "/": [

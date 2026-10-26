@@ -1,0 +1,315 @@
+{
+  "id": "directory.partner-locator",
+  "title": "Partner locator",
+  "semantic": {
+    "id": "directory.partner-locator",
+    "category": "DIRECTORY"
+  },
+  "source": {
+    "id": "component:Directory",
+    "file": "src/components/oneoffs/directory/Directory.jsx",
+    "export": "Directory",
+    "tag": "div",
+    "lines": "163-293",
+    "tagLine": 198
+  },
+  "additionalSources": [],
+  "purpose": "Static mock of a partner locator: filter sidebar (collapsible facet groups with counts, selected-facet chips), search field, top and bottom pagination and a 3-column grid of partner cards (wordmark, name, url line, clamped text, tier badge). Filters AND across groups, OR inside a group; 9 cards per page.",
+  "retrievalEligible": true,
+  "placement": "main",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "apply",
+        "clearAll",
+        "clearSearch",
+        "empty",
+        "filtersTitle",
+        "groups",
+        "next",
+        "partners",
+        "prev",
+        "search",
+        "toggleFilters"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "groups": [
+          3,
+          3
+        ],
+        "partners": [
+          27,
+          27
+        ]
+      },
+      "observedOn": [
+        "/partner-directory"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "apply": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 13,
+        "observedIn": 1
+      },
+      "clearAll": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 9,
+        "observedIn": 1
+      },
+      "clearSearch": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 12,
+        "observedIn": 1
+      },
+      "empty": {
+        "type": "text",
+        "maxWords": 9,
+        "maxChars": 54,
+        "observedIn": 1
+      },
+      "filtersTitle": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 7,
+        "observedIn": 1
+      },
+      "groups": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "observedIn": 1
+      },
+      "groups[].key": {
+        "type": "ref",
+        "observedIn": 3
+      },
+      "groups[].options": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 3,
+        "observedIn": 3
+      },
+      "groups[].options[]": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 15,
+        "observedIn": 7
+      },
+      "groups[].title": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 12,
+        "observedIn": 3
+      },
+      "next": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 4,
+        "observedIn": 1
+      },
+      "partners": {
+        "type": "list",
+        "minItems": 27,
+        "maxItems": 27,
+        "observedIn": 1
+      },
+      "partners[].badge": {
+        "type": "asset",
+        "referenceRoles": [
+          "award.badge"
+        ],
+        "observedIn": 27,
+        "generatedRoles": [
+          "rating.placeholder"
+        ]
+      },
+      "partners[].badge.alt": {
+        "type": "text",
+        "maxWords": 0,
+        "maxChars": 0,
+        "observedIn": 27
+      },
+      "partners[].id": {
+        "type": "integer",
+        "min": 1,
+        "max": 27,
+        "observedIn": 27
+      },
+      "partners[].logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "partner.wordmark"
+        ],
+        "observedIn": 27,
+        "generatedRoles": [
+          "customer.placeholder-logo"
+        ]
+      },
+      "partners[].logo.alt": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 20,
+        "observedIn": 27
+      },
+      "partners[].name": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 20,
+        "observedIn": 27
+      },
+      "partners[].regions": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 2,
+        "observedIn": 27
+      },
+      "partners[].regions[]": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 15,
+        "observedIn": 30
+      },
+      "partners[].service": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 10,
+        "observedIn": 27
+      },
+      "partners[].text": {
+        "type": "text",
+        "maxWords": 22,
+        "maxChars": 142,
+        "observedIn": 27
+      },
+      "partners[].tier": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 7,
+        "observedIn": 27
+      },
+      "partners[].url": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 66,
+        "observedIn": 27
+      },
+      "prev": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 8,
+        "observedIn": 1
+      },
+      "search": {
+        "type": "text",
+        "maxWords": 13,
+        "maxChars": 84,
+        "observedIn": 1
+      },
+      "toggleFilters": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 12,
+        "observedIn": 1
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "partners[].badge": {
+        "type": "asset",
+        "referenceRoles": [
+          "award.badge"
+        ],
+        "observedIn": 27,
+        "generatedRoles": [
+          "rating.placeholder"
+        ]
+      },
+      "partners[].logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "partner.wordmark"
+        ],
+        "observedIn": 27,
+        "generatedRoles": [
+          "customer.placeholder-logo"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "customer.placeholder-logo",
+    "rating.placeholder"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "accordion.height",
+      "static"
+    ],
+    "requiredPatterns": [
+      "accordion.height",
+      "static"
+    ],
+    "reducedMotionFallback": {
+      "accordion.height": "unchanged",
+      "static": "none-needed"
+    },
+    "stagger": "none"
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "275px filter column + results; 3 cards per row"
+    },
+    {
+      "range": "640-1023",
+      "behavior": "2 cards per row; filters in a toggled panel"
+    },
+    {
+      "range": "<640",
+      "behavior": "1 card per row; top pagination hidden"
+    }
+  ],
+  "runtimeUi": [
+    {
+      "part": "facet-filters",
+      "behavior": "checkbox groups filter instantly; group bodies collapse over 350ms"
+    },
+    {
+      "part": "search",
+      "behavior": "live text filter over all fields"
+    },
+    {
+      "part": "pagination",
+      "behavior": "9 per page, prev/next + numbered pages"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/partner-directory": [
+        1384.5
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/oneoffs/directory/Directory.jsx:163-293"
+  ]
+}

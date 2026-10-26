@@ -1,0 +1,207 @@
+{
+  "id": "interactive.course-tabs",
+  "title": "Course tabs",
+  "semantic": {
+    "id": "interactive.course-tabs",
+    "category": "INTERACTIVE"
+  },
+  "source": {
+    "id": "component:CourseTabs",
+    "file": "src/components/sections/CourseTabs.jsx",
+    "export": "CourseTabs",
+    "tag": "section",
+    "lines": "11-55",
+    "tagLine": 15
+  },
+  "additionalSources": [],
+  "purpose": "Left column (eyebrow, heading-2, paragraph, primary button) beside flex-grow light tabs; the active panel lists course cards (16:9 image, tag chip + duration, heading-4, paragraph, chevron link).",
+  "retrievalEligible": true,
+  "placement": "main",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "anchor",
+        "body",
+        "cta",
+        "eyebrow",
+        "tabs",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "tabs": [
+          3,
+          3
+        ]
+      },
+      "observedOn": [
+        "/learn"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "anchor": {
+        "type": "ref",
+        "observedIn": 1
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 23,
+        "maxChars": 150,
+        "observedIn": 1
+      },
+      "cta.href": {
+        "type": "link",
+        "observedIn": 1
+      },
+      "cta.label": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 15,
+        "observedIn": 1
+      },
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 14,
+        "observedIn": 1
+      },
+      "tabs": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "observedIn": 1
+      },
+      "tabs[].courses": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "observedIn": 3
+      },
+      "tabs[].courses[].body": {
+        "type": "text",
+        "maxWords": 44,
+        "maxChars": 274,
+        "observedIn": 6
+      },
+      "tabs[].courses[].cta.href": {
+        "type": "link",
+        "observedIn": 6
+      },
+      "tabs[].courses[].cta.label": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 12,
+        "observedIn": 6
+      },
+      "tabs[].courses[].duration": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 7,
+        "observedIn": 6
+      },
+      "tabs[].courses[].image": {
+        "type": "asset",
+        "referenceRoles": [
+          "resource.thumbnail"
+        ],
+        "observedIn": 6,
+        "generatedRoles": [
+          "resource.generated-thumbnail"
+        ]
+      },
+      "tabs[].courses[].image.alt": {
+        "type": "text",
+        "maxWords": 0,
+        "maxChars": 0,
+        "observedIn": 6
+      },
+      "tabs[].courses[].tag": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 12,
+        "observedIn": 6
+      },
+      "tabs[].courses[].title": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 21,
+        "observedIn": 6
+      },
+      "tabs[].label": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 17,
+        "observedIn": 3
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 7,
+        "maxChars": 39,
+        "observedIn": 1
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "tabs[].courses[].image": {
+        "type": "asset",
+        "referenceRoles": [
+          "resource.thumbnail"
+        ],
+        "observedIn": 6,
+        "generatedRoles": [
+          "resource.generated-thumbnail"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "resource.generated-thumbnail"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "tabs.instant"
+    ],
+    "requiredPatterns": [
+      "tabs.instant"
+    ],
+    "reducedMotionFallback": {
+      "tabs.instant": "none-needed"
+    },
+    "stagger": "full-width link with a chevron that shifts 6px on hover). Instant switch, no reveal."
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "4 cols text / 8 cols tabs"
+    },
+    {
+      "range": "<1024",
+      "behavior": "stacked; button hidden below 768; course cards stack below 640"
+    }
+  ],
+  "runtimeUi": [],
+  "measuredHeightsPx": {
+    "1440": {
+      "/learn": [
+        830.6
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/sections/CourseTabs.jsx:11-55"
+  ]
+}

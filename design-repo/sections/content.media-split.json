@@ -10,8 +10,8 @@
     "file": "src/components/sections/Split.jsx",
     "export": "Split",
     "tag": "section",
-    "lines": "17-97",
-    "tagLine": 79
+    "lines": "52-162",
+    "tagLine": 144
   },
   "additionalSources": [
     {
@@ -25,6 +25,7 @@
   ],
   "purpose": "Two-column row: eyebrow, heading-2, 1-2 paragraphs (optional bullets) and buttons beside an image, diagram or video poster.",
   "retrievalEligible": true,
+  "placement": "main",
   "variants": {
     "diagram": {
       "description": "homepage cost split: text left, 555x409 diagram right (first on mobile)",
@@ -36,7 +37,10 @@
         "title"
       ],
       "forbiddenFields": [
+        "after",
+        "anchor",
         "bullets",
+        "poster",
         "tertiary"
       ],
       "listSizes": {
@@ -50,31 +54,41 @@
       ]
     },
     "media-left": {
-      "description": "T1 intro: media column first at >=768",
+      "description": "image column first at >=768 (T1 intro, T12-T13 rows)",
       "requiredFields": [
-        "eyebrow",
-        "media",
         "paragraphs",
-        "primary",
         "title"
       ],
-      "forbiddenFields": [
-        "bullets",
-        "tertiary"
-      ],
+      "forbiddenFields": [],
       "listSizes": {
+        "after": [
+          1,
+          1
+        ],
+        "bullets": [
+          3,
+          3
+        ],
         "paragraphs": [
           1,
           2
         ]
       },
       "observedOn": [
+        "/about-us/belonging",
+        "/certification",
+        "/partners",
+        "/product/analyst",
         "/product/catalog",
         "/product/deploy",
         "/product/develop",
+        "/product/governance",
         "/product/mesh",
         "/product/semantic-layer",
-        "/product/test-and-observe"
+        "/product/state",
+        "/product/test-and-observe",
+        "/security",
+        "/services"
       ]
     },
     "video": {
@@ -86,7 +100,10 @@
         "title"
       ],
       "forbiddenFields": [
+        "after",
+        "anchor",
         "bullets",
+        "poster",
         "primary",
         "tertiary"
       ],
@@ -101,62 +118,102 @@
       ]
     },
     "text-left": {
-      "description": "T3 platform split: text first with bullets + primary/tertiary buttons",
+      "description": "text first with bullets (optional bold lead-ins) and primary + tertiary buttons",
       "requiredFields": [
-        "bullets",
-        "media",
         "paragraphs",
         "title"
       ],
       "forbiddenFields": [
-        "eyebrow"
+        "anchor"
       ],
       "listSizes": {
+        "after": [
+          1,
+          2
+        ],
         "bullets": [
           3,
           4
         ],
         "paragraphs": [
           1,
-          1
+          3
         ]
       },
       "observedOn": [
+        "/about-us/belonging",
+        "/certification",
         "/data-platforms/quarry",
-        "/data-platforms/stratus"
+        "/data-platforms/stratus",
+        "/partners",
+        "/product/charts",
+        "/product/governance",
+        "/product/lattice",
+        "/product/state",
+        "/product/what-is-lattice",
+        "/resources/webinars/launch-showcase",
+        "/security",
+        "/services"
       ]
     }
   },
   "content": {
     "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
     "fields": {
+      "after": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 2,
+        "observedIn": 4
+      },
+      "after[]": {
+        "type": "text",
+        "maxWords": 29,
+        "maxChars": 186,
+        "observedIn": 5
+      },
+      "anchor": {
+        "type": "ref",
+        "observedIn": 1
+      },
       "bullets": {
         "type": "list",
         "minItems": 3,
         "maxItems": 4,
-        "observedIn": 2
+        "observedIn": 6
       },
-      "bullets[]": {
+      "bullets[].lead": {
         "type": "text",
-        "maxWords": 11,
-        "maxChars": 67,
-        "observedIn": 7
+        "maxWords": 4,
+        "maxChars": 28,
+        "observedIn": 12
+      },
+      "bullets[].text": {
+        "type": "text",
+        "maxWords": 18,
+        "maxChars": 110,
+        "observedIn": 19
       },
       "eyebrow": {
         "type": "text",
         "maxWords": 6,
         "maxChars": 40,
-        "observedIn": 8
+        "observedIn": 19
       },
       "media": {
         "type": "asset",
         "referenceRoles": [
+          "figure.article-image",
           "illustration.diagram",
+          "photo.composite-scene",
+          "product.screenshot",
           "video.poster"
         ],
-        "observedIn": 10,
+        "observedIn": 33,
         "generatedRoles": [
           "illustration.generated-diagram",
+          "photo.generated-scene",
+          "product.generated-visual",
           "video.placeholder-poster"
         ]
       },
@@ -164,45 +221,61 @@
         "type": "text",
         "maxWords": 11,
         "maxChars": 69,
-        "observedIn": 10
+        "observedIn": 33
       },
       "paragraphs": {
         "type": "list",
         "minItems": 1,
-        "maxItems": 2,
-        "observedIn": 10
+        "maxItems": 3,
+        "observedIn": 37
       },
       "paragraphs[]": {
         "type": "text",
-        "maxWords": 51,
-        "maxChars": 316,
-        "observedIn": 14
+        "maxWords": 66,
+        "maxChars": 429,
+        "observedIn": 52
+      },
+      "poster": {
+        "type": "asset",
+        "referenceRoles": [
+          "video.poster"
+        ],
+        "observedIn": 4,
+        "generatedRoles": [
+          "video.placeholder-poster"
+        ]
+      },
+      "poster.alt": {
+        "type": "text",
+        "maxWords": 8,
+        "maxChars": 50,
+        "observedIn": 4
       },
       "primary.href": {
         "type": "link",
-        "observedIn": 8
+        "observedIn": 25
       },
       "primary.label": {
         "type": "text",
-        "maxWords": 5,
-        "maxChars": 30,
-        "observedIn": 8
+        "maxWords": 9,
+        "maxChars": 40,
+        "observedIn": 25
       },
       "tertiary.href": {
         "type": "link",
-        "observedIn": 1
+        "observedIn": 4
       },
       "tertiary.label": {
         "type": "text",
-        "maxWords": 3,
-        "maxChars": 13,
-        "observedIn": 1
+        "maxWords": 5,
+        "maxChars": 35,
+        "observedIn": 4
       },
       "title": {
         "type": "text",
         "maxWords": 12,
         "maxChars": 66,
-        "observedIn": 10
+        "observedIn": 37
       }
     }
   },
@@ -211,12 +284,27 @@
       "media": {
         "type": "asset",
         "referenceRoles": [
+          "figure.article-image",
           "illustration.diagram",
+          "photo.composite-scene",
+          "product.screenshot",
           "video.poster"
         ],
-        "observedIn": 10,
+        "observedIn": 33,
         "generatedRoles": [
           "illustration.generated-diagram",
+          "photo.generated-scene",
+          "product.generated-visual",
+          "video.placeholder-poster"
+        ]
+      },
+      "poster": {
+        "type": "asset",
+        "referenceRoles": [
+          "video.poster"
+        ],
+        "observedIn": 4,
+        "generatedRoles": [
           "video.placeholder-poster"
         ]
       }
@@ -225,14 +313,36 @@
   },
   "generatedAssetRoles": [
     "illustration.generated-diagram",
+    "photo.generated-scene",
+    "product.generated-visual",
     "video.placeholder-poster"
   ],
   "style": {
-    "props": {},
+    "props": {
+      "columns": {
+        "kind": "enum",
+        "allowed": [
+          "5/7",
+          "6/6",
+          "7/4",
+          "7/5"
+        ]
+      },
+      "topPadding": {
+        "kind": "enum",
+        "allowed": [
+          "default",
+          "none"
+        ]
+      }
+    },
     "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
   },
   "constraints": {
-    "maxPerPage": 1
+    "maxPerPage": 4,
+    "consecutiveVariants": [
+      "text-left"
+    ]
   },
   "motion": {
     "allowedPatterns": [
@@ -244,7 +354,7 @@
     "reducedMotionFallback": {
       "reveal.fade-up": "show-immediately"
     },
-    "stagger": "Reveal (measured on develop, bigquery, microsoft-fabric, ai): the first column starts at 0ms, the second at 200ms. Inside the text column each direct item steps 100ms (eyebrow, h2, the *:mb-6 wrapper, the button row); inside the wrapper the paragraphs / list step 100ms from the wrapper, each <li> 100ms from its list, each button 100ms from its row. The image column wraps the <img> in an animated div at the column's delay; the video poster column has no inner target. default:  img col 0 > div 0 > img 0 | text 200: eyebrow 200, h2 300, wrap 400 (p 400/500), buttons 500 textLeft: text 0: h2 0, wrap 100 (p 100, ul 200, li 200/300/400), buttons 200 (a 200/300) | img 200 | reveal targets with inline delays, see src/components/DiagramSection.jsx:6-37"
+    "stagger": "Reveal (measured on develop, bigquery, microsoft-fabric, ai): the first column starts at 0ms, the second at 200ms. Inside the text column each direct item steps 100ms (eyebrow, h2, the *:mb-6 wrapper, the button row); inside the wrapper the paragraphs / list step 100ms from the wrapper, each <li> 100ms from its list, each button 100ms from its row. The image column wraps the <img> in an animated div at the column's delay; the video poster column has no inner target. default:  img col 0 > div 0 > img 0 | text 200: eyebrow 200, h2 300, wrap 400 (p 400/500), buttons 500 textLeft: text 0: h2 0, wrap 100 (p 100, ul 200, li 200/300/400), buttons 200 (a 200/300) | img 200 T12-T13 additions (specs/T12-T13.md B \"N-split additions\"): - `cols` = left/right widths at >=1024: '6/6' (default), '7/5', '5/7', '7/4' (media at col 9) - `poster` puts a 16:9 video poster in the media column of any variant - paragraphs may be rich: an array of strings and { b } (bold) / { a, to } (link) runs; every run, text runs included (as <span>s), fades in its own step: run j at paragraph + 100j (dbt-certification) - bullets may carry a bold lead-in: { lead, text } -> <strong> at the <li>'s delay, <span> text +100 - `plainBody`: the paragraphs inside the *:mb-6 wrapper are not animated themselves (certification video split: only the wrapper fades) - `pt0` for the second and later rows of a run of splits | reveal targets with inline delays, see src/components/DiagramSection.jsx:6-37"
   },
   "responsive": [
     {
@@ -260,6 +370,7 @@
       "behavior": "stacked; media first (media-left, diagram), text first (text-left)"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "/": [
@@ -291,11 +402,62 @@
       ],
       "/data-platforms/stratus": [
         439.2
+      ],
+      "/resources/webinars/launch-showcase": [
+        703.2
+      ],
+      "/security": [
+        634,
+        571
+      ],
+      "/certification": [
+        412.6,
+        604.2
+      ],
+      "/about-us/belonging": [
+        579,
+        515,
+        579.2
+      ],
+      "/partners": [
+        475,
+        475
+      ],
+      "/services": [
+        604,
+        527
+      ],
+      "/product/what-is-lattice": [
+        740,
+        741
+      ],
+      "/product/lattice": [
+        472.3,
+        443.2,
+        528
+      ],
+      "/product/state": [
+        676,
+        508.8,
+        491.2
+      ],
+      "/product/charts": [
+        671
+      ],
+      "/product/governance": [
+        457,
+        634,
+        471,
+        634
+      ],
+      "/product/analyst": [
+        472.3,
+        472.3
       ]
     }
   },
   "evidence": [
-    "src/components/sections/Split.jsx:17-97",
+    "src/components/sections/Split.jsx:52-162",
     "src/components/DiagramSection.jsx:6-37"
   ]
 }

@@ -1,7 +1,8 @@
 {
   "version": "1.0.0",
   "themes": [
-    "light"
+    "light",
+    "event"
   ],
   "categories": [
     "blur",
@@ -24,6 +25,46 @@
   ],
   "overrides": "PageSpecs carry styling only through node.style props listed in styleProps (schema-closed per section). There is no per-instance colour, spacing or font override field; any style value must be a catalog token path of an allowed category and one of the values observed in the clone for that section (theme/token combination).",
   "styleProps": {
+    "bottomPadding": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "hero.split": [
+          "default",
+          "none"
+        ]
+      }
+    },
+    "columns": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "hero.split": [
+          "6/6",
+          "7/5"
+        ],
+        "content.media-split": [
+          "5/7",
+          "6/6",
+          "7/4",
+          "7/5"
+        ],
+        "features.card-grid": [
+          "3",
+          "4"
+        ]
+      }
+    },
+    "leadSize": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "hero.split": [
+          "default",
+          "large"
+        ]
+      }
+    },
     "strokeGradient": {
       "kind": "token",
       "categories": [
@@ -33,14 +74,33 @@
         "hero.split": [
           "gradient.01",
           "gradient.02",
-          "gradient.05"
+          "gradient.05",
+          "gradient.22"
         ],
         "hero.center": [
           "gradient.01"
         ],
+        "features.card-grid": [
+          "gradient.01",
+          "gradient.02",
+          "gradient.05",
+          "gradient.22"
+        ],
         "features.tabs-dark": [
           "gradient.01",
           "gradient.12"
+        ],
+        "editorial.community-bento": [
+          "gradient.01"
+        ],
+        "listing.case-grid": [
+          "gradient.01"
+        ],
+        "article.story-header": [
+          "gradient.01"
+        ],
+        "form.form-header": [
+          "gradient.01"
         ]
       }
     },
@@ -51,16 +111,107 @@
       ],
       "allowedBySection": {
         "hero.split": [
+          "stroke.s1",
           "stroke.s3",
           "stroke.s4",
-          "stroke.s5"
+          "stroke.s5",
+          "stroke.s9"
         ],
         "hero.center": [
+          "stroke.s10",
+          "stroke.s3",
           "stroke.s4",
-          "stroke.s8"
+          "stroke.s8",
+          "stroke.s9"
+        ],
+        "features.card-grid": [
+          "stroke.s10",
+          "stroke.s2",
+          "stroke.s4",
+          "stroke.s6",
+          "stroke.s7",
+          "stroke.s9"
+        ],
+        "features.tabs-dark": [
+          "stroke.s2",
+          "stroke.s6",
+          "stroke.s9"
         ],
         "social-proof.quote-band": [
           "stroke.s1"
+        ],
+        "editorial.community-bento": [
+          "stroke.s1"
+        ],
+        "listing.case-grid": [
+          "stroke.s10"
+        ],
+        "article.story-header": [
+          "stroke.s10",
+          "stroke.s5"
+        ],
+        "form.form-header": [
+          "stroke.s1"
+        ]
+      }
+    },
+    "background": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "content.statement": [
+          "band",
+          "white"
+        ],
+        "features.card-grid": [
+          "wash",
+          "white"
+        ],
+        "social-proof.quote-band": [
+          "wash",
+          "white"
+        ]
+      }
+    },
+    "titleElement": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "content.statement": [
+          "heading",
+          "text-span"
+        ]
+      }
+    },
+    "width": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "content.statement": [
+          "column",
+          "wide"
+        ],
+        "listing.header": [
+          "column",
+          "wide"
+        ]
+      }
+    },
+    "topPadding": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "content.media-split": [
+          "default",
+          "none"
+        ],
+        "features.checklist": [
+          "default",
+          "none"
+        ],
+        "legal.policy-body": [
+          "default",
+          "none"
         ]
       }
     },
@@ -93,10 +244,35 @@
         "features.card-grid": [
           "default",
           "none"
-        ],
-        "features.checklist": [
-          "default",
-          "none"
+        ]
+      }
+    },
+    "revealTrigger": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "features.card-grid": [
+          "load",
+          "scroll"
+        ]
+      }
+    },
+    "surface": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "features.card-grid": [
+          "dark",
+          "light"
+        ]
+      }
+    },
+    "mobileOrder": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "features.gradient-panel": [
+          "source"
         ]
       }
     },
@@ -110,6 +286,75 @@
           "gradient.02",
           "gradient.05",
           "gradient.12"
+        ]
+      }
+    },
+    "mediaCorners": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "features.tabs-dark": [
+          "rounded",
+          "square"
+        ]
+      }
+    },
+    "mediaFrame": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "features.tabs-dark": [
+          "bare",
+          "captioned"
+        ]
+      }
+    },
+    "imagePlacement": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "features.checklist": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    "itemStyle": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "features.checklist": [
+          "headed",
+          "plain"
+        ]
+      }
+    },
+    "chapterLevel": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "article.story-body": [
+          "h3"
+        ],
+        "article.post-body": [
+          "h2"
+        ],
+        "article.guide-body": [
+          "h2"
+        ],
+        "legal.policy-body": [
+          "h2",
+          "h3"
+        ]
+      }
+    },
+    "titleSize": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "form.form-header": [
+          "heading-1",
+          "heading-2"
         ]
       }
     }
@@ -138,9 +383,13 @@
     "polymath-text",
     "bugrino",
     "inter-variable-fallback",
-    "Inter",
     "Helvetica Neue"
   ],
+  "scopedFonts": {
+    "font.family.summit-display": "theme event only",
+    "font.family.summit-button": "theme event only",
+    "font.family.summit-body": "theme event only"
+  },
   "unsupportedFontsEvidence": "CLONE_SPEC.md:142-146",
   "rejects": [
     "TOKEN_UNKNOWN",

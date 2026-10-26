@@ -113,6 +113,492 @@
       "file": "components/light-tab-list.json"
     },
     {
+      "id": "article.guide-body",
+      "kind": "section",
+      "file": "sections/article.guide-body.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "blocks",
+          "form",
+          "promo",
+          "toc"
+        ],
+        "style": [
+          "chapterLevel"
+        ],
+        "motion": [
+          "scroll.spy-toc",
+          "sticky.pin"
+        ],
+        "assetRoles": [
+          "icon.feature",
+          "illustration.generated-diagram",
+          "photo.generated-scene"
+        ]
+      }
+    },
+    {
+      "id": "article.guide-header",
+      "kind": "section",
+      "file": "sections/article.guide-header.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "author",
+          "breadcrumb",
+          "buttons",
+          "image",
+          "readTime",
+          "tag",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "illustration.generated-diagram",
+          "person.fictional-avatar",
+          "photo.generated-scene"
+        ]
+      }
+    },
+    {
+      "id": "article.post-body",
+      "kind": "section",
+      "file": "sections/article.post-body.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "blocks",
+          "header",
+          "promos"
+        ],
+        "style": [
+          "chapterLevel"
+        ],
+        "motion": [
+          "static",
+          "sticky.pin"
+        ],
+        "assetRoles": [
+          "person.fictional-avatar",
+          "resource.generated-thumbnail",
+          "video.placeholder-poster"
+        ]
+      }
+    },
+    {
+      "id": "article.progress-bar",
+      "kind": "section",
+      "file": "sections/article.progress-bar.json",
+      "retrievalEligible": false,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [],
+        "style": [],
+        "motion": [
+          "scroll.progress-bar"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "article.related-stories",
+      "kind": "section",
+      "file": "sections/article.related-stories.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "cards",
+          "eyebrow",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "customer.placeholder-logo"
+        ]
+      }
+    },
+    {
+      "id": "article.story-body",
+      "kind": "section",
+      "file": "sections/article.story-body.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "blocks",
+          "meta"
+        ],
+        "style": [
+          "chapterLevel"
+        ],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "customer.placeholder-logo",
+          "illustration.generated-diagram",
+          "photo.generated-scene"
+        ]
+      }
+    },
+    {
+      "id": "article.story-header",
+      "kind": "section",
+      "file": "sections/article.story-header.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "logo",
+          "name",
+          "quote",
+          "role",
+          "stats",
+          "title"
+        ],
+        "style": [
+          "strokeGradient",
+          "strokeShape"
+        ],
+        "motion": [
+          "stroke.draw-on"
+        ],
+        "assetRoles": [
+          "customer.placeholder-logo"
+        ]
+      }
+    },
+    {
+      "id": "community.about-band",
+      "kind": "section",
+      "file": "sections/community.about-band.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "primary",
+          "tertiary",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "community.dark-quote",
+      "kind": "section",
+      "file": "sections/community.dark-quote.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "avatar",
+          "name",
+          "quote",
+          "role"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "person.fictional-avatar"
+        ]
+      }
+    },
+    {
+      "id": "community.icon-cards",
+      "kind": "section",
+      "file": "sections/community.icon-cards.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "activity",
+          "support"
+        ],
+        "content": [
+          "body",
+          "eyebrow",
+          "items",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "icon.feature"
+        ]
+      }
+    },
+    {
+      "id": "community.member-grid",
+      "kind": "section",
+      "file": "sections/community.member-grid.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "anchor",
+          "body",
+          "cta",
+          "members",
+          "primary",
+          "secondary",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "hover.lift"
+        ],
+        "assetRoles": [
+          "photo.generated-scene"
+        ]
+      }
+    },
+    {
+      "id": "community.story-slider",
+      "kind": "section",
+      "file": "sections/community.story-slider.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "cards",
+          "eyebrow",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "slider.drag"
+        ],
+        "assetRoles": [
+          "photo.generated-scene"
+        ]
+      }
+    },
+    {
+      "id": "company.compliance-rows",
+      "kind": "section",
+      "file": "sections/company.compliance-rows.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "rows",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "rating.placeholder"
+        ]
+      }
+    },
+    {
+      "id": "company.leadership-list",
+      "kind": "section",
+      "file": "sections/company.leadership-list.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "linkLabel",
+          "people",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "person.fictional-avatar"
+        ]
+      }
+    },
+    {
+      "id": "company.people-grid",
+      "kind": "section",
+      "file": "sections/company.people-grid.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "people",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "person.fictional-avatar"
+        ]
+      }
+    },
+    {
+      "id": "company.program-list",
+      "kind": "section",
+      "file": "sections/company.program-list.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "cta",
+          "items",
+          "paragraphs",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "icon.feature"
+        ]
+      }
+    },
+    {
+      "id": "company.role-list",
+      "kind": "section",
+      "file": "sections/company.role-list.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "allLabel",
+          "anchor",
+          "applyLabel",
+          "groups",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "comparison.compare-table",
+      "kind": "section",
+      "file": "sections/comparison.compare-table.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "heads",
+          "rows",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "comparison.journey-columns",
+      "kind": "section",
+      "file": "sections/comparison.journey-columns.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "axis",
+          "body",
+          "columns",
+          "eyebrow",
+          "highlight",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "brand.placeholder-mark"
+        ]
+      }
+    },
+    {
+      "id": "comparison.plan-matrix",
+      "kind": "section",
+      "file": "sections/comparison.plan-matrix.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "groups",
+          "heads",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "slider.drag",
+          "sticky.pin"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
       "id": "content.media-split",
       "kind": "section",
       "file": "sections/content.media-split.json",
@@ -125,20 +611,28 @@
           "video"
         ],
         "content": [
+          "after",
+          "anchor",
           "bullets",
           "eyebrow",
           "media",
           "paragraphs",
+          "poster",
           "primary",
           "tertiary",
           "title"
         ],
-        "style": [],
+        "style": [
+          "columns",
+          "topPadding"
+        ],
         "motion": [
           "reveal.fade-up"
         ],
         "assetRoles": [
           "illustration.generated-diagram",
+          "photo.generated-scene",
+          "product.generated-visual",
           "video.placeholder-poster"
         ]
       }
@@ -158,10 +652,16 @@
         "content": [
           "body",
           "diagram",
+          "eyebrow",
+          "note",
           "title",
           "video"
         ],
-        "style": [],
+        "style": [
+          "background",
+          "titleElement",
+          "width"
+        ],
         "motion": [
           "static"
         ],
@@ -172,6 +672,29 @@
       }
     },
     {
+      "id": "cta.champions-closing",
+      "kind": "section",
+      "file": "sections/cta.champions-closing.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "checks",
+          "cta",
+          "eyebrow",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
       "id": "cta.closing-band",
       "kind": "section",
       "file": "sections/cta.closing-band.json",
@@ -179,14 +702,20 @@
       "settable": {
         "variant": [
           "plain",
-          "with-aside"
+          "wide",
+          "with-aside",
+          "with-checklist",
+          "with-stats"
         ],
         "content": [
           "aside",
           "body",
+          "bodySecond",
+          "checklist",
           "eyebrow",
           "primary",
           "secondary",
+          "stats",
           "title"
         ],
         "style": [],
@@ -216,6 +745,27 @@
         "style": [],
         "motion": [
           "reveal.fade-up"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "cta.dev-path-dialog",
+      "kind": "section",
+      "file": "sections/cta.dev-path-dialog.json",
+      "retrievalEligible": false,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "close",
+          "rows",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "dialog.scale-fade"
         ],
         "assetRoles": []
       }
@@ -266,6 +816,112 @@
       }
     },
     {
+      "id": "directory.header",
+      "kind": "section",
+      "file": "sections/directory.header.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "directory.partner-locator",
+      "kind": "section",
+      "file": "sections/directory.partner-locator.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "apply",
+          "clearAll",
+          "clearSearch",
+          "empty",
+          "filtersTitle",
+          "groups",
+          "next",
+          "partners",
+          "prev",
+          "search",
+          "toggleFilters"
+        ],
+        "style": [],
+        "motion": [
+          "accordion.height",
+          "static"
+        ],
+        "assetRoles": [
+          "customer.placeholder-logo",
+          "rating.placeholder"
+        ]
+      }
+    },
+    {
+      "id": "editorial.community-bento",
+      "kind": "section",
+      "file": "sections/editorial.community-bento.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "feature",
+          "meetup",
+          "member",
+          "picture",
+          "title",
+          "topics"
+        ],
+        "style": [
+          "strokeGradient",
+          "strokeShape"
+        ],
+        "motion": [
+          "static",
+          "stroke.idle"
+        ],
+        "assetRoles": [
+          "person.fictional-avatar",
+          "photo.generated-scene"
+        ]
+      }
+    },
+    {
+      "id": "editorial.dark-news-strip",
+      "kind": "section",
+      "file": "sections/editorial.dark-news-strip.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "cta",
+          "eyebrow",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "reveal.fade-up"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
       "id": "editorial.news-band",
       "kind": "section",
       "file": "sections/editorial.news-band.json",
@@ -313,18 +969,172 @@
       }
     },
     {
+      "id": "event.closing-band",
+      "kind": "section",
+      "file": "sections/event.closing-band.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "cta",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "event.highlight-rows",
+      "kind": "section",
+      "file": "sections/event.highlight-rows.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "rows",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "event.photo-band",
+      "kind": "section",
+      "file": "sections/event.photo-band.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "image"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "photo.generated-scene"
+        ]
+      }
+    },
+    {
+      "id": "event.photo-gallery",
+      "kind": "section",
+      "file": "sections/event.photo-gallery.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "photos"
+        ],
+        "style": [],
+        "motion": [
+          "marquee.photo-loop"
+        ],
+        "assetRoles": [
+          "photo.generated-scene"
+        ]
+      }
+    },
+    {
+      "id": "event.quote-band",
+      "kind": "section",
+      "file": "sections/event.quote-band.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "name",
+          "quote",
+          "role"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "event.recap",
+      "kind": "section",
+      "file": "sections/event.recap.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "cta",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "event.sponsor-logos",
+      "kind": "section",
+      "file": "sections/event.sponsor-logos.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "cta",
+          "tiers",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "customer.placeholder-logo"
+        ]
+      }
+    },
+    {
       "id": "features.card-grid",
       "kind": "section",
       "file": "sections/features.card-grid.json",
       "retrievalEligible": true,
       "settable": {
         "variant": [
+          "border-card",
           "bordered-link",
           "four-column",
           "image-card",
+          "inline-icon",
+          "logo-card",
+          "plain-icon",
+          "stat-card",
           "wash-icon"
         ],
         "content": [
+          "anchor",
           "body",
           "cards",
           "eyebrow",
@@ -334,17 +1144,26 @@
           "title"
         ],
         "style": [
+          "background",
+          "columns",
           "headerAlign",
           "iconSize",
-          "paddingTop"
+          "paddingTop",
+          "revealTrigger",
+          "strokeGradient",
+          "strokeShape",
+          "surface"
         ],
         "motion": [
-          "reveal.fade-up"
+          "reveal.fade-up",
+          "stroke.draw-on",
+          "stroke.still"
         ],
         "assetRoles": [
           "icon.feature",
           "partner.placeholder-lockup",
-          "photo.generated-scene"
+          "photo.generated-scene",
+          "platform.placeholder-icon"
         ]
       }
     },
@@ -358,23 +1177,29 @@
           "before-after",
           "columns",
           "grid",
-          "split"
+          "split",
+          "split-list"
         ],
         "content": [
           "after",
           "before",
           "body",
+          "eyebrow",
           "image",
           "items",
+          "paragraphs",
           "title"
         ],
         "style": [
-          "paddingTop"
+          "imagePlacement",
+          "itemStyle",
+          "topPadding"
         ],
         "motion": [
           "reveal.fade-up"
         ],
         "assetRoles": [
+          "icon.feature",
           "photo.generated-scene"
         ]
       }
@@ -397,6 +1222,7 @@
           "title"
         ],
         "style": [
+          "mobileOrder",
           "panelGradient"
         ],
         "motion": [
@@ -408,13 +1234,38 @@
       }
     },
     {
+      "id": "features.integration-strip",
+      "kind": "section",
+      "file": "sections/features.integration-strip.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "cta",
+          "kicker",
+          "tiles",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "reveal.fade-up"
+        ],
+        "assetRoles": [
+          "platform.placeholder-icon"
+        ]
+      }
+    },
+    {
       "id": "features.integration-tiles",
       "kind": "section",
       "file": "sections/features.integration-tiles.json",
       "retrievalEligible": true,
       "settable": {
         "variant": [
-          "default"
+          "default",
+          "labelled"
         ],
         "content": [
           "body",
@@ -443,13 +1294,19 @@
         ],
         "content": [
           "body",
+          "eyebrow",
           "tabs",
           "title"
         ],
         "style": [
-          "strokeGradient"
+          "mediaCorners",
+          "mediaFrame",
+          "strokeGradient",
+          "strokeShape"
         ],
         "motion": [
+          "stroke.draw-on",
+          "stroke.idle",
           "tabs.instant"
         ],
         "assetRoles": [
@@ -479,21 +1336,64 @@
       }
     },
     {
+      "id": "form.form-header",
+      "kind": "section",
+      "file": "sections/form.form-header.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "contact",
+          "cover",
+          "registration"
+        ],
+        "content": [
+          "blocks",
+          "breadcrumb",
+          "cover",
+          "form",
+          "tag",
+          "title"
+        ],
+        "style": [
+          "strokeGradient",
+          "strokeShape",
+          "titleSize"
+        ],
+        "motion": [
+          "static",
+          "sticky.pin",
+          "stroke.draw-on"
+        ],
+        "assetRoles": [
+          "customer.placeholder-logo",
+          "icon.feature",
+          "illustration.generated-diagram",
+          "person.fictional-avatar",
+          "photo.generated-scene",
+          "resource.generated-thumbnail"
+        ]
+      }
+    },
+    {
       "id": "hero.center",
       "kind": "section",
       "file": "sections/hero.center.json",
       "retrievalEligible": true,
       "settable": {
         "variant": [
+          "illustration",
           "media",
+          "poster",
           "square",
           "text-only"
         ],
         "content": [
           "eyebrow",
           "highlights",
+          "illustration",
           "lead",
           "media",
+          "poster",
           "primary",
           "secondary",
           "title"
@@ -504,10 +1404,63 @@
         ],
         "motion": [
           "static",
-          "stroke.draw-on"
+          "stroke.draw-on",
+          "stroke.idle"
         ],
         "assetRoles": [
-          "product.generated-visual"
+          "illustration.generated-diagram",
+          "product.generated-visual",
+          "video.placeholder-poster"
+        ]
+      }
+    },
+    {
+      "id": "hero.champions-dark",
+      "kind": "section",
+      "file": "sections/hero.champions-dark.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "photo",
+          "primary",
+          "tertiary",
+          "title",
+          "wordmark"
+        ],
+        "style": [],
+        "motion": [
+          "scroll.linked-scale"
+        ],
+        "assetRoles": [
+          "brand.placeholder-mark",
+          "photo.generated-scene"
+        ]
+      }
+    },
+    {
+      "id": "hero.event",
+      "kind": "section",
+      "file": "sections/hero.event.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "cta",
+          "lead",
+          "portraits",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "photo.generated-scene"
         ]
       }
     },
@@ -519,27 +1472,440 @@
       "settable": {
         "variant": [
           "flush",
-          "padded"
+          "framed",
+          "padded",
+          "video"
         ],
         "content": [
           "badge",
+          "framed",
           "lead",
+          "lockup",
           "media",
           "primary",
           "secondary",
+          "title",
+          "video"
+        ],
+        "style": [
+          "bottomPadding",
+          "columns",
+          "leadSize",
+          "strokeGradient",
+          "strokeShape"
+        ],
+        "motion": [
+          "static",
+          "stroke.draw-on",
+          "stroke.still"
+        ],
+        "assetRoles": [
+          "brand.placeholder-mark",
+          "illustration.generated-diagram",
+          "photo.generated-scene",
+          "product.generated-visual",
+          "video.placeholder-poster"
+        ]
+      }
+    },
+    {
+      "id": "interactive.course-tabs",
+      "kind": "section",
+      "file": "sections/interactive.course-tabs.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "anchor",
+          "body",
+          "cta",
+          "eyebrow",
+          "tabs",
           "title"
+        ],
+        "style": [],
+        "motion": [
+          "tabs.instant"
+        ],
+        "assetRoles": [
+          "resource.generated-thumbnail"
+        ]
+      }
+    },
+    {
+      "id": "interactive.faq-accordion",
+      "kind": "section",
+      "file": "sections/interactive.faq-accordion.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "items",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "accordion.instant"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "interactive.install-tabs",
+      "kind": "section",
+      "file": "sections/interactive.install-tabs.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "copyLabel",
+          "eyebrow",
+          "tabs",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "tabs.instant"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "interactive.persona-tabs",
+      "kind": "section",
+      "file": "sections/interactive.persona-tabs.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "tabs"
+        ],
+        "style": [],
+        "motion": [
+          "tabs.instant"
+        ],
+        "assetRoles": [
+          "icon.feature"
+        ]
+      }
+    },
+    {
+      "id": "interactive.photo-tabs",
+      "kind": "section",
+      "file": "sections/interactive.photo-tabs.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "cta",
+          "eyebrow",
+          "tabs",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "tabs.instant"
+        ],
+        "assetRoles": [
+          "photo.generated-scene"
+        ]
+      }
+    },
+    {
+      "id": "legal.policy-body",
+      "kind": "section",
+      "file": "sections/legal.policy-body.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "blocks"
+        ],
+        "style": [
+          "chapterLevel",
+          "topPadding"
+        ],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "illustration.generated-diagram",
+          "photo.generated-scene"
+        ]
+      }
+    },
+    {
+      "id": "legal.policy-header",
+      "kind": "section",
+      "file": "sections/legal.policy-header.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "title",
+          "updated"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "listing.case-grid",
+      "kind": "section",
+      "file": "sections/listing.case-grid.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "empty",
+          "featured",
+          "filters",
+          "items",
+          "more",
+          "search"
         ],
         "style": [
           "strokeGradient",
           "strokeShape"
         ],
         "motion": [
+          "static",
           "stroke.draw-on"
         ],
         "assetRoles": [
-          "photo.generated-scene",
-          "product.generated-visual"
+          "customer.placeholder-logo",
+          "illustration.abstract"
         ]
+      }
+    },
+    {
+      "id": "listing.category-nav",
+      "kind": "section",
+      "file": "sections/listing.category-nav.json",
+      "retrievalEligible": false,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "pills",
+          "search"
+        ],
+        "style": [],
+        "motion": [
+          "sticky.pin"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "listing.event-grid",
+      "kind": "section",
+      "file": "sections/listing.event-grid.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "empty",
+          "items",
+          "options",
+          "placeholder",
+          "search"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "resource.generated-thumbnail"
+        ]
+      }
+    },
+    {
+      "id": "listing.header",
+      "kind": "section",
+      "file": "sections/listing.header.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "centred",
+          "hub"
+        ],
+        "content": [
+          "eyebrow",
+          "lead",
+          "title"
+        ],
+        "style": [
+          "width"
+        ],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "listing.hub-grid",
+      "kind": "section",
+      "file": "sections/listing.hub-grid.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "blog",
+          "resource"
+        ],
+        "content": [
+          "blocks"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "person.fictional-avatar",
+          "resource.generated-thumbnail"
+        ]
+      }
+    },
+    {
+      "id": "listing.latest-posts",
+      "kind": "section",
+      "file": "sections/listing.latest-posts.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "cards",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "person.fictional-avatar",
+          "resource.generated-thumbnail"
+        ]
+      }
+    },
+    {
+      "id": "listing.press-grid",
+      "kind": "section",
+      "file": "sections/listing.press-grid.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "media",
+          "release"
+        ],
+        "content": [
+          "items",
+          "more",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "resource.generated-thumbnail"
+        ]
+      }
+    },
+    {
+      "id": "listing.session-grid",
+      "kind": "section",
+      "file": "sections/listing.session-grid.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "empty",
+          "items",
+          "more",
+          "options",
+          "placeholder",
+          "search"
+        ],
+        "style": [],
+        "motion": [
+          "loading.skeleton-pulse",
+          "static"
+        ],
+        "assetRoles": [
+          "resource.generated-thumbnail"
+        ]
+      }
+    },
+    {
+      "id": "pricing.add-ons",
+      "kind": "section",
+      "file": "sections/pricing.add-ons.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "cards",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "pricing.plan-cards",
+      "kind": "section",
+      "file": "sections/pricing.plan-cards.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "plans",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": []
       }
     },
     {
@@ -559,6 +1925,56 @@
           "carousel.autoplay"
         ],
         "assetRoles": []
+      }
+    },
+    {
+      "id": "shell.event-footer",
+      "kind": "section",
+      "file": "sections/shell.event-footer.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "columns",
+          "copyright",
+          "tagline",
+          "wordmark"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "brand.placeholder-mark"
+        ]
+      }
+    },
+    {
+      "id": "shell.event-subnav",
+      "kind": "section",
+      "file": "sections/shell.event-subnav.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "closeLabel",
+          "columns",
+          "cta",
+          "home",
+          "logo",
+          "openLabel"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "brand.placeholder-mark"
+        ]
       }
     },
     {
@@ -609,6 +2025,29 @@
         "assetRoles": [
           "icon.feature",
           "illustration.abstract"
+        ]
+      }
+    },
+    {
+      "id": "shell.minimal-nav",
+      "kind": "section",
+      "file": "sections/shell.minimal-nav.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "brandMark",
+          "homeLabel"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "brand.placeholder-mark",
+          "brand.user-supplied-mark"
         ]
       }
     },
@@ -681,6 +2120,28 @@
       }
     },
     {
+      "id": "social-proof.logo-bar",
+      "kind": "section",
+      "file": "sections/social-proof.logo-bar.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "logos",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "customer.placeholder-logo"
+        ]
+      }
+    },
+    {
       "id": "social-proof.logo-marquee",
       "kind": "section",
       "file": "sections/social-proof.logo-marquee.json",
@@ -715,6 +2176,7 @@
           "quotes"
         ],
         "style": [
+          "background",
           "strokeShape"
         ],
         "motion": [
@@ -723,6 +2185,7 @@
           "stroke.draw-on"
         ],
         "assetRoles": [
+          "brand.placeholder-mark",
           "customer.placeholder-logo"
         ]
       }

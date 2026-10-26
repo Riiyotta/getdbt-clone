@@ -1,58 +1,86 @@
 {
-  "note": "rhythm/position rules JSON Schema cannot express. Every rule id here is implemented in schema/semantic_validate.py (GRAPH_RULES_IMPLEMENTED); extraction/verify_all.py fails if the two sets differ. Each rule was checked against all 23 rendered reference pages when written.",
+  "note": "rhythm/position rules JSON Schema cannot express. Every rule id here is implemented in schema/semantic_validate.py (GRAPH_RULES_IMPLEMENTED); extraction/verify_all.py fails if the two sets differ. Each rule was checked against all 71 rendered reference pages when written.",
   "rules": [
     {
       "id": "TEMPLATE_SEQUENCE",
       "severity": "error",
-      "rule": "the PageSpec node sequence (section#variant) must match its declared template's node pattern (required/optional/slots/repeat counts)."
+      "rule": "the PageSpec node sequence (section#variant) must match its declared template's node pattern (required/optional/slots/sequence alternatives/repeat counts)."
     },
     {
       "id": "TEMPLATE_PENDING",
       "severity": "error",
-      "rule": "templates with status 'pending' (T5-T17) have no contracts yet and cannot be generated against."
+      "rule": "a template with status 'pending' has no contracts yet and cannot be generated against. No template is pending today: all 18 (T0-T17) are implemented in the clone (src/App.jsx registers T1-T17).",
+      "checkedAgainst": "templates/templates.json statuses"
     },
     {
       "id": "SHELL_ORDER",
       "severity": "error",
-      "rule": "every implemented template starts with shell.announcement-bar, shell.navbar, shell.mega-menu, shell.mobile-drawer in that order and ends with shell.footer.",
-      "checkedAgainst": "T0-T4 templates.json nodes"
+      "rule": "a page opens with its chrome variant's head nodes and closes with its tail: full = shell.announcement-bar, shell.navbar, shell.mega-menu, shell.mobile-drawer ... shell.footer; event = shell.event-subnav ... shell.event-footer; none = shell.minimal-nav and no footer. The only node allowed between the last content node and the footer is the overlay cta.dev-path-dialog.",
+      "checkedAgainst": "templates.json chrome heads/tails of T0-T17"
+    },
+    {
+      "id": "CHROME_VARIANT",
+      "severity": "error",
+      "rule": "a template's chrome variant (full | event | none) equals the chrome of every route mapped to it (routes/routes.json), and the page uses only that variant's shell nodes. The two non-full routes are pinned in code (/summit event, /partner-directory none) and verify_all compares them with src/Layout.jsx.",
+      "checkedAgainst": "routes.json chrome, src/Layout.jsx CHROME"
+    },
+    {
+      "id": "TEMPLATE_THEME",
+      "severity": "error",
+      "rule": "a PageSpec's theme equals its template's theme: light everywhere except the event microsite (T16), whose scoped palette, fonts and radius 0 form the `event` theme (tokens/themes/event.json). The champions dark bands are section surfaces of the light theme, not a theme.",
+      "checkedAgainst": "templates.json theme"
     },
     {
       "id": "ONE_HERO",
       "severity": "error",
-      "rule": "exactly one HERO-category node per page.",
-      "exceptions": [],
-      "exceptionNote": "no implemented template is hero-less; pending T16/T17 must be re-checked when built (T17 has no hero on the original)."
+      "rule": "at most one HERO-category node per page, and exactly one unless the template is a named exception.",
+      "exceptions": [
+        "T5",
+        "T6",
+        "T7",
+        "T8",
+        "T9",
+        "T10",
+        "T11",
+        "T14",
+        "T17"
+      ],
+      "exceptionNote": "these templates open with a page-specific header classified LISTING / ARTICLE / FORM / LEGAL / PRICING / DIRECTORY, not HERO (listing.header, article.story-header, article.guide-header, form.form-header, legal.policy-header, pricing.plan-cards, directory.header; blog posts and /terms-of-use open straight into their body). Pinned in code (HEROLESS_TEMPLATES)."
     },
     {
       "id": "HERO_FIRST_CONTENT",
       "severity": "error",
-      "rule": "the HERO node is the first non-SHELL node."
+      "rule": "when the page has a HERO node it is the first non-SHELL node."
     },
     {
       "id": "SECTION_MAX_PER_PAGE",
       "severity": "error",
-      "rule": "a section may not appear more often than its contract's constraints.maxPerPage (observed maxima: gradient-panel 3, card-grid 2, checklist 2, closing-band 2, everything else 1)."
+      "rule": "a section may not appear more often than its contract's constraints.maxPerPage (observed maxima above 1: community.icon-cards 2, comparison.compare-table 5, content.media-split 4, cta.closing-band 2, features.card-grid 8, features.checklist 4, features.gradient-panel 4, interactive.faq-accordion 2, listing.press-grid 2)."
     },
     {
       "id": "NO_ADJACENT_IDENTICAL",
       "severity": "error",
-      "rule": "no two adjacent nodes share the same (section, variant). Keyed on the pair, so the homepage's three alternating gradient panels (text-first/media-first/text-first) are valid; none of the 23 reference pages has an identical adjacent pair."
+      "rule": "no two adjacent nodes share the same (section, variant) unless that variant is listed in the contract's constraints.consecutiveVariants (the repeats the clone really renders: stacked bordered card grids, stacked text-left splits, the five self-hosting comparison tables, the integrations directory's logo-card grids, the two pricing FAQs, ...). Keyed on the pair, so alternating variants are always valid."
     },
     {
       "id": "CTA_CLOSES_PAGE",
       "severity": "warn",
-      "rule": "the last non-SHELL node should be CTA-category (true on all 23 reference pages)."
+      "rule": "the last non-SHELL node should be CTA-category (true on most reference pages; listing, article-by-guide, form, legal, pricing, directory and the integrations/assistant pages end otherwise)."
     },
     {
       "id": "AUTOPLAY_BUDGET",
       "severity": "warn",
-      "rule": "at most 2 nodes with autoplaying motion (carousel.autoplay, marquee.loop) per page (the homepage has exactly 2)."
+      "rule": "at most 2 nodes with autoplaying motion (carousel.autoplay, marquee.loop, marquee.photo-loop) per page (the homepage has exactly 2)."
     },
     {
       "id": "RUNTIME_UI_INELIGIBLE",
       "severity": "error",
-      "rule": "a node whose contract is retrievalEligible:false (pinned in code) may not be marked retrievalEligible:true, and a content node may not be marked ineligible."
+      "rule": "a node whose contract is retrievalEligible:false (pinned in code: announcement bar, mega-menu, mobile drawer, developer-path dialog, reading progress bar, category/search bar) may not be marked retrievalEligible:true, and a content node may not be marked ineligible."
+    },
+    {
+      "id": "DIALOG_PAIRING",
+      "severity": "error",
+      "rule": "cta.dev-path-dialog appears iff some action on the page has opensDialog:true (a hero button that opens the dialog), and then it is the last node before the footer."
     },
     {
       "id": "HOME_ROUTE_ONLY",

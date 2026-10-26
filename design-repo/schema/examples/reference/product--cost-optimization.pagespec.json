@@ -758,7 +758,9 @@
         "reducedMotionFallback": "show-immediately"
       },
       "style": {
-        "paddingTop": "default"
+        "topPadding": "default",
+        "imagePlacement": "right",
+        "itemStyle": "headed"
       }
     },
     {
@@ -797,14 +799,14 @@
       "content": {
         "quotes": [
           {
+            "quote": "Our compute bill fell in the first month and kept falling. We did not change a single model, we just stopped rebuilding the ones that had not changed, and the time we saved went straight into new work the business had been asking for all year.",
+            "person": "Jonah Reyes",
+            "role": "VP, Data and Insights",
             "logo": {
               "assetRole": "customer.logo",
               "alt": "Orbitly",
               "ref": "/assets/marquee/logo-5.svg"
-            },
-            "quote": "Our compute bill fell in the first month and kept falling. We did not change a single model, we just stopped rebuilding the ones that had not changed, and the time we saved went straight into new work the business had been asking for all year.",
-            "person": "Jonah Reyes",
-            "role": "VP, Data and Insights"
+            }
           }
         ]
       },
@@ -819,6 +821,7 @@
         ]
       },
       "style": {
+        "background": "white",
         "strokeShape": "stroke.s1"
       }
     },
@@ -860,7 +863,9 @@
         "reducedMotionFallback": "show-immediately"
       },
       "style": {
-        "paddingTop": "default"
+        "topPadding": "default",
+        "imagePlacement": "right",
+        "itemStyle": "headed"
       }
     },
     {

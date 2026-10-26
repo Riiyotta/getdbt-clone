@@ -16,6 +16,7 @@
   "additionalSources": [],
   "purpose": "Sticky top nav: brand mark, 5 mega-menu triggers + 1 plain link, search, secondary + primary CTA, account button (desktop); logo, search and hamburger below 1024.",
   "retrievalEligible": true,
+  "placement": "chrome",
   "variants": {
     "default": {
       "description": "single rendering",
@@ -35,28 +36,74 @@
       },
       "observedOn": [
         "/",
+        "/about-us",
+        "/about-us/belonging",
+        "/about-us/careers",
+        "/about-us/values",
+        "/blog",
+        "/blog/lattice-joins-northwind",
+        "/blog/summit-announcements",
+        "/case-studies",
+        "/case-studies/basalt-health",
+        "/case-studies/halcyon",
+        "/case-studies/kestrel",
+        "/case-studies/meridian-partners",
+        "/certification",
+        "/champions",
+        "/community",
+        "/community/join",
+        "/contact",
         "/data-platforms/cobalt",
         "/data-platforms/driftway",
         "/data-platforms/helixa",
         "/data-platforms/northwind",
         "/data-platforms/quarry",
         "/data-platforms/stratus",
+        "/events",
         "/industry/energy-utilities",
         "/industry/financial-services",
         "/industry/healthcare",
         "/industry/manufacturing",
         "/industry/telecommunications",
+        "/learn",
+        "/legal/ai-principles",
+        "/modern-slavery-statement",
+        "/partners",
+        "/press",
+        "/pricing",
         "/product/ai",
+        "/product/analyst",
+        "/product/assistant",
         "/product/catalog",
+        "/product/charts",
         "/product/cost-optimization",
         "/product/data-modernization",
         "/product/data-trust",
         "/product/deploy",
         "/product/develop",
         "/product/embedded-analytics",
+        "/product/governance",
+        "/product/integrations",
+        "/product/lattice",
         "/product/mesh",
+        "/product/self-hosted-vs-platform",
         "/product/semantic-layer",
-        "/product/test-and-observe"
+        "/product/state",
+        "/product/test-and-observe",
+        "/product/what-is-lattice",
+        "/report-a-problem",
+        "/resources",
+        "/resources/analytics-lifecycle",
+        "/resources/on-demand",
+        "/resources/state-of-data-teams",
+        "/resources/webinars",
+        "/resources/webinars/charts-as-code",
+        "/resources/webinars/launch-showcase",
+        "/resources/whitepaper-control-plane",
+        "/security",
+        "/services",
+        "/signup",
+        "/terms-of-use"
       ]
     }
   },
@@ -68,7 +115,7 @@
         "referenceRoles": [
           "brand.wordmark"
         ],
-        "observedIn": 23,
+        "observedIn": 69,
         "generatedRoles": [
           "brand.placeholder-mark",
           "brand.user-supplied-mark"
@@ -78,49 +125,49 @@
         "type": "text",
         "maxWords": 1,
         "maxChars": 7,
-        "observedIn": 23
+        "observedIn": 69
       },
       "menuLabels": {
         "type": "list",
         "minItems": 5,
         "maxItems": 5,
-        "observedIn": 23
+        "observedIn": 69
       },
       "menuLabels[]": {
         "type": "text",
         "maxWords": 1,
         "maxChars": 9,
-        "observedIn": 115
+        "observedIn": 345
       },
       "plainLink.href": {
         "type": "link",
-        "observedIn": 23
+        "observedIn": 69
       },
       "plainLink.label": {
         "type": "text",
         "maxWords": 1,
         "maxChars": 7,
-        "observedIn": 23
+        "observedIn": 69
       },
       "primaryAction.href": {
         "type": "link",
-        "observedIn": 23
+        "observedIn": 69
       },
       "primaryAction.label": {
         "type": "text",
         "maxWords": 3,
         "maxChars": 11,
-        "observedIn": 23
+        "observedIn": 69
       },
       "secondaryAction.href": {
         "type": "link",
-        "observedIn": 23
+        "observedIn": 69
       },
       "secondaryAction.label": {
         "type": "text",
         "maxWords": 2,
         "maxChars": 11,
-        "observedIn": 23
+        "observedIn": 69
       }
     }
   },
@@ -131,7 +178,7 @@
         "referenceRoles": [
           "brand.wordmark"
         ],
-        "observedIn": 23,
+        "observedIn": 69,
         "generatedRoles": [
           "brand.placeholder-mark",
           "brand.user-supplied-mark"
@@ -150,7 +197,8 @@
   },
   "constraints": {
     "position": "after:shell.announcement-bar",
-    "maxPerPage": 1
+    "maxPerPage": 1,
+    "consecutiveVariants": []
   },
   "motion": {
     "allowedPatterns": [
@@ -178,6 +226,7 @@
       "behavior": "89px bar: logo, search, hamburger; mega-menus replaced by shell.mobile-drawer"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "nav": 91,

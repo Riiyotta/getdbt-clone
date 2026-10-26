@@ -21,6 +21,11 @@
       "category": "gradient",
       "cite": "src/index.css:273-281"
     },
+    "gradient.22": {
+      "value": "background-color: #ff7b00; background-image: radial-gradient(50% 50% at 55% 100%, #ee2020 30%, transparent 90%), radial-gradient(at 5% 0, #fffb4a 20%, transparent 50%), radial-gradient(circle at 50% -10%, #fffb4a 20%, transparent 40%), radial-gradient(40% 50% at 100% 20%, #fffb4a 70%, transparent 120%);",
+      "category": "gradient",
+      "cite": "src/index.css:307-313"
+    },
     "gradient.26": {
       "value": "background: linear-gradient(90deg, rgb(255, 85, 15) 35%, rgb(255, 140, 30) 55%, rgb(255, 195, 60) 65%, rgb(255, 225, 90) 75%, rgb(255, 240, 105));",
       "category": "gradient",
@@ -34,17 +39,42 @@
     "gradient.bottom-frequency": {
       "value": "background-color: #fff; background-image: radial-gradient(800px 220px at 20% 100%, rgba(120, 83, 253, 0.35) 10%, transparent 100%), radial-gradient(400px 220px at 50% 100%, rgba(213, 53, 194, 0.15) 30%, transparent 100%), radial-gradient(600px 220px at 65% 100%, rgba(255, 156, 56, 0.3) 30%, transparent 100%), radial-gradient(800px 220px at 84% 100%, rgba(255, 222, 56, 0.25) 30%, transparent 100%);",
       "category": "gradient",
-      "cite": "src/index.css:344-350"
+      "cite": "src/index.css:373-379"
+    },
+    "gradient.quote-wash": {
+      "value": "background-color: #fff; background-image: radial-gradient(45% 55% at 0% 100%, rgba(151, 134, 255, 0.28) 0%, transparent 100%), radial-gradient(40% 50% at 100% 0%, rgba(255, 158, 95, 0.26) 0%, transparent 100%), radial-gradient(35% 40% at 85% 100%, rgba(255, 204, 37, 0.18) 0%, transparent 100%); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;",
+      "category": "gradient",
+      "cite": "src/index.css:321-329"
     },
     "gradient.circle-overlay": {
       "value": "content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 125vw; max-width: 125%; aspect-ratio: 1 / 1; border-radius: 50%; opacity: 0.64; z-index: 1; pointer-events: none; background-blend-mode: multiply; background-position: 50% center; background-repeat: no-repeat; background-size: cover; background-image: radial-gradient(circle, rgb(0, 170, 255) 0, rgb(0, 170, 255) 20%, transparent 20.1%), radial-gradient(circle, transparent 0, rgb(0, 136, 255) 40%, transparent 40.1%), radial-gradient(circle, transparent 0, rgb(0, 136, 255) 60%, transparent 60.1%), radial-gradient(circle, transparent 0, rgb(0, 136, 255) 80%, transparent 80.1%), radial-gradient(circle at 100% 0, rgb(0, 136, 255) 0, transparent 80%); box-shadow: theme('boxShadow.glow');",
       "category": "gradient",
-      "cite": "src/index.css:307-330"
+      "cite": "src/index.css:336-359"
     },
     "gradient.grain": {
       "value": "fractal-noise SVG tile (feTurbulence baseFrequency .8, 3 octaves) 250px, opacity .7, mix-blend multiply; per-gradient overrides",
       "category": "gradient",
       "cite": "src/index.css:198-212"
+    },
+    "gradient.summit-dither": {
+      "value": "background-color: #000; background-image: conic-gradient(#632ff5 25%, transparent 0 50%, #632ff5 0 75%, transparent 0), conic-gradient(#632ff5 25%, transparent 0 50%, #632ff5 0 75%, transparent 0); background-size: 6px 6px, 18px 12px; background-position: 0 0, 3px 6px;",
+      "category": "gradient",
+      "cite": "src/styles/oneoffs.css:66-73"
+    },
+    "gradient.summit-heat": {
+      "value": "background-image: conic-gradient(#ec71f6 25%, transparent 0 50%, #ec71f6 0 75%, transparent 0), linear-gradient(90deg, #fe6703 0%, #fe6703 45%, #ec71f6 100%); background-size: 14px 14px, 100% 100%; background-position: right 0 top 0, 0 0; background-repeat: repeat-y, no-repeat;",
+      "category": "gradient",
+      "cite": "src/styles/oneoffs.css:75-82"
+    },
+    "gradient.summit-check": {
+      "value": "background-color: #fff; background-image: conic-gradient(#6b9aff 25%, transparent 0 50%, #6b9aff 0 75%, transparent 0); background-size: 56px 28px;",
+      "category": "gradient",
+      "cite": "src/styles/oneoffs.css:83-87"
+    },
+    "gradient.summit-tile": {
+      "value": "background-color: #632ff5; background-image: conic-gradient(#000 25%, transparent 0 50%, #000 0 75%, transparent 0), conic-gradient(#9c79ff 25%, transparent 0 50%, #9c79ff 0 75%, transparent 0); background-size: 14px 14px, 28px 28px; background-position: 0 0, 7px 7px;",
+      "category": "gradient",
+      "cite": "src/styles/oneoffs.css:88-95"
     }
   }
 }

@@ -16,6 +16,7 @@
   "additionalSources": [],
   "purpose": "Below 1024: full-height drawer listing the 5 menu categories (drill-down sub-level with Back), the plain link and 2 account links, plus a fixed bottom bar with the two nav CTAs.",
   "retrievalEligible": false,
+  "placement": "chrome",
   "retrievalIneligibleReason": "Drawer overlay toggled by the hamburger below 1024; navigation UI only, never page content.",
   "variants": {
     "default": {
@@ -32,28 +33,74 @@
       },
       "observedOn": [
         "/",
+        "/about-us",
+        "/about-us/belonging",
+        "/about-us/careers",
+        "/about-us/values",
+        "/blog",
+        "/blog/lattice-joins-northwind",
+        "/blog/summit-announcements",
+        "/case-studies",
+        "/case-studies/basalt-health",
+        "/case-studies/halcyon",
+        "/case-studies/kestrel",
+        "/case-studies/meridian-partners",
+        "/certification",
+        "/champions",
+        "/community",
+        "/community/join",
+        "/contact",
         "/data-platforms/cobalt",
         "/data-platforms/driftway",
         "/data-platforms/helixa",
         "/data-platforms/northwind",
         "/data-platforms/quarry",
         "/data-platforms/stratus",
+        "/events",
         "/industry/energy-utilities",
         "/industry/financial-services",
         "/industry/healthcare",
         "/industry/manufacturing",
         "/industry/telecommunications",
+        "/learn",
+        "/legal/ai-principles",
+        "/modern-slavery-statement",
+        "/partners",
+        "/press",
+        "/pricing",
         "/product/ai",
+        "/product/analyst",
+        "/product/assistant",
         "/product/catalog",
+        "/product/charts",
         "/product/cost-optimization",
         "/product/data-modernization",
         "/product/data-trust",
         "/product/deploy",
         "/product/develop",
         "/product/embedded-analytics",
+        "/product/governance",
+        "/product/integrations",
+        "/product/lattice",
         "/product/mesh",
+        "/product/self-hosted-vs-platform",
         "/product/semantic-layer",
-        "/product/test-and-observe"
+        "/product/state",
+        "/product/test-and-observe",
+        "/product/what-is-lattice",
+        "/report-a-problem",
+        "/resources",
+        "/resources/analytics-lifecycle",
+        "/resources/on-demand",
+        "/resources/state-of-data-teams",
+        "/resources/webinars",
+        "/resources/webinars/charts-as-code",
+        "/resources/webinars/launch-showcase",
+        "/resources/whitepaper-control-plane",
+        "/security",
+        "/services",
+        "/signup",
+        "/terms-of-use"
       ]
     }
   },
@@ -64,17 +111,17 @@
         "type": "list",
         "minItems": 2,
         "maxItems": 2,
-        "observedIn": 23
+        "observedIn": 69
       },
       "accountActions[].href": {
         "type": "link",
-        "observedIn": 46
+        "observedIn": 138
       },
       "accountActions[].label": {
         "type": "text",
         "maxWords": 3,
         "maxChars": 17,
-        "observedIn": 46
+        "observedIn": 138
       }
     }
   },
@@ -89,7 +136,8 @@
   },
   "constraints": {
     "position": "after:shell.mega-menu",
-    "maxPerPage": 1
+    "maxPerPage": 1,
+    "consecutiveVariants": []
   },
   "motion": {
     "allowedPatterns": [
@@ -113,6 +161,7 @@
       "behavior": "not rendered"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "nav": 91,

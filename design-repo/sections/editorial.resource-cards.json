@@ -16,6 +16,7 @@
   "additionalSources": [],
   "purpose": "Header (eyebrow, heading-2, optional paragraph) above 2-4 resource / customer-story cards: 16:9 image link, optional tag chip, title link, optional paragraph.",
   "retrievalEligible": true,
+  "placement": "main",
   "variants": {
     "default": {
       "description": "single rendering",
@@ -31,6 +32,7 @@
         ]
       },
       "observedOn": [
+        "/about-us/belonging",
         "/data-platforms/cobalt",
         "/data-platforms/driftway",
         "/data-platforms/helixa",
@@ -43,6 +45,8 @@
         "/industry/manufacturing",
         "/industry/telecommunications",
         "/product/ai",
+        "/product/analyst",
+        "/product/assistant",
         "/product/catalog",
         "/product/cost-optimization",
         "/product/data-modernization",
@@ -50,9 +54,12 @@
         "/product/deploy",
         "/product/develop",
         "/product/embedded-analytics",
+        "/product/integrations",
+        "/product/lattice",
         "/product/mesh",
         "/product/semantic-layer",
-        "/product/test-and-observe"
+        "/product/test-and-observe",
+        "/product/what-is-lattice"
       ]
     }
   },
@@ -63,30 +70,30 @@
         "type": "text",
         "maxWords": 37,
         "maxChars": 246,
-        "observedIn": 14
+        "observedIn": 17
       },
       "cards": {
         "type": "list",
         "minItems": 2,
         "maxItems": 4,
-        "observedIn": 22
+        "observedIn": 28
       },
       "cards[].body": {
         "type": "text",
         "maxWords": 39,
         "maxChars": 209,
-        "observedIn": 30
+        "observedIn": 33
       },
       "cards[].href": {
         "type": "link",
-        "observedIn": 65
+        "observedIn": 84
       },
       "cards[].image": {
         "type": "asset",
         "referenceRoles": [
           "resource.thumbnail"
         ],
-        "observedIn": 65,
+        "observedIn": 84,
         "generatedRoles": [
           "resource.generated-thumbnail"
         ]
@@ -95,31 +102,31 @@
         "type": "text",
         "maxWords": 0,
         "maxChars": 0,
-        "observedIn": 65
+        "observedIn": 84
       },
       "cards[].tag": {
         "type": "text",
         "maxWords": 2,
         "maxChars": 10,
-        "observedIn": 52
+        "observedIn": 71
       },
       "cards[].title": {
         "type": "text",
         "maxWords": 16,
         "maxChars": 107,
-        "observedIn": 65
+        "observedIn": 84
       },
       "eyebrow": {
         "type": "text",
         "maxWords": 2,
         "maxChars": 14,
-        "observedIn": 17
+        "observedIn": 21
       },
       "title": {
         "type": "text",
         "maxWords": 11,
         "maxChars": 75,
-        "observedIn": 22
+        "observedIn": 28
       }
     }
   },
@@ -130,7 +137,7 @@
         "referenceRoles": [
           "resource.thumbnail"
         ],
-        "observedIn": 65,
+        "observedIn": 84,
         "generatedRoles": [
           "resource.generated-thumbnail"
         ]
@@ -146,7 +153,8 @@
     "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
   },
   "constraints": {
-    "maxPerPage": 1
+    "maxPerPage": 1,
+    "consecutiveVariants": []
   },
   "motion": {
     "allowedPatterns": [
@@ -174,6 +182,7 @@
       "behavior": "1 column, gap 40"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "/product/develop": [
@@ -194,23 +203,20 @@
       "/product/semantic-layer": [
         792.2
       ],
-      "/product/data-modernization": [
-        825.8
-      ],
       "/product/ai": [
         708.2
       ],
       "/product/embedded-analytics": [
         801.8
       ],
+      "/product/data-modernization": [
+        825.8
+      ],
       "/product/data-trust": [
         821
       ],
       "/product/cost-optimization": [
         838.2
-      ],
-      "/data-platforms/cobalt": [
-        708.2
       ],
       "/data-platforms/northwind": [
         679.4
@@ -227,6 +233,9 @@
       "/data-platforms/driftway": [
         679.4
       ],
+      "/data-platforms/cobalt": [
+        708.2
+      ],
       "/industry/financial-services": [
         755.4
       ],
@@ -241,6 +250,24 @@
       ],
       "/industry/telecommunications": [
         722.6
+      ],
+      "/about-us/belonging": [
+        642.2
+      ],
+      "/product/what-is-lattice": [
+        708.2
+      ],
+      "/product/lattice": [
+        768.2
+      ],
+      "/product/assistant": [
+        644.2
+      ],
+      "/product/integrations": [
+        708.2
+      ],
+      "/product/analyst": [
+        684.2
       ]
     }
   },

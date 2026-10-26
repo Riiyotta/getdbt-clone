@@ -1,0 +1,226 @@
+{
+  "id": "article.guide-header",
+  "title": "Guide / report header",
+  "semantic": {
+    "id": "article.guide-header",
+    "category": "ARTICLE"
+  },
+  "source": {
+    "id": "component:GuideHeader",
+    "file": "src/components/article/GuideHeader.jsx",
+    "export": "GuideHeader",
+    "tag": "header",
+    "lines": "17-48",
+    "tagLine": 19
+  },
+  "additionalSources": [],
+  "purpose": "Page-opening header of a long guide: breadcrumb, optional tag, H1, author row or clock + read time, 1-2 large buttons (the first scrolls to the download form) and an image (r16) on the right.",
+  "retrievalEligible": true,
+  "placement": "main",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "breadcrumb",
+        "buttons",
+        "image",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "buttons": [
+          1,
+          2
+        ]
+      },
+      "observedOn": [
+        "/resources/analytics-lifecycle",
+        "/resources/state-of-data-teams"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "author.avatar": {
+        "type": "asset",
+        "referenceRoles": [
+          "person.fictional-avatar"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "person.fictional-avatar"
+        ]
+      },
+      "author.avatar.alt": {
+        "type": "text",
+        "maxWords": 0,
+        "maxChars": 0,
+        "observedIn": 1
+      },
+      "author.href": {
+        "type": "link",
+        "observedIn": 1
+      },
+      "author.name": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 15,
+        "observedIn": 1
+      },
+      "breadcrumb.current": {
+        "type": "text",
+        "maxWords": 9,
+        "maxChars": 44,
+        "observedIn": 2
+      },
+      "breadcrumb.items": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "observedIn": 2
+      },
+      "breadcrumb.items[].href": {
+        "type": "link",
+        "observedIn": 4
+      },
+      "breadcrumb.items[].label": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 9,
+        "observedIn": 4
+      },
+      "buttons": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 2,
+        "observedIn": 2
+      },
+      "buttons[].href": {
+        "type": "link",
+        "observedIn": 3
+      },
+      "buttons[].label": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 25,
+        "observedIn": 3
+      },
+      "image": {
+        "type": "asset",
+        "referenceRoles": [
+          "figure.article-image"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "illustration.generated-diagram",
+          "photo.generated-scene"
+        ]
+      },
+      "image.alt": {
+        "type": "text",
+        "maxWords": 10,
+        "maxChars": 55,
+        "observedIn": 2
+      },
+      "readTime": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 6,
+        "observedIn": 1
+      },
+      "tag": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 11,
+        "observedIn": 1
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 9,
+        "maxChars": 44,
+        "observedIn": 2
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "author.avatar": {
+        "type": "asset",
+        "referenceRoles": [
+          "person.fictional-avatar"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "person.fictional-avatar"
+        ]
+      },
+      "image": {
+        "type": "asset",
+        "referenceRoles": [
+          "figure.article-image"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "illustration.generated-diagram",
+          "photo.generated-scene"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "illustration.generated-diagram",
+    "person.fictional-avatar",
+    "photo.generated-scene"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "position": "first-content",
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "requiredPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": {
+      "static": "none-needed"
+    },
+    "stagger": "none"
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "7 cols text / 5 cols image"
+    },
+    {
+      "range": "768-1023",
+      "behavior": "4 / 4"
+    },
+    {
+      "range": "<768",
+      "behavior": "stacked"
+    }
+  ],
+  "runtimeUi": [],
+  "measuredHeightsPx": {
+    "1440": {
+      "/resources/analytics-lifecycle": [
+        499.6
+      ],
+      "/resources/state-of-data-teams": [
+        455.6
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/article/GuideHeader.jsx:17-48"
+  ]
+}

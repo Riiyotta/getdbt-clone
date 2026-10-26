@@ -1,17 +1,53 @@
 {
   "$schemaNote": "flat token map: path -> {value, category, cite}. Values resolved from the clone's real token sources (tailwind.config.cjs, src/index.css, component files).",
   "tokens": {
+    "space.15": {
+      "value": "3.75rem",
+      "px": 60,
+      "category": "spacing",
+      "cite": "tailwind.config.cjs:92"
+    },
+    "space.25": {
+      "value": "6.25rem",
+      "px": 100,
+      "category": "spacing",
+      "cite": "tailwind.config.cjs:93"
+    },
     "space.30": {
       "value": "7.5rem",
       "px": 120,
       "category": "spacing",
-      "cite": "tailwind.config.cjs:77"
+      "cite": "tailwind.config.cjs:89"
     },
     "space.50": {
       "value": "12.5rem",
       "px": 200,
       "category": "spacing",
-      "cite": "tailwind.config.cjs:78"
+      "cite": "tailwind.config.cjs:90"
+    },
+    "space.70": {
+      "value": "17.5rem",
+      "px": 280,
+      "category": "spacing",
+      "cite": "tailwind.config.cjs:94"
+    },
+    "space.100": {
+      "value": "25rem",
+      "px": 400,
+      "category": "spacing",
+      "cite": "tailwind.config.cjs:95"
+    },
+    "space.125": {
+      "value": "31.25rem",
+      "px": 500,
+      "category": "spacing",
+      "cite": "tailwind.config.cjs:96"
+    },
+    "space.150": {
+      "value": "37.5rem",
+      "px": 600,
+      "category": "spacing",
+      "cite": "tailwind.config.cjs:97"
     },
     "space.px4": {
       "value": "4px",
@@ -76,22 +112,42 @@
     "container.width.xl": {
       "value": "1152px",
       "category": "container",
-      "cite": "tailwind.config.cjs:124"
+      "cite": "tailwind.config.cjs:151"
     },
     "container.width.2xl": {
       "value": "1248px",
       "category": "container",
-      "cite": "tailwind.config.cjs:125"
+      "cite": "tailwind.config.cjs:152"
     },
     "container.width.marquee": {
       "value": "1240px",
       "category": "container",
-      "cite": "tailwind.config.cjs:131"
+      "cite": "tailwind.config.cjs:158"
     },
     "container.width.megamenu": {
       "value": "846px",
       "category": "container",
-      "cite": "tailwind.config.cjs:126"
+      "cite": "tailwind.config.cjs:153"
+    },
+    "container.width.prose": {
+      "value": "832px",
+      "category": "container",
+      "cite": "src/components/legal/Policy.jsx:27"
+    },
+    "container.width.summit-wide": {
+      "value": "1728px",
+      "category": "container",
+      "cite": "src/styles/oneoffs.css:13"
+    },
+    "container.width.directory": {
+      "value": "1200px",
+      "category": "container",
+      "cite": "src/components/oneoffs/directory/Directory.jsx:232"
+    },
+    "container.width.dialog": {
+      "value": "1050px",
+      "category": "container",
+      "cite": "src/components/sections/DevModal.jsx:65"
     }
   }
 }

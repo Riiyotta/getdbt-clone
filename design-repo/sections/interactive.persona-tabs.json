@@ -1,0 +1,170 @@
+{
+  "id": "interactive.persona-tabs",
+  "title": "Persona tabs",
+  "semantic": {
+    "id": "interactive.persona-tabs",
+    "category": "INTERACTIVE"
+  },
+  "source": {
+    "id": "component:PersonaTabs",
+    "file": "src/components/sections/PersonaTabs.jsx",
+    "export": "PersonaTabs",
+    "tag": "section",
+    "lines": "10-40",
+    "tagLine": 14
+  },
+  "additionalSources": [],
+  "purpose": "Three centred light tabs with 24px icons; each panel is two bordered cards (before / after chip, heading-4, 4-item bullet list).",
+  "retrievalEligible": true,
+  "placement": "main",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "tabs"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "tabs": [
+          3,
+          3
+        ]
+      },
+      "observedOn": [
+        "/product/self-hosted-vs-platform"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "tabs": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "observedIn": 1
+      },
+      "tabs[].cards": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "observedIn": 3
+      },
+      "tabs[].cards[].chip": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 6,
+        "observedIn": 6
+      },
+      "tabs[].cards[].items": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 4,
+        "observedIn": 6
+      },
+      "tabs[].cards[].items[]": {
+        "type": "text",
+        "maxWords": 14,
+        "maxChars": 78,
+        "observedIn": 24
+      },
+      "tabs[].cards[].kind": {
+        "type": "enum",
+        "observedIn": 6
+      },
+      "tabs[].cards[].label": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 15,
+        "observedIn": 6
+      },
+      "tabs[].cards[].title": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 33,
+        "observedIn": 6
+      },
+      "tabs[].icon": {
+        "type": "asset",
+        "referenceRoles": [
+          "icon.feature"
+        ],
+        "observedIn": 3,
+        "generatedRoles": [
+          "icon.feature"
+        ]
+      },
+      "tabs[].icon.alt": {
+        "type": "text",
+        "maxWords": 0,
+        "maxChars": 0,
+        "observedIn": 3
+      },
+      "tabs[].label": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 12,
+        "observedIn": 3
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "tabs[].icon": {
+        "type": "asset",
+        "referenceRoles": [
+          "icon.feature"
+        ],
+        "observedIn": 3,
+        "generatedRoles": [
+          "icon.feature"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "icon.feature"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "tabs.instant"
+    ],
+    "requiredPatterns": [
+      "tabs.instant"
+    ],
+    "reducedMotionFallback": {
+      "tabs.instant": "none-needed"
+    },
+    "stagger": "list inset 32. Instant switch, no reveal."
+  },
+  "responsive": [
+    {
+      "range": ">=768",
+      "behavior": "two cards side by side"
+    },
+    {
+      "range": "<768",
+      "behavior": "cards stacked"
+    }
+  ],
+  "runtimeUi": [],
+  "measuredHeightsPx": {
+    "1440": {
+      "/product/self-hosted-vs-platform": [
+        585.8
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/sections/PersonaTabs.jsx:10-40"
+  ]
+}

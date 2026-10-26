@@ -10,12 +10,13 @@
     "file": "src/components/sections/QuoteBand.jsx",
     "export": "QuoteBand",
     "tag": "section",
-    "lines": "25-75",
-    "tagLine": 31
+    "lines": "29-79",
+    "tagLine": 35
   },
   "additionalSources": [],
-  "purpose": "One bordered blur card holding a customer quote (icon, logo, 24/32 quote, attribution), or a 1-per-view slider of quotes; optional brush stroke behind.",
+  "purpose": "One bordered blur card holding a customer quote (icon, optional logo, 24/32 quote, attribution), or a 1-per-view slider of quotes; optional brush stroke or soft colour wash behind.",
   "retrievalEligible": true,
+  "placement": "main",
   "variants": {
     "slider": {
       "description": "several quotes, pagination bars, no arrows",
@@ -25,11 +26,13 @@
       "forbiddenFields": [],
       "listSizes": {
         "quotes": [
-          5,
+          2,
           5
         ]
       },
       "observedOn": [
+        "/product/analyst",
+        "/product/assistant",
         "/product/catalog"
       ]
     },
@@ -51,7 +54,8 @@
         "/industry/healthcare",
         "/industry/manufacturing",
         "/industry/telecommunications",
-        "/product/cost-optimization"
+        "/product/cost-optimization",
+        "/product/state"
       ]
     }
   },
@@ -62,15 +66,17 @@
         "type": "list",
         "minItems": 1,
         "maxItems": 5,
-        "observedIn": 7
+        "observedIn": 10
       },
       "quotes[].logo": {
         "type": "asset",
         "referenceRoles": [
-          "customer.logo"
+          "customer.logo",
+          "product.lockup"
         ],
-        "observedIn": 11,
+        "observedIn": 15,
         "generatedRoles": [
+          "brand.placeholder-mark",
           "customer.placeholder-logo"
         ]
       },
@@ -78,25 +84,25 @@
         "type": "text",
         "maxWords": 2,
         "maxChars": 17,
-        "observedIn": 11
+        "observedIn": 15
       },
       "quotes[].person": {
         "type": "text",
         "maxWords": 3,
         "maxChars": 13,
-        "observedIn": 11
+        "observedIn": 18
       },
       "quotes[].quote": {
         "type": "text",
-        "maxWords": 54,
-        "maxChars": 324,
-        "observedIn": 11
+        "maxWords": 73,
+        "maxChars": 363,
+        "observedIn": 18
       },
       "quotes[].role": {
         "type": "text",
         "maxWords": 4,
-        "maxChars": 30,
-        "observedIn": 11
+        "maxChars": 35,
+        "observedIn": 18
       }
     }
   },
@@ -105,10 +111,12 @@
       "quotes[].logo": {
         "type": "asset",
         "referenceRoles": [
-          "customer.logo"
+          "customer.logo",
+          "product.lockup"
         ],
-        "observedIn": 11,
+        "observedIn": 15,
         "generatedRoles": [
+          "brand.placeholder-mark",
           "customer.placeholder-logo"
         ]
       }
@@ -116,10 +124,18 @@
     "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
   },
   "generatedAssetRoles": [
+    "brand.placeholder-mark",
     "customer.placeholder-logo"
   ],
   "style": {
     "props": {
+      "background": {
+        "kind": "enum",
+        "allowed": [
+          "wash",
+          "white"
+        ]
+      },
       "strokeShape": {
         "kind": "token",
         "allowed": [
@@ -130,7 +146,8 @@
     "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
   },
   "constraints": {
-    "maxPerPage": 1
+    "maxPerPage": 1,
+    "consecutiveVariants": []
   },
   "motion": {
     "allowedPatterns": [
@@ -156,6 +173,7 @@
       "behavior": "py 48"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "/product/catalog": [
@@ -178,10 +196,19 @@
       ],
       "/industry/telecommunications": [
         655
+      ],
+      "/product/state": [
+        662
+      ],
+      "/product/assistant": [
+        655
+      ],
+      "/product/analyst": [
+        655
       ]
     }
   },
   "evidence": [
-    "src/components/sections/QuoteBand.jsx:25-75"
+    "src/components/sections/QuoteBand.jsx:29-79"
   ]
 }

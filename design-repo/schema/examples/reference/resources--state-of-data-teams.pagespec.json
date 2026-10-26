@@ -1,0 +1,2030 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "T8",
+  "route": "/resources/state-of-data-teams",
+  "theme": "light",
+  "brand": {
+    "name": "Lattice"
+  },
+  "meta": {
+    "title": "State of data teams"
+  },
+  "nodes": [
+    {
+      "section": "shell.announcement-bar",
+      "variant": "default",
+      "content": {
+        "slides": [
+          {
+            "text": "Lattice 4.0 is here with faster incremental builds, smarter tests, and a fresh lineage explorer.",
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "text": "Join our live workshop on modeling patterns this month.",
+            "href": "/resources/webinars/charts-as-code"
+          },
+          {
+            "text": "New report: how two hundred data teams trimmed warehouse spend while shipping trusted models each week.",
+            "href": "/resources/state-of-data-teams"
+          },
+          {
+            "text": "Lattice Cloud now runs in three new regions across Europe and Asia. Check region availability.",
+            "href": "/blog/lattice-joins-northwind"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "carousel.autoplay",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.navbar",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-dark.svg"
+        },
+        "menuLabels": [
+          "Product",
+          "Solutions",
+          "Customers",
+          "Resources",
+          "Community"
+        ],
+        "plainLink": {
+          "label": "Pricing",
+          "href": "/pricing"
+        },
+        "secondaryAction": {
+          "label": "Get started",
+          "href": "/signup"
+        },
+        "primaryAction": {
+          "label": "Book a demo",
+          "href": "/contact"
+        }
+      },
+      "motion": {
+        "pattern": "nav.hide-on-scroll",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mega-menu",
+      "variant": "default",
+      "content": {
+        "menus": [
+          {
+            "trigger": "Product",
+            "groups": [
+              {
+                "label": "First steps",
+                "items": [
+                  {
+                    "title": "Why Lattice",
+                    "description": "How Lattice turns SQL into trusted products",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/product/what-is-lattice"
+                  },
+                  {
+                    "title": "Platform tour",
+                    "description": "Watch a ten-minute walkthrough of the full workspace",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/product/lattice"
+                  }
+                ]
+              },
+              {
+                "label": "Everything in the box",
+                "items": [
+                  {
+                    "title": "Build",
+                    "description": "Author models in the browser, a desktop editor or the command line",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/develop"
+                  },
+                  {
+                    "title": "Validate",
+                    "description": "Assert rules on every model",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/test-and-observe"
+                  },
+                  {
+                    "title": "Design",
+                    "description": "Split big projects by domain",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/mesh"
+                  },
+                  {
+                    "title": "Explore",
+                    "description": "Search docs, owners and lineage",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/catalog"
+                  },
+                  {
+                    "title": "Ship",
+                    "description": "Trigger runs on merge or a timer",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/deploy"
+                  },
+                  {
+                    "title": "Measure",
+                    "description": "Publish one definition of revenue to every tool that asks",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/semantic-layer"
+                  }
+                ]
+              }
+            ],
+            "featured": {
+              "title": "The modeling lifecycle",
+              "description": "Map how ideas move from first query to production model, with clear owners and checks at each step",
+              "thumbnail": {
+                "assetRole": "illustration.abstract",
+                "alt": "",
+                "ref": "/assets/menu/featured.svg"
+              },
+              "href": "/resources/analytics-lifecycle"
+            },
+            "side": {
+              "label": "Feature spotlight",
+              "links": [
+                {
+                  "label": "Smart state",
+                  "href": "/product/state"
+                },
+                {
+                  "label": "Guided setup",
+                  "href": "/product/assistant"
+                },
+                {
+                  "label": "Charts",
+                  "href": "/product/charts"
+                },
+                {
+                  "label": "Governance",
+                  "href": "/product/governance"
+                },
+                {
+                  "label": "Security",
+                  "href": "/security"
+                },
+                {
+                  "label": "Integrations",
+                  "href": "/product/integrations"
+                }
+              ],
+              "action": {
+                "label": "See the latest demo",
+                "href": "/resources/webinars/launch-showcase"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Solutions",
+            "groups": [
+              {
+                "label": "By need",
+                "items": [
+                  {
+                    "title": "Analytics",
+                    "description": "Give analysts a governed place to model data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/analyst"
+                  },
+                  {
+                    "title": "AI readiness",
+                    "description": "Feed assistants with well-described data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/ai"
+                  }
+                ]
+              },
+              {
+                "label": "By team",
+                "items": [
+                  {
+                    "title": "Data engineers",
+                    "description": "Ship pipelines with tests built in",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/data-modernization"
+                  },
+                  {
+                    "title": "Analysts",
+                    "description": "Own models end to end in plain SQL",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/embedded-analytics"
+                  },
+                  {
+                    "title": "Platform leads",
+                    "description": "Standardize how every team builds",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/data-trust"
+                  },
+                  {
+                    "title": "Executives",
+                    "description": "Trust the numbers behind decisions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/cost-optimization"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "By industry",
+              "links": [
+                {
+                  "label": "Finance",
+                  "href": "/industry/financial-services"
+                },
+                {
+                  "label": "Retail",
+                  "href": "/industry/manufacturing"
+                },
+                {
+                  "label": "Healthcare",
+                  "href": "/industry/healthcare"
+                },
+                {
+                  "label": "Media",
+                  "href": "/industry/telecommunications"
+                },
+                {
+                  "label": "Public sector",
+                  "href": "/industry/energy-utilities"
+                },
+                {
+                  "label": "Software",
+                  "href": "/data-platforms/cobalt"
+                }
+              ],
+              "action": {
+                "label": "See every use case",
+                "href": "/product/data-modernization"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Customers",
+            "groups": [
+              {
+                "label": "Stories",
+                "items": [
+                  {
+                    "title": "Case studies",
+                    "description": "Read how teams run on Lattice",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/case-studies"
+                  },
+                  {
+                    "title": "Reviews",
+                    "description": "Independent ratings from practitioners",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/resources/on-demand"
+                  }
+                ]
+              },
+              {
+                "label": "By outcome",
+                "items": [
+                  {
+                    "title": "Data quality",
+                    "description": "Teams that caught issues earlier",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/case-studies/kestrel"
+                  },
+                  {
+                    "title": "Speed",
+                    "description": "Teams that shipped models faster",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/case-studies/meridian-partners"
+                  },
+                  {
+                    "title": "Cost",
+                    "description": "Teams that trimmed warehouse spend",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/case-studies/halcyon"
+                  },
+                  {
+                    "title": "Scale",
+                    "description": "Teams that grew past one project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/case-studies/basalt-health"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Featured",
+              "links": [
+                {
+                  "label": "Fernway",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Orbitly",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Kestrel",
+                  "href": "/case-studies/kestrel"
+                },
+                {
+                  "label": "Tidepool",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Meridian",
+                  "href": "/case-studies/meridian-partners"
+                },
+                {
+                  "label": "Halcyon",
+                  "href": "/case-studies/halcyon"
+                }
+              ],
+              "action": {
+                "label": "View all customers",
+                "href": "/case-studies"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Resources",
+            "groups": [
+              {
+                "label": "Learn",
+                "items": [
+                  {
+                    "title": "Docs",
+                    "description": "Guides and reference for every feature",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Courses",
+                    "description": "Free self-paced training",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/learn"
+                  }
+                ]
+              },
+              {
+                "label": "Explore",
+                "items": [
+                  {
+                    "title": "Blog",
+                    "description": "Notes from the product team",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/blog"
+                  },
+                  {
+                    "title": "Webinars",
+                    "description": "Live and recorded sessions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/resources/webinars"
+                  },
+                  {
+                    "title": "Reports",
+                    "description": "Research on modern data work",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/resources/state-of-data-teams"
+                  },
+                  {
+                    "title": "Templates",
+                    "description": "Starter projects you can fork",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/resources/whitepaper-control-plane"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Popular",
+              "links": [
+                {
+                  "label": "Getting started",
+                  "href": "/learn"
+                },
+                {
+                  "label": "Best practices",
+                  "href": "/resources/analytics-lifecycle"
+                },
+                {
+                  "label": "Release notes",
+                  "href": "/blog/summit-announcements"
+                },
+                {
+                  "label": "Glossary",
+                  "href": "/resources"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Status",
+                  "href": "#"
+                }
+              ],
+              "action": {
+                "label": "Browse all resources",
+                "href": "/resources"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Community",
+            "groups": [
+              {
+                "label": "Connect",
+                "items": [
+                  {
+                    "title": "Forum",
+                    "description": "Ask questions and share answers",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Meetups",
+                    "description": "Find a group near you",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/events"
+                  }
+                ]
+              },
+              {
+                "label": "Contribute",
+                "items": [
+                  {
+                    "title": "Open source",
+                    "description": "Help build the core project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Write a guide",
+                    "description": "Share what you have learned",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Speak",
+                    "description": "Present at a community event",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/summit"
+                  },
+                  {
+                    "title": "Champions",
+                    "description": "Join the ambassador program",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/champions"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Get involved",
+              "links": [
+                {
+                  "label": "Code of conduct",
+                  "href": "/community"
+                },
+                {
+                  "label": "Chat space",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Newsletter",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Awards",
+                  "href": "/champions"
+                },
+                {
+                  "label": "Jobs board",
+                  "href": "/about-us/careers"
+                }
+              ],
+              "action": {
+                "label": "Join the community",
+                "href": "/community/join"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "menu.popover",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mobile-drawer",
+      "variant": "default",
+      "content": {
+        "accountActions": [
+          {
+            "label": "Log in",
+            "href": "#"
+          },
+          {
+            "label": "Create an account",
+            "href": "/signup"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "drawer.slide",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "article.guide-header",
+      "variant": "default",
+      "content": {
+        "breadcrumb": {
+          "items": [
+            {
+              "label": "Resources",
+              "href": "/resources"
+            },
+            {
+              "label": "Reports",
+              "href": "/resources"
+            }
+          ],
+          "current": "State of data teams 2026: trust, cost and AI"
+        },
+        "title": "State of data teams 2026: trust, cost and AI",
+        "readTime": "24 min",
+        "buttons": [
+          {
+            "label": "Download the full report",
+            "href": "#download-report"
+          },
+          {
+            "label": "Watch the results webinar",
+            "href": "/resources/webinars/launch-showcase"
+          }
+        ],
+        "image": {
+          "assetRole": "figure.article-image",
+          "alt": "A bar chart card on a warm gradient",
+          "ref": "/assets/pages/guide/report-hero.svg"
+        }
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "article.guide-body",
+      "variant": "default",
+      "content": {
+        "blocks": [
+          {
+            "kind": "h2",
+            "text": "Who we heard from"
+          },
+          {
+            "kind": "p",
+            "text": "This year 2,140 practitioners answered our survey, up from roughly 1,600 last year. Respondents came from 61 countries and from companies with anywhere between a dozen and several hundred thousand employees."
+          },
+          {
+            "kind": "p",
+            "text": "About half described themselves as analytics engineers, a quarter as analysts and the rest as data engineers, platform owners or leaders of data teams. We weighted nothing; the charts show raw shares."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Data team size (invented sample data)",
+              "ref": "/assets/pages/charts/chart-1.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Small teams still dominate. More than half of respondents work in a data team of five people or fewer, and only one in ten works in a team larger than fifty."
+          },
+          {
+            "kind": "p",
+            "text": "Answers were collected anonymously. Where we quote people, they agreed to be named and reviewed the wording, and we have kept their job titles general."
+          },
+          {
+            "kind": "p",
+            "text": "Throughout the report, a team means the group of people who build and maintain data models for a company or a large division of one."
+          },
+          {
+            "kind": "p",
+            "text": "We compare with last year where the same question was asked in the same way. Where a question changed, we say so rather than drawing a trend line."
+          },
+          {
+            "kind": "h4",
+            "text": "How time is spent"
+          },
+          {
+            "kind": "p",
+            "text": "We asked people to split a typical week across six kinds of work. Building new models remains the largest single slice, but fixing breakages and answering ad hoc requests together take almost as much time."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Share of the week by activity (invented sample data)",
+              "ref": "/assets/pages/charts/chart-2.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Teams that reported a formal review process spent noticeably less time on breakages, a pattern that shows up again later in the report."
+          },
+          {
+            "kind": "quote",
+            "text": "If I could hand back the hours we lose to broken pipelines every month, we would have the headcount we keep asking for.",
+            "by": "— Hana Petrova, Data Lead, a logistics company in Central Europe"
+          },
+          {
+            "kind": "icons",
+            "items": [
+              {
+                "icon": {
+                  "assetRole": "icon.feature",
+                  "alt": "",
+                  "ref": "/assets/pages/icons/team.svg"
+                },
+                "title": "Respondents from 61 countries",
+                "body": "Most answers came from North America and Europe, with growing shares from South Asia and Latin America compared with last year."
+              },
+              {
+                "icon": {
+                  "assetRole": "icon.feature",
+                  "alt": "",
+                  "ref": "/assets/pages/icons/chart.svg"
+                },
+                "title": "A balanced mix of roles and company sizes",
+                "body": "Analytics engineers made up just under half of all answers. Every company size band had at least two hundred respondents."
+              },
+              {
+                "icon": {
+                  "assetRole": "icon.feature",
+                  "alt": "",
+                  "ref": "/assets/pages/icons/clock.svg"
+                },
+                "title": "Fielded over six weeks in late summer",
+                "body": "The survey ran online in English, Spanish, Portuguese and Japanese. Median completion time was fourteen minutes."
+              },
+              {
+                "icon": {
+                  "assetRole": "icon.feature",
+                  "alt": "",
+                  "ref": "/assets/pages/icons/shield.svg"
+                },
+                "title": "Anonymous by design, with free-text answers reviewed by hand before any were quoted",
+                "body": "We did not collect names or company names. Quotes in this report come from respondents who opted in to be contacted and approved the wording."
+              }
+            ]
+          },
+          {
+            "kind": "p",
+            "text": "Answering ad hoc requests fell slightly compared with last year, and respondents with a documented semantic layer reported the smallest share of all."
+          },
+          {
+            "kind": "p",
+            "text": "Documentation still gets the smallest slice of the week, which helps explain why it appears again and again as a weak point in later sections."
+          },
+          {
+            "kind": "h2",
+            "text": "Confidence in data is rising, slowly"
+          },
+          {
+            "kind": "p",
+            "text": "For the third year running, more teams say they trust the data they publish. The increase is real but modest, and the gap between the most and least confident teams has widened."
+          },
+          {
+            "kind": "p",
+            "text": "Confidence tracks closely with testing habits. Teams that test most of their models are almost twice as likely to describe themselves as very confident."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Teams confident in their data, by year (invented sample data)",
+              "ref": "/assets/pages/charts/chart-3.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "The share of teams describing themselves as not confident at all fell below ten percent for the first time."
+          },
+          {
+            "kind": "p",
+            "text": "We asked the same five questions about confidence that we asked last year, covering accuracy, freshness, completeness, consistency and clarity of definitions."
+          },
+          {
+            "kind": "p",
+            "text": "Accuracy improved the most. Consistency, the sense that the same question gets the same answer everywhere, improved the least and remains the weakest score."
+          },
+          {
+            "kind": "p",
+            "text": "The most confident teams were not the largest. Some of the highest scores came from teams of three or four people with strict review habits."
+          },
+          {
+            "kind": "h3",
+            "text": "What still gets in the way"
+          },
+          {
+            "kind": "p",
+            "text": "Unclear ownership topped the list of blockers again, ahead of slow reviews and unreliable sources. Hiring dropped down the list as budgets tightened and fewer teams planned to grow."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Biggest blockers this year (invented sample data)",
+              "ref": "/assets/pages/charts/chart-4.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Respondents who named unclear ownership as their main blocker were also the most likely to report a stakeholder escalation in the last quarter."
+          },
+          {
+            "kind": "quote",
+            "text": "Nobody disagrees about the maths. We disagree about who is allowed to change the definition, and that argument can stall a project for months.",
+            "by": "— Jorge Almeida, Analytics Engineer, retail"
+          },
+          {
+            "kind": "p",
+            "text": "Flaky sources moved up a place this year, often linked to the growing number of tools that feed data into the warehouse."
+          },
+          {
+            "kind": "p",
+            "text": "Many respondents wrote that blockers compound: unclear ownership slows reviews, slow reviews encourage shortcuts, and shortcuts lead to more incidents."
+          },
+          {
+            "kind": "h4",
+            "text": "Testing coverage"
+          },
+          {
+            "kind": "p",
+            "text": "We asked what share of production models carry at least one test. The median team tests between half and three quarters of its models, a clear step up from two years ago."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Models with at least one test (invented sample data)",
+              "ref": "/assets/pages/charts/chart-8.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Coverage alone does not guarantee quality, but teams with no tests at all reported three times as many incidents reaching stakeholders."
+          },
+          {
+            "kind": "p",
+            "text": "Uniqueness and not-null checks remain the most common tests by far. Tests that encode a business rule, such as totals that must reconcile, are rarer but grew fastest."
+          },
+          {
+            "kind": "p",
+            "text": "Teams that write tests during development rather than afterwards reported both higher coverage and fewer tests left permanently failing."
+          },
+          {
+            "kind": "h4",
+            "text": "Incidents over the year"
+          },
+          {
+            "kind": "p",
+            "text": "Reported incidents dipped in the middle of the year and rose again in the autumn, when many teams take on new reporting obligations."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Data incidents per month (invented sample data)",
+              "ref": "/assets/pages/charts/chart-9.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Teams with freshness rules on their most important models noticed problems an average of four hours earlier than teams without them."
+          },
+          {
+            "kind": "p",
+            "text": "Most incidents were caught by the data team before stakeholders noticed, but roughly one in four was first reported by someone outside it."
+          },
+          {
+            "kind": "p",
+            "text": "The most common causes were upstream schema changes, late data and logic changes that had not been reviewed, in that order."
+          },
+          {
+            "kind": "h2",
+            "text": "AI has arrived in the daily workflow"
+          },
+          {
+            "kind": "p",
+            "text": "Last year most teams were experimenting. This year a majority use some form of AI help every day, most often to draft SQL, write tests and explain unfamiliar parts of a project."
+          },
+          {
+            "kind": "p",
+            "text": "Adoption is broad but shallow. Few teams let automated agents change production models without review, and most treat assistant output exactly like a colleague’s first draft."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Teams using AI help every day (invented sample data)",
+              "ref": "/assets/pages/charts/chart-5.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Daily use was highest among analytics engineers and lowest among platform owners, who more often described AI tools as something to govern rather than something to use."
+          },
+          {
+            "kind": "p",
+            "text": "Use is spreading from individuals to teams. A year ago most respondents tried AI tools on their own; this year more teams have shared conventions for when and how to use them."
+          },
+          {
+            "kind": "p",
+            "text": "Respondents were clear that AI has not reduced the need for data skills. If anything, reviewing generated work well requires more experience, not less."
+          },
+          {
+            "kind": "p",
+            "text": "The biggest barrier to wider use was not cost or policy but context: assistants that do not know a project’s definitions produce answers that need too much checking."
+          },
+          {
+            "kind": "h3",
+            "text": "What people use it for"
+          },
+          {
+            "kind": "p",
+            "text": "Drafting SQL remains the most common use. Writing tests and documentation is close behind, and explaining lineage to newcomers has grown fastest since last year."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: What agents are used for (invented sample data)",
+              "ref": "/assets/pages/charts/chart-15.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Triage of failed runs is still rare, but the teams that use it report the largest time savings of any use case."
+          },
+          {
+            "kind": "quote",
+            "text": "The assistant writes the boring tests I always meant to write. I still read every line, but the blank page is gone.",
+            "by": "— Aisha Rahman, Senior Analytics Engineer, healthcare"
+          },
+          {
+            "kind": "p",
+            "text": "Analysts used AI most for exploring unfamiliar tables and drafting queries, while analytics engineers leaned on it for tests and documentation."
+          },
+          {
+            "kind": "p",
+            "text": "Several respondents described using an assistant as a first reviewer, asking it to point out risky joins or missing tests before a human looks."
+          },
+          {
+            "kind": "h3",
+            "text": "Trust in AI answers"
+          },
+          {
+            "kind": "p",
+            "text": "Confidence in AI-generated answers depends heavily on context. Respondents whose assistants read documented models and certified metrics were far more likely to trust the answers."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Trust in AI-generated answers (invented sample data)",
+              "ref": "/assets/pages/charts/chart-16.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Teams that have not documented their key models were the most sceptical, and with good reason: an assistant without context has to guess, and guesses are hard to check."
+          },
+          {
+            "kind": "quote",
+            "text": "We stopped asking whether the model was smart enough and started asking whether our project explained itself well enough. That was the real fix.",
+            "by": "— Daniel Osei, Head of Data Platform, financial services"
+          },
+          {
+            "kind": "p",
+            "text": "Trust also depends on visibility. Assistants that show the models and metrics behind an answer were rated far more trustworthy than ones that only return a figure."
+          },
+          {
+            "kind": "p",
+            "text": "A small group of teams reported withdrawing an assistant after it gave confident but wrong answers to stakeholders, usually because definitions were missing."
+          },
+          {
+            "kind": "h4",
+            "text": "Guardrails in place"
+          },
+          {
+            "kind": "p",
+            "text": "Seventy percent of teams using AI daily require human review before any generated change reaches production. Fewer than one in twenty allow unattended changes of any kind."
+          },
+          {
+            "kind": "p",
+            "text": "The most common guardrails were read-only access for agents, mandatory review of generated code and logging of every question asked."
+          },
+          {
+            "kind": "p",
+            "text": "Larger companies were more likely to have written policies, while small teams relied on informal agreements that were often clear but rarely recorded."
+          },
+          {
+            "kind": "h2",
+            "text": "Budgets are flat, and cost is under scrutiny"
+          },
+          {
+            "kind": "p",
+            "text": "Most teams expect their budget to stay roughly the same next year. Large enterprises were slightly more optimistic than smaller companies, where flat or shrinking budgets were the norm."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Budget outlook for next year (invented sample data)",
+              "ref": "/assets/pages/charts/chart-6.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "With budgets flat, cost has become a first-class concern. Two thirds of respondents said they had been asked to reduce warehouse spend in the past year."
+          },
+          {
+            "kind": "p",
+            "text": "Teams that reported a budget increase usually tied it to a specific programme, such as a platform migration or a regulatory deadline, rather than general growth."
+          },
+          {
+            "kind": "p",
+            "text": "Compute remains the largest line item for most teams, ahead of software licences and contractors."
+          },
+          {
+            "kind": "p",
+            "text": "Respondents described a shift in how cost is discussed: less about the total bill and more about the cost of specific outputs and whether they are worth it."
+          },
+          {
+            "kind": "h3",
+            "text": "Who can see what things cost"
+          },
+          {
+            "kind": "p",
+            "text": "Only a minority of teams can see the cost of individual models or runs on a daily basis. Most rely on a monthly invoice, which makes it hard to connect a spike in spend to the change that caused it."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Visibility into warehouse cost (invented sample data)",
+              "ref": "/assets/pages/charts/chart-18.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Teams with daily cost visibility were twice as likely to report a successful cost reduction project in the past year."
+          },
+          {
+            "kind": "p",
+            "text": "The teams with the best visibility attribute cost to models, owners and the business areas they serve, which makes trade-offs much easier to discuss."
+          },
+          {
+            "kind": "p",
+            "text": "Many respondents said cost data exists in their platform but is hard to connect to the work, because runs, models and owners are tracked in different places."
+          },
+          {
+            "kind": "h4",
+            "text": "Tool sprawl"
+          },
+          {
+            "kind": "p",
+            "text": "The average stack now includes between four and six tools, from ingestion through to reporting. A long tail of teams run more than a dozen, often because different departments bought their own."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Tools in the average stack (invented sample data)",
+              "ref": "/assets/pages/charts/chart-11.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Consolidation was the second most common cost initiative after reducing compute, mentioned by roughly forty percent of teams."
+          },
+          {
+            "kind": "quote",
+            "text": "Our biggest saving last year came from rebuilding only what changed. We did not cut a single report, and nobody downstream noticed anything except fresher numbers.",
+            "by": "— Lucia Romero, Director of Analytics, media"
+          },
+          {
+            "kind": "p",
+            "text": "Tool counts were highest in companies that had grown through acquisition, where several stacks often run side by side for years after a deal closes."
+          },
+          {
+            "kind": "p",
+            "text": "Respondents who had consolidated tools reported lower cost and faster onboarding, but also warned that migrations took longer than planned."
+          },
+          {
+            "kind": "h2",
+            "text": "Where the work runs"
+          },
+          {
+            "kind": "p",
+            "text": "Cloud warehouses remain the default home for production models, but lakehouse setups and hybrid arrangements have grown steadily, especially in larger companies."
+          },
+          {
+            "kind": "p",
+            "text": "Many teams now run more than one engine, usually because different parts of the business adopted different platforms over time."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Where production models run (invented sample data)",
+              "ref": "/assets/pages/charts/chart-7.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Interest in running lightweight transformations on cheaper local compute was high, with a third of respondents saying they would try it in the next year."
+          },
+          {
+            "kind": "p",
+            "text": "Platform choices are sticky. Fewer than one in ten teams changed their primary warehouse in the past year, and most of those moved as part of a broader company migration."
+          },
+          {
+            "kind": "p",
+            "text": "Teams running more than one engine were the most interested in tools that work across platforms, so that models and tests do not need rewriting for each."
+          },
+          {
+            "kind": "p",
+            "text": "Open table formats came up repeatedly in free-text answers as a way to keep options open without copying data between systems."
+          },
+          {
+            "kind": "h3",
+            "text": "Documentation coverage by layer"
+          },
+          {
+            "kind": "p",
+            "text": "Documentation is strongest close to the sources and weakest at the edges, where models meet dashboards and other tools. That is exactly where readers need it most."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Documentation coverage (invented sample data)",
+              "ref": "/assets/pages/charts/chart-14.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Teams that document exposures, the dashboards and applications that read their models, find it much easier to assess the impact of a change before merging it."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Methodology summary card",
+              "ref": "/assets/pages/guide/caption-1.svg"
+            },
+            "caption": "How we ran the survey: an online questionnaire of forty-two questions, open to anyone who works with data, promoted through our community channels, partner newsletters and social posts. We removed incomplete and duplicate answers, which left 2,140 responses. Percentages are rounded and may not sum to one hundred. Free-text answers were coded by two reviewers working independently, who then compared notes and resolved any differences.",
+            "href": "#"
+          },
+          {
+            "kind": "p",
+            "text": "Column-level documentation lags well behind model-level descriptions, especially for wide marts with dozens of columns."
+          },
+          {
+            "kind": "p",
+            "text": "Teams that generate first drafts of documentation with an assistant and then edit them reported the biggest jumps in coverage this year."
+          },
+          {
+            "kind": "h2",
+            "text": "Ownership and shared definitions"
+          },
+          {
+            "kind": "p",
+            "text": "Ownership is the theme that connects most of this report. Teams that know who owns each metric report higher confidence, fewer incidents and shorter disputes."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Who owns business metrics (invented sample data)",
+              "ref": "/assets/pages/charts/chart-10.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Ownership by domain teams has grown, but a fifth of respondents still say ownership of key metrics is unclear."
+          },
+          {
+            "kind": "p",
+            "text": "We asked who owns the most important business metrics: the central data team, domain teams, a shared arrangement or nobody in particular."
+          },
+          {
+            "kind": "p",
+            "text": "Domain ownership works best when domains publish their definitions in a shared layer. Where they do not, metrics drift between departments quickly."
+          },
+          {
+            "kind": "p",
+            "text": "Respondents with clear ownership were also more likely to retire unused models, because someone had the authority to decide."
+          },
+          {
+            "kind": "h3",
+            "text": "One definition, many readers"
+          },
+          {
+            "kind": "p",
+            "text": "We asked how many important metrics are defined once and reused everywhere. Only a small share of teams said all of them; most said some or most."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Shared metric definitions (invented sample data)",
+              "ref": "/assets/pages/charts/chart-21.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Shared definitions matter more now that agents read the same data as people. A metric defined twice will eventually be answered two different ways."
+          },
+          {
+            "kind": "p",
+            "text": "Revenue, active customers and churn were the metrics most often described as having more than one definition in use across the company."
+          },
+          {
+            "kind": "p",
+            "text": "Teams that consolidated definitions reported the effort took months, but that disputes about numbers in meetings dropped sharply afterwards."
+          },
+          {
+            "kind": "h4",
+            "text": "Review practices"
+          },
+          {
+            "kind": "p",
+            "text": "Pull requests are now the dominant way changes get reviewed, but one in eight teams still ships without any review at all."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: How changes get reviewed (invented sample data)",
+              "ref": "/assets/pages/charts/chart-19.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Teams without review reported the highest share of incidents caused by code changes rather than by upstream data."
+          },
+          {
+            "kind": "p",
+            "text": "Pairing was most common in small teams, where a quick conversation often replaces a formal pull request for minor changes."
+          },
+          {
+            "kind": "p",
+            "text": "Release windows, where changes ship together on a fixed day, were mostly reported by teams in regulated industries."
+          },
+          {
+            "kind": "h4",
+            "text": "Data contracts"
+          },
+          {
+            "kind": "p",
+            "text": "Formal agreements between the teams that produce data and the teams that model it are spreading quickly, from a niche practice a few years ago to roughly thirty-six percent of respondents today."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Teams with data contracts (invented sample data)",
+              "ref": "/assets/pages/charts/chart-20.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "The most common contract is simple: agreed column names and types, checked on every build, with a named contact on each side."
+          },
+          {
+            "kind": "quote",
+            "text": "A contract is just a promise written down where a machine can check it. Once we had a few, the late-night surprises mostly stopped.",
+            "by": "— Mei Tanaka, Staff Data Engineer, software"
+          },
+          {
+            "kind": "p",
+            "text": "Contracts are most common at the boundary between application engineering and data teams, where schema changes historically caused the most breakages."
+          },
+          {
+            "kind": "p",
+            "text": "Teams with contracts in place reported fewer incidents caused by upstream changes, though setting them up required buy-in from engineering leadership."
+          },
+          {
+            "kind": "h2",
+            "text": "People, skills and careers"
+          },
+          {
+            "kind": "p",
+            "text": "Hiring plans are cautious. Most small teams expect to stay the same size, while larger teams are more likely to add a role or two, usually in platform or governance."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Hiring plans by team size (invented sample data)",
+              "ref": "/assets/pages/charts/chart-12.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Contractors and consultancies filled more gaps than last year, particularly for migrations and one-off projects."
+          },
+          {
+            "kind": "p",
+            "text": "Turnover was lower than last year, with most respondents saying they expect to stay in their current role for at least another year."
+          },
+          {
+            "kind": "p",
+            "text": "Remote and hybrid work remains the norm. Fewer than one in five respondents work in an office every day."
+          },
+          {
+            "kind": "p",
+            "text": "Compensation questions were optional; the pattern of answers matched last year closely, so we have left the details to the appendix."
+          },
+          {
+            "kind": "h3",
+            "text": "Getting new people productive"
+          },
+          {
+            "kind": "p",
+            "text": "We asked how long it takes a new hire to ship their first production change. The answer has improved: most teams now report two weeks or less."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Weeks until a new hire ships (invented sample data)",
+              "ref": "/assets/pages/charts/chart-17.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Teams with written conventions, examples and a review buddy for newcomers were the fastest to onboard."
+          },
+          {
+            "kind": "p",
+            "text": "The slowest onboarding was reported in projects without clear conventions, where newcomers had to learn by reading old code and asking questions."
+          },
+          {
+            "kind": "p",
+            "text": "Several respondents mentioned starter tasks, small and well-scoped changes reserved for new joiners, as the single most effective onboarding habit."
+          },
+          {
+            "kind": "h3",
+            "text": "How stakeholders rate the team"
+          },
+          {
+            "kind": "p",
+            "text": "We also asked respondents how they think their stakeholders would score the data team. Most chose a four out of five, a small improvement on last year."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Stakeholder satisfaction score (invented sample data)",
+              "ref": "/assets/pages/charts/chart-22.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Self-reported scores are optimistic by nature, but the trend is consistent with the rise in confidence and the fall in reported incidents."
+          },
+          {
+            "kind": "p",
+            "text": "Teams that hold regular check-ins with their main stakeholders scored themselves higher and reported fewer surprise escalations."
+          },
+          {
+            "kind": "p",
+            "text": "The most common complaint teams expected from stakeholders was speed rather than accuracy, which suggests trust is growing faster than throughput."
+          },
+          {
+            "kind": "h3",
+            "text": "Skills in demand"
+          },
+          {
+            "kind": "p",
+            "text": "Data modelling remains the most wanted skill, followed by testing and platform operations. Prompting appeared on the list for the first time, though well behind the fundamentals."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Skills teams want most (invented sample data)",
+              "ref": "/assets/pages/charts/chart-23.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Domain knowledge, the ability to understand the business a dataset describes, was the skill leaders most often said they struggle to hire for."
+          },
+          {
+            "kind": "p",
+            "text": "Leaders also said communication skills are underrated: explaining a model, a trade-off or an incident clearly is part of the job at every level."
+          },
+          {
+            "kind": "p",
+            "text": "Interest in platform skills grew most among senior individual contributors, many of whom now look after shared infrastructure as well as models."
+          },
+          {
+            "kind": "h5",
+            "text": "Career paths on offer"
+          },
+          {
+            "kind": "p",
+            "text": "More companies now offer a senior individual contributor track for data roles, so that experienced practitioners can grow without becoming managers."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Career paths on offer (invented sample data)",
+              "ref": "/assets/pages/charts/chart-24.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Teams without any defined career path reported the highest rate of people leaving in the past year."
+          },
+          {
+            "kind": "p",
+            "text": "Hybrid paths, where senior practitioners lead technical direction while managing a small team, became more common in mid-sized companies."
+          },
+          {
+            "kind": "p",
+            "text": "Respondents on a defined path were more likely to say they understood what they needed to do to be promoted."
+          },
+          {
+            "kind": "h2",
+            "text": "Looking ahead to next year"
+          },
+          {
+            "kind": "p",
+            "text": "When we asked about priorities, data quality came first by a clear margin, followed by cost and readiness for AI. Self-serve analytics and governance rounded out the list."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Priorities for next year (invented sample data)",
+              "ref": "/assets/pages/charts/chart-25.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "These priorities reinforce each other. Quality and clear definitions make AI answers trustworthy, and trustworthy answers make self-serve possible."
+          },
+          {
+            "kind": "p",
+            "text": "Priorities differ by team size. Small teams focus on quality and speed, while large teams put governance and cost higher on the list."
+          },
+          {
+            "kind": "p",
+            "text": "Readiness for AI was described less as adopting new tools and more as getting definitions, documentation and ownership in order."
+          },
+          {
+            "kind": "p",
+            "text": "Very few teams plan a major platform change next year. Most expect to build on what they have and improve how it is used."
+          },
+          {
+            "kind": "h3",
+            "text": "Self-serve is finally working for some"
+          },
+          {
+            "kind": "p",
+            "text": "The share of questions answered without a request to the data team has grown each quarter of the year for teams with a documented semantic layer."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Chart: Self-serve questions answered (invented sample data)",
+              "ref": "/assets/pages/charts/chart-13.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "For teams without one, the share stayed flat. Self-serve tools on their own do not reduce the queue; shared definitions do."
+          },
+          {
+            "kind": "quote",
+            "text": "We used to measure success by how many dashboards we built. Now we count the questions that never had to reach us, and that number is finally going up.",
+            "by": "— Priscilla Nwosu, VP of Data, consumer apps"
+          },
+          {
+            "kind": "p",
+            "text": "The pattern holds across company sizes. Even small teams saw self-serve questions rise once a handful of key metrics were defined in one place."
+          },
+          {
+            "kind": "p",
+            "text": "Respondents also noted that self-serve changes the data team’s work rather than removing it: less answering, more defining, testing and explaining."
+          },
+          {
+            "kind": "h3",
+            "text": "What we take from this year"
+          },
+          {
+            "kind": "p",
+            "text": "The data teams in this survey are doing more with flat budgets, adopting AI carefully and investing in the habits that make their work dependable. The leaders are not the teams with the most tools, but the teams with the clearest ownership."
+          },
+          {
+            "kind": "p",
+            "text": "If there is one recommendation in this report, it is to make your project explain itself: name owners, define metrics once, test the assumptions that matter and document the models people and agents rely on."
+          },
+          {
+            "kind": "ul",
+            "items": [
+              {
+                "text": "Write down an owner for every important model and metric."
+              },
+              {
+                "text": "Define each key metric once and reuse it everywhere."
+              },
+              {
+                "text": "Test the assumptions that would hurt most if they broke."
+              },
+              {
+                "text": "Make cost visible at the level of individual runs."
+              }
+            ]
+          },
+          {
+            "kind": "p",
+            "text": "We will run the survey again next summer. If you would like to take part or suggest a question, the community forum has a thread for it, and every suggestion is read by the team that writes the report."
+          },
+          {
+            "kind": "ul",
+            "items": [
+              {
+                "text": "Full methodology and question list are in the downloadable report."
+              },
+              {
+                "text": "Anonymised aggregate tables are included as a spreadsheet."
+              }
+            ]
+          },
+          {
+            "kind": "p",
+            "text": "Thank you to everyone who took the time to answer. The survey only works because thousands of practitioners share their experience openly each year."
+          },
+          {
+            "kind": "p",
+            "text": "The full report includes every chart in this summary, the complete question list and the aggregated tables behind each figure."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Respondent breakdown card",
+              "ref": "/assets/pages/guide/caption-2.svg"
+            },
+            "caption": "Respondents by role and region: analytics engineers formed the largest group in every region except South Asia, where data engineers were the most common role. Company size was spread fairly evenly, with slightly more answers from businesses of one to five thousand employees. Full breakdowns, including industry and team size by region, appear in the appendix of the downloadable report.",
+            "href": "#"
+          },
+          {
+            "kind": "hr"
+          }
+        ],
+        "toc": "Report contents",
+        "promo": {
+          "title": "See it in your data",
+          "body": "Measure test coverage, freshness and cost for your own project in minutes.",
+          "cta": {
+            "label": "Try Lattice for free",
+            "href": "/signup"
+          }
+        },
+        "form": {
+          "title": "Get the full report, with every chart and the raw tables",
+          "fields": [
+            {
+              "name": "firstname",
+              "label": "First name",
+              "type": "text",
+              "required": true,
+              "autoComplete": "given-name"
+            },
+            {
+              "name": "lastname",
+              "label": "Last name",
+              "type": "text",
+              "required": true,
+              "autoComplete": "family-name"
+            },
+            {
+              "name": "email",
+              "label": "Business email",
+              "type": "email",
+              "required": true,
+              "autoComplete": "email"
+            },
+            {
+              "name": "company",
+              "label": "Company name",
+              "type": "text",
+              "required": true,
+              "autoComplete": "organization"
+            },
+            {
+              "name": "role",
+              "label": "Which best describes your job?",
+              "type": "select",
+              "required": true,
+              "placeholder": "Choose one",
+              "options": [
+                "Analytics engineer",
+                "Analyst or business intelligence developer",
+                "Data engineer",
+                "Data scientist or machine learning engineer",
+                "Software engineer",
+                "Platform, infrastructure or reliability engineer",
+                "Head of data, director of data or similar data leadership role",
+                "Data team manager",
+                "Chief data or analytics officer",
+                "Chief technology or information officer",
+                "Product manager",
+                "Finance, revenue operations or planning",
+                "Marketing operations or growth",
+                "Sales or customer success",
+                "Consultant or partner",
+                "Architect",
+                "Governance, privacy or compliance",
+                "Security",
+                "Executive outside the data function",
+                "Researcher or academic",
+                "Student",
+                "Founder",
+                "Recruiter",
+                "Other"
+              ]
+            },
+            {
+              "name": "phone",
+              "label": "Phone number",
+              "type": "tel",
+              "autoComplete": "tel"
+            }
+          ],
+          "submit": "Download",
+          "consent": "Lattice uses the details you share to reply to this request and, now and then, to send related product news. You may opt out of these emails at any time. To learn how we store and protect personal data, read our [privacy notice](/terms-of-use).",
+          "success": "Thanks. Your copy of the report is on its way to your inbox, and the link stays valid for seven days."
+        }
+      },
+      "motion": {
+        "pattern": "scroll.spy-toc",
+        "reducedMotionFallback": "jump-to-target",
+        "additional": [
+          {
+            "pattern": "sticky.pin",
+            "reducedMotionFallback": "none-needed"
+          }
+        ]
+      },
+      "style": {
+        "chapterLevel": "h2"
+      }
+    },
+    {
+      "section": "cta.community-band",
+      "variant": "default",
+      "content": {
+        "eyebrow": "Lattice community",
+        "title": "Talk through these findings with practitioners from around the world",
+        "body": "The Lattice community is where practitioners swap patterns, review each other’s projects and help steer the roadmap. Ask questions, share what worked, and learn alongside data leaders and AI builders from around the world.",
+        "primary": {
+          "label": "Join the community",
+          "href": "/community/join"
+        },
+        "secondary": {
+          "label": "Meet the community",
+          "href": "/community"
+        },
+        "stats": [
+          {
+            "number": "75,000+",
+            "label": "active members"
+          },
+          {
+            "number": "60,000+",
+            "label": "teams on Lattice"
+          },
+          {
+            "number": "140+",
+            "label": "local meetups"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-light.svg"
+        },
+        "columns": [
+          {
+            "title": "Platform",
+            "links": [
+              {
+                "label": "Overview",
+                "href": "/product/lattice"
+              },
+              {
+                "label": "What is Lattice?",
+                "href": "/product/what-is-lattice"
+              },
+              {
+                "label": "Lattice for AI workflows",
+                "href": "/product/ai"
+              },
+              {
+                "label": "Customer stories",
+                "href": "/case-studies"
+              },
+              {
+                "label": "Connectors",
+                "href": "/product/integrations"
+              },
+              {
+                "label": "Plans and pricing",
+                "href": "/pricing"
+              }
+            ]
+          },
+          {
+            "title": "For Builders",
+            "links": [
+              {
+                "label": "Documentation",
+                "href": "#"
+              },
+              {
+                "label": "Quickstart guides",
+                "href": "#"
+              },
+              {
+                "label": "Supported data platforms",
+                "href": "/data-platforms/cobalt"
+              },
+              {
+                "label": "Engineering blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Editor extension",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "/about-us"
+              },
+              {
+                "label": "Belonging at Lattice",
+                "href": "/about-us/belonging"
+              },
+              {
+                "label": "Careers",
+                "href": "/about-us/careers"
+              },
+              {
+                "label": "Press",
+                "href": "/press"
+              }
+            ],
+            "badge": {
+              "label": "Join the team",
+              "linkIndex": 2
+            }
+          },
+          {
+            "title": "Learning",
+            "links": [
+              {
+                "label": "Resource hub",
+                "href": "/resources"
+              },
+              {
+                "label": "Lattice Academy",
+                "href": "/learn"
+              },
+              {
+                "label": "Certification",
+                "href": "/certification"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              }
+            ]
+          },
+          {
+            "title": "Community",
+            "links": [
+              {
+                "label": "Join the community",
+                "href": "/community/join"
+              },
+              {
+                "label": "Become a contributor",
+                "href": "/community"
+              },
+              {
+                "label": "Open source projects",
+                "href": "#"
+              },
+              {
+                "label": "Community forum",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Help & Support",
+            "links": [
+              {
+                "label": "Contact us",
+                "href": "/contact"
+              },
+              {
+                "label": "Professional services",
+                "href": "/services"
+              },
+              {
+                "label": "Find a partner",
+                "href": "/partner-directory"
+              },
+              {
+                "label": "System status",
+                "href": "#"
+              }
+            ]
+          }
+        ],
+        "newsletter": {
+          "title": "Subscribe today!",
+          "body": "A monthly digest of field notes, release highlights and practical modeling advice.",
+          "action": {
+            "label": "Join today",
+            "href": "/community/join"
+          }
+        },
+        "region": {
+          "title": "Select region",
+          "options": [
+            "Global",
+            "Europe",
+            "Asia Pacific"
+          ]
+        },
+        "social": {
+          "title": "Connect with us",
+          "links": [
+            {
+              "label": "GitHub",
+              "href": "#"
+            },
+            {
+              "label": "LinkedIn",
+              "href": "#"
+            },
+            {
+              "label": "YouTube",
+              "href": "#"
+            },
+            {
+              "label": "Instagram",
+              "href": "#"
+            },
+            {
+              "label": "X",
+              "href": "#"
+            },
+            {
+              "label": "Bluesky",
+              "href": "#"
+            },
+            {
+              "label": "RSS",
+              "href": "#"
+            }
+          ]
+        },
+        "copyright": "© 2026 Lattice, Inc. All rights reserved.",
+        "legalLinks": [
+          {
+            "label": "Privacy policy",
+            "href": "#"
+          },
+          {
+            "label": "Accessibility statement",
+            "href": "/legal/ai-principles"
+          },
+          {
+            "label": "Terms of service",
+            "href": "/terms-of-use"
+          },
+          {
+            "label": "Security",
+            "href": "/security"
+          },
+          {
+            "label": "Acceptable use",
+            "href": "/modern-slavery-statement"
+          },
+          {
+            "label": "Responsible AI principles",
+            "href": "/legal/ai-principles"
+          }
+        ],
+        "cookieLabel": "Cookie preferences"
+      },
+      "motion": {
+        "pattern": "accordion.toggle",
+        "reducedMotionFallback": "unchanged"
+      }
+    }
+  ]
+}

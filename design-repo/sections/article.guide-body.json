@@ -1,0 +1,359 @@
+{
+  "id": "article.guide-body",
+  "title": "Guide / report body",
+  "semantic": {
+    "id": "article.guide-body",
+    "category": "ARTICLE"
+  },
+  "source": {
+    "id": "component:GuideBody",
+    "file": "src/components/article/ArticleBody.jsx",
+    "export": "GuideBody",
+    "tag": "div",
+    "lines": "29-42",
+    "tagLine": 33
+  },
+  "additionalSources": [
+    {
+      "id": "component:GuideRail",
+      "file": "src/components/article/StickyRail.jsx",
+      "export": "GuideRail",
+      "tag": "div",
+      "lines": "189-233",
+      "tagLine": 203
+    },
+    {
+      "id": "component:Prose",
+      "file": "src/components/article/Prose.jsx",
+      "export": "Prose",
+      "tag": "div",
+      "lines": "286-312",
+      "tagLine": 289
+    },
+    {
+      "id": "component:DownloadForm",
+      "file": "src/components/form/DownloadForm.jsx",
+      "export": "DownloadForm",
+      "tag": "div",
+      "lines": "6-14",
+      "tagLine": 8
+    }
+  ],
+  "purpose": "Prose chapters (2/3, each opened by an h2) beside a sticky rail (1/4: table of contents with scroll-spy, then one promo). The report variant ends the prose with an embedded download form card. One DOM unit; decompose logically by chapter (h2).",
+  "retrievalEligible": true,
+  "placement": "main",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "blocks",
+        "promo",
+        "toc"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "blocks": [
+          1,
+          188
+        ]
+      },
+      "observedOn": [
+        "/resources/analytics-lifecycle",
+        "/resources/state-of-data-teams"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "blocks": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 188,
+        "observedIn": 2
+      },
+      "blocks[].by": {
+        "type": "text",
+        "maxWords": 11,
+        "maxChars": 64,
+        "observedIn": 7
+      },
+      "blocks[].caption": {
+        "type": "text",
+        "maxWords": 65,
+        "maxChars": 437,
+        "observedIn": 2
+      },
+      "blocks[].href": {
+        "type": "link",
+        "observedIn": 2
+      },
+      "blocks[].image": {
+        "type": "asset",
+        "referenceRoles": [
+          "figure.article-image"
+        ],
+        "observedIn": 31,
+        "generatedRoles": [
+          "illustration.generated-diagram",
+          "photo.generated-scene"
+        ]
+      },
+      "blocks[].image.alt": {
+        "type": "text",
+        "maxWords": 11,
+        "maxChars": 68,
+        "observedIn": 31
+      },
+      "blocks[].items": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 8,
+        "observedIn": 13
+      },
+      "blocks[].items[].body": {
+        "type": "text",
+        "maxWords": 25,
+        "maxChars": 141,
+        "observedIn": 4
+      },
+      "blocks[].items[].icon": {
+        "type": "asset",
+        "referenceRoles": [
+          "icon.feature"
+        ],
+        "observedIn": 4,
+        "generatedRoles": [
+          "icon.feature"
+        ]
+      },
+      "blocks[].items[].icon.alt": {
+        "type": "text",
+        "maxWords": 0,
+        "maxChars": 0,
+        "observedIn": 4
+      },
+      "blocks[].items[].text": {
+        "type": "text",
+        "maxWords": 12,
+        "maxChars": 67,
+        "observedIn": 54
+      },
+      "blocks[].items[].title": {
+        "type": "text",
+        "maxWords": 13,
+        "maxChars": 83,
+        "observedIn": 4
+      },
+      "blocks[].kind": {
+        "type": "enum",
+        "observedIn": 373
+      },
+      "blocks[].text": {
+        "type": "text",
+        "maxWords": 53,
+        "maxChars": 290,
+        "observedIn": 328
+      },
+      "form.consent": {
+        "type": "text",
+        "maxWords": 43,
+        "maxChars": 244,
+        "observedIn": 1
+      },
+      "form.fields": {
+        "type": "list",
+        "minItems": 6,
+        "maxItems": 6,
+        "observedIn": 1
+      },
+      "form.fields[].autoComplete": {
+        "type": "ref",
+        "observedIn": 5
+      },
+      "form.fields[].label": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 30,
+        "observedIn": 6
+      },
+      "form.fields[].name": {
+        "type": "ref",
+        "observedIn": 6
+      },
+      "form.fields[].options": {
+        "type": "list",
+        "minItems": 24,
+        "maxItems": 24,
+        "observedIn": 1
+      },
+      "form.fields[].options[]": {
+        "type": "text",
+        "maxWords": 11,
+        "maxChars": 62,
+        "observedIn": 24
+      },
+      "form.fields[].placeholder": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 10,
+        "observedIn": 1
+      },
+      "form.fields[].required": {
+        "type": "boolean",
+        "observedIn": 5
+      },
+      "form.fields[].type": {
+        "type": "enum",
+        "observedIn": 6
+      },
+      "form.submit": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 8,
+        "observedIn": 1
+      },
+      "form.success": {
+        "type": "text",
+        "maxWords": 21,
+        "maxChars": 101,
+        "observedIn": 1
+      },
+      "form.title": {
+        "type": "text",
+        "maxWords": 11,
+        "maxChars": 56,
+        "observedIn": 1
+      },
+      "promo.body": {
+        "type": "text",
+        "maxWords": 13,
+        "maxChars": 74,
+        "observedIn": 2
+      },
+      "promo.cta.href": {
+        "type": "link",
+        "observedIn": 2
+      },
+      "promo.cta.label": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 23,
+        "observedIn": 2
+      },
+      "promo.title": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 20,
+        "observedIn": 2
+      },
+      "toc": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 15,
+        "observedIn": 2
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "blocks[].image": {
+        "type": "asset",
+        "referenceRoles": [
+          "figure.article-image"
+        ],
+        "observedIn": 31,
+        "generatedRoles": [
+          "illustration.generated-diagram",
+          "photo.generated-scene"
+        ]
+      },
+      "blocks[].items[].icon": {
+        "type": "asset",
+        "referenceRoles": [
+          "icon.feature"
+        ],
+        "observedIn": 4,
+        "generatedRoles": [
+          "icon.feature"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "icon.feature",
+    "illustration.generated-diagram",
+    "photo.generated-scene"
+  ],
+  "style": {
+    "props": {
+      "chapterLevel": {
+        "kind": "enum",
+        "allowed": [
+          "h2"
+        ]
+      }
+    },
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "scroll.spy-toc",
+      "sticky.pin"
+    ],
+    "requiredPatterns": [
+      "scroll.spy-toc",
+      "sticky.pin"
+    ],
+    "reducedMotionFallback": {
+      "scroll.spy-toc": "jump-to-target",
+      "sticky.pin": "none-needed"
+    },
+    "stagger": "none"
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "2/3 prose + 1/4 sticky rail (top 32)"
+    },
+    {
+      "range": "768-1023",
+      "behavior": "same split, TOC as dropdown"
+    },
+    {
+      "range": "<768",
+      "behavior": "rail above the prose (column-reverse)"
+    }
+  ],
+  "runtimeUi": [
+    {
+      "part": "toc",
+      "behavior": "scroll-spy highlights the heading within 180px of the top; click scrolls (1500ms eased) to 96px below the top; below 1024 a dropdown"
+    },
+    {
+      "part": "download-form",
+      "behavior": "6-field lead form validated locally; success text replaces the card"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/resources/analytics-lifecycle": [
+        16203.2
+      ],
+      "/resources/state-of-data-teams": [
+        25880.1
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/article/ArticleBody.jsx:29-42",
+    "src/components/article/StickyRail.jsx:189-233",
+    "src/components/article/Prose.jsx:286-312",
+    "src/components/form/DownloadForm.jsx:6-14"
+  ]
+}

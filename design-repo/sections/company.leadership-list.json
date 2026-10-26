@@ -1,0 +1,162 @@
+{
+  "id": "company.leadership-list",
+  "title": "Leadership list",
+  "semantic": {
+    "id": "company.leadership-list",
+    "category": "COMPANY"
+  },
+  "source": {
+    "id": "component:Leaders",
+    "file": "src/components/sections/Leaders.jsx",
+    "export": "Leaders",
+    "tag": "section",
+    "lines": "8-40",
+    "tagLine": 10
+  },
+  "additionalSources": [],
+  "purpose": "Centred heading-2 over a column of bordered cards (radius 16, shadow-lg): 242px avatar circle, heading-3 name, role, profile link and bio paragraphs.",
+  "retrievalEligible": true,
+  "placement": "main",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "linkLabel",
+        "people",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "people": [
+          6,
+          6
+        ]
+      },
+      "observedOn": [
+        "/about-us"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "linkLabel": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 7,
+        "observedIn": 1
+      },
+      "people": {
+        "type": "list",
+        "minItems": 6,
+        "maxItems": 6,
+        "observedIn": 1
+      },
+      "people[].avatar": {
+        "type": "asset",
+        "referenceRoles": [
+          "person.fictional-avatar"
+        ],
+        "observedIn": 6,
+        "generatedRoles": [
+          "person.fictional-avatar"
+        ]
+      },
+      "people[].avatar.alt": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 41,
+        "observedIn": 6
+      },
+      "people[].bio": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 3,
+        "observedIn": 6
+      },
+      "people[].bio[]": {
+        "type": "text",
+        "maxWords": 104,
+        "maxChars": 614,
+        "observedIn": 10
+      },
+      "people[].name": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 17,
+        "observedIn": 6
+      },
+      "people[].role": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 39,
+        "observedIn": 6
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 24,
+        "observedIn": 1
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "people[].avatar": {
+        "type": "asset",
+        "referenceRoles": [
+          "person.fictional-avatar"
+        ],
+        "observedIn": 6,
+        "generatedRoles": [
+          "person.fictional-avatar"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "person.fictional-avatar"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "requiredPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": {
+      "static": "none-needed"
+    },
+    "stagger": "(*:mb-6). No card hover, no reveal."
+  },
+  "responsive": [
+    {
+      "range": ">=768",
+      "behavior": "avatar left, text right, p 24 (40 at >=1024)"
+    },
+    {
+      "range": "<768",
+      "behavior": "avatar centred above the text"
+    }
+  ],
+  "runtimeUi": [],
+  "measuredHeightsPx": {
+    "1440": {
+      "/about-us": [
+        2594.8
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/sections/Leaders.jsx:8-40"
+  ]
+}

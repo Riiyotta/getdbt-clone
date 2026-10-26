@@ -410,27 +410,27 @@
               "label": "Featured",
               "links": [
                 {
-                  "label": "Brightfold",
+                  "label": "Larkspur Works",
                   "href": "#"
                 },
                 {
-                  "label": "Oakhaven",
+                  "label": "Harrowgate",
                   "href": "#"
                 },
                 {
-                  "label": "Pellucid",
+                  "label": "Ashgrove",
                   "href": "#"
                 },
                 {
-                  "label": "Corvane",
+                  "label": "Tamarack",
                   "href": "#"
                 },
                 {
-                  "label": "Sablewood",
+                  "label": "Velmora",
                   "href": "#"
                 },
                 {
-                  "label": "Tinmoor",
+                  "label": "Penrith",
                   "href": "#"
                 }
               ],
@@ -718,42 +718,42 @@
         "logos": [
           {
             "assetRole": "customer.placeholder-logo",
-            "alt": "Brightfold",
+            "alt": "Larkspur Works",
             "ref": "generate:grey-wordmark"
           },
           {
             "assetRole": "customer.placeholder-logo",
-            "alt": "Oakhaven",
+            "alt": "Harrowgate",
             "ref": "generate:grey-wordmark"
           },
           {
             "assetRole": "customer.placeholder-logo",
-            "alt": "Pellucid",
+            "alt": "Ashgrove",
             "ref": "generate:grey-wordmark"
           },
           {
             "assetRole": "customer.placeholder-logo",
-            "alt": "Corvane",
+            "alt": "Tamarack",
             "ref": "generate:grey-wordmark"
           },
           {
             "assetRole": "customer.placeholder-logo",
-            "alt": "Sablewood",
+            "alt": "Velmora",
             "ref": "generate:grey-wordmark"
           },
           {
             "assetRole": "customer.placeholder-logo",
-            "alt": "Tinmoor",
+            "alt": "Penrith",
             "ref": "generate:grey-wordmark"
           },
           {
             "assetRole": "customer.placeholder-logo",
-            "alt": "Arclight Co",
+            "alt": "Okapi Labs",
             "ref": "generate:grey-wordmark"
           },
           {
             "assetRole": "customer.placeholder-logo",
-            "alt": "Juniper Row",
+            "alt": "Quillon Row",
             "ref": "generate:grey-wordmark"
           }
         ]
@@ -772,10 +772,10 @@
           "alt": "Partner lockup",
           "ref": "generate:neutral-pill"
         },
-        "headline": "Wrenly and Corvane now share one setup flow.",
+        "headline": "Wrenly and Tamarack now share one setup flow.",
         "action": {
           "label": "Read the announcement",
-          "href": "/news/corvane"
+          "href": "/news/partner-setup"
         }
       },
       "motion": {
@@ -983,7 +983,7 @@
               "ref": "generate:layers-glyph"
             },
             "title": "One source of truth",
-            "body": "Metrics are defined once and reused by every dashboard, notebook and assistant.",
+            "body": "Each metric gets one owner and one definition that every report can borrow.",
             "action": {
               "label": "Learn about metrics",
               "href": "/metrics"
@@ -1008,7 +1008,7 @@
         "eyebrow": "Spend less",
         "title": "Rebuild only what changed and keep costs predictable",
         "paragraphs": [
-          "Wrenly keeps a record of what each table looked like after its last good run and leaves alone anything whose inputs did not move. Nightly jobs get shorter and the run order sorts itself out."
+          "Wrenly remembers the state of every table after a good run and skips any table whose upstream inputs stayed the same. Nightly jobs get shorter and the run order sorts itself out."
         ],
         "primary": {
           "label": "Plan a cost review",
@@ -1087,29 +1087,29 @@
             "kind": "quote",
             "logo": {
               "assetRole": "customer.placeholder-logo",
-              "alt": "Brightfold",
+              "alt": "Larkspur Works",
               "ref": "generate:grey-wordmark"
             },
             "quote": "\"Our weekly numbers used to start an argument. With every definition in one reviewed project, the debate is gone and new reports go out the same day they are requested.\"",
             "person": "Rowan Pike",
             "role": "Head of Analytics",
             "action": {
-              "label": "Brightfold's story",
-              "href": "/stories/brightfold"
+              "label": "Larkspur Works's story",
+              "href": "/stories/larkspur"
             }
           },
           {
             "kind": "metric",
             "logo": {
               "assetRole": "customer.placeholder-logo",
-              "alt": "Oakhaven",
+              "alt": "Harrowgate",
               "ref": "generate:grey-wordmark"
             },
             "metric": "40% less",
             "line": "time spent rerunning failed jobs after the first quarter",
             "action": {
-              "label": "Oakhaven's story",
-              "href": "/stories/oakhaven"
+              "label": "Harrowgate's story",
+              "href": "/stories/harrowgate"
             }
           }
         ]

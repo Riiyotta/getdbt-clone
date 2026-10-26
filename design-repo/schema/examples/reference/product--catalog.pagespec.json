@@ -721,7 +721,10 @@
       },
       "style": {
         "strokeShape": "stroke.s5",
-        "strokeGradient": "gradient.01"
+        "strokeGradient": "gradient.01",
+        "leadSize": "default",
+        "columns": "6/6",
+        "bottomPadding": "default"
       }
     },
     {
@@ -746,6 +749,10 @@
       "motion": {
         "pattern": "reveal.fade-up",
         "reducedMotionFallback": "show-immediately"
+      },
+      "style": {
+        "columns": "6/6",
+        "topPadding": "default"
       }
     },
     {
@@ -790,9 +797,12 @@
         "reducedMotionFallback": "show-immediately"
       },
       "style": {
-        "iconSize": "size.icon.32",
+        "revealTrigger": "scroll",
         "headerAlign": "start",
-        "paddingTop": "default"
+        "paddingTop": "default",
+        "surface": "light",
+        "columns": "3",
+        "iconSize": "size.icon.32"
       }
     },
     {
@@ -851,10 +861,19 @@
       },
       "motion": {
         "pattern": "tabs.instant",
-        "reducedMotionFallback": "none-needed"
+        "reducedMotionFallback": "none-needed",
+        "additional": [
+          {
+            "pattern": "stroke.idle",
+            "reducedMotionFallback": "none-needed"
+          }
+        ]
       },
       "style": {
-        "strokeGradient": "gradient.01"
+        "strokeGradient": "gradient.01",
+        "mediaFrame": "captioned",
+        "mediaCorners": "rounded",
+        "strokeShape": "stroke.s6"
       }
     },
     {
@@ -883,54 +902,54 @@
       "content": {
         "quotes": [
           {
+            "quote": "Before the catalog, the fastest way to find a model was to ask whoever had been here longest. Now analysts search, check the owner and the test status, and reference the right model in minutes. New hires stopped building duplicate tables in their first month, and our documentation finally reflects what is actually running.",
+            "person": "Ana Kowalski",
+            "role": "Staff Data Engineer",
             "logo": {
               "assetRole": "customer.logo",
               "alt": "Tidepool",
               "ref": "/assets/marquee/logo-3.svg"
-            },
-            "quote": "Before the catalog, the fastest way to find a model was to ask whoever had been here longest. Now analysts search, check the owner and the test status, and reference the right model in minutes. New hires stopped building duplicate tables in their first month, and our documentation finally reflects what is actually running.",
-            "person": "Ana Kowalski",
-            "role": "Staff Data Engineer"
+            }
           },
           {
+            "quote": "Column-level lineage changed how we review pull requests. Reviewers can see every report a change would touch before approving it, so surprises after a deploy have become rare. Auditors get the same view, which turned a week of evidence gathering into an afternoon of walking through the catalog together.",
+            "person": "Tomas Ekberg",
+            "role": "Director of Data Platforms",
             "logo": {
               "assetRole": "customer.logo",
               "alt": "Meridian Partners",
               "ref": "/assets/marquee/logo-2.svg"
-            },
-            "quote": "Column-level lineage changed how we review pull requests. Reviewers can see every report a change would touch before approving it, so surprises after a deploy have become rare. Auditors get the same view, which turned a week of evidence gathering into an afternoon of walking through the catalog together.",
-            "person": "Tomas Ekberg",
-            "role": "Director of Data Platforms"
+            }
           },
           {
+            "quote": "We point our internal assistant at the catalog, and its answers improved overnight. It uses certified models and their descriptions instead of guessing from table names. When a definition changes, the assistant picks it up on the next run, so we no longer maintain a separate glossary that drifts away from the code.",
+            "person": "Jonah Reyes",
+            "role": "VP, Data and Insights",
             "logo": {
               "assetRole": "customer.logo",
               "alt": "Orbitly",
               "ref": "/assets/marquee/logo-5.svg"
-            },
-            "quote": "We point our internal assistant at the catalog, and its answers improved overnight. It uses certified models and their descriptions instead of guessing from table names. When a definition changes, the assistant picks it up on the next run, so we no longer maintain a separate glossary that drifts away from the code.",
-            "person": "Jonah Reyes",
-            "role": "VP, Data and Insights"
+            }
           },
           {
+            "quote": "Clinical and finance analysts used to keep private notes on which tables to trust. The catalog replaced all of that with one shared view of owners, freshness and certification. People now start from a certified model by default, and the number of conflicting reports in leadership meetings has dropped to almost nothing.",
+            "person": "Dr. Mei Lin",
+            "role": "Director, Clinical Informatics",
             "logo": {
               "assetRole": "customer.logo",
               "alt": "Basalt Health",
               "ref": "/assets/marquee/logo-7.svg"
-            },
-            "quote": "Clinical and finance analysts used to keep private notes on which tables to trust. The catalog replaced all of that with one shared view of owners, freshness and certification. People now start from a certified model by default, and the number of conflicting reports in leadership meetings has dropped to almost nothing.",
-            "person": "Dr. Mei Lin",
-            "role": "Director, Clinical Informatics"
+            }
           },
           {
+            "quote": "Retiring hundreds of legacy scripts was only possible because we could see who depended on each one. The catalog showed us every downstream report and owner, so we migrated in waves, told the right people ahead of time and switched off the old jobs without a single angry message from the business.",
+            "person": "Jordan Ellis",
+            "role": "Data Team Lead",
             "logo": {
               "assetRole": "customer.logo",
               "alt": "Fernway",
               "ref": "/assets/marquee/logo-8.svg"
-            },
-            "quote": "Retiring hundreds of legacy scripts was only possible because we could see who depended on each one. The catalog showed us every downstream report and owner, so we migrated in waves, told the right people ahead of time and switched off the old jobs without a single angry message from the business.",
-            "person": "Jordan Ellis",
-            "role": "Data Team Lead"
+            }
           }
         ]
       },
@@ -945,6 +964,7 @@
         ]
       },
       "style": {
+        "background": "white",
         "strokeShape": "stroke.s1"
       }
     },

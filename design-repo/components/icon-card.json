@@ -7,6 +7,6 @@
     "primitive.heading"
   ],
   "evidence": [
-    "src/components/sections/Feat.jsx:12-22"
+    "src/components/sections/Feat.jsx:35-48"
   ]
 }

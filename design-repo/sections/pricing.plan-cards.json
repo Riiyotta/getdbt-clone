@@ -1,0 +1,168 @@
+{
+  "id": "pricing.plan-cards",
+  "title": "Plan cards",
+  "semantic": {
+    "id": "pricing.plan-cards",
+    "category": "PRICING"
+  },
+  "source": {
+    "id": "component:PlanCards",
+    "file": "src/components/oneoffs/pricing/Pricing.jsx",
+    "export": "PlanCards",
+    "tag": "section",
+    "lines": "11-54",
+    "tagLine": 13
+  },
+  "additionalSources": [],
+  "purpose": "H1 (48/57.6 at every width), paragraph and four equal-height bordered plan cards: mono plan name, description, one-string price, allowances, full-width primary button and a check-list of features. No highlighted plan, no billing toggle.",
+  "retrievalEligible": true,
+  "placement": "main",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "body",
+        "plans",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "plans": [
+          4,
+          4
+        ]
+      },
+      "observedOn": [
+        "/pricing"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "body": {
+        "type": "text",
+        "maxWords": 28,
+        "maxChars": 162,
+        "observedIn": 1
+      },
+      "plans": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 4,
+        "observedIn": 1
+      },
+      "plans[].allowances": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 4,
+        "observedIn": 4
+      },
+      "plans[].allowances[]": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 32,
+        "observedIn": 15
+      },
+      "plans[].body": {
+        "type": "text",
+        "maxWords": 15,
+        "maxChars": 79,
+        "observedIn": 4
+      },
+      "plans[].cta.href": {
+        "type": "link",
+        "observedIn": 4
+      },
+      "plans[].cta.label": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 16,
+        "observedIn": 4
+      },
+      "plans[].features": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 6,
+        "observedIn": 4
+      },
+      "plans[].featuresTitle": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 8,
+        "observedIn": 4
+      },
+      "plans[].features[]": {
+        "type": "text",
+        "maxWords": 10,
+        "maxChars": 60,
+        "observedIn": 19
+      },
+      "plans[].name": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 11,
+        "observedIn": 4
+      },
+      "plans[].price": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 19,
+        "observedIn": 4
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 8,
+        "maxChars": 41,
+        "observedIn": 1
+      }
+    }
+  },
+  "assets": {
+    "fields": {},
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "position": "first-content",
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "requiredPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": {
+      "static": "none-needed"
+    },
+    "stagger": "none"
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "4 columns, gap 24"
+    },
+    {
+      "range": "<1024",
+      "behavior": "stacked full width, gap 24"
+    }
+  ],
+  "runtimeUi": [],
+  "measuredHeightsPx": {
+    "1440": {
+      "/pricing": [
+        940.6
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/oneoffs/pricing/Pricing.jsx:11-54"
+  ]
+}

@@ -721,7 +721,10 @@
       },
       "style": {
         "strokeShape": "stroke.s5",
-        "strokeGradient": "gradient.01"
+        "strokeGradient": "gradient.01",
+        "leadSize": "default",
+        "columns": "6/6",
+        "bottomPadding": "default"
       }
     },
     {
@@ -778,8 +781,11 @@
         "reducedMotionFallback": "show-immediately"
       },
       "style": {
+        "revealTrigger": "scroll",
         "headerAlign": "start",
-        "paddingTop": "default"
+        "paddingTop": "default",
+        "surface": "light",
+        "columns": "3"
       }
     },
     {
@@ -797,6 +803,11 @@
       "motion": {
         "pattern": "static",
         "reducedMotionFallback": "none-needed"
+      },
+      "style": {
+        "width": "column",
+        "background": "white",
+        "titleElement": "heading"
       }
     },
     {

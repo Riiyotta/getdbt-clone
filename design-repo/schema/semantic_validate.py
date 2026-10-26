@@ -9,7 +9,9 @@ Layers (in order):
   2. Registry pins: asset-role availability, forbidden-in-all-modes roles and retrieval eligibility are
      pinned in THIS file; a registry/contract/allowlist edit that loosens them is an error.
   3. Template linkage: the declared template's real node list is matched against the node sequence
-     (section#variant), plus every rule in compatibility/graph.json (GRAPH_RULES_IMPLEMENTED).
+     (section#variant; slots may offer alternative sections or fixed sequences), plus every rule in
+     compatibility/graph.json (GRAPH_RULES_IMPLEMENTED): chrome variant (full | event | none), theme, hero
+     exceptions, consecutive variants, dialog pairing.
   4. Contract rules: variants, required/forbidden fields, list sizes, maxWords, motion, style tokens.
   5. Mode rules: generated mode may contain nothing that identifies or reproduces the source
      (GENERATED_MODE_* rules); original-site identity is rejected in every mode.
@@ -34,17 +36,25 @@ PINNED_AVAILABILITY = {
     "resource.thumbnail": "reference-only", "resource.generated-thumbnail": "generation-safe",
     "award.badge": "reference-only", "rating.placeholder": "generation-safe",
     "icon.feature": "generation-safe", "person.fictional-avatar": "generation-safe",
+    "brand.event-mark": "reference-only", "product.lockup": "reference-only", "partner.wordmark": "reference-only", "figure.article-image": "reference-only",
     "person.real-photo": "blocked-for-generation", "thirdparty.real-mark": "blocked-for-generation", "store.badge": "blocked-for-generation",
     "link.clone-route": "reference-only", "link.placeholder": "generation-safe", "link.source-external": "blocked-for-generation",
     "copy.clone-placeholder": "reference-only", "copy.original": "generation-safe", "copy.source-site": "blocked-for-generation",
 }
 PINNED_FORBIDDEN_ALL_MODES = {"person.real-photo", "thirdparty.real-mark", "store.badge", "link.source-external", "copy.source-site"}
-RETRIEVAL_INELIGIBLE = {"shell.announcement-bar", "shell.mega-menu", "shell.mobile-drawer"}
-RUNTIME_UI_HINT = re.compile(r"(cookie|consent|banner|modal|dialog|drawer|overlay|preloader|cursor|ticker|toast|popover|mega-menu|announcement)", re.I)
-AUTOPLAY_PATTERNS = {"carousel.autoplay", "marquee.loop"}
+RETRIEVAL_INELIGIBLE = {"shell.announcement-bar", "shell.mega-menu", "shell.mobile-drawer", "cta.dev-path-dialog", "article.progress-bar", "listing.category-nav"}
+RUNTIME_UI_HINT = re.compile(r"(cookie|consent|banner|modal|dialog|drawer|overlay|preloader|cursor|ticker|toast|popover|mega-menu|announcement|progress bar|progress-bar|tooltip)", re.I)
+# chrome variants (src/Layout.jsx CHROME): the shell nodes a page opens and closes with
+CHROME_HEADS = {"full": ["shell.announcement-bar", "shell.navbar", "shell.mega-menu", "shell.mobile-drawer"], "event": ["shell.event-subnav"], "none": ["shell.minimal-nav"]}
+CHROME_TAILS = {"full": ["shell.footer"], "event": ["shell.event-footer"], "none": []}
+CHROME_BY_ROUTE = {"/summit": "event", "/partner-directory": "none"}  # every other route is 'full'; verify_all compares this with src/Layout.jsx
+THEME_BY_CHROME = {"full": "light", "event": "event", "none": "light"}
+OVERLAY_DIALOG = "cta.dev-path-dialog"
+HEROLESS_TEMPLATES = {"T5", "T6", "T7", "T8", "T9", "T10", "T11", "T14", "T17"}  # open with a LISTING/ARTICLE/FORM/LEGAL/PRICING/DIRECTORY header, not a HERO section
+AUTOPLAY_PATTERNS = {"carousel.autoplay", "marquee.loop", "marquee.photo-loop"}
 GRAPH_RULES_IMPLEMENTED = {
-    "TEMPLATE_SEQUENCE", "TEMPLATE_PENDING", "SHELL_ORDER", "ONE_HERO", "HERO_FIRST_CONTENT", "SECTION_MAX_PER_PAGE",
-    "NO_ADJACENT_IDENTICAL", "CTA_CLOSES_PAGE", "AUTOPLAY_BUDGET", "RUNTIME_UI_INELIGIBLE", "HOME_ROUTE_ONLY", "REFERENCE_ROUTE_IN_TEMPLATE",
+    "TEMPLATE_SEQUENCE", "TEMPLATE_PENDING", "SHELL_ORDER", "CHROME_VARIANT", "TEMPLATE_THEME", "ONE_HERO", "HERO_FIRST_CONTENT", "SECTION_MAX_PER_PAGE",
+    "NO_ADJACENT_IDENTICAL", "CTA_CLOSES_PAGE", "AUTOPLAY_BUDGET", "RUNTIME_UI_INELIGIBLE", "DIALOG_PAIRING", "HOME_ROUTE_ONLY", "REFERENCE_ROUTE_IN_TEMPLATE",
 }
 GENERATED_MODE_RULES = ["GENERATED_MODE_BRAND", "GENERATED_MODE_CTA", "GENERATED_MODE_COPY", "GENERATED_MODE_URL", "GENERATED_MODE_ASSET",
                         "GENERATED_MODE_PERSON", "GENERATED_MODE_RATING", "GENERATED_MODE_STORE"]
@@ -127,8 +137,13 @@ def node_pattern(n):
     def alt(section, variants):
         v = "|".join(re.escape(x) for x in variants) if variants else r"[a-z0-9-]+"
         return rf"{re.escape(section)}#(?:{v});"
+
+    def alt_o(o):
+        if "sequence" in o:
+            return "".join(alt(x["section"], x.get("variants")) for x in o["sequence"])
+        return alt(o["section"], o.get("variants"))
     if "slot" in n:
-        body = "(?:" + "|".join(alt(o["section"], o.get("variants")) for o in n["anyOf"]) + ")"
+        body = "(?:" + "|".join(alt_o(o) for o in n["anyOf"]) + ")"
     else:
         body = "(?:" + alt(n["section"], n.get("variants")) + ")"
     if n.get("repeatable"):
@@ -212,16 +227,31 @@ def validate(spec, repo=None, use_schema=True):
         pat = "".join(node_pattern(x) for x in t["nodes"])
         if not re.fullmatch(pat, seq):
             err("TEMPLATE_SEQUENCE", f"node sequence does not match template {tid}. got: {[n['section'] + '#' + str(n.get('variant')) for n in nodes]}")
-        head = [n["section"] for n in nodes[:4]]
-        if head != ["shell.announcement-bar", "shell.navbar", "shell.mega-menu", "shell.mobile-drawer"] or not nodes or nodes[-1]["section"] != "shell.footer":
-            err("SHELL_ORDER", f"chrome must open with announcement-bar, navbar, mega-menu, mobile-drawer and close with footer; got head {head} tail {nodes[-1]['section'] if nodes else None}")
+        chrome = t.get("chrome", "full")
+        heads, tails = CHROME_HEADS.get(chrome), CHROME_TAILS.get(chrome)
+        if heads is None:
+            err("CHROME_VARIANT", f"template {tid} declares unknown chrome {chrome!r}")
+        else:
+            ids = [n["section"] for n in nodes]
+            body_end = len(ids) - len(tails)
+            if ids[:len(heads)] != heads or (tails and ids[body_end:] != tails):
+                err("SHELL_ORDER", f"chrome '{chrome}' must open with {heads} and close with {tails or 'no footer'}; got head {ids[:len(heads)]} tail {ids[body_end:] if tails else ids[-1:]}")
+            shell_used = {x for x in ids if contracts[x]["semantic"]["category"] == "SHELL"}
+            if shell_used != set(heads) | set(tails):
+                err("CHROME_VARIANT", f"page uses shell nodes {sorted(shell_used)} but chrome '{chrome}' allows {sorted(set(heads) | set(tails))}")
         if mode == "reference" and route not in t["routes"]:
             err("REFERENCE_ROUTE_IN_TEMPLATE", f"route {route!r} is not mapped to template {tid} in routes/routes.json")
+        if mode == "reference" and CHROME_BY_ROUTE.get(route, "full") != chrome:
+            err("CHROME_VARIANT", f"route {route!r} renders chrome '{CHROME_BY_ROUTE.get(route, 'full')}' (src/Layout.jsx) but template {tid} declares '{chrome}'")
+        if spec.get("theme") != t.get("theme", "light"):
+            err("TEMPLATE_THEME", f"theme {spec.get('theme')!r} but template {tid} requires {t.get('theme', 'light')!r}")
     if (tid == "T0") != (route == "/"):
         err("HOME_ROUTE_ONLY", f"template T0 is only valid on '/', and '/' only on T0 (got {tid} on {route})")
     heroes = [i for i, n in enumerate(nodes) if cat(n) == "HERO"]
-    if len(heroes) != 1:
-        err("ONE_HERO", f"expected exactly one HERO node, found {len(heroes)}")
+    if len(heroes) > 1 or (len(heroes) == 0 and tid not in HEROLESS_TEMPLATES):
+        err("ONE_HERO", f"expected exactly one HERO node (none on {sorted(HEROLESS_TEMPLATES)}), found {len(heroes)} on {tid}")
+    elif heroes and tid in HEROLESS_TEMPLATES:
+        err("ONE_HERO", f"{tid} is a hero-less template (page-specific header) but has a HERO node")
     content_nodes = [n for n in nodes if cat(n) != "SHELL"]
     if heroes and content_nodes and cat(content_nodes[0]) != "HERO":
         err("HERO_FIRST_CONTENT", f"first non-shell node is {content_nodes[0]['section']}, not the hero")
@@ -233,13 +263,23 @@ def validate(spec, repo=None, use_schema=True):
         if k > mx:
             err("SECTION_MAX_PER_PAGE", f"{sid} appears {k} times (maxPerPage {mx})")
     for a, b in zip(nodes, nodes[1:]):
-        if (a["section"], a.get("variant")) == (b["section"], b.get("variant")):
-            err("NO_ADJACENT_IDENTICAL", f"adjacent identical nodes {a['section']}#{a.get('variant')}")
+        if (a["section"], a.get("variant")) == (b["section"], b.get("variant")) and a.get("variant") not in contracts[a["section"]]["constraints"].get("consecutiveVariants", []):
+            err("NO_ADJACENT_IDENTICAL", f"adjacent identical nodes {a['section']}#{a.get('variant')} (not a consecutive-allowed variant)")
     if content_nodes and cat(content_nodes[-1]) != "CTA":
         warn("CTA_CLOSES_PAGE", f"last content node {content_nodes[-1]['section']} is not CTA-category")
     auto = [n["section"] for n in nodes if ({n.get("motion", {}).get("pattern")} | {x.get("pattern") for x in n.get("motion", {}).get("additional", [])}) & AUTOPLAY_PATTERNS]
     if len(auto) > 2:
         warn("AUTOPLAY_BUDGET", f"{len(auto)} autoplaying sections: {auto}")
+    opens = any(a.get("opensDialog") for n in nodes for a in actions_in(n.get("content") or {}))
+    has_dialog = any(n["section"] == OVERLAY_DIALOG for n in nodes)
+    if opens != has_dialog:
+        err("DIALOG_PAIRING", f"{'an action opens the dialog but the page has no ' + OVERLAY_DIALOG + ' node' if opens else OVERLAY_DIALOG + ' is present but no action has opensDialog'}")
+    if has_dialog:
+        ids = [n["section"] for n in nodes]
+        j = ids.index(OVERLAY_DIALOG)
+        trailing = [x for x in ids[j + 1:] if contracts[x]["semantic"]["category"] != "SHELL"]
+        if trailing:
+            err("DIALOG_PAIRING", f"{OVERLAY_DIALOG} must be the last non-shell node; {trailing} follow it")
 
     # 4. per-node contract rules
     roles = repo["roles"]["roles"]
@@ -368,6 +408,8 @@ def validate(spec, repo=None, use_schema=True):
         if key in ("href", "ref"):
             if val.startswith("https://") and not re.match(r"^https://[a-z0-9.-]+\.(example|invalid)(/|$)", val):
                 err("GENERATED_MODE_URL", f"{where}: absolute URL {val!r} must use a reserved .example/.invalid domain")
+            if val.startswith("mailto:") and not re.search(r"@[a-z0-9.-]+\.(example|invalid)$", val):
+                err("GENERATED_MODE_URL", f"{where}: mail link {val!r} must use a reserved .example/.invalid domain")
             if clone_brand.search(val) or ent_slug.search(val.lower()):
                 err("GENERATED_MODE_URL", f"{where}: link {val!r} carries a source route/brand slug")
             continue

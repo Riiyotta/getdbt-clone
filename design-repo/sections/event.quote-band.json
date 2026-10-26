@@ -1,0 +1,104 @@
+{
+  "id": "event.quote-band",
+  "title": "Event quote band",
+  "semantic": {
+    "id": "event.quote-band",
+    "category": "EVENT"
+  },
+  "source": {
+    "id": "component:EventQuote",
+    "file": "src/components/oneoffs/summit/Summit.jsx",
+    "export": "EventQuote",
+    "tag": "section",
+    "lines": "211-222",
+    "tagLine": 213
+  },
+  "additionalSources": [],
+  "purpose": "Black band with a purple pixel-dither strip on top, a display-size quote and mono name + role lines.",
+  "retrievalEligible": true,
+  "placement": "main",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "name",
+        "quote",
+        "role"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {},
+      "observedOn": [
+        "/summit"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "name": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 10,
+        "observedIn": 1
+      },
+      "quote": {
+        "type": "text",
+        "maxWords": 17,
+        "maxChars": 93,
+        "observedIn": 1
+      },
+      "role": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 40,
+        "observedIn": 1
+      }
+    }
+  },
+  "assets": {
+    "fields": {},
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "requiredPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": {
+      "static": "none-needed"
+    },
+    "stagger": "none"
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "quote 60-64px"
+    },
+    {
+      "range": "<1024",
+      "behavior": "quote 40px"
+    }
+  ],
+  "runtimeUi": [],
+  "measuredHeightsPx": {
+    "1440": {
+      "/summit": [
+        540
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/oneoffs/summit/Summit.jsx:211-222"
+  ]
+}

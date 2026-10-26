@@ -1,0 +1,221 @@
+{
+  "id": "listing.session-grid",
+  "title": "On-demand session grid with filters",
+  "semantic": {
+    "id": "listing.session-grid",
+    "category": "LISTING"
+  },
+  "source": {
+    "id": "component:OnDemandListing",
+    "file": "src/components/listing/Listings.jsx",
+    "export": "OnDemandListing",
+    "tag": "section",
+    "lines": "175-235",
+    "tagLine": 208
+  },
+  "additionalSources": [],
+  "purpose": "Event dropdown and search above a 3-column grid of session cards (21 per page, View more adds 21); a filter or search change shows 3 pulsing skeleton cards for ~1.2s before the result.",
+  "retrievalEligible": true,
+  "placement": "main",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "empty",
+        "items",
+        "more",
+        "options",
+        "placeholder",
+        "search"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "items": [
+          84,
+          84
+        ],
+        "options": [
+          4,
+          4
+        ]
+      },
+      "observedOn": [
+        "/resources/on-demand"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "empty.line": {
+        "type": "text",
+        "maxWords": 13,
+        "maxChars": 73,
+        "observedIn": 1
+      },
+      "empty.title": {
+        "type": "text",
+        "maxWords": 6,
+        "maxChars": 33,
+        "observedIn": 1
+      },
+      "items": {
+        "type": "list",
+        "minItems": 84,
+        "maxItems": 84,
+        "observedIn": 1
+      },
+      "items[].href": {
+        "type": "link",
+        "observedIn": 84
+      },
+      "items[].image": {
+        "type": "asset",
+        "referenceRoles": [
+          "resource.thumbnail"
+        ],
+        "observedIn": 84,
+        "generatedRoles": [
+          "resource.generated-thumbnail"
+        ]
+      },
+      "items[].image.alt": {
+        "type": "text",
+        "maxWords": 0,
+        "maxChars": 0,
+        "observedIn": 84
+      },
+      "items[].tag": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 11,
+        "observedIn": 84
+      },
+      "items[].title": {
+        "type": "text",
+        "maxWords": 11,
+        "maxChars": 70,
+        "observedIn": 84
+      },
+      "items[].year": {
+        "type": "ref",
+        "observedIn": 84
+      },
+      "more": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 9,
+        "observedIn": 1
+      },
+      "options": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 4,
+        "observedIn": 1
+      },
+      "options[].label": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 11,
+        "observedIn": 4
+      },
+      "options[].value": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 11,
+        "observedIn": 4
+      },
+      "placeholder": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 15,
+        "observedIn": 1
+      },
+      "search": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 6,
+        "observedIn": 1
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "items[].image": {
+        "type": "asset",
+        "referenceRoles": [
+          "resource.thumbnail"
+        ],
+        "observedIn": 84,
+        "generatedRoles": [
+          "resource.generated-thumbnail"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "resource.generated-thumbnail"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "loading.skeleton-pulse",
+      "static"
+    ],
+    "requiredPatterns": [
+      "loading.skeleton-pulse",
+      "static"
+    ],
+    "reducedMotionFallback": {
+      "loading.skeleton-pulse": "unchanged",
+      "static": "none-needed"
+    },
+    "stagger": "none"
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "3 columns"
+    },
+    {
+      "range": "768-1023",
+      "behavior": "2 columns"
+    },
+    {
+      "range": "<768",
+      "behavior": "1 column"
+    }
+  ],
+  "runtimeUi": [
+    {
+      "part": "event-select",
+      "behavior": "dropdown writes ?filter="
+    },
+    {
+      "part": "search",
+      "behavior": "debounced 400ms, writes ?query="
+    },
+    {
+      "part": "skeleton-load",
+      "behavior": "simulated fetch: 3 skeleton cards for 1200ms"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/resources/on-demand": [
+        2998.1
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/listing/Listings.jsx:175-235"
+  ]
+}

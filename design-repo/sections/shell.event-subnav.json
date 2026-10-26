@@ -1,0 +1,177 @@
+{
+  "id": "shell.event-subnav",
+  "title": "Event sub-navigation",
+  "semantic": {
+    "id": "shell.event-subnav",
+    "category": "SHELL"
+  },
+  "source": {
+    "id": "component:EventNav",
+    "file": "src/components/chrome/EventChrome.jsx",
+    "export": "EventNav",
+    "tag": "header",
+    "lines": "38-105",
+    "tagLine": 44
+  },
+  "additionalSources": [],
+  "purpose": "Chrome 'event' (route /summit): replaces the global announcement bar, navbar and mega-menu. Event logo lockup, two columns of links and a call-to-action; above 1024 an 80px sticky panel, below 1024 a fixed bar with a black burger and an instant dropdown.",
+  "retrievalEligible": true,
+  "placement": "chrome",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "closeLabel",
+        "columns",
+        "cta",
+        "home",
+        "logo",
+        "openLabel"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "columns": [
+          2,
+          2
+        ]
+      },
+      "observedOn": [
+        "/summit"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "closeLabel": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 10,
+        "observedIn": 1
+      },
+      "columns": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "observedIn": 1
+      },
+      "columns[].links": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "observedIn": 2
+      },
+      "columns[].links[].href": {
+        "type": "link",
+        "observedIn": 4
+      },
+      "columns[].links[].label": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 13,
+        "observedIn": 4
+      },
+      "cta.href": {
+        "type": "link",
+        "observedIn": 1
+      },
+      "cta.label": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 16,
+        "observedIn": 1
+      },
+      "home": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 7,
+        "observedIn": 1
+      },
+      "logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "brand.event-mark"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "brand.placeholder-mark"
+        ]
+      },
+      "logo.alt": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 10,
+        "observedIn": 1
+      },
+      "openLabel": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 9,
+        "observedIn": 1
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "brand.event-mark"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "brand.placeholder-mark"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "brand.placeholder-mark"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "position": "first",
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "requiredPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": {
+      "static": "none-needed"
+    },
+    "stagger": "none"
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "80px sticky top 0 (z 40): white panel from the logo's right edge, links in two stacked columns, CTA at the right"
+    },
+    {
+      "range": "<1024",
+      "behavior": "fixed bar (height = logo height) with an in-flow spacer; black burger button; dropdown 260px wide, instant"
+    }
+  ],
+  "runtimeUi": [
+    {
+      "part": "mobile-dropdown",
+      "behavior": "burger toggles an instant link list below 1024; Escape/outside click closes it"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "nav": 80
+    }
+  },
+  "evidence": [
+    "src/components/chrome/EventChrome.jsx:38-105"
+  ]
+}

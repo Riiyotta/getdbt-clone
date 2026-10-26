@@ -10,8 +10,8 @@
     "file": "src/components/sections/HeroCenter.jsx",
     "export": "HeroCenter",
     "tag": "header",
-    "lines": "6-42",
-    "tagLine": 8
+    "lines": "16-82",
+    "tagLine": 33
   },
   "additionalSources": [
     {
@@ -23,29 +23,32 @@
       "tagLine": 7
     }
   ],
-  "purpose": "Page-opening centred header: optional eyebrow, H1, lead, 1-2 large buttons, optional highlight row, and (media variants) a large rounded image below; brush stroke behind on media variants.",
+  "purpose": "Page-opening centred header: optional eyebrow, H1 (stacked lines allowed), lead, 1-2 large buttons, optional highlight row, and an optional image, poster or illustration below; brush stroke behind.",
   "retrievalEligible": true,
+  "placement": "main",
   "variants": {
     "text-only": {
-      "description": "homepage: two forced lines of H1 and lead, one primary button, no image, no stroke (CLONE_SPEC 2.3: stroke hidden on the original, not built)",
+      "description": "no media: homepage (two forced lines, no stroke) and text-only product pages",
       "requiredFields": [
-        "lead",
-        "primary",
         "title"
       ],
       "forbiddenFields": [
-        "eyebrow",
         "highlights",
+        "illustration",
         "media",
-        "secondary"
+        "poster"
       ],
       "listSizes": {},
       "observedOn": [
-        "/"
+        "/",
+        "/about-us/belonging",
+        "/partners",
+        "/product/integrations",
+        "/product/self-hosted-vs-platform"
       ]
     },
     "media": {
-      "description": "T2: 1036-wide image under the text",
+      "description": "T2/T12/T13: 1036-wide image under the text",
       "requiredFields": [
         "lead",
         "media",
@@ -53,7 +56,10 @@
         "secondary",
         "title"
       ],
-      "forbiddenFields": [],
+      "forbiddenFields": [
+        "illustration",
+        "poster"
+      ],
       "listSizes": {
         "highlights": [
           1,
@@ -79,6 +85,8 @@
       "forbiddenFields": [
         "eyebrow",
         "highlights",
+        "illustration",
+        "poster",
         "secondary"
       ],
       "listSizes": {},
@@ -89,6 +97,47 @@
         "/industry/manufacturing",
         "/industry/telecommunications"
       ]
+    },
+    "poster": {
+      "description": "1036-wide framed 16:9 placeholder with a centred play glyph (no third-party player)",
+      "requiredFields": [
+        "eyebrow",
+        "lead",
+        "poster",
+        "primary",
+        "secondary",
+        "title"
+      ],
+      "forbiddenFields": [
+        "highlights",
+        "illustration",
+        "media"
+      ],
+      "listSizes": {},
+      "observedOn": [
+        "/product/what-is-lattice"
+      ]
+    },
+    "illustration": {
+      "description": "inline illustration, no radius, full column width",
+      "requiredFields": [
+        "eyebrow",
+        "illustration",
+        "lead",
+        "primary",
+        "secondary",
+        "title"
+      ],
+      "forbiddenFields": [
+        "highlights",
+        "media",
+        "poster"
+      ],
+      "listSizes": {},
+      "observedOn": [
+        "/product/analyst",
+        "/product/lattice"
+      ]
     }
   },
   "content": {
@@ -96,9 +145,9 @@
     "fields": {
       "eyebrow": {
         "type": "text",
-        "maxWords": 4,
-        "maxChars": 30,
-        "observedIn": 4
+        "maxWords": 6,
+        "maxChars": 34,
+        "observedIn": 9
       },
       "highlights": {
         "type": "list",
@@ -118,11 +167,27 @@
         "maxChars": 17,
         "observedIn": 1
       },
+      "illustration": {
+        "type": "asset",
+        "referenceRoles": [
+          "illustration.diagram"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "illustration.generated-diagram"
+        ]
+      },
+      "illustration.alt": {
+        "type": "text",
+        "maxWords": 11,
+        "maxChars": 67,
+        "observedIn": 2
+      },
       "lead": {
         "type": "text",
         "maxWords": 42,
         "maxChars": 256,
-        "observedIn": 11
+        "observedIn": 17
       },
       "media": {
         "type": "asset",
@@ -140,36 +205,66 @@
         "maxChars": 63,
         "observedIn": 10
       },
+      "poster": {
+        "type": "asset",
+        "referenceRoles": [
+          "video.poster"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "video.placeholder-poster"
+        ]
+      },
+      "poster.alt": {
+        "type": "text",
+        "maxWords": 12,
+        "maxChars": 71,
+        "observedIn": 1
+      },
       "primary.href": {
         "type": "link",
-        "observedIn": 11
+        "observedIn": 17
       },
       "primary.label": {
         "type": "text",
         "maxWords": 8,
         "maxChars": 41,
-        "observedIn": 11
+        "observedIn": 17
+      },
+      "primary.opensDialog": {
+        "type": "boolean",
+        "observedIn": 2
       },
       "secondary.href": {
         "type": "link",
-        "observedIn": 5
+        "observedIn": 11
       },
       "secondary.label": {
         "type": "text",
         "maxWords": 7,
         "maxChars": 40,
-        "observedIn": 5
+        "observedIn": 11
       },
       "title": {
         "type": "text",
-        "maxWords": 10,
-        "maxChars": 55,
-        "observedIn": 11
+        "maxWords": 11,
+        "maxChars": 61,
+        "observedIn": 18
       }
     }
   },
   "assets": {
     "fields": {
+      "illustration": {
+        "type": "asset",
+        "referenceRoles": [
+          "illustration.diagram"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "illustration.generated-diagram"
+        ]
+      },
       "media": {
         "type": "asset",
         "referenceRoles": [
@@ -179,12 +274,24 @@
         "generatedRoles": [
           "product.generated-visual"
         ]
+      },
+      "poster": {
+        "type": "asset",
+        "referenceRoles": [
+          "video.poster"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "video.placeholder-poster"
+        ]
       }
     },
     "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
   },
   "generatedAssetRoles": [
-    "product.generated-visual"
+    "illustration.generated-diagram",
+    "product.generated-visual",
+    "video.placeholder-poster"
   ],
   "style": {
     "props": {
@@ -197,8 +304,11 @@
       "strokeShape": {
         "kind": "token",
         "allowed": [
+          "stroke.s10",
+          "stroke.s3",
           "stroke.s4",
-          "stroke.s8"
+          "stroke.s8",
+          "stroke.s9"
         ]
       }
     },
@@ -206,17 +316,20 @@
   },
   "constraints": {
     "position": "first-content",
-    "maxPerPage": 1
+    "maxPerPage": 1,
+    "consecutiveVariants": []
   },
   "motion": {
     "allowedPatterns": [
       "static",
-      "stroke.draw-on"
+      "stroke.draw-on",
+      "stroke.idle"
     ],
     "requiredPatterns": [],
     "reducedMotionFallback": {
       "static": "none-needed",
-      "stroke.draw-on": "render-final-state"
+      "stroke.draw-on": "render-final-state",
+      "stroke.idle": "none-needed"
     },
     "stagger": "none | No scroll/load reveal here: on the original the hero h1, lead and CTA are static (opacity 1 from 0ms)."
   },
@@ -230,18 +343,19 @@
       "behavior": "full-width column; H1 48/57.6; image full width (square variant max-w 100% below 768)"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "/": [
         497.6
       ],
-      "/product/data-modernization": [
-        1096.1
-      ],
       "/product/ai": [
         1082.6
       ],
       "/product/embedded-analytics": [
+        1096.1
+      ],
+      "/product/data-modernization": [
         1096.1
       ],
       "/product/data-trust": [
@@ -264,11 +378,32 @@
       ],
       "/industry/telecommunications": [
         1231.3
+      ],
+      "/about-us/belonging": [
+        321.6
+      ],
+      "/partners": [
+        423.6
+      ],
+      "/product/what-is-lattice": [
+        1151.2
+      ],
+      "/product/lattice": [
+        1094.6
+      ],
+      "/product/integrations": [
+        374.8
+      ],
+      "/product/analyst": [
+        1287.4
+      ],
+      "/product/self-hosted-vs-platform": [
+        491.6
       ]
     }
   },
   "evidence": [
-    "src/components/sections/HeroCenter.jsx:6-42",
+    "src/components/sections/HeroCenter.jsx:16-82",
     "src/components/Hero.jsx:5-38"
   ]
 }

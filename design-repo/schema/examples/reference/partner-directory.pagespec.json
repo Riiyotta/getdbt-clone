@@ -1,0 +1,667 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "T17",
+  "route": "/partner-directory",
+  "theme": "light",
+  "brand": {
+    "name": "Lattice"
+  },
+  "meta": {
+    "title": "Partner directory"
+  },
+  "nodes": [
+    {
+      "section": "shell.minimal-nav",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-dark.svg"
+        },
+        "homeLabel": "Home"
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "directory.header",
+      "variant": "default",
+      "content": {
+        "title": "Work with a vetted Lattice partner on your data project",
+        "body": "Browse consultancies that help teams design, build and run Lattice."
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "directory.partner-locator",
+      "variant": "default",
+      "content": {
+        "filtersTitle": "Filters",
+        "clearAll": "Clear all",
+        "apply": "Apply filters",
+        "toggleFilters": "Show filters",
+        "groups": [
+          {
+            "key": "service",
+            "title": "Service type",
+            "options": [
+              "Consulting",
+              "Training"
+            ]
+          },
+          {
+            "key": "tier",
+            "title": "Tier",
+            "options": [
+              "Pioneer",
+              "Builder"
+            ]
+          },
+          {
+            "key": "regions",
+            "title": "Regions",
+            "options": [
+              "Americas",
+              "Asia Pacific",
+              "Europe & Africa"
+            ]
+          }
+        ],
+        "search": "Search by keyword, partner name, service type, tier, region or the industries served",
+        "clearSearch": "Clear search",
+        "prev": "Previous",
+        "next": "Next",
+        "empty": "No partners match these filters yet. Try removing one.",
+        "partners": [
+          {
+            "id": 1,
+            "name": "Alderpoint Analytics",
+            "url": "https://alderpoint.example",
+            "text": "Alderpoint helps finance and retail teams move legacy reporting onto tested, documented Lattice projects with clear owners and service levels.",
+            "service": "Consulting",
+            "tier": "Pioneer",
+            "regions": [
+              "Americas"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Alderpoint Analytics",
+              "ref": "/assets/oneoffs/directory/partner-1.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 2,
+            "name": "Bramblecode",
+            "url": "https://bramblecode.example/partners/lattice-practice/",
+            "text": "A small studio of analytics engineers who pair with in-house teams, coaching them through their first production release and beyond.",
+            "service": "Training",
+            "tier": "Pioneer",
+            "regions": [
+              "Europe & Africa"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Bramblecode",
+              "ref": "/assets/oneoffs/directory/partner-2.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 3,
+            "name": "Cairnfield Data",
+            "url": "https://cairnfield.example",
+            "text": "Cairnfield designs metric layers for subscription businesses, from revenue definitions to the dashboards that sit on top of them.",
+            "service": "Consulting",
+            "tier": "Pioneer",
+            "regions": [
+              "Europe & Africa"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Cairnfield Data",
+              "ref": "/assets/oneoffs/directory/partner-3.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 4,
+            "name": "Driftmoor",
+            "url": "driftmoor.example",
+            "text": "Specialists in warehouse cost reviews. Driftmoor audits run history, trims waste and sets up alerts that keep spend predictable over time.",
+            "service": "Consulting",
+            "tier": "Builder",
+            "regions": [
+              "Americas",
+              "Asia Pacific"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Driftmoor",
+              "ref": "/assets/oneoffs/directory/partner-4.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-silver.svg"
+            }
+          },
+          {
+            "id": 5,
+            "name": "Embervale",
+            "url": "https://embervale.example",
+            "text": "Embervale runs hands-on bootcamps for analysts learning to model, test and ship their own data products with modern tooling.",
+            "service": "Training",
+            "tier": "Pioneer",
+            "regions": [
+              "Americas"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Embervale",
+              "ref": "/assets/oneoffs/directory/partner-5.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 6,
+            "name": "Fernhollow Labs",
+            "url": "https://fernhollow.example/en/services",
+            "text": "An engineering-led firm that builds cross-project architectures for large organisations with many domain teams and strict governance rules.",
+            "service": "Consulting",
+            "tier": "Pioneer",
+            "regions": [
+              "Europe & Africa"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Fernhollow Labs",
+              "ref": "/assets/oneoffs/directory/partner-6.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 7,
+            "name": "Gantry & Loom",
+            "url": "https://gantryloom.example",
+            "text": "Gantry & Loom pairs data strategy with delivery, helping leadership teams decide what to build first and then building it alongside them.",
+            "service": "Consulting",
+            "tier": "Pioneer",
+            "regions": [
+              "Asia Pacific"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Gantry & Loom",
+              "ref": "/assets/oneoffs/directory/partner-7.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 8,
+            "name": "Harbinlight",
+            "url": "https://harbinlight.example",
+            "text": "Harbinlight supports healthcare providers with compliant pipelines, careful access controls and models that clinicians can actually trust.",
+            "service": "Consulting",
+            "tier": "Pioneer",
+            "regions": [
+              "Americas"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Harbinlight",
+              "ref": "/assets/oneoffs/directory/partner-8.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 9,
+            "name": "Ironbark Data",
+            "url": "ironbark.example",
+            "text": "A regional consultancy that modernises reporting for public sector agencies, with a strong focus on documentation and handover.",
+            "service": "Consulting",
+            "tier": "Builder",
+            "regions": [
+              "Asia Pacific"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Ironbark Data",
+              "ref": "/assets/oneoffs/directory/partner-9.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-silver.svg"
+            }
+          },
+          {
+            "id": 10,
+            "name": "Juniper Row",
+            "url": "https://juniperrow.example",
+            "text": "Juniper Row teaches data teams to write maintainable SQL, structure projects well and review each other’s work with confidence.",
+            "service": "Training",
+            "tier": "Pioneer",
+            "regions": [
+              "Europe & Africa"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Juniper Row",
+              "ref": "/assets/oneoffs/directory/partner-10.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 11,
+            "name": "Kestrelwise",
+            "url": "https://kestrelwise.example",
+            "text": "Kestrelwise builds product analytics stacks for fast-growing software companies, from event tracking through to activation metrics.",
+            "service": "Consulting",
+            "tier": "Pioneer",
+            "regions": [
+              "Americas"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Kestrelwise",
+              "ref": "/assets/oneoffs/directory/partner-11.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 12,
+            "name": "Larchmont Data Co",
+            "url": "https://larchmont.example/partners",
+            "text": "A boutique team that untangles inherited projects: mapping lineage, removing dead models and adding the tests that were always missing.",
+            "service": "Consulting",
+            "tier": "Builder",
+            "regions": [
+              "Americas"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Larchmont Data Co",
+              "ref": "/assets/oneoffs/directory/partner-12.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-silver.svg"
+            }
+          },
+          {
+            "id": 13,
+            "name": "Mistral Bay",
+            "url": "https://mistralbay.example",
+            "text": "Mistral Bay helps logistics and travel companies forecast demand with clean, well-modelled operational data and reliable daily refreshes.",
+            "service": "Consulting",
+            "tier": "Pioneer",
+            "regions": [
+              "Europe & Africa",
+              "Asia Pacific"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Mistral Bay",
+              "ref": "/assets/oneoffs/directory/partner-13.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 14,
+            "name": "Northgable",
+            "url": "northgable.example",
+            "text": "Northgable offers managed analytics engineering for teams that need steady capacity without growing headcount this year.",
+            "service": "Consulting",
+            "tier": "Pioneer",
+            "regions": [
+              "Europe & Africa"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Northgable",
+              "ref": "/assets/oneoffs/directory/partner-14.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 15,
+            "name": "Oakhaven Insights",
+            "url": "https://oakhaven.example/what-we-do/modern-data-platform-delivery/",
+            "text": "Oakhaven sets up end-to-end platforms for mid-sized firms, including ingestion, modelling, orchestration and a self-serve semantic layer.",
+            "service": "Consulting",
+            "tier": "Pioneer",
+            "regions": [
+              "Americas"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Oakhaven Insights",
+              "ref": "/assets/oneoffs/directory/partner-15.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 16,
+            "name": "Pinecrest Logic",
+            "url": "https://pinecrest.example",
+            "text": "A training partner running certification prep courses, live workshops and office hours for analysts moving into engineering roles.",
+            "service": "Training",
+            "tier": "Pioneer",
+            "regions": [
+              "Asia Pacific"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Pinecrest Logic",
+              "ref": "/assets/oneoffs/directory/partner-16.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 17,
+            "name": "Quarrystone",
+            "url": "https://quarrystone.example",
+            "text": "Quarrystone migrates stored-procedure estates into modular, version-controlled projects with automated tests at every layer.",
+            "service": "Consulting",
+            "tier": "Pioneer",
+            "regions": [
+              "Europe & Africa"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Quarrystone",
+              "ref": "/assets/oneoffs/directory/partner-17.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 18,
+            "name": "Redwater Labs",
+            "url": "https://redwater.example/lattice",
+            "text": "Redwater Labs builds machine learning feature pipelines on top of governed models so data science teams can reuse trusted inputs.",
+            "service": "Consulting",
+            "tier": "Builder",
+            "regions": [
+              "Americas"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Redwater Labs",
+              "ref": "/assets/oneoffs/directory/partner-18.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-silver.svg"
+            }
+          },
+          {
+            "id": 19,
+            "name": "Saltmarsh Data",
+            "url": "https://saltmarsh.example",
+            "text": "Saltmarsh focuses on data quality programs: contracts, freshness checks and incident playbooks that keep stakeholders informed.",
+            "service": "Consulting",
+            "tier": "Pioneer",
+            "regions": [
+              "Europe & Africa"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Saltmarsh Data",
+              "ref": "/assets/oneoffs/directory/partner-19.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 20,
+            "name": "Tidewell",
+            "url": "tidewell.example",
+            "text": "Tidewell coaches analytics leaders on team design, hiring plans and review rituals that help a growing data function scale calmly.",
+            "service": "Training",
+            "tier": "Pioneer",
+            "regions": [
+              "Americas"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Tidewell",
+              "ref": "/assets/oneoffs/directory/partner-20.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 21,
+            "name": "Umberlake",
+            "url": "https://umberlake.example/services/analytics",
+            "text": "Umberlake supports retailers with merchandising and inventory models that refresh hourly and feed planning tools across many stores.",
+            "service": "Consulting",
+            "tier": "Pioneer",
+            "regions": [
+              "Asia Pacific"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Umberlake",
+              "ref": "/assets/oneoffs/directory/partner-21.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 22,
+            "name": "Vantage Fold",
+            "url": "https://vantagefold.example",
+            "text": "A partner for media companies, modelling audience, subscription and advertising data into a single dependable reporting layer.",
+            "service": "Consulting",
+            "tier": "Pioneer",
+            "regions": [
+              "Europe & Africa"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Vantage Fold",
+              "ref": "/assets/oneoffs/directory/partner-22.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 23,
+            "name": "Willowmere",
+            "url": "https://willowmere.example",
+            "text": "Willowmere delivers short, focused engagements that set up a new Lattice project with conventions, CI checks and a working first release.",
+            "service": "Consulting",
+            "tier": "Builder",
+            "regions": [
+              "Americas",
+              "Europe & Africa"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Willowmere",
+              "ref": "/assets/oneoffs/directory/partner-23.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-silver.svg"
+            }
+          },
+          {
+            "id": 24,
+            "name": "Yarrowfield",
+            "url": "https://yarrowfield.example/partners/",
+            "text": "Yarrowfield designs self-paced courses and certification study plans for teams adopting analytics engineering across several offices.",
+            "service": "Training",
+            "tier": "Pioneer",
+            "regions": [
+              "Asia Pacific"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Yarrowfield",
+              "ref": "/assets/oneoffs/directory/partner-24.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 25,
+            "name": "Zephyr Grove",
+            "url": "zephyrgrove.example",
+            "text": "Zephyr Grove helps energy and utilities firms model meter, outage and asset data with careful lineage for audit and regulatory review.",
+            "service": "Consulting",
+            "tier": "Pioneer",
+            "regions": [
+              "Europe & Africa"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Zephyr Grove",
+              "ref": "/assets/oneoffs/directory/partner-25.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 26,
+            "name": "Ashgrove Metrics",
+            "url": "https://ashgrove.example",
+            "text": "Ashgrove specialises in metric definitions for executive reporting, aligning finance, sales and product on one shared set of numbers.",
+            "service": "Consulting",
+            "tier": "Pioneer",
+            "regions": [
+              "Americas"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Ashgrove Metrics",
+              "ref": "/assets/oneoffs/directory/partner-26.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-gold.svg"
+            }
+          },
+          {
+            "id": 27,
+            "name": "Birchline Partners",
+            "url": "https://birchline.example/en-gb/lattice-services/",
+            "text": "Birchline offers architecture reviews and health checks for mature projects, with a prioritised roadmap of fixes delivered in two weeks.",
+            "service": "Consulting",
+            "tier": "Builder",
+            "regions": [
+              "Europe & Africa"
+            ],
+            "logo": {
+              "assetRole": "partner.wordmark",
+              "alt": "Birchline Partners",
+              "ref": "/assets/oneoffs/directory/partner-27.svg"
+            },
+            "badge": {
+              "assetRole": "award.badge",
+              "alt": "",
+              "ref": "/assets/oneoffs/directory/badge-silver.svg"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed",
+        "additional": [
+          {
+            "pattern": "accordion.height",
+            "reducedMotionFallback": "unchanged"
+          }
+        ]
+      }
+    }
+  ]
+}

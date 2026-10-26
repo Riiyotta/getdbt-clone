@@ -14,7 +14,7 @@
         "Arial",
         "sans-serif"
       ],
-      "cite": "tailwind.config.cjs:84",
+      "cite": "tailwind.config.cjs:103",
       "category": "fontFamily"
     },
     "font.family.sans": {
@@ -30,7 +30,7 @@
         "Arial",
         "sans-serif"
       ],
-      "cite": "tailwind.config.cjs:85",
+      "cite": "tailwind.config.cjs:104",
       "category": "fontFamily"
     },
     "font.family.mono": {
@@ -43,86 +43,107 @@
         "Consolas",
         "monospace"
       ],
-      "cite": "tailwind.config.cjs:86",
+      "cite": "tailwind.config.cjs:105",
       "category": "fontFamily"
+    },
+    "font.family.summit-display": {
+      "value": "'Schibsted Grotesk', Arial, sans-serif",
+      "category": "fontFamily",
+      "cite": "src/styles/oneoffs.css:33"
+    },
+    "font.family.summit-button": {
+      "value": "'Be Vietnam Pro', Archivo, Arial, sans-serif",
+      "category": "fontFamily",
+      "cite": "src/styles/oneoffs.css:34"
+    },
+    "font.family.summit-body": {
+      "value": "Inter, Arial, sans-serif",
+      "category": "fontFamily",
+      "cite": "src/styles/oneoffs.css:20"
     },
     "font.size.h1": {
       "value": "48px",
       "lineHeight": "57.6px",
       "category": "fontSize",
-      "cite": "tailwind.config.cjs:90"
+      "cite": "tailwind.config.cjs:109"
     },
     "font.size.h1-xl": {
       "value": "64px",
       "lineHeight": "76.8px",
       "category": "fontSize",
-      "cite": "tailwind.config.cjs:91"
+      "cite": "tailwind.config.cjs:110"
     },
     "font.size.h2": {
       "value": "32px",
       "lineHeight": "38.4px",
       "category": "fontSize",
-      "cite": "tailwind.config.cjs:92"
+      "cite": "tailwind.config.cjs:111"
     },
     "font.size.h2-xl": {
       "value": "48px",
       "lineHeight": "57.6px",
       "category": "fontSize",
-      "cite": "tailwind.config.cjs:93"
+      "cite": "tailwind.config.cjs:112"
     },
     "font.size.h3": {
       "value": "24px",
       "lineHeight": "28.8px",
       "category": "fontSize",
-      "cite": "tailwind.config.cjs:94"
+      "cite": "tailwind.config.cjs:113"
     },
     "font.size.h3-xl": {
       "value": "32px",
       "lineHeight": "38.4px",
       "category": "fontSize",
-      "cite": "tailwind.config.cjs:95"
+      "cite": "tailwind.config.cjs:114"
     },
     "font.size.h4": {
       "value": "20px",
       "lineHeight": "24px",
       "category": "fontSize",
-      "cite": "tailwind.config.cjs:96"
+      "cite": "tailwind.config.cjs:115"
     },
     "font.size.h4-xl": {
       "value": "24px",
       "lineHeight": "28.8px",
       "category": "fontSize",
-      "cite": "tailwind.config.cjs:97"
+      "cite": "tailwind.config.cjs:116"
     },
     "font.size.h5": {
       "value": "18px",
       "lineHeight": "21.6px",
       "category": "fontSize",
-      "cite": "tailwind.config.cjs:98"
+      "cite": "tailwind.config.cjs:117"
     },
     "font.size.stat": {
       "value": "32px",
       "lineHeight": "38.4px",
       "category": "fontSize",
-      "cite": "tailwind.config.cjs:99"
+      "cite": "tailwind.config.cjs:118"
     },
     "font.size.metric": {
       "value": "64px",
       "lineHeight": "64px",
       "category": "fontSize",
-      "cite": "tailwind.config.cjs:100"
+      "cite": "tailwind.config.cjs:119"
     },
     "font.size.badge": {
       "value": "10px",
       "lineHeight": "14.29px",
       "category": "fontSize",
-      "cite": "tailwind.config.cjs:101"
+      "cite": "tailwind.config.cjs:120"
     },
     "font.size.stat-lg": {
       "value": "88px",
       "lineHeight": "88px",
       "category": "fontSize",
-      "cite": "tailwind.config.cjs:103"
+      "cite": "tailwind.config.cjs:122"
+    },
+    "font.size.display": {
+      "value": "80px",
+      "lineHeight": "80px",
+      "category": "fontSize",
+      "cite": "tailwind.config.cjs:124"
     },
     "font.size.lead": {
       "value": "18px",
@@ -160,6 +181,48 @@
       "category": "fontSize",
       "cite": "tailwind-default-scale (rendered: extraction/measured-values.json renderedStyleSamples)"
     },
+    "font.size.summit-display-sm": {
+      "value": "36px",
+      "lineHeight": "39.6px",
+      "category": "fontSize",
+      "cite": "src/components/oneoffs/summit/Summit.jsx:98"
+    },
+    "font.size.summit-display-md": {
+      "value": "64px",
+      "lineHeight": "70.4px",
+      "category": "fontSize",
+      "cite": "src/components/oneoffs/summit/Summit.jsx:23"
+    },
+    "font.size.summit-hero-xl": {
+      "value": "72px",
+      "lineHeight": "72px",
+      "category": "fontSize",
+      "cite": "src/components/oneoffs/summit/Summit.jsx:23"
+    },
+    "font.size.summit-hero-2xl": {
+      "value": "88px",
+      "lineHeight": "88px",
+      "category": "fontSize",
+      "cite": "src/components/oneoffs/summit/Summit.jsx:23"
+    },
+    "font.size.summit-lead-sm": {
+      "value": "18px",
+      "lineHeight": "25.2px",
+      "category": "fontSize",
+      "cite": "src/components/oneoffs/summit/Summit.jsx:24"
+    },
+    "font.size.summit-lead-md": {
+      "value": "24px",
+      "lineHeight": "33.6px",
+      "category": "fontSize",
+      "cite": "src/components/oneoffs/summit/Summit.jsx:24"
+    },
+    "font.size.summit-button": {
+      "value": "24px",
+      "lineHeight": "26.4px",
+      "category": "fontSize",
+      "cite": "src/components/oneoffs/summit/Summit.jsx:102"
+    },
     "font.weight.400": {
       "value": 400,
       "category": "fontWeight",
@@ -180,10 +243,15 @@
       "category": "fontWeight",
       "cite": "CLONE_SPEC.md:155-181"
     },
+    "font.weight.800": {
+      "value": 800,
+      "category": "fontWeight",
+      "cite": "src/styles/oneoffs.css:34"
+    },
     "font.tracking.display": {
       "value": "-0.008em",
       "category": "letterSpacing",
-      "cite": "tailwind.config.cjs:82"
+      "cite": "tailwind.config.cjs:101"
     }
   }
 }

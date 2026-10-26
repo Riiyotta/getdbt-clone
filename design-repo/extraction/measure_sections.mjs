@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Optional re-measure tool for extraction/measured-values.json -> sectionHeights (R9).
 // Measures every implemented route of routes/routes.json at 1440x900 in a headless browser:
-// the announcement bar, nav, footer and each direct child of <main>, after a full scroll so lazy media settle.
+// the announcement bar (full chrome only), the first nav (or the event header), the footer (absent on chrome 'none') and each direct child of <main>, after a full scroll so lazy media settle.
 //
 //   PLAYWRIGHT_MODULE=<path or package name of playwright>   (default: "playwright", resolved normally)
 //   BASE_URL=http://localhost:5197                            (the clone's dev server)
@@ -41,7 +41,7 @@ for (const { path } of routes) {
     const pick = (sel) => (document.querySelector(sel) ? box(document.querySelector(sel)) : null)
     return {
       docHeightPx: document.documentElement.scrollHeight,
-      chrome: { 'shell.announcement-bar': pick('.announcement-bar'), 'shell.navbar': pick('nav'), 'shell.footer': pick('footer') },
+      shell: { announcement: pick('.announcement-bar'), nav: pick('nav, header.summit-nav'), footer: pick('footer') }, // map to the route's chrome variant (full | event | none) in routes/routes.json
       main: [...document.querySelector('main').children].map((el) => ({ tag: el.tagName.toLowerCase(), ...box(el) })),
     }
   })

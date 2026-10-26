@@ -1,0 +1,233 @@
+{
+  "id": "article.story-body",
+  "title": "Customer-story body",
+  "semantic": {
+    "id": "article.story-body",
+    "category": "ARTICLE"
+  },
+  "source": {
+    "id": "component:StoryBody",
+    "file": "src/components/article/StorySections.jsx",
+    "export": "StoryBody",
+    "tag": "section",
+    "lines": "7-20",
+    "tagLine": 9
+  },
+  "additionalSources": [
+    {
+      "id": "component:StoryMeta",
+      "file": "src/components/article/StoryMeta.jsx",
+      "export": "StoryMeta",
+      "tag": "aside",
+      "lines": "5-19",
+      "tagLine": 7
+    },
+    {
+      "id": "component:Prose",
+      "file": "src/components/article/Prose.jsx",
+      "export": "Prose",
+      "tag": "div",
+      "lines": "286-312",
+      "tagLine": 289
+    }
+  ],
+  "purpose": "Prose column (8 cols) of chapters, each opened by an h3, beside a bordered facts card (logo, labelled facts). Prose blocks: paragraphs, headings, lists, quotes, images, tables. One DOM unit; decompose logically by chapter (h3).",
+  "retrievalEligible": true,
+  "placement": "main",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "blocks",
+        "meta"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "blocks": [
+          1,
+          62
+        ]
+      },
+      "observedOn": [
+        "/case-studies/basalt-health",
+        "/case-studies/halcyon",
+        "/case-studies/kestrel",
+        "/case-studies/meridian-partners"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "blocks": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 62,
+        "observedIn": 4
+      },
+      "blocks[].image": {
+        "type": "asset",
+        "referenceRoles": [
+          "figure.article-image"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "illustration.generated-diagram",
+          "photo.generated-scene"
+        ]
+      },
+      "blocks[].image.alt": {
+        "type": "text",
+        "maxWords": 14,
+        "maxChars": 101,
+        "observedIn": 2
+      },
+      "blocks[].items": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 4,
+        "observedIn": 6
+      },
+      "blocks[].items[].text": {
+        "type": "text",
+        "maxWords": 14,
+        "maxChars": 75,
+        "observedIn": 18
+      },
+      "blocks[].kind": {
+        "type": "enum",
+        "observedIn": 157
+      },
+      "blocks[].text": {
+        "type": "text",
+        "maxWords": 62,
+        "maxChars": 374,
+        "observedIn": 149
+      },
+      "meta.facts": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 4,
+        "observedIn": 4
+      },
+      "meta.facts[].label": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 28,
+        "observedIn": 13
+      },
+      "meta.facts[].value": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 39,
+        "observedIn": 13
+      },
+      "meta.logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "customer.logo"
+        ],
+        "observedIn": 4,
+        "generatedRoles": [
+          "customer.placeholder-logo"
+        ]
+      },
+      "meta.logo.alt": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 17,
+        "observedIn": 4
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "blocks[].image": {
+        "type": "asset",
+        "referenceRoles": [
+          "figure.article-image"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "illustration.generated-diagram",
+          "photo.generated-scene"
+        ]
+      },
+      "meta.logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "customer.logo"
+        ],
+        "observedIn": 4,
+        "generatedRoles": [
+          "customer.placeholder-logo"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "customer.placeholder-logo",
+    "illustration.generated-diagram",
+    "photo.generated-scene"
+  ],
+  "style": {
+    "props": {
+      "chapterLevel": {
+        "kind": "enum",
+        "allowed": [
+          "h3"
+        ]
+      }
+    },
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "requiredPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": {
+      "static": "none-needed"
+    },
+    "stagger": "summary, text link with the 6px chevron shift). No reveal."
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "8 cols prose + 4 cols facts card"
+    },
+    {
+      "range": "<1024",
+      "behavior": "facts card drops under the prose"
+    }
+  ],
+  "runtimeUi": [],
+  "measuredHeightsPx": {
+    "1440": {
+      "/case-studies/kestrel": [
+        3027.4
+      ],
+      "/case-studies/meridian-partners": [
+        2401
+      ],
+      "/case-studies/halcyon": [
+        4508
+      ],
+      "/case-studies/basalt-health": [
+        1802.8
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/article/StorySections.jsx:7-20",
+    "src/components/article/StoryMeta.jsx:5-19",
+    "src/components/article/Prose.jsx:286-312"
+  ]
+}

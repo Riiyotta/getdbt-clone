@@ -11,29 +11,29 @@ Status: **design-review-pending**, not production-approved. Version 1.0.0 (PageS
 <!-- counts:start -->
 ```json
 {
- "tokensInCatalog": 192,
- "foundationTokens": 130,
- "semanticTokens": 40,
- "componentTokens": 22,
- "motionPatterns": 11,
+ "tokensInCatalog": 306,
+ "foundationTokens": 205,
+ "semanticTokens": 60,
+ "componentTokens": 41,
+ "motionPatterns": 24,
  "primitives": 11,
  "components": 11,
- "sections": 26,
- "sectionsRetrievalIneligible": 3,
+ "sections": 84,
+ "sectionsRetrievalIneligible": 6,
  "templates": 18,
- "templatesImplemented": 5,
- "templatesPending": 13,
+ "templatesImplemented": 18,
+ "templatesPending": 0,
  "routes": 71,
- "routesImplemented": 23,
- "routesPending": 48,
+ "routesImplemented": 71,
+ "routesPending": 0,
  "redirects": 5,
- "assetRoles": 33,
+ "assetRoles": 37,
  "assetRolesGenerationSafe": 16,
- "graphRules": 12,
- "allowlistEntries": 48,
- "referenceExamples": 23,
+ "graphRules": 15,
+ "allowlistEntries": 106,
+ "referenceExamples": 71,
  "generatedExamples": 2,
- "measuredRoutes1440": 23
+ "measuredRoutes1440": 71
 }
 ```
 <!-- counts:end -->
@@ -41,9 +41,9 @@ Status: **design-review-pending**, not production-approved. Version 1.0.0 (PageS
 ## Scope
 
 - Implemented and contracted: tokens, site chrome (announcement bar, sticky nav, mega-menus, mobile drawer, footer),
-  the homepage (T0) and templates T1 product feature, T2 solution, T3 data platform, T4 industry (23 routes).
+  the homepage (T0) and templates T1 product feature, T2 solution, T3 data platform, T4 industry (71 routes).
 - Registered as `status: pending` (routes + draft section sequences from the project's page inventory, no contracts):
-  T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17 (48 routes). They render a "being built" stand-in in the clone today; a later revision
+   (0 routes). They render a "being built" stand-in in the clone today; a later revision
   must add their sections (decomposed per `decompositionNote`, never whole-page/whole-article sections) and flip them to implemented.
 - Source stack (documentation only): React ^18.3.1 + Vite ^5.4.10 + Tailwind CSS ^3.4.14 (tailwind.config.cjs, CommonJS) + react-router-dom ^6.28.0 (package.json ranges); dev server port 5197. Nothing in the contracts depends on it.
 

@@ -1,0 +1,1841 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "T7",
+  "route": "/case-studies",
+  "theme": "light",
+  "brand": {
+    "name": "Lattice"
+  },
+  "meta": {
+    "title": "Case studies"
+  },
+  "nodes": [
+    {
+      "section": "shell.announcement-bar",
+      "variant": "default",
+      "content": {
+        "slides": [
+          {
+            "text": "Lattice 4.0 is here with faster incremental builds, smarter tests, and a fresh lineage explorer.",
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "text": "Join our live workshop on modeling patterns this month.",
+            "href": "/resources/webinars/charts-as-code"
+          },
+          {
+            "text": "New report: how two hundred data teams trimmed warehouse spend while shipping trusted models each week.",
+            "href": "/resources/state-of-data-teams"
+          },
+          {
+            "text": "Lattice Cloud now runs in three new regions across Europe and Asia. Check region availability.",
+            "href": "/blog/lattice-joins-northwind"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "carousel.autoplay",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.navbar",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-dark.svg"
+        },
+        "menuLabels": [
+          "Product",
+          "Solutions",
+          "Customers",
+          "Resources",
+          "Community"
+        ],
+        "plainLink": {
+          "label": "Pricing",
+          "href": "/pricing"
+        },
+        "secondaryAction": {
+          "label": "Get started",
+          "href": "/signup"
+        },
+        "primaryAction": {
+          "label": "Book a demo",
+          "href": "/contact"
+        }
+      },
+      "motion": {
+        "pattern": "nav.hide-on-scroll",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mega-menu",
+      "variant": "default",
+      "content": {
+        "menus": [
+          {
+            "trigger": "Product",
+            "groups": [
+              {
+                "label": "First steps",
+                "items": [
+                  {
+                    "title": "Why Lattice",
+                    "description": "How Lattice turns SQL into trusted products",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/product/what-is-lattice"
+                  },
+                  {
+                    "title": "Platform tour",
+                    "description": "Watch a ten-minute walkthrough of the full workspace",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/product/lattice"
+                  }
+                ]
+              },
+              {
+                "label": "Everything in the box",
+                "items": [
+                  {
+                    "title": "Build",
+                    "description": "Author models in the browser, a desktop editor or the command line",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/develop"
+                  },
+                  {
+                    "title": "Validate",
+                    "description": "Assert rules on every model",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/test-and-observe"
+                  },
+                  {
+                    "title": "Design",
+                    "description": "Split big projects by domain",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/mesh"
+                  },
+                  {
+                    "title": "Explore",
+                    "description": "Search docs, owners and lineage",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/catalog"
+                  },
+                  {
+                    "title": "Ship",
+                    "description": "Trigger runs on merge or a timer",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/deploy"
+                  },
+                  {
+                    "title": "Measure",
+                    "description": "Publish one definition of revenue to every tool that asks",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/semantic-layer"
+                  }
+                ]
+              }
+            ],
+            "featured": {
+              "title": "The modeling lifecycle",
+              "description": "Map how ideas move from first query to production model, with clear owners and checks at each step",
+              "thumbnail": {
+                "assetRole": "illustration.abstract",
+                "alt": "",
+                "ref": "/assets/menu/featured.svg"
+              },
+              "href": "/resources/analytics-lifecycle"
+            },
+            "side": {
+              "label": "Feature spotlight",
+              "links": [
+                {
+                  "label": "Smart state",
+                  "href": "/product/state"
+                },
+                {
+                  "label": "Guided setup",
+                  "href": "/product/assistant"
+                },
+                {
+                  "label": "Charts",
+                  "href": "/product/charts"
+                },
+                {
+                  "label": "Governance",
+                  "href": "/product/governance"
+                },
+                {
+                  "label": "Security",
+                  "href": "/security"
+                },
+                {
+                  "label": "Integrations",
+                  "href": "/product/integrations"
+                }
+              ],
+              "action": {
+                "label": "See the latest demo",
+                "href": "/resources/webinars/launch-showcase"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Solutions",
+            "groups": [
+              {
+                "label": "By need",
+                "items": [
+                  {
+                    "title": "Analytics",
+                    "description": "Give analysts a governed place to model data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/analyst"
+                  },
+                  {
+                    "title": "AI readiness",
+                    "description": "Feed assistants with well-described data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/ai"
+                  }
+                ]
+              },
+              {
+                "label": "By team",
+                "items": [
+                  {
+                    "title": "Data engineers",
+                    "description": "Ship pipelines with tests built in",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/data-modernization"
+                  },
+                  {
+                    "title": "Analysts",
+                    "description": "Own models end to end in plain SQL",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/embedded-analytics"
+                  },
+                  {
+                    "title": "Platform leads",
+                    "description": "Standardize how every team builds",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/data-trust"
+                  },
+                  {
+                    "title": "Executives",
+                    "description": "Trust the numbers behind decisions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/cost-optimization"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "By industry",
+              "links": [
+                {
+                  "label": "Finance",
+                  "href": "/industry/financial-services"
+                },
+                {
+                  "label": "Retail",
+                  "href": "/industry/manufacturing"
+                },
+                {
+                  "label": "Healthcare",
+                  "href": "/industry/healthcare"
+                },
+                {
+                  "label": "Media",
+                  "href": "/industry/telecommunications"
+                },
+                {
+                  "label": "Public sector",
+                  "href": "/industry/energy-utilities"
+                },
+                {
+                  "label": "Software",
+                  "href": "/data-platforms/cobalt"
+                }
+              ],
+              "action": {
+                "label": "See every use case",
+                "href": "/product/data-modernization"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Customers",
+            "groups": [
+              {
+                "label": "Stories",
+                "items": [
+                  {
+                    "title": "Case studies",
+                    "description": "Read how teams run on Lattice",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/case-studies"
+                  },
+                  {
+                    "title": "Reviews",
+                    "description": "Independent ratings from practitioners",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/resources/on-demand"
+                  }
+                ]
+              },
+              {
+                "label": "By outcome",
+                "items": [
+                  {
+                    "title": "Data quality",
+                    "description": "Teams that caught issues earlier",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/case-studies/kestrel"
+                  },
+                  {
+                    "title": "Speed",
+                    "description": "Teams that shipped models faster",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/case-studies/meridian-partners"
+                  },
+                  {
+                    "title": "Cost",
+                    "description": "Teams that trimmed warehouse spend",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/case-studies/halcyon"
+                  },
+                  {
+                    "title": "Scale",
+                    "description": "Teams that grew past one project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/case-studies/basalt-health"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Featured",
+              "links": [
+                {
+                  "label": "Fernway",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Orbitly",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Kestrel",
+                  "href": "/case-studies/kestrel"
+                },
+                {
+                  "label": "Tidepool",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Meridian",
+                  "href": "/case-studies/meridian-partners"
+                },
+                {
+                  "label": "Halcyon",
+                  "href": "/case-studies/halcyon"
+                }
+              ],
+              "action": {
+                "label": "View all customers",
+                "href": "/case-studies"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Resources",
+            "groups": [
+              {
+                "label": "Learn",
+                "items": [
+                  {
+                    "title": "Docs",
+                    "description": "Guides and reference for every feature",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Courses",
+                    "description": "Free self-paced training",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/learn"
+                  }
+                ]
+              },
+              {
+                "label": "Explore",
+                "items": [
+                  {
+                    "title": "Blog",
+                    "description": "Notes from the product team",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/blog"
+                  },
+                  {
+                    "title": "Webinars",
+                    "description": "Live and recorded sessions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/resources/webinars"
+                  },
+                  {
+                    "title": "Reports",
+                    "description": "Research on modern data work",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/resources/state-of-data-teams"
+                  },
+                  {
+                    "title": "Templates",
+                    "description": "Starter projects you can fork",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/resources/whitepaper-control-plane"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Popular",
+              "links": [
+                {
+                  "label": "Getting started",
+                  "href": "/learn"
+                },
+                {
+                  "label": "Best practices",
+                  "href": "/resources/analytics-lifecycle"
+                },
+                {
+                  "label": "Release notes",
+                  "href": "/blog/summit-announcements"
+                },
+                {
+                  "label": "Glossary",
+                  "href": "/resources"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Status",
+                  "href": "#"
+                }
+              ],
+              "action": {
+                "label": "Browse all resources",
+                "href": "/resources"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Community",
+            "groups": [
+              {
+                "label": "Connect",
+                "items": [
+                  {
+                    "title": "Forum",
+                    "description": "Ask questions and share answers",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Meetups",
+                    "description": "Find a group near you",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/events"
+                  }
+                ]
+              },
+              {
+                "label": "Contribute",
+                "items": [
+                  {
+                    "title": "Open source",
+                    "description": "Help build the core project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Write a guide",
+                    "description": "Share what you have learned",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Speak",
+                    "description": "Present at a community event",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/summit"
+                  },
+                  {
+                    "title": "Champions",
+                    "description": "Join the ambassador program",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/champions"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Get involved",
+              "links": [
+                {
+                  "label": "Code of conduct",
+                  "href": "/community"
+                },
+                {
+                  "label": "Chat space",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Newsletter",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Awards",
+                  "href": "/champions"
+                },
+                {
+                  "label": "Jobs board",
+                  "href": "/about-us/careers"
+                }
+              ],
+              "action": {
+                "label": "Join the community",
+                "href": "/community/join"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "menu.popover",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mobile-drawer",
+      "variant": "default",
+      "content": {
+        "accountActions": [
+          {
+            "label": "Log in",
+            "href": "#"
+          },
+          {
+            "label": "Create an account",
+            "href": "/signup"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "drawer.slide",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "listing.header",
+      "variant": "centred",
+      "content": {
+        "eyebrow": "Stories from teams",
+        "title": "Data teams that ship with Lattice",
+        "lead": "See how teams of every size build, test and share data their companies can trust."
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      },
+      "style": {
+        "width": "wide"
+      }
+    },
+    {
+      "section": "listing.case-grid",
+      "variant": "default",
+      "content": {
+        "items": [
+          {
+            "slug": "halcyon",
+            "name": "Halcyon",
+            "industry": "Banking and payments",
+            "title": "Halcyon gives every trading desk self-serve data on a governed Lattice platform",
+            "body": "A market operator replaced hundreds of nightly scripts with one tested project, answered audit lineage requests in hours and halved the queue of requests to its central data team.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Halcyon",
+              "ref": "/assets/marquee/logo-6.svg"
+            },
+            "href": "/case-studies/halcyon",
+            "link": "Read the story"
+          },
+          {
+            "slug": "kestrel",
+            "name": "Kestrel",
+            "industry": "Food, beverage and grocery",
+            "title": "Kestrel halves nightly build time so store managers start the day with fresh numbers",
+            "body": "State-aware builds and freshness rules mean sales, stock and waste figures for three hundred stores are ready before the first shift, at roughly a third less warehouse cost.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Kestrel",
+              "ref": "/assets/marquee/logo-1.svg"
+            },
+            "href": "/case-studies/kestrel",
+            "link": "Read the story"
+          },
+          {
+            "slug": "meridian-partners",
+            "name": "Meridian Partners",
+            "industry": "Banking and payments",
+            "title": "Meridian Partners ends quarterly reconciliation across eleven regional desks",
+            "body": "Twelve shared metric definitions, desk-level ownership and tests that check regional totals every day took four days off the quarterly close.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Meridian Partners",
+              "ref": "/assets/marquee/logo-2.svg"
+            },
+            "href": "/case-studies/meridian-partners",
+            "link": "Read the story"
+          },
+          {
+            "slug": "basalt-health",
+            "name": "Basalt Health",
+            "industry": "Healthcare",
+            "title": "Basalt Health gives clinical and finance teams one tested bed count for twenty-four hospitals",
+            "body": "A jointly owned capacity model, hourly freshness rules and privacy built into the staging layer made monthly reporting forty-five percent faster.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Basalt Health",
+              "ref": "/assets/marquee/logo-7.svg"
+            },
+            "href": "/case-studies/basalt-health",
+            "link": "Read the story"
+          },
+          {
+            "slug": "tidepool",
+            "name": "Tidepool",
+            "industry": "Software",
+            "title": "Tidepool cuts ad hoc data requests by seventy percent with self-serve product analytics",
+            "body": "Documented, tested event models let product managers answer most of their own questions, so a small data team can focus on new work instead of repeat extracts.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Tidepool",
+              "ref": "/assets/marquee/logo-3.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "ferrocene",
+            "name": "Ferrocene",
+            "industry": "Manufacturing",
+            "title": "Ferrocene brings sensor and supplier data from nine plants into one versioned forecast",
+            "body": "Planners now trace every forecast figure back to its source rows, and preparing data for each planning cycle takes about a third less time than it used to.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Ferrocene",
+              "ref": "/assets/marquee/logo-4.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "larkmoor-bank",
+            "name": "Larkmoor Bank",
+            "industry": "Banking and payments",
+            "title": "Larkmoor Bank moves regulatory reporting from spreadsheets to reviewed, tested models",
+            "body": "Every regulated figure now has an owner, a test suite and a lineage trail, and the bank’s last two submissions went out a week earlier than planned.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Larkmoor Bank",
+              "ref": "/assets/pages/customers/cust-1.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "northgate-outfitters",
+            "name": "Northgate Outfitters",
+            "industry": "Retail",
+            "title": "Northgate Outfitters unifies online and in-store sales reporting in a single project",
+            "body": "A retailer with separate web and store teams agreed one definition of a sale and rebuilt forty dashboards on top of it in a single quarter.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Northgate Outfitters",
+              "ref": "/assets/pages/customers/cust-2.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "pellucid-optics",
+            "name": "Pellucid Optics",
+            "industry": "Manufacturing",
+            "title": "Pellucid Optics catches production defects a shift earlier with tested line data",
+            "body": "Freshness rules on sensor feeds and alerts routed to line supervisors turned overnight quality reports into same-shift warnings that stop bad batches sooner.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Pellucid Optics",
+              "ref": "/assets/pages/customers/cust-3.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "sablewood-media",
+            "name": "Sablewood Media",
+            "industry": "Media publishing",
+            "title": "Sablewood Media gives editors audience numbers they can trust within the hour",
+            "body": "Hourly models built on certified metrics replaced a tangle of exported reports, and editors now plan coverage from one shared view of reader behaviour.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Sablewood Media",
+              "ref": "/assets/pages/customers/cust-4.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "aldermoor-insurance",
+            "name": "Aldermoor Insurance",
+            "industry": "Insurance",
+            "title": "Aldermoor Insurance shortens claims analysis from weeks to days with a governed semantic layer",
+            "body": "Actuaries and claims managers query the same definitions of exposure and loss, and new analyses that used to need a data request now start in a spreadsheet.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Aldermoor Insurance",
+              "ref": "/assets/pages/customers/cust-5.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "cindervale-games",
+            "name": "Cindervale Games",
+            "industry": "Gaming",
+            "title": "Cindervale Games keeps live-service metrics accurate through launch-day traffic spikes",
+            "body": "Incremental models and state-aware builds handle ten times normal event volume without missing a refresh, so live-ops teams react to player behaviour in real time.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Cindervale Games",
+              "ref": "/assets/pages/customers/cust-6.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "brisa-mobility",
+            "name": "Brisa Mobility",
+            "industry": "Transport",
+            "title": "Brisa Mobility plans scooter fleets city by city on one tested demand model",
+            "body": "Operations teams in fourteen cities read the same demand forecasts, built from tested trip and weather data and refreshed every hour throughout the day.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Brisa Mobility",
+              "ref": "/assets/pages/customers/cust-7.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "wavecrest-studios",
+            "name": "Wavecrest Studios",
+            "industry": "Media publishing",
+            "title": "Wavecrest Studios connects production budgets to streaming performance for the first time",
+            "body": "Finance and content teams finally share one view of what each title cost and how it performed, built on reviewed models with clear ownership.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Wavecrest Studios",
+              "ref": "/assets/pages/customers/cust-8.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "juniper-freightways",
+            "name": "Juniper Freightways",
+            "industry": "Logistics",
+            "title": "Juniper Freightways cuts late deliveries by spotting route problems before trucks leave the depot",
+            "body": "Tested telematics and order data feed a morning risk report that dispatchers trust, and on-time delivery rose six points in the first year.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Juniper Freightways",
+              "ref": "/assets/pages/customers/cust-9.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "ostrava-provisions",
+            "name": "Ostrava Provisions",
+            "industry": "Food, beverage and grocery",
+            "title": "Ostrava Provisions reduces food waste with daily, tested demand figures for every warehouse",
+            "body": "Buyers order against a single forecast refreshed each morning, and spoiled stock fell by almost a fifth after the first season on the new models.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Ostrava Provisions",
+              "ref": "/assets/pages/customers/cust-10.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "gildmark-exchange",
+            "name": "Gildmark Exchange",
+            "industry": "Banking and payments",
+            "title": "Gildmark Exchange answers regulator lineage questions in hours instead of weeks",
+            "body": "Version-controlled models and generated lineage replaced manual evidence packs, and the exchange closed its latest review with no findings on data controls.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Gildmark Exchange",
+              "ref": "/assets/pages/customers/cust-11.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "pinecrest-mutual",
+            "name": "Pinecrest Mutual",
+            "industry": "Insurance",
+            "title": "Pinecrest Mutual retires a legacy warehouse without a single missed renewal report",
+            "body": "Six months of side-by-side runs and nightly reconciliation tests let the insurer switch off its old platform with confidence and no disruption to agents.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Pinecrest Mutual",
+              "ref": "/assets/pages/customers/cust-12.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "tessellate-health",
+            "name": "Tessellate Health",
+            "industry": "Healthcare",
+            "title": "Tessellate Health builds a privacy-first analytics project across forty clinics",
+            "body": "Identifiers stay in a locked-down staging layer, every access change is reviewed, and clinic managers get weekly operational reports they can act on.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Tessellate Health",
+              "ref": "/assets/pages/customers/cust-13.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "lumengrid-power",
+            "name": "Lumengrid Power",
+            "industry": "Energy, utilities and mining",
+            "title": "Lumengrid Power forecasts grid load with hourly models built on tested meter data",
+            "body": "Meter reads from two million homes flow into tested load models every hour, giving control-room planners an earlier and more reliable view of demand.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Lumengrid Power",
+              "ref": "/assets/pages/customers/cust-14.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "veridia-energy",
+            "name": "Veridia Energy",
+            "industry": "Energy, utilities and mining",
+            "title": "Veridia Energy gives field teams one view of asset health across three countries",
+            "body": "Maintenance crews and planners now read the same tested asset scores, and unplanned outages fell after the first year of using them to schedule work.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Veridia Energy",
+              "ref": "/assets/pages/customers/cust-15.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "saltmarsh-interactive",
+            "name": "Saltmarsh Interactive",
+            "industry": "Gaming",
+            "title": "Saltmarsh Interactive ships player metrics twice as fast with reviewed, reusable models",
+            "body": "A shared library of tested event models lets each game team build new dashboards in days, without rewriting the same session logic every time.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Saltmarsh Interactive",
+              "ref": "/assets/pages/customers/cust-16.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "kinfolk-journeys",
+            "name": "Kinfolk Journeys",
+            "industry": "Travel and lodging",
+            "title": "Kinfolk Journeys prices tours daily with a single, tested view of bookings and capacity",
+            "body": "Revenue managers adjust prices each morning from one trusted model, replacing three conflicting reports that used to disagree about available seats.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Kinfolk Journeys",
+              "ref": "/assets/pages/customers/cust-17.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "arborlane-education",
+            "name": "Arborlane Education",
+            "industry": "Education",
+            "title": "Arborlane Education helps teachers see student progress weekly instead of at term end",
+            "body": "Tested models combine attendance, coursework and assessment data so teachers can step in earlier, with access rules that protect student privacy.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Arborlane Education",
+              "ref": "/assets/pages/customers/cust-18.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "quayside-logistics",
+            "name": "Quayside Logistics",
+            "industry": "Logistics",
+            "title": "Quayside Logistics brings port, warehouse and carrier data into one tested project",
+            "body": "Planners can follow a container from ship to shelf in one lineage graph, and the weekly capacity meeting now starts from a single set of numbers.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Quayside Logistics",
+              "ref": "/assets/pages/customers/cust-19.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "mosswood-biotech",
+            "name": "Mosswood Biotech",
+            "industry": "Pharma and biotech",
+            "title": "Mosswood Biotech keeps lab results traceable from instrument to published study",
+            "body": "Every transformation is versioned and reviewed, so scientists and quality teams can show exactly how a result was derived when regulators ask.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Mosswood Biotech",
+              "ref": "/assets/pages/customers/cust-20.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "redfern-therapeutics",
+            "name": "Redfern Therapeutics",
+            "industry": "Pharma and biotech",
+            "title": "Redfern Therapeutics speeds up trial reporting with tested, reusable clinical models",
+            "body": "Standard models for enrolment and outcomes are reused across studies, and interim reports that took a month to assemble now take about a week.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Redfern Therapeutics",
+              "ref": "/assets/pages/customers/cust-21.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "silverbirch-capital",
+            "name": "Silverbirch Capital",
+            "industry": "Banking and payments",
+            "title": "Silverbirch Capital gives portfolio managers same-day performance figures they can trust",
+            "body": "Overnight batch jobs gave way to incremental models with freshness rules, and performance figures now arrive before the morning investment meeting.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Silverbirch Capital",
+              "ref": "/assets/pages/customers/cust-22.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "tundra-mobile",
+            "name": "Tundra Mobile",
+            "industry": "Telecom networks",
+            "title": "Tundra Mobile predicts network congestion with hourly, tested traffic models",
+            "body": "Engineers schedule upgrades from a shared congestion forecast built on tested traffic data, instead of reacting to complaints after the fact.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Tundra Mobile",
+              "ref": "/assets/pages/customers/cust-23.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "coralridge-clinics",
+            "name": "Coralridge Clinics",
+            "industry": "Healthcare",
+            "title": "Coralridge Clinics reduces missed appointments with timely, trustworthy scheduling data",
+            "body": "Front-desk teams see a daily list of at-risk appointments built from tested models, and missed visits dropped noticeably in the first six months.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Coralridge Clinics",
+              "ref": "/assets/pages/customers/cust-24.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "ironbark-mining",
+            "name": "Ironbark Mining",
+            "industry": "Energy, utilities and mining",
+            "title": "Ironbark Mining unifies safety and production reporting across remote sites",
+            "body": "Site managers and head office read the same tested incident and output figures, refreshed every shift even on limited remote connections.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Ironbark Mining",
+              "ref": "/assets/pages/customers/cust-25.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "wexford-retail-group",
+            "name": "Wexford Retail Group",
+            "industry": "Retail",
+            "title": "Wexford Retail Group consolidates five brands onto one governed analytics project",
+            "body": "Shared definitions for sales, margin and stock replaced five separate reporting stacks, and group-level results now arrive two days sooner each month.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Wexford Retail Group",
+              "ref": "/assets/pages/customers/cust-26.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "hollisgrey-legal",
+            "name": "Hollisgrey Legal",
+            "industry": "Legal",
+            "title": "Hollisgrey Legal tracks matter profitability with tested, partner-friendly reporting",
+            "body": "Partners see time, fees and costs per matter from one trusted model, and the monthly review no longer starts with an argument about the numbers.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Hollisgrey Legal",
+              "ref": "/assets/pages/customers/cust-27.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "thrushpay",
+            "name": "Thrushpay",
+            "industry": "Banking and payments",
+            "title": "Thrushpay catches payment anomalies within minutes using tested streaming-to-batch models",
+            "body": "Fraud and finance teams share one definition of a settled payment, and anomaly alerts now reach the right owner in minutes rather than the next day.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Thrushpay",
+              "ref": "/assets/pages/customers/cust-28.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "driftwood-stays",
+            "name": "Driftwood Stays",
+            "industry": "Travel and lodging",
+            "title": "Driftwood Stays gives property owners a single, accurate view of occupancy and revenue",
+            "body": "Owner reports used to be stitched together by hand each month. Now they are built from tested models and published automatically on the first business day.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Driftwood Stays",
+              "ref": "/assets/pages/customers/cust-29.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "cobblestone-grocers",
+            "name": "Cobblestone Grocers",
+            "industry": "Food, beverage and grocery",
+            "title": "Cobblestone Grocers cuts reporting costs by a third with state-aware builds",
+            "body": "Most nightly models now skip when their inputs are unchanged, and the savings funded two new analytics projects the team had been postponing.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Cobblestone Grocers",
+              "ref": "/assets/pages/customers/cust-30.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "cirrusline-air",
+            "name": "Cirrusline Air",
+            "industry": "Aviation",
+            "title": "Cirrusline Air improves on-time performance with tested turnaround data from every gate",
+            "body": "Ground teams and operations control share one view of turnaround times, and delays caused by late information fell sharply across the network.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Cirrusline Air",
+              "ref": "/assets/pages/customers/cust-31.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "emberly-foods",
+            "name": "Emberly Foods",
+            "industry": "Food, beverage and grocery",
+            "title": "Emberly Foods connects factory output to retailer sell-through in one project",
+            "body": "Sales and production teams plan from the same tested figures, reducing overproduction and making promotions far easier to evaluate afterwards.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Emberly Foods",
+              "ref": "/assets/pages/customers/cust-32.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "granitefield-bank",
+            "name": "Granitefield Bank",
+            "industry": "Banking and payments",
+            "title": "Granitefield Bank brings risk, finance and operations onto shared, certified metrics",
+            "body": "Thirty core metrics defined once in the semantic layer replaced conflicting reports, and executive packs are now assembled in a day instead of a week.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Granitefield Bank",
+              "ref": "/assets/pages/customers/cust-33.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "lanternfish-software",
+            "name": "Lanternfish Software",
+            "industry": "Software",
+            "title": "Lanternfish Software ships usage-based billing on tested, auditable product data",
+            "body": "Customers are invoiced from the same models finance and product teams use, with tests that guarantee every metered event is counted exactly once.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Lanternfish Software",
+              "ref": "/assets/pages/customers/cust-34.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "oakhaven-realty",
+            "name": "Oakhaven Realty",
+            "industry": "Real estate",
+            "title": "Oakhaven Realty values its portfolio monthly with reviewed, documented models",
+            "body": "Valuation inputs from twelve markets flow through one tested project, so investors and auditors can see how each figure was reached.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Oakhaven Realty",
+              "ref": "/assets/pages/customers/cust-35.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "brightmoor-schools",
+            "name": "Brightmoor Schools",
+            "industry": "Education",
+            "title": "Brightmoor Schools gives every head teacher the same trusted attendance dashboard",
+            "body": "Attendance and enrolment data from sixty schools is modelled and tested once, then shared with clear access rules for each school’s leadership team.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Brightmoor Schools",
+              "ref": "/assets/pages/customers/cust-36.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "halden-motors",
+            "name": "Halden Motors",
+            "industry": "Manufacturing",
+            "title": "Halden Motors links warranty claims to production batches within a day",
+            "body": "Engineers trace recurring faults back to specific lines and suppliers using one lineage graph, shortening investigations from weeks to days.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Halden Motors",
+              "ref": "/assets/pages/customers/cust-37.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "velvetine-cosmetics",
+            "name": "Velvetine Cosmetics",
+            "industry": "Retail",
+            "title": "Velvetine Cosmetics plans launches with one tested view of channel performance",
+            "body": "Marketing and supply teams read the same sell-through figures across shops, marketplaces and its own site, refreshed every morning.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Velvetine Cosmetics",
+              "ref": "/assets/pages/customers/cust-38.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "rookery-publishing",
+            "name": "Rookery Publishing",
+            "industry": "Media publishing",
+            "title": "Rookery Publishing forecasts print runs from tested pre-order and sales data",
+            "body": "Editors and production planners agree on demand earlier, and returned stock fell after the first year of planning from shared models.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Rookery Publishing",
+              "ref": "/assets/pages/customers/cust-39.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "marlow-freight",
+            "name": "Marlow Freight",
+            "industry": "Transport",
+            "title": "Marlow Freight reduces empty miles with a daily, tested view of loads and routes",
+            "body": "Planners match loads to returning trucks each morning from one trusted model, and empty running fell measurably across the fleet.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Marlow Freight",
+              "ref": "/assets/pages/customers/cust-40.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "quenby-labs",
+            "name": "Quenby Labs",
+            "industry": "Software",
+            "title": "Quenby Labs gives every product squad its own governed slice of shared data",
+            "body": "Domain projects with shared contracts let squads move independently while finance still reads one definition of active users and revenue.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Quenby Labs",
+              "ref": "/assets/pages/customers/cust-41.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "tallgrass-agritech",
+            "name": "Tallgrass Agritech",
+            "industry": "B2B",
+            "title": "Tallgrass Agritech turns field sensor data into weekly, tested advice for growers",
+            "body": "Soil and weather readings from thousands of fields are modelled and tested before reaching agronomists, who now trust the recommendations they share.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Tallgrass Agritech",
+              "ref": "/assets/pages/customers/cust-42.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "seabright-ports",
+            "name": "Seabright Ports",
+            "industry": "Logistics",
+            "title": "Seabright Ports shortens vessel turnaround with tested berth and crane data",
+            "body": "Port operations plan berths from one shared model refreshed every fifteen minutes, and average turnaround time dropped within the first season.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Seabright Ports",
+              "ref": "/assets/pages/customers/cust-43.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "kiteline-telecom",
+            "name": "Kiteline Telecom",
+            "industry": "Telecom networks",
+            "title": "Kiteline Telecom reduces churn with a single, tested view of customer experience",
+            "body": "Network quality, billing and support data now meet in one model, helping retention teams reach unhappy customers before they decide to leave.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Kiteline Telecom",
+              "ref": "/assets/pages/customers/cust-44.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "fieldstone-water",
+            "name": "Fieldstone Water",
+            "industry": "Energy, utilities and mining",
+            "title": "Fieldstone Water finds leaks faster with hourly, tested flow data across its network",
+            "body": "Engineers compare tested flow and pressure models against expected demand every hour, and leaks are now located days earlier than before.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Fieldstone Water",
+              "ref": "/assets/pages/customers/cust-45.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "pepperell-apparel",
+            "name": "Pepperell Apparel",
+            "industry": "Retail",
+            "title": "Pepperell Apparel cuts markdowns with a shared, tested view of stock across channels",
+            "body": "Merchandisers and store teams plan from one daily stock model, moving inventory to where it sells instead of discounting it at the end of a season.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Pepperell Apparel",
+              "ref": "/assets/pages/customers/cust-46.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "norvale-utilities",
+            "name": "Norvale Utilities",
+            "industry": "Energy, utilities and mining",
+            "title": "Norvale Utilities moves outage reporting from manual spreadsheets to tested models",
+            "body": "Regulatory outage figures are built from reviewed models with full lineage, and quarterly submissions no longer depend on one analyst’s spreadsheet.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Norvale Utilities",
+              "ref": "/assets/pages/customers/cust-47.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "ashgrove-pharmacy",
+            "name": "Ashgrove Pharmacy",
+            "industry": "Healthcare",
+            "title": "Ashgrove Pharmacy keeps shelves stocked with daily, tested prescription demand",
+            "body": "Two hundred branches order from a single forecast built on tested dispensing data, reducing both shortages and expired stock across the chain.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Ashgrove Pharmacy",
+              "ref": "/assets/pages/customers/cust-48.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "orbitly",
+            "name": "Orbitly",
+            "industry": "Software",
+            "title": "Orbitly lowers warehouse spend by sixty percent while serving twice as many teams",
+            "body": "State-aware builds skip unchanged models, and one shared project now supports twice as many internal teams without any additional hires.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Orbitly",
+              "ref": "/assets/marquee/logo-5.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          },
+          {
+            "slug": "fernway",
+            "name": "Fernway",
+            "industry": "B2B",
+            "title": "Fernway retires six hundred legacy scripts and rebuilds them as tested models",
+            "body": "Documentation, tests and review came built in, and new analysts now contribute to production in their first week instead of their third month.",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Fernway",
+              "ref": "/assets/marquee/logo-8.svg"
+            },
+            "href": "#",
+            "link": "Read the story"
+          }
+        ],
+        "search": "Search case studies",
+        "filters": {
+          "label": "Filters",
+          "group": "Industry",
+          "options": [
+            "B2B",
+            "Energy, utilities and mining",
+            "Education",
+            "Insurance",
+            "Manufacturing",
+            "Gaming",
+            "Media publishing",
+            "Healthcare",
+            "Banking and payments",
+            "Legal",
+            "Logistics",
+            "Travel and lodging",
+            "Real estate",
+            "Telecom networks",
+            "Retail",
+            "Software",
+            "Pharma and biotech",
+            "Food, beverage and grocery",
+            "Aviation",
+            "Transport"
+          ],
+          "clearLabel": "Clear filters",
+          "cancelLabel": "Cancel",
+          "applyLabel": "Apply selections"
+        },
+        "featured": {
+          "logo": {
+            "assetRole": "customer.logo",
+            "alt": "Halcyon",
+            "ref": "/assets/marquee/logo-6.svg"
+          },
+          "quote": "We used to spend the first week of every audit rebuilding the story of how a figure was produced. Now the story is the project itself: every model versioned, every change reviewed, every test recorded. Our auditors read the lineage directly, our desks answer their own questions, and the central team finally has time to build the things the business keeps asking for.",
+          "name": "Grace Okafor",
+          "role": "Chief Data Officer, Halcyon",
+          "cta": {
+            "label": "Read the story",
+            "href": "/case-studies/halcyon"
+          }
+        },
+        "empty": {
+          "image": {
+            "assetRole": "illustration.abstract",
+            "alt": "",
+            "ref": "/assets/pages/misc/empty.svg"
+          },
+          "title": "No stories match that search yet",
+          "button": "Clear search"
+        },
+        "more": "Load more case studies"
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed",
+        "additional": [
+          {
+            "pattern": "stroke.draw-on",
+            "reducedMotionFallback": "render-final-state"
+          }
+        ]
+      },
+      "style": {
+        "strokeShape": "stroke.s10",
+        "strokeGradient": "gradient.01"
+      }
+    },
+    {
+      "section": "cta.closing-band",
+      "variant": "with-aside",
+      "content": {
+        "eyebrow": "Try Lattice",
+        "title": "Write your own success story",
+        "body": "Start with a free workspace and a real question. Most teams ship their first tested model on day one and their first production job in a week.",
+        "bodySecond": "Prefer a guided start? Our solutions engineers will help you plan a migration, set up reviews and choose the right defaults for your team.",
+        "primary": {
+          "label": "Book a demo",
+          "href": "/contact"
+        },
+        "secondary": {
+          "label": "Create a free account",
+          "href": "/signup"
+        },
+        "aside": {
+          "title": "Great data people rarely do their best work alone",
+          "body": "The Lattice community connects you with 75,000+ practitioners who share your problems, your shortcuts and your goals.",
+          "action": {
+            "label": "Join the community",
+            "href": "/community/join"
+          }
+        }
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-light.svg"
+        },
+        "columns": [
+          {
+            "title": "Platform",
+            "links": [
+              {
+                "label": "Overview",
+                "href": "/product/lattice"
+              },
+              {
+                "label": "What is Lattice?",
+                "href": "/product/what-is-lattice"
+              },
+              {
+                "label": "Lattice for AI workflows",
+                "href": "/product/ai"
+              },
+              {
+                "label": "Customer stories",
+                "href": "/case-studies"
+              },
+              {
+                "label": "Connectors",
+                "href": "/product/integrations"
+              },
+              {
+                "label": "Plans and pricing",
+                "href": "/pricing"
+              }
+            ]
+          },
+          {
+            "title": "For Builders",
+            "links": [
+              {
+                "label": "Documentation",
+                "href": "#"
+              },
+              {
+                "label": "Quickstart guides",
+                "href": "#"
+              },
+              {
+                "label": "Supported data platforms",
+                "href": "/data-platforms/cobalt"
+              },
+              {
+                "label": "Engineering blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Editor extension",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "/about-us"
+              },
+              {
+                "label": "Belonging at Lattice",
+                "href": "/about-us/belonging"
+              },
+              {
+                "label": "Careers",
+                "href": "/about-us/careers"
+              },
+              {
+                "label": "Press",
+                "href": "/press"
+              }
+            ],
+            "badge": {
+              "label": "Join the team",
+              "linkIndex": 2
+            }
+          },
+          {
+            "title": "Learning",
+            "links": [
+              {
+                "label": "Resource hub",
+                "href": "/resources"
+              },
+              {
+                "label": "Lattice Academy",
+                "href": "/learn"
+              },
+              {
+                "label": "Certification",
+                "href": "/certification"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              }
+            ]
+          },
+          {
+            "title": "Community",
+            "links": [
+              {
+                "label": "Join the community",
+                "href": "/community/join"
+              },
+              {
+                "label": "Become a contributor",
+                "href": "/community"
+              },
+              {
+                "label": "Open source projects",
+                "href": "#"
+              },
+              {
+                "label": "Community forum",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Help & Support",
+            "links": [
+              {
+                "label": "Contact us",
+                "href": "/contact"
+              },
+              {
+                "label": "Professional services",
+                "href": "/services"
+              },
+              {
+                "label": "Find a partner",
+                "href": "/partner-directory"
+              },
+              {
+                "label": "System status",
+                "href": "#"
+              }
+            ]
+          }
+        ],
+        "newsletter": {
+          "title": "Subscribe today!",
+          "body": "A monthly digest of field notes, release highlights and practical modeling advice.",
+          "action": {
+            "label": "Join today",
+            "href": "/community/join"
+          }
+        },
+        "region": {
+          "title": "Select region",
+          "options": [
+            "Global",
+            "Europe",
+            "Asia Pacific"
+          ]
+        },
+        "social": {
+          "title": "Connect with us",
+          "links": [
+            {
+              "label": "GitHub",
+              "href": "#"
+            },
+            {
+              "label": "LinkedIn",
+              "href": "#"
+            },
+            {
+              "label": "YouTube",
+              "href": "#"
+            },
+            {
+              "label": "Instagram",
+              "href": "#"
+            },
+            {
+              "label": "X",
+              "href": "#"
+            },
+            {
+              "label": "Bluesky",
+              "href": "#"
+            },
+            {
+              "label": "RSS",
+              "href": "#"
+            }
+          ]
+        },
+        "copyright": "© 2026 Lattice, Inc. All rights reserved.",
+        "legalLinks": [
+          {
+            "label": "Privacy policy",
+            "href": "#"
+          },
+          {
+            "label": "Accessibility statement",
+            "href": "/legal/ai-principles"
+          },
+          {
+            "label": "Terms of service",
+            "href": "/terms-of-use"
+          },
+          {
+            "label": "Security",
+            "href": "/security"
+          },
+          {
+            "label": "Acceptable use",
+            "href": "/modern-slavery-statement"
+          },
+          {
+            "label": "Responsible AI principles",
+            "href": "/legal/ai-principles"
+          }
+        ],
+        "cookieLabel": "Cookie preferences"
+      },
+      "motion": {
+        "pattern": "accordion.toggle",
+        "reducedMotionFallback": "unchanged"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1429 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "T13",
+  "route": "/product/what-is-lattice",
+  "theme": "light",
+  "brand": {
+    "name": "Lattice"
+  },
+  "meta": {
+    "title": "What is Lattice"
+  },
+  "nodes": [
+    {
+      "section": "shell.announcement-bar",
+      "variant": "default",
+      "content": {
+        "slides": [
+          {
+            "text": "Lattice 4.0 is here with faster incremental builds, smarter tests, and a fresh lineage explorer.",
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "text": "Join our live workshop on modeling patterns this month.",
+            "href": "/resources/webinars/charts-as-code"
+          },
+          {
+            "text": "New report: how two hundred data teams trimmed warehouse spend while shipping trusted models each week.",
+            "href": "/resources/state-of-data-teams"
+          },
+          {
+            "text": "Lattice Cloud now runs in three new regions across Europe and Asia. Check region availability.",
+            "href": "/blog/lattice-joins-northwind"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "carousel.autoplay",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.navbar",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-dark.svg"
+        },
+        "menuLabels": [
+          "Product",
+          "Solutions",
+          "Customers",
+          "Resources",
+          "Community"
+        ],
+        "plainLink": {
+          "label": "Pricing",
+          "href": "/pricing"
+        },
+        "secondaryAction": {
+          "label": "Get started",
+          "href": "/signup"
+        },
+        "primaryAction": {
+          "label": "Book a demo",
+          "href": "/contact"
+        }
+      },
+      "motion": {
+        "pattern": "nav.hide-on-scroll",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mega-menu",
+      "variant": "default",
+      "content": {
+        "menus": [
+          {
+            "trigger": "Product",
+            "groups": [
+              {
+                "label": "First steps",
+                "items": [
+                  {
+                    "title": "Why Lattice",
+                    "description": "How Lattice turns SQL into trusted products",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/product/what-is-lattice"
+                  },
+                  {
+                    "title": "Platform tour",
+                    "description": "Watch a ten-minute walkthrough of the full workspace",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/product/lattice"
+                  }
+                ]
+              },
+              {
+                "label": "Everything in the box",
+                "items": [
+                  {
+                    "title": "Build",
+                    "description": "Author models in the browser, a desktop editor or the command line",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/develop"
+                  },
+                  {
+                    "title": "Validate",
+                    "description": "Assert rules on every model",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/test-and-observe"
+                  },
+                  {
+                    "title": "Design",
+                    "description": "Split big projects by domain",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/mesh"
+                  },
+                  {
+                    "title": "Explore",
+                    "description": "Search docs, owners and lineage",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/catalog"
+                  },
+                  {
+                    "title": "Ship",
+                    "description": "Trigger runs on merge or a timer",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/deploy"
+                  },
+                  {
+                    "title": "Measure",
+                    "description": "Publish one definition of revenue to every tool that asks",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/semantic-layer"
+                  }
+                ]
+              }
+            ],
+            "featured": {
+              "title": "The modeling lifecycle",
+              "description": "Map how ideas move from first query to production model, with clear owners and checks at each step",
+              "thumbnail": {
+                "assetRole": "illustration.abstract",
+                "alt": "",
+                "ref": "/assets/menu/featured.svg"
+              },
+              "href": "/resources/analytics-lifecycle"
+            },
+            "side": {
+              "label": "Feature spotlight",
+              "links": [
+                {
+                  "label": "Smart state",
+                  "href": "/product/state"
+                },
+                {
+                  "label": "Guided setup",
+                  "href": "/product/assistant"
+                },
+                {
+                  "label": "Charts",
+                  "href": "/product/charts"
+                },
+                {
+                  "label": "Governance",
+                  "href": "/product/governance"
+                },
+                {
+                  "label": "Security",
+                  "href": "/security"
+                },
+                {
+                  "label": "Integrations",
+                  "href": "/product/integrations"
+                }
+              ],
+              "action": {
+                "label": "See the latest demo",
+                "href": "/resources/webinars/launch-showcase"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Solutions",
+            "groups": [
+              {
+                "label": "By need",
+                "items": [
+                  {
+                    "title": "Analytics",
+                    "description": "Give analysts a governed place to model data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/analyst"
+                  },
+                  {
+                    "title": "AI readiness",
+                    "description": "Feed assistants with well-described data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/ai"
+                  }
+                ]
+              },
+              {
+                "label": "By team",
+                "items": [
+                  {
+                    "title": "Data engineers",
+                    "description": "Ship pipelines with tests built in",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/data-modernization"
+                  },
+                  {
+                    "title": "Analysts",
+                    "description": "Own models end to end in plain SQL",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/embedded-analytics"
+                  },
+                  {
+                    "title": "Platform leads",
+                    "description": "Standardize how every team builds",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/data-trust"
+                  },
+                  {
+                    "title": "Executives",
+                    "description": "Trust the numbers behind decisions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/cost-optimization"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "By industry",
+              "links": [
+                {
+                  "label": "Finance",
+                  "href": "/industry/financial-services"
+                },
+                {
+                  "label": "Retail",
+                  "href": "/industry/manufacturing"
+                },
+                {
+                  "label": "Healthcare",
+                  "href": "/industry/healthcare"
+                },
+                {
+                  "label": "Media",
+                  "href": "/industry/telecommunications"
+                },
+                {
+                  "label": "Public sector",
+                  "href": "/industry/energy-utilities"
+                },
+                {
+                  "label": "Software",
+                  "href": "/data-platforms/cobalt"
+                }
+              ],
+              "action": {
+                "label": "See every use case",
+                "href": "/product/data-modernization"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Customers",
+            "groups": [
+              {
+                "label": "Stories",
+                "items": [
+                  {
+                    "title": "Case studies",
+                    "description": "Read how teams run on Lattice",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/case-studies"
+                  },
+                  {
+                    "title": "Reviews",
+                    "description": "Independent ratings from practitioners",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/resources/on-demand"
+                  }
+                ]
+              },
+              {
+                "label": "By outcome",
+                "items": [
+                  {
+                    "title": "Data quality",
+                    "description": "Teams that caught issues earlier",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/case-studies/kestrel"
+                  },
+                  {
+                    "title": "Speed",
+                    "description": "Teams that shipped models faster",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/case-studies/meridian-partners"
+                  },
+                  {
+                    "title": "Cost",
+                    "description": "Teams that trimmed warehouse spend",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/case-studies/halcyon"
+                  },
+                  {
+                    "title": "Scale",
+                    "description": "Teams that grew past one project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/case-studies/basalt-health"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Featured",
+              "links": [
+                {
+                  "label": "Fernway",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Orbitly",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Kestrel",
+                  "href": "/case-studies/kestrel"
+                },
+                {
+                  "label": "Tidepool",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Meridian",
+                  "href": "/case-studies/meridian-partners"
+                },
+                {
+                  "label": "Halcyon",
+                  "href": "/case-studies/halcyon"
+                }
+              ],
+              "action": {
+                "label": "View all customers",
+                "href": "/case-studies"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Resources",
+            "groups": [
+              {
+                "label": "Learn",
+                "items": [
+                  {
+                    "title": "Docs",
+                    "description": "Guides and reference for every feature",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Courses",
+                    "description": "Free self-paced training",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/learn"
+                  }
+                ]
+              },
+              {
+                "label": "Explore",
+                "items": [
+                  {
+                    "title": "Blog",
+                    "description": "Notes from the product team",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/blog"
+                  },
+                  {
+                    "title": "Webinars",
+                    "description": "Live and recorded sessions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/resources/webinars"
+                  },
+                  {
+                    "title": "Reports",
+                    "description": "Research on modern data work",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/resources/state-of-data-teams"
+                  },
+                  {
+                    "title": "Templates",
+                    "description": "Starter projects you can fork",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/resources/whitepaper-control-plane"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Popular",
+              "links": [
+                {
+                  "label": "Getting started",
+                  "href": "/learn"
+                },
+                {
+                  "label": "Best practices",
+                  "href": "/resources/analytics-lifecycle"
+                },
+                {
+                  "label": "Release notes",
+                  "href": "/blog/summit-announcements"
+                },
+                {
+                  "label": "Glossary",
+                  "href": "/resources"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Status",
+                  "href": "#"
+                }
+              ],
+              "action": {
+                "label": "Browse all resources",
+                "href": "/resources"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Community",
+            "groups": [
+              {
+                "label": "Connect",
+                "items": [
+                  {
+                    "title": "Forum",
+                    "description": "Ask questions and share answers",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Meetups",
+                    "description": "Find a group near you",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/events"
+                  }
+                ]
+              },
+              {
+                "label": "Contribute",
+                "items": [
+                  {
+                    "title": "Open source",
+                    "description": "Help build the core project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Write a guide",
+                    "description": "Share what you have learned",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Speak",
+                    "description": "Present at a community event",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/summit"
+                  },
+                  {
+                    "title": "Champions",
+                    "description": "Join the ambassador program",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/champions"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Get involved",
+              "links": [
+                {
+                  "label": "Code of conduct",
+                  "href": "/community"
+                },
+                {
+                  "label": "Chat space",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Newsletter",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Awards",
+                  "href": "/champions"
+                },
+                {
+                  "label": "Jobs board",
+                  "href": "/about-us/careers"
+                }
+              ],
+              "action": {
+                "label": "Join the community",
+                "href": "/community/join"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "menu.popover",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mobile-drawer",
+      "variant": "default",
+      "content": {
+        "accountActions": [
+          {
+            "label": "Log in",
+            "href": "#"
+          },
+          {
+            "label": "Create an account",
+            "href": "/signup"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "drawer.slide",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "hero.center",
+      "variant": "poster",
+      "content": {
+        "eyebrow": "Why Lattice",
+        "title": "The dependable way to model your data.",
+        "lead": "Lattice turns scattered SQL into a shared, versioned project by borrowing the habits of software engineering. A fast engine compiles and runs every model, so analysts, engineers and agents can build on the same trusted work.",
+        "primary": {
+          "label": "Get Lattice",
+          "href": "/signup"
+        },
+        "secondary": {
+          "label": "See the hosted platform",
+          "href": "/product/lattice"
+        },
+        "poster": {
+          "assetRole": "video.poster",
+          "alt": "Video: a model compiled from two staging tables, with its tests passing",
+          "ref": "/assets/pages/illus/what-is.svg"
+        }
+      },
+      "motion": {
+        "pattern": "stroke.draw-on",
+        "reducedMotionFallback": "render-final-state"
+      },
+      "style": {
+        "strokeShape": "stroke.s10",
+        "strokeGradient": "gradient.01"
+      }
+    },
+    {
+      "section": "features.card-grid",
+      "variant": "wash-icon",
+      "content": {
+        "eyebrow": "What sets the engine apart",
+        "title": "Turn raw tables into products people use.",
+        "body": "Ship dependable data products for reporting, operations and AI agents.",
+        "cards": [
+          {
+            "icon": {
+              "assetRole": "icon.feature",
+              "alt": "",
+              "ref": "/assets/pages/icons/shield.svg"
+            },
+            "title": "Reliable from day one",
+            "body": "Every model is versioned, reviewed and tested before it reaches production. Problems surface in the editor or in review, not in a meeting with your stakeholders the following week."
+          },
+          {
+            "icon": {
+              "assetRole": "icon.feature",
+              "alt": "",
+              "ref": "/assets/pages/icons/layers.svg"
+            },
+            "title": "Open at every layer",
+            "body": "Plain SQL and YAML in a git repository, running on the data platform you already pay for. Develop locally or in the browser, and take it anywhere."
+          },
+          {
+            "icon": {
+              "assetRole": "icon.feature",
+              "alt": "",
+              "ref": "/assets/pages/icons/bolt.svg"
+            },
+            "title": "Quick to compile, cheap to run",
+            "body": "Large projects compile in seconds, and each run touches only the models that moved, so the warehouse burns fewer credits."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      },
+      "style": {
+        "revealTrigger": "scroll",
+        "headerAlign": "start",
+        "paddingTop": "default",
+        "surface": "light",
+        "columns": "3",
+        "iconSize": "size.icon.56"
+      }
+    },
+    {
+      "section": "features.tabs-dark",
+      "variant": "default",
+      "content": {
+        "title": "Everything you need to ship data work.",
+        "tabs": [
+          {
+            "title": "Models written in plain SQL",
+            "body": "Write each transformation as a plain select statement. Lattice works out the order to build them in, creates the tables and views, and keeps every single dependency straight for you.",
+            "media": {
+              "assetRole": "product.screenshot",
+              "alt": "Visual model canvas joining event sources into a staging model",
+              "ref": "/assets/pages/tabs/dark-1.svg"
+            }
+          },
+          {
+            "title": "Tests beside every model",
+            "body": "Declare the rules your data must follow next to the models that produce it. Checks run on every build, so broken joins and missing keys are caught before anyone sees them.",
+            "media": {
+              "assetRole": "product.screenshot",
+              "alt": "Editor suggesting a uniqueness test while a model is written",
+              "ref": "/assets/pages/tabs/dark-2.svg"
+            }
+          },
+          {
+            "title": "Documentation that writes itself",
+            "body": "Descriptions, owners and column details live in the project and publish to a searchable site, complete with a lineage graph that shows where each number really comes from.",
+            "media": {
+              "assetRole": "product.screenshot",
+              "alt": "Check results for the last 24 hours with a pass-rate ring",
+              "ref": "/assets/pages/tabs/dark-3.svg"
+            }
+          },
+          {
+            "title": "Reusable macros and packages",
+            "body": "Package common logic once and share it across projects, or install packages from the community hub to skip writing the same date spine or pivot for the hundredth time.",
+            "media": {
+              "assetRole": "product.screenshot",
+              "alt": "Column-level lineage from raw orders to a revenue model",
+              "ref": "/assets/pages/tabs/dark-4.svg"
+            }
+          },
+          {
+            "title": "Builds that know what changed",
+            "body": "State-aware runs compare your project with the last successful build and rebuild only the models whose code or inputs moved, which keeps pipelines quick and compute bills calm.",
+            "media": {
+              "assetRole": "product.screenshot",
+              "alt": "Nightly run timeline grouped by project layer",
+              "ref": "/assets/pages/tabs/dark-6.svg"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "tabs.instant",
+        "reducedMotionFallback": "none-needed",
+        "additional": [
+          {
+            "pattern": "stroke.draw-on",
+            "reducedMotionFallback": "render-final-state"
+          }
+        ]
+      },
+      "style": {
+        "strokeGradient": "gradient.01",
+        "mediaFrame": "captioned",
+        "mediaCorners": "rounded",
+        "strokeShape": "stroke.s2"
+      }
+    },
+    {
+      "section": "content.media-split",
+      "variant": "text-left",
+      "content": {
+        "eyebrow": "One engine, everywhere",
+        "title": "The engine that powers it all",
+        "paragraphs": [
+          "The open engine inside Lattice reads your project, works out the dependency graph and compiles every model into SQL your warehouse understands. It runs the same way on a laptop, in a scheduled job or inside an agent workflow, so what you preview while building matches exactly what runs in production.",
+          "Most teams start on **the open-source engine** and add the hosted platform as they grow."
+        ],
+        "primary": {
+          "label": "Install the engine",
+          "href": "/learn"
+        },
+        "tertiary": {
+          "label": "Read docs",
+          "href": "/learn"
+        },
+        "media": {
+          "assetRole": "product.screenshot",
+          "alt": "Metric card with a trend line and its YAML definition",
+          "ref": "/assets/pages/hero/semantic-layer.svg"
+        }
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      },
+      "style": {
+        "columns": "6/6",
+        "topPadding": "default"
+      }
+    },
+    {
+      "section": "content.media-split",
+      "variant": "text-left",
+      "content": {
+        "eyebrow": "Hosted platform",
+        "title": "Run the engine with a full team around it",
+        "paragraphs": [
+          "The hosted platform adds what a growing team needs around the engine: a browser editor and visual canvas, scheduled jobs, alerts, a searchable catalog, governed metrics and an assistant that knows your project. Administrators get single sign-on, permissions and audit logs too."
+        ],
+        "primary": {
+          "label": "Try it free",
+          "href": "/signup"
+        },
+        "media": {
+          "assetRole": "product.screenshot",
+          "alt": "Five team projects connected around a shared finance project",
+          "ref": "/assets/pages/hero/mesh.svg"
+        }
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      },
+      "style": {
+        "columns": "6/6",
+        "topPadding": "default"
+      }
+    },
+    {
+      "section": "social-proof.customer-tabs",
+      "variant": "default",
+      "content": {
+        "title": "Proof from real teams",
+        "stories": [
+          {
+            "name": "Kestrel",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Kestrel",
+              "ref": "/assets/marquee/logo-1.svg"
+            },
+            "headline": "Kestrel halves nightly build time with Lattice",
+            "summary": "Kestrel moved four hundred production models onto state-aware builds and rebuilt its review process around small pull requests, cutting run times and catching issues sooner.",
+            "quote": "We used to watch the nightly load creep past breakfast while everyone argued about which dashboard to believe. Moving the project onto Lattice changed both of those problems at once. Only the models that actually changed are rebuilt, every number arrives before the first meeting, and when something looks wrong we can trace it to a specific commit in minutes.",
+            "person": "Priya Raman",
+            "role": "Head of Analytics Engineering",
+            "stats": [
+              {
+                "number": "52%",
+                "label": "shorter nightly runs after the move to state-aware builds"
+              },
+              {
+                "number": "2.5x",
+                "label": "more models shipped each sprint with tests and docs"
+              }
+            ],
+            "action": {
+              "label": "Read customer story",
+              "href": "/case-studies/kestrel"
+            }
+          },
+          {
+            "name": "Meridian Partners",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Meridian Partners",
+              "ref": "/assets/marquee/logo-2.svg"
+            },
+            "headline": "One set of figures for eleven regional desks",
+            "summary": "Meridian Partners replaced eleven separate spreadsheets of portfolio logic with one governed project, so every desk reports the same assets under management on the same day.",
+            "quote": "Closing each quarter once meant a week spent matching up eleven competing copies of one number. Today there is one tested definition that every desk reads from, and the conversation at the end of the quarter is about what the numbers mean rather than which spreadsheet is right. The audit team noticed the difference before we had even announced it.",
+            "person": "Tomas Ekberg",
+            "role": "Director of Data Platforms",
+            "stats": [
+              {
+                "number": "11",
+                "label": "regional desks reporting from one governed project"
+              },
+              {
+                "number": "4d",
+                "label": "saved on every quarterly close with no manual reconciling"
+              }
+            ],
+            "action": {
+              "label": "Read customer story",
+              "href": "/case-studies/meridian-partners"
+            }
+          },
+          {
+            "name": "Tidepool",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Tidepool",
+              "ref": "/assets/marquee/logo-3.svg"
+            },
+            "headline": "Self-serve answers for every product squad",
+            "summary": "Tidepool gave product managers documented, tested models to build on, which cut the queue of ad hoc requests and freed a small data team to work on new questions.",
+            "quote": "Product managers wanted answers in hours, and our tiny data team was drowning in tickets. Once the core models were documented and tested in Lattice, people could find what they needed and trust it without asking us first. We still get questions, but they are better questions, and we finally have time to work on the ideas that move the business forward.",
+            "person": "Ana Kowalski",
+            "role": "Staff Data Engineer",
+            "stats": [
+              {
+                "number": "70%",
+                "label": "fewer ad hoc requests reaching the central data team"
+              },
+              {
+                "number": "140",
+                "label": "dashboards rebuilt on certified, documented models"
+              }
+            ],
+            "action": {
+              "label": "Read customer story",
+              "href": "/case-studies"
+            }
+          },
+          {
+            "name": "Orbitly",
+            "logo": {
+              "assetRole": "customer.logo",
+              "alt": "Orbitly",
+              "ref": "/assets/marquee/logo-5.svg"
+            },
+            "headline": "Lower warehouse spend while shipping more models",
+            "summary": "Orbitly reused results for unchanged models and moved heavy transformations to incremental builds, bringing compute spend down in the first month after migrating.",
+            "quote": "Our compute bill was growing faster than the team, and nobody could say which models were responsible. Lattice showed us exactly what ran, how long it took and what it cost, and state-aware builds stopped us paying to rebuild tables that had not changed. The same project now serves twice as many teams, and finance stopped sending us worried messages.",
+            "person": "Jonah Reyes",
+            "role": "VP, Data and Insights",
+            "stats": [
+              {
+                "number": "62%",
+                "label": "lower warehouse spend after moving to state-aware builds"
+              },
+              {
+                "number": "2x",
+                "label": "as many teams served from one project with no new hires"
+              }
+            ],
+            "action": {
+              "label": "Read customer story",
+              "href": "/case-studies"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "tabs.instant",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "social-proof.logo-bar",
+      "variant": "default",
+      "content": {
+        "title": "Relied on by data teams at every scale",
+        "logos": [
+          {
+            "assetRole": "customer.logo",
+            "alt": "Kestrel",
+            "ref": "/assets/marquee/logo-1.svg"
+          },
+          {
+            "assetRole": "customer.logo",
+            "alt": "Meridian Partners",
+            "ref": "/assets/marquee/logo-2.svg"
+          },
+          {
+            "assetRole": "customer.logo",
+            "alt": "Tidepool",
+            "ref": "/assets/marquee/logo-3.svg"
+          },
+          {
+            "assetRole": "customer.logo",
+            "alt": "Ferrocene",
+            "ref": "/assets/marquee/logo-4.svg"
+          },
+          {
+            "assetRole": "customer.logo",
+            "alt": "Orbitly",
+            "ref": "/assets/marquee/logo-5.svg"
+          },
+          {
+            "assetRole": "customer.logo",
+            "alt": "Halcyon",
+            "ref": "/assets/marquee/logo-6.svg"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "editorial.resource-cards",
+      "variant": "default",
+      "content": {
+        "eyebrow": "Keep going",
+        "title": "Guides and talks to help you go further",
+        "body": "Practical reading and recorded sessions for anyone new to modeling with Lattice or sharpening their skills.",
+        "cards": [
+          {
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/resources/r-4.svg"
+            },
+            "tag": "Guide",
+            "title": "The modeling lifecycle in one page",
+            "href": "/resources/analytics-lifecycle"
+          },
+          {
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/resources/r-1.svg"
+            },
+            "tag": "Docs",
+            "title": "Set up your first project and run a test in under twenty minutes",
+            "href": "/learn"
+          },
+          {
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/resources/r-11.svg"
+            },
+            "tag": "On demand",
+            "title": "Patterns from teams running thousands of models a day",
+            "href": "/resources/on-demand"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      }
+    },
+    {
+      "section": "features.integration-strip",
+      "variant": "default",
+      "content": {
+        "kicker": "Works with your stack",
+        "title": "Plug into your tools",
+        "tiles": [
+          {
+            "assetRole": "platform.logo",
+            "alt": "Northwind",
+            "ref": "/assets/integrations/logo-1.svg"
+          },
+          {
+            "assetRole": "platform.logo",
+            "alt": "Quarry",
+            "ref": "/assets/integrations/logo-2.svg"
+          },
+          {
+            "assetRole": "platform.logo",
+            "alt": "Helixa",
+            "ref": "/assets/integrations/logo-3.svg"
+          },
+          {
+            "assetRole": "platform.logo",
+            "alt": "Stratus",
+            "ref": "/assets/integrations/logo-4.svg"
+          },
+          {
+            "assetRole": "platform.logo",
+            "alt": "Driftway",
+            "ref": "/assets/integrations/logo-5.svg"
+          },
+          {
+            "assetRole": "platform.logo",
+            "alt": "Cobalt DB",
+            "ref": "/assets/integrations/logo-6.svg"
+          }
+        ],
+        "cta": {
+          "label": "Browse all integrations",
+          "href": "/product/integrations"
+        }
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      }
+    },
+    {
+      "section": "cta.closing-band",
+      "variant": "with-checklist",
+      "content": {
+        "eyebrow": "Ready when you are. Start for free",
+        "title": "Build your first trusted model today",
+        "body": "Install the open engine on your laptop or open a free hosted workspace in your browser. Either way your project stays yours, in plain files you can move or copy whenever you want.",
+        "primary": {
+          "label": "Create an account",
+          "href": "/signup"
+        },
+        "secondary": {
+          "label": "Install the open engine now",
+          "href": "/learn"
+        },
+        "checklist": [
+          "Free to start, no card",
+          "Runs on your data stack",
+          "Open, portable project files"
+        ]
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-light.svg"
+        },
+        "columns": [
+          {
+            "title": "Platform",
+            "links": [
+              {
+                "label": "Overview",
+                "href": "/product/lattice"
+              },
+              {
+                "label": "What is Lattice?",
+                "href": "/product/what-is-lattice"
+              },
+              {
+                "label": "Lattice for AI workflows",
+                "href": "/product/ai"
+              },
+              {
+                "label": "Customer stories",
+                "href": "/case-studies"
+              },
+              {
+                "label": "Connectors",
+                "href": "/product/integrations"
+              },
+              {
+                "label": "Plans and pricing",
+                "href": "/pricing"
+              }
+            ]
+          },
+          {
+            "title": "For Builders",
+            "links": [
+              {
+                "label": "Documentation",
+                "href": "#"
+              },
+              {
+                "label": "Quickstart guides",
+                "href": "#"
+              },
+              {
+                "label": "Supported data platforms",
+                "href": "/data-platforms/cobalt"
+              },
+              {
+                "label": "Engineering blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Editor extension",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "/about-us"
+              },
+              {
+                "label": "Belonging at Lattice",
+                "href": "/about-us/belonging"
+              },
+              {
+                "label": "Careers",
+                "href": "/about-us/careers"
+              },
+              {
+                "label": "Press",
+                "href": "/press"
+              }
+            ],
+            "badge": {
+              "label": "Join the team",
+              "linkIndex": 2
+            }
+          },
+          {
+            "title": "Learning",
+            "links": [
+              {
+                "label": "Resource hub",
+                "href": "/resources"
+              },
+              {
+                "label": "Lattice Academy",
+                "href": "/learn"
+              },
+              {
+                "label": "Certification",
+                "href": "/certification"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              }
+            ]
+          },
+          {
+            "title": "Community",
+            "links": [
+              {
+                "label": "Join the community",
+                "href": "/community/join"
+              },
+              {
+                "label": "Become a contributor",
+                "href": "/community"
+              },
+              {
+                "label": "Open source projects",
+                "href": "#"
+              },
+              {
+                "label": "Community forum",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Help & Support",
+            "links": [
+              {
+                "label": "Contact us",
+                "href": "/contact"
+              },
+              {
+                "label": "Professional services",
+                "href": "/services"
+              },
+              {
+                "label": "Find a partner",
+                "href": "/partner-directory"
+              },
+              {
+                "label": "System status",
+                "href": "#"
+              }
+            ]
+          }
+        ],
+        "newsletter": {
+          "title": "Subscribe today!",
+          "body": "A monthly digest of field notes, release highlights and practical modeling advice.",
+          "action": {
+            "label": "Join today",
+            "href": "/community/join"
+          }
+        },
+        "region": {
+          "title": "Select region",
+          "options": [
+            "Global",
+            "Europe",
+            "Asia Pacific"
+          ]
+        },
+        "social": {
+          "title": "Connect with us",
+          "links": [
+            {
+              "label": "GitHub",
+              "href": "#"
+            },
+            {
+              "label": "LinkedIn",
+              "href": "#"
+            },
+            {
+              "label": "YouTube",
+              "href": "#"
+            },
+            {
+              "label": "Instagram",
+              "href": "#"
+            },
+            {
+              "label": "X",
+              "href": "#"
+            },
+            {
+              "label": "Bluesky",
+              "href": "#"
+            },
+            {
+              "label": "RSS",
+              "href": "#"
+            }
+          ]
+        },
+        "copyright": "© 2026 Lattice, Inc. All rights reserved.",
+        "legalLinks": [
+          {
+            "label": "Privacy policy",
+            "href": "#"
+          },
+          {
+            "label": "Accessibility statement",
+            "href": "/legal/ai-principles"
+          },
+          {
+            "label": "Terms of service",
+            "href": "/terms-of-use"
+          },
+          {
+            "label": "Security",
+            "href": "/security"
+          },
+          {
+            "label": "Acceptable use",
+            "href": "/modern-slavery-statement"
+          },
+          {
+            "label": "Responsible AI principles",
+            "href": "/legal/ai-principles"
+          }
+        ],
+        "cookieLabel": "Cookie preferences"
+      },
+      "motion": {
+        "pattern": "accordion.toggle",
+        "reducedMotionFallback": "unchanged"
+      }
+    }
+  ]
+}

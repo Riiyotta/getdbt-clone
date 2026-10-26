@@ -4,12 +4,22 @@
     "z.5": {
       "value": "5",
       "category": "zIndex",
-      "cite": "tailwind.config.cjs:137"
+      "cite": "tailwind.config.cjs:164"
     },
     "z.60": {
       "value": "60",
       "category": "zIndex",
-      "cite": "tailwind.config.cjs:138"
+      "cite": "tailwind.config.cjs:165"
+    },
+    "z.40": {
+      "value": "40",
+      "category": "zIndex",
+      "cite": "src/components/chrome/EventChrome.jsx:44"
+    },
+    "z.50": {
+      "value": "50",
+      "category": "zIndex",
+      "cite": "src/components/listing/CategoryNav.jsx:26"
     }
   }
 }

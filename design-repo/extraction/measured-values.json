@@ -13,8 +13,9 @@
     "routes": {
       "/": {
         "template": "T0",
+        "chrome": "full",
         "docHeightPx": 6985,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -124,8 +125,9 @@
       },
       "/product/develop": {
         "template": "T1",
+        "chrome": "full",
         "docHeightPx": 6310,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -200,8 +202,9 @@
       },
       "/product/test-and-observe": {
         "template": "T1",
+        "chrome": "full",
         "docHeightPx": 5977,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -276,8 +279,9 @@
       },
       "/product/mesh": {
         "template": "T1",
+        "chrome": "full",
         "docHeightPx": 5930,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -352,8 +356,9 @@
       },
       "/product/catalog": {
         "template": "T1",
+        "chrome": "full",
         "docHeightPx": 5743,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -428,8 +433,9 @@
       },
       "/product/deploy": {
         "template": "T1",
+        "chrome": "full",
         "docHeightPx": 6017,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -504,8 +510,9 @@
       },
       "/product/semantic-layer": {
         "template": "T1",
+        "chrome": "full",
         "docHeightPx": 6202,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -578,100 +585,11 @@
           }
         ]
       },
-      "/product/data-modernization": {
-        "template": "T2",
-        "docHeightPx": 7556,
-        "chrome": {
-          "shell.announcement-bar": {
-            "heightPx": 53,
-            "position": "static"
-          },
-          "shell.navbar": {
-            "heightPx": 91,
-            "position": "sticky"
-          },
-          "shell.footer": {
-            "heightPx": 756.2,
-            "position": "static"
-          }
-        },
-        "nodes": [
-          {
-            "section": "hero.center",
-            "variant": "media",
-            "heightPx": 1096.1,
-            "topPx": 144,
-            "position": "relative"
-          },
-          {
-            "section": "content.statement",
-            "variant": "plain",
-            "heightPx": 315.2,
-            "topPx": 1240,
-            "position": "relative"
-          },
-          {
-            "section": "features.checklist",
-            "variant": "columns",
-            "heightPx": 299.2,
-            "topPx": 1555,
-            "position": "relative"
-          },
-          {
-            "section": "features.card-grid",
-            "variant": "four-column",
-            "heightPx": 658.4,
-            "topPx": 1854,
-            "position": "relative"
-          },
-          {
-            "section": "features.tabs-light",
-            "variant": "default",
-            "heightPx": 885,
-            "topPx": 2513,
-            "position": "relative"
-          },
-          {
-            "section": "social-proof.customer-tabs",
-            "variant": "default",
-            "heightPx": 838.6,
-            "topPx": 3398,
-            "position": "relative"
-          },
-          {
-            "section": "cta.community-band",
-            "variant": "default",
-            "heightPx": 453.2,
-            "topPx": 4236,
-            "position": "relative"
-          },
-          {
-            "section": "social-proof.stats-bento",
-            "variant": "default",
-            "heightPx": 912.8,
-            "topPx": 4690,
-            "position": "relative"
-          },
-          {
-            "section": "editorial.resource-cards",
-            "variant": "default",
-            "heightPx": 825.8,
-            "topPx": 5602,
-            "position": "relative"
-          },
-          {
-            "section": "cta.closing-band",
-            "variant": "plain",
-            "heightPx": 371.6,
-            "topPx": 6428,
-            "position": "relative"
-          }
-        ]
-      },
       "/product/ai": {
         "template": "T2",
+        "chrome": "full",
         "docHeightPx": 7820,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -760,8 +678,9 @@
       },
       "/product/embedded-analytics": {
         "template": "T2",
+        "chrome": "full",
         "docHeightPx": 7744,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -841,10 +760,102 @@
           }
         ]
       },
+      "/product/data-modernization": {
+        "template": "T2",
+        "chrome": "full",
+        "docHeightPx": 7556,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "media",
+            "heightPx": 1096.1,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "content.statement",
+            "variant": "plain",
+            "heightPx": 315.2,
+            "topPx": 1240,
+            "position": "relative"
+          },
+          {
+            "section": "features.checklist",
+            "variant": "columns",
+            "heightPx": 299.2,
+            "topPx": 1555,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "four-column",
+            "heightPx": 658.4,
+            "topPx": 1854,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-light",
+            "variant": "default",
+            "heightPx": 885,
+            "topPx": 2513,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 838.6,
+            "topPx": 3398,
+            "position": "relative"
+          },
+          {
+            "section": "cta.community-band",
+            "variant": "default",
+            "heightPx": 453.2,
+            "topPx": 4236,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.stats-bento",
+            "variant": "default",
+            "heightPx": 912.8,
+            "topPx": 4690,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 825.8,
+            "topPx": 5602,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "plain",
+            "heightPx": 371.6,
+            "topPx": 6428,
+            "position": "relative"
+          }
+        ]
+      },
       "/product/data-trust": {
         "template": "T2",
+        "chrome": "full",
         "docHeightPx": 7559,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -926,8 +937,9 @@
       },
       "/product/cost-optimization": {
         "template": "T2",
+        "chrome": "full",
         "docHeightPx": 8088,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -1014,79 +1026,11 @@
           }
         ]
       },
-      "/data-platforms/cobalt": {
-        "template": "T3",
-        "docHeightPx": 5760,
-        "chrome": {
-          "shell.announcement-bar": {
-            "heightPx": 53,
-            "position": "static"
-          },
-          "shell.navbar": {
-            "heightPx": 91,
-            "position": "sticky"
-          },
-          "shell.footer": {
-            "heightPx": 756.2,
-            "position": "static"
-          }
-        },
-        "nodes": [
-          {
-            "section": "hero.split",
-            "variant": "padded",
-            "heightPx": 602.3,
-            "topPx": 144,
-            "position": "relative"
-          },
-          {
-            "section": "features.card-grid",
-            "variant": "image-card",
-            "heightPx": 1088.5,
-            "topPx": 746,
-            "position": "relative"
-          },
-          {
-            "section": "content.statement",
-            "variant": "diagram",
-            "heightPx": 773.6,
-            "topPx": 1835,
-            "position": "relative"
-          },
-          {
-            "section": "cta.gradient-card",
-            "variant": "default",
-            "heightPx": 417.6,
-            "topPx": 2608,
-            "position": "relative"
-          },
-          {
-            "section": "social-proof.customer-tabs",
-            "variant": "default",
-            "heightPx": 880.6,
-            "topPx": 3026,
-            "position": "relative"
-          },
-          {
-            "section": "editorial.resource-cards",
-            "variant": "default",
-            "heightPx": 708.2,
-            "topPx": 3907,
-            "position": "relative"
-          },
-          {
-            "section": "cta.closing-band",
-            "variant": "with-aside",
-            "heightPx": 389.2,
-            "topPx": 4615,
-            "position": "relative"
-          }
-        ]
-      },
       "/data-platforms/northwind": {
         "template": "T3",
+        "chrome": "full",
         "docHeightPx": 5801,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -1154,8 +1098,9 @@
       },
       "/data-platforms/quarry": {
         "template": "T3",
+        "chrome": "full",
         "docHeightPx": 6358,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -1230,8 +1175,9 @@
       },
       "/data-platforms/helixa": {
         "template": "T3",
+        "chrome": "full",
         "docHeightPx": 5565,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -1299,8 +1245,9 @@
       },
       "/data-platforms/stratus": {
         "template": "T3",
+        "chrome": "full",
         "docHeightPx": 5495,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -1368,8 +1315,9 @@
       },
       "/data-platforms/driftway": {
         "template": "T3",
+        "chrome": "full",
         "docHeightPx": 4880,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -1428,10 +1376,81 @@
           }
         ]
       },
+      "/data-platforms/cobalt": {
+        "template": "T3",
+        "chrome": "full",
+        "docHeightPx": 5760,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "padded",
+            "heightPx": 602.3,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "image-card",
+            "heightPx": 1088.5,
+            "topPx": 746,
+            "position": "relative"
+          },
+          {
+            "section": "content.statement",
+            "variant": "diagram",
+            "heightPx": 773.6,
+            "topPx": 1835,
+            "position": "relative"
+          },
+          {
+            "section": "cta.gradient-card",
+            "variant": "default",
+            "heightPx": 417.6,
+            "topPx": 2608,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 880.6,
+            "topPx": 3026,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 708.2,
+            "topPx": 3907,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 389.2,
+            "topPx": 4615,
+            "position": "relative"
+          }
+        ]
+      },
       "/industry/financial-services": {
         "template": "T4",
+        "chrome": "full",
         "docHeightPx": 7792,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -1513,8 +1532,9 @@
       },
       "/industry/healthcare": {
         "template": "T4",
+        "chrome": "full",
         "docHeightPx": 7937,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -1596,8 +1616,9 @@
       },
       "/industry/manufacturing": {
         "template": "T4",
+        "chrome": "full",
         "docHeightPx": 7706,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -1679,8 +1700,9 @@
       },
       "/industry/energy-utilities": {
         "template": "T4",
+        "chrome": "full",
         "docHeightPx": 7757,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -1762,8 +1784,9 @@
       },
       "/industry/telecommunications": {
         "template": "T4",
+        "chrome": "full",
         "docHeightPx": 7812,
-        "chrome": {
+        "shell": {
           "shell.announcement-bar": {
             "heightPx": 53,
             "position": "static"
@@ -1840,6 +1863,2766 @@
             "heightPx": 453.2,
             "topPx": 6602,
             "position": "relative"
+          }
+        ]
+      },
+      "/case-studies/kestrel": {
+        "template": "T5",
+        "chrome": "full",
+        "docHeightPx": 5669,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "article.story-header",
+            "variant": "default",
+            "heightPx": 626.5,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "article.story-body",
+            "variant": "default",
+            "heightPx": 3027.4,
+            "topPx": 770,
+            "position": "relative"
+          },
+          {
+            "section": "article.related-stories",
+            "variant": "default",
+            "heightPx": 783.6,
+            "topPx": 3798,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 331.6,
+            "topPx": 4581,
+            "position": "relative"
+          }
+        ]
+      },
+      "/case-studies/meridian-partners": {
+        "template": "T5",
+        "chrome": "full",
+        "docHeightPx": 5206,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "article.story-header",
+            "variant": "default",
+            "heightPx": 790,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "article.story-body",
+            "variant": "default",
+            "heightPx": 2401,
+            "topPx": 934,
+            "position": "relative"
+          },
+          {
+            "section": "article.related-stories",
+            "variant": "default",
+            "heightPx": 783.6,
+            "topPx": 3335,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 331.6,
+            "topPx": 4119,
+            "position": "relative"
+          }
+        ]
+      },
+      "/case-studies/halcyon": {
+        "template": "T5",
+        "chrome": "full",
+        "docHeightPx": 7173,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "article.story-header",
+            "variant": "default",
+            "heightPx": 650,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "article.story-body",
+            "variant": "default",
+            "heightPx": 4508,
+            "topPx": 794,
+            "position": "relative"
+          },
+          {
+            "section": "article.related-stories",
+            "variant": "default",
+            "heightPx": 783.6,
+            "topPx": 5302,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 331.6,
+            "topPx": 6086,
+            "position": "relative"
+          }
+        ]
+      },
+      "/case-studies/basalt-health": {
+        "template": "T5",
+        "chrome": "full",
+        "docHeightPx": 4440,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "article.story-header",
+            "variant": "default",
+            "heightPx": 622,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "article.story-body",
+            "variant": "default",
+            "heightPx": 1802.8,
+            "topPx": 766,
+            "position": "relative"
+          },
+          {
+            "section": "article.related-stories",
+            "variant": "default",
+            "heightPx": 783.6,
+            "topPx": 2569,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 331.6,
+            "topPx": 3352,
+            "position": "relative"
+          }
+        ]
+      },
+      "/blog": {
+        "template": "T6",
+        "chrome": "full",
+        "docHeightPx": 9735,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "listing.header",
+            "variant": "hub",
+            "heightPx": 148.8,
+            "topPx": 144,
+            "position": "static"
+          },
+          {
+            "section": "listing.category-nav",
+            "variant": "default",
+            "heightPx": 108,
+            "topPx": 293,
+            "position": "sticky"
+          },
+          {
+            "section": "listing.hub-grid",
+            "variant": "blog",
+            "heightPx": 8124.8,
+            "topPx": 401,
+            "position": "relative"
+          },
+          {
+            "section": "cta.community-band",
+            "variant": "default",
+            "heightPx": 453.2,
+            "topPx": 8526,
+            "position": "relative"
+          }
+        ]
+      },
+      "/resources/webinars": {
+        "template": "T6",
+        "chrome": "full",
+        "docHeightPx": 5143,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "listing.header",
+            "variant": "hub",
+            "heightPx": 148.8,
+            "topPx": 144,
+            "position": "static"
+          },
+          {
+            "section": "listing.category-nav",
+            "variant": "default",
+            "heightPx": 108,
+            "topPx": 293,
+            "position": "sticky"
+          },
+          {
+            "section": "listing.hub-grid",
+            "variant": "resource",
+            "heightPx": 3597.3,
+            "topPx": 401,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "plain",
+            "heightPx": 389.2,
+            "topPx": 3998,
+            "position": "relative"
+          }
+        ]
+      },
+      "/resources": {
+        "template": "T6",
+        "chrome": "full",
+        "docHeightPx": 5275,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "listing.header",
+            "variant": "hub",
+            "heightPx": 148.8,
+            "topPx": 144,
+            "position": "static"
+          },
+          {
+            "section": "listing.category-nav",
+            "variant": "default",
+            "heightPx": 108,
+            "topPx": 293,
+            "position": "sticky"
+          },
+          {
+            "section": "listing.hub-grid",
+            "variant": "resource",
+            "heightPx": 3786.7,
+            "topPx": 401,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "plain",
+            "heightPx": 331.6,
+            "topPx": 4188,
+            "position": "relative"
+          }
+        ]
+      },
+      "/case-studies": {
+        "template": "T7",
+        "chrome": "full",
+        "docHeightPx": 4621,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "listing.header",
+            "variant": "centred",
+            "heightPx": 296.8,
+            "topPx": 144,
+            "position": "static"
+          },
+          {
+            "section": "listing.case-grid",
+            "variant": "default",
+            "heightPx": 2988.5,
+            "topPx": 441,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 435.6,
+            "topPx": 3429,
+            "position": "relative"
+          }
+        ]
+      },
+      "/resources/on-demand": {
+        "template": "T7",
+        "chrome": "full",
+        "docHeightPx": 4461,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "listing.header",
+            "variant": "centred",
+            "heightPx": 256.8,
+            "topPx": 144,
+            "position": "static"
+          },
+          {
+            "section": "listing.session-grid",
+            "variant": "default",
+            "heightPx": 2998.1,
+            "topPx": 401,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "wide",
+            "heightPx": 305.6,
+            "topPx": 3399,
+            "position": "relative"
+          }
+        ]
+      },
+      "/events": {
+        "template": "T7",
+        "chrome": "full",
+        "docHeightPx": 3786,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "listing.header",
+            "variant": "centred",
+            "heightPx": 284.8,
+            "topPx": 144,
+            "position": "static"
+          },
+          {
+            "section": "listing.event-grid",
+            "variant": "default",
+            "heightPx": 2211.7,
+            "topPx": 429,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "plain",
+            "heightPx": 389.2,
+            "topPx": 2641,
+            "position": "relative"
+          }
+        ]
+      },
+      "/press": {
+        "template": "T7",
+        "chrome": "full",
+        "docHeightPx": 8035,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "listing.header",
+            "variant": "centred",
+            "heightPx": 256.8,
+            "topPx": 144,
+            "position": "static"
+          },
+          {
+            "section": "listing.press-grid",
+            "variant": "media",
+            "heightPx": 3229,
+            "topPx": 401,
+            "position": "relative"
+          },
+          {
+            "section": "listing.press-grid",
+            "variant": "release",
+            "heightPx": 3423.5,
+            "topPx": 3630,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "plain",
+            "heightPx": 225.6,
+            "topPx": 7053,
+            "position": "relative"
+          }
+        ]
+      },
+      "/resources/analytics-lifecycle": {
+        "template": "T8",
+        "chrome": "full",
+        "docHeightPx": 17909,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "article.guide-header",
+            "variant": "default",
+            "heightPx": 499.6,
+            "topPx": 144,
+            "position": "static"
+          },
+          {
+            "section": "article.guide-body",
+            "variant": "default",
+            "heightPx": 16203.2,
+            "topPx": 644,
+            "position": "static"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "wide",
+            "heightPx": 305.6,
+            "topPx": 16847,
+            "position": "relative"
+          }
+        ]
+      },
+      "/resources/state-of-data-teams": {
+        "template": "T8",
+        "chrome": "full",
+        "docHeightPx": 27747,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "article.guide-header",
+            "variant": "default",
+            "heightPx": 455.6,
+            "topPx": 144,
+            "position": "static"
+          },
+          {
+            "section": "article.guide-body",
+            "variant": "default",
+            "heightPx": 25880.1,
+            "topPx": 600,
+            "position": "static"
+          },
+          {
+            "section": "cta.community-band",
+            "variant": "default",
+            "heightPx": 510.8,
+            "topPx": 26480,
+            "position": "relative"
+          }
+        ]
+      },
+      "/blog/summit-announcements": {
+        "template": "T8",
+        "chrome": "full",
+        "docHeightPx": 9983,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "article.progress-bar",
+            "variant": "default",
+            "heightPx": 6,
+            "topPx": 0,
+            "position": "fixed"
+          },
+          {
+            "section": "article.post-body",
+            "variant": "default",
+            "heightPx": 8053.1,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "listing.latest-posts",
+            "variant": "default",
+            "heightPx": 577,
+            "topPx": 8197,
+            "position": "relative"
+          },
+          {
+            "section": "cta.community-band",
+            "variant": "default",
+            "heightPx": 453.2,
+            "topPx": 8774,
+            "position": "relative"
+          }
+        ]
+      },
+      "/blog/lattice-joins-northwind": {
+        "template": "T8",
+        "chrome": "full",
+        "docHeightPx": 5663,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "article.progress-bar",
+            "variant": "default",
+            "heightPx": 6,
+            "topPx": 0,
+            "position": "fixed"
+          },
+          {
+            "section": "article.post-body",
+            "variant": "default",
+            "heightPx": 3732.4,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "listing.latest-posts",
+            "variant": "default",
+            "heightPx": 577,
+            "topPx": 3876,
+            "position": "relative"
+          },
+          {
+            "section": "cta.community-band",
+            "variant": "default",
+            "heightPx": 453.2,
+            "topPx": 4453,
+            "position": "relative"
+          }
+        ]
+      },
+      "/resources/webinars/launch-showcase": {
+        "template": "T9",
+        "chrome": "full",
+        "docHeightPx": 2882,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "form.form-header",
+            "variant": "registration",
+            "heightPx": 1033.3,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.logo-bar",
+            "variant": "default",
+            "heightPx": 245.6,
+            "topPx": 1177,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 703.2,
+            "topPx": 1423,
+            "position": "relative"
+          }
+        ]
+      },
+      "/resources/whitepaper-control-plane": {
+        "template": "T9",
+        "chrome": "full",
+        "docHeightPx": 1722,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "form.form-header",
+            "variant": "cover",
+            "heightPx": 822.3,
+            "topPx": 144,
+            "position": "static"
+          }
+        ]
+      },
+      "/resources/webinars/charts-as-code": {
+        "template": "T9",
+        "chrome": "full",
+        "docHeightPx": 2310,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "form.form-header",
+            "variant": "registration",
+            "heightPx": 1410,
+            "topPx": 144,
+            "position": "relative"
+          }
+        ]
+      },
+      "/contact": {
+        "template": "T10",
+        "chrome": "full",
+        "docHeightPx": 3124,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "form.form-header",
+            "variant": "contact",
+            "heightPx": 852,
+            "topPx": 144,
+            "position": "static"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "border-card",
+            "heightPx": 458.8,
+            "topPx": 996,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.stats-bento",
+            "variant": "default",
+            "heightPx": 912.8,
+            "topPx": 1455,
+            "position": "relative"
+          }
+        ]
+      },
+      "/signup": {
+        "template": "T10",
+        "chrome": "full",
+        "docHeightPx": 2747,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "form.form-header",
+            "variant": "contact",
+            "heightPx": 934,
+            "topPx": 144,
+            "position": "static"
+          },
+          {
+            "section": "social-proof.stats-bento",
+            "variant": "default",
+            "heightPx": 912.8,
+            "topPx": 1078,
+            "position": "relative"
+          }
+        ]
+      },
+      "/community/join": {
+        "template": "T10",
+        "chrome": "full",
+        "docHeightPx": 1836,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "form.form-header",
+            "variant": "contact",
+            "heightPx": 936,
+            "topPx": 144,
+            "position": "static"
+          }
+        ]
+      },
+      "/report-a-problem": {
+        "template": "T10",
+        "chrome": "full",
+        "docHeightPx": 1850,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "form.form-header",
+            "variant": "contact",
+            "heightPx": 950,
+            "topPx": 144,
+            "position": "static"
+          }
+        ]
+      },
+      "/modern-slavery-statement": {
+        "template": "T11",
+        "chrome": "full",
+        "docHeightPx": 5033,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "legal.policy-header",
+            "variant": "default",
+            "heightPx": 256.8,
+            "topPx": 144,
+            "position": "static"
+          },
+          {
+            "section": "legal.policy-body",
+            "variant": "default",
+            "heightPx": 3851.8,
+            "topPx": 425,
+            "position": "static"
+          }
+        ]
+      },
+      "/terms-of-use": {
+        "template": "T11",
+        "chrome": "full",
+        "docHeightPx": 11934,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "legal.policy-body",
+            "variant": "default",
+            "heightPx": 11033.6,
+            "topPx": 144,
+            "position": "static"
+          }
+        ]
+      },
+      "/legal/ai-principles": {
+        "template": "T11",
+        "chrome": "full",
+        "docHeightPx": 3456,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "legal.policy-header",
+            "variant": "default",
+            "heightPx": 281.6,
+            "topPx": 144,
+            "position": "static"
+          },
+          {
+            "section": "legal.policy-body",
+            "variant": "default",
+            "heightPx": 2250.4,
+            "topPx": 450,
+            "position": "static"
+          }
+        ]
+      },
+      "/security": {
+        "template": "T12",
+        "chrome": "full",
+        "docHeightPx": 6540,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "padded",
+            "heightPx": 597,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "media-left",
+            "heightPx": 634,
+            "topPx": 741,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 571,
+            "topPx": 1375,
+            "position": "relative"
+          },
+          {
+            "section": "company.compliance-rows",
+            "variant": "default",
+            "heightPx": 2179.8,
+            "topPx": 1946,
+            "position": "relative"
+          },
+          {
+            "section": "interactive.faq-accordion",
+            "variant": "default",
+            "heightPx": 1286.4,
+            "topPx": 4126,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "plain",
+            "heightPx": 371.6,
+            "topPx": 5412,
+            "position": "relative"
+          }
+        ]
+      },
+      "/certification": {
+        "template": "T12",
+        "chrome": "full",
+        "docHeightPx": 5377,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "padded",
+            "heightPx": 580,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "company.program-list",
+            "variant": "default",
+            "heightPx": 686.4,
+            "topPx": 724,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "media-left",
+            "heightPx": 412.6,
+            "topPx": 1410,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 604.2,
+            "topPx": 1823,
+            "position": "relative"
+          },
+          {
+            "section": "interactive.faq-accordion",
+            "variant": "default",
+            "heightPx": 1887.9,
+            "topPx": 2427,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "wide",
+            "heightPx": 305.6,
+            "topPx": 4315,
+            "position": "relative"
+          }
+        ]
+      },
+      "/learn": {
+        "template": "T12",
+        "chrome": "full",
+        "docHeightPx": 5010,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "padded",
+            "heightPx": 740,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "four-column",
+            "heightPx": 538.4,
+            "topPx": 884,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "image-card",
+            "heightPx": 838.9,
+            "topPx": 1422,
+            "position": "relative"
+          },
+          {
+            "section": "interactive.course-tabs",
+            "variant": "default",
+            "heightPx": 830.6,
+            "topPx": 2261,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "border-card",
+            "heightPx": 732.4,
+            "topPx": 3092,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-checklist",
+            "heightPx": 429.2,
+            "topPx": 3824,
+            "position": "relative"
+          }
+        ]
+      },
+      "/community": {
+        "template": "T12",
+        "chrome": "full",
+        "docHeightPx": 7014,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "padded",
+            "heightPx": 536,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "stat-card",
+            "heightPx": 585.6,
+            "topPx": 680,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.community-bento",
+            "variant": "default",
+            "heightPx": 1138.6,
+            "topPx": 1266,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 313.6,
+            "topPx": 2404,
+            "position": "relative"
+          },
+          {
+            "section": "interactive.photo-tabs",
+            "variant": "default",
+            "heightPx": 1382.6,
+            "topPx": 2718,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "border-card",
+            "heightPx": 764.4,
+            "topPx": 4100,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "border-card",
+            "heightPx": 1023.2,
+            "topPx": 4865,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "plain",
+            "heightPx": 369.6,
+            "topPx": 5888,
+            "position": "relative"
+          }
+        ]
+      },
+      "/about-us": {
+        "template": "T12",
+        "chrome": "full",
+        "docHeightPx": 5731,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "padded",
+            "heightPx": 536,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "stat-card",
+            "heightPx": 264,
+            "topPx": 680,
+            "position": "relative"
+          },
+          {
+            "section": "company.leadership-list",
+            "variant": "default",
+            "heightPx": 2594.8,
+            "topPx": 944,
+            "position": "relative"
+          },
+          {
+            "section": "company.people-grid",
+            "variant": "default",
+            "heightPx": 536,
+            "topPx": 3539,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "wash-icon",
+            "heightPx": 586.4,
+            "topPx": 4075,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 313.6,
+            "topPx": 4661,
+            "position": "relative"
+          }
+        ]
+      },
+      "/about-us/values": {
+        "template": "T12",
+        "chrome": "full",
+        "docHeightPx": 6095,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "padded",
+            "heightPx": 472,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "border-card",
+            "heightPx": 1993.2,
+            "topPx": 616,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "border-card",
+            "heightPx": 1689.6,
+            "topPx": 2609,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "wash-icon",
+            "heightPx": 586.4,
+            "topPx": 4299,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-stats",
+            "heightPx": 453.2,
+            "topPx": 4885,
+            "position": "relative"
+          }
+        ]
+      },
+      "/about-us/careers": {
+        "template": "T12",
+        "chrome": "full",
+        "docHeightPx": 9509,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "padded",
+            "heightPx": 579,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.dark-news-strip",
+            "variant": "default",
+            "heightPx": 278.4,
+            "topPx": 723,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "border-card",
+            "heightPx": 743.2,
+            "topPx": 1001,
+            "position": "relative"
+          },
+          {
+            "section": "company.role-list",
+            "variant": "default",
+            "heightPx": 7007.8,
+            "topPx": 1745,
+            "position": "relative"
+          }
+        ]
+      },
+      "/about-us/belonging": {
+        "template": "T12",
+        "chrome": "full",
+        "docHeightPx": 3869,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "text-only",
+            "heightPx": 321.6,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 579,
+            "topPx": 466,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "media-left",
+            "heightPx": 515,
+            "topPx": 1045,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 579.2,
+            "topPx": 1560,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 642.2,
+            "topPx": 2139,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "plain",
+            "heightPx": 331.6,
+            "topPx": 2781,
+            "position": "relative"
+          }
+        ]
+      },
+      "/partners": {
+        "template": "T12",
+        "chrome": "full",
+        "docHeightPx": 2719,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "text-only",
+            "heightPx": 423.6,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.checklist",
+            "variant": "split-list",
+            "heightPx": 444.8,
+            "topPx": 568,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "media-left",
+            "heightPx": 475,
+            "topPx": 1012,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 475,
+            "topPx": 1487,
+            "position": "relative"
+          }
+        ]
+      },
+      "/services": {
+        "template": "T12",
+        "chrome": "full",
+        "docHeightPx": 3298,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "padded",
+            "heightPx": 526.4,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "plain-icon",
+            "heightPx": 514.4,
+            "topPx": 670,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 604,
+            "topPx": 1185,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "media-left",
+            "heightPx": 527,
+            "topPx": 1789,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "plain",
+            "heightPx": 225.6,
+            "topPx": 2316,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/what-is-lattice": {
+        "template": "T13",
+        "chrome": "full",
+        "docHeightPx": 7644,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "poster",
+            "heightPx": 1151.2,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "wash-icon",
+            "heightPx": 578.4,
+            "topPx": 1295,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-dark",
+            "variant": "default",
+            "heightPx": 876,
+            "topPx": 1874,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 740,
+            "topPx": 2750,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 741,
+            "topPx": 3490,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 840.6,
+            "topPx": 4231,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.logo-bar",
+            "variant": "default",
+            "heightPx": 245.6,
+            "topPx": 5071,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 708.2,
+            "topPx": 5317,
+            "position": "relative"
+          },
+          {
+            "section": "features.integration-strip",
+            "variant": "default",
+            "heightPx": 434,
+            "topPx": 6025,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-checklist",
+            "heightPx": 429.2,
+            "topPx": 6459,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/lattice": {
+        "template": "T13",
+        "chrome": "full",
+        "docHeightPx": 9009,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "illustration",
+            "heightPx": 1094.6,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 472.3,
+            "topPx": 1239,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "plain-icon",
+            "heightPx": 352.8,
+            "topPx": 1711,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 443.2,
+            "topPx": 2064,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "border-card",
+            "heightPx": 1128.8,
+            "topPx": 2507,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 528,
+            "topPx": 3636,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "plain-icon",
+            "heightPx": 578.4,
+            "topPx": 4164,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.testimonial-slider",
+            "variant": "industry",
+            "heightPx": 768,
+            "topPx": 4742,
+            "position": "relative"
+          },
+          {
+            "section": "features.integration-strip",
+            "variant": "default",
+            "heightPx": 434,
+            "topPx": 5510,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "wide",
+            "heightPx": 307.6,
+            "topPx": 5944,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.stats-bento",
+            "variant": "default",
+            "heightPx": 885.4,
+            "topPx": 6252,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 768.2,
+            "topPx": 7137,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "wide",
+            "heightPx": 347.6,
+            "topPx": 7905,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/state": {
+        "template": "T13",
+        "chrome": "full",
+        "docHeightPx": 6353,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "video",
+            "heightPx": 624.4,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "border-card",
+            "heightPx": 684.4,
+            "topPx": 768,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.quote-band",
+            "variant": "single",
+            "heightPx": 662,
+            "topPx": 1453,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "media-left",
+            "heightPx": 676,
+            "topPx": 2115,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 508.8,
+            "topPx": 2791,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "media-left",
+            "heightPx": 491.2,
+            "topPx": 3300,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.testimonial-slider",
+            "variant": "industry",
+            "heightPx": 728,
+            "topPx": 3791,
+            "position": "relative"
+          },
+          {
+            "section": "content.statement",
+            "variant": "plain",
+            "heightPx": 369.6,
+            "topPx": 4519,
+            "position": "relative"
+          },
+          {
+            "section": "interactive.faq-accordion",
+            "variant": "default",
+            "heightPx": 403.2,
+            "topPx": 4888,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "wide",
+            "heightPx": 305.6,
+            "topPx": 5292,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/assistant": {
+        "template": "T13",
+        "chrome": "full",
+        "docHeightPx": 8605,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "video",
+            "heightPx": 472.3,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "interactive.install-tabs",
+            "variant": "default",
+            "heightPx": 437,
+            "topPx": 616,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "border-card",
+            "heightPx": 1154.4,
+            "topPx": 1053,
+            "position": "relative"
+          },
+          {
+            "section": "cta.gradient-card",
+            "variant": "default",
+            "heightPx": 441.6,
+            "topPx": 2208,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-dark",
+            "variant": "default",
+            "heightPx": 871.8,
+            "topPx": 2649,
+            "position": "relative"
+          },
+          {
+            "section": "content.statement",
+            "variant": "plain",
+            "heightPx": 233.6,
+            "topPx": 3521,
+            "position": "relative"
+          },
+          {
+            "section": "features.gradient-panel",
+            "variant": "text-first",
+            "heightPx": 557.6,
+            "topPx": 3755,
+            "position": "relative"
+          },
+          {
+            "section": "features.gradient-panel",
+            "variant": "media-first",
+            "heightPx": 557.6,
+            "topPx": 4312,
+            "position": "relative"
+          },
+          {
+            "section": "features.gradient-panel",
+            "variant": "text-first",
+            "heightPx": 543.2,
+            "topPx": 4870,
+            "position": "relative"
+          },
+          {
+            "section": "features.gradient-panel",
+            "variant": "media-first",
+            "heightPx": 701.6,
+            "topPx": 5413,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "inline-icon",
+            "heightPx": 435.2,
+            "topPx": 6115,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.quote-band",
+            "variant": "slider",
+            "heightPx": 655,
+            "topPx": 6550,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 644.2,
+            "topPx": 7205,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/charts": {
+        "template": "T13",
+        "chrome": "full",
+        "docHeightPx": 4197,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "padded",
+            "heightPx": 378.8,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 671,
+            "topPx": 523,
+            "position": "relative"
+          },
+          {
+            "section": "interactive.install-tabs",
+            "variant": "default",
+            "heightPx": 536.2,
+            "topPx": 1194,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "plain-icon",
+            "heightPx": 591.2,
+            "topPx": 1730,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "border-card",
+            "heightPx": 644.4,
+            "topPx": 2321,
+            "position": "relative"
+          },
+          {
+            "section": "cta.gradient-card",
+            "variant": "default",
+            "heightPx": 475.2,
+            "topPx": 2966,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/governance": {
+        "template": "T13",
+        "chrome": "full",
+        "docHeightPx": 5593,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "framed",
+            "heightPx": 740,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "plain-icon",
+            "heightPx": 490.4,
+            "topPx": 884,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 457,
+            "topPx": 1374,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "media-left",
+            "heightPx": 634,
+            "topPx": 1831,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 471,
+            "topPx": 2465,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "media-left",
+            "heightPx": 634,
+            "topPx": 2936,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 934.6,
+            "topPx": 3570,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "plain",
+            "heightPx": 331.6,
+            "topPx": 4505,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/integrations": {
+        "template": "T13",
+        "chrome": "full",
+        "docHeightPx": 11492,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "text-only",
+            "heightPx": 374.8,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "logo-card",
+            "heightPx": 1298,
+            "topPx": 519,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "logo-card",
+            "heightPx": 644.4,
+            "topPx": 1817,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "logo-card",
+            "heightPx": 1732.8,
+            "topPx": 2461,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "logo-card",
+            "heightPx": 620.4,
+            "topPx": 4194,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "logo-card",
+            "heightPx": 1346,
+            "topPx": 4814,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "logo-card",
+            "heightPx": 1394,
+            "topPx": 6160,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "logo-card",
+            "heightPx": 644.4,
+            "topPx": 7554,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "logo-card",
+            "heightPx": 596.4,
+            "topPx": 8199,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.stats-bento",
+            "variant": "default",
+            "heightPx": 885.4,
+            "topPx": 8795,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 708.2,
+            "topPx": 9681,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "wide",
+            "heightPx": 347.6,
+            "topPx": 10389,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/analyst": {
+        "template": "T13",
+        "chrome": "full",
+        "docHeightPx": 10578,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "illustration",
+            "heightPx": 1287.4,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.logo-bar",
+            "variant": "default",
+            "heightPx": 245.6,
+            "topPx": 1431,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "media-left",
+            "heightPx": 472.3,
+            "topPx": 1677,
+            "position": "relative"
+          },
+          {
+            "section": "features.checklist",
+            "variant": "split",
+            "heightPx": 539.2,
+            "topPx": 2149,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-dark",
+            "variant": "default",
+            "heightPx": 863.2,
+            "topPx": 2688,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "four-column",
+            "heightPx": 648.8,
+            "topPx": 3552,
+            "position": "relative"
+          },
+          {
+            "section": "features.checklist",
+            "variant": "split",
+            "heightPx": 570,
+            "topPx": 4200,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.quote-band",
+            "variant": "slider",
+            "heightPx": 655,
+            "topPx": 4770,
+            "position": "relative"
+          },
+          {
+            "section": "features.checklist",
+            "variant": "split",
+            "heightPx": 570,
+            "topPx": 5425,
+            "position": "relative"
+          },
+          {
+            "section": "features.checklist",
+            "variant": "split",
+            "heightPx": 570,
+            "topPx": 5995,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "media-left",
+            "heightPx": 472.3,
+            "topPx": 6565,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.testimonial-slider",
+            "variant": "industry",
+            "heightPx": 768,
+            "topPx": 7038,
+            "position": "relative"
+          },
+          {
+            "section": "features.integration-tiles",
+            "variant": "labelled",
+            "heightPx": 484.8,
+            "topPx": 7806,
+            "position": "relative"
+          },
+          {
+            "section": "cta.gradient-card",
+            "variant": "default",
+            "heightPx": 499.2,
+            "topPx": 8290,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 684.2,
+            "topPx": 8790,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "wide",
+            "heightPx": 347.6,
+            "topPx": 9474,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/self-hosted-vs-platform": {
+        "template": "T13",
+        "chrome": "full",
+        "docHeightPx": 8645,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "text-only",
+            "heightPx": 491.6,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "border-card",
+            "heightPx": 691.6,
+            "topPx": 636,
+            "position": "relative"
+          },
+          {
+            "section": "comparison.journey-columns",
+            "variant": "default",
+            "heightPx": 821.6,
+            "topPx": 1327,
+            "position": "relative"
+          },
+          {
+            "section": "interactive.persona-tabs",
+            "variant": "default",
+            "heightPx": 585.8,
+            "topPx": 2149,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.testimonial-slider",
+            "variant": "industry",
+            "heightPx": 656,
+            "topPx": 2735,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.logo-bar",
+            "variant": "default",
+            "heightPx": 245.6,
+            "topPx": 3391,
+            "position": "relative"
+          },
+          {
+            "section": "content.statement",
+            "variant": "plain",
+            "heightPx": 273.6,
+            "topPx": 3636,
+            "position": "relative"
+          },
+          {
+            "section": "comparison.compare-table",
+            "variant": "default",
+            "heightPx": 823.2,
+            "topPx": 3910,
+            "position": "relative"
+          },
+          {
+            "section": "comparison.compare-table",
+            "variant": "default",
+            "heightPx": 583.2,
+            "topPx": 4733,
+            "position": "relative"
+          },
+          {
+            "section": "comparison.compare-table",
+            "variant": "default",
+            "heightPx": 727.2,
+            "topPx": 5316,
+            "position": "relative"
+          },
+          {
+            "section": "comparison.compare-table",
+            "variant": "default",
+            "heightPx": 579.2,
+            "topPx": 6043,
+            "position": "relative"
+          },
+          {
+            "section": "comparison.compare-table",
+            "variant": "default",
+            "heightPx": 919.2,
+            "topPx": 6623,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "wide",
+            "heightPx": 347.6,
+            "topPx": 7542,
+            "position": "relative"
+          }
+        ]
+      },
+      "/pricing": {
+        "template": "T14",
+        "chrome": "full",
+        "docHeightPx": 7874,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "pricing.plan-cards",
+            "variant": "default",
+            "heightPx": 940.6,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "pricing.add-ons",
+            "variant": "default",
+            "heightPx": 786.4,
+            "topPx": 1085,
+            "position": "relative"
+          },
+          {
+            "section": "comparison.plan-matrix",
+            "variant": "default",
+            "heightPx": 3650.3,
+            "topPx": 1871,
+            "position": "relative"
+          },
+          {
+            "section": "interactive.faq-accordion",
+            "variant": "default",
+            "heightPx": 705.6,
+            "topPx": 5521,
+            "position": "relative"
+          },
+          {
+            "section": "interactive.faq-accordion",
+            "variant": "default",
+            "heightPx": 891.2,
+            "topPx": 6227,
+            "position": "relative"
+          }
+        ]
+      },
+      "/champions": {
+        "template": "T15",
+        "chrome": "full",
+        "docHeightPx": 5917,
+        "shell": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.champions-dark",
+            "variant": "default",
+            "heightPx": 948.6,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "community.about-band",
+            "variant": "default",
+            "heightPx": 296,
+            "topPx": 1093,
+            "position": "relative"
+          },
+          {
+            "section": "community.member-grid",
+            "variant": "default",
+            "heightPx": 878,
+            "topPx": 1389,
+            "position": "relative"
+          },
+          {
+            "section": "community.icon-cards",
+            "variant": "activity",
+            "heightPx": 527.2,
+            "topPx": 2267,
+            "position": "relative"
+          },
+          {
+            "section": "community.dark-quote",
+            "variant": "default",
+            "heightPx": 561.6,
+            "topPx": 2794,
+            "position": "relative"
+          },
+          {
+            "section": "community.story-slider",
+            "variant": "default",
+            "heightPx": 881.5,
+            "topPx": 3355,
+            "position": "relative"
+          },
+          {
+            "section": "community.icon-cards",
+            "variant": "support",
+            "heightPx": 523.2,
+            "topPx": 4237,
+            "position": "relative"
+          },
+          {
+            "section": "cta.champions-closing",
+            "variant": "default",
+            "heightPx": 401,
+            "topPx": 4760,
+            "position": "relative"
+          }
+        ]
+      },
+      "/summit": {
+        "template": "T16",
+        "chrome": "event",
+        "docHeightPx": 5631,
+        "shell": {
+          "shell.event-subnav": {
+            "heightPx": 80,
+            "position": "sticky"
+          },
+          "shell.event-footer": {
+            "heightPx": 561.1,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.event",
+            "variant": "default",
+            "heightPx": 550.7,
+            "topPx": 50,
+            "position": "relative"
+          },
+          {
+            "section": "event.photo-gallery",
+            "variant": "default",
+            "heightPx": 349,
+            "topPx": 601,
+            "position": "static"
+          },
+          {
+            "section": "event.recap",
+            "variant": "default",
+            "heightPx": 582,
+            "topPx": 950,
+            "position": "static"
+          },
+          {
+            "section": "event.highlight-rows",
+            "variant": "default",
+            "heightPx": 857.4,
+            "topPx": 1532,
+            "position": "static"
+          },
+          {
+            "section": "event.sponsor-logos",
+            "variant": "default",
+            "heightPx": 1197.4,
+            "topPx": 2390,
+            "position": "static"
+          },
+          {
+            "section": "event.photo-band",
+            "variant": "default",
+            "heightPx": 560,
+            "topPx": 3587,
+            "position": "static"
+          },
+          {
+            "section": "event.quote-band",
+            "variant": "default",
+            "heightPx": 540,
+            "topPx": 4147,
+            "position": "static"
+          },
+          {
+            "section": "event.closing-band",
+            "variant": "default",
+            "heightPx": 383.2,
+            "topPx": 4687,
+            "position": "static"
+          }
+        ]
+      },
+      "/partner-directory": {
+        "template": "T17",
+        "chrome": "none",
+        "docHeightPx": 1668,
+        "shell": {
+          "shell.minimal-nav": {
+            "heightPx": 64,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "directory.header",
+            "variant": "default",
+            "heightPx": 219.2,
+            "topPx": 64,
+            "position": "static"
+          },
+          {
+            "section": "directory.partner-locator",
+            "variant": "default",
+            "heightPx": 1384.5,
+            "topPx": 283,
+            "position": "static"
           }
         ]
       }
@@ -1920,6 +4703,136 @@
             978.3,
             453.2
           ]
+        },
+        "/case-studies/kestrel": {
+          "docHeightPx": 5899,
+          "nodeHeightsPx": [
+            684.1,
+            3175.5,
+            807.6,
+            331.6
+          ]
+        },
+        "/blog": {
+          "docHeightPx": 9500,
+          "nodeHeightsPx": [
+            148.8,
+            108,
+            7889.5,
+            453.2
+          ]
+        },
+        "/case-studies": {
+          "docHeightPx": 4692,
+          "nodeHeightsPx": [
+            296.8,
+            3059.5,
+            435.6
+          ]
+        },
+        "/blog/summit-announcements": {
+          "docHeightPx": 10008,
+          "nodeHeightsPx": [
+            6,
+            8095.2,
+            559,
+            453.2
+          ]
+        },
+        "/resources/webinars/launch-showcase": {
+          "docHeightPx": 2816,
+          "nodeHeightsPx": [
+            1012,
+            245.6,
+            658.1
+          ]
+        },
+        "/contact": {
+          "docHeightPx": 3186,
+          "nodeHeightsPx": [
+            890.4,
+            458.8,
+            936.8
+          ]
+        },
+        "/modern-slavery-statement": {
+          "docHeightPx": 5033,
+          "nodeHeightsPx": [
+            256.8,
+            3851.8
+          ]
+        },
+        "/about-us": {
+          "docHeightPx": 5740,
+          "nodeHeightsPx": [
+            504,
+            264,
+            2631.2,
+            540.8,
+            586.4,
+            313.6
+          ]
+        },
+        "/product/lattice": {
+          "docHeightPx": 8922,
+          "nodeHeightsPx": [
+            1049.6,
+            445.3,
+            376.8,
+            443.2,
+            1128.8,
+            496,
+            578.4,
+            796,
+            434,
+            307.6,
+            868.1,
+            750.2,
+            347.6
+          ]
+        },
+        "/pricing": {
+          "docHeightPx": 7910,
+          "nodeHeightsPx": [
+            976.6,
+            786.4,
+            3650.3,
+            705.6,
+            891.2
+          ]
+        },
+        "/champions": {
+          "docHeightPx": 6099,
+          "nodeHeightsPx": [
+            948.6,
+            320,
+            882.5,
+            551.2,
+            619.2,
+            896.5,
+            523.2,
+            458
+          ]
+        },
+        "/summit": {
+          "docHeightPx": 5643,
+          "nodeHeightsPx": [
+            518.7,
+            349,
+            582,
+            857.4,
+            1258.4,
+            560,
+            540,
+            416.8
+          ]
+        },
+        "/partner-directory": {
+          "docHeightPx": 1668,
+          "nodeHeightsPx": [
+            219.2,
+            1384.5
+          ]
         }
       },
       "768": {
@@ -1994,6 +4907,136 @@
             2793.1,
             501.2
           ]
+        },
+        "/case-studies/kestrel": {
+          "docHeightPx": 6869,
+          "nodeHeightsPx": [
+            694.9,
+            3524.5,
+            1124.4,
+            360.4
+          ]
+        },
+        "/blog": {
+          "docHeightPx": 8695,
+          "nodeHeightsPx": [
+            129.6,
+            108,
+            6791.7,
+            501.2
+          ]
+        },
+        "/case-studies": {
+          "docHeightPx": 5785,
+          "nodeHeightsPx": [
+            335.2,
+            3782,
+            502.8
+          ]
+        },
+        "/blog/summit-announcements": {
+          "docHeightPx": 10553,
+          "nodeHeightsPx": [
+            6,
+            8394.3,
+            492.8,
+            501.2
+          ]
+        },
+        "/resources/webinars/launch-showcase": {
+          "docHeightPx": 3156,
+          "nodeHeightsPx": [
+            1078.8,
+            317.6,
+            595.2
+          ]
+        },
+        "/contact": {
+          "docHeightPx": 4482,
+          "nodeHeightsPx": [
+            884,
+            550,
+            1882.9
+          ]
+        },
+        "/modern-slavery-statement": {
+          "docHeightPx": 5321,
+          "nodeHeightsPx": [
+            237.6,
+            3895
+          ]
+        },
+        "/about-us": {
+          "docHeightPx": 7246,
+          "nodeHeightsPx": [
+            459.6,
+            408,
+            3443.2,
+            809.1,
+            586.4,
+            374.8
+          ]
+        },
+        "/product/lattice": {
+          "docHeightPx": 10063,
+          "nodeHeightsPx": [
+            860.3,
+            380.8,
+            420,
+            467.2,
+            1248.8,
+            467.2,
+            650.4,
+            740,
+            414.8,
+            288.4,
+            1949.8,
+            682.4,
+            328.4
+          ]
+        },
+        "/pricing": {
+          "docHeightPx": 10051,
+          "nodeHeightsPx": [
+            2704,
+            1266.4,
+            3338.4,
+            696,
+            881.6
+          ]
+        },
+        "/champions": {
+          "docHeightPx": 7838,
+          "nodeHeightsPx": [
+            373.2,
+            444,
+            1351,
+            1322.4,
+            472,
+            855.5,
+            1106.4,
+            748.4
+          ]
+        },
+        "/summit": {
+          "docHeightPx": 6737,
+          "nodeHeightsPx": [
+            1021.5,
+            349,
+            574.4,
+            1161.4,
+            1730.8,
+            560,
+            434.4,
+            489.6
+          ]
+        },
+        "/partner-directory": {
+          "docHeightPx": 2412,
+          "nodeHeightsPx": [
+            219.2,
+            2128.5
+          ]
         }
       },
       "375": {
@@ -2067,6 +5110,136 @@
             932.7,
             2204.9,
             775
+          ]
+        },
+        "/case-studies/kestrel": {
+          "docHeightPx": 9725,
+          "nodeHeightsPx": [
+            862.1,
+            5046.1,
+            1909.2,
+            634.8
+          ]
+        },
+        "/blog": {
+          "docHeightPx": 17393,
+          "nodeHeightsPx": [
+            153.6,
+            109,
+            14991.8,
+            865.4
+          ]
+        },
+        "/case-studies": {
+          "docHeightPx": 9383,
+          "nodeHeightsPx": [
+            416.8,
+            6930.9,
+            762.8
+          ]
+        },
+        "/blog/summit-announcements": {
+          "docHeightPx": 15068,
+          "nodeHeightsPx": [
+            6,
+            11677.3,
+            1252.6,
+            865.4
+          ]
+        },
+        "/resources/webinars/launch-showcase": {
+          "docHeightPx": 4613,
+          "nodeHeightsPx": [
+            1966.6,
+            487.2,
+            886.6
+          ]
+        },
+        "/contact": {
+          "docHeightPx": 6142,
+          "nodeHeightsPx": [
+            1966.5,
+            1154,
+            1749.1
+          ]
+        },
+        "/modern-slavery-statement": {
+          "docHeightPx": 7897,
+          "nodeHeightsPx": [
+            263.2,
+            6336.7
+          ]
+        },
+        "/about-us": {
+          "docHeightPx": 11788,
+          "nodeHeightsPx": [
+            745.6,
+            632,
+            5621.6,
+            1736.4,
+            1168.8,
+            610.8
+          ]
+        },
+        "/product/lattice": {
+          "docHeightPx": 14401,
+          "nodeHeightsPx": [
+            812.4,
+            548.8,
+            860,
+            635.5,
+            2615.2,
+            778.2,
+            1160.8,
+            1187.2,
+            454.4,
+            402.8,
+            1709.1,
+            1544.6,
+            418.8
+          ]
+        },
+        "/pricing": {
+          "docHeightPx": 12799,
+          "nodeHeightsPx": [
+            3045.2,
+            1612.8,
+            4778.4,
+            889.6,
+            1200
+          ]
+        },
+        "/champions": {
+          "docHeightPx": 9272,
+          "nodeHeightsPx": [
+            416.9,
+            528.8,
+            1919.6,
+            1458.4,
+            564,
+            878.6,
+            1232.8,
+            999.8
+          ]
+        },
+        "/summit": {
+          "docHeightPx": 6551,
+          "nodeHeightsPx": [
+            708.2,
+            260,
+            487.6,
+            1162.6,
+            1994.2,
+            320,
+            619.6,
+            503.6
+          ]
+        },
+        "/partner-directory": {
+          "docHeightPx": 4107,
+          "nodeHeightsPx": [
+            416,
+            3627.5
           ]
         }
       }
@@ -2384,6 +5557,399 @@
           "Outfit 600"
         ]
       },
+      "1440:/pricing": {
+        "h1": null,
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "24px",
+          "lineHeight": "28.8px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": null,
+        "lead": null,
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 96,
+          "width": 1248,
+          "paddingLeft": "0px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "64px 0px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600"
+        ]
+      },
+      "1440:/summit": {
+        "h1": null,
+        "h2": null,
+        "h4": null,
+        "eyebrow": null,
+        "lead": null,
+        "btnPrimary": null,
+        "nav": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(17, 24, 39)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "footer": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(17, 24, 39)",
+          "backgroundColor": "rgb(0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "container": {
+          "x": 96,
+          "width": 1248,
+          "paddingLeft": "0px"
+        },
+        "section": null,
+        "fonts": [
+          "IBM Plex Mono 400",
+          "IBM Plex Mono 500",
+          "Be Vietnam Pro 800",
+          "IBM Plex Mono 400",
+          "IBM Plex Mono 500",
+          "IBM Plex Mono 600",
+          "Inter 400",
+          "Schibsted Grotesk 500"
+        ]
+      },
+      "1440:/partner-directory": {
+        "h1": null,
+        "h2": null,
+        "h4": null,
+        "eyebrow": null,
+        "lead": null,
+        "btnPrimary": null,
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "16px 0px"
+        },
+        "footer": null,
+        "container": null,
+        "section": null,
+        "fonts": [
+          "Outfit 400",
+          "Outfit 600"
+        ]
+      },
+      "1440:/blog": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "64px",
+          "lineHeight": "76.8px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "24px",
+          "lineHeight": "28.8px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "lead": null,
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 96,
+          "width": 1248,
+          "paddingLeft": "0px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "0px 0px 64px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600"
+        ]
+      },
+      "1440:/contact": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "64px",
+          "lineHeight": "76.8px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "24px",
+          "lineHeight": "28.8px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(151, 134, 255)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "lead": null,
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 96,
+          "width": 1248,
+          "paddingLeft": "0px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "0px 0px 64px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600",
+          "Outfit 700"
+        ]
+      },
+      "1440:/modern-slavery-statement": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "64px",
+          "lineHeight": "76.8px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": null,
+        "h4": null,
+        "eyebrow": null,
+        "lead": null,
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 96,
+          "width": 1248,
+          "paddingLeft": "0px"
+        },
+        "section": null,
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600",
+          "Outfit 700"
+        ]
+      },
       "1024:/": {
         "h1": {
           "fontFamily": "Outfit",
@@ -2693,6 +6259,399 @@
           "Outfit 600"
         ]
       },
+      "1024:/pricing": {
+        "h1": null,
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "32px",
+          "lineHeight": "38.4px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "20px",
+          "lineHeight": "24px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": null,
+        "lead": null,
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 0,
+          "width": 1024,
+          "paddingLeft": "64px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "64px 0px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600"
+        ]
+      },
+      "1024:/summit": {
+        "h1": null,
+        "h2": null,
+        "h4": null,
+        "eyebrow": null,
+        "lead": null,
+        "btnPrimary": null,
+        "nav": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(17, 24, 39)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "footer": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(17, 24, 39)",
+          "backgroundColor": "rgb(0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "container": {
+          "x": 0,
+          "width": 1024,
+          "paddingLeft": "64px"
+        },
+        "section": null,
+        "fonts": [
+          "IBM Plex Mono 400",
+          "IBM Plex Mono 500",
+          "Be Vietnam Pro 800",
+          "IBM Plex Mono 400",
+          "IBM Plex Mono 500",
+          "IBM Plex Mono 600",
+          "Inter 400",
+          "Schibsted Grotesk 500"
+        ]
+      },
+      "1024:/partner-directory": {
+        "h1": null,
+        "h2": null,
+        "h4": null,
+        "eyebrow": null,
+        "lead": null,
+        "btnPrimary": null,
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "16px 0px"
+        },
+        "footer": null,
+        "container": null,
+        "section": null,
+        "fonts": [
+          "Outfit 400",
+          "Outfit 600"
+        ]
+      },
+      "1024:/blog": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "32px",
+          "lineHeight": "38.4px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "20px",
+          "lineHeight": "24px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "lead": null,
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 0,
+          "width": 1024,
+          "paddingLeft": "64px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "0px 0px 64px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600"
+        ]
+      },
+      "1024:/contact": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "32px",
+          "lineHeight": "38.4px",
+          "fontWeight": "600",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "20px",
+          "lineHeight": "24px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(151, 134, 255)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "lead": null,
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 0,
+          "width": 1024,
+          "paddingLeft": "64px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "0px 0px 64px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600",
+          "Outfit 700"
+        ]
+      },
+      "1024:/modern-slavery-statement": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": null,
+        "h4": null,
+        "eyebrow": null,
+        "lead": null,
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 0,
+          "width": 1024,
+          "paddingLeft": "64px"
+        },
+        "section": null,
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600",
+          "Outfit 700"
+        ]
+      },
       "375:/": {
         "h1": {
           "fontFamily": "Outfit",
@@ -3000,6 +6959,398 @@
           "Outfit 400",
           "Outfit 500",
           "Outfit 600"
+        ]
+      },
+      "375:/pricing": {
+        "h1": null,
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "32px",
+          "lineHeight": "38.4px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "20px",
+          "lineHeight": "24px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": null,
+        "lead": null,
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 0,
+          "width": 375,
+          "paddingLeft": "24px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "48px 0px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600"
+        ]
+      },
+      "375:/summit": {
+        "h1": null,
+        "h2": null,
+        "h4": null,
+        "eyebrow": null,
+        "lead": null,
+        "btnPrimary": null,
+        "nav": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(17, 24, 39)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "footer": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(17, 24, 39)",
+          "backgroundColor": "rgb(0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "container": {
+          "x": 0,
+          "width": 375,
+          "paddingLeft": "24px"
+        },
+        "section": null,
+        "fonts": [
+          "IBM Plex Mono 400",
+          "IBM Plex Mono 500",
+          "Be Vietnam Pro 800",
+          "IBM Plex Mono 400",
+          "IBM Plex Mono 500",
+          "IBM Plex Mono 600",
+          "Inter 400",
+          "Schibsted Grotesk 500"
+        ]
+      },
+      "375:/partner-directory": {
+        "h1": null,
+        "h2": null,
+        "h4": null,
+        "eyebrow": null,
+        "lead": null,
+        "btnPrimary": null,
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "16px 0px"
+        },
+        "footer": null,
+        "container": null,
+        "section": null,
+        "fonts": [
+          "Outfit 400",
+          "Outfit 600"
+        ]
+      },
+      "375:/blog": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "32px",
+          "lineHeight": "38.4px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "20px",
+          "lineHeight": "24px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "lead": null,
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 0,
+          "width": 375,
+          "paddingLeft": "24px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "0px 0px 48px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600"
+        ]
+      },
+      "375:/contact": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "32px",
+          "lineHeight": "38.4px",
+          "fontWeight": "600",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "20px",
+          "lineHeight": "24px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(151, 134, 255)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "lead": null,
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 0,
+          "width": 375,
+          "paddingLeft": "24px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "0px 0px 48px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600",
+          "Outfit 700"
+        ]
+      },
+      "375:/modern-slavery-statement": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": null,
+        "h4": null,
+        "eyebrow": null,
+        "lead": null,
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 0,
+          "width": 375,
+          "paddingLeft": "24px"
+        },
+        "section": null,
+        "fonts": [
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600",
+          "Outfit 700"
         ]
       }
     }
@@ -4525,7 +8876,85 @@
       "otherViewports": "1280/768/375 sections of the T1-T4 representatives deviate by up to 58.2px (text wrapping of the placeholder copy differs below 1440; the specs' member pages were only matched at 1440). Reported as measured, not gated."
     }
   },
-  "wrapperGateWhitelist": [],
+  "wrapperGateWhitelist": [
+    {
+      "route": "/case-studies/halcyon",
+      "section": "article.story-body",
+      "reviewedBy": "build agent (agent attestation, not a human sign-off)",
+      "justification": "More than 60% of the page: one prose column of chapters plus a facts card; the story is genuinely one long text body (decomposed logically by h3 chapter in the contract). Not a whole-page wrapper: the page header, related/closing blocks stay separate sections.",
+      "maxHeightPx": 4959
+    },
+    {
+      "route": "/blog",
+      "section": "listing.hub-grid",
+      "reviewedBy": "build agent (agent attestation, not a human sign-off)",
+      "justification": "More than 60% of the page: the card collection is the page content of a hub listing; blocks of featured row + card grid are separate logical parts inside one section. Not a whole-page wrapper: the page header, related/closing blocks stay separate sections.",
+      "maxHeightPx": 8938
+    },
+    {
+      "route": "/resources/webinars",
+      "section": "listing.hub-grid",
+      "reviewedBy": "build agent (agent attestation, not a human sign-off)",
+      "justification": "More than 60% of the page: the card collection is the page content of a hub listing; blocks of featured row + card grid are separate logical parts inside one section. Not a whole-page wrapper: the page header, related/closing blocks stay separate sections.",
+      "maxHeightPx": 3958
+    },
+    {
+      "route": "/resources",
+      "section": "listing.hub-grid",
+      "reviewedBy": "build agent (agent attestation, not a human sign-off)",
+      "justification": "More than 60% of the page: the card collection is the page content of a hub listing; blocks of featured row + card grid are separate logical parts inside one section. Not a whole-page wrapper: the page header, related/closing blocks stay separate sections.",
+      "maxHeightPx": 4166
+    },
+    {
+      "route": "/case-studies",
+      "section": "listing.case-grid",
+      "reviewedBy": "build agent (agent attestation, not a human sign-off)",
+      "justification": "More than 60% of the page: the filterable case-study collection (cards, featured band, view more) is the page content of the listing. Not a whole-page wrapper: the page header, related/closing blocks stay separate sections.",
+      "maxHeightPx": 3288
+    },
+    {
+      "route": "/resources/on-demand",
+      "section": "listing.session-grid",
+      "reviewedBy": "build agent (agent attestation, not a human sign-off)",
+      "justification": "More than 60% of the page: the filterable session collection (21 cards per page) is the page content of the listing. Not a whole-page wrapper: the page header, related/closing blocks stay separate sections.",
+      "maxHeightPx": 3298
+    },
+    {
+      "route": "/resources/analytics-lifecycle",
+      "section": "article.guide-body",
+      "reviewedBy": "build agent (agent attestation, not a human sign-off)",
+      "justification": "More than 60% of the page: one long guide or report: prose chapters with a sticky TOC rail share one DOM unit; the guide is the page (decomposed logically by h2 chapter). Not a whole-page wrapper: the page header, related/closing blocks stay separate sections.",
+      "maxHeightPx": 17824
+    },
+    {
+      "route": "/resources/state-of-data-teams",
+      "section": "article.guide-body",
+      "reviewedBy": "build agent (agent attestation, not a human sign-off)",
+      "justification": "More than 60% of the page: one long guide or report: prose chapters with a sticky TOC rail share one DOM unit; the guide is the page (decomposed logically by h2 chapter). Not a whole-page wrapper: the page header, related/closing blocks stay separate sections.",
+      "maxHeightPx": 28469
+    },
+    {
+      "route": "/blog/summit-announcements",
+      "section": "article.post-body",
+      "reviewedBy": "build agent (agent attestation, not a human sign-off)",
+      "justification": "More than 60% of the page: one blog post: header, prose chapters and rail share one DOM unit; the post is the page (decomposed logically by h2 chapter in the contract). Not a whole-page wrapper: the page header, related/closing blocks stay separate sections.",
+      "maxHeightPx": 8859
+    },
+    {
+      "route": "/blog/lattice-joins-northwind",
+      "section": "article.post-body",
+      "reviewedBy": "build agent (agent attestation, not a human sign-off)",
+      "justification": "More than 60% of the page: one blog post: header, prose chapters and rail share one DOM unit; the post is the page (decomposed logically by h2 chapter in the contract). Not a whole-page wrapper: the page header, related/closing blocks stay separate sections.",
+      "maxHeightPx": 4106
+    },
+    {
+      "route": "/about-us/careers",
+      "section": "company.role-list",
+      "reviewedBy": "build agent (agent attestation, not a human sign-off)",
+      "justification": "More than 60% of the page: the open-roles list (about 40 roles grouped by department) is the page content of the careers page. Not a whole-page wrapper: the page header, related/closing blocks stay separate sections.",
+      "maxHeightPx": 7709
+    }
+  ],
   "preExistingClaimChecks": [
     {
       "claim": "CLONE_SPEC.md section 3: reveal IntersectionObserver threshold 0.25 + rootMargin '0px 0px -40px 0px' (marked inferred)",
@@ -4549,13 +8978,13 @@
       "claim": "PAGES.md T1 hero has 1 CTA",
       "holds": false,
       "finding": "every T1 hero renders primary + secondary (variant requiredFields include secondary).",
-      "cite": "src/components/sections/HeroSplit.jsx:21-22"
+      "cite": "src/components/sections/HeroSplit.jsx:45-46"
     },
     {
       "claim": "PAGES.md: N-feat variants A and B differ (bottom-frequency wash vs photo wash)",
       "holds": "partially",
-      "finding": "in the clone both render the same .bottom-frequency CSS wash (Feat.jsx `wash = variant === 'A' || variant === 'B'`), so they are one variant (wash-icon) here.",
-      "cite": "src/components/sections/Feat.jsx:52"
+      "finding": "in the clone both render the same .bottom-frequency CSS wash (Feat.jsx `washed = wash ?? (variant === 'A' || variant === 'B')`; an explicit `wash: false` gives the plain-icon variant), so they are one variant (wash-icon) here.",
+      "cite": "src/components/sections/Feat.jsx:150"
     },
     {
       "claim": "brief: 'carousel 8s/500ms' and 'slider 400ms cubic-bezier(.25,1,.5,1)'",
@@ -4573,13 +9002,13 @@
       "claim": "reduced motion handling",
       "holds": "partially",
       "finding": "reveal, marquee and brush strokes have prefers-reduced-motion rules; the announcement autoplay and sliders do not (recorded as a gap in motion-patterns.json, not enforced).",
-      "cite": "src/index.css:419-428"
+      "cite": "src/index.css:452-519"
     },
     {
       "claim": "specs/T1-T4.md N-baton: the S6 stroke behind N-tabs-dark draws on when it enters the viewport",
       "holds": false,
       "finding": "the current clone renders the tabs-dark stroke `idle` (no draw-on; fill hidden at >=768), per a later measurement of the original noted in Baton.jsx. Changed by a concurrent motion pass during this build; features.tabs-dark motion is tabs.instant only.",
-      "cite": "src/components/sections/Baton.jsx:8-10"
+      "cite": "src/components/sections/Baton.jsx:20-22"
     }
   ],
   "citations": [
@@ -4589,7 +9018,7 @@
     },
     {
       "claim": "fadeUp 400ms cubic-bezier(0,0,0,1) forwards",
-      "cite": "tailwind.config.cjs:160"
+      "cite": "tailwind.config.cjs:187"
     },
     {
       "claim": "nav hide rule: hidden when scrollY > first section top and scrolling down; 200ms standard",
@@ -4601,7 +9030,7 @@
     },
     {
       "claim": "marquee 30s linear infinite",
-      "cite": "tailwind.config.cjs:161"
+      "cite": "tailwind.config.cjs:188"
     },
     {
       "claim": "announcement autoplay 8000ms, 500ms ease-in-out",
@@ -4613,11 +9042,11 @@
     },
     {
       "claim": "brush stroke draw-on 1s ease-in-out, fill 250ms at >=768, reduced motion renders final state",
-      "cite": "src/index.css:387-399"
+      "cite": "src/index.css:418-429"
     },
     {
       "claim": "T5-T17 render the ComingSoon stand-in",
-      "cite": "src/App.jsx:12-21"
+      "cite": "src/App.jsx:25-34"
     },
     {
       "claim": "homepage hero stroke and hidden video thumbnail intentionally not built",

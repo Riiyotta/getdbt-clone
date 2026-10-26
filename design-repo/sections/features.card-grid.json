@@ -10,8 +10,8 @@
     "file": "src/components/sections/Feat.jsx",
     "export": "Feat",
     "tag": "section",
-    "lines": "39-92",
-    "tagLine": 56
+    "lines": "129-205",
+    "tagLine": 172
   },
   "additionalSources": [
     {
@@ -23,8 +23,9 @@
       "tagLine": 9
     }
   ],
-  "purpose": "Section header (eyebrow, heading-2, paragraph, optional buttons/lockup) above a 3- or 4-column grid of feature cards (icon or image cards).",
+  "purpose": "Section header (eyebrow, heading-2, paragraph, optional buttons or lockup) above a 3- or 4-column grid of feature cards (icon, image, stat, logo or bordered cards), light or dark, optionally washed or with a brush stroke behind.",
   "retrievalEligible": true,
+  "placement": "main",
   "variants": {
     "bordered-link": {
       "description": "homepage 'why' grid: bordered blur cards, 56px icon, text link",
@@ -35,6 +36,7 @@
         "title"
       ],
       "forbiddenFields": [
+        "anchor",
         "lockup",
         "primary",
         "tertiary"
@@ -50,12 +52,13 @@
       ]
     },
     "wash-icon": {
-      "description": "source variants A+B (identical render in the clone): icon cards on the bottom-frequency colour wash",
+      "description": "icon cards on the bottom-frequency colour wash (source variants A/B)",
       "requiredFields": [
         "cards",
         "title"
       ],
       "forbiddenFields": [
+        "anchor",
         "lockup",
         "primary",
         "tertiary"
@@ -67,6 +70,8 @@
         ]
       },
       "observedOn": [
+        "/about-us",
+        "/about-us/values",
         "/industry/energy-utilities",
         "/industry/financial-services",
         "/industry/healthcare",
@@ -77,17 +82,19 @@
         "/product/develop",
         "/product/mesh",
         "/product/semantic-layer",
-        "/product/test-and-observe"
+        "/product/test-and-observe",
+        "/product/what-is-lattice"
       ]
     },
     "four-column": {
-      "description": "source variant D: 4-column icon cards",
+      "description": "4-column icon cards",
       "requiredFields": [
         "body",
         "cards",
         "title"
       ],
       "forbiddenFields": [
+        "anchor",
         "lockup"
       ],
       "listSizes": {
@@ -102,20 +109,23 @@
         "/industry/healthcare",
         "/industry/manufacturing",
         "/industry/telecommunications",
+        "/learn",
         "/product/ai",
+        "/product/analyst",
         "/product/data-modernization",
         "/product/data-trust",
         "/product/embedded-analytics"
       ]
     },
     "image-card": {
-      "description": "source variant C: bordered blur cards with a 4:3 image and a text link",
+      "description": "bordered image cards with a 4:3 image and a text link (light or dark surface)",
       "requiredFields": [
         "body",
         "cards",
         "title"
       ],
       "forbiddenFields": [
+        "anchor",
         "tertiary"
       ],
       "listSizes": {
@@ -130,47 +140,174 @@
         "/data-platforms/helixa",
         "/data-platforms/northwind",
         "/data-platforms/quarry",
-        "/data-platforms/stratus"
+        "/data-platforms/stratus",
+        "/learn"
+      ]
+    },
+    "border-card": {
+      "description": "bordered blur card (radius 16, padding 40): optional icon or stat, title, body, link (light or dark)",
+      "requiredFields": [
+        "cards"
+      ],
+      "forbiddenFields": [
+        "anchor",
+        "lockup"
+      ],
+      "listSizes": {
+        "cards": [
+          2,
+          13
+        ]
+      },
+      "observedOn": [
+        "/about-us/careers",
+        "/about-us/values",
+        "/community",
+        "/contact",
+        "/learn",
+        "/product/assistant",
+        "/product/charts",
+        "/product/lattice",
+        "/product/self-hosted-vs-platform",
+        "/product/state"
+      ]
+    },
+    "stat-card": {
+      "description": "borderless stat card: 80/80 stat value + label",
+      "requiredFields": [
+        "cards"
+      ],
+      "forbiddenFields": [
+        "anchor",
+        "lockup",
+        "primary",
+        "tertiary"
+      ],
+      "listSizes": {
+        "cards": [
+          4,
+          4
+        ]
+      },
+      "observedOn": [
+        "/about-us",
+        "/community"
+      ]
+    },
+    "plain-icon": {
+      "description": "the same icon cards on plain white",
+      "requiredFields": [
+        "cards"
+      ],
+      "forbiddenFields": [
+        "anchor",
+        "lockup",
+        "primary",
+        "tertiary"
+      ],
+      "listSizes": {
+        "cards": [
+          3,
+          3
+        ]
+      },
+      "observedOn": [
+        "/product/charts",
+        "/product/governance",
+        "/product/lattice",
+        "/services"
+      ]
+    },
+    "inline-icon": {
+      "description": "32px icon beside a heading-4, body below",
+      "requiredFields": [
+        "body",
+        "cards",
+        "eyebrow",
+        "title"
+      ],
+      "forbiddenFields": [
+        "anchor",
+        "lockup",
+        "primary",
+        "tertiary"
+      ],
+      "listSizes": {
+        "cards": [
+          3,
+          3
+        ]
+      },
+      "observedOn": [
+        "/product/assistant"
+      ]
+    },
+    "logo-card": {
+      "description": "bordered card with a 32-tall integration logo, title, body, link",
+      "requiredFields": [
+        "anchor",
+        "cards",
+        "title"
+      ],
+      "forbiddenFields": [
+        "body",
+        "eyebrow",
+        "lockup",
+        "primary",
+        "tertiary"
+      ],
+      "listSizes": {
+        "cards": [
+          1,
+          10
+        ]
+      },
+      "observedOn": [
+        "/product/integrations"
       ]
     }
   },
   "content": {
     "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
     "fields": {
+      "anchor": {
+        "type": "ref",
+        "observedIn": 8
+      },
       "body": {
         "type": "text",
-        "maxWords": 67,
-        "maxChars": 410,
-        "observedIn": 25
+        "maxWords": 107,
+        "maxChars": 637,
+        "observedIn": 46
       },
       "cards": {
         "type": "list",
-        "minItems": 3,
-        "maxItems": 4,
-        "observedIn": 27
+        "minItems": 1,
+        "maxItems": 13,
+        "observedIn": 61
       },
       "cards[].action.href": {
         "type": "link",
-        "observedIn": 21
+        "observedIn": 100
       },
       "cards[].action.label": {
         "type": "text",
         "maxWords": 7,
         "maxChars": 36,
-        "observedIn": 21
+        "observedIn": 100
       },
       "cards[].body": {
         "type": "text",
-        "maxWords": 50,
-        "maxChars": 309,
-        "observedIn": 90
+        "maxWords": 70,
+        "maxChars": 391,
+        "observedIn": 229
       },
       "cards[].icon": {
         "type": "asset",
         "referenceRoles": [
           "icon.feature"
         ],
-        "observedIn": 72,
+        "observedIn": 146,
         "generatedRoles": [
           "icon.feature"
         ]
@@ -179,14 +316,14 @@
         "type": "text",
         "maxWords": 0,
         "maxChars": 0,
-        "observedIn": 72
+        "observedIn": 146
       },
       "cards[].image": {
         "type": "asset",
         "referenceRoles": [
           "photo.composite-scene"
         ],
-        "observedIn": 18,
+        "observedIn": 21,
         "generatedRoles": [
           "photo.generated-scene"
         ]
@@ -195,19 +332,47 @@
         "type": "text",
         "maxWords": 0,
         "maxChars": 0,
-        "observedIn": 18
+        "observedIn": 21
+      },
+      "cards[].label": {
+        "type": "text",
+        "maxWords": 8,
+        "maxChars": 54,
+        "observedIn": 11
+      },
+      "cards[].logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "platform.logo"
+        ],
+        "observedIn": 44,
+        "generatedRoles": [
+          "platform.placeholder-icon"
+        ]
+      },
+      "cards[].logo.alt": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 15,
+        "observedIn": 44
+      },
+      "cards[].stat": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 6,
+        "observedIn": 11
       },
       "cards[].title": {
         "type": "text",
-        "maxWords": 7,
+        "maxWords": 9,
         "maxChars": 49,
-        "observedIn": 90
+        "observedIn": 233
       },
       "eyebrow": {
         "type": "text",
         "maxWords": 5,
         "maxChars": 31,
-        "observedIn": 17
+        "observedIn": 29
       },
       "lockup.href": {
         "type": "link",
@@ -231,29 +396,29 @@
       },
       "primary.href": {
         "type": "link",
-        "observedIn": 5
+        "observedIn": 8
       },
       "primary.label": {
         "type": "text",
         "maxWords": 5,
         "maxChars": 27,
-        "observedIn": 5
+        "observedIn": 8
       },
       "tertiary.href": {
         "type": "link",
-        "observedIn": 3
+        "observedIn": 4
       },
       "tertiary.label": {
         "type": "text",
         "maxWords": 7,
         "maxChars": 40,
-        "observedIn": 3
+        "observedIn": 4
       },
       "title": {
         "type": "text",
         "maxWords": 15,
         "maxChars": 73,
-        "observedIn": 27
+        "observedIn": 57
       }
     }
   },
@@ -264,7 +429,7 @@
         "referenceRoles": [
           "icon.feature"
         ],
-        "observedIn": 72,
+        "observedIn": 146,
         "generatedRoles": [
           "icon.feature"
         ]
@@ -274,9 +439,19 @@
         "referenceRoles": [
           "photo.composite-scene"
         ],
-        "observedIn": 18,
+        "observedIn": 21,
         "generatedRoles": [
           "photo.generated-scene"
+        ]
+      },
+      "cards[].logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "platform.logo"
+        ],
+        "observedIn": 44,
+        "generatedRoles": [
+          "platform.placeholder-icon"
         ]
       },
       "lockup.image": {
@@ -295,10 +470,25 @@
   "generatedAssetRoles": [
     "icon.feature",
     "partner.placeholder-lockup",
-    "photo.generated-scene"
+    "photo.generated-scene",
+    "platform.placeholder-icon"
   ],
   "style": {
     "props": {
+      "background": {
+        "kind": "enum",
+        "allowed": [
+          "wash",
+          "white"
+        ]
+      },
+      "columns": {
+        "kind": "enum",
+        "allowed": [
+          "3",
+          "4"
+        ]
+      },
       "headerAlign": {
         "kind": "enum",
         "allowed": [
@@ -319,22 +509,64 @@
           "default",
           "none"
         ]
+      },
+      "revealTrigger": {
+        "kind": "enum",
+        "allowed": [
+          "load",
+          "scroll"
+        ]
+      },
+      "strokeGradient": {
+        "kind": "token",
+        "allowed": [
+          "gradient.01",
+          "gradient.02",
+          "gradient.05",
+          "gradient.22"
+        ]
+      },
+      "strokeShape": {
+        "kind": "token",
+        "allowed": [
+          "stroke.s10",
+          "stroke.s2",
+          "stroke.s4",
+          "stroke.s6",
+          "stroke.s7",
+          "stroke.s9"
+        ]
+      },
+      "surface": {
+        "kind": "enum",
+        "allowed": [
+          "dark",
+          "light"
+        ]
       }
     },
     "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
   },
   "constraints": {
-    "maxPerPage": 2
+    "maxPerPage": 8,
+    "consecutiveVariants": [
+      "border-card",
+      "logo-card"
+    ]
   },
   "motion": {
     "allowedPatterns": [
-      "reveal.fade-up"
+      "reveal.fade-up",
+      "stroke.draw-on",
+      "stroke.still"
     ],
     "requiredPatterns": [
       "reveal.fade-up"
     ],
     "reducedMotionFallback": {
-      "reveal.fade-up": "show-immediately"
+      "reveal.fade-up": "show-immediately",
+      "stroke.draw-on": "render-final-state",
+      "stroke.still": "none-needed"
     },
     "stagger": "Only the header carries a reveal (one span at 0ms). | reveal targets with inline delays, see src/components/WhyCards.jsx:7-51"
   },
@@ -352,6 +584,7 @@
       "behavior": "1 column, gap 40"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "/": [
@@ -375,20 +608,17 @@
       "/product/semantic-layer": [
         636
       ],
-      "/product/data-modernization": [
-        658.4
-      ],
       "/product/ai": [
         687.2
       ],
       "/product/embedded-analytics": [
         792.8
       ],
+      "/product/data-modernization": [
+        658.4
+      ],
       "/product/data-trust": [
         768.8
-      ],
-      "/data-platforms/cobalt": [
-        1088.5
       ],
       "/data-platforms/northwind": [
         944.5
@@ -404,6 +634,9 @@
       ],
       "/data-platforms/driftway": [
         992.5
+      ],
+      "/data-platforms/cobalt": [
+        1088.5
       ],
       "/industry/financial-services": [
         591.2,
@@ -424,11 +657,77 @@
       "/industry/telecommunications": [
         623.2,
         402.4
+      ],
+      "/contact": [
+        458.8
+      ],
+      "/learn": [
+        538.4,
+        838.9,
+        732.4
+      ],
+      "/community": [
+        585.6,
+        764.4,
+        1023.2
+      ],
+      "/about-us": [
+        264,
+        586.4
+      ],
+      "/about-us/values": [
+        1993.2,
+        1689.6,
+        586.4
+      ],
+      "/about-us/careers": [
+        743.2
+      ],
+      "/services": [
+        514.4
+      ],
+      "/product/what-is-lattice": [
+        578.4
+      ],
+      "/product/lattice": [
+        352.8,
+        1128.8,
+        578.4
+      ],
+      "/product/state": [
+        684.4
+      ],
+      "/product/assistant": [
+        1154.4,
+        435.2
+      ],
+      "/product/charts": [
+        591.2,
+        644.4
+      ],
+      "/product/governance": [
+        490.4
+      ],
+      "/product/integrations": [
+        1298,
+        644.4,
+        1732.8,
+        620.4,
+        1346,
+        1394,
+        644.4,
+        596.4
+      ],
+      "/product/analyst": [
+        648.8
+      ],
+      "/product/self-hosted-vs-platform": [
+        691.6
       ]
     }
   },
   "evidence": [
-    "src/components/sections/Feat.jsx:39-92",
+    "src/components/sections/Feat.jsx:129-205",
     "src/components/WhyCards.jsx:7-51"
   ]
 }

@@ -7,6 +7,6 @@
     "indicator.slider-inactive"
   ],
   "evidence": [
-    "src/components/sections/TestiSlider.jsx:71-86"
+    "src/components/sections/TestiSlider.jsx:75-90"
   ]
 }

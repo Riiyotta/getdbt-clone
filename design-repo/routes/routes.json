@@ -1,431 +1,502 @@
 {
-  "note": "every route the clone serves, mapped exactly once. Original-site URLs are intentionally not recorded here (src/routes.js keeps them as documentation for recon/QA only).",
+  "note": "every route the clone serves, mapped exactly once. Original-site URLs are intentionally not recorded here (src/routes.js keeps them as documentation for recon/QA only). `chrome` mirrors src/Layout.jsx (full | event | none).",
   "routes": [
     {
       "path": "/",
       "template": "T0",
       "title": "Home",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/product/develop",
       "template": "T1",
       "title": "Develop",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/product/test-and-observe",
       "template": "T1",
       "title": "Test and observe",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/product/mesh",
       "template": "T1",
       "title": "Mesh",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/product/catalog",
       "template": "T1",
       "title": "Catalog",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/product/deploy",
       "template": "T1",
       "title": "Deploy",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/product/semantic-layer",
       "template": "T1",
       "title": "Semantic layer",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/product/ai",
       "template": "T2",
       "title": "AI",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/product/embedded-analytics",
       "template": "T2",
       "title": "Embedded analytics",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/product/data-modernization",
       "template": "T2",
       "title": "Data modernization",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/product/data-trust",
       "template": "T2",
       "title": "Data trust",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/product/cost-optimization",
       "template": "T2",
       "title": "Cost optimization",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/data-platforms/northwind",
       "template": "T3",
       "title": "Northwind",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/data-platforms/quarry",
       "template": "T3",
       "title": "Quarry",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/data-platforms/helixa",
       "template": "T3",
       "title": "Helixa",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/data-platforms/stratus",
       "template": "T3",
       "title": "Stratus",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/data-platforms/driftway",
       "template": "T3",
       "title": "Driftway",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/data-platforms/cobalt",
       "template": "T3",
       "title": "Cobalt DB",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/industry/financial-services",
       "template": "T4",
       "title": "Financial services",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/industry/healthcare",
       "template": "T4",
       "title": "Healthcare",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/industry/manufacturing",
       "template": "T4",
       "title": "Manufacturing",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/industry/energy-utilities",
       "template": "T4",
       "title": "Energy and utilities",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/industry/telecommunications",
       "template": "T4",
       "title": "Telecommunications",
+      "chrome": "full",
       "status": "implemented"
     },
     {
       "path": "/case-studies/kestrel",
       "template": "T5",
       "title": "Kestrel",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/case-studies/meridian-partners",
       "template": "T5",
       "title": "Meridian Partners",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/case-studies/halcyon",
       "template": "T5",
       "title": "Halcyon",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/case-studies/basalt-health",
       "template": "T5",
       "title": "Basalt Health",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/blog",
       "template": "T6",
       "title": "Blog",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/resources/webinars",
       "template": "T6",
       "title": "Webinars",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/resources",
       "template": "T6",
       "title": "Resources",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/case-studies",
       "template": "T7",
       "title": "Case studies",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/resources/on-demand",
       "template": "T7",
       "title": "On-demand sessions",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/events",
       "template": "T7",
       "title": "Events",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/press",
       "template": "T7",
       "title": "Press",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/resources/analytics-lifecycle",
       "template": "T8",
       "title": "The analytics lifecycle",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/resources/state-of-data-teams",
       "template": "T8",
       "title": "State of data teams",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/blog/summit-announcements",
       "template": "T8",
       "title": "Summit announcements",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/blog/lattice-joins-northwind",
       "template": "T8",
       "title": "Lattice joins Northwind",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/resources/webinars/launch-showcase",
       "template": "T9",
       "title": "Launch showcase",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/resources/whitepaper-control-plane",
       "template": "T9",
       "title": "Control plane whitepaper",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/resources/webinars/charts-as-code",
       "template": "T9",
       "title": "Charts as code",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/contact",
       "template": "T10",
       "title": "Contact",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/signup",
       "template": "T10",
       "title": "Sign up",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/community/join",
       "template": "T10",
       "title": "Join the community",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/report-a-problem",
       "template": "T10",
       "title": "Report a problem",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/modern-slavery-statement",
       "template": "T11",
       "title": "Supply chain statement",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/terms-of-use",
       "template": "T11",
       "title": "Terms of use",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/legal/ai-principles",
       "template": "T11",
       "title": "AI principles",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/security",
       "template": "T12",
       "title": "Security",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/certification",
       "template": "T12",
       "title": "Certification",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/learn",
       "template": "T12",
       "title": "Learn",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/community",
       "template": "T12",
       "title": "Community",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/about-us",
       "template": "T12",
       "title": "About us",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/about-us/values",
       "template": "T12",
       "title": "Values",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/about-us/careers",
       "template": "T12",
       "title": "Careers",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/about-us/belonging",
       "template": "T12",
       "title": "Belonging",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/partners",
       "template": "T12",
       "title": "Partners",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/services",
       "template": "T12",
       "title": "Services",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/product/what-is-lattice",
       "template": "T13",
       "title": "What is Lattice",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/product/lattice",
       "template": "T13",
       "title": "Lattice platform",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/product/state",
       "template": "T13",
       "title": "State",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/product/assistant",
       "template": "T13",
       "title": "Assistant",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/product/charts",
       "template": "T13",
       "title": "Charts",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/product/governance",
       "template": "T13",
       "title": "Governance",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/product/integrations",
       "template": "T13",
       "title": "Integrations",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/product/analyst",
       "template": "T13",
       "title": "Analyst",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/product/self-hosted-vs-platform",
       "template": "T13",
       "title": "Self-hosted vs platform",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/pricing",
       "template": "T14",
       "title": "Pricing",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/champions",
       "template": "T15",
       "title": "Champions",
-      "status": "pending"
+      "chrome": "full",
+      "status": "implemented"
     },
     {
       "path": "/summit",
       "template": "T16",
       "title": "Summit",
-      "status": "pending"
+      "chrome": "event",
+      "status": "implemented"
     },
     {
       "path": "/partner-directory",
       "template": "T17",
       "title": "Partner directory",
-      "status": "pending"
+      "chrome": "none",
+      "status": "implemented"
     }
   ],
   "redirects": [
@@ -453,10 +524,11 @@
   "fallback": {
     "path": "*",
     "renders": "ComingSoon stand-in",
-    "note": "unknown paths and pending templates render a temporary 'being built' page (src/pages/ComingSoon.jsx)"
+    "note": "unknown paths render a temporary 'being built' page (src/pages/ComingSoon.jsx); every registered template now has a page component"
   },
   "evidence": [
     "src/routes.js:1-114",
-    "src/App.jsx:1-33"
+    "src/App.jsx:1-46",
+    "src/Layout.jsx:12-16"
   ]
 }

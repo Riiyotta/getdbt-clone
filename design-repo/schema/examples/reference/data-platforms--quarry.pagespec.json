@@ -721,7 +721,10 @@
       },
       "style": {
         "strokeShape": "stroke.s3",
-        "strokeGradient": "gradient.01"
+        "strokeGradient": "gradient.01",
+        "leadSize": "default",
+        "columns": "6/6",
+        "bottomPadding": "default"
       }
     },
     {
@@ -778,8 +781,11 @@
         "reducedMotionFallback": "show-immediately"
       },
       "style": {
+        "revealTrigger": "scroll",
         "headerAlign": "start",
-        "paddingTop": "default"
+        "paddingTop": "default",
+        "surface": "light",
+        "columns": "3"
       }
     },
     {
@@ -791,9 +797,15 @@
           "Lattice connects natively to Quarry so your team can design, test and ship models in one place, then keep them healthy in production."
         ],
         "bullets": [
-          "Compile and check every model against the live Quarry schema",
-          "Run tests in pull requests before changes reach production datasets",
-          "Schedule state-aware jobs that only rebuild what actually changed"
+          {
+            "text": "Compile and check every model against the live Quarry schema"
+          },
+          {
+            "text": "Run tests in pull requests before changes reach production datasets"
+          },
+          {
+            "text": "Schedule state-aware jobs that only rebuild what actually changed"
+          }
         ],
         "primary": {
           "label": "Talk to an expert",
@@ -812,6 +824,10 @@
       "motion": {
         "pattern": "reveal.fade-up",
         "reducedMotionFallback": "show-immediately"
+      },
+      "style": {
+        "columns": "6/6",
+        "topPadding": "default"
       }
     },
     {

@@ -19,7 +19,8 @@
   },
   "defaultTheme": "light",
   "schemaValidatedThemes": [
-    "light"
+    "light",
+    "event"
   ],
   "scope": {
     "implementedTemplates": [
@@ -27,9 +28,7 @@
       "T1",
       "T2",
       "T3",
-      "T4"
-    ],
-    "pendingTemplates": [
+      "T4",
       "T5",
       "T6",
       "T7",
@@ -44,32 +43,33 @@
       "T16",
       "T17"
     ],
+    "pendingTemplates": [],
     "note": "pending templates are registered with routes and draft sequences only; no contracts were invented for components the clone has not built (src/App.jsx renders ComingSoon for them)."
   },
   "counts": {
-    "tokensInCatalog": 192,
-    "foundationTokens": 130,
-    "semanticTokens": 40,
-    "componentTokens": 22,
-    "motionPatterns": 11,
+    "tokensInCatalog": 306,
+    "foundationTokens": 205,
+    "semanticTokens": 60,
+    "componentTokens": 41,
+    "motionPatterns": 24,
     "primitives": 11,
     "components": 11,
-    "sections": 26,
-    "sectionsRetrievalIneligible": 3,
+    "sections": 84,
+    "sectionsRetrievalIneligible": 6,
     "templates": 18,
-    "templatesImplemented": 5,
-    "templatesPending": 13,
+    "templatesImplemented": 18,
+    "templatesPending": 0,
     "routes": 71,
-    "routesImplemented": 23,
-    "routesPending": 48,
+    "routesImplemented": 71,
+    "routesPending": 0,
     "redirects": 5,
-    "assetRoles": 33,
+    "assetRoles": 37,
     "assetRolesGenerationSafe": 16,
-    "graphRules": 12,
-    "allowlistEntries": 48,
-    "referenceExamples": 23,
+    "graphRules": 15,
+    "allowlistEntries": 106,
+    "referenceExamples": 71,
     "generatedExamples": 2,
-    "measuredRoutes1440": 23
+    "measuredRoutes1440": 71
   },
   "entryPoints": {
     "readme": "README.md",
@@ -96,6 +96,7 @@
     "tokenComponent": "tokens/20-component/component.json",
     "tokenLayout": "tokens/30-layout/layout.json",
     "themeLight": "tokens/themes/light.json",
+    "themeEvent": "tokens/themes/event.json",
     "tokenCatalog": "tokens/llm/token-catalog.json",
     "tokenPolicy": "tokens/llm/token-policy.json",
     "componentAllowlist": "tokens/llm/component-allowlist.json",

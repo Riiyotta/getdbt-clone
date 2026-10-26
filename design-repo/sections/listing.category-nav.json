@@ -1,0 +1,134 @@
+{
+  "id": "listing.category-nav",
+  "title": "Category navigation and search bar",
+  "semantic": {
+    "id": "listing.category-nav",
+    "category": "LISTING"
+  },
+  "source": {
+    "id": "component:CategoryNav",
+    "file": "src/components/listing/CategoryNav.jsx",
+    "export": "CategoryNav",
+    "tag": "nav",
+    "lines": "9-50",
+    "tagLine": 23
+  },
+  "additionalSources": [],
+  "purpose": "Sticky (top 0, z 50) blurred bar: search field (3/12) and category pills (8/12, pushed right at >=1024); a 1px bottom border appears only while stuck (>=768). The search is inert, as on the source.",
+  "retrievalEligible": false,
+  "placement": "main",
+  "retrievalIneligibleReason": "Sticky bar of category pills and a search field that only changes what the listing below shows; it is a navigation/filter control, not page content.",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "pills",
+        "search"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "pills": [
+          4,
+          8
+        ]
+      },
+      "observedOn": [
+        "/blog",
+        "/resources",
+        "/resources/webinars"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "pills": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 8,
+        "observedIn": 3
+      },
+      "pills[].href": {
+        "type": "link",
+        "observedIn": 16
+      },
+      "pills[].label": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 12,
+        "observedIn": 16
+      },
+      "search": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 17,
+        "observedIn": 3
+      }
+    }
+  },
+  "assets": {
+    "fields": {},
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "sticky.pin"
+    ],
+    "requiredPatterns": [
+      "sticky.pin"
+    ],
+    "reducedMotionFallback": {
+      "sticky.pin": "none-needed"
+    },
+    "stagger": "none"
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "search left, pills right"
+    },
+    {
+      "range": "768-1023",
+      "behavior": "search and pills share the row"
+    },
+    {
+      "range": "<768",
+      "behavior": "stacked; pill row scrolls horizontally"
+    }
+  ],
+  "runtimeUi": [
+    {
+      "part": "search",
+      "behavior": "text field with a clear button; inert (no filtering)"
+    },
+    {
+      "part": "stuck-border",
+      "behavior": "bottom border added once the bar is pinned"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/blog": [
+        108
+      ],
+      "/resources/webinars": [
+        108
+      ],
+      "/resources": [
+        108
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/listing/CategoryNav.jsx:9-50"
+  ]
+}

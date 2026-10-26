@@ -1,0 +1,21 @@
+{
+  "theme": "event",
+  "note": "scope of the event microsite (route /summit, chrome 'event', root wrapper data-site='summit'): its own palette, three scoped font families, radius 0 everywhere and instant colour-swap hovers. Resolved from the same token files; no value is invented.",
+  "cite": "src/styles/oneoffs.css:6-31",
+  "resolved": {
+    "text.event.fg": "#111827",
+    "surface.event.bg": "#ffffff",
+    "surface.event.ink": "#000000",
+    "action.event.bg": "#fe6703",
+    "action.event.hover-bg": "#ffffff",
+    "accent.event.citron": "#d8ff33",
+    "accent.event.pink": "#ec71f6",
+    "accent.event.blue": "#6b9aff"
+  },
+  "fonts": {
+    "display": "'Schibsted Grotesk', Arial, sans-serif",
+    "button": "'Be Vietnam Pro', Archivo, Arial, sans-serif",
+    "body": "Inter, Arial, sans-serif"
+  },
+  "externalRequest": "the clone loads the three scoped fonts from a public font-stylesheet host while the event chrome is mounted (src/components/chrome/EventChrome.jsx useSummitFonts); recorded as a known gap against the repo's no-external-request preference, never a PageSpec field."
+}

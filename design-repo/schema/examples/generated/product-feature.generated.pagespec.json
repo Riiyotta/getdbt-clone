@@ -410,27 +410,27 @@
               "label": "Featured",
               "links": [
                 {
-                  "label": "Brightfold",
+                  "label": "Larkspur Works",
                   "href": "#"
                 },
                 {
-                  "label": "Oakhaven",
+                  "label": "Harrowgate",
                   "href": "#"
                 },
                 {
-                  "label": "Pellucid",
+                  "label": "Ashgrove",
                   "href": "#"
                 },
                 {
-                  "label": "Corvane",
+                  "label": "Tamarack",
                   "href": "#"
                 },
                 {
-                  "label": "Sablewood",
+                  "label": "Velmora",
                   "href": "#"
                 },
                 {
-                  "label": "Tinmoor",
+                  "label": "Penrith",
                   "href": "#"
                 }
               ],
@@ -805,7 +805,7 @@
         "tabs": [
           {
             "title": "Visual canvas",
-            "body": "Drag sources onto a canvas, join them and add calculations. The canvas writes readable SQL that goes through the same review as hand-written code.",
+            "body": "Place two sources on the canvas, connect them and add a derived column. The canvas emits plain SQL, reviewed exactly like code someone typed.",
             "media": {
               "assetRole": "product.generated-visual",
               "alt": "Canvas joining two sources",
@@ -868,13 +868,13 @@
         "body": "A few examples of how authors cut cycle time.",
         "stories": [
           {
-            "name": "Pellucid",
+            "name": "Ashgrove",
             "logo": {
               "assetRole": "customer.placeholder-logo",
-              "alt": "Pellucid",
+              "alt": "Ashgrove",
               "ref": "generate:grey-wordmark"
             },
-            "headline": "Pellucid moved forty reports to reviewed code in one quarter.",
+            "headline": "Ashgrove moved forty reports to reviewed code in one quarter.",
             "quote": "Reviews used to be screenshots in a chat thread. Now every change has a preview and a test run attached, so approving a pull request takes minutes.",
             "person": "Imani Holt",
             "role": "Analytics Engineering Lead",
@@ -890,17 +890,17 @@
             ],
             "action": {
               "label": "Read the story",
-              "href": "/stories/pellucid"
+              "href": "/stories/ashgrove"
             }
           },
           {
-            "name": "Corvane",
+            "name": "Tamarack",
             "logo": {
               "assetRole": "customer.placeholder-logo",
-              "alt": "Corvane",
+              "alt": "Tamarack",
               "ref": "generate:grey-wordmark"
             },
-            "headline": "Corvane gave twelve analysts a shared project.",
+            "headline": "Tamarack gave twelve analysts a shared project.",
             "quote": "Our analysts write the first draft on the canvas and engineers refine it in the editor. Both see the same history and the same checks.",
             "person": "Theo Marsh",
             "role": "Data Platform Manager",
@@ -916,7 +916,7 @@
             ],
             "action": {
               "label": "Read the story",
-              "href": "/stories/corvane"
+              "href": "/stories/tamarack"
             }
           }
         ]

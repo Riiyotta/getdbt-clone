@@ -1,0 +1,1948 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "T8",
+  "route": "/resources/analytics-lifecycle",
+  "theme": "light",
+  "brand": {
+    "name": "Lattice"
+  },
+  "meta": {
+    "title": "The analytics lifecycle"
+  },
+  "nodes": [
+    {
+      "section": "shell.announcement-bar",
+      "variant": "default",
+      "content": {
+        "slides": [
+          {
+            "text": "Lattice 4.0 is here with faster incremental builds, smarter tests, and a fresh lineage explorer.",
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "text": "Join our live workshop on modeling patterns this month.",
+            "href": "/resources/webinars/charts-as-code"
+          },
+          {
+            "text": "New report: how two hundred data teams trimmed warehouse spend while shipping trusted models each week.",
+            "href": "/resources/state-of-data-teams"
+          },
+          {
+            "text": "Lattice Cloud now runs in three new regions across Europe and Asia. Check region availability.",
+            "href": "/blog/lattice-joins-northwind"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "carousel.autoplay",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.navbar",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-dark.svg"
+        },
+        "menuLabels": [
+          "Product",
+          "Solutions",
+          "Customers",
+          "Resources",
+          "Community"
+        ],
+        "plainLink": {
+          "label": "Pricing",
+          "href": "/pricing"
+        },
+        "secondaryAction": {
+          "label": "Get started",
+          "href": "/signup"
+        },
+        "primaryAction": {
+          "label": "Book a demo",
+          "href": "/contact"
+        }
+      },
+      "motion": {
+        "pattern": "nav.hide-on-scroll",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mega-menu",
+      "variant": "default",
+      "content": {
+        "menus": [
+          {
+            "trigger": "Product",
+            "groups": [
+              {
+                "label": "First steps",
+                "items": [
+                  {
+                    "title": "Why Lattice",
+                    "description": "How Lattice turns SQL into trusted products",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/product/what-is-lattice"
+                  },
+                  {
+                    "title": "Platform tour",
+                    "description": "Watch a ten-minute walkthrough of the full workspace",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/product/lattice"
+                  }
+                ]
+              },
+              {
+                "label": "Everything in the box",
+                "items": [
+                  {
+                    "title": "Build",
+                    "description": "Author models in the browser, a desktop editor or the command line",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/develop"
+                  },
+                  {
+                    "title": "Validate",
+                    "description": "Assert rules on every model",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/test-and-observe"
+                  },
+                  {
+                    "title": "Design",
+                    "description": "Split big projects by domain",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/mesh"
+                  },
+                  {
+                    "title": "Explore",
+                    "description": "Search docs, owners and lineage",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/catalog"
+                  },
+                  {
+                    "title": "Ship",
+                    "description": "Trigger runs on merge or a timer",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/deploy"
+                  },
+                  {
+                    "title": "Measure",
+                    "description": "Publish one definition of revenue to every tool that asks",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/semantic-layer"
+                  }
+                ]
+              }
+            ],
+            "featured": {
+              "title": "The modeling lifecycle",
+              "description": "Map how ideas move from first query to production model, with clear owners and checks at each step",
+              "thumbnail": {
+                "assetRole": "illustration.abstract",
+                "alt": "",
+                "ref": "/assets/menu/featured.svg"
+              },
+              "href": "/resources/analytics-lifecycle"
+            },
+            "side": {
+              "label": "Feature spotlight",
+              "links": [
+                {
+                  "label": "Smart state",
+                  "href": "/product/state"
+                },
+                {
+                  "label": "Guided setup",
+                  "href": "/product/assistant"
+                },
+                {
+                  "label": "Charts",
+                  "href": "/product/charts"
+                },
+                {
+                  "label": "Governance",
+                  "href": "/product/governance"
+                },
+                {
+                  "label": "Security",
+                  "href": "/security"
+                },
+                {
+                  "label": "Integrations",
+                  "href": "/product/integrations"
+                }
+              ],
+              "action": {
+                "label": "See the latest demo",
+                "href": "/resources/webinars/launch-showcase"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Solutions",
+            "groups": [
+              {
+                "label": "By need",
+                "items": [
+                  {
+                    "title": "Analytics",
+                    "description": "Give analysts a governed place to model data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/analyst"
+                  },
+                  {
+                    "title": "AI readiness",
+                    "description": "Feed assistants with well-described data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/ai"
+                  }
+                ]
+              },
+              {
+                "label": "By team",
+                "items": [
+                  {
+                    "title": "Data engineers",
+                    "description": "Ship pipelines with tests built in",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/data-modernization"
+                  },
+                  {
+                    "title": "Analysts",
+                    "description": "Own models end to end in plain SQL",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/embedded-analytics"
+                  },
+                  {
+                    "title": "Platform leads",
+                    "description": "Standardize how every team builds",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/data-trust"
+                  },
+                  {
+                    "title": "Executives",
+                    "description": "Trust the numbers behind decisions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/cost-optimization"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "By industry",
+              "links": [
+                {
+                  "label": "Finance",
+                  "href": "/industry/financial-services"
+                },
+                {
+                  "label": "Retail",
+                  "href": "/industry/manufacturing"
+                },
+                {
+                  "label": "Healthcare",
+                  "href": "/industry/healthcare"
+                },
+                {
+                  "label": "Media",
+                  "href": "/industry/telecommunications"
+                },
+                {
+                  "label": "Public sector",
+                  "href": "/industry/energy-utilities"
+                },
+                {
+                  "label": "Software",
+                  "href": "/data-platforms/cobalt"
+                }
+              ],
+              "action": {
+                "label": "See every use case",
+                "href": "/product/data-modernization"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Customers",
+            "groups": [
+              {
+                "label": "Stories",
+                "items": [
+                  {
+                    "title": "Case studies",
+                    "description": "Read how teams run on Lattice",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/case-studies"
+                  },
+                  {
+                    "title": "Reviews",
+                    "description": "Independent ratings from practitioners",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/resources/on-demand"
+                  }
+                ]
+              },
+              {
+                "label": "By outcome",
+                "items": [
+                  {
+                    "title": "Data quality",
+                    "description": "Teams that caught issues earlier",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/case-studies/kestrel"
+                  },
+                  {
+                    "title": "Speed",
+                    "description": "Teams that shipped models faster",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/case-studies/meridian-partners"
+                  },
+                  {
+                    "title": "Cost",
+                    "description": "Teams that trimmed warehouse spend",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/case-studies/halcyon"
+                  },
+                  {
+                    "title": "Scale",
+                    "description": "Teams that grew past one project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/case-studies/basalt-health"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Featured",
+              "links": [
+                {
+                  "label": "Fernway",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Orbitly",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Kestrel",
+                  "href": "/case-studies/kestrel"
+                },
+                {
+                  "label": "Tidepool",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Meridian",
+                  "href": "/case-studies/meridian-partners"
+                },
+                {
+                  "label": "Halcyon",
+                  "href": "/case-studies/halcyon"
+                }
+              ],
+              "action": {
+                "label": "View all customers",
+                "href": "/case-studies"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Resources",
+            "groups": [
+              {
+                "label": "Learn",
+                "items": [
+                  {
+                    "title": "Docs",
+                    "description": "Guides and reference for every feature",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Courses",
+                    "description": "Free self-paced training",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/learn"
+                  }
+                ]
+              },
+              {
+                "label": "Explore",
+                "items": [
+                  {
+                    "title": "Blog",
+                    "description": "Notes from the product team",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/blog"
+                  },
+                  {
+                    "title": "Webinars",
+                    "description": "Live and recorded sessions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/resources/webinars"
+                  },
+                  {
+                    "title": "Reports",
+                    "description": "Research on modern data work",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/resources/state-of-data-teams"
+                  },
+                  {
+                    "title": "Templates",
+                    "description": "Starter projects you can fork",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/resources/whitepaper-control-plane"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Popular",
+              "links": [
+                {
+                  "label": "Getting started",
+                  "href": "/learn"
+                },
+                {
+                  "label": "Best practices",
+                  "href": "/resources/analytics-lifecycle"
+                },
+                {
+                  "label": "Release notes",
+                  "href": "/blog/summit-announcements"
+                },
+                {
+                  "label": "Glossary",
+                  "href": "/resources"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Status",
+                  "href": "#"
+                }
+              ],
+              "action": {
+                "label": "Browse all resources",
+                "href": "/resources"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Community",
+            "groups": [
+              {
+                "label": "Connect",
+                "items": [
+                  {
+                    "title": "Forum",
+                    "description": "Ask questions and share answers",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Meetups",
+                    "description": "Find a group near you",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/events"
+                  }
+                ]
+              },
+              {
+                "label": "Contribute",
+                "items": [
+                  {
+                    "title": "Open source",
+                    "description": "Help build the core project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Write a guide",
+                    "description": "Share what you have learned",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Speak",
+                    "description": "Present at a community event",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/summit"
+                  },
+                  {
+                    "title": "Champions",
+                    "description": "Join the ambassador program",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/champions"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Get involved",
+              "links": [
+                {
+                  "label": "Code of conduct",
+                  "href": "/community"
+                },
+                {
+                  "label": "Chat space",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Newsletter",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Awards",
+                  "href": "/champions"
+                },
+                {
+                  "label": "Jobs board",
+                  "href": "/about-us/careers"
+                }
+              ],
+              "action": {
+                "label": "Join the community",
+                "href": "/community/join"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "menu.popover",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mobile-drawer",
+      "variant": "default",
+      "content": {
+        "accountActions": [
+          {
+            "label": "Log in",
+            "href": "#"
+          },
+          {
+            "label": "Create an account",
+            "href": "/signup"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "drawer.slide",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "article.guide-header",
+      "variant": "default",
+      "content": {
+        "breadcrumb": {
+          "items": [
+            {
+              "label": "Resources",
+              "href": "/resources"
+            },
+            {
+              "label": "Guides",
+              "href": "/resources"
+            }
+          ],
+          "current": "The analytics lifecycle, from ask to answer"
+        },
+        "tag": "Field guide",
+        "title": "The analytics lifecycle, from ask to answer",
+        "author": {
+          "name": "Amara Lindqvist",
+          "avatar": {
+            "assetRole": "person.fictional-avatar",
+            "alt": "",
+            "ref": "/assets/pages/people/avatar-3.svg"
+          },
+          "href": "#"
+        },
+        "buttons": [
+          {
+            "label": "Download the guide (PDF)",
+            "href": "#"
+          }
+        ],
+        "image": {
+          "assetRole": "figure.article-image",
+          "alt": "The six stages of the lifecycle around the Lattice mark",
+          "ref": "/assets/pages/guide/lifecycle-hero.svg"
+        }
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "article.guide-body",
+      "variant": "default",
+      "content": {
+        "blocks": [
+          {
+            "kind": "h2",
+            "text": "Why data work needs a lifecycle"
+          },
+          {
+            "kind": "p",
+            "text": "Most data teams can describe how a dashboard was built, but few can describe how their work moves from a question to a trusted answer in a way that would hold up next quarter. The steps live in people’s heads, in old chat threads and in habits that change whenever someone new joins."
+          },
+          {
+            "kind": "p",
+            "text": "A lifecycle is simply a shared description of those steps. It says what happens first, what “done” means at each stage and who is responsible for moving the work along. Software teams settled on one long ago; this guide proposes a version shaped for analytics."
+          },
+          {
+            "kind": "h3",
+            "text": "The cost of improvising"
+          },
+          {
+            "kind": "p",
+            "text": "Without an agreed path, every request is handled a little differently. One analyst writes tests, another does not; one change is reviewed, the next is pushed straight to production on a Friday. The results are uneven quality, surprise breakages and long debates about whose number is right."
+          },
+          {
+            "kind": "p",
+            "text": "Improvising also hides work. Time spent rebuilding a model that already existed, or answering the same question three times, rarely shows up anywhere. A lifecycle makes that waste visible, which is the first step to removing it."
+          },
+          {
+            "kind": "p",
+            "text": "There is a quieter cost too. When the way work gets done depends on who happens to pick it up, nobody can predict how long a request will take, and stakeholders learn to pad every deadline they are given."
+          },
+          {
+            "kind": "h3",
+            "text": "Six stages, one loop"
+          },
+          {
+            "kind": "p",
+            "text": "The model in this guide has six stages: Ask, Shape, Prove, Ship, Watch and Learn. Each one has a clear output, and the output of the last stage feeds the first, because good analytics work always raises the next question."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Six lifecycle stages as cards",
+              "ref": "/assets/pages/guide/lifecycle-1.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "The stages are not a gate-heavy process. A small change can pass through all six in an afternoon. What matters is that nothing is skipped silently."
+          },
+          {
+            "kind": "p",
+            "text": "Each stage also has an owner. Sometimes that is the same person throughout; on larger teams the work changes hands, and the lifecycle makes those handovers explicit rather than accidental."
+          },
+          {
+            "kind": "h3",
+            "text": "Who this guide is for"
+          },
+          {
+            "kind": "p",
+            "text": "It is written for analytics engineers, analysts and data leads who want a common vocabulary for their work. Platform engineers and stakeholders will find the sections on roles and on watching production most useful."
+          },
+          {
+            "kind": "p",
+            "text": "You do not need to use Lattice to apply anything here. The practices work with any tool that supports version control, testing and scheduled runs, although some steps are much easier with the right defaults."
+          },
+          {
+            "kind": "h2",
+            "text": "Ask: turning requests into questions"
+          },
+          {
+            "kind": "p",
+            "text": "Every piece of data work starts with a request, and most requests arrive as a solution in disguise: “add a column to this report” or “can you pull the numbers for last month?” The Ask stage turns that into a question someone can actually answer."
+          },
+          {
+            "kind": "p",
+            "text": "The output of this stage is a short written brief. It does not need a template the size of a contract, but it should be specific enough that two people would build roughly the same thing from it."
+          },
+          {
+            "kind": "h3",
+            "text": "Find the decision behind the request"
+          },
+          {
+            "kind": "p",
+            "text": "Ask what decision the answer will inform and what would change if the number were higher or lower than expected. If nobody can say, the request may not need building at all, and that is a perfectly good outcome."
+          },
+          {
+            "kind": "p",
+            "text": "Knowing the decision also tells you how precise the answer needs to be. A rough estimate for a planning meeting and a figure for a regulator are very different jobs."
+          },
+          {
+            "kind": "p",
+            "text": "A useful habit is to repeat the request back in your own words, starting with the decision. If the requester corrects you, you have saved yourself a rebuild; if they agree, you have a first line for the brief."
+          },
+          {
+            "kind": "h3",
+            "text": "Agree on grain and definitions"
+          },
+          {
+            "kind": "p",
+            "text": "Most disagreements about numbers come from different assumptions about grain. Is an order a basket or a line item? Does a customer mean an account, a person or a billing entity? Write the answer down before any SQL exists."
+          },
+          {
+            "kind": "p",
+            "text": "Where a definition already lives in the semantic layer, reuse it. Where it does not, the brief should propose one and name the person who can approve it."
+          },
+          {
+            "kind": "p",
+            "text": "Grain also decides which tests make sense later. A table with one row per order per day needs a uniqueness check on that pair of columns, and writing the grain down now makes that test obvious."
+          },
+          {
+            "kind": "h3",
+            "text": "Name an owner early"
+          },
+          {
+            "kind": "p",
+            "text": "Every output needs an owner who will answer questions about it a year from now. Naming them at the start avoids the familiar situation where a popular dashboard belongs to someone who left the company two reorganisations ago."
+          },
+          {
+            "kind": "p",
+            "text": "The owner does not have to build the work. They are the person who decides when it changes, answers questions about it and agrees to retire it when it is no longer needed."
+          },
+          {
+            "kind": "h3",
+            "text": "A minimal brief"
+          },
+          {
+            "kind": "p",
+            "text": "A brief that covers the following points is usually enough for work of any size:"
+          },
+          {
+            "kind": "ul",
+            "items": [
+              {
+                "text": "the decision the work supports and who makes it"
+              },
+              {
+                "text": "the question, written as a sentence ending in a question mark"
+              },
+              {
+                "text": "the grain of the result and any definitions it depends on"
+              },
+              {
+                "text": "how fresh the answer needs to be"
+              },
+              {
+                "text": "the owner, the reviewer and the expected consumers"
+              }
+            ]
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Four inputs to a well-formed request",
+              "ref": "/assets/pages/guide/lifecycle-3.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Keep the brief next to the code, in the repository or linked from the model file, so that the context travels with the work instead of living in an inbox that only one person can search."
+          },
+          {
+            "kind": "h2",
+            "text": "Shape: modeling the answer"
+          },
+          {
+            "kind": "p",
+            "text": "Shape is where the work most people picture happens: writing models, joining sources and building the tables that answer the question. The aim is not just a correct result today but a structure the next person can extend without fear."
+          },
+          {
+            "kind": "p",
+            "text": "Good shaping work is mostly about restraint. Reuse what exists, add only what the brief needs and keep each model small enough to explain in a sentence."
+          },
+          {
+            "kind": "h3",
+            "text": "Start from staged sources"
+          },
+          {
+            "kind": "p",
+            "text": "Every source should enter the project through a thin staging model that renames, casts and lightly cleans columns and nothing more. Business logic belongs further downstream, where it can be reused and tested in one place."
+          },
+          {
+            "kind": "p",
+            "text": "When a source is already staged, build on that model rather than reading the raw table again. Two staging models for one source is one of the fastest ways to end up with two versions of the truth."
+          },
+          {
+            "kind": "p",
+            "text": "Staging models are also the natural home for source tests: freshness checks, accepted values and basic uniqueness. Catching a problem at the edge of the project is far cheaper than finding it in a finished mart."
+          },
+          {
+            "kind": "h3",
+            "text": "Layer by purpose"
+          },
+          {
+            "kind": "p",
+            "text": "A simple layering scheme keeps large projects readable. Staging models mirror sources, intermediate models handle reusable joins and reshaping, and marts present clean tables for a specific audience. The names of folders and models should make the layer obvious."
+          },
+          {
+            "kind": "ol",
+            "items": [
+              {
+                "text": "Staging: one model per source table, light cleaning only."
+              },
+              {
+                "text": "Intermediate: reusable joins, pivots and deduplication."
+              },
+              {
+                "text": "Marts: audience-facing tables at a documented grain."
+              },
+              {
+                "text": "Metrics: definitions in the semantic layer, built on marts."
+              }
+            ]
+          },
+          {
+            "kind": "p",
+            "text": "Not every project needs every layer from day one. A small team can begin with staging and marts and introduce intermediate models when the same join starts appearing in more than one place."
+          },
+          {
+            "kind": "h3",
+            "text": "Write for the reviewer"
+          },
+          {
+            "kind": "p",
+            "text": "Assume someone will read every line you write before it ships. Use common table expressions with descriptive names, keep each one focused on a single step and put the final select at the end where it is easy to find."
+          },
+          {
+            "kind": "p",
+            "text": "Comments should explain why, not what. A note that says a filter excludes test accounts created before a migration is far more useful than one that says the query filters rows."
+          },
+          {
+            "kind": "p",
+            "text": "Formatting matters more than people admit. A consistent style, enforced by a linter, removes a whole category of review comments and lets reviewers spend their attention on logic instead of whitespace."
+          },
+          {
+            "kind": "h3",
+            "text": "Document as you go"
+          },
+          {
+            "kind": "p",
+            "text": "Descriptions are cheapest to write while the logic is fresh. Add a one-line description to each new model and to any column whose meaning is not obvious from its name, and link to the brief from the model file."
+          },
+          {
+            "kind": "p",
+            "text": "Treat missing descriptions on new models as a review comment, not a nice-to-have. Most teams find that a simple rule enforced consistently produces better documentation than an occasional push to catch up."
+          },
+          {
+            "kind": "h2",
+            "text": "Prove: testing before trusting"
+          },
+          {
+            "kind": "p",
+            "text": "A model that runs is not the same as a model that is right. The Prove stage is about collecting evidence that the output matches the brief and will keep matching it as data changes."
+          },
+          {
+            "kind": "p",
+            "text": "Evidence comes in two forms: automated tests that run on every build, and a human check that the result makes sense to someone who knows the business."
+          },
+          {
+            "kind": "h3",
+            "text": "Test the assumptions, not just the columns"
+          },
+          {
+            "kind": "p",
+            "text": "Uniqueness and not-null checks on keys are the floor, not the ceiling. The most valuable tests encode assumptions from the brief: every order has exactly one customer, refunds never exceed the original charge, a daily total never drops to zero on a weekday."
+          },
+          {
+            "kind": "p",
+            "text": "When an assumption is too fuzzy to test, write it down anyway. Unwritten assumptions are the ones that cause the longest incidents."
+          },
+          {
+            "kind": "p",
+            "text": "A good way to find these assumptions is to ask the requester what would make them distrust the number. Their answer is usually a test waiting to be written."
+          },
+          {
+            "kind": "h3",
+            "text": "Compare against a known answer"
+          },
+          {
+            "kind": "p",
+            "text": "Before shipping, reconcile the new result with something trusted: last quarter’s published figure, a finance export or a hand count on a small sample. Differences are not failures; unexplained differences are."
+          },
+          {
+            "kind": "p",
+            "text": "Record the comparison in the pull request: what you compared against, what matched and what did not. Future reviewers will thank you when the same question comes up again during an audit."
+          },
+          {
+            "kind": "h3",
+            "text": "Choose sensible severities"
+          },
+          {
+            "kind": "p",
+            "text": "Not every failing test should stop a production run. Decide which checks are blocking and which should only warn, and record the reason. A warning that nobody reads is worse than no test at all, so prune noisy checks regularly."
+          },
+          {
+            "kind": "ul",
+            "items": [
+              {
+                "text": "Block on broken keys, missing required values and failed contracts."
+              },
+              {
+                "text": "Warn on unusual volumes, late data and soft business rules."
+              },
+              {
+                "text": "Review warnings weekly and promote or delete each one."
+              }
+            ]
+          },
+          {
+            "kind": "p",
+            "text": "Severity can change over time. A new warning that has caught two real problems in a month may deserve promotion to a blocking test, while a blocking test that only ever fails on holidays may need a smarter condition."
+          },
+          {
+            "kind": "h3",
+            "text": "Ask a domain expert to look"
+          },
+          {
+            "kind": "p",
+            "text": "Show the result to the person who asked for it, or to someone who lives with the data every day, before calling it done. Ten minutes of their time often catches a misunderstanding that no automated check could."
+          },
+          {
+            "kind": "p",
+            "text": "Make the check easy for them. Share a small, readable sample with the key columns and a sentence about what changed, not a link to a raw table with two hundred columns."
+          },
+          {
+            "kind": "h2",
+            "text": "Ship: releasing changes safely"
+          },
+          {
+            "kind": "p",
+            "text": "Shipping is the moment a change starts affecting other people. The Ship stage covers review, merging and promotion to production, and its goal is to make releases small, frequent and boring."
+          },
+          {
+            "kind": "p",
+            "text": "Teams that ship small changes often tend to have fewer incidents than teams that save work up for large releases, because each change is easier to review and easier to undo."
+          },
+          {
+            "kind": "h3",
+            "text": "Review every change"
+          },
+          {
+            "kind": "p",
+            "text": "Every change to production models goes through a pull request and gets at least one approval. Reviewers should be able to see which models are affected, a sample of changed rows and whether tests passed in a preview environment."
+          },
+          {
+            "kind": "p",
+            "text": "Reviews are also how knowledge spreads. Rotating reviewers across areas of the project means more than one person understands each part of it."
+          },
+          {
+            "kind": "p",
+            "text": "A review does not need to be exhaustive to be valuable. Even a quick read catches unclear naming, missing tests and joins that fan out unexpectedly, which are the most common sources of trouble."
+          },
+          {
+            "kind": "h3",
+            "text": "Build only what changed"
+          },
+          {
+            "kind": "p",
+            "text": "Continuous integration runs should build the modified models and their direct dependants in an isolated schema, not the whole project. State-aware builds make this cheap enough to run on every commit."
+          },
+          {
+            "kind": "p",
+            "text": "Keep continuous integration fast. If checks take an hour, people will batch changes to avoid waiting, and the benefits of small, frequent releases disappear with them."
+          },
+          {
+            "kind": "h3",
+            "text": "Promote through environments"
+          },
+          {
+            "kind": "p",
+            "text": "A simple path of development, preview and production is enough for most teams. Each environment uses the same code with different targets, and promotion is a merge rather than a manual copy."
+          },
+          {
+            "kind": "ol",
+            "items": [
+              {
+                "text": "Develop in a personal schema."
+              },
+              {
+                "text": "Open a pull request; the preview build runs automatically."
+              },
+              {
+                "text": "Merge after review; production picks up the change on the next run."
+              }
+            ]
+          },
+          {
+            "kind": "p",
+            "text": "Environment differences should live in configuration, not in code. Hard-coded schema names and dates are a frequent cause of changes that pass in preview and then fail in production."
+          },
+          {
+            "kind": "h3",
+            "text": "Plan the rollback"
+          },
+          {
+            "kind": "p",
+            "text": "Before merging anything risky, know how you would undo it. For most changes, reverting the commit and rerunning the affected models is enough. For changes that rewrite history, keep a snapshot of the previous table until the new version has been checked in production."
+          },
+          {
+            "kind": "p",
+            "text": "Practise a rollback before you need one. Teams that have reverted a change calmly on a quiet afternoon handle the real thing far better than teams attempting it for the first time under pressure."
+          },
+          {
+            "kind": "h2",
+            "text": "Watch: running production with care"
+          },
+          {
+            "kind": "p",
+            "text": "Once work is live, the job shifts from building to keeping promises. The Watch stage covers scheduling, freshness, alerting and the response when something goes wrong."
+          },
+          {
+            "kind": "p",
+            "text": "The core idea is that every important output has an explicit promise attached to it, and that the team learns about broken promises before its users do."
+          },
+          {
+            "kind": "h3",
+            "text": "Make freshness explicit"
+          },
+          {
+            "kind": "p",
+            "text": "Write down how fresh each important model needs to be and let the scheduler enforce it. A finance mart that must be ready by seven in the morning and a product dashboard that tolerates a few hours of lag deserve different treatment."
+          },
+          {
+            "kind": "p",
+            "text": "Freshness promises are also a conversation starter with stakeholders. Asking how fresh a report really needs to be often reveals that hourly updates nobody reads can safely become daily ones."
+          },
+          {
+            "kind": "h3",
+            "text": "Route alerts to owners"
+          },
+          {
+            "kind": "p",
+            "text": "Alerts should go to the owner named in the brief, include the failing check and suggest a first step. A shared channel that receives every alert from every model quickly becomes background noise."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "Five steps from alert to lesson learned",
+              "ref": "/assets/pages/guide/lifecycle-4.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Every alert should be actionable. If the right response to an alert is usually to ignore it, change the threshold, change the owner or delete the alert altogether."
+          },
+          {
+            "kind": "h3",
+            "text": "Respond in a consistent way"
+          },
+          {
+            "kind": "p",
+            "text": "When an alert fires, follow the same short sequence every time. Consistency matters more than speed in the first few minutes, because it prevents a stressed responder from making things worse."
+          },
+          {
+            "kind": "ol",
+            "items": [
+              {
+                "text": "Acknowledge the alert so others know someone is on it."
+              },
+              {
+                "text": "Check whether the cause is upstream data, code or infrastructure."
+              },
+              {
+                "text": "Tell affected consumers what is wrong and when to expect an update."
+              },
+              {
+                "text": "Fix, rerun and confirm the tests pass."
+              },
+              {
+                "text": "Record what happened for the Learn stage."
+              }
+            ]
+          },
+          {
+            "kind": "p",
+            "text": "Keep a short runbook next to the most important models. Two or three lines about known failure modes and their usual fixes can turn a long investigation into a five-minute repair."
+          },
+          {
+            "kind": "h3",
+            "text": "Watch cost alongside quality"
+          },
+          {
+            "kind": "p",
+            "text": "Production health includes spend. Track the cost of each run and of the most expensive models, and treat a sudden increase the same way you would treat a failing test: as a signal that something changed and needs a look."
+          },
+          {
+            "kind": "p",
+            "text": "Cost reviews work best as part of normal practice rather than as an occasional cleanup. A monthly look at the ten most expensive models is usually enough to catch waste before it grows."
+          },
+          {
+            "kind": "h2",
+            "text": "Learn: closing the loop"
+          },
+          {
+            "kind": "p",
+            "text": "The last stage is the one most often skipped. Learn is where the team looks back at what it shipped, how it was used and what went wrong, and feeds those lessons into the next round of work."
+          },
+          {
+            "kind": "p",
+            "text": "Learning does not require long retrospectives. A short, regular habit is far more effective than an occasional all-day review."
+          },
+          {
+            "kind": "h3",
+            "text": "Measure usage"
+          },
+          {
+            "kind": "p",
+            "text": "Check which models, metrics and dashboards are actually read. Outputs nobody uses are candidates for retirement, and heavily used ones deserve stronger tests and clearer ownership."
+          },
+          {
+            "kind": "p",
+            "text": "Usage data also helps prioritise. When two requests compete for time, the one that improves a heavily used output usually deserves to go first."
+          },
+          {
+            "kind": "h3",
+            "text": "Write short incident notes"
+          },
+          {
+            "kind": "p",
+            "text": "After any incident that reached a consumer, write a short note: what happened, how it was noticed, what fixed it and what will stop it happening again. Keep the tone blameless; the aim is better systems, not better excuses."
+          },
+          {
+            "kind": "p",
+            "text": "Store the notes where the team can search them. Patterns appear quickly: the same source failing every month-end, or the same kind of change slipping past review."
+          },
+          {
+            "kind": "h3",
+            "text": "Retire what no longer serves"
+          },
+          {
+            "kind": "p",
+            "text": "Deleting a model is a feature. Each unused table still costs compute, review time and attention. Mark candidates as deprecated, tell their last known consumers and remove them after a fixed notice period."
+          },
+          {
+            "kind": "p",
+            "text": "Retirement is easier when ownership and usage are already recorded. Without them, every deletion becomes an investigation, and most teams simply give up and keep everything."
+          },
+          {
+            "kind": "h3",
+            "text": "Feed the next question"
+          },
+          {
+            "kind": "p",
+            "text": "Good answers raise new questions. Capture them as the start of the next brief rather than as side requests in chat, and the loop begins again at Ask with far better context than the first time round."
+          },
+          {
+            "kind": "img",
+            "image": {
+              "assetRole": "figure.article-image",
+              "alt": "The lifecycle drawn as a loop of six stages",
+              "ref": "/assets/pages/guide/lifecycle-2.svg"
+            }
+          },
+          {
+            "kind": "p",
+            "text": "Over time the backlog becomes a map of what the business wants to know, which is far more useful for planning than a list of half-remembered requests scattered across chat channels."
+          },
+          {
+            "kind": "h2",
+            "text": "Roles across the lifecycle"
+          },
+          {
+            "kind": "p",
+            "text": "A lifecycle only works if people know which parts are theirs. Titles vary widely between companies, so this section describes responsibilities rather than job descriptions."
+          },
+          {
+            "kind": "p",
+            "text": "In a small team one person may hold several of these roles. That is fine, as long as the responsibilities themselves are not forgotten."
+          },
+          {
+            "kind": "h3",
+            "text": "Requesters and decision makers"
+          },
+          {
+            "kind": "p",
+            "text": "They own the question and the decision it supports. Their job in the lifecycle is to take part in Ask, review results in Prove and tell the team when an output stops being useful."
+          },
+          {
+            "kind": "p",
+            "text": "They do not need to read SQL, but they should be able to read a brief and a short description of a model and recognise whether it matches what they asked for."
+          },
+          {
+            "kind": "h3",
+            "text": "Analytics engineers"
+          },
+          {
+            "kind": "p",
+            "text": "They own most of Shape, Prove and Ship: modeling, testing, documentation and review. They also set the conventions the rest of the project follows."
+          },
+          {
+            "kind": "p",
+            "text": "On smaller teams they also cover parts of the Watch stage, which is one more reason to keep alerts few, clear and pointed at a named owner."
+          },
+          {
+            "kind": "h3",
+            "text": "Analysts"
+          },
+          {
+            "kind": "p",
+            "text": "They turn outputs into insight and are often the first to notice when a number looks odd. Involving them in reviews and in Learn shortens the gap between a problem appearing and the team hearing about it."
+          },
+          {
+            "kind": "p",
+            "text": "Analysts are often closest to stakeholders, which makes them natural partners in the Ask stage and good judges of whether a brief really captures the question."
+          },
+          {
+            "kind": "h3",
+            "text": "Platform owners"
+          },
+          {
+            "kind": "p",
+            "text": "They run the environments, the scheduler and the access rules. Their focus is the Watch stage: reliability, cost and security for everyone building on the platform."
+          },
+          {
+            "kind": "ul",
+            "items": [
+              {
+                "text": "Ask: requester and analytics engineer together."
+              },
+              {
+                "text": "Shape and Prove: analytics engineer, with a domain reviewer."
+              },
+              {
+                "text": "Ship: author and reviewer."
+              },
+              {
+                "text": "Watch: owner of the output, supported by the platform team."
+              },
+              {
+                "text": "Learn: the whole team, briefly and regularly."
+              }
+            ]
+          },
+          {
+            "kind": "p",
+            "text": "They also set the guardrails that keep every other stage safe: who can deploy, how secrets are handled and what happens when a run exceeds its budget."
+          },
+          {
+            "kind": "h2",
+            "text": "Tooling that supports each stage"
+          },
+          {
+            "kind": "p",
+            "text": "Tools do not create a lifecycle, but the right ones make it much easier to follow. The test of a good tool is whether it makes the right step the easy step."
+          },
+          {
+            "kind": "h3",
+            "text": "Version control at the centre"
+          },
+          {
+            "kind": "p",
+            "text": "Every model, test, metric and chart should live in a repository. Version control gives you history, review and rollback for free, and it is the foundation every other practice in this guide builds on."
+          },
+          {
+            "kind": "p",
+            "text": "If something important lives outside the repository, such as a hand-edited dashboard filter or a scheduled query in a reporting tool, it is invisible to review and impossible to roll back."
+          },
+          {
+            "kind": "h3",
+            "text": "One place for definitions"
+          },
+          {
+            "kind": "p",
+            "text": "Metrics defined in the semantic layer and documented next to the models that feed them are much harder to fork by accident. Downstream tools and agents should read definitions from there instead of re-creating them."
+          },
+          {
+            "kind": "p",
+            "text": "When people and agents read the same definitions, a correction made once reaches everyone at the same time."
+          },
+          {
+            "kind": "p",
+            "text": "Centralising definitions does not mean centralising authority. Domain teams can own their metrics while still publishing them through the same layer as everyone else."
+          },
+          {
+            "kind": "h3",
+            "text": "Automation for the repetitive parts"
+          },
+          {
+            "kind": "p",
+            "text": "Continuous integration, scheduled runs, freshness checks and alert routing should all be automatic. Assistants can help too, drafting tests or descriptions for review, but their output goes through the same review as anything else."
+          },
+          {
+            "kind": "ul",
+            "items": [
+              {
+                "text": "Editor with linting and previews for Shape."
+              },
+              {
+                "text": "Test framework and preview builds for Prove."
+              },
+              {
+                "text": "Pull requests and continuous integration for Ship."
+              },
+              {
+                "text": "Scheduler, freshness rules and alerting for Watch."
+              },
+              {
+                "text": "Usage reports and a lineage explorer for Learn."
+              }
+            ]
+          },
+          {
+            "kind": "p",
+            "text": "Automate in small steps. Start with the checks that catch the most common problems and add more once the team trusts the first set and stops overriding them."
+          },
+          {
+            "kind": "h2",
+            "text": "Common traps and how to avoid them"
+          },
+          {
+            "kind": "p",
+            "text": "Teams adopting a lifecycle tend to stumble in the same places. None of these traps is fatal, and each has a simple countermeasure."
+          },
+          {
+            "kind": "h3",
+            "text": "Process for its own sake"
+          },
+          {
+            "kind": "p",
+            "text": "If a one-line fix needs three approvals and a meeting, people will route around the process. Scale the ceremony to the risk: small changes deserve a quick review, not a committee."
+          },
+          {
+            "kind": "p",
+            "text": "Ask the team every few months which steps feel like overhead. If nobody can explain why a step exists, it is probably safe to drop it."
+          },
+          {
+            "kind": "h3",
+            "text": "Tests that nobody trusts"
+          },
+          {
+            "kind": "p",
+            "text": "A suite full of flaky or permanently failing tests teaches everyone to ignore failures. Fix or delete noisy tests quickly, and treat a red build as something that always deserves attention."
+          },
+          {
+            "kind": "p",
+            "text": "A useful rule is that any test failing for more than a week is either fixed, downgraded to a warning or deleted. Leaving it red teaches everyone that red does not matter."
+          },
+          {
+            "kind": "h3",
+            "text": "Ownership by default"
+          },
+          {
+            "kind": "p",
+            "text": "When nobody is named, the last person to touch a model becomes its owner by accident. Make ownership an explicit field in every model’s configuration and check it during review."
+          },
+          {
+            "kind": "p",
+            "text": "Review ownership whenever people change roles or leave. A quick sweep during each team change keeps the ownership map accurate without a large, painful audit."
+          },
+          {
+            "kind": "h3",
+            "text": "Skipping Learn"
+          },
+          {
+            "kind": "p",
+            "text": "Under deadline pressure the review step is the first to go. Protect a small, fixed slot for it, even fifteen minutes every other week, so that lessons are captured while they are still fresh."
+          },
+          {
+            "kind": "ul",
+            "items": [
+              {
+                "text": "Scale how deep a review goes to how risky the change is."
+              },
+              {
+                "text": "Keep the test suite green and meaningful."
+              },
+              {
+                "text": "Make ownership explicit and visible."
+              },
+              {
+                "text": "Hold a short, regular learning session."
+              }
+            ]
+          },
+          {
+            "kind": "p",
+            "text": "Rotate who leads the session so that lessons come from different perspectives, and keep notes short enough that people actually read them afterwards."
+          },
+          {
+            "kind": "h2",
+            "text": "Getting started this month"
+          },
+          {
+            "kind": "p",
+            "text": "You do not need to adopt the whole lifecycle at once. Most teams start with one stage that hurts the most and add the rest over a few months."
+          },
+          {
+            "kind": "p",
+            "text": "Pick a single, visible output, such as the weekly revenue report, and run it through all six stages deliberately. The lessons from that pilot will tell you where to invest next."
+          },
+          {
+            "kind": "h3",
+            "text": "Week one: write briefs"
+          },
+          {
+            "kind": "p",
+            "text": "For every new request, write a short brief using the points from the Ask section. Share it with the requester before building anything. This alone tends to remove a surprising amount of rework."
+          },
+          {
+            "kind": "p",
+            "text": "Do not worry about format yet. The goal of the first week is to discover which questions are hard to answer before work starts, so that later weeks can address them."
+          },
+          {
+            "kind": "h3",
+            "text": "Week two: review everything"
+          },
+          {
+            "kind": "p",
+            "text": "Require a pull request and one approval for every production change. Keep reviews light at first; the habit matters more than the depth."
+          },
+          {
+            "kind": "p",
+            "text": "If the team is small, pair up for reviews across areas. The aim is shared understanding as much as error-catching."
+          },
+          {
+            "kind": "h3",
+            "text": "Weeks three and four: promises and alerts"
+          },
+          {
+            "kind": "p",
+            "text": "Choose the five most important outputs, write down their freshness promises and owners, and route alerts accordingly. Then hold your first short learning session and decide what to tackle next."
+          },
+          {
+            "kind": "ol",
+            "items": [
+              {
+                "text": "Pick a pilot output."
+              },
+              {
+                "text": "Write its brief and name its owner."
+              },
+              {
+                "text": "Add tests for its key assumptions."
+              },
+              {
+                "text": "Ship changes only through review."
+              },
+              {
+                "text": "Set a freshness promise and an alert."
+              },
+              {
+                "text": "Review usage and incidents after a month."
+              },
+              {
+                "text": "Choose the next output."
+              },
+              {
+                "text": "Share what you learned with the wider team."
+              }
+            ]
+          },
+          {
+            "kind": "p",
+            "text": "By the end of the month you will have a working version of every stage for at least one output, and a much clearer picture of where the lifecycle will help most."
+          },
+          {
+            "kind": "h2",
+            "text": "Summary"
+          },
+          {
+            "kind": "p",
+            "text": "A lifecycle gives a data team a shared language for its work. Ask turns requests into questions, Shape builds answers that can be extended, Prove gathers evidence, Ship releases changes safely, Watch keeps promises and Learn closes the loop."
+          },
+          {
+            "kind": "ul",
+            "items": [
+              {
+                "text": "Ask: write a brief with the decision, question, grain and owner."
+              },
+              {
+                "text": "Shape: build small, layered models that reuse what exists."
+              },
+              {
+                "text": "Prove: test assumptions and reconcile with a known answer."
+              },
+              {
+                "text": "Ship: review every change and release in small steps."
+              },
+              {
+                "text": "Watch: keep explicit promises and route alerts to owners."
+              },
+              {
+                "text": "Learn: measure usage, write notes and retire what is unused."
+              }
+            ]
+          },
+          {
+            "kind": "h3",
+            "text": "Start small"
+          },
+          {
+            "kind": "p",
+            "text": "Adopt one stage at a time, starting where the pain is greatest. A lifecycle that the team actually follows beats a perfect one that lives only in a document."
+          },
+          {
+            "kind": "p",
+            "text": "Resist the urge to write a long policy document first. Let the lifecycle grow out of real work and write down only what has proved useful."
+          },
+          {
+            "kind": "h3",
+            "text": "Make it visible"
+          },
+          {
+            "kind": "p",
+            "text": "Put briefs, owners, freshness promises and incident notes where everyone can see them. Visibility turns the lifecycle from a private habit into a team practice."
+          },
+          {
+            "kind": "p",
+            "text": "A simple page listing each important output with its owner, freshness promise and latest incident note is often the most valuable artefact the whole effort produces."
+          },
+          {
+            "kind": "h3",
+            "text": "Keep improving"
+          },
+          {
+            "kind": "p",
+            "text": "Revisit the lifecycle itself every few months. Remove steps that add no value, add ones that would have prevented recent incidents and keep it short enough that a new teammate can learn it in an afternoon."
+          },
+          {
+            "kind": "p",
+            "text": "The best lifecycle is the one your team would choose to keep even if nobody asked them to. Aim for that, and the rest follows."
+          }
+        ],
+        "toc": "Guide sections",
+        "promo": {
+          "title": "Put it into practice",
+          "body": "Run your next request through all six stages in a free Lattice workspace.",
+          "cta": {
+            "label": "Start building for free",
+            "href": "/signup"
+          }
+        }
+      },
+      "motion": {
+        "pattern": "scroll.spy-toc",
+        "reducedMotionFallback": "jump-to-target",
+        "additional": [
+          {
+            "pattern": "sticky.pin",
+            "reducedMotionFallback": "none-needed"
+          }
+        ]
+      },
+      "style": {
+        "chapterLevel": "h2"
+      }
+    },
+    {
+      "section": "cta.closing-band",
+      "variant": "wide",
+      "content": {
+        "title": "Bring the loop to your team",
+        "body": "Briefs, reviews, tests and freshness promises, all in one project your whole team can read.",
+        "primary": {
+          "label": "Start for free",
+          "href": "/signup"
+        }
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-light.svg"
+        },
+        "columns": [
+          {
+            "title": "Platform",
+            "links": [
+              {
+                "label": "Overview",
+                "href": "/product/lattice"
+              },
+              {
+                "label": "What is Lattice?",
+                "href": "/product/what-is-lattice"
+              },
+              {
+                "label": "Lattice for AI workflows",
+                "href": "/product/ai"
+              },
+              {
+                "label": "Customer stories",
+                "href": "/case-studies"
+              },
+              {
+                "label": "Connectors",
+                "href": "/product/integrations"
+              },
+              {
+                "label": "Plans and pricing",
+                "href": "/pricing"
+              }
+            ]
+          },
+          {
+            "title": "For Builders",
+            "links": [
+              {
+                "label": "Documentation",
+                "href": "#"
+              },
+              {
+                "label": "Quickstart guides",
+                "href": "#"
+              },
+              {
+                "label": "Supported data platforms",
+                "href": "/data-platforms/cobalt"
+              },
+              {
+                "label": "Engineering blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Editor extension",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "/about-us"
+              },
+              {
+                "label": "Belonging at Lattice",
+                "href": "/about-us/belonging"
+              },
+              {
+                "label": "Careers",
+                "href": "/about-us/careers"
+              },
+              {
+                "label": "Press",
+                "href": "/press"
+              }
+            ],
+            "badge": {
+              "label": "Join the team",
+              "linkIndex": 2
+            }
+          },
+          {
+            "title": "Learning",
+            "links": [
+              {
+                "label": "Resource hub",
+                "href": "/resources"
+              },
+              {
+                "label": "Lattice Academy",
+                "href": "/learn"
+              },
+              {
+                "label": "Certification",
+                "href": "/certification"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              }
+            ]
+          },
+          {
+            "title": "Community",
+            "links": [
+              {
+                "label": "Join the community",
+                "href": "/community/join"
+              },
+              {
+                "label": "Become a contributor",
+                "href": "/community"
+              },
+              {
+                "label": "Open source projects",
+                "href": "#"
+              },
+              {
+                "label": "Community forum",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Help & Support",
+            "links": [
+              {
+                "label": "Contact us",
+                "href": "/contact"
+              },
+              {
+                "label": "Professional services",
+                "href": "/services"
+              },
+              {
+                "label": "Find a partner",
+                "href": "/partner-directory"
+              },
+              {
+                "label": "System status",
+                "href": "#"
+              }
+            ]
+          }
+        ],
+        "newsletter": {
+          "title": "Subscribe today!",
+          "body": "A monthly digest of field notes, release highlights and practical modeling advice.",
+          "action": {
+            "label": "Join today",
+            "href": "/community/join"
+          }
+        },
+        "region": {
+          "title": "Select region",
+          "options": [
+            "Global",
+            "Europe",
+            "Asia Pacific"
+          ]
+        },
+        "social": {
+          "title": "Connect with us",
+          "links": [
+            {
+              "label": "GitHub",
+              "href": "#"
+            },
+            {
+              "label": "LinkedIn",
+              "href": "#"
+            },
+            {
+              "label": "YouTube",
+              "href": "#"
+            },
+            {
+              "label": "Instagram",
+              "href": "#"
+            },
+            {
+              "label": "X",
+              "href": "#"
+            },
+            {
+              "label": "Bluesky",
+              "href": "#"
+            },
+            {
+              "label": "RSS",
+              "href": "#"
+            }
+          ]
+        },
+        "copyright": "© 2026 Lattice, Inc. All rights reserved.",
+        "legalLinks": [
+          {
+            "label": "Privacy policy",
+            "href": "#"
+          },
+          {
+            "label": "Accessibility statement",
+            "href": "/legal/ai-principles"
+          },
+          {
+            "label": "Terms of service",
+            "href": "/terms-of-use"
+          },
+          {
+            "label": "Security",
+            "href": "/security"
+          },
+          {
+            "label": "Acceptable use",
+            "href": "/modern-slavery-statement"
+          },
+          {
+            "label": "Responsible AI principles",
+            "href": "/legal/ai-principles"
+          }
+        ],
+        "cookieLabel": "Cookie preferences"
+      },
+      "motion": {
+        "pattern": "accordion.toggle",
+        "reducedMotionFallback": "unchanged"
+      }
+    }
+  ]
+}

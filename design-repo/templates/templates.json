@@ -1,5 +1,5 @@
 {
-  "note": "one template per page shape. nodes are structured objects; a PageSpec's node sequence (section#variant) must match its template's node pattern (schema/semantic_validate.py TEMPLATE_SEQUENCE).",
+  "note": "one template per page shape. nodes are structured objects; a PageSpec's node sequence (section#variant) must match its template's node pattern (schema/semantic_validate.py TEMPLATE_SEQUENCE). A slot node lists alternatives; an alternative may be a fixed `sequence` of sections.",
   "templates": {
     "T0": {
       "id": "T0",
@@ -7,6 +7,8 @@
       "title": "Homepage",
       "family": "marketing-home",
       "status": "implemented",
+      "chrome": "full",
+      "theme": "light",
       "representativeRoute": "/",
       "routes": [
         "/"
@@ -122,6 +124,8 @@
       "title": "Product feature page",
       "family": "marketing-product",
       "status": "implemented",
+      "chrome": "full",
+      "theme": "light",
       "representativeRoute": "/product/develop",
       "routes": [
         "/product/develop",
@@ -240,6 +244,8 @@
       "title": "Solution / use-case page",
       "family": "marketing-solution",
       "status": "implemented",
+      "chrome": "full",
+      "theme": "light",
       "representativeRoute": "/product/data-modernization",
       "routes": [
         "/product/ai",
@@ -387,6 +393,8 @@
       "title": "Data-platform partner page",
       "family": "marketing-partner",
       "status": "implemented",
+      "chrome": "full",
+      "theme": "light",
       "representativeRoute": "/data-platforms/cobalt",
       "routes": [
         "/data-platforms/northwind",
@@ -497,6 +505,8 @@
       "title": "Industry page",
       "family": "marketing-industry",
       "status": "implemented",
+      "chrome": "full",
+      "theme": "light",
       "representativeRoute": "/industry/financial-services",
       "routes": [
         "/industry/financial-services",
@@ -598,155 +608,531 @@
       "id": "T5",
       "name": "case-study-detail",
       "title": "Case-study detail",
-      "family": "pending",
-      "status": "pending",
+      "family": "content-story",
+      "status": "implemented",
+      "chrome": "full",
+      "theme": "light",
+      "representativeRoute": "/case-studies/kestrel",
       "routes": [
         "/case-studies/kestrel",
         "/case-studies/meridian-partners",
         "/case-studies/halcyon",
         "/case-studies/basalt-health"
       ],
-      "draftSequence": [
-        "header: H1, customer logo, stats row",
-        "body: meta column (industry etc.) + prose with h2/h3, inline images and pull quotes",
-        "related customer stories (H-cards3, 3 cards)",
-        "closing CTA band (short)"
+      "nodes": [
+        {
+          "section": "shell.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mega-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mobile-drawer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "article.story-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "article.story-body",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "article.related-stories",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.closing-band",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "with-aside"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
       ],
-      "decompositionNote": "the measured body is ~4796px at 1440: it must be decomposed into story-header / meta / prose-chapter / quote / related sections (R6), never one whole-article section",
-      "nodes": [],
-      "evidence": "PAGES.md section 3 (T5); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+      "evidence": "specs/T5-T8.md A-20..A-21, B-T5; src/content/pages/t5.js"
     },
     "T6": {
       "id": "T6",
       "name": "content-hub-listing",
       "title": "Content hub listing with category nav",
-      "family": "pending",
-      "status": "pending",
+      "family": "content-listing",
+      "status": "implemented",
+      "chrome": "full",
+      "theme": "light",
+      "representativeRoute": "/blog",
       "routes": [
         "/blog",
         "/resources/webinars",
         "/resources"
       ],
-      "draftSequence": [
-        "listing header (plain H1)",
-        "pill category nav + search (N-listing)",
-        "featured item + card grid with load-more",
-        "closing CTA band (short or community)"
+      "nodes": [
+        {
+          "section": "shell.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mega-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mobile-drawer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.header",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "hub"
+          ]
+        },
+        {
+          "section": "listing.category-nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.hub-grid",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "blog",
+            "resource"
+          ]
+        },
+        {
+          "slot": "closing",
+          "anyOf": [
+            {
+              "section": "cta.community-band"
+            },
+            {
+              "section": "cta.closing-band",
+              "variants": [
+                "plain"
+              ]
+            }
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
       ],
-      "decompositionNote": "split listing header, category nav, featured item and card grid into separate sections",
-      "nodes": [],
-      "evidence": "PAGES.md section 3 (T6); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+      "evidence": "specs/T5-T8.md A-1a, A-2, B-T6; src/content/pages/t6.js"
     },
     "T7": {
       "id": "T7",
       "name": "filterable-card-grid",
       "title": "Filterable card grid listing",
-      "family": "pending",
-      "status": "pending",
+      "family": "content-listing",
+      "status": "implemented",
+      "chrome": "full",
+      "theme": "light",
+      "representativeRoute": "/case-studies",
       "routes": [
         "/case-studies",
         "/resources/on-demand",
         "/events",
         "/press"
       ],
-      "draftSequence": [
-        "listing header (H1)",
-        "toolbar: search / filter panel / multi-select",
-        "card grid + view-more",
-        "closing CTA band (absent on the press variant, which ends with a media-contact block)"
+      "nodes": [
+        {
+          "section": "shell.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mega-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mobile-drawer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.header",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "centred"
+          ]
+        },
+        {
+          "slot": "listing",
+          "anyOf": [
+            {
+              "section": "listing.case-grid"
+            },
+            {
+              "section": "listing.event-grid"
+            },
+            {
+              "section": "listing.session-grid"
+            },
+            {
+              "sequence": [
+                {
+                  "section": "listing.press-grid",
+                  "variants": [
+                    "media"
+                  ]
+                },
+                {
+                  "section": "listing.press-grid",
+                  "variants": [
+                    "release"
+                  ]
+                }
+              ]
+            }
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "slot": "closing",
+          "anyOf": [
+            {
+              "section": "cta.closing-band",
+              "variants": [
+                "with-aside",
+                "plain",
+                "wide"
+              ]
+            }
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
       ],
-      "decompositionNote": "filters panel is runtime UI (retrievalEligible false)",
-      "nodes": [],
-      "evidence": "PAGES.md section 3 (T7); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+      "evidence": "specs/T5-T8.md A-1b, A-3, B-T7; src/content/pages/t7.js"
     },
     "T8": {
       "id": "T8",
       "name": "article",
       "title": "Article / long-form with sticky rail",
-      "family": "pending",
-      "status": "pending",
+      "family": "content-article",
+      "status": "implemented",
+      "chrome": "full",
+      "theme": "light",
+      "representativeRoute": "/blog/summit-announcements",
       "routes": [
         "/resources/analytics-lifecycle",
         "/resources/state-of-data-teams",
         "/blog/summit-announcements",
         "/blog/lattice-joins-northwind"
       ],
-      "draftSequence": [
-        "breadcrumb + article header (H1, author, date) or guide hero with download CTA",
-        "prose body with sticky right rail (share links or TOC)",
-        "latest-posts card row",
-        "closing CTA band"
+      "nodes": [
+        {
+          "section": "shell.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mega-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mobile-drawer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "slot": "article",
+          "anyOf": [
+            {
+              "sequence": [
+                {
+                  "section": "article.progress-bar"
+                },
+                {
+                  "section": "article.post-body"
+                },
+                {
+                  "section": "listing.latest-posts"
+                }
+              ]
+            },
+            {
+              "sequence": [
+                {
+                  "section": "article.guide-header"
+                },
+                {
+                  "section": "article.guide-body"
+                }
+              ]
+            }
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "slot": "closing",
+          "anyOf": [
+            {
+              "section": "cta.community-band"
+            },
+            {
+              "section": "cta.closing-band",
+              "variants": [
+                "wide"
+              ]
+            }
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
       ],
-      "decompositionNote": "pages measure 10031-30277px at 1440: decompose into article-header / body-chapter (one per h2) / rail / related; the rail is runtime UI",
-      "nodes": [],
-      "evidence": "PAGES.md section 3 (T8); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+      "evidence": "specs/T5-T8.md A-13..A-18, B-T8; src/content/pages/t8.js"
     },
     "T9": {
       "id": "T9",
       "name": "asset-landing",
       "title": "Asset / webinar landing",
-      "family": "pending",
-      "status": "pending",
+      "family": "conversion-landing",
+      "status": "implemented",
+      "chrome": "full",
+      "theme": "light",
+      "representativeRoute": "/resources/webinars/launch-showcase",
       "routes": [
         "/resources/webinars/launch-showcase",
         "/resources/whitepaper-control-plane",
         "/resources/webinars/charts-as-code"
       ],
-      "draftSequence": [
-        "header: breadcrumb, eyebrow, H1, two-column body (copy + static form)",
-        "optional logo strip",
-        "optional split"
+      "nodes": [
+        {
+          "section": "shell.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mega-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mobile-drawer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "form.form-header",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "registration",
+            "cover"
+          ]
+        },
+        {
+          "section": "social-proof.logo-bar",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "content.media-split",
+          "required": false,
+          "repeatable": false,
+          "variants": [
+            "text-left"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
       ],
-      "decompositionNote": "forms are static (no submission); form is a CONVERSION section",
-      "nodes": [],
-      "evidence": "PAGES.md section 3 (T9); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+      "evidence": "specs/T9-T11.md B-1..B-4, C; src/content/pages/t9.js"
     },
     "T10": {
       "id": "T10",
       "name": "form-page",
       "title": "Form page",
-      "family": "pending",
-      "status": "pending",
+      "family": "conversion-form",
+      "status": "implemented",
+      "chrome": "full",
+      "theme": "light",
+      "representativeRoute": "/contact",
       "routes": [
         "/contact",
         "/signup",
         "/community/join",
         "/report-a-problem"
       ],
-      "draftSequence": [
-        "two-column header with static form",
-        "optional 3-card row",
-        "optional stats bento"
+      "nodes": [
+        {
+          "section": "shell.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mega-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mobile-drawer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "form.form-header",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "contact"
+          ]
+        },
+        {
+          "section": "features.card-grid",
+          "required": false,
+          "repeatable": false,
+          "variants": [
+            "border-card"
+          ]
+        },
+        {
+          "section": "social-proof.stats-bento",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
       ],
-      "decompositionNote": "form blocks are CTA/CONVERSION-classed; no live endpoints (link.source-external is blocked)",
-      "nodes": [],
-      "evidence": "PAGES.md section 3 (T10); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+      "evidence": "specs/T9-T11.md B-1, D; src/content/pages/t10.js"
     },
     "T11": {
       "id": "T11",
       "name": "legal-prose",
       "title": "Legal / policy prose",
-      "family": "pending",
-      "status": "pending",
+      "family": "legal",
+      "status": "implemented",
+      "chrome": "full",
+      "theme": "light",
+      "representativeRoute": "/modern-slavery-statement",
       "routes": [
         "/modern-slavery-statement",
         "/terms-of-use",
         "/legal/ai-principles"
       ],
-      "draftSequence": [
-        "header (H1; absent on one member, which starts with an H2)",
-        "prose in an 832px column with numbered h2/h3"
+      "nodes": [
+        {
+          "section": "shell.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mega-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mobile-drawer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "legal.policy-header",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "legal.policy-body",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
       ],
-      "decompositionNote": "one member is 16206px tall: legal header + one section per heading-bounded part (R6), never a single whole-document section",
-      "nodes": [],
-      "evidence": "PAGES.md section 3 (T11); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+      "evidence": "specs/T9-T11.md E-1, E-2; src/content/pages/t11.js"
     },
     "T12": {
       "id": "T12",
       "name": "company-program",
       "title": "Company / program page",
-      "family": "pending",
-      "status": "pending",
+      "family": "marketing-company",
+      "status": "implemented",
+      "chrome": "full",
+      "theme": "light",
+      "representativeRoute": "/about-us",
       "routes": [
         "/security",
         "/certification",
@@ -759,21 +1145,177 @@
         "/partners",
         "/services"
       ],
-      "draftSequence": [
-        "hero",
-        "stacked shared content sections (splits, card grids, dark grids, FAQ, tabs)",
-        "closing CTA band (absent on some members)"
+      "nodes": [
+        {
+          "section": "shell.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mega-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mobile-drawer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "slot": "hero",
+          "anyOf": [
+            {
+              "section": "hero.center",
+              "variants": [
+                "text-only"
+              ]
+            },
+            {
+              "section": "hero.split",
+              "variants": [
+                "padded"
+              ]
+            }
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "slot": "body",
+          "anyOf": [
+            {
+              "section": "company.compliance-rows",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "company.leadership-list",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "company.people-grid",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "company.program-list",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "company.role-list",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "content.media-split",
+              "variants": [
+                "media-left",
+                "text-left"
+              ]
+            },
+            {
+              "section": "cta.closing-band",
+              "variants": [
+                "plain",
+                "wide",
+                "with-aside",
+                "with-checklist",
+                "with-stats"
+              ]
+            },
+            {
+              "section": "editorial.community-bento",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "editorial.dark-news-strip",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "editorial.resource-cards",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "features.card-grid",
+              "variants": [
+                "border-card",
+                "four-column",
+                "image-card",
+                "plain-icon",
+                "stat-card",
+                "wash-icon"
+              ]
+            },
+            {
+              "section": "features.checklist",
+              "variants": [
+                "split-list"
+              ]
+            },
+            {
+              "section": "interactive.course-tabs",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "interactive.faq-accordion",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "interactive.photo-tabs",
+              "variants": [
+                "default"
+              ]
+            }
+          ],
+          "required": true,
+          "repeatable": true,
+          "minCount": 1,
+          "maxCount": 7
+        },
+        {
+          "section": "cta.dev-path-dialog",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
       ],
-      "decompositionNote": "careers member is 22566px: split the open-roles list from its filters (filters are runtime UI)",
-      "nodes": [],
-      "evidence": "PAGES.md section 3 (T12); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+      "evidence": "specs/T12-T13.md D; src/content/pages/t12.js"
     },
     "T13": {
       "id": "T13",
       "name": "product-landing",
       "title": "Product landing (bespoke composition)",
-      "family": "pending",
-      "status": "pending",
+      "family": "marketing-product-landing",
+      "status": "implemented",
+      "chrome": "full",
+      "theme": "light",
+      "representativeRoute": "/product/lattice",
       "routes": [
         "/product/what-is-lattice",
         "/product/lattice",
@@ -785,96 +1327,454 @@
         "/product/analyst",
         "/product/self-hosted-vs-platform"
       ],
-      "draftSequence": [
-        "hero",
-        "shared T1/T2 sections in page-specific orders (tabs-dark, splits, customer tabs, logo rows, comparison tables, FAQ, image bands)",
-        "closing CTA band"
+      "nodes": [
+        {
+          "section": "shell.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mega-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mobile-drawer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "slot": "hero",
+          "anyOf": [
+            {
+              "section": "hero.center",
+              "variants": [
+                "illustration",
+                "poster",
+                "text-only"
+              ]
+            },
+            {
+              "section": "hero.split",
+              "variants": [
+                "framed",
+                "padded",
+                "video"
+              ]
+            }
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "slot": "body",
+          "anyOf": [
+            {
+              "section": "comparison.compare-table",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "comparison.journey-columns",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "content.media-split",
+              "variants": [
+                "media-left",
+                "text-left"
+              ]
+            },
+            {
+              "section": "content.statement",
+              "variants": [
+                "plain"
+              ]
+            },
+            {
+              "section": "cta.closing-band",
+              "variants": [
+                "plain",
+                "wide",
+                "with-checklist"
+              ]
+            },
+            {
+              "section": "cta.gradient-card",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "editorial.resource-cards",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "features.card-grid",
+              "variants": [
+                "border-card",
+                "four-column",
+                "inline-icon",
+                "logo-card",
+                "plain-icon",
+                "wash-icon"
+              ]
+            },
+            {
+              "section": "features.checklist",
+              "variants": [
+                "split"
+              ]
+            },
+            {
+              "section": "features.gradient-panel",
+              "variants": [
+                "media-first",
+                "text-first"
+              ]
+            },
+            {
+              "section": "features.integration-strip",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "features.integration-tiles",
+              "variants": [
+                "labelled"
+              ]
+            },
+            {
+              "section": "features.tabs-dark",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "interactive.faq-accordion",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "interactive.install-tabs",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "interactive.persona-tabs",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "social-proof.customer-tabs",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "social-proof.logo-bar",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "social-proof.quote-band",
+              "variants": [
+                "single",
+                "slider"
+              ]
+            },
+            {
+              "section": "social-proof.stats-bento",
+              "variants": [
+                "default"
+              ]
+            },
+            {
+              "section": "social-proof.testimonial-slider",
+              "variants": [
+                "industry"
+              ]
+            }
+          ],
+          "required": true,
+          "repeatable": true,
+          "minCount": 1,
+          "maxCount": 15
+        },
+        {
+          "section": "cta.dev-path-dialog",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
       ],
-      "decompositionNote": "comparison tables and FAQs need their own section contracts",
-      "nodes": [],
-      "evidence": "PAGES.md section 3 (T13); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+      "evidence": "specs/T12-T13.md E; src/content/pages/t13.js"
     },
     "T14": {
       "id": "T14",
       "name": "pricing",
       "title": "Pricing",
-      "family": "pending",
-      "status": "pending",
+      "family": "marketing-pricing",
+      "status": "implemented",
+      "chrome": "full",
+      "theme": "light",
+      "representativeRoute": "/pricing",
       "routes": [
         "/pricing"
       ],
-      "draftSequence": [
-        "plan cards header (holds the H1)",
-        "add-ons",
-        "feature-comparison table (collapsible groups)",
-        "two FAQ accordions"
+      "nodes": [
+        {
+          "section": "shell.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mega-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mobile-drawer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.plan-cards",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.add-ons",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "comparison.plan-matrix",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "interactive.faq-accordion",
+          "required": true,
+          "repeatable": true,
+          "minCount": 2,
+          "maxCount": 2
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
       ],
-      "decompositionNote": "comparison table groups and FAQs are separate sections",
-      "nodes": [],
-      "evidence": "PAGES.md section 3 (T14); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+      "evidence": "specs/T14-T17.md T14; src/content/pages/t14.js"
     },
     "T15": {
       "id": "T15",
       "name": "champions",
-      "title": "Community champions (dark theme)",
-      "family": "pending",
-      "status": "pending",
+      "title": "Community champions (dark bands)",
+      "family": "community-program",
+      "status": "implemented",
+      "chrome": "full",
+      "theme": "light",
+      "representativeRoute": "/champions",
       "routes": [
         "/champions"
       ],
-      "draftSequence": [
-        "dark hero",
-        "dark about",
-        "champions grid",
-        "5 cards",
-        "dark quote slider",
-        "stories grid",
-        "dark support cards",
-        "dark closing"
+      "nodes": [
+        {
+          "section": "shell.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mega-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mobile-drawer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.champions-dark",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "community.about-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "community.member-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "community.icon-cards",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "activity"
+          ]
+        },
+        {
+          "section": "community.dark-quote",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "community.story-slider",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "community.icon-cards",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "support"
+          ]
+        },
+        {
+          "section": "cta.champions-closing",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
       ],
-      "decompositionNote": "uses a dark theme the token layer does not yet declare (themes/light only)",
-      "nodes": [],
-      "evidence": "PAGES.md section 3 (T15); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+      "evidence": "specs/T14-T17.md T15; src/content/pages/t15.js"
     },
     "T16": {
       "id": "T16",
       "name": "event-microsite",
       "title": "Event microsite",
-      "family": "pending",
-      "status": "pending",
+      "family": "event",
+      "status": "implemented",
+      "chrome": "event",
+      "theme": "event",
+      "representativeRoute": "/summit",
       "routes": [
         "/summit"
       ],
-      "draftSequence": [
-        "own event sub-nav (no global mega-menu nav)",
-        "hero",
-        "image gallery",
-        "recap",
-        "4 cards",
-        "sponsor logos",
-        "media",
-        "two black closing sections"
+      "nodes": [
+        {
+          "section": "shell.event-subnav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.event",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "event.photo-gallery",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "event.recap",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "event.highlight-rows",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "event.sponsor-logos",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "event.photo-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "event.quote-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "event.closing-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.event-footer",
+          "required": true,
+          "repeatable": false
+        }
       ],
-      "decompositionNote": "replaces shell.navbar with an event sub-nav; sponsor logos are third-party marks (thirdparty.real-mark is forbidden)",
-      "nodes": [],
-      "evidence": "PAGES.md section 3 (T16); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+      "evidence": "specs/T14-T17.md T16; src/content/pages/t16.js"
     },
     "T17": {
       "id": "T17",
       "name": "partner-directory",
       "title": "Partner directory",
-      "family": "pending",
-      "status": "pending",
+      "family": "directory",
+      "status": "implemented",
+      "chrome": "none",
+      "theme": "light",
+      "representativeRoute": "/partner-directory",
       "routes": [
         "/partner-directory"
       ],
-      "draftSequence": [
-        "minimal nav (logo + Home)",
-        "static mock of a third-party partner locator: filter sidebar, search, pagination, partner cards"
+      "nodes": [
+        {
+          "section": "shell.minimal-nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "directory.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "directory.partner-locator",
+          "required": true,
+          "repeatable": false
+        }
       ],
-      "decompositionNote": "no global nav or footer; the original is a third-party widget and must be mocked statically",
-      "nodes": [],
-      "evidence": "PAGES.md section 3 (T17); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+      "evidence": "specs/T14-T17.md T17; src/content/pages/t17.js"
     }
   }
 }

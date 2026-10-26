@@ -7,6 +7,6 @@
     "primitive.text-link"
   ],
   "evidence": [
-    "src/components/sections/Feat.jsx:24-37"
+    "src/components/sections/Feat.jsx:50-67"
   ]
 }

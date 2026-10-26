@@ -1,0 +1,1562 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "T12",
+  "route": "/community",
+  "theme": "light",
+  "brand": {
+    "name": "Lattice"
+  },
+  "meta": {
+    "title": "Community"
+  },
+  "nodes": [
+    {
+      "section": "shell.announcement-bar",
+      "variant": "default",
+      "content": {
+        "slides": [
+          {
+            "text": "Lattice 4.0 is here with faster incremental builds, smarter tests, and a fresh lineage explorer.",
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "text": "Join our live workshop on modeling patterns this month.",
+            "href": "/resources/webinars/charts-as-code"
+          },
+          {
+            "text": "New report: how two hundred data teams trimmed warehouse spend while shipping trusted models each week.",
+            "href": "/resources/state-of-data-teams"
+          },
+          {
+            "text": "Lattice Cloud now runs in three new regions across Europe and Asia. Check region availability.",
+            "href": "/blog/lattice-joins-northwind"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "carousel.autoplay",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.navbar",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-dark.svg"
+        },
+        "menuLabels": [
+          "Product",
+          "Solutions",
+          "Customers",
+          "Resources",
+          "Community"
+        ],
+        "plainLink": {
+          "label": "Pricing",
+          "href": "/pricing"
+        },
+        "secondaryAction": {
+          "label": "Get started",
+          "href": "/signup"
+        },
+        "primaryAction": {
+          "label": "Book a demo",
+          "href": "/contact"
+        }
+      },
+      "motion": {
+        "pattern": "nav.hide-on-scroll",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mega-menu",
+      "variant": "default",
+      "content": {
+        "menus": [
+          {
+            "trigger": "Product",
+            "groups": [
+              {
+                "label": "First steps",
+                "items": [
+                  {
+                    "title": "Why Lattice",
+                    "description": "How Lattice turns SQL into trusted products",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/product/what-is-lattice"
+                  },
+                  {
+                    "title": "Platform tour",
+                    "description": "Watch a ten-minute walkthrough of the full workspace",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/product/lattice"
+                  }
+                ]
+              },
+              {
+                "label": "Everything in the box",
+                "items": [
+                  {
+                    "title": "Build",
+                    "description": "Author models in the browser, a desktop editor or the command line",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/develop"
+                  },
+                  {
+                    "title": "Validate",
+                    "description": "Assert rules on every model",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/test-and-observe"
+                  },
+                  {
+                    "title": "Design",
+                    "description": "Split big projects by domain",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/mesh"
+                  },
+                  {
+                    "title": "Explore",
+                    "description": "Search docs, owners and lineage",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/catalog"
+                  },
+                  {
+                    "title": "Ship",
+                    "description": "Trigger runs on merge or a timer",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/deploy"
+                  },
+                  {
+                    "title": "Measure",
+                    "description": "Publish one definition of revenue to every tool that asks",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/semantic-layer"
+                  }
+                ]
+              }
+            ],
+            "featured": {
+              "title": "The modeling lifecycle",
+              "description": "Map how ideas move from first query to production model, with clear owners and checks at each step",
+              "thumbnail": {
+                "assetRole": "illustration.abstract",
+                "alt": "",
+                "ref": "/assets/menu/featured.svg"
+              },
+              "href": "/resources/analytics-lifecycle"
+            },
+            "side": {
+              "label": "Feature spotlight",
+              "links": [
+                {
+                  "label": "Smart state",
+                  "href": "/product/state"
+                },
+                {
+                  "label": "Guided setup",
+                  "href": "/product/assistant"
+                },
+                {
+                  "label": "Charts",
+                  "href": "/product/charts"
+                },
+                {
+                  "label": "Governance",
+                  "href": "/product/governance"
+                },
+                {
+                  "label": "Security",
+                  "href": "/security"
+                },
+                {
+                  "label": "Integrations",
+                  "href": "/product/integrations"
+                }
+              ],
+              "action": {
+                "label": "See the latest demo",
+                "href": "/resources/webinars/launch-showcase"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Solutions",
+            "groups": [
+              {
+                "label": "By need",
+                "items": [
+                  {
+                    "title": "Analytics",
+                    "description": "Give analysts a governed place to model data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/analyst"
+                  },
+                  {
+                    "title": "AI readiness",
+                    "description": "Feed assistants with well-described data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/ai"
+                  }
+                ]
+              },
+              {
+                "label": "By team",
+                "items": [
+                  {
+                    "title": "Data engineers",
+                    "description": "Ship pipelines with tests built in",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/data-modernization"
+                  },
+                  {
+                    "title": "Analysts",
+                    "description": "Own models end to end in plain SQL",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/embedded-analytics"
+                  },
+                  {
+                    "title": "Platform leads",
+                    "description": "Standardize how every team builds",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/data-trust"
+                  },
+                  {
+                    "title": "Executives",
+                    "description": "Trust the numbers behind decisions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/cost-optimization"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "By industry",
+              "links": [
+                {
+                  "label": "Finance",
+                  "href": "/industry/financial-services"
+                },
+                {
+                  "label": "Retail",
+                  "href": "/industry/manufacturing"
+                },
+                {
+                  "label": "Healthcare",
+                  "href": "/industry/healthcare"
+                },
+                {
+                  "label": "Media",
+                  "href": "/industry/telecommunications"
+                },
+                {
+                  "label": "Public sector",
+                  "href": "/industry/energy-utilities"
+                },
+                {
+                  "label": "Software",
+                  "href": "/data-platforms/cobalt"
+                }
+              ],
+              "action": {
+                "label": "See every use case",
+                "href": "/product/data-modernization"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Customers",
+            "groups": [
+              {
+                "label": "Stories",
+                "items": [
+                  {
+                    "title": "Case studies",
+                    "description": "Read how teams run on Lattice",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/case-studies"
+                  },
+                  {
+                    "title": "Reviews",
+                    "description": "Independent ratings from practitioners",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/resources/on-demand"
+                  }
+                ]
+              },
+              {
+                "label": "By outcome",
+                "items": [
+                  {
+                    "title": "Data quality",
+                    "description": "Teams that caught issues earlier",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/case-studies/kestrel"
+                  },
+                  {
+                    "title": "Speed",
+                    "description": "Teams that shipped models faster",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/case-studies/meridian-partners"
+                  },
+                  {
+                    "title": "Cost",
+                    "description": "Teams that trimmed warehouse spend",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/case-studies/halcyon"
+                  },
+                  {
+                    "title": "Scale",
+                    "description": "Teams that grew past one project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/case-studies/basalt-health"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Featured",
+              "links": [
+                {
+                  "label": "Fernway",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Orbitly",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Kestrel",
+                  "href": "/case-studies/kestrel"
+                },
+                {
+                  "label": "Tidepool",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Meridian",
+                  "href": "/case-studies/meridian-partners"
+                },
+                {
+                  "label": "Halcyon",
+                  "href": "/case-studies/halcyon"
+                }
+              ],
+              "action": {
+                "label": "View all customers",
+                "href": "/case-studies"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Resources",
+            "groups": [
+              {
+                "label": "Learn",
+                "items": [
+                  {
+                    "title": "Docs",
+                    "description": "Guides and reference for every feature",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Courses",
+                    "description": "Free self-paced training",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/learn"
+                  }
+                ]
+              },
+              {
+                "label": "Explore",
+                "items": [
+                  {
+                    "title": "Blog",
+                    "description": "Notes from the product team",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/blog"
+                  },
+                  {
+                    "title": "Webinars",
+                    "description": "Live and recorded sessions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/resources/webinars"
+                  },
+                  {
+                    "title": "Reports",
+                    "description": "Research on modern data work",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/resources/state-of-data-teams"
+                  },
+                  {
+                    "title": "Templates",
+                    "description": "Starter projects you can fork",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/resources/whitepaper-control-plane"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Popular",
+              "links": [
+                {
+                  "label": "Getting started",
+                  "href": "/learn"
+                },
+                {
+                  "label": "Best practices",
+                  "href": "/resources/analytics-lifecycle"
+                },
+                {
+                  "label": "Release notes",
+                  "href": "/blog/summit-announcements"
+                },
+                {
+                  "label": "Glossary",
+                  "href": "/resources"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Status",
+                  "href": "#"
+                }
+              ],
+              "action": {
+                "label": "Browse all resources",
+                "href": "/resources"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Community",
+            "groups": [
+              {
+                "label": "Connect",
+                "items": [
+                  {
+                    "title": "Forum",
+                    "description": "Ask questions and share answers",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Meetups",
+                    "description": "Find a group near you",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/events"
+                  }
+                ]
+              },
+              {
+                "label": "Contribute",
+                "items": [
+                  {
+                    "title": "Open source",
+                    "description": "Help build the core project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Write a guide",
+                    "description": "Share what you have learned",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Speak",
+                    "description": "Present at a community event",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/summit"
+                  },
+                  {
+                    "title": "Champions",
+                    "description": "Join the ambassador program",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/champions"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Get involved",
+              "links": [
+                {
+                  "label": "Code of conduct",
+                  "href": "/community"
+                },
+                {
+                  "label": "Chat space",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Newsletter",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Awards",
+                  "href": "/champions"
+                },
+                {
+                  "label": "Jobs board",
+                  "href": "/about-us/careers"
+                }
+              ],
+              "action": {
+                "label": "Join the community",
+                "href": "/community/join"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "menu.popover",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mobile-drawer",
+      "variant": "default",
+      "content": {
+        "accountActions": [
+          {
+            "label": "Log in",
+            "href": "#"
+          },
+          {
+            "label": "Create an account",
+            "href": "/signup"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "drawer.slide",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "hero.split",
+      "variant": "padded",
+      "content": {
+        "title": "A home for people who love data work",
+        "lead": "Thousands of practitioners share patterns, answer questions and meet in person to make analytics engineering better for everyone.",
+        "primary": {
+          "label": "Join the community",
+          "href": "/community/join"
+        },
+        "secondary": {
+          "label": "Find a local meetup",
+          "href": "/events"
+        },
+        "media": {
+          "assetRole": "photo.composite-scene",
+          "alt": "Illustration: a community meetup audience",
+          "ref": "/assets/pages/photos/photo-3.svg"
+        }
+      },
+      "motion": {
+        "pattern": "stroke.draw-on",
+        "reducedMotionFallback": "render-final-state"
+      },
+      "style": {
+        "strokeShape": "stroke.s3",
+        "strokeGradient": "gradient.01",
+        "leadSize": "large",
+        "columns": "6/6",
+        "bottomPadding": "default"
+      }
+    },
+    {
+      "section": "features.card-grid",
+      "variant": "stat-card",
+      "content": {
+        "eyebrow": "The community in numbers",
+        "title": "Practitioners helping practitioners grow",
+        "body": "From forum threads to regional meetups, the Lattice community is where people trade ideas, review each other’s projects and help steer the direction of the open engine and the platform.",
+        "cards": [
+          {
+            "icon": {
+              "assetRole": "icon.feature",
+              "alt": "",
+              "ref": "/assets/pages/icons/team.svg"
+            },
+            "stat": "110K",
+            "label": "members worldwide"
+          },
+          {
+            "icon": {
+              "assetRole": "icon.feature",
+              "alt": "",
+              "ref": "/assets/pages/icons/globe.svg"
+            },
+            "stat": "160+",
+            "label": "cities with meetups"
+          },
+          {
+            "icon": {
+              "assetRole": "icon.feature",
+              "alt": "",
+              "ref": "/assets/pages/icons/branch.svg"
+            },
+            "stat": "4K+",
+            "label": "open source packages"
+          },
+          {
+            "icon": {
+              "assetRole": "icon.feature",
+              "alt": "",
+              "ref": "/assets/pages/icons/sparkle.svg"
+            },
+            "stat": "900",
+            "label": "talks shared each year"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      },
+      "style": {
+        "revealTrigger": "scroll",
+        "headerAlign": "start",
+        "paddingTop": "default",
+        "surface": "light",
+        "columns": "4",
+        "iconSize": "size.icon.56"
+      }
+    },
+    {
+      "section": "editorial.community-bento",
+      "variant": "default",
+      "content": {
+        "title": "What is happening in the community",
+        "feature": {
+          "eyebrow": "Spotlight",
+          "title": "This season’s award winners",
+          "body": "Every season the community nominates members who went out of their way to help others. This round recognizes organizers who started meetups in six new cities, maintainers who reviewed hundreds of package contributions, and writers whose guides helped newcomers ship their first models. Read their stories and nominate someone for the next round.",
+          "href": "/community/join",
+          "image": {
+            "assetRole": "photo.composite-scene",
+            "alt": "Illustration: a conference crowd between sessions",
+            "ref": "/assets/pages/photos/photo-9.svg"
+          }
+        },
+        "member": {
+          "avatar": {
+            "assetRole": "person.fictional-avatar",
+            "alt": "Illustrated portrait of Lucía Ferraro",
+            "ref": "/assets/pages/people/avatar-9.svg"
+          },
+          "name": "Lucía Ferraro",
+          "role": "Meetup organizer",
+          "quote": "I joined to ask one question about incremental models and stayed because people kept helping. Now I run a meetup with two hundred members and still learn something every month.",
+          "cta": {
+            "label": "Read member stories",
+            "href": "/community/join"
+          }
+        },
+        "meetup": {
+          "eyebrow": "Next meetup",
+          "month": "Nov",
+          "day": "14",
+          "title": "Lisbon data evening",
+          "place": "In person, Lisbon",
+          "href": "/events",
+          "cta": {
+            "label": "See all meetups",
+            "href": "/events"
+          }
+        },
+        "topics": {
+          "eyebrow": "Trending conversations",
+          "rows": [
+            {
+              "text": "Naming conventions for staging models",
+              "link": "Join in",
+              "href": "/community/join"
+            },
+            {
+              "text": "How do you test slowly changing dimensions without full refreshes?",
+              "link": "Read thread",
+              "href": "/community/join"
+            },
+            {
+              "text": "Sharing metrics between teams",
+              "link": "Discuss",
+              "href": "/community/join"
+            }
+          ]
+        },
+        "picture": {
+          "eyebrow": "Photo of the week",
+          "image": {
+            "assetRole": "photo.composite-scene",
+            "alt": "Illustration: a workshop group at a company offsite",
+            "ref": "/assets/pages/photos/photo-5.svg"
+          }
+        }
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed",
+        "additional": [
+          {
+            "pattern": "stroke.idle",
+            "reducedMotionFallback": "none-needed"
+          }
+        ]
+      },
+      "style": {
+        "strokeShape": "stroke.s1",
+        "strokeGradient": "gradient.01"
+      }
+    },
+    {
+      "section": "cta.closing-band",
+      "variant": "with-aside",
+      "content": {
+        "title": "Invite your whole team along",
+        "body": "Invite colleagues, share what you are building and learn from people like you.",
+        "primary": {
+          "label": "Join today",
+          "href": "/community/join"
+        },
+        "secondary": {
+          "label": "Browse our events",
+          "href": "/events"
+        },
+        "aside": {
+          "title": "Great data people rarely do their best work alone",
+          "body": "The Lattice community connects you with 75,000+ practitioners who share your problems, your shortcuts and your goals.",
+          "action": {
+            "label": "Join the community",
+            "href": "/community/join"
+          }
+        }
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      }
+    },
+    {
+      "section": "interactive.photo-tabs",
+      "variant": "default",
+      "content": {
+        "eyebrow": "Moments from around the world",
+        "title": "See the community in action",
+        "body": "Snapshots from meetups, workshops and our annual conference, shared by members and event organizers.",
+        "cta": {
+          "label": "Find an event near you",
+          "href": "/events"
+        },
+        "tabs": [
+          {
+            "label": "Annual summit",
+            "photos": [
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a conference crowd between sessions",
+                "ref": "/assets/pages/photos/photo-9.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: the Lattice team gathered outdoors",
+                "ref": "/assets/pages/photos/photo-1.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a community meetup audience",
+                "ref": "/assets/pages/photos/photo-3.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a workshop group at a company offsite",
+                "ref": "/assets/pages/photos/photo-5.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: colleagues at a team planning day",
+                "ref": "/assets/pages/photos/photo-7.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: volunteers at a community event",
+                "ref": "/assets/pages/photos/photo-11.svg"
+              }
+            ]
+          },
+          {
+            "label": "Local meetups",
+            "photos": [
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: attendees at a regional meetup",
+                "ref": "/assets/pages/photos/photo-13.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a hackathon team at work",
+                "ref": "/assets/pages/photos/photo-15.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: an engineer reviewing a model at a desk",
+                "ref": "/assets/pages/photos/photo-2.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: an analyst working late on a dashboard",
+                "ref": "/assets/pages/photos/photo-4.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a practitioner presenting a project",
+                "ref": "/assets/pages/photos/photo-6.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a community meetup audience",
+                "ref": "/assets/pages/photos/photo-3.svg"
+              }
+            ]
+          },
+          {
+            "label": "Workshops",
+            "photos": [
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a workshop group at a company offsite",
+                "ref": "/assets/pages/photos/photo-5.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a developer pairing over a laptop",
+                "ref": "/assets/pages/photos/photo-8.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a consultant preparing a migration plan",
+                "ref": "/assets/pages/photos/photo-10.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a mentor answering a question",
+                "ref": "/assets/pages/photos/photo-12.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a speaker rehearsing a talk",
+                "ref": "/assets/pages/photos/photo-14.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: colleagues at a team planning day",
+                "ref": "/assets/pages/photos/photo-7.svg"
+              }
+            ]
+          },
+          {
+            "label": "Hackathons",
+            "photos": [
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a hackathon team at work",
+                "ref": "/assets/pages/photos/photo-15.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a learner finishing a course module",
+                "ref": "/assets/pages/photos/photo-16.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: the Lattice team gathered outdoors",
+                "ref": "/assets/pages/photos/photo-1.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a conference crowd between sessions",
+                "ref": "/assets/pages/photos/photo-9.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: an engineer reviewing a model at a desk",
+                "ref": "/assets/pages/photos/photo-2.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: attendees at a regional meetup",
+                "ref": "/assets/pages/photos/photo-13.svg"
+              }
+            ]
+          },
+          {
+            "label": "Office hours",
+            "photos": [
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a mentor answering a question",
+                "ref": "/assets/pages/photos/photo-12.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: an analyst working late on a dashboard",
+                "ref": "/assets/pages/photos/photo-4.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a practitioner presenting a project",
+                "ref": "/assets/pages/photos/photo-6.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: volunteers at a community event",
+                "ref": "/assets/pages/photos/photo-11.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a developer pairing over a laptop",
+                "ref": "/assets/pages/photos/photo-8.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: the Lattice team gathered outdoors",
+                "ref": "/assets/pages/photos/photo-1.svg"
+              }
+            ]
+          },
+          {
+            "label": "Online events",
+            "photos": [
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a speaker rehearsing a talk",
+                "ref": "/assets/pages/photos/photo-14.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a consultant preparing a migration plan",
+                "ref": "/assets/pages/photos/photo-10.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a learner finishing a course module",
+                "ref": "/assets/pages/photos/photo-16.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a community meetup audience",
+                "ref": "/assets/pages/photos/photo-3.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a workshop group at a company offsite",
+                "ref": "/assets/pages/photos/photo-5.svg"
+              },
+              {
+                "assetRole": "photo.composite-scene",
+                "alt": "Illustration: a conference crowd between sessions",
+                "ref": "/assets/pages/photos/photo-9.svg"
+              }
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "tabs.instant",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "features.card-grid",
+      "variant": "border-card",
+      "content": {
+        "eyebrow": "Ways to contribute",
+        "title": "Shape the tools you use every single day",
+        "body": "The open engine, the package hub and the documentation all improve because community members report issues, review changes and share what they have learned along the way.",
+        "primary": {
+          "label": "Start contributing",
+          "href": "/community/join"
+        },
+        "cards": [
+          {
+            "icon": {
+              "assetRole": "icon.feature",
+              "alt": "",
+              "ref": "/assets/pages/icons/branch.svg"
+            },
+            "title": "Contribute to the engine",
+            "body": "Pick up a good first issue or review an open pull request.",
+            "action": {
+              "label": "View issues",
+              "href": "/community/join"
+            }
+          },
+          {
+            "icon": {
+              "assetRole": "icon.feature",
+              "alt": "",
+              "ref": "/assets/pages/icons/layers.svg"
+            },
+            "title": "Publish a package",
+            "body": "Share reusable macros and models with thousands of other teams.",
+            "action": {
+              "label": "Read the guide",
+              "href": "/learn"
+            }
+          },
+          {
+            "icon": {
+              "assetRole": "icon.feature",
+              "alt": "",
+              "ref": "/assets/pages/icons/book.svg"
+            },
+            "title": "Improve the documentation",
+            "body": "Fix a typo, clarify a concept or write a new how-to guide.",
+            "action": {
+              "label": "Edit the docs",
+              "href": "/learn"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately",
+        "additional": [
+          {
+            "pattern": "stroke.draw-on",
+            "reducedMotionFallback": "render-final-state"
+          }
+        ]
+      },
+      "style": {
+        "strokeShape": "stroke.s9",
+        "strokeGradient": "gradient.01",
+        "revealTrigger": "scroll",
+        "headerAlign": "start",
+        "paddingTop": "default",
+        "surface": "dark",
+        "columns": "3",
+        "iconSize": "size.icon.32"
+      }
+    },
+    {
+      "section": "features.card-grid",
+      "variant": "border-card",
+      "content": {
+        "eyebrow": "Find your corner of it",
+        "title": "There is a place here for you",
+        "body": "Whether you want to learn, teach, organize or simply listen, there is a way to take part that fits your schedule and the way you like to work.",
+        "cards": [
+          {
+            "icon": {
+              "assetRole": "icon.feature",
+              "alt": "",
+              "ref": "/assets/pages/icons/search.svg"
+            },
+            "title": "Forum",
+            "body": "Ask a question and get answers from experienced practitioners worldwide.",
+            "action": {
+              "label": "Visit the forum",
+              "href": "/community/join"
+            }
+          },
+          {
+            "icon": {
+              "assetRole": "icon.feature",
+              "alt": "",
+              "ref": "/assets/pages/icons/globe.svg"
+            },
+            "title": "Local meetups",
+            "body": "Meet people in your city for talks, demos and plenty of conversation.",
+            "action": {
+              "label": "Find a meetup",
+              "href": "/events"
+            }
+          },
+          {
+            "icon": {
+              "assetRole": "icon.feature",
+              "alt": "",
+              "ref": "/assets/pages/icons/clock.svg"
+            },
+            "title": "Office hours",
+            "body": "Drop in to weekly sessions with the team behind the product and docs.",
+            "action": {
+              "label": "See the schedule",
+              "href": "/events"
+            }
+          },
+          {
+            "icon": {
+              "assetRole": "icon.feature",
+              "alt": "",
+              "ref": "/assets/pages/icons/sparkle.svg"
+            },
+            "title": "Community awards",
+            "body": "Nominate someone whose help made a real difference to your own work.",
+            "action": {
+              "label": "Nominate a member",
+              "href": "/community/join"
+            }
+          },
+          {
+            "icon": {
+              "assetRole": "icon.feature",
+              "alt": "",
+              "ref": "/assets/pages/icons/plug.svg"
+            },
+            "title": "Partner network",
+            "body": "Work with consultancies and technology partners who know the platform.",
+            "action": {
+              "label": "Meet our partners",
+              "href": "/partners"
+            }
+          },
+          {
+            "icon": {
+              "assetRole": "icon.feature",
+              "alt": "",
+              "ref": "/assets/pages/icons/flask.svg"
+            },
+            "title": "Speak at an event",
+            "body": "Share a project, a lesson learned or a pattern with a friendly crowd.",
+            "action": {
+              "label": "Submit a talk",
+              "href": "/summit"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      },
+      "style": {
+        "revealTrigger": "scroll",
+        "headerAlign": "start",
+        "paddingTop": "default",
+        "surface": "light",
+        "columns": "3",
+        "iconSize": "size.icon.32",
+        "background": "wash"
+      }
+    },
+    {
+      "section": "cta.closing-band",
+      "variant": "plain",
+      "content": {
+        "eyebrow": "Get involved",
+        "title": "Your first step into the community",
+        "body": "Create a free account, introduce yourself in the forum and find a meetup near you. Everyone is welcome, whatever your level.",
+        "primary": {
+          "label": "Join today",
+          "href": "/community/join"
+        }
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-light.svg"
+        },
+        "columns": [
+          {
+            "title": "Platform",
+            "links": [
+              {
+                "label": "Overview",
+                "href": "/product/lattice"
+              },
+              {
+                "label": "What is Lattice?",
+                "href": "/product/what-is-lattice"
+              },
+              {
+                "label": "Lattice for AI workflows",
+                "href": "/product/ai"
+              },
+              {
+                "label": "Customer stories",
+                "href": "/case-studies"
+              },
+              {
+                "label": "Connectors",
+                "href": "/product/integrations"
+              },
+              {
+                "label": "Plans and pricing",
+                "href": "/pricing"
+              }
+            ]
+          },
+          {
+            "title": "For Builders",
+            "links": [
+              {
+                "label": "Documentation",
+                "href": "#"
+              },
+              {
+                "label": "Quickstart guides",
+                "href": "#"
+              },
+              {
+                "label": "Supported data platforms",
+                "href": "/data-platforms/cobalt"
+              },
+              {
+                "label": "Engineering blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Editor extension",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "/about-us"
+              },
+              {
+                "label": "Belonging at Lattice",
+                "href": "/about-us/belonging"
+              },
+              {
+                "label": "Careers",
+                "href": "/about-us/careers"
+              },
+              {
+                "label": "Press",
+                "href": "/press"
+              }
+            ],
+            "badge": {
+              "label": "Join the team",
+              "linkIndex": 2
+            }
+          },
+          {
+            "title": "Learning",
+            "links": [
+              {
+                "label": "Resource hub",
+                "href": "/resources"
+              },
+              {
+                "label": "Lattice Academy",
+                "href": "/learn"
+              },
+              {
+                "label": "Certification",
+                "href": "/certification"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              }
+            ]
+          },
+          {
+            "title": "Community",
+            "links": [
+              {
+                "label": "Join the community",
+                "href": "/community/join"
+              },
+              {
+                "label": "Become a contributor",
+                "href": "/community"
+              },
+              {
+                "label": "Open source projects",
+                "href": "#"
+              },
+              {
+                "label": "Community forum",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Help & Support",
+            "links": [
+              {
+                "label": "Contact us",
+                "href": "/contact"
+              },
+              {
+                "label": "Professional services",
+                "href": "/services"
+              },
+              {
+                "label": "Find a partner",
+                "href": "/partner-directory"
+              },
+              {
+                "label": "System status",
+                "href": "#"
+              }
+            ]
+          }
+        ],
+        "newsletter": {
+          "title": "Subscribe today!",
+          "body": "A monthly digest of field notes, release highlights and practical modeling advice.",
+          "action": {
+            "label": "Join today",
+            "href": "/community/join"
+          }
+        },
+        "region": {
+          "title": "Select region",
+          "options": [
+            "Global",
+            "Europe",
+            "Asia Pacific"
+          ]
+        },
+        "social": {
+          "title": "Connect with us",
+          "links": [
+            {
+              "label": "GitHub",
+              "href": "#"
+            },
+            {
+              "label": "LinkedIn",
+              "href": "#"
+            },
+            {
+              "label": "YouTube",
+              "href": "#"
+            },
+            {
+              "label": "Instagram",
+              "href": "#"
+            },
+            {
+              "label": "X",
+              "href": "#"
+            },
+            {
+              "label": "Bluesky",
+              "href": "#"
+            },
+            {
+              "label": "RSS",
+              "href": "#"
+            }
+          ]
+        },
+        "copyright": "© 2026 Lattice, Inc. All rights reserved.",
+        "legalLinks": [
+          {
+            "label": "Privacy policy",
+            "href": "#"
+          },
+          {
+            "label": "Accessibility statement",
+            "href": "/legal/ai-principles"
+          },
+          {
+            "label": "Terms of service",
+            "href": "/terms-of-use"
+          },
+          {
+            "label": "Security",
+            "href": "/security"
+          },
+          {
+            "label": "Acceptable use",
+            "href": "/modern-slavery-statement"
+          },
+          {
+            "label": "Responsible AI principles",
+            "href": "/legal/ai-principles"
+          }
+        ],
+        "cookieLabel": "Cookie preferences"
+      },
+      "motion": {
+        "pattern": "accordion.toggle",
+        "reducedMotionFallback": "unchanged"
+      }
+    }
+  ]
+}

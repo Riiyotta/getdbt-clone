@@ -26,6 +26,25 @@
     "section.padding.desktop": "space.px64",
     "section.padding.dark-lg": "space.30",
     "grid.gap.mobile": "space.px16",
-    "grid.gap.desktop": "space.px24"
+    "grid.gap.desktop": "space.px24",
+    "input.radius": "radius.xl",
+    "input.border": "border.input",
+    "input.focus-ring": "action.focus-ring-input",
+    "input.error-text": "text.error",
+    "form-card.radius": "radius.2xl",
+    "form-card.border": "border.input",
+    "dialog.max-width": "container.width.dialog",
+    "dialog.overlay": "surface.overlay",
+    "dialog.radius": "radius.2xl",
+    "tooltip.bg": "surface.inverse",
+    "tooltip.radius": "radius.lg",
+    "prose.column": "container.width.prose",
+    "table.ring": "elevation.tbody",
+    "progress.fill": "indicator.progress",
+    "event.display-font": "font.family.summit-display",
+    "event.button-font": "font.family.summit-button",
+    "event.body-font": "font.family.summit-body",
+    "directory.card-shadow": "elevation.directory-card",
+    "champions.card-hover-shadow": "elevation.card-hover"
   }
 }

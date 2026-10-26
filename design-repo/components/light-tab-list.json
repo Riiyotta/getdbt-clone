@@ -6,6 +6,6 @@
     "primitive.tab-light"
   ],
   "evidence": [
-    "src/components/sections/TabsLight.jsx:6-28"
+    "src/components/sections/TabsLight.jsx:8-37"
   ]
 }

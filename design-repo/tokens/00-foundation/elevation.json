@@ -4,42 +4,77 @@
     "elevation.primary": {
       "value": "0 32px 64px -16px rgba(3,7,17,.24)",
       "category": "elevation",
-      "cite": "tailwind.config.cjs:112"
+      "cite": "tailwind.config.cjs:133"
     },
     "elevation.glow": {
       "value": "0 0 100px 40px rgba(255,0,255,.3)",
       "category": "elevation",
-      "cite": "tailwind.config.cjs:113"
+      "cite": "tailwind.config.cjs:134"
+    },
+    "elevation.ember": {
+      "value": "0 0 40px rgba(255,90,0,.35)",
+      "category": "elevation",
+      "cite": "tailwind.config.cjs:136"
+    },
+    "elevation.focus": {
+      "value": "0 0 0 2px #fff, 0 0 0 4px #632ff5",
+      "category": "elevation",
+      "cite": "tailwind.config.cjs:138"
+    },
+    "elevation.tbody": {
+      "value": "0 0 0 8px #fff, 0 0 0 10px #f9fafb",
+      "category": "elevation",
+      "cite": "tailwind.config.cjs:140"
+    },
+    "elevation.card-hover": {
+      "value": "0 8px 16px rgba(16,24,40,.08), 0 16px 32px rgba(16,24,40,.06)",
+      "category": "elevation",
+      "cite": "src/components/oneoffs/champions/Champions.jsx:135"
+    },
+    "elevation.directory-card": {
+      "value": "0 0 0 2px rgba(89,105,129,.1), 0 1px 3px rgba(89,105,129,.1), 0 1px 2px rgba(0,0,0,.05)",
+      "category": "elevation",
+      "cite": "src/components/oneoffs/directory/Directory.jsx:143"
+    },
+    "elevation.lg": {
+      "value": "0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1)",
+      "category": "elevation",
+      "cite": "src/components/sections/Leaders.jsx:5 (tailwind default scale)"
+    },
+    "elevation.xl": {
+      "value": "0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1)",
+      "category": "elevation",
+      "cite": "src/components/listing/FilterToolbar.jsx:24 (tailwind default scale)"
     },
     "blur.xs": {
       "value": "4px",
       "category": "blur",
-      "cite": "tailwind.config.cjs:116"
+      "cite": "tailwind.config.cjs:143"
     },
     "blur.sm": {
       "value": "8px",
       "category": "blur",
-      "cite": "tailwind.config.cjs:117"
+      "cite": "tailwind.config.cjs:144"
     },
     "blur.md": {
       "value": "12px",
       "category": "blur",
-      "cite": "tailwind.config.cjs:118"
+      "cite": "tailwind.config.cjs:145"
     },
     "blur.lg": {
       "value": "16px",
       "category": "blur",
-      "cite": "tailwind.config.cjs:119"
+      "cite": "tailwind.config.cjs:146"
     },
     "blur.xl": {
       "value": "24px",
       "category": "blur",
-      "cite": "tailwind.config.cjs:120"
+      "cite": "tailwind.config.cjs:147"
     },
     "blur.3xl": {
       "value": "64px",
       "category": "blur",
-      "cite": "tailwind.config.cjs:121"
+      "cite": "tailwind.config.cjs:148"
     }
   }
 }

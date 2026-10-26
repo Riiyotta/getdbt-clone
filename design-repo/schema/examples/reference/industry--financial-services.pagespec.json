@@ -712,8 +712,8 @@
         }
       },
       "motion": {
-        "pattern": "stroke.draw-on",
-        "reducedMotionFallback": "render-final-state"
+        "pattern": "stroke.idle",
+        "reducedMotionFallback": "none-needed"
       },
       "style": {
         "strokeShape": "stroke.s4",
@@ -771,9 +771,12 @@
         "reducedMotionFallback": "show-immediately"
       },
       "style": {
-        "iconSize": "size.icon.32",
+        "revealTrigger": "scroll",
         "headerAlign": "start",
-        "paddingTop": "none"
+        "paddingTop": "none",
+        "surface": "light",
+        "columns": "4",
+        "iconSize": "size.icon.32"
       }
     },
     {
@@ -782,20 +785,23 @@
       "content": {
         "quotes": [
           {
+            "quote": "Our last exam closed without a single finding. Examiners saw lineage and approvals behind every number and finished early.",
+            "person": "Grace Okafor",
+            "role": "Chief Data Officer",
             "logo": {
               "assetRole": "customer.logo",
               "alt": "Halcyon",
               "ref": "/assets/marquee/logo-6.svg"
-            },
-            "quote": "Our last exam closed without a single finding. Examiners saw lineage and approvals behind every number and finished early.",
-            "person": "Grace Okafor",
-            "role": "Chief Data Officer"
+            }
           }
         ]
       },
       "motion": {
         "pattern": "static",
         "reducedMotionFallback": "none-needed"
+      },
+      "style": {
+        "background": "white"
       }
     },
     {
@@ -839,9 +845,12 @@
         "reducedMotionFallback": "show-immediately"
       },
       "style": {
-        "iconSize": "size.icon.32",
+        "revealTrigger": "scroll",
         "headerAlign": "center",
-        "paddingTop": "none"
+        "paddingTop": "none",
+        "surface": "light",
+        "columns": "3",
+        "iconSize": "size.icon.32"
       }
     },
     {
@@ -900,10 +909,19 @@
       },
       "motion": {
         "pattern": "tabs.instant",
-        "reducedMotionFallback": "none-needed"
+        "reducedMotionFallback": "none-needed",
+        "additional": [
+          {
+            "pattern": "stroke.idle",
+            "reducedMotionFallback": "none-needed"
+          }
+        ]
       },
       "style": {
-        "strokeGradient": "gradient.12"
+        "strokeGradient": "gradient.12",
+        "mediaFrame": "captioned",
+        "mediaCorners": "rounded",
+        "strokeShape": "stroke.s6"
       }
     },
     {

@@ -44,6 +44,26 @@
     "chip.bg": "color.purple.100",
     "chip.text": "color.purple.600",
     "badge.bg": "color.purple.600",
-    "menu.strip.bg": "color.purple.600"
+    "menu.strip.bg": "color.purple.600",
+    "text.error": "color.pink.700",
+    "border.input": "color.ink.300",
+    "action.focus-ring-input": "elevation.focus",
+    "surface.overlay": "color.overlay",
+    "surface.translucent": "color.surface-translucent",
+    "indicator.progress": "color.purple.600",
+    "status.ok": "color.journey.green",
+    "status.warn": "color.journey.yellow",
+    "status.danger": "color.danger",
+    "text.event.fg": "color.summit.fg",
+    "surface.event.bg": "color.summit.bg",
+    "surface.event.ink": "color.summit.ink",
+    "action.event.bg": "color.summit.orange",
+    "action.event.hover-bg": "color.white",
+    "accent.event.citron": "color.summit.citron",
+    "accent.event.pink": "color.summit.pink",
+    "accent.event.blue": "color.summit.blue",
+    "text.directory.primary": "color.directory.gray.700",
+    "text.directory.muted": "color.directory.gray.500",
+    "border.directory": "color.directory.gray.300"
   }
 }

@@ -1,0 +1,1804 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "T6",
+  "route": "/blog",
+  "theme": "light",
+  "brand": {
+    "name": "Lattice"
+  },
+  "meta": {
+    "title": "Blog"
+  },
+  "nodes": [
+    {
+      "section": "shell.announcement-bar",
+      "variant": "default",
+      "content": {
+        "slides": [
+          {
+            "text": "Lattice 4.0 is here with faster incremental builds, smarter tests, and a fresh lineage explorer.",
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "text": "Join our live workshop on modeling patterns this month.",
+            "href": "/resources/webinars/charts-as-code"
+          },
+          {
+            "text": "New report: how two hundred data teams trimmed warehouse spend while shipping trusted models each week.",
+            "href": "/resources/state-of-data-teams"
+          },
+          {
+            "text": "Lattice Cloud now runs in three new regions across Europe and Asia. Check region availability.",
+            "href": "/blog/lattice-joins-northwind"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "carousel.autoplay",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.navbar",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-dark.svg"
+        },
+        "menuLabels": [
+          "Product",
+          "Solutions",
+          "Customers",
+          "Resources",
+          "Community"
+        ],
+        "plainLink": {
+          "label": "Pricing",
+          "href": "/pricing"
+        },
+        "secondaryAction": {
+          "label": "Get started",
+          "href": "/signup"
+        },
+        "primaryAction": {
+          "label": "Book a demo",
+          "href": "/contact"
+        }
+      },
+      "motion": {
+        "pattern": "nav.hide-on-scroll",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mega-menu",
+      "variant": "default",
+      "content": {
+        "menus": [
+          {
+            "trigger": "Product",
+            "groups": [
+              {
+                "label": "First steps",
+                "items": [
+                  {
+                    "title": "Why Lattice",
+                    "description": "How Lattice turns SQL into trusted products",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/product/what-is-lattice"
+                  },
+                  {
+                    "title": "Platform tour",
+                    "description": "Watch a ten-minute walkthrough of the full workspace",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/product/lattice"
+                  }
+                ]
+              },
+              {
+                "label": "Everything in the box",
+                "items": [
+                  {
+                    "title": "Build",
+                    "description": "Author models in the browser, a desktop editor or the command line",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/develop"
+                  },
+                  {
+                    "title": "Validate",
+                    "description": "Assert rules on every model",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/test-and-observe"
+                  },
+                  {
+                    "title": "Design",
+                    "description": "Split big projects by domain",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/mesh"
+                  },
+                  {
+                    "title": "Explore",
+                    "description": "Search docs, owners and lineage",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/catalog"
+                  },
+                  {
+                    "title": "Ship",
+                    "description": "Trigger runs on merge or a timer",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/deploy"
+                  },
+                  {
+                    "title": "Measure",
+                    "description": "Publish one definition of revenue to every tool that asks",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/semantic-layer"
+                  }
+                ]
+              }
+            ],
+            "featured": {
+              "title": "The modeling lifecycle",
+              "description": "Map how ideas move from first query to production model, with clear owners and checks at each step",
+              "thumbnail": {
+                "assetRole": "illustration.abstract",
+                "alt": "",
+                "ref": "/assets/menu/featured.svg"
+              },
+              "href": "/resources/analytics-lifecycle"
+            },
+            "side": {
+              "label": "Feature spotlight",
+              "links": [
+                {
+                  "label": "Smart state",
+                  "href": "/product/state"
+                },
+                {
+                  "label": "Guided setup",
+                  "href": "/product/assistant"
+                },
+                {
+                  "label": "Charts",
+                  "href": "/product/charts"
+                },
+                {
+                  "label": "Governance",
+                  "href": "/product/governance"
+                },
+                {
+                  "label": "Security",
+                  "href": "/security"
+                },
+                {
+                  "label": "Integrations",
+                  "href": "/product/integrations"
+                }
+              ],
+              "action": {
+                "label": "See the latest demo",
+                "href": "/resources/webinars/launch-showcase"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Solutions",
+            "groups": [
+              {
+                "label": "By need",
+                "items": [
+                  {
+                    "title": "Analytics",
+                    "description": "Give analysts a governed place to model data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/analyst"
+                  },
+                  {
+                    "title": "AI readiness",
+                    "description": "Feed assistants with well-described data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/ai"
+                  }
+                ]
+              },
+              {
+                "label": "By team",
+                "items": [
+                  {
+                    "title": "Data engineers",
+                    "description": "Ship pipelines with tests built in",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/data-modernization"
+                  },
+                  {
+                    "title": "Analysts",
+                    "description": "Own models end to end in plain SQL",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/embedded-analytics"
+                  },
+                  {
+                    "title": "Platform leads",
+                    "description": "Standardize how every team builds",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/data-trust"
+                  },
+                  {
+                    "title": "Executives",
+                    "description": "Trust the numbers behind decisions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/cost-optimization"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "By industry",
+              "links": [
+                {
+                  "label": "Finance",
+                  "href": "/industry/financial-services"
+                },
+                {
+                  "label": "Retail",
+                  "href": "/industry/manufacturing"
+                },
+                {
+                  "label": "Healthcare",
+                  "href": "/industry/healthcare"
+                },
+                {
+                  "label": "Media",
+                  "href": "/industry/telecommunications"
+                },
+                {
+                  "label": "Public sector",
+                  "href": "/industry/energy-utilities"
+                },
+                {
+                  "label": "Software",
+                  "href": "/data-platforms/cobalt"
+                }
+              ],
+              "action": {
+                "label": "See every use case",
+                "href": "/product/data-modernization"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Customers",
+            "groups": [
+              {
+                "label": "Stories",
+                "items": [
+                  {
+                    "title": "Case studies",
+                    "description": "Read how teams run on Lattice",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/case-studies"
+                  },
+                  {
+                    "title": "Reviews",
+                    "description": "Independent ratings from practitioners",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/resources/on-demand"
+                  }
+                ]
+              },
+              {
+                "label": "By outcome",
+                "items": [
+                  {
+                    "title": "Data quality",
+                    "description": "Teams that caught issues earlier",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/case-studies/kestrel"
+                  },
+                  {
+                    "title": "Speed",
+                    "description": "Teams that shipped models faster",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/case-studies/meridian-partners"
+                  },
+                  {
+                    "title": "Cost",
+                    "description": "Teams that trimmed warehouse spend",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/case-studies/halcyon"
+                  },
+                  {
+                    "title": "Scale",
+                    "description": "Teams that grew past one project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/case-studies/basalt-health"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Featured",
+              "links": [
+                {
+                  "label": "Fernway",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Orbitly",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Kestrel",
+                  "href": "/case-studies/kestrel"
+                },
+                {
+                  "label": "Tidepool",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Meridian",
+                  "href": "/case-studies/meridian-partners"
+                },
+                {
+                  "label": "Halcyon",
+                  "href": "/case-studies/halcyon"
+                }
+              ],
+              "action": {
+                "label": "View all customers",
+                "href": "/case-studies"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Resources",
+            "groups": [
+              {
+                "label": "Learn",
+                "items": [
+                  {
+                    "title": "Docs",
+                    "description": "Guides and reference for every feature",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Courses",
+                    "description": "Free self-paced training",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/learn"
+                  }
+                ]
+              },
+              {
+                "label": "Explore",
+                "items": [
+                  {
+                    "title": "Blog",
+                    "description": "Notes from the product team",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/blog"
+                  },
+                  {
+                    "title": "Webinars",
+                    "description": "Live and recorded sessions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/resources/webinars"
+                  },
+                  {
+                    "title": "Reports",
+                    "description": "Research on modern data work",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/resources/state-of-data-teams"
+                  },
+                  {
+                    "title": "Templates",
+                    "description": "Starter projects you can fork",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/resources/whitepaper-control-plane"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Popular",
+              "links": [
+                {
+                  "label": "Getting started",
+                  "href": "/learn"
+                },
+                {
+                  "label": "Best practices",
+                  "href": "/resources/analytics-lifecycle"
+                },
+                {
+                  "label": "Release notes",
+                  "href": "/blog/summit-announcements"
+                },
+                {
+                  "label": "Glossary",
+                  "href": "/resources"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Status",
+                  "href": "#"
+                }
+              ],
+              "action": {
+                "label": "Browse all resources",
+                "href": "/resources"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Community",
+            "groups": [
+              {
+                "label": "Connect",
+                "items": [
+                  {
+                    "title": "Forum",
+                    "description": "Ask questions and share answers",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Meetups",
+                    "description": "Find a group near you",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/events"
+                  }
+                ]
+              },
+              {
+                "label": "Contribute",
+                "items": [
+                  {
+                    "title": "Open source",
+                    "description": "Help build the core project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Write a guide",
+                    "description": "Share what you have learned",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Speak",
+                    "description": "Present at a community event",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/summit"
+                  },
+                  {
+                    "title": "Champions",
+                    "description": "Join the ambassador program",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/champions"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Get involved",
+              "links": [
+                {
+                  "label": "Code of conduct",
+                  "href": "/community"
+                },
+                {
+                  "label": "Chat space",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Newsletter",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Awards",
+                  "href": "/champions"
+                },
+                {
+                  "label": "Jobs board",
+                  "href": "/about-us/careers"
+                }
+              ],
+              "action": {
+                "label": "Join the community",
+                "href": "/community/join"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "menu.popover",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mobile-drawer",
+      "variant": "default",
+      "content": {
+        "accountActions": [
+          {
+            "label": "Log in",
+            "href": "#"
+          },
+          {
+            "label": "Create an account",
+            "href": "/signup"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "drawer.slide",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "listing.header",
+      "variant": "hub",
+      "content": {
+        "title": "Blog"
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      },
+      "style": {
+        "width": "column"
+      }
+    },
+    {
+      "section": "listing.category-nav",
+      "variant": "default",
+      "content": {
+        "search": "Search every post",
+        "pills": [
+          {
+            "label": "All",
+            "href": "/blog"
+          },
+          {
+            "label": "Product",
+            "href": "/blog"
+          },
+          {
+            "label": "Company",
+            "href": "/blog"
+          },
+          {
+            "label": "Modeling",
+            "href": "/blog"
+          },
+          {
+            "label": "Teams",
+            "href": "/blog"
+          },
+          {
+            "label": "Community",
+            "href": "/blog"
+          },
+          {
+            "label": "Data quality",
+            "href": "/blog"
+          },
+          {
+            "label": "Ideas",
+            "href": "/blog"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "sticky.pin",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "listing.hub-grid",
+      "variant": "blog",
+      "content": {
+        "blocks": [
+          {
+            "featured": {
+              "tag": "Product",
+              "readTime": "9 min",
+              "title": "Everything we shipped at Summit this year and how the pieces fit together",
+              "author": {
+                "name": "Rhea Castellano",
+                "avatar": {
+                  "assetRole": "person.fictional-avatar",
+                  "alt": "",
+                  "ref": "/assets/pages/people/avatar-1.svg"
+                },
+                "href": "#"
+              },
+              "date": "October 21, 2026",
+              "image": {
+                "assetRole": "resource.thumbnail",
+                "alt": "",
+                "ref": "/assets/pages/posts/cover-1.svg"
+              },
+              "href": "/blog/summit-announcements"
+            },
+            "cards": [
+              {
+                "tag": "Company",
+                "readTime": "4 min",
+                "title": "Lattice and Northwind are now one company",
+                "excerpt": "What the combination means for customers, for the open project and for the roadmap over the coming year.",
+                "author": {
+                  "name": "Tobias Wrenfield",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-2.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "October 14, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-2.svg"
+                },
+                "href": "/blog/lattice-joins-northwind"
+              },
+              {
+                "tag": "Data quality",
+                "readTime": "7 min",
+                "title": "A field guide to tests that catch real problems",
+                "excerpt": "Which checks earn their keep, which ones only add noise, and how to tell the difference before a pager goes off.",
+                "author": {
+                  "name": "Amara Lindqvist",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-3.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "October 9, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-3.svg"
+                },
+                "href": "/blog/summit-announcements"
+              },
+              {
+                "tag": "Modeling",
+                "readTime": "6 min",
+                "title": "Naming conventions your future teammates will thank you for",
+                "excerpt": "Small, boring rules for prefixes, grain and folders that make a large project readable at a glance.",
+                "author": {
+                  "name": "Devansh Kulkarni",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-4.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "October 2, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-4.svg"
+                },
+                "href": "/blog/lattice-joins-northwind"
+              }
+            ]
+          },
+          {
+            "title": "Product",
+            "more": {
+              "label": "Browse all posts",
+              "href": "/blog"
+            },
+            "featured": {
+              "tag": "Product",
+              "readTime": "8 min",
+              "title": "State-aware builds are now on by default for every new project",
+              "author": {
+                "name": "Kenji Hollowell",
+                "avatar": {
+                  "assetRole": "person.fictional-avatar",
+                  "alt": "",
+                  "ref": "/assets/pages/people/avatar-8.svg"
+                },
+                "href": "#"
+              },
+              "date": "September 30, 2026",
+              "image": {
+                "assetRole": "resource.thumbnail",
+                "alt": "",
+                "ref": "/assets/pages/posts/cover-5.svg"
+              },
+              "href": "/blog/summit-announcements"
+            },
+            "cards": [
+              {
+                "tag": "Product",
+                "readTime": "5 min",
+                "title": "A faster lineage explorer for very large projects",
+                "excerpt": "Rendering ten thousand nodes without a spinner, and the trade-offs we made to get there.",
+                "author": {
+                  "name": "Felix Arendt",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-6.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "September 24, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-6.svg"
+                },
+                "href": "/blog/lattice-joins-northwind"
+              },
+              {
+                "tag": "Product",
+                "readTime": "6 min",
+                "title": "Column-level descriptions now follow a rename",
+                "excerpt": "Rename a column and its docs and tests travel with it, across every downstream model in the project.",
+                "author": {
+                  "name": "Ines Carvalho",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-9.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "September 17, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-7.svg"
+                },
+                "href": "/blog/summit-announcements"
+              },
+              {
+                "tag": "Product",
+                "readTime": "4 min",
+                "title": "Scheduling jobs by data arrival instead of the clock",
+                "excerpt": "Event-based triggers mean nightly jobs start when sources land rather than at a hopeful fixed hour.",
+                "author": {
+                  "name": "Kenji Hollowell",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-8.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "September 10, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-8.svg"
+                },
+                "href": "/blog/lattice-joins-northwind"
+              }
+            ]
+          },
+          {
+            "title": "Company",
+            "more": {
+              "label": "Browse all posts",
+              "href": "/blog"
+            },
+            "featured": {
+              "tag": "Company",
+              "readTime": "5 min",
+              "title": "Why we are doubling our investment in the open-source core",
+              "author": {
+                "name": "Tobias Wrenfield",
+                "avatar": {
+                  "assetRole": "person.fictional-avatar",
+                  "alt": "",
+                  "ref": "/assets/pages/people/avatar-2.svg"
+                },
+                "href": "#"
+              },
+              "date": "September 3, 2026",
+              "image": {
+                "assetRole": "resource.thumbnail",
+                "alt": "",
+                "ref": "/assets/pages/posts/cover-9.svg"
+              },
+              "href": "/blog/summit-announcements"
+            },
+            "cards": [
+              {
+                "tag": "Company",
+                "readTime": "3 min",
+                "title": "Opening our first office in the southern hemisphere",
+                "excerpt": "A new hub for customers and contributors across the region, with support hours that finally match theirs.",
+                "author": {
+                  "name": "Saoirse Malley",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-7.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "August 27, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-10.svg"
+                },
+                "href": "/blog/lattice-joins-northwind"
+              },
+              {
+                "tag": "Company",
+                "readTime": "6 min",
+                "title": "What our internal data team learned from a year of dogfooding",
+                "excerpt": "Running our own metrics on our own product surfaced dozens of rough edges. Here are the ones we fixed first.",
+                "author": {
+                  "name": "Marcus Oyelaran",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-10.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "August 20, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-11.svg"
+                },
+                "href": "/blog/summit-announcements"
+              },
+              {
+                "tag": "Company",
+                "readTime": "4 min",
+                "title": "Our latest security review, in plain language",
+                "excerpt": "A readable summary of the audit scope, what was found, and the changes we made in response.",
+                "author": {
+                  "name": "Lena Brightwater",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-11.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "August 13, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-12.svg"
+                },
+                "href": "/blog/lattice-joins-northwind"
+              }
+            ]
+          },
+          {
+            "title": "Modeling",
+            "more": {
+              "label": "Browse all posts",
+              "href": "/blog"
+            },
+            "featured": {
+              "tag": "Modeling",
+              "readTime": "11 min",
+              "title": "Incremental models without tears: a practical walkthrough from first draft to production",
+              "author": {
+                "name": "Devansh Kulkarni",
+                "avatar": {
+                  "assetRole": "person.fictional-avatar",
+                  "alt": "",
+                  "ref": "/assets/pages/people/avatar-4.svg"
+                },
+                "href": "#"
+              },
+              "date": "August 6, 2026",
+              "image": {
+                "assetRole": "resource.thumbnail",
+                "alt": "",
+                "ref": "/assets/pages/posts/cover-13.svg"
+              },
+              "href": "/blog/summit-announcements"
+            },
+            "cards": [
+              {
+                "tag": "Modeling",
+                "readTime": "7 min",
+                "title": "When to split a wide mart into smaller ones",
+                "excerpt": "Signs that a single table is doing too many jobs, and a gentle way to break it apart without breaking dashboards.",
+                "author": {
+                  "name": "Amara Lindqvist",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-3.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "July 30, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-14.svg"
+                },
+                "href": "/blog/lattice-joins-northwind"
+              },
+              {
+                "tag": "Modeling",
+                "readTime": "5 min",
+                "title": "Snapshots, explained with one tiny example",
+                "excerpt": "Track slowly changing records with a four-line config and a test that proves history is kept.",
+                "author": {
+                  "name": "Theo Vandersloot",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-12.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "July 23, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-15.svg"
+                },
+                "href": "/blog/summit-announcements"
+              },
+              {
+                "tag": "Modeling",
+                "readTime": "8 min",
+                "title": "Designing a semantic layer for people who never read SQL",
+                "excerpt": "Metric names, units and descriptions that make sense to a finance lead on the first try.",
+                "author": {
+                  "name": "Noor Haddad",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-5.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "July 16, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-16.svg"
+                },
+                "href": "/blog/lattice-joins-northwind"
+              }
+            ]
+          },
+          {
+            "title": "Teams",
+            "more": {
+              "label": "Browse all posts",
+              "href": "/blog"
+            },
+            "featured": {
+              "tag": "Teams",
+              "readTime": "6 min",
+              "title": "How a three-person data team supports a company of nine hundred",
+              "author": {
+                "name": "Saoirse Malley",
+                "avatar": {
+                  "assetRole": "person.fictional-avatar",
+                  "alt": "",
+                  "ref": "/assets/pages/people/avatar-7.svg"
+                },
+                "href": "#"
+              },
+              "date": "July 9, 2026",
+              "image": {
+                "assetRole": "resource.thumbnail",
+                "alt": "",
+                "ref": "/assets/pages/posts/cover-17.svg"
+              },
+              "href": "/blog/summit-announcements"
+            },
+            "cards": [
+              {
+                "tag": "Teams",
+                "readTime": "5 min",
+                "title": "Code review habits for analytics engineers",
+                "excerpt": "What to look for in a model diff, how to leave useful comments and when a review should be a conversation.",
+                "author": {
+                  "name": "Ines Carvalho",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-9.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "July 2, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-18.svg"
+                },
+                "href": "/blog/lattice-joins-northwind"
+              },
+              {
+                "tag": "Teams",
+                "readTime": "4 min",
+                "title": "Onboarding an analyst in their first week",
+                "excerpt": "A checklist that gets a new hire from laptop setup to a merged, tested model in five days.",
+                "author": {
+                  "name": "Felix Arendt",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-6.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "June 25, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-19.svg"
+                },
+                "href": "/blog/summit-announcements"
+              },
+              {
+                "tag": "Teams",
+                "readTime": "7 min",
+                "title": "Splitting one big project into domains without losing shared definitions",
+                "excerpt": "Ownership boundaries, contracts and cross-project references, told through one retailer’s migration.",
+                "author": {
+                  "name": "Marcus Oyelaran",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-10.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "June 18, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-20.svg"
+                },
+                "href": "/blog/lattice-joins-northwind"
+              }
+            ]
+          },
+          {
+            "title": "Community",
+            "more": {
+              "label": "Browse all posts",
+              "href": "/blog"
+            },
+            "featured": {
+              "tag": "Community",
+              "readTime": "3 min",
+              "title": "Meet this season’s community award winners",
+              "author": {
+                "name": "Lena Brightwater",
+                "avatar": {
+                  "assetRole": "person.fictional-avatar",
+                  "alt": "",
+                  "ref": "/assets/pages/people/avatar-11.svg"
+                },
+                "href": "#"
+              },
+              "date": "June 11, 2026",
+              "image": {
+                "assetRole": "resource.thumbnail",
+                "alt": "",
+                "ref": "/assets/pages/posts/cover-21.svg"
+              },
+              "href": "/blog/summit-announcements"
+            },
+            "cards": [
+              {
+                "tag": "Community",
+                "readTime": "5 min",
+                "title": "What we heard at forty local meetups this spring",
+                "excerpt": "Recurring questions, favourite packages and the topics people want covered next, collected city by city.",
+                "author": {
+                  "name": "Saoirse Malley",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-7.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "June 4, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-22.svg"
+                },
+                "href": "/blog/lattice-joins-northwind"
+              },
+              {
+                "tag": "Community",
+                "readTime": "4 min",
+                "title": "How to give your first meetup talk",
+                "excerpt": "Pick one problem, show the real code, keep it to twenty minutes, and other advice from seasoned speakers.",
+                "author": {
+                  "name": "Rhea Castellano",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-1.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "May 28, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-23.svg"
+                },
+                "href": "/blog/summit-announcements"
+              },
+              {
+                "tag": "Community",
+                "readTime": "6 min",
+                "title": "The most useful open packages of the year",
+                "excerpt": "A short list of community-maintained packages that save hours, picked by the people who use them daily.",
+                "author": {
+                  "name": "Theo Vandersloot",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-12.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "May 21, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-24.svg"
+                },
+                "href": "/blog/lattice-joins-northwind"
+              }
+            ]
+          },
+          {
+            "title": "Data quality",
+            "more": {
+              "label": "Browse all posts",
+              "href": "/blog"
+            },
+            "featured": {
+              "tag": "Data quality",
+              "readTime": "9 min",
+              "title": "Treating freshness as a promise: service levels for data products your users can rely on",
+              "author": {
+                "name": "Amara Lindqvist",
+                "avatar": {
+                  "assetRole": "person.fictional-avatar",
+                  "alt": "",
+                  "ref": "/assets/pages/people/avatar-3.svg"
+                },
+                "href": "#"
+              },
+              "date": "May 14, 2026",
+              "image": {
+                "assetRole": "resource.thumbnail",
+                "alt": "",
+                "ref": "/assets/pages/posts/cover-1.svg"
+              },
+              "href": "/blog/summit-announcements"
+            },
+            "cards": [
+              {
+                "tag": "Data quality",
+                "readTime": "6 min",
+                "title": "Writing alerts that people actually read",
+                "excerpt": "Fewer, clearer notifications that name an owner, a likely cause and the first thing to check.",
+                "author": {
+                  "name": "Kenji Hollowell",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-8.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "May 7, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-2.svg"
+                },
+                "href": "/blog/lattice-joins-northwind"
+              },
+              {
+                "tag": "Data quality",
+                "readTime": "5 min",
+                "title": "Contracts between producers and consumers, step by step",
+                "excerpt": "Agree on columns and types up front, enforce them on every build, and stop surprise breakages downstream.",
+                "author": {
+                  "name": "Noor Haddad",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-5.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "April 30, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-3.svg"
+                },
+                "href": "/blog/summit-announcements"
+              },
+              {
+                "tag": "Data quality",
+                "readTime": "7 min",
+                "title": "Post-incident reviews for data teams",
+                "excerpt": "A blameless template for writing up a bad number, from first report to the guardrail that prevents a repeat.",
+                "author": {
+                  "name": "Devansh Kulkarni",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-4.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "April 23, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-4.svg"
+                },
+                "href": "/blog/lattice-joins-northwind"
+              }
+            ]
+          },
+          {
+            "title": "Ideas",
+            "more": {
+              "label": "Browse all posts",
+              "href": "/blog"
+            },
+            "featured": {
+              "tag": "Ideas",
+              "readTime": "8 min",
+              "title": "Agents need context more than they need cleverness",
+              "author": {
+                "name": "Tobias Wrenfield",
+                "avatar": {
+                  "assetRole": "person.fictional-avatar",
+                  "alt": "",
+                  "ref": "/assets/pages/people/avatar-2.svg"
+                },
+                "href": "#"
+              },
+              "date": "April 16, 2026",
+              "image": {
+                "assetRole": "resource.thumbnail",
+                "alt": "",
+                "ref": "/assets/pages/posts/cover-5.svg"
+              },
+              "href": "/blog/summit-announcements"
+            },
+            "cards": [
+              {
+                "tag": "Ideas",
+                "readTime": "6 min",
+                "title": "The case for boring data infrastructure",
+                "excerpt": "Predictable tools, small changes and good defaults beat novelty when a whole company depends on the numbers.",
+                "author": {
+                  "name": "Marcus Oyelaran",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-10.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "April 9, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-6.svg"
+                },
+                "href": "/blog/lattice-joins-northwind"
+              },
+              {
+                "tag": "Ideas",
+                "readTime": "5 min",
+                "title": "What a metric really is",
+                "excerpt": "A definition, an owner, a grain and a test. Anything less is just a number that happens to be on a chart.",
+                "author": {
+                  "name": "Noor Haddad",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-5.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "April 2, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-7.svg"
+                },
+                "href": "/blog/summit-announcements"
+              },
+              {
+                "tag": "Ideas",
+                "readTime": "7 min",
+                "title": "Analytics engineering ten years from now",
+                "excerpt": "Some guesses about the work, the tools and the people, from a team that spends its days on the tools.",
+                "author": {
+                  "name": "Rhea Castellano",
+                  "avatar": {
+                    "assetRole": "person.fictional-avatar",
+                    "alt": "",
+                    "ref": "/assets/pages/people/avatar-1.svg"
+                  },
+                  "href": "#"
+                },
+                "date": "March 26, 2026",
+                "image": {
+                  "assetRole": "resource.thumbnail",
+                  "alt": "",
+                  "ref": "/assets/pages/posts/cover-8.svg"
+                },
+                "href": "/blog/lattice-joins-northwind"
+              }
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "cta.community-band",
+      "variant": "default",
+      "content": {
+        "eyebrow": "Lattice community",
+        "title": "Join the biggest community building with data",
+        "body": "The Lattice community is where practitioners swap patterns, review each other’s projects and help steer the roadmap. Ask questions, share what worked, and learn alongside data leaders and AI builders from around the world.",
+        "primary": {
+          "label": "Join the community",
+          "href": "/community/join"
+        },
+        "secondary": {
+          "label": "Meet the community",
+          "href": "/community"
+        },
+        "stats": [
+          {
+            "number": "75,000+",
+            "label": "active members"
+          },
+          {
+            "number": "60,000+",
+            "label": "teams on Lattice"
+          },
+          {
+            "number": "140+",
+            "label": "local meetups"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-light.svg"
+        },
+        "columns": [
+          {
+            "title": "Platform",
+            "links": [
+              {
+                "label": "Overview",
+                "href": "/product/lattice"
+              },
+              {
+                "label": "What is Lattice?",
+                "href": "/product/what-is-lattice"
+              },
+              {
+                "label": "Lattice for AI workflows",
+                "href": "/product/ai"
+              },
+              {
+                "label": "Customer stories",
+                "href": "/case-studies"
+              },
+              {
+                "label": "Connectors",
+                "href": "/product/integrations"
+              },
+              {
+                "label": "Plans and pricing",
+                "href": "/pricing"
+              }
+            ]
+          },
+          {
+            "title": "For Builders",
+            "links": [
+              {
+                "label": "Documentation",
+                "href": "#"
+              },
+              {
+                "label": "Quickstart guides",
+                "href": "#"
+              },
+              {
+                "label": "Supported data platforms",
+                "href": "/data-platforms/cobalt"
+              },
+              {
+                "label": "Engineering blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Editor extension",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "/about-us"
+              },
+              {
+                "label": "Belonging at Lattice",
+                "href": "/about-us/belonging"
+              },
+              {
+                "label": "Careers",
+                "href": "/about-us/careers"
+              },
+              {
+                "label": "Press",
+                "href": "/press"
+              }
+            ],
+            "badge": {
+              "label": "Join the team",
+              "linkIndex": 2
+            }
+          },
+          {
+            "title": "Learning",
+            "links": [
+              {
+                "label": "Resource hub",
+                "href": "/resources"
+              },
+              {
+                "label": "Lattice Academy",
+                "href": "/learn"
+              },
+              {
+                "label": "Certification",
+                "href": "/certification"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              }
+            ]
+          },
+          {
+            "title": "Community",
+            "links": [
+              {
+                "label": "Join the community",
+                "href": "/community/join"
+              },
+              {
+                "label": "Become a contributor",
+                "href": "/community"
+              },
+              {
+                "label": "Open source projects",
+                "href": "#"
+              },
+              {
+                "label": "Community forum",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Help & Support",
+            "links": [
+              {
+                "label": "Contact us",
+                "href": "/contact"
+              },
+              {
+                "label": "Professional services",
+                "href": "/services"
+              },
+              {
+                "label": "Find a partner",
+                "href": "/partner-directory"
+              },
+              {
+                "label": "System status",
+                "href": "#"
+              }
+            ]
+          }
+        ],
+        "newsletter": {
+          "title": "Subscribe today!",
+          "body": "A monthly digest of field notes, release highlights and practical modeling advice.",
+          "action": {
+            "label": "Join today",
+            "href": "/community/join"
+          }
+        },
+        "region": {
+          "title": "Select region",
+          "options": [
+            "Global",
+            "Europe",
+            "Asia Pacific"
+          ]
+        },
+        "social": {
+          "title": "Connect with us",
+          "links": [
+            {
+              "label": "GitHub",
+              "href": "#"
+            },
+            {
+              "label": "LinkedIn",
+              "href": "#"
+            },
+            {
+              "label": "YouTube",
+              "href": "#"
+            },
+            {
+              "label": "Instagram",
+              "href": "#"
+            },
+            {
+              "label": "X",
+              "href": "#"
+            },
+            {
+              "label": "Bluesky",
+              "href": "#"
+            },
+            {
+              "label": "RSS",
+              "href": "#"
+            }
+          ]
+        },
+        "copyright": "© 2026 Lattice, Inc. All rights reserved.",
+        "legalLinks": [
+          {
+            "label": "Privacy policy",
+            "href": "#"
+          },
+          {
+            "label": "Accessibility statement",
+            "href": "/legal/ai-principles"
+          },
+          {
+            "label": "Terms of service",
+            "href": "/terms-of-use"
+          },
+          {
+            "label": "Security",
+            "href": "/security"
+          },
+          {
+            "label": "Acceptable use",
+            "href": "/modern-slavery-statement"
+          },
+          {
+            "label": "Responsible AI principles",
+            "href": "/legal/ai-principles"
+          }
+        ],
+        "cookieLabel": "Cookie preferences"
+      },
+      "motion": {
+        "pattern": "accordion.toggle",
+        "reducedMotionFallback": "unchanged"
+      }
+    }
+  ]
+}

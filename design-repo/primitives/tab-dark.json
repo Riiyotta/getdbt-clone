@@ -7,6 +7,6 @@
     "text.inverse-tertiary"
   ],
   "evidence": [
-    "src/components/sections/TabsDark.jsx:26-50"
+    "src/components/sections/TabsDark.jsx:30-54"
   ]
 }

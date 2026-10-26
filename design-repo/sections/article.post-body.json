@@ -1,0 +1,383 @@
+{
+  "id": "article.post-body",
+  "title": "Blog post body",
+  "semantic": {
+    "id": "article.post-body",
+    "category": "ARTICLE"
+  },
+  "source": {
+    "id": "component:PostBody",
+    "file": "src/components/article/ArticleBody.jsx",
+    "export": "PostBody",
+    "tag": "section",
+    "lines": "9-26",
+    "tagLine": 13
+  },
+  "additionalSources": [
+    {
+      "id": "component:PostHeader",
+      "file": "src/components/article/PostHeader.jsx",
+      "export": "PostHeader",
+      "tag": "div",
+      "lines": "6-16",
+      "tagLine": 8
+    },
+    {
+      "id": "component:BlogRail",
+      "file": "src/components/article/StickyRail.jsx",
+      "export": "BlogRail",
+      "tag": "aside",
+      "lines": "102-113",
+      "tagLine": 104
+    },
+    {
+      "id": "component:Prose",
+      "file": "src/components/article/Prose.jsx",
+      "export": "Prose",
+      "tag": "div",
+      "lines": "286-312",
+      "tagLine": 289
+    }
+  ],
+  "purpose": "One white section (py 64): breadcrumb, H1, author row and 'last edited' line, then prose chapters (each opened by an h2) in 8/12 columns beside a rail (3/12, 80 gap) of sticky promos and a sticky share bar. One DOM unit; decompose logically by chapter (h2).",
+  "retrievalEligible": true,
+  "placement": "main",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "blocks",
+        "header",
+        "promos"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "blocks": [
+          1,
+          50
+        ],
+        "promos": [
+          2,
+          2
+        ]
+      },
+      "observedOn": [
+        "/blog/lattice-joins-northwind",
+        "/blog/summit-announcements"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "blocks": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 50,
+        "observedIn": 2
+      },
+      "blocks[].body": {
+        "type": "text",
+        "maxWords": 53,
+        "maxChars": 303,
+        "observedIn": 1
+      },
+      "blocks[].cta.href": {
+        "type": "link",
+        "observedIn": 1
+      },
+      "blocks[].cta.label": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 14,
+        "observedIn": 1
+      },
+      "blocks[].eyebrow": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 27,
+        "observedIn": 1
+      },
+      "blocks[].head": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "observedIn": 1
+      },
+      "blocks[].head[]": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 7,
+        "observedIn": 2
+      },
+      "blocks[].image": {
+        "type": "asset",
+        "referenceRoles": [
+          "resource.thumbnail"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "resource.generated-thumbnail"
+        ]
+      },
+      "blocks[].image.alt": {
+        "type": "text",
+        "maxWords": 11,
+        "maxChars": 65,
+        "observedIn": 1
+      },
+      "blocks[].items": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 7,
+        "observedIn": 4
+      },
+      "blocks[].items[].text": {
+        "type": "text",
+        "maxWords": 89,
+        "maxChars": 553,
+        "observedIn": 16
+      },
+      "blocks[].kind": {
+        "type": "enum",
+        "observedIn": 76
+      },
+      "blocks[].rows": {
+        "type": "list",
+        "minItems": 8,
+        "maxItems": 8,
+        "observedIn": 1
+      },
+      "blocks[].rows[].cells": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "observedIn": 8
+      },
+      "blocks[].rows[].cells[]": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 44,
+        "observedIn": 16
+      },
+      "blocks[].text": {
+        "type": "text",
+        "maxWords": 120,
+        "maxChars": 714,
+        "observedIn": 66
+      },
+      "blocks[].title": {
+        "type": "text",
+        "maxWords": 8,
+        "maxChars": 41,
+        "observedIn": 1
+      },
+      "blocks[].video": {
+        "type": "asset",
+        "referenceRoles": [
+          "video.poster"
+        ],
+        "observedIn": 3,
+        "generatedRoles": [
+          "video.placeholder-poster"
+        ]
+      },
+      "blocks[].video.alt": {
+        "type": "text",
+        "maxWords": 8,
+        "maxChars": 49,
+        "observedIn": 3
+      },
+      "header.author.avatar": {
+        "type": "asset",
+        "referenceRoles": [
+          "person.fictional-avatar"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "person.fictional-avatar"
+        ]
+      },
+      "header.author.avatar.alt": {
+        "type": "text",
+        "maxWords": 0,
+        "maxChars": 0,
+        "observedIn": 2
+      },
+      "header.author.href": {
+        "type": "link",
+        "observedIn": 2
+      },
+      "header.author.name": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 16,
+        "observedIn": 2
+      },
+      "header.breadcrumb.current": {
+        "type": "text",
+        "maxWords": 19,
+        "maxChars": 109,
+        "observedIn": 2
+      },
+      "header.breadcrumb.items": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "observedIn": 2
+      },
+      "header.breadcrumb.items[].href": {
+        "type": "link",
+        "observedIn": 4
+      },
+      "header.breadcrumb.items[].label": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 7,
+        "observedIn": 4
+      },
+      "header.date": {
+        "type": "text",
+        "maxWords": 6,
+        "maxChars": 31,
+        "observedIn": 2
+      },
+      "header.title": {
+        "type": "text",
+        "maxWords": 19,
+        "maxChars": 109,
+        "observedIn": 2
+      },
+      "promos": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "observedIn": 2
+      },
+      "promos[].body": {
+        "type": "text",
+        "maxWords": 28,
+        "maxChars": 188,
+        "observedIn": 4
+      },
+      "promos[].cta.href": {
+        "type": "link",
+        "observedIn": 4
+      },
+      "promos[].cta.label": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 21,
+        "observedIn": 4
+      },
+      "promos[].title": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 21,
+        "observedIn": 4
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "blocks[].image": {
+        "type": "asset",
+        "referenceRoles": [
+          "resource.thumbnail"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "resource.generated-thumbnail"
+        ]
+      },
+      "blocks[].video": {
+        "type": "asset",
+        "referenceRoles": [
+          "video.poster"
+        ],
+        "observedIn": 3,
+        "generatedRoles": [
+          "video.placeholder-poster"
+        ]
+      },
+      "header.author.avatar": {
+        "type": "asset",
+        "referenceRoles": [
+          "person.fictional-avatar"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "person.fictional-avatar"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "person.fictional-avatar",
+    "resource.generated-thumbnail",
+    "video.placeholder-poster"
+  ],
+  "style": {
+    "props": {
+      "chapterLevel": {
+        "kind": "enum",
+        "allowed": [
+          "h2"
+        ]
+      }
+    },
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static",
+      "sticky.pin"
+    ],
+    "requiredPatterns": [
+      "static",
+      "sticky.pin"
+    ],
+    "reducedMotionFallback": {
+      "static": "none-needed",
+      "sticky.pin": "none-needed"
+    },
+    "stagger": "none"
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "8/12 prose + 3/12 rail, rail promos sticky top 0"
+    },
+    {
+      "range": "<1024",
+      "behavior": "rail drops below the prose; share bar static"
+    }
+  ],
+  "runtimeUi": [
+    {
+      "part": "share-bar",
+      "behavior": "sticky bottom-0 bar with a copy-link button (2s 'Link copied' confirmation) and two share links"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/blog/summit-announcements": [
+        8053.1
+      ],
+      "/blog/lattice-joins-northwind": [
+        3732.4
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/article/ArticleBody.jsx:9-26",
+    "src/components/article/PostHeader.jsx:6-16",
+    "src/components/article/StickyRail.jsx:102-113",
+    "src/components/article/Prose.jsx:286-312"
+  ]
+}

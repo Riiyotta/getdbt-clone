@@ -28,6 +28,7 @@
       "description": "the clone's fictional 'Lattice' wordmark (nav 139x32, footer 147x34). Identifies the source brand: never reused in generated pages.",
       "usedBySections": [
         "shell.footer",
+        "shell.minimal-nav",
         "shell.navbar"
       ],
       "generationSafeSubstitutes": [
@@ -55,7 +56,13 @@
       "generationPolicy": "reference-reuse-only",
       "description": "fictional customer wordmarks of the clone (marquee 120 wide, story logos 130x100 box, slider 100x50 box, quote band max 112 wide).",
       "usedBySections": [
+        "article.related-stories",
+        "article.story-body",
+        "article.story-header",
+        "form.form-header",
+        "listing.case-grid",
         "social-proof.customer-tabs",
+        "social-proof.logo-bar",
         "social-proof.logo-marquee",
         "social-proof.quote-band",
         "social-proof.testimonial-slider"
@@ -97,6 +104,8 @@
       "generationPolicy": "reference-reuse-only",
       "description": "fictional data-platform marks (integration tiles 30x30 in 40x40, stats tiles 30x30 in 48x48).",
       "usedBySections": [
+        "features.card-grid",
+        "features.integration-strip",
         "features.integration-tiles",
         "social-proof.stats-bento"
       ],
@@ -117,6 +126,7 @@
       "generationPolicy": "reference-reuse-only",
       "description": "original placeholder mockups of the fictional Lattice product UI (heroes, feature panels, tab media).",
       "usedBySections": [
+        "content.media-split",
         "features.gradient-panel",
         "features.tabs-dark",
         "features.tabs-light",
@@ -141,7 +151,9 @@
       "description": "clone diagrams (pipeline DAG 555x409, lifecycle loops 1224x600, layered platform diagram 832x468).",
       "usedBySections": [
         "content.media-split",
-        "content.statement"
+        "content.statement",
+        "hero.center",
+        "hero.split"
       ],
       "generationSafeSubstitutes": [
         "illustration.generated-diagram"
@@ -160,6 +172,7 @@
       "generationPolicy": "may-generate-new",
       "description": "abstract soft purple/orange gradient shape (mega-menu featured thumbnail 124x61).",
       "usedBySections": [
+        "listing.case-grid",
         "shell.mega-menu"
       ]
     },
@@ -169,9 +182,18 @@
       "generationPolicy": "reference-reuse-only",
       "description": "the clone's abstract gradient 'photo' compositions (T3 heroes, image cards, checklist split images).",
       "usedBySections": [
+        "community.member-grid",
+        "community.story-slider",
+        "content.media-split",
+        "editorial.community-bento",
+        "event.photo-band",
+        "event.photo-gallery",
         "features.card-grid",
         "features.checklist",
-        "hero.split"
+        "hero.champions-dark",
+        "hero.event",
+        "hero.split",
+        "interactive.photo-tabs"
       ],
       "generationSafeSubstitutes": [
         "photo.generated-scene"
@@ -190,8 +212,11 @@
       "generationPolicy": "reference-reuse-only",
       "description": "16:9 poster stand-ins with a play glyph (no third-party player is embedded).",
       "usedBySections": [
+        "article.post-body",
         "content.media-split",
-        "content.statement"
+        "content.statement",
+        "hero.center",
+        "hero.split"
       ],
       "generationSafeSubstitutes": [
         "video.placeholder-poster"
@@ -210,7 +235,15 @@
       "generationPolicy": "reference-reuse-only",
       "description": "16:9 resource-card artwork (800x452).",
       "usedBySections": [
-        "editorial.resource-cards"
+        "article.post-body",
+        "editorial.resource-cards",
+        "form.form-header",
+        "interactive.course-tabs",
+        "listing.event-grid",
+        "listing.hub-grid",
+        "listing.latest-posts",
+        "listing.press-grid",
+        "listing.session-grid"
       ],
       "generationSafeSubstitutes": [
         "resource.generated-thumbnail"
@@ -229,6 +262,8 @@
       "generationPolicy": "reference-reuse-only",
       "description": "fictional review/award badges and security seals in the stats bento.",
       "usedBySections": [
+        "company.compliance-rows",
+        "directory.partner-locator",
         "social-proof.stats-bento"
       ],
       "generationSafeSubstitutes": [
@@ -248,8 +283,14 @@
       "generationPolicy": "may-generate-new",
       "description": "generic line icons (feature cards 32/56px, mega-menu 20px in 40px tiles, IDE tiles 40px, 'why' icons 56px). Generic glyphs, safe to redraw.",
       "usedBySections": [
+        "article.guide-body",
+        "community.icon-cards",
+        "company.program-list",
         "cta.ide-card",
         "features.card-grid",
+        "features.checklist",
+        "form.form-header",
+        "interactive.persona-tabs",
         "shell.mega-menu"
       ]
     },
@@ -257,8 +298,77 @@
       "kind": "media",
       "availability": "generation-safe",
       "generationPolicy": "may-generate-new",
-      "description": "illustrated or generated avatar of a fictional person (not used by the clone; available for generated testimonials).",
-      "usedBySections": []
+      "description": "illustrated or generated avatar of a fictional person (the clone's own people are drawn as abstract illustrated circles: authors, leaders, board, hosts, members). Generated pages must use new fictional avatars, never real photos.",
+      "usedBySections": [
+        "article.guide-header",
+        "article.post-body",
+        "community.dark-quote",
+        "company.leadership-list",
+        "company.people-grid",
+        "editorial.community-bento",
+        "form.form-header",
+        "listing.hub-grid",
+        "listing.latest-posts"
+      ]
+    },
+    "brand.event-mark": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "reference-reuse-only",
+      "description": "the clone's fictional event logo lockup and giant footer wordmark (summit chrome). Identifies the fictional event brand: never reused in generated pages.",
+      "usedBySections": [
+        "shell.event-footer",
+        "shell.event-subnav"
+      ],
+      "generationSafeSubstitutes": [
+        "brand.placeholder-mark"
+      ]
+    },
+    "product.lockup": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "reference-reuse-only",
+      "description": "fictional product / program wordmark lockups (hero lockup above the H1, journey highlight mark, community-program wordmark).",
+      "usedBySections": [
+        "comparison.journey-columns",
+        "hero.champions-dark",
+        "hero.split",
+        "social-proof.quote-band"
+      ],
+      "generationSafeSubstitutes": [
+        "brand.placeholder-mark"
+      ]
+    },
+    "partner.wordmark": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "reference-reuse-only",
+      "description": "invented consultancy and sponsor wordmarks (partner-directory cards 236x114 max, sponsor tiers).",
+      "usedBySections": [
+        "directory.partner-locator",
+        "event.sponsor-logos"
+      ],
+      "generationSafeSubstitutes": [
+        "customer.placeholder-logo"
+      ]
+    },
+    "figure.article-image": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "reference-reuse-only",
+      "description": "invented figures inside articles, guides, reports and policies (charts with invented data, flow diagrams, captioned images, guide hero images).",
+      "usedBySections": [
+        "article.guide-body",
+        "article.guide-header",
+        "article.story-body",
+        "content.media-split",
+        "form.form-header",
+        "legal.policy-body"
+      ],
+      "generationSafeSubstitutes": [
+        "photo.generated-scene",
+        "illustration.generated-diagram"
+      ]
     },
     "person.real-photo": {
       "kind": "media",

@@ -14,7 +14,7 @@
     "duration.250": {
       "value": "250ms",
       "category": "duration",
-      "cite": "tailwind.config.cjs:146"
+      "cite": "tailwind.config.cjs:173"
     },
     "duration.300": {
       "value": "300ms",
@@ -24,7 +24,7 @@
     "duration.400": {
       "value": "400ms",
       "category": "duration",
-      "cite": "tailwind.config.cjs:147"
+      "cite": "tailwind.config.cjs:174"
     },
     "duration.500": {
       "value": "500ms",
@@ -34,7 +34,7 @@
     "duration.1000": {
       "value": "1000ms",
       "category": "duration",
-      "cite": "src/index.css:390"
+      "cite": "src/index.css:421"
     },
     "duration.8000": {
       "value": "8000ms",
@@ -44,32 +44,67 @@
     "duration.30000": {
       "value": "30000ms",
       "category": "duration",
-      "cite": "tailwind.config.cjs:161"
+      "cite": "tailwind.config.cjs:188"
+    },
+    "duration.350": {
+      "value": "350ms",
+      "category": "duration",
+      "cite": "src/styles/oneoffs.css:100"
+    },
+    "duration.800": {
+      "value": "800ms",
+      "category": "duration",
+      "cite": "src/components/sections/Baton.jsx:24"
+    },
+    "duration.1200": {
+      "value": "1200ms",
+      "category": "duration",
+      "cite": "src/components/listing/Listings.jsx:173"
+    },
+    "duration.1500": {
+      "value": "1500ms",
+      "category": "duration",
+      "cite": "src/components/article/StickyRail.jsx:120"
+    },
+    "duration.2000": {
+      "value": "2000ms",
+      "category": "duration",
+      "cite": "src/components/article/StickyRail.jsx:78"
+    },
+    "duration.75830": {
+      "value": "75830ms",
+      "category": "duration",
+      "cite": "src/styles/oneoffs.css:49"
     },
     "easing.standard": {
       "value": "cubic-bezier(.4,0,.2,1)",
       "category": "easing",
-      "cite": "tailwind.config.cjs:141"
+      "cite": "tailwind.config.cjs:168"
     },
     "easing.reveal": {
       "value": "cubic-bezier(0,0,0,1)",
       "category": "easing",
-      "cite": "tailwind.config.cjs:142"
+      "cite": "tailwind.config.cjs:169"
     },
     "easing.slider": {
       "value": "cubic-bezier(.25,1,.5,1)",
       "category": "easing",
-      "cite": "tailwind.config.cjs:143"
+      "cite": "tailwind.config.cjs:170"
     },
     "easing.in-out": {
       "value": "ease-in-out",
       "category": "easing",
-      "cite": "src/index.css:390"
+      "cite": "src/index.css:421"
     },
     "easing.linear": {
       "value": "linear",
       "category": "easing",
-      "cite": "tailwind.config.cjs:161"
+      "cite": "tailwind.config.cjs:188"
+    },
+    "easing.out": {
+      "value": "ease-out",
+      "category": "easing",
+      "cite": "src/components/sections/DevModal.jsx:9"
     }
   }
 }

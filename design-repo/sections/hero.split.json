@@ -10,36 +10,48 @@
     "file": "src/components/sections/HeroSplit.jsx",
     "export": "HeroSplit",
     "tag": "header",
-    "lines": "6-32",
-    "tagLine": 8
+    "lines": "11-65",
+    "tagLine": 30
   },
   "additionalSources": [],
-  "purpose": "Page-opening header: H1, lead, primary + optional secondary large buttons on the left, a rounded image on the right, brush stroke behind.",
+  "purpose": "Page-opening header: optional product lockup and badge, H1, lead, 0-2 large buttons (a button may open the developer-path dialog) on the left, media on the right, brush stroke behind.",
   "retrievalEligible": true,
+  "placement": "main",
   "variants": {
     "padded": {
-      "description": "py 48/64 header (T1 members, T3 cobalt)",
+      "description": "py 48/64 header, media image right (rounded 16)",
       "requiredFields": [
         "lead",
-        "media",
         "primary",
-        "secondary",
         "title"
       ],
-      "forbiddenFields": [],
+      "forbiddenFields": [
+        "framed",
+        "lockup",
+        "video"
+      ],
       "listSizes": {},
       "observedOn": [
+        "/about-us",
+        "/about-us/careers",
+        "/about-us/values",
+        "/certification",
+        "/community",
         "/data-platforms/cobalt",
+        "/learn",
         "/product/catalog",
+        "/product/charts",
         "/product/deploy",
         "/product/develop",
         "/product/mesh",
         "/product/semantic-layer",
-        "/product/test-and-observe"
+        "/product/test-and-observe",
+        "/security",
+        "/services"
       ]
     },
     "flush": {
-      "description": "lg:py-0: image flush with the header top and bottom (T3 members)",
+      "description": "lg:py-0: image flush with the header top and bottom (T3 data-platform members)",
       "requiredFields": [
         "lead",
         "media",
@@ -48,7 +60,10 @@
         "title"
       ],
       "forbiddenFields": [
-        "badge"
+        "badge",
+        "framed",
+        "lockup",
+        "video"
       ],
       "listSizes": {},
       "observedOn": [
@@ -57,6 +72,45 @@
         "/data-platforms/northwind",
         "/data-platforms/quarry",
         "/data-platforms/stratus"
+      ]
+    },
+    "video": {
+      "description": "16:9 video poster (no radius) instead of an image",
+      "requiredFields": [
+        "lockup",
+        "title",
+        "video"
+      ],
+      "forbiddenFields": [
+        "badge",
+        "framed",
+        "media",
+        "secondary"
+      ],
+      "listSizes": {},
+      "observedOn": [
+        "/product/assistant",
+        "/product/state"
+      ]
+    },
+    "framed": {
+      "description": "image inside a bg-blur 1px frame (radius 12, padding 8)",
+      "requiredFields": [
+        "framed",
+        "lead",
+        "primary",
+        "secondary",
+        "title"
+      ],
+      "forbiddenFields": [
+        "badge",
+        "lockup",
+        "media",
+        "video"
+      ],
+      "listSizes": {},
+      "observedOn": [
+        "/product/governance"
       ]
     }
   },
@@ -67,22 +121,56 @@
         "type": "text",
         "maxWords": 5,
         "maxChars": 27,
+        "observedIn": 4
+      },
+      "framed": {
+        "type": "asset",
+        "referenceRoles": [
+          "product.screenshot"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "product.generated-visual"
+        ]
+      },
+      "framed.alt": {
+        "type": "text",
+        "maxWords": 9,
+        "maxChars": 61,
         "observedIn": 1
       },
       "lead": {
         "type": "text",
-        "maxWords": 25,
-        "maxChars": 141,
-        "observedIn": 12
+        "maxWords": 32,
+        "maxChars": 213,
+        "observedIn": 23
+      },
+      "lockup": {
+        "type": "asset",
+        "referenceRoles": [
+          "product.lockup"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "brand.placeholder-mark"
+        ]
+      },
+      "lockup.alt": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 17,
+        "observedIn": 2
       },
       "media": {
         "type": "asset",
         "referenceRoles": [
+          "illustration.diagram",
           "photo.composite-scene",
           "product.screenshot"
         ],
-        "observedIn": 12,
+        "observedIn": 20,
         "generatedRoles": [
+          "illustration.generated-diagram",
           "photo.generated-scene",
           "product.generated-visual"
         ]
@@ -91,73 +179,152 @@
         "type": "text",
         "maxWords": 17,
         "maxChars": 84,
-        "observedIn": 12
+        "observedIn": 20
       },
       "primary.href": {
         "type": "link",
-        "observedIn": 12
+        "observedIn": 23
       },
       "primary.label": {
         "type": "text",
-        "maxWords": 3,
-        "maxChars": 16,
-        "observedIn": 12
+        "maxWords": 5,
+        "maxChars": 28,
+        "observedIn": 23
+      },
+      "primary.opensDialog": {
+        "type": "boolean",
+        "observedIn": 2
       },
       "secondary.href": {
         "type": "link",
-        "observedIn": 12
+        "observedIn": 20
       },
       "secondary.label": {
         "type": "text",
         "maxWords": 6,
         "maxChars": 30,
-        "observedIn": 12
+        "observedIn": 20
       },
       "title": {
         "type": "text",
-        "maxWords": 8,
-        "maxChars": 47,
-        "observedIn": 12
+        "maxWords": 9,
+        "maxChars": 55,
+        "observedIn": 24
+      },
+      "video": {
+        "type": "asset",
+        "referenceRoles": [
+          "video.poster"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "video.placeholder-poster"
+        ]
+      },
+      "video.alt": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 42,
+        "observedIn": 2
       }
     }
   },
   "assets": {
     "fields": {
+      "framed": {
+        "type": "asset",
+        "referenceRoles": [
+          "product.screenshot"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "product.generated-visual"
+        ]
+      },
+      "lockup": {
+        "type": "asset",
+        "referenceRoles": [
+          "product.lockup"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "brand.placeholder-mark"
+        ]
+      },
       "media": {
         "type": "asset",
         "referenceRoles": [
+          "illustration.diagram",
           "photo.composite-scene",
           "product.screenshot"
         ],
-        "observedIn": 12,
+        "observedIn": 20,
         "generatedRoles": [
+          "illustration.generated-diagram",
           "photo.generated-scene",
           "product.generated-visual"
+        ]
+      },
+      "video": {
+        "type": "asset",
+        "referenceRoles": [
+          "video.poster"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "video.placeholder-poster"
         ]
       }
     },
     "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
   },
   "generatedAssetRoles": [
+    "brand.placeholder-mark",
+    "illustration.generated-diagram",
     "photo.generated-scene",
-    "product.generated-visual"
+    "product.generated-visual",
+    "video.placeholder-poster"
   ],
   "style": {
     "props": {
+      "bottomPadding": {
+        "kind": "enum",
+        "allowed": [
+          "default",
+          "none"
+        ]
+      },
+      "columns": {
+        "kind": "enum",
+        "allowed": [
+          "6/6",
+          "7/5"
+        ]
+      },
+      "leadSize": {
+        "kind": "enum",
+        "allowed": [
+          "default",
+          "large"
+        ]
+      },
       "strokeGradient": {
         "kind": "token",
         "allowed": [
           "gradient.01",
           "gradient.02",
-          "gradient.05"
+          "gradient.05",
+          "gradient.22"
         ]
       },
       "strokeShape": {
         "kind": "token",
         "allowed": [
+          "stroke.s1",
           "stroke.s3",
           "stroke.s4",
-          "stroke.s5"
+          "stroke.s5",
+          "stroke.s9"
         ]
       }
     },
@@ -165,17 +332,20 @@
   },
   "constraints": {
     "position": "first-content",
-    "maxPerPage": 1
+    "maxPerPage": 1,
+    "consecutiveVariants": []
   },
   "motion": {
     "allowedPatterns": [
-      "stroke.draw-on"
+      "static",
+      "stroke.draw-on",
+      "stroke.still"
     ],
-    "requiredPatterns": [
-      "stroke.draw-on"
-    ],
+    "requiredPatterns": [],
     "reducedMotionFallback": {
-      "stroke.draw-on": "render-final-state"
+      "static": "none-needed",
+      "stroke.draw-on": "render-final-state",
+      "stroke.still": "none-needed"
     },
     "stagger": "`flush` = T3 members' `lg:py-0` (612 tall, image flush with the header top and bottom). No reveal."
   },
@@ -193,6 +363,7 @@
       "behavior": "stacked; media below the buttons, buttons full width"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "/product/develop": [
@@ -213,9 +384,6 @@
       "/product/semantic-layer": [
         740
       ],
-      "/data-platforms/cobalt": [
-        602.3
-      ],
       "/data-platforms/northwind": [
         612
       ],
@@ -230,10 +398,49 @@
       ],
       "/data-platforms/driftway": [
         612
+      ],
+      "/data-platforms/cobalt": [
+        602.3
+      ],
+      "/security": [
+        597
+      ],
+      "/certification": [
+        580
+      ],
+      "/learn": [
+        740
+      ],
+      "/community": [
+        536
+      ],
+      "/about-us": [
+        536
+      ],
+      "/about-us/values": [
+        472
+      ],
+      "/about-us/careers": [
+        579
+      ],
+      "/services": [
+        526.4
+      ],
+      "/product/state": [
+        624.4
+      ],
+      "/product/assistant": [
+        472.3
+      ],
+      "/product/charts": [
+        378.8
+      ],
+      "/product/governance": [
+        740
       ]
     }
   },
   "evidence": [
-    "src/components/sections/HeroSplit.jsx:6-32"
+    "src/components/sections/HeroSplit.jsx:11-65"
   ]
 }

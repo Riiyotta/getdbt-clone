@@ -712,8 +712,8 @@
         }
       },
       "motion": {
-        "pattern": "stroke.draw-on",
-        "reducedMotionFallback": "render-final-state"
+        "pattern": "stroke.idle",
+        "reducedMotionFallback": "none-needed"
       },
       "style": {
         "strokeShape": "stroke.s4",
@@ -770,9 +770,12 @@
         "reducedMotionFallback": "show-immediately"
       },
       "style": {
-        "iconSize": "size.icon.32",
+        "revealTrigger": "scroll",
         "headerAlign": "start",
-        "paddingTop": "none"
+        "paddingTop": "none",
+        "surface": "light",
+        "columns": "4",
+        "iconSize": "size.icon.32"
       }
     },
     {
@@ -781,20 +784,23 @@
       "content": {
         "quotes": [
           {
+            "quote": "We now serve twice as many teams from the same project, and our compute bill actually went down while we did it.",
+            "person": "Jonah Reyes",
+            "role": "VP, Data and Insights",
             "logo": {
               "assetRole": "customer.logo",
               "alt": "Orbitly",
               "ref": "/assets/marquee/logo-5.svg"
-            },
-            "quote": "We now serve twice as many teams from the same project, and our compute bill actually went down while we did it.",
-            "person": "Jonah Reyes",
-            "role": "VP, Data and Insights"
+            }
           }
         ]
       },
       "motion": {
         "pattern": "static",
         "reducedMotionFallback": "none-needed"
+      },
+      "style": {
+        "background": "white"
       }
     },
     {
@@ -837,9 +843,12 @@
         "reducedMotionFallback": "show-immediately"
       },
       "style": {
-        "iconSize": "size.icon.32",
+        "revealTrigger": "scroll",
         "headerAlign": "center",
-        "paddingTop": "none"
+        "paddingTop": "none",
+        "surface": "light",
+        "columns": "3",
+        "iconSize": "size.icon.32"
       }
     },
     {
@@ -898,10 +907,19 @@
       },
       "motion": {
         "pattern": "tabs.instant",
-        "reducedMotionFallback": "none-needed"
+        "reducedMotionFallback": "none-needed",
+        "additional": [
+          {
+            "pattern": "stroke.idle",
+            "reducedMotionFallback": "none-needed"
+          }
+        ]
       },
       "style": {
-        "strokeGradient": "gradient.12"
+        "strokeGradient": "gradient.12",
+        "mediaFrame": "captioned",
+        "mediaCorners": "rounded",
+        "strokeShape": "stroke.s6"
       }
     },
     {

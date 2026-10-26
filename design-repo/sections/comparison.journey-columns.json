@@ -1,0 +1,245 @@
+{
+  "id": "comparison.journey-columns",
+  "title": "Maturity journey columns",
+  "semantic": {
+    "id": "comparison.journey-columns",
+    "category": "COMPARISON"
+  },
+  "source": {
+    "id": "component:Journey",
+    "file": "src/components/sections/Journey.jsx",
+    "export": "Journey",
+    "tag": "section",
+    "lines": "64-115",
+    "tagLine": 66
+  },
+  "additionalSources": [],
+  "purpose": "Dark maturity columns: orange eyebrow, heading-2, paragraph, then three outlined columns (status badge or list of red x items) and a highlighted orange-outlined column with check items; a curve/dot overlay sits under the row at >=1024.",
+  "retrievalEligible": true,
+  "placement": "main",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "axis",
+        "body",
+        "columns",
+        "eyebrow",
+        "highlight",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "axis": [
+          2,
+          2
+        ],
+        "columns": [
+          3,
+          3
+        ]
+      },
+      "observedOn": [
+        "/product/self-hosted-vs-platform"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "axis": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "observedIn": 1
+      },
+      "axis[]": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 23,
+        "observedIn": 2
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 20,
+        "maxChars": 109,
+        "observedIn": 1
+      },
+      "columns": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "observedIn": 1
+      },
+      "columns[].badge.label": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 23,
+        "observedIn": 2
+      },
+      "columns[].badge.tone": {
+        "type": "enum",
+        "observedIn": 2
+      },
+      "columns[].lines": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "observedIn": 3
+      },
+      "columns[].lines[].label": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 7,
+        "observedIn": 9
+      },
+      "columns[].lines[].value": {
+        "type": "text",
+        "maxWords": 7,
+        "maxChars": 31,
+        "observedIn": 9
+      },
+      "columns[].missing": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 4,
+        "observedIn": 1
+      },
+      "columns[].missing[]": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 21,
+        "observedIn": 4
+      },
+      "columns[].title": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 15,
+        "observedIn": 3
+      },
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 8,
+        "maxChars": 42,
+        "observedIn": 1
+      },
+      "highlight.items": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 4,
+        "observedIn": 1
+      },
+      "highlight.items[]": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 19,
+        "observedIn": 4
+      },
+      "highlight.lines": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "observedIn": 1
+      },
+      "highlight.lines[].label": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 7,
+        "observedIn": 3
+      },
+      "highlight.lines[].value": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 33,
+        "observedIn": 3
+      },
+      "highlight.mark": {
+        "type": "asset",
+        "referenceRoles": [
+          "product.lockup"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "brand.placeholder-mark"
+        ]
+      },
+      "highlight.mark.alt": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 7,
+        "observedIn": 1
+      },
+      "highlight.title": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 14,
+        "observedIn": 1
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 6,
+        "maxChars": 31,
+        "observedIn": 1
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "highlight.mark": {
+        "type": "asset",
+        "referenceRoles": [
+          "product.lockup"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "brand.placeholder-mark"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "brand.placeholder-mark"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "requiredPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": {
+      "static": "none-needed"
+    },
+    "stagger": "The original's sticky mobile header card (<1024) was not measured and is not built. No reveal."
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "four flex-1 columns (min-h 500) with the overlay drawing"
+    },
+    {
+      "range": "<1024",
+      "behavior": "columns stacked, no overlay"
+    }
+  ],
+  "runtimeUi": [],
+  "measuredHeightsPx": {
+    "1440": {
+      "/product/self-hosted-vs-platform": [
+        821.6
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/sections/Journey.jsx:64-115"
+  ]
+}

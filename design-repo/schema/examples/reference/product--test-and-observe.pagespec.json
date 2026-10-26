@@ -721,7 +721,10 @@
       },
       "style": {
         "strokeShape": "stroke.s5",
-        "strokeGradient": "gradient.05"
+        "strokeGradient": "gradient.05",
+        "leadSize": "default",
+        "columns": "6/6",
+        "bottomPadding": "default"
       }
     },
     {
@@ -747,6 +750,10 @@
       "motion": {
         "pattern": "reveal.fade-up",
         "reducedMotionFallback": "show-immediately"
+      },
+      "style": {
+        "columns": "6/6",
+        "topPadding": "default"
       }
     },
     {
@@ -791,9 +798,12 @@
         "reducedMotionFallback": "show-immediately"
       },
       "style": {
-        "iconSize": "size.icon.32",
+        "revealTrigger": "scroll",
         "headerAlign": "start",
-        "paddingTop": "default"
+        "paddingTop": "default",
+        "surface": "light",
+        "columns": "3",
+        "iconSize": "size.icon.32"
       }
     },
     {
@@ -834,10 +844,19 @@
       },
       "motion": {
         "pattern": "tabs.instant",
-        "reducedMotionFallback": "none-needed"
+        "reducedMotionFallback": "none-needed",
+        "additional": [
+          {
+            "pattern": "stroke.idle",
+            "reducedMotionFallback": "none-needed"
+          }
+        ]
       },
       "style": {
-        "strokeGradient": "gradient.01"
+        "strokeGradient": "gradient.01",
+        "mediaFrame": "captioned",
+        "mediaCorners": "rounded",
+        "strokeShape": "stroke.s6"
       }
     },
     {

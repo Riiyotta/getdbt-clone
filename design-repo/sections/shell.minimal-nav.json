@@ -1,0 +1,118 @@
+{
+  "id": "shell.minimal-nav",
+  "title": "Minimal navigation bar",
+  "semantic": {
+    "id": "shell.minimal-nav",
+    "category": "SHELL"
+  },
+  "source": {
+    "id": "component:MinimalNav",
+    "file": "src/components/chrome/MinimalNav.jsx",
+    "export": "MinimalNav",
+    "tag": "nav",
+    "lines": "7-20",
+    "tagLine": 9
+  },
+  "additionalSources": [],
+  "purpose": "Chrome 'none' (route /partner-directory): logo left and one 'Home' link right in a 64px static bar; no announcement bar, no mega-menu and no footer.",
+  "retrievalEligible": true,
+  "placement": "chrome",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "brandMark",
+        "homeLabel"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {},
+      "observedOn": [
+        "/partner-directory"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "brandMark": {
+        "type": "asset",
+        "referenceRoles": [
+          "brand.wordmark"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "brand.placeholder-mark",
+          "brand.user-supplied-mark"
+        ]
+      },
+      "brandMark.alt": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 7,
+        "observedIn": 1
+      },
+      "homeLabel": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 4,
+        "observedIn": 1
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "brandMark": {
+        "type": "asset",
+        "referenceRoles": [
+          "brand.wordmark"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "brand.placeholder-mark",
+          "brand.user-supplied-mark"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "brand.placeholder-mark",
+    "brand.user-supplied-mark"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "position": "first",
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "requiredPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": {
+      "static": "none-needed"
+    },
+    "stagger": "none"
+  },
+  "responsive": [
+    {
+      "range": "all",
+      "behavior": "64px (py 16), 1248 max container with px 24, not sticky, no border or shadow"
+    }
+  ],
+  "runtimeUi": [],
+  "measuredHeightsPx": {
+    "1440": {
+      "nav": 64
+    }
+  },
+  "evidence": [
+    "src/components/chrome/MinimalNav.jsx:7-20"
+  ]
+}

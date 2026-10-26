@@ -10,15 +10,16 @@
     "file": "src/components/sections/CtaBand.jsx",
     "export": "CtaBand",
     "tag": "section",
-    "lines": "15-78",
-    "tagLine": 31
+    "lines": "23-122",
+    "tagLine": 40
   },
   "additionalSources": [],
   "purpose": "Blue gradient-12 band with concentric circles: heading-2, paragraph, primary.dark + secondary.dark large buttons; optional right column with heading-4, paragraph and arrow link.",
   "retrievalEligible": true,
+  "placement": "main",
   "variants": {
     "with-aside": {
-      "description": "T1/T3: left 7 cols + right 4 cols aside, no divider",
+      "description": "left 7 cols + right 4 cols aside (heading-4, paragraph, arrow link)",
       "requiredFields": [
         "aside",
         "body",
@@ -27,10 +28,18 @@
         "title"
       ],
       "forbiddenFields": [
-        "eyebrow"
+        "checklist",
+        "stats"
       ],
       "listSizes": {},
       "observedOn": [
+        "/about-us",
+        "/case-studies",
+        "/case-studies/basalt-health",
+        "/case-studies/halcyon",
+        "/case-studies/kestrel",
+        "/case-studies/meridian-partners",
+        "/community",
         "/data-platforms/cobalt",
         "/data-platforms/driftway",
         "/data-platforms/helixa",
@@ -46,24 +55,109 @@
       ]
     },
     "plain": {
-      "description": "T2: eyebrow + heading + paragraph + buttons",
+      "description": "eyebrow + heading + paragraph + buttons",
       "requiredFields": [
         "body",
+        "title"
+      ],
+      "forbiddenFields": [
+        "aside",
+        "bodySecond",
+        "checklist",
+        "stats"
+      ],
+      "listSizes": {},
+      "observedOn": [
+        "/about-us/belonging",
+        "/community",
+        "/events",
+        "/press",
+        "/product/ai",
+        "/product/cost-optimization",
+        "/product/data-modernization",
+        "/product/data-trust",
+        "/product/embedded-analytics",
+        "/product/governance",
+        "/resources",
+        "/resources/webinars",
+        "/security",
+        "/services"
+      ]
+    },
+    "wide": {
+      "description": "left column spans all 12 columns, no aside, optional buttons",
+      "requiredFields": [
+        "body",
+        "primary",
+        "title"
+      ],
+      "forbiddenFields": [
+        "aside",
+        "bodySecond",
+        "checklist",
+        "stats"
+      ],
+      "listSizes": {},
+      "observedOn": [
+        "/certification",
+        "/product/analyst",
+        "/product/integrations",
+        "/product/lattice",
+        "/product/self-hosted-vs-platform",
+        "/product/state",
+        "/resources/analytics-lifecycle",
+        "/resources/on-demand"
+      ]
+    },
+    "with-stats": {
+      "description": "aside is a hairline-divided stat column (two stats)",
+      "requiredFields": [
+        "body",
+        "eyebrow",
+        "primary",
+        "secondary",
+        "stats",
+        "title"
+      ],
+      "forbiddenFields": [
+        "aside",
+        "bodySecond",
+        "checklist"
+      ],
+      "listSizes": {
+        "stats": [
+          2,
+          2
+        ]
+      },
+      "observedOn": [
+        "/about-us/values"
+      ]
+    },
+    "with-checklist": {
+      "description": "aside is a list of white-check rows (24/32 text)",
+      "requiredFields": [
+        "body",
+        "checklist",
         "eyebrow",
         "primary",
         "secondary",
         "title"
       ],
       "forbiddenFields": [
-        "aside"
+        "aside",
+        "bodySecond",
+        "stats"
       ],
-      "listSizes": {},
+      "listSizes": {
+        "checklist": [
+          3,
+          3
+        ]
+      },
       "observedOn": [
-        "/product/ai",
-        "/product/cost-optimization",
-        "/product/data-modernization",
-        "/product/data-trust",
-        "/product/embedded-analytics"
+        "/learn",
+        "/product/what-is-lattice"
       ]
     }
   },
@@ -72,63 +166,99 @@
     "fields": {
       "aside.action.href": {
         "type": "link",
-        "observedIn": 13
+        "observedIn": 20
       },
       "aside.action.label": {
         "type": "text",
         "maxWords": 3,
         "maxChars": 18,
-        "observedIn": 13
+        "observedIn": 20
       },
       "aside.body": {
         "type": "text",
         "maxWords": 17,
         "maxChars": 117,
-        "observedIn": 13
+        "observedIn": 20
       },
       "aside.title": {
         "type": "text",
         "maxWords": 9,
         "maxChars": 49,
-        "observedIn": 13
+        "observedIn": 20
       },
       "body": {
         "type": "text",
-        "maxWords": 31,
-        "maxChars": 188,
-        "observedIn": 18
+        "maxWords": 42,
+        "maxChars": 229,
+        "observedIn": 46
+      },
+      "bodySecond": {
+        "type": "text",
+        "maxWords": 24,
+        "maxChars": 138,
+        "observedIn": 1
+      },
+      "checklist": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "observedIn": 2
+      },
+      "checklist[]": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 28,
+        "observedIn": 6
       },
       "eyebrow": {
         "type": "text",
-        "maxWords": 2,
-        "maxChars": 11,
-        "observedIn": 5
+        "maxWords": 7,
+        "maxChars": 34,
+        "observedIn": 15
       },
       "primary.href": {
         "type": "link",
-        "observedIn": 18
+        "observedIn": 44
       },
       "primary.label": {
         "type": "text",
-        "maxWords": 3,
-        "maxChars": 17,
-        "observedIn": 18
+        "maxWords": 5,
+        "maxChars": 36,
+        "observedIn": 44
       },
       "secondary.href": {
         "type": "link",
-        "observedIn": 18
+        "observedIn": 39
       },
       "secondary.label": {
         "type": "text",
+        "maxWords": 5,
+        "maxChars": 27,
+        "observedIn": 39
+      },
+      "stats": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "observedIn": 1
+      },
+      "stats[].label": {
+        "type": "text",
         "maxWords": 4,
-        "maxChars": 26,
-        "observedIn": 18
+        "maxChars": 21,
+        "observedIn": 2
+      },
+      "stats[].number": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 4,
+        "observedIn": 2
       },
       "title": {
         "type": "text",
         "maxWords": 14,
         "maxChars": 78,
-        "observedIn": 18
+        "observedIn": 46
       }
     }
   },
@@ -142,7 +272,8 @@
     "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
   },
   "constraints": {
-    "maxPerPage": 2
+    "maxPerPage": 2,
+    "consecutiveVariants": []
   },
   "motion": {
     "allowedPatterns": [
@@ -154,7 +285,7 @@
     "reducedMotionFallback": {
       "reveal.fade-up": "show-immediately"
     },
-    "stagger": "Reveal, one-for-one with the original's ScrollAnimate output (develop, snowflake, data-modernization): grid 0 > left col 0 > <span> per item stepping 100ms from 0 (eyebrow?, h2, p), then the button row at the next step with each button in its own <span> (row + 0 / +100); aside col 100 > space-y-6 100 > <span> h 100, <span> p 200, <span> link 300. develop: 12 targets 0-300 | data-modernization (eyebrow, no aside): 8 targets 0-400. The wrappers are inline <span>s like the original's, so those items fade without translating."
+    "stagger": "Reveal, one-for-one with the original's ScrollAnimate output (develop, snowflake, data-modernization): grid 0 > left col 0 > <span> per item stepping 100ms from 0 (eyebrow?, h2, p), then the button row at the next step with each button in its own <span> (row + 0 / +100); aside col 100 > space-y-6 100 > <span> h 100, <span> p 200, <span> link 300. develop: 12 targets 0-300 | data-modernization (eyebrow, no aside): 8 targets 0-400. The wrappers are inline <span>s like the original's, so those items fade without translating. The aside heading is an <h4> on the original (heading-4 styling). T12-T13 additions (specs/T12-T13.md B \"H-cta short additions\"): `checklist` aside: space-y-6 list (100) of rows of a 24x25 white check + 24/32 text; row k and its check at 100+100k, its text +200 (as on dbt-learn; the original's extra zero-size spans inside and after each check are not reproduced) `stats` aside: 1px #e5e7eb divider (top below 768, left at >=768), md:pl-15, two stats (32/38.4 400 value + 18/28 label) `wide`: the left column spans all 12 columns (no aside); no buttons -> no button row"
   },
   "responsive": [
     {
@@ -170,6 +301,7 @@
       "behavior": "stacked; aside below the buttons"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "/product/develop": [
@@ -191,13 +323,13 @@
       "/product/semantic-layer": [
         313.6
       ],
-      "/product/data-modernization": [
-        371.6
-      ],
       "/product/ai": [
         347.6
       ],
       "/product/embedded-analytics": [
+        371.6
+      ],
+      "/product/data-modernization": [
         371.6
       ],
       "/product/data-trust": [
@@ -205,9 +337,6 @@
       ],
       "/product/cost-optimization": [
         371.6
-      ],
-      "/data-platforms/cobalt": [
-        389.2
       ],
       "/data-platforms/northwind": [
         389.2
@@ -223,10 +352,93 @@
       ],
       "/data-platforms/driftway": [
         446.8
+      ],
+      "/data-platforms/cobalt": [
+        389.2
+      ],
+      "/case-studies/kestrel": [
+        331.6
+      ],
+      "/case-studies/meridian-partners": [
+        331.6
+      ],
+      "/case-studies/halcyon": [
+        331.6
+      ],
+      "/case-studies/basalt-health": [
+        331.6
+      ],
+      "/resources/webinars": [
+        389.2
+      ],
+      "/resources": [
+        331.6
+      ],
+      "/case-studies": [
+        435.6
+      ],
+      "/resources/on-demand": [
+        305.6
+      ],
+      "/events": [
+        389.2
+      ],
+      "/press": [
+        225.6
+      ],
+      "/resources/analytics-lifecycle": [
+        305.6
+      ],
+      "/security": [
+        371.6
+      ],
+      "/certification": [
+        305.6
+      ],
+      "/learn": [
+        429.2
+      ],
+      "/community": [
+        313.6,
+        369.6
+      ],
+      "/about-us": [
+        313.6
+      ],
+      "/about-us/values": [
+        453.2
+      ],
+      "/about-us/belonging": [
+        331.6
+      ],
+      "/services": [
+        225.6
+      ],
+      "/product/what-is-lattice": [
+        429.2
+      ],
+      "/product/lattice": [
+        307.6,
+        347.6
+      ],
+      "/product/state": [
+        305.6
+      ],
+      "/product/governance": [
+        331.6
+      ],
+      "/product/integrations": [
+        347.6
+      ],
+      "/product/analyst": [
+        347.6
+      ],
+      "/product/self-hosted-vs-platform": [
+        347.6
       ]
     }
   },
   "evidence": [
-    "src/components/sections/CtaBand.jsx:15-78"
+    "src/components/sections/CtaBand.jsx:23-122"
   ]
 }

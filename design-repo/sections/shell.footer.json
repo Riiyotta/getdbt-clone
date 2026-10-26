@@ -16,6 +16,7 @@
   "additionalSources": [],
   "purpose": "Dark footer: light brand mark, 6 link columns (one link with a badge), newsletter block, region select, 7 social icons, copyright + legal links + cookie-preferences button.",
   "retrievalEligible": true,
+  "placement": "chrome",
   "variants": {
     "default": {
       "description": "single rendering",
@@ -42,28 +43,74 @@
       },
       "observedOn": [
         "/",
+        "/about-us",
+        "/about-us/belonging",
+        "/about-us/careers",
+        "/about-us/values",
+        "/blog",
+        "/blog/lattice-joins-northwind",
+        "/blog/summit-announcements",
+        "/case-studies",
+        "/case-studies/basalt-health",
+        "/case-studies/halcyon",
+        "/case-studies/kestrel",
+        "/case-studies/meridian-partners",
+        "/certification",
+        "/champions",
+        "/community",
+        "/community/join",
+        "/contact",
         "/data-platforms/cobalt",
         "/data-platforms/driftway",
         "/data-platforms/helixa",
         "/data-platforms/northwind",
         "/data-platforms/quarry",
         "/data-platforms/stratus",
+        "/events",
         "/industry/energy-utilities",
         "/industry/financial-services",
         "/industry/healthcare",
         "/industry/manufacturing",
         "/industry/telecommunications",
+        "/learn",
+        "/legal/ai-principles",
+        "/modern-slavery-statement",
+        "/partners",
+        "/press",
+        "/pricing",
         "/product/ai",
+        "/product/analyst",
+        "/product/assistant",
         "/product/catalog",
+        "/product/charts",
         "/product/cost-optimization",
         "/product/data-modernization",
         "/product/data-trust",
         "/product/deploy",
         "/product/develop",
         "/product/embedded-analytics",
+        "/product/governance",
+        "/product/integrations",
+        "/product/lattice",
         "/product/mesh",
+        "/product/self-hosted-vs-platform",
         "/product/semantic-layer",
-        "/product/test-and-observe"
+        "/product/state",
+        "/product/test-and-observe",
+        "/product/what-is-lattice",
+        "/report-a-problem",
+        "/resources",
+        "/resources/analytics-lifecycle",
+        "/resources/on-demand",
+        "/resources/state-of-data-teams",
+        "/resources/webinars",
+        "/resources/webinars/charts-as-code",
+        "/resources/webinars/launch-showcase",
+        "/resources/whitepaper-control-plane",
+        "/security",
+        "/services",
+        "/signup",
+        "/terms-of-use"
       ]
     }
   },
@@ -75,7 +122,7 @@
         "referenceRoles": [
           "brand.wordmark"
         ],
-        "observedIn": 23,
+        "observedIn": 69,
         "generatedRoles": [
           "brand.placeholder-mark",
           "brand.user-supplied-mark"
@@ -85,137 +132,137 @@
         "type": "text",
         "maxWords": 1,
         "maxChars": 7,
-        "observedIn": 23
+        "observedIn": 69
       },
       "columns": {
         "type": "list",
         "minItems": 6,
         "maxItems": 6,
-        "observedIn": 23
+        "observedIn": 69
       },
       "columns[].badge.label": {
         "type": "text",
         "maxWords": 3,
         "maxChars": 13,
-        "observedIn": 23
+        "observedIn": 69
       },
       "columns[].badge.linkIndex": {
         "type": "integer",
         "min": 2,
         "max": 2,
-        "observedIn": 23
+        "observedIn": 69
       },
       "columns[].links": {
         "type": "list",
         "minItems": 4,
         "maxItems": 6,
-        "observedIn": 138
+        "observedIn": 414
       },
       "columns[].links[].href": {
         "type": "link",
-        "observedIn": 621
+        "observedIn": 1863
       },
       "columns[].links[].label": {
         "type": "text",
         "maxWords": 4,
         "maxChars": 24,
-        "observedIn": 621
+        "observedIn": 1863
       },
       "columns[].title": {
         "type": "text",
         "maxWords": 3,
         "maxChars": 14,
-        "observedIn": 138
+        "observedIn": 414
       },
       "cookieLabel": {
         "type": "text",
         "maxWords": 2,
         "maxChars": 18,
-        "observedIn": 23
+        "observedIn": 69
       },
       "copyright": {
         "type": "text",
         "maxWords": 7,
         "maxChars": 41,
-        "observedIn": 23
+        "observedIn": 69
       },
       "legalLinks": {
         "type": "list",
         "minItems": 6,
         "maxItems": 6,
-        "observedIn": 23
+        "observedIn": 69
       },
       "legalLinks[].href": {
         "type": "link",
-        "observedIn": 138
+        "observedIn": 414
       },
       "legalLinks[].label": {
         "type": "text",
         "maxWords": 3,
         "maxChars": 25,
-        "observedIn": 138
+        "observedIn": 414
       },
       "newsletter.action.href": {
         "type": "link",
-        "observedIn": 23
+        "observedIn": 69
       },
       "newsletter.action.label": {
         "type": "text",
         "maxWords": 2,
         "maxChars": 10,
-        "observedIn": 23
+        "observedIn": 69
       },
       "newsletter.body": {
         "type": "text",
         "maxWords": 12,
         "maxChars": 82,
-        "observedIn": 23
+        "observedIn": 69
       },
       "newsletter.title": {
         "type": "text",
         "maxWords": 2,
         "maxChars": 16,
-        "observedIn": 23
+        "observedIn": 69
       },
       "region.options": {
         "type": "list",
         "minItems": 3,
         "maxItems": 3,
-        "observedIn": 23
+        "observedIn": 69
       },
       "region.options[]": {
         "type": "text",
         "maxWords": 2,
         "maxChars": 12,
-        "observedIn": 69
+        "observedIn": 207
       },
       "region.title": {
         "type": "text",
         "maxWords": 2,
         "maxChars": 13,
-        "observedIn": 23
+        "observedIn": 69
       },
       "social.links": {
         "type": "list",
         "minItems": 7,
         "maxItems": 7,
-        "observedIn": 23
+        "observedIn": 69
       },
       "social.links[].href": {
         "type": "link",
-        "observedIn": 161
+        "observedIn": 483
       },
       "social.links[].label": {
         "type": "text",
         "maxWords": 1,
         "maxChars": 9,
-        "observedIn": 161
+        "observedIn": 483
       },
       "social.title": {
         "type": "text",
         "maxWords": 3,
         "maxChars": 15,
-        "observedIn": 23
+        "observedIn": 69
       }
     }
   },
@@ -226,7 +273,7 @@
         "referenceRoles": [
           "brand.wordmark"
         ],
-        "observedIn": 23,
+        "observedIn": 69,
         "generatedRoles": [
           "brand.placeholder-mark",
           "brand.user-supplied-mark"
@@ -245,7 +292,8 @@
   },
   "constraints": {
     "position": "last",
-    "maxPerPage": 1
+    "maxPerPage": 1,
+    "consecutiveVariants": []
   },
   "motion": {
     "allowedPatterns": [
@@ -269,6 +317,7 @@
       "behavior": "link columns become an accordion (57px rows); newsletter/region/social stack; bottom bar stacks"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "nav": 91,

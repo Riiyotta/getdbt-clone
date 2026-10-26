@@ -1,0 +1,147 @@
+{
+  "id": "social-proof.logo-bar",
+  "title": "Customer logo bar",
+  "semantic": {
+    "id": "social-proof.logo-bar",
+    "category": "SOCIAL_PROOF"
+  },
+  "source": {
+    "id": "component:LogoBar",
+    "file": "src/components/sections/LogoBar.jsx",
+    "export": "LogoBar",
+    "tag": "section",
+    "lines": "5-20",
+    "tagLine": 7
+  },
+  "additionalSources": [],
+  "purpose": "Centred heading-5 over a static row of 6 customer wordmarks (120 max wide, 40 max tall).",
+  "retrievalEligible": true,
+  "placement": "main",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "logos",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "logos": [
+          5,
+          6
+        ]
+      },
+      "observedOn": [
+        "/product/analyst",
+        "/product/self-hosted-vs-platform",
+        "/product/what-is-lattice",
+        "/resources/webinars/launch-showcase"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "logos": {
+        "type": "list",
+        "minItems": 5,
+        "maxItems": 6,
+        "observedIn": 4
+      },
+      "logos[]": {
+        "type": "asset",
+        "referenceRoles": [
+          "customer.logo"
+        ],
+        "observedIn": 23,
+        "generatedRoles": [
+          "customer.placeholder-logo"
+        ]
+      },
+      "logos[].alt": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 17,
+        "observedIn": 23
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 14,
+        "maxChars": 87,
+        "observedIn": 4
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "logos[]": {
+        "type": "asset",
+        "referenceRoles": [
+          "customer.logo"
+        ],
+        "observedIn": 23,
+        "generatedRoles": [
+          "customer.placeholder-logo"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "customer.placeholder-logo"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "requiredPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": {
+      "static": "none-needed"
+    },
+    "stagger": "tall, mx-8 my-4); wraps to 3 per row at 768 and 1 per row below 640. No reveal."
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "one row, no wrap"
+    },
+    {
+      "range": "768-1023",
+      "behavior": "3 per row"
+    },
+    {
+      "range": "<640",
+      "behavior": "1 per row"
+    }
+  ],
+  "runtimeUi": [],
+  "measuredHeightsPx": {
+    "1440": {
+      "/resources/webinars/launch-showcase": [
+        245.6
+      ],
+      "/product/what-is-lattice": [
+        245.6
+      ],
+      "/product/analyst": [
+        245.6
+      ],
+      "/product/self-hosted-vs-platform": [
+        245.6
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/sections/LogoBar.jsx:5-20"
+  ]
+}

@@ -34,18 +34,36 @@
       "reducedMotionFallback": "show-immediately",
       "evidence": [
         "src/hooks/useScrollReveal.js:3-11",
-        "src/index.css:411-417",
-        "tailwind.config.cjs:160"
+        "src/index.css:444-450",
+        "tailwind.config.cjs:187"
       ]
     },
     "stroke.draw-on": {
-      "description": "brush-stroke mask path stroke-dashoffset full->0 over 1s ease-in-out when the stroke enters the viewport (once); fill fades 0->1 over 250ms standard at >=768; an `idle` stroke (used by features.tabs-dark) never draws: full path, fill hidden at >=768, so it is decoration, not motion",
+      "description": "brush-stroke mask path stroke-dashoffset full->0 over 1s ease-in-out, then (same time) the fill fades 0->1 over 250ms standard; both only at >=768 (below 768 the stroke is static and fully drawn). The stroke mounts 800ms after DOMContentLoaded on a first page load (immediately on a client-side navigation). `load` strokes (page-opening headers) draw as soon as they mount; the others draw once when an IntersectionObserver on the section-sized shell reports threshold 0.9 (a section taller than viewport/0.9 can never reach it, so its stroke never draws and its fill stays hidden at >=768); S9 renders only below 768 (at >=768 the original's S9 box is clipped off-canvas); the opt-in `tall` trigger (used where the clone's placeholder copy makes a section taller than viewport/0.9 although the original's is not) draws once min(0.9 x section height, viewport height) is visible",
       "durationToken": "duration.1000",
       "easingToken": "easing.in-out",
+      "mountDelayToken": "duration.800",
       "reducedMotionFallback": "render-final-state",
       "evidence": [
-        "src/components/sections/Baton.jsx:1-82",
-        "src/index.css:387-399"
+        "src/components/sections/Baton.jsx:3-24",
+        "src/components/sections/Baton.jsx:147-175",
+        "src/index.css:418-429"
+      ]
+    },
+    "stroke.idle": {
+      "description": "decorative stroke that never draws: full undashed path, no observer; the fill stays hidden at >=768 and is visible below 768 (features.tabs-dark default S6, editorial.community-bento S1, T4 heroes). It is decoration, not motion",
+      "reducedMotionFallback": "none-needed",
+      "evidence": [
+        "src/index.css:432-436",
+        "src/components/sections/Baton.jsx:20-21"
+      ]
+    },
+    "stroke.still": {
+      "description": "stroke fully drawn and visible from the start: no dash style, no observer (the about hero S3 and the values dark grid S6 on the original)",
+      "reducedMotionFallback": "none-needed",
+      "evidence": [
+        "src/index.css:437-438",
+        "src/components/sections/Baton.jsx:22-23"
       ]
     },
     "marquee.loop": {
@@ -54,8 +72,8 @@
       "easingToken": "easing.linear",
       "reducedMotionFallback": "static-row",
       "evidence": [
-        "tailwind.config.cjs:154-157",
-        "src/index.css:425"
+        "tailwind.config.cjs:181-184",
+        "src/index.css:458"
       ]
     },
     "carousel.autoplay": {
@@ -120,6 +138,100 @@
       "reducedMotionFallback": "unchanged",
       "evidence": [
         "src/components/Footer.jsx:28-48"
+      ]
+    },
+    "accordion.instant": {
+      "description": "FAQ accordion: each item opens and closes instantly (content mounts/unmounts, plus/minus glyph swap), items independent, aria-expanded + aria-controls; no height animation",
+      "reducedMotionFallback": "none-needed",
+      "evidence": [
+        "src/components/sections/Faq.jsx:12-49"
+      ]
+    },
+    "accordion.height": {
+      "description": "partner-directory facet groups: group body height animates between its natural height and 0 over 350ms (CSS `transition: height .35s`, default ease)",
+      "durationToken": "duration.350",
+      "reducedMotionFallback": "unchanged",
+      "evidence": [
+        "src/styles/oneoffs.css:98-101",
+        "src/components/oneoffs/directory/Directory.jsx:32-91"
+      ]
+    },
+    "sticky.pin": {
+      "description": "CSS position: sticky pinning, no animation: category bar top 0 (z 50, 1px bottom border once stuck), plan-matrix header top 0 (z 10, under the global nav at z 60), guide rail top 32, blog-rail promo top 0 and share bar bottom 0, form card top 32",
+      "reducedMotionFallback": "none-needed",
+      "evidence": [
+        "src/components/listing/CategoryNav.jsx:26",
+        "src/components/oneoffs/pricing/Pricing.jsx:263",
+        "src/components/article/StickyRail.jsx:81",
+        "src/components/article/StickyRail.jsx:203"
+      ]
+    },
+    "scroll.progress-bar": {
+      "description": "fixed 6px top bar whose purple fill width is scrollY / (scrollHeight - innerHeight), written once per animation frame on scroll and resize; no CSS transition",
+      "reducedMotionFallback": "unchanged",
+      "evidence": [
+        "src/components/article/StickyRail.jsx:11-37"
+      ]
+    },
+    "scroll.spy-toc": {
+      "description": "guide table of contents: the active link is the last heading whose top is within 180px of the viewport top (recomputed every scroll frame); a click scrolls with a 1500ms cubic ease-in-out to 96px below the top and updates the hash; under reduced motion it jumps",
+      "durationToken": "duration.1500",
+      "reducedMotionFallback": "jump-to-target",
+      "evidence": [
+        "src/components/article/StickyRail.jsx:116-138"
+      ]
+    },
+    "scroll.linked-scale": {
+      "description": "champions hero: the outlines and the photo scale from 1 to 1.45 as scrollY goes 0 to 700 (scale = 1 + 0.45 * easeOutQuad), written per scroll frame with no CSS transition; not applied under reduced motion",
+      "reducedMotionFallback": "effect-disabled",
+      "evidence": [
+        "src/components/oneoffs/champions/Champions.jsx:14-36"
+      ]
+    },
+    "marquee.photo-loop": {
+      "description": "event photo marquee: two identical sets of 14 photos translate 0 -> one set + one gap (-3528px, -4550px from 768) over 75.83s linear infinite; never pauses; off under reduced motion",
+      "durationToken": "duration.75830",
+      "easingToken": "easing.linear",
+      "reducedMotionFallback": "static-row",
+      "evidence": [
+        "src/styles/oneoffs.css:50-62",
+        "src/components/oneoffs/summit/Summit.jsx:49-65"
+      ]
+    },
+    "dialog.scale-fade": {
+      "description": "developer-path dialog: the panel fades and scales .95 <-> 1 over 200ms ease-out on open (after one animation frame) AND on close (the leave runs before unmount); the overlay (ink-900 80% + 4px blur) has no transition; the dialog takes focus on open, <html> overflow is hidden while open, Tab is trapped, Escape and overlay click close, focus returns to the trigger",
+      "durationToken": "duration.200",
+      "easingToken": "easing.out",
+      "reducedMotionFallback": "unchanged",
+      "evidence": [
+        "src/components/sections/DevModal.jsx:18-102"
+      ]
+    },
+    "hover.lift": {
+      "description": "member card: translateY(-8px) and a two-layer shadow over 300ms standard on hover (rest: same shadows at alpha 0)",
+      "durationToken": "duration.300",
+      "easingToken": "easing.standard",
+      "reducedMotionFallback": "unchanged",
+      "evidence": [
+        "src/components/oneoffs/champions/Champions.jsx:135"
+      ]
+    },
+    "hover.chevron-shift": {
+      "description": "text link with a rotated 24px chevron (`shift`): the chevron translates 6px right on hover over 150ms standard (primitive.text-link; not a node-level pattern)",
+      "durationToken": "duration.150",
+      "easingToken": "easing.standard",
+      "reducedMotionFallback": "unchanged",
+      "evidence": [
+        "src/components/sections/parts.jsx:31-46"
+      ]
+    },
+    "loading.skeleton-pulse": {
+      "description": "on-demand session grid: a filter change or a search edit (debounced 400ms) shows 3 pulsing skeleton cards (tailwind animate-pulse, #f3f4f6 blocks) for 1200ms before the filtered list appears",
+      "durationToken": "duration.1200",
+      "reducedMotionFallback": "unchanged",
+      "evidence": [
+        "src/components/listing/Listings.jsx:173-174",
+        "src/components/listing/Cards.jsx:66-82"
       ]
     }
   }

@@ -65,11 +65,11 @@ def run(repo=REPO, mv=None):
             continue
         ref = repo / "schema/examples/reference" / (("home" if route == "/" else route.strip("/").replace("/", "--")) + ".pagespec.json")
         if ref.exists():
-            spec_nodes = [n["section"] for n in json.loads(ref.read_text())["nodes"] if contracts.get(n["section"], {}).get("semantic", {}).get("category") != "SHELL"]
+            spec_nodes = [n["section"] for n in json.loads(ref.read_text())["nodes"] if contracts.get(n["section"], {}).get("placement") == "main"]
             if spec_nodes != [n["section"] for n in m["nodes"]]:
                 E.append(f"WRAPPER_STRUCTURE_MISMATCH: {route} measured nodes {[n['section'] for n in m['nodes']]} != reference PageSpec {spec_nodes}")
         stats["pages"] += 1
-        chrome = m.get("chrome", {})
+        chrome = m.get("shell", {})
         flow_chrome = sum(c["heightPx"] for c in chrome.values() if c.get("position") not in ("fixed", "sticky"))
         inflow = [n for n in m["nodes"] if n.get("position") not in ("fixed", "sticky")]
         page_h = flow_chrome + sum(n["heightPx"] for n in inflow)

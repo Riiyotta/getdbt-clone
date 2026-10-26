@@ -1,0 +1,150 @@
+{
+  "id": "hero.event",
+  "title": "Event hero",
+  "semantic": {
+    "id": "hero.event",
+    "category": "HERO"
+  },
+  "source": {
+    "id": "component:EventHero",
+    "file": "src/components/oneoffs/summit/Summit.jsx",
+    "export": "EventHero",
+    "tag": "section",
+    "lines": "11-44",
+    "tagLine": 13
+  },
+  "additionalSources": [],
+  "purpose": "White event hero tucked under the event nav: giant display H1, lead and one orange button, with two illustrated portraits at the sides (>=1024) or under the content as two tiles (<1024).",
+  "retrievalEligible": true,
+  "placement": "main",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "cta",
+        "lead",
+        "portraits",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "portraits": [
+          2,
+          2
+        ]
+      },
+      "observedOn": [
+        "/summit"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "cta.href": {
+        "type": "link",
+        "observedIn": 1
+      },
+      "cta.label": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 16,
+        "observedIn": 1
+      },
+      "lead": {
+        "type": "text",
+        "maxWords": 12,
+        "maxChars": 72,
+        "observedIn": 1
+      },
+      "portraits": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "observedIn": 1
+      },
+      "portraits[]": {
+        "type": "asset",
+        "referenceRoles": [
+          "photo.composite-scene"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "photo.generated-scene"
+        ]
+      },
+      "portraits[].alt": {
+        "type": "text",
+        "maxWords": 0,
+        "maxChars": 0,
+        "observedIn": 2
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 6,
+        "maxChars": 29,
+        "observedIn": 1
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "portraits[]": {
+        "type": "asset",
+        "referenceRoles": [
+          "photo.composite-scene"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "photo.generated-scene"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "photo.generated-scene"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "position": "first-content",
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "requiredPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": {
+      "static": "none-needed"
+    },
+    "stagger": "none"
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "portraits 22.51% wide each side, content centred between them"
+    },
+    {
+      "range": "<1024",
+      "behavior": "content centred; portraits as two side-by-side tiles (max 600 wide) below"
+    }
+  ],
+  "runtimeUi": [],
+  "measuredHeightsPx": {
+    "1440": {
+      "/summit": [
+        550.7
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/oneoffs/summit/Summit.jsx:11-44"
+  ]
+}

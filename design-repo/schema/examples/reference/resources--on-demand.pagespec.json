@@ -1,0 +1,1933 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "T7",
+  "route": "/resources/on-demand",
+  "theme": "light",
+  "brand": {
+    "name": "Lattice"
+  },
+  "meta": {
+    "title": "On-demand sessions"
+  },
+  "nodes": [
+    {
+      "section": "shell.announcement-bar",
+      "variant": "default",
+      "content": {
+        "slides": [
+          {
+            "text": "Lattice 4.0 is here with faster incremental builds, smarter tests, and a fresh lineage explorer.",
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "text": "Join our live workshop on modeling patterns this month.",
+            "href": "/resources/webinars/charts-as-code"
+          },
+          {
+            "text": "New report: how two hundred data teams trimmed warehouse spend while shipping trusted models each week.",
+            "href": "/resources/state-of-data-teams"
+          },
+          {
+            "text": "Lattice Cloud now runs in three new regions across Europe and Asia. Check region availability.",
+            "href": "/blog/lattice-joins-northwind"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "carousel.autoplay",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.navbar",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-dark.svg"
+        },
+        "menuLabels": [
+          "Product",
+          "Solutions",
+          "Customers",
+          "Resources",
+          "Community"
+        ],
+        "plainLink": {
+          "label": "Pricing",
+          "href": "/pricing"
+        },
+        "secondaryAction": {
+          "label": "Get started",
+          "href": "/signup"
+        },
+        "primaryAction": {
+          "label": "Book a demo",
+          "href": "/contact"
+        }
+      },
+      "motion": {
+        "pattern": "nav.hide-on-scroll",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mega-menu",
+      "variant": "default",
+      "content": {
+        "menus": [
+          {
+            "trigger": "Product",
+            "groups": [
+              {
+                "label": "First steps",
+                "items": [
+                  {
+                    "title": "Why Lattice",
+                    "description": "How Lattice turns SQL into trusted products",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/product/what-is-lattice"
+                  },
+                  {
+                    "title": "Platform tour",
+                    "description": "Watch a ten-minute walkthrough of the full workspace",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/product/lattice"
+                  }
+                ]
+              },
+              {
+                "label": "Everything in the box",
+                "items": [
+                  {
+                    "title": "Build",
+                    "description": "Author models in the browser, a desktop editor or the command line",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/develop"
+                  },
+                  {
+                    "title": "Validate",
+                    "description": "Assert rules on every model",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/test-and-observe"
+                  },
+                  {
+                    "title": "Design",
+                    "description": "Split big projects by domain",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/mesh"
+                  },
+                  {
+                    "title": "Explore",
+                    "description": "Search docs, owners and lineage",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/catalog"
+                  },
+                  {
+                    "title": "Ship",
+                    "description": "Trigger runs on merge or a timer",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/deploy"
+                  },
+                  {
+                    "title": "Measure",
+                    "description": "Publish one definition of revenue to every tool that asks",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/semantic-layer"
+                  }
+                ]
+              }
+            ],
+            "featured": {
+              "title": "The modeling lifecycle",
+              "description": "Map how ideas move from first query to production model, with clear owners and checks at each step",
+              "thumbnail": {
+                "assetRole": "illustration.abstract",
+                "alt": "",
+                "ref": "/assets/menu/featured.svg"
+              },
+              "href": "/resources/analytics-lifecycle"
+            },
+            "side": {
+              "label": "Feature spotlight",
+              "links": [
+                {
+                  "label": "Smart state",
+                  "href": "/product/state"
+                },
+                {
+                  "label": "Guided setup",
+                  "href": "/product/assistant"
+                },
+                {
+                  "label": "Charts",
+                  "href": "/product/charts"
+                },
+                {
+                  "label": "Governance",
+                  "href": "/product/governance"
+                },
+                {
+                  "label": "Security",
+                  "href": "/security"
+                },
+                {
+                  "label": "Integrations",
+                  "href": "/product/integrations"
+                }
+              ],
+              "action": {
+                "label": "See the latest demo",
+                "href": "/resources/webinars/launch-showcase"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Solutions",
+            "groups": [
+              {
+                "label": "By need",
+                "items": [
+                  {
+                    "title": "Analytics",
+                    "description": "Give analysts a governed place to model data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/analyst"
+                  },
+                  {
+                    "title": "AI readiness",
+                    "description": "Feed assistants with well-described data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/ai"
+                  }
+                ]
+              },
+              {
+                "label": "By team",
+                "items": [
+                  {
+                    "title": "Data engineers",
+                    "description": "Ship pipelines with tests built in",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/data-modernization"
+                  },
+                  {
+                    "title": "Analysts",
+                    "description": "Own models end to end in plain SQL",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/embedded-analytics"
+                  },
+                  {
+                    "title": "Platform leads",
+                    "description": "Standardize how every team builds",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/data-trust"
+                  },
+                  {
+                    "title": "Executives",
+                    "description": "Trust the numbers behind decisions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/cost-optimization"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "By industry",
+              "links": [
+                {
+                  "label": "Finance",
+                  "href": "/industry/financial-services"
+                },
+                {
+                  "label": "Retail",
+                  "href": "/industry/manufacturing"
+                },
+                {
+                  "label": "Healthcare",
+                  "href": "/industry/healthcare"
+                },
+                {
+                  "label": "Media",
+                  "href": "/industry/telecommunications"
+                },
+                {
+                  "label": "Public sector",
+                  "href": "/industry/energy-utilities"
+                },
+                {
+                  "label": "Software",
+                  "href": "/data-platforms/cobalt"
+                }
+              ],
+              "action": {
+                "label": "See every use case",
+                "href": "/product/data-modernization"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Customers",
+            "groups": [
+              {
+                "label": "Stories",
+                "items": [
+                  {
+                    "title": "Case studies",
+                    "description": "Read how teams run on Lattice",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/case-studies"
+                  },
+                  {
+                    "title": "Reviews",
+                    "description": "Independent ratings from practitioners",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/resources/on-demand"
+                  }
+                ]
+              },
+              {
+                "label": "By outcome",
+                "items": [
+                  {
+                    "title": "Data quality",
+                    "description": "Teams that caught issues earlier",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/case-studies/kestrel"
+                  },
+                  {
+                    "title": "Speed",
+                    "description": "Teams that shipped models faster",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/case-studies/meridian-partners"
+                  },
+                  {
+                    "title": "Cost",
+                    "description": "Teams that trimmed warehouse spend",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/case-studies/halcyon"
+                  },
+                  {
+                    "title": "Scale",
+                    "description": "Teams that grew past one project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/case-studies/basalt-health"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Featured",
+              "links": [
+                {
+                  "label": "Fernway",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Orbitly",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Kestrel",
+                  "href": "/case-studies/kestrel"
+                },
+                {
+                  "label": "Tidepool",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Meridian",
+                  "href": "/case-studies/meridian-partners"
+                },
+                {
+                  "label": "Halcyon",
+                  "href": "/case-studies/halcyon"
+                }
+              ],
+              "action": {
+                "label": "View all customers",
+                "href": "/case-studies"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Resources",
+            "groups": [
+              {
+                "label": "Learn",
+                "items": [
+                  {
+                    "title": "Docs",
+                    "description": "Guides and reference for every feature",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Courses",
+                    "description": "Free self-paced training",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/learn"
+                  }
+                ]
+              },
+              {
+                "label": "Explore",
+                "items": [
+                  {
+                    "title": "Blog",
+                    "description": "Notes from the product team",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/blog"
+                  },
+                  {
+                    "title": "Webinars",
+                    "description": "Live and recorded sessions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/resources/webinars"
+                  },
+                  {
+                    "title": "Reports",
+                    "description": "Research on modern data work",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/resources/state-of-data-teams"
+                  },
+                  {
+                    "title": "Templates",
+                    "description": "Starter projects you can fork",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/resources/whitepaper-control-plane"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Popular",
+              "links": [
+                {
+                  "label": "Getting started",
+                  "href": "/learn"
+                },
+                {
+                  "label": "Best practices",
+                  "href": "/resources/analytics-lifecycle"
+                },
+                {
+                  "label": "Release notes",
+                  "href": "/blog/summit-announcements"
+                },
+                {
+                  "label": "Glossary",
+                  "href": "/resources"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Status",
+                  "href": "#"
+                }
+              ],
+              "action": {
+                "label": "Browse all resources",
+                "href": "/resources"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Community",
+            "groups": [
+              {
+                "label": "Connect",
+                "items": [
+                  {
+                    "title": "Forum",
+                    "description": "Ask questions and share answers",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Meetups",
+                    "description": "Find a group near you",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/events"
+                  }
+                ]
+              },
+              {
+                "label": "Contribute",
+                "items": [
+                  {
+                    "title": "Open source",
+                    "description": "Help build the core project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Write a guide",
+                    "description": "Share what you have learned",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Speak",
+                    "description": "Present at a community event",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/summit"
+                  },
+                  {
+                    "title": "Champions",
+                    "description": "Join the ambassador program",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/champions"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Get involved",
+              "links": [
+                {
+                  "label": "Code of conduct",
+                  "href": "/community"
+                },
+                {
+                  "label": "Chat space",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Newsletter",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Awards",
+                  "href": "/champions"
+                },
+                {
+                  "label": "Jobs board",
+                  "href": "/about-us/careers"
+                }
+              ],
+              "action": {
+                "label": "Join the community",
+                "href": "/community/join"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "menu.popover",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mobile-drawer",
+      "variant": "default",
+      "content": {
+        "accountActions": [
+          {
+            "label": "Log in",
+            "href": "#"
+          },
+          {
+            "label": "Create an account",
+            "href": "/signup"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "drawer.slide",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "listing.header",
+      "variant": "centred",
+      "content": {
+        "title": "On-demand sessions",
+        "lead": "Watch talks, demos and panels from past Summits whenever it suits you."
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      },
+      "style": {
+        "width": "column"
+      }
+    },
+    {
+      "section": "listing.session-grid",
+      "variant": "default",
+      "content": {
+        "items": [
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "Keynote: one project for people, dashboards and agents",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-1.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "Inside the new core engine: how parsing got forty times faster",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-2.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "State-aware builds at scale: lessons from four hundred production jobs",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "Context for agents: designing a project an assistant can read",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "Charts as code in practice",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "How a bank rebuilt regulatory reporting in one year",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-6.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "Mixed compute: when a small engine is the right engine",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-7.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "Writing tests that actually catch incidents",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-8.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "From five brands to one project: a retail consolidation story",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-1.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "Freshness promises your stakeholders will understand",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-2.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "Reviewing model changes with sampled row diffs",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "Data contracts between application and analytics teams",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "Teaching an assistant your naming conventions",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "Cost per model: making warehouse spend visible",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-6.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "Running a community of practice inside a large company",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-7.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "Semantic layer patterns for finance teams",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-8.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "What we learned shipping usage-based billing on tested data",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-1.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "Lineage you can show an auditor",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-2.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "Panel: the next five years of analytics engineering",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "Small team, big company: supporting nine hundred colleagues",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2026",
+            "tag": "Summit 2026",
+            "title": "Closing session: what ships next",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Keynote: building trust into every number",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-2.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Incremental models without surprises",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "A year of state-aware builds in a design partner program",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Ownership at scale: naming an owner for every model",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Event-driven scheduling for nightly jobs",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-6.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Migrating four hundred scripts without stopping the business",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-7.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Testing strategies for very large projects",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-8.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Shared definitions across eleven regional desks",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-1.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Documentation that people actually read",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-2.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Building a semantic layer that non-technical colleagues love",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Snapshots in production: patterns and pitfalls",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Using lineage to plan safe refactors",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Analytics engineering in healthcare: privacy by design",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-6.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Domain projects with shared contracts",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-7.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Making continuous integration fast enough to use",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-8.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "How we review pull requests on the internal data team",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-1.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Panel: the first year of AI assistants in data work",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-2.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Cost control for growing projects",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Onboarding analysts in their first week",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Live demo: from question to certified metric",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2025",
+            "tag": "Summit 2025",
+            "title": "Closing session: the year ahead",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-6.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Keynote: the analytics project as a product",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Layering models by purpose",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Writing your first custom test",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Data quality as a team sport",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-6.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Building marts for a specific audience",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-7.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Version control for analysts who have never used it",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-8.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Managing environments without copy and paste",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-1.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Choosing sensible test severities",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-2.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "How a games studio handles launch-day traffic",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Freshness checks on every source",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Running old and new pipelines side by side",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Designing metrics with finance, not for finance",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-6.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Lessons from a year of data incidents",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-7.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Making a project explain itself",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-8.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Alerts that name an owner and a next step",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-1.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Retiring models nobody uses",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-2.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Panel: what makes a great analytics engineer",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Packages that save hours every week",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Building a review culture from scratch",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Live demo: debugging a failed nightly run",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-6.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2024",
+            "tag": "Summit 2024",
+            "title": "Closing session: thank you and what is next",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-7.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Keynote: ten thousand practitioners and counting",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Getting started with tests",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Why staging models matter",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-6.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "A gentle introduction to incremental models",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-7.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Naming conventions that scale",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-8.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "From spreadsheets to models: a finance team story",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-1.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Code review for data teams",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-2.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Documentation as you go",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Choosing a grain and sticking to it",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Building your first semantic layer",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Scheduling jobs without surprises",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-6.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Measuring which models people use",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-7.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Data teams of one: getting started alone",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-8.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Panel: what we wish we had known in year one",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-1.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Writing a minimal brief before you build",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-2.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Testing assumptions, not just columns",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "How a retailer agreed one definition of a sale",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Using lineage to answer where a number came from",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Running a local meetup",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-6.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Live demo: from raw table to tested mart",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-7.svg"
+            },
+            "href": "#"
+          },
+          {
+            "year": "summit-2023",
+            "tag": "Summit 2023",
+            "title": "Closing session: community awards",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/sessions/session-8.svg"
+            },
+            "href": "#"
+          }
+        ],
+        "placeholder": "Filter by event",
+        "options": [
+          {
+            "value": "summit-2026",
+            "label": "Summit 2026"
+          },
+          {
+            "value": "summit-2025",
+            "label": "Summit 2025"
+          },
+          {
+            "value": "summit-2024",
+            "label": "Summit 2024"
+          },
+          {
+            "value": "summit-2023",
+            "label": "Summit 2023"
+          }
+        ],
+        "search": "Search",
+        "empty": {
+          "line": "Try another event or a shorter search term to see more recorded sessions.",
+          "title": "No sessions match your search yet"
+        },
+        "more": "View more"
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed",
+        "additional": [
+          {
+            "pattern": "loading.skeleton-pulse",
+            "reducedMotionFallback": "unchanged"
+          }
+        ]
+      }
+    },
+    {
+      "section": "cta.closing-band",
+      "variant": "wide",
+      "content": {
+        "title": "Join us live at the next Summit",
+        "body": "Three days of talks, workshops and conversations with the people building modern analytics.",
+        "primary": {
+          "label": "Get notified when registration opens",
+          "href": "/summit"
+        }
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-light.svg"
+        },
+        "columns": [
+          {
+            "title": "Platform",
+            "links": [
+              {
+                "label": "Overview",
+                "href": "/product/lattice"
+              },
+              {
+                "label": "What is Lattice?",
+                "href": "/product/what-is-lattice"
+              },
+              {
+                "label": "Lattice for AI workflows",
+                "href": "/product/ai"
+              },
+              {
+                "label": "Customer stories",
+                "href": "/case-studies"
+              },
+              {
+                "label": "Connectors",
+                "href": "/product/integrations"
+              },
+              {
+                "label": "Plans and pricing",
+                "href": "/pricing"
+              }
+            ]
+          },
+          {
+            "title": "For Builders",
+            "links": [
+              {
+                "label": "Documentation",
+                "href": "#"
+              },
+              {
+                "label": "Quickstart guides",
+                "href": "#"
+              },
+              {
+                "label": "Supported data platforms",
+                "href": "/data-platforms/cobalt"
+              },
+              {
+                "label": "Engineering blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Editor extension",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "/about-us"
+              },
+              {
+                "label": "Belonging at Lattice",
+                "href": "/about-us/belonging"
+              },
+              {
+                "label": "Careers",
+                "href": "/about-us/careers"
+              },
+              {
+                "label": "Press",
+                "href": "/press"
+              }
+            ],
+            "badge": {
+              "label": "Join the team",
+              "linkIndex": 2
+            }
+          },
+          {
+            "title": "Learning",
+            "links": [
+              {
+                "label": "Resource hub",
+                "href": "/resources"
+              },
+              {
+                "label": "Lattice Academy",
+                "href": "/learn"
+              },
+              {
+                "label": "Certification",
+                "href": "/certification"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              }
+            ]
+          },
+          {
+            "title": "Community",
+            "links": [
+              {
+                "label": "Join the community",
+                "href": "/community/join"
+              },
+              {
+                "label": "Become a contributor",
+                "href": "/community"
+              },
+              {
+                "label": "Open source projects",
+                "href": "#"
+              },
+              {
+                "label": "Community forum",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Help & Support",
+            "links": [
+              {
+                "label": "Contact us",
+                "href": "/contact"
+              },
+              {
+                "label": "Professional services",
+                "href": "/services"
+              },
+              {
+                "label": "Find a partner",
+                "href": "/partner-directory"
+              },
+              {
+                "label": "System status",
+                "href": "#"
+              }
+            ]
+          }
+        ],
+        "newsletter": {
+          "title": "Subscribe today!",
+          "body": "A monthly digest of field notes, release highlights and practical modeling advice.",
+          "action": {
+            "label": "Join today",
+            "href": "/community/join"
+          }
+        },
+        "region": {
+          "title": "Select region",
+          "options": [
+            "Global",
+            "Europe",
+            "Asia Pacific"
+          ]
+        },
+        "social": {
+          "title": "Connect with us",
+          "links": [
+            {
+              "label": "GitHub",
+              "href": "#"
+            },
+            {
+              "label": "LinkedIn",
+              "href": "#"
+            },
+            {
+              "label": "YouTube",
+              "href": "#"
+            },
+            {
+              "label": "Instagram",
+              "href": "#"
+            },
+            {
+              "label": "X",
+              "href": "#"
+            },
+            {
+              "label": "Bluesky",
+              "href": "#"
+            },
+            {
+              "label": "RSS",
+              "href": "#"
+            }
+          ]
+        },
+        "copyright": "© 2026 Lattice, Inc. All rights reserved.",
+        "legalLinks": [
+          {
+            "label": "Privacy policy",
+            "href": "#"
+          },
+          {
+            "label": "Accessibility statement",
+            "href": "/legal/ai-principles"
+          },
+          {
+            "label": "Terms of service",
+            "href": "/terms-of-use"
+          },
+          {
+            "label": "Security",
+            "href": "/security"
+          },
+          {
+            "label": "Acceptable use",
+            "href": "/modern-slavery-statement"
+          },
+          {
+            "label": "Responsible AI principles",
+            "href": "/legal/ai-principles"
+          }
+        ],
+        "cookieLabel": "Cookie preferences"
+      },
+      "motion": {
+        "pattern": "accordion.toggle",
+        "reducedMotionFallback": "unchanged"
+      }
+    }
+  ]
+}

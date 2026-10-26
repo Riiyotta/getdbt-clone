@@ -6,6 +6,6 @@
     "surface.blur"
   ],
   "evidence": [
-    "src/components/sections/parts.jsx:76-85"
+    "src/components/sections/parts.jsx:96-105"
   ]
 }

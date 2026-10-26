@@ -1,6 +1,6 @@
 {
   "theme": "light",
-  "note": "the clone ships one theme. Dark bands (tabs-dark, stats-bento, news-band, footer) are section-internal surfaces of the light theme, not a separate theme.",
+  "note": "the default theme. Dark bands (tabs-dark, stats-bento, news bands, footer, journey columns, community bento, the champions program bands) are section-internal surfaces of this theme, not a separate theme. The event microsite is the only scoped theme: tokens/themes/event.json.",
   "resolved": {
     "text.primary": "#030711",
     "text.secondary": "#1e2939",
@@ -41,6 +41,26 @@
     "chip.bg": "#ecebff",
     "chip.text": "#632ff5",
     "badge.bg": "#632ff5",
-    "menu.strip.bg": "#632ff5"
+    "menu.strip.bg": "#632ff5",
+    "text.error": "#c20059",
+    "border.input": "#d1d5dc",
+    "action.focus-ring-input": "0 0 0 2px #fff, 0 0 0 4px #632ff5",
+    "surface.overlay": "rgba(16,24,40,.8)",
+    "surface.translucent": "rgba(255,255,255,.7)",
+    "indicator.progress": "#632ff5",
+    "status.ok": "rgb(146,196,48)",
+    "status.warn": "rgb(255,204,37)",
+    "status.danger": "#ff4141",
+    "text.event.fg": "#111827",
+    "surface.event.bg": "#ffffff",
+    "surface.event.ink": "#000000",
+    "action.event.bg": "#fe6703",
+    "action.event.hover-bg": "#ffffff",
+    "accent.event.citron": "#d8ff33",
+    "accent.event.pink": "#ec71f6",
+    "accent.event.blue": "#6b9aff",
+    "text.directory.primary": "#374151",
+    "text.directory.muted": "#6b7280",
+    "border.directory": "#d2d6dc"
   }
 }

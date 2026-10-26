@@ -735,6 +735,11 @@
       "motion": {
         "pattern": "static",
         "reducedMotionFallback": "none-needed"
+      },
+      "style": {
+        "width": "column",
+        "background": "white",
+        "titleElement": "heading"
       }
     },
     {
@@ -765,7 +770,9 @@
         "reducedMotionFallback": "show-immediately"
       },
       "style": {
-        "paddingTop": "none"
+        "topPadding": "none",
+        "imagePlacement": "right",
+        "itemStyle": "headed"
       }
     },
     {
@@ -827,9 +834,12 @@
         "reducedMotionFallback": "show-immediately"
       },
       "style": {
-        "iconSize": "size.icon.32",
+        "revealTrigger": "scroll",
         "headerAlign": "start",
-        "paddingTop": "default"
+        "paddingTop": "default",
+        "surface": "light",
+        "columns": "4",
+        "iconSize": "size.icon.32"
       }
     },
     {

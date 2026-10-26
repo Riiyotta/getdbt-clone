@@ -16,6 +16,7 @@
   "additionalSources": [],
   "purpose": "Heading + paragraph, a left-aligned tab row of customer names, and per tab: logo, headline, optional summary, button, a quote card and two stat cards.",
   "retrievalEligible": true,
+  "placement": "main",
   "variants": {
     "default": {
       "description": "single rendering",
@@ -27,7 +28,7 @@
       "listSizes": {
         "stories": [
           2,
-          3
+          4
         ]
       },
       "observedOn": [
@@ -43,9 +44,11 @@
         "/product/deploy",
         "/product/develop",
         "/product/embedded-analytics",
+        "/product/governance",
         "/product/mesh",
         "/product/semantic-layer",
-        "/product/test-and-observe"
+        "/product/test-and-observe",
+        "/product/what-is-lattice"
       ]
     }
   },
@@ -56,36 +59,36 @@
         "type": "text",
         "maxWords": 21,
         "maxChars": 112,
-        "observedIn": 11
+        "observedIn": 12
       },
       "stories": {
         "type": "list",
         "minItems": 2,
-        "maxItems": 3,
-        "observedIn": 15
+        "maxItems": 4,
+        "observedIn": 17
       },
       "stories[].action.href": {
         "type": "link",
-        "observedIn": 41
+        "observedIn": 49
       },
       "stories[].action.label": {
         "type": "text",
         "maxWords": 3,
         "maxChars": 19,
-        "observedIn": 41
+        "observedIn": 49
       },
       "stories[].headline": {
         "type": "text",
         "maxWords": 10,
         "maxChars": 69,
-        "observedIn": 41
+        "observedIn": 49
       },
       "stories[].logo": {
         "type": "asset",
         "referenceRoles": [
           "customer.logo"
         ],
-        "observedIn": 41,
+        "observedIn": 49,
         "generatedRoles": [
           "customer.placeholder-logo"
         ]
@@ -94,61 +97,61 @@
         "type": "text",
         "maxWords": 2,
         "maxChars": 17,
-        "observedIn": 41
+        "observedIn": 49
       },
       "stories[].name": {
         "type": "text",
         "maxWords": 2,
         "maxChars": 17,
-        "observedIn": 41
+        "observedIn": 49
       },
       "stories[].person": {
         "type": "text",
         "maxWords": 3,
         "maxChars": 13,
-        "observedIn": 41
+        "observedIn": 49
       },
       "stories[].quote": {
         "type": "text",
-        "maxWords": 58,
-        "maxChars": 338,
-        "observedIn": 41
+        "maxWords": 62,
+        "maxChars": 360,
+        "observedIn": 49
       },
       "stories[].role": {
         "type": "text",
         "maxWords": 7,
         "maxChars": 48,
-        "observedIn": 41
+        "observedIn": 49
       },
       "stories[].stats": {
         "type": "list",
         "minItems": 2,
         "maxItems": 2,
-        "observedIn": 41
+        "observedIn": 49
       },
       "stories[].stats[].label": {
         "type": "text",
-        "maxWords": 15,
-        "maxChars": 90,
-        "observedIn": 82
+        "maxWords": 16,
+        "maxChars": 93,
+        "observedIn": 98
       },
       "stories[].stats[].number": {
         "type": "text",
         "maxWords": 3,
         "maxChars": 16,
-        "observedIn": 82
+        "observedIn": 98
       },
       "stories[].summary": {
         "type": "text",
         "maxWords": 32,
         "maxChars": 194,
-        "observedIn": 3
+        "observedIn": 7
       },
       "title": {
         "type": "text",
         "maxWords": 7,
         "maxChars": 36,
-        "observedIn": 15
+        "observedIn": 17
       }
     }
   },
@@ -159,7 +162,7 @@
         "referenceRoles": [
           "customer.logo"
         ],
-        "observedIn": 41,
+        "observedIn": 49,
         "generatedRoles": [
           "customer.placeholder-logo"
         ]
@@ -175,7 +178,8 @@
     "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
   },
   "constraints": {
-    "maxPerPage": 1
+    "maxPerPage": 1,
+    "consecutiveVariants": []
   },
   "motion": {
     "allowedPatterns": [
@@ -199,6 +203,7 @@
       "behavior": "card row scrolls horizontally; full-width button under the cards"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "/product/develop": [
@@ -216,23 +221,20 @@
       "/product/semantic-layer": [
         878.6
       ],
-      "/product/data-modernization": [
-        838.6
-      ],
       "/product/ai": [
         838.6
       ],
       "/product/embedded-analytics": [
         878.6
       ],
+      "/product/data-modernization": [
+        838.6
+      ],
       "/product/data-trust": [
         838.6
       ],
       "/product/cost-optimization": [
         838.6
-      ],
-      "/data-platforms/cobalt": [
-        880.6
       ],
       "/data-platforms/northwind": [
         1026.6
@@ -245,6 +247,15 @@
       ],
       "/data-platforms/stratus": [
         1026.6
+      ],
+      "/data-platforms/cobalt": [
+        880.6
+      ],
+      "/product/what-is-lattice": [
+        840.6
+      ],
+      "/product/governance": [
+        934.6
       ]
     }
   },

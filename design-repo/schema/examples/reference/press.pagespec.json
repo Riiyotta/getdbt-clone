@@ -1,0 +1,1740 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "T7",
+  "route": "/press",
+  "theme": "light",
+  "brand": {
+    "name": "Lattice"
+  },
+  "meta": {
+    "title": "Press"
+  },
+  "nodes": [
+    {
+      "section": "shell.announcement-bar",
+      "variant": "default",
+      "content": {
+        "slides": [
+          {
+            "text": "Lattice 4.0 is here with faster incremental builds, smarter tests, and a fresh lineage explorer.",
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "text": "Join our live workshop on modeling patterns this month.",
+            "href": "/resources/webinars/charts-as-code"
+          },
+          {
+            "text": "New report: how two hundred data teams trimmed warehouse spend while shipping trusted models each week.",
+            "href": "/resources/state-of-data-teams"
+          },
+          {
+            "text": "Lattice Cloud now runs in three new regions across Europe and Asia. Check region availability.",
+            "href": "/blog/lattice-joins-northwind"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "carousel.autoplay",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.navbar",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-dark.svg"
+        },
+        "menuLabels": [
+          "Product",
+          "Solutions",
+          "Customers",
+          "Resources",
+          "Community"
+        ],
+        "plainLink": {
+          "label": "Pricing",
+          "href": "/pricing"
+        },
+        "secondaryAction": {
+          "label": "Get started",
+          "href": "/signup"
+        },
+        "primaryAction": {
+          "label": "Book a demo",
+          "href": "/contact"
+        }
+      },
+      "motion": {
+        "pattern": "nav.hide-on-scroll",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mega-menu",
+      "variant": "default",
+      "content": {
+        "menus": [
+          {
+            "trigger": "Product",
+            "groups": [
+              {
+                "label": "First steps",
+                "items": [
+                  {
+                    "title": "Why Lattice",
+                    "description": "How Lattice turns SQL into trusted products",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/product/what-is-lattice"
+                  },
+                  {
+                    "title": "Platform tour",
+                    "description": "Watch a ten-minute walkthrough of the full workspace",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/product/lattice"
+                  }
+                ]
+              },
+              {
+                "label": "Everything in the box",
+                "items": [
+                  {
+                    "title": "Build",
+                    "description": "Author models in the browser, a desktop editor or the command line",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/develop"
+                  },
+                  {
+                    "title": "Validate",
+                    "description": "Assert rules on every model",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/test-and-observe"
+                  },
+                  {
+                    "title": "Design",
+                    "description": "Split big projects by domain",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/mesh"
+                  },
+                  {
+                    "title": "Explore",
+                    "description": "Search docs, owners and lineage",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/catalog"
+                  },
+                  {
+                    "title": "Ship",
+                    "description": "Trigger runs on merge or a timer",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/deploy"
+                  },
+                  {
+                    "title": "Measure",
+                    "description": "Publish one definition of revenue to every tool that asks",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/semantic-layer"
+                  }
+                ]
+              }
+            ],
+            "featured": {
+              "title": "The modeling lifecycle",
+              "description": "Map how ideas move from first query to production model, with clear owners and checks at each step",
+              "thumbnail": {
+                "assetRole": "illustration.abstract",
+                "alt": "",
+                "ref": "/assets/menu/featured.svg"
+              },
+              "href": "/resources/analytics-lifecycle"
+            },
+            "side": {
+              "label": "Feature spotlight",
+              "links": [
+                {
+                  "label": "Smart state",
+                  "href": "/product/state"
+                },
+                {
+                  "label": "Guided setup",
+                  "href": "/product/assistant"
+                },
+                {
+                  "label": "Charts",
+                  "href": "/product/charts"
+                },
+                {
+                  "label": "Governance",
+                  "href": "/product/governance"
+                },
+                {
+                  "label": "Security",
+                  "href": "/security"
+                },
+                {
+                  "label": "Integrations",
+                  "href": "/product/integrations"
+                }
+              ],
+              "action": {
+                "label": "See the latest demo",
+                "href": "/resources/webinars/launch-showcase"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Solutions",
+            "groups": [
+              {
+                "label": "By need",
+                "items": [
+                  {
+                    "title": "Analytics",
+                    "description": "Give analysts a governed place to model data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/analyst"
+                  },
+                  {
+                    "title": "AI readiness",
+                    "description": "Feed assistants with well-described data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/ai"
+                  }
+                ]
+              },
+              {
+                "label": "By team",
+                "items": [
+                  {
+                    "title": "Data engineers",
+                    "description": "Ship pipelines with tests built in",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/data-modernization"
+                  },
+                  {
+                    "title": "Analysts",
+                    "description": "Own models end to end in plain SQL",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/embedded-analytics"
+                  },
+                  {
+                    "title": "Platform leads",
+                    "description": "Standardize how every team builds",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/data-trust"
+                  },
+                  {
+                    "title": "Executives",
+                    "description": "Trust the numbers behind decisions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/cost-optimization"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "By industry",
+              "links": [
+                {
+                  "label": "Finance",
+                  "href": "/industry/financial-services"
+                },
+                {
+                  "label": "Retail",
+                  "href": "/industry/manufacturing"
+                },
+                {
+                  "label": "Healthcare",
+                  "href": "/industry/healthcare"
+                },
+                {
+                  "label": "Media",
+                  "href": "/industry/telecommunications"
+                },
+                {
+                  "label": "Public sector",
+                  "href": "/industry/energy-utilities"
+                },
+                {
+                  "label": "Software",
+                  "href": "/data-platforms/cobalt"
+                }
+              ],
+              "action": {
+                "label": "See every use case",
+                "href": "/product/data-modernization"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Customers",
+            "groups": [
+              {
+                "label": "Stories",
+                "items": [
+                  {
+                    "title": "Case studies",
+                    "description": "Read how teams run on Lattice",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/case-studies"
+                  },
+                  {
+                    "title": "Reviews",
+                    "description": "Independent ratings from practitioners",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/resources/on-demand"
+                  }
+                ]
+              },
+              {
+                "label": "By outcome",
+                "items": [
+                  {
+                    "title": "Data quality",
+                    "description": "Teams that caught issues earlier",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/case-studies/kestrel"
+                  },
+                  {
+                    "title": "Speed",
+                    "description": "Teams that shipped models faster",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/case-studies/meridian-partners"
+                  },
+                  {
+                    "title": "Cost",
+                    "description": "Teams that trimmed warehouse spend",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/case-studies/halcyon"
+                  },
+                  {
+                    "title": "Scale",
+                    "description": "Teams that grew past one project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/case-studies/basalt-health"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Featured",
+              "links": [
+                {
+                  "label": "Fernway",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Orbitly",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Kestrel",
+                  "href": "/case-studies/kestrel"
+                },
+                {
+                  "label": "Tidepool",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Meridian",
+                  "href": "/case-studies/meridian-partners"
+                },
+                {
+                  "label": "Halcyon",
+                  "href": "/case-studies/halcyon"
+                }
+              ],
+              "action": {
+                "label": "View all customers",
+                "href": "/case-studies"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Resources",
+            "groups": [
+              {
+                "label": "Learn",
+                "items": [
+                  {
+                    "title": "Docs",
+                    "description": "Guides and reference for every feature",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Courses",
+                    "description": "Free self-paced training",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/learn"
+                  }
+                ]
+              },
+              {
+                "label": "Explore",
+                "items": [
+                  {
+                    "title": "Blog",
+                    "description": "Notes from the product team",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/blog"
+                  },
+                  {
+                    "title": "Webinars",
+                    "description": "Live and recorded sessions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/resources/webinars"
+                  },
+                  {
+                    "title": "Reports",
+                    "description": "Research on modern data work",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/resources/state-of-data-teams"
+                  },
+                  {
+                    "title": "Templates",
+                    "description": "Starter projects you can fork",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/resources/whitepaper-control-plane"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Popular",
+              "links": [
+                {
+                  "label": "Getting started",
+                  "href": "/learn"
+                },
+                {
+                  "label": "Best practices",
+                  "href": "/resources/analytics-lifecycle"
+                },
+                {
+                  "label": "Release notes",
+                  "href": "/blog/summit-announcements"
+                },
+                {
+                  "label": "Glossary",
+                  "href": "/resources"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Status",
+                  "href": "#"
+                }
+              ],
+              "action": {
+                "label": "Browse all resources",
+                "href": "/resources"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Community",
+            "groups": [
+              {
+                "label": "Connect",
+                "items": [
+                  {
+                    "title": "Forum",
+                    "description": "Ask questions and share answers",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Meetups",
+                    "description": "Find a group near you",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/events"
+                  }
+                ]
+              },
+              {
+                "label": "Contribute",
+                "items": [
+                  {
+                    "title": "Open source",
+                    "description": "Help build the core project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Write a guide",
+                    "description": "Share what you have learned",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Speak",
+                    "description": "Present at a community event",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/summit"
+                  },
+                  {
+                    "title": "Champions",
+                    "description": "Join the ambassador program",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/champions"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Get involved",
+              "links": [
+                {
+                  "label": "Code of conduct",
+                  "href": "/community"
+                },
+                {
+                  "label": "Chat space",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Newsletter",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Awards",
+                  "href": "/champions"
+                },
+                {
+                  "label": "Jobs board",
+                  "href": "/about-us/careers"
+                }
+              ],
+              "action": {
+                "label": "Join the community",
+                "href": "/community/join"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "menu.popover",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mobile-drawer",
+      "variant": "default",
+      "content": {
+        "accountActions": [
+          {
+            "label": "Log in",
+            "href": "#"
+          },
+          {
+            "label": "Create an account",
+            "href": "/signup"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "drawer.slide",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "listing.header",
+      "variant": "centred",
+      "content": {
+        "title": "Press",
+        "lead": "News and coverage about Lattice."
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      },
+      "style": {
+        "width": "column"
+      }
+    },
+    {
+      "section": "listing.press-grid",
+      "variant": "media",
+      "content": {
+        "title": "In the media",
+        "items": [
+          {
+            "title": "The Ledger Weekly: Lattice and Northwind finalise their merger and promise to keep the open-source core vendor-neutral",
+            "date": "Oct 24, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-1.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Datapoint Review: why state-aware builds could be the quietest cost saving in analytics this year",
+            "date": "Oct 13, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-2.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Signal and Noise podcast: the Lattice founders on agents, context and what data teams should fix first",
+            "date": "Oct 2, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Harbor Tech Journal: inside the rewrite that made Lattice’s engine dramatically faster on very large projects",
+            "date": "Sep 21, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Northern Business Daily: the analytics start-up that kept its community at the centre while it grew",
+            "date": "Sep 10, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Cloud Desk: Lattice adds mixed compute so small transforms can run on lighter engines",
+            "date": "Aug 30, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-6.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "The Quarterly Stack: what the State of Data Teams survey says about budgets, AI and ownership",
+            "date": "Aug 19, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-1.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Founders Hour: building a company around an open project without losing the trust of its users",
+            "date": "Aug 8, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-2.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Analytics Today: a closer look at the context service and how it limits what agents can see",
+            "date": "Jul 28, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Metro Tech Wire: Lattice opens a new office to support customers and contributors in the region",
+            "date": "Jul 17, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Data Leaders Forum: how review culture spreads from software teams to data teams",
+            "date": "Jul 6, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "The Ledger Weekly: what the combined Lattice and Northwind roadmap means for existing customers",
+            "date": "Jun 25, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-6.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Infra Notes: charts as code and the case for keeping dashboards next to the models that feed them",
+            "date": "Jun 14, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-1.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Enterprise Data Monthly: governance without bureaucracy, according to the teams that ship daily",
+            "date": "Jun 3, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-2.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Bytes and Budgets: ways teams are cutting warehouse spend without cutting reports",
+            "date": "May 23, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "The Practitioner: a day in the life of an analytics engineer at a fast-growing retailer",
+            "date": "May 12, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Signal and Noise podcast: why data contracts are spreading from niche to normal",
+            "date": "May 1, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Harbor Tech Journal: Lattice’s community conference draws thousands of practitioners in person and online",
+            "date": "Apr 20, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-6.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Northern Business Daily: the analytics market consolidates as ingestion and modelling combine",
+            "date": "Apr 9, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-1.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Cloud Desk: Lattice extends support to two more warehouse engines in beta",
+            "date": "Mar 29, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-2.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Analytics Today: interview with Lattice’s head of community on meetups, grants and first-time speakers",
+            "date": "Mar 18, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "The Quarterly Stack: semantic layers move from experiment to expectation in enterprise data teams",
+            "date": "Mar 7, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Metro Tech Wire: Lattice named among the most promising developer tools companies of the year",
+            "date": "Feb 24, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Data Leaders Forum: what a lifecycle for analytics work looks like in practice",
+            "date": "Feb 13, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-6.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Founders Hour: hiring the first hundred engineers for an open-source company",
+            "date": "Feb 2, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-1.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Infra Notes: a technical tour of how column-level lineage is computed at scale",
+            "date": "Jan 22, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-2.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Enterprise Data Monthly: three banks explain how they answer regulator lineage questions",
+            "date": "Jan 11, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Bytes and Budgets: the hidden cost of rebuilding every model every night",
+            "date": "Dec 31, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "The Practitioner: onboarding analysts in a week with written conventions and starter tasks",
+            "date": "Dec 20, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Signal and Noise podcast: the history of analytics engineering, told by early community members",
+            "date": "Dec 9, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-6.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Harbor Tech Journal: Lattice raises new funding to expand its engineering and community teams",
+            "date": "Nov 28, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-1.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Northern Business Daily: data teams turn to shared definitions as AI assistants spread",
+            "date": "Nov 17, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-2.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Cloud Desk: Lattice launches a public preview of its assistant inside the editor",
+            "date": "Nov 6, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Analytics Today: what makes an assistant trustworthy when it answers business questions",
+            "date": "Oct 26, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "The Quarterly Stack: the slow rise of confidence in company data, year by year",
+            "date": "Oct 15, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Metro Tech Wire: Lattice expands its partner programme for consulting firms",
+            "date": "Oct 4, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-6.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Data Leaders Forum: the lone analyst problem, and how a five-hundred-person company solved it",
+            "date": "Sep 23, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-1.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Founders Hour: why open governance matters for developer tools",
+            "date": "Sep 12, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-2.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Infra Notes: event-driven scheduling and the end of the nightly batch",
+            "date": "Sep 1, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-3.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Enterprise Data Monthly: a hospital network shares how it unified clinical and finance reporting",
+            "date": "Aug 21, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-4.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "Bytes and Budgets: measuring the cost of every model, not just the monthly invoice",
+            "date": "Aug 10, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-5.svg"
+            },
+            "href": "#"
+          },
+          {
+            "title": "The Practitioner: the review habits of high-performing data teams",
+            "date": "Jul 30, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/press/media-6.svg"
+            },
+            "href": "#"
+          }
+        ],
+        "more": "View more"
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "listing.press-grid",
+      "variant": "release",
+      "content": {
+        "title": "Press releases",
+        "items": [
+          {
+            "tag": "Press",
+            "title": "Lattice and Northwind complete their merger, creating one platform for trusted data and the agents that rely on it",
+            "date": "Oct 24, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-1.svg"
+            },
+            "href": "/blog/lattice-joins-northwind"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice announces a faster core engine, state-aware builds by default and a context service for agents at its annual Summit",
+            "date": "Oct 1, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-6.svg"
+            },
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice publishes its State of Data Teams 2026 report, finding confidence in data rising as AI use becomes routine",
+            "date": "Sep 8, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-11.svg"
+            },
+            "href": "/blog/lattice-joins-northwind"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice and Northwind announce an agreement to combine, bringing ingestion and modelling together for joint customers",
+            "date": "Aug 16, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-16.svg"
+            },
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice opens a regional headquarters to support a fast-growing customer and contributor base",
+            "date": "Jul 24, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-21.svg"
+            },
+            "href": "/blog/lattice-joins-northwind"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice introduces mixed compute, letting teams run lightweight models on cheaper engines within one project",
+            "date": "Jul 1, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-2.svg"
+            },
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice Charts enters public beta, keeping simple dashboards in the same repository as the models behind them",
+            "date": "Jun 8, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-7.svg"
+            },
+            "href": "/blog/lattice-joins-northwind"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice expands its partner programme with new certification tracks for consulting firms",
+            "date": "May 16, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-12.svg"
+            },
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice announces general availability of its editor assistant for all platform customers",
+            "date": "Apr 23, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-17.svg"
+            },
+            "href": "/blog/lattice-joins-northwind"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice reaches seventy-five thousand community members and announces grants for local meetup organisers",
+            "date": "Mar 31, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-22.svg"
+            },
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice adds support for two additional warehouse engines in beta, extending its open adapter ecosystem",
+            "date": "Mar 8, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-3.svg"
+            },
+            "href": "/blog/lattice-joins-northwind"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice appoints a new chief financial officer to support its next stage of growth",
+            "date": "Feb 13, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-8.svg"
+            },
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice releases column-level lineage for every project on its platform",
+            "date": "Jan 21, 2026",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-13.svg"
+            },
+            "href": "/blog/lattice-joins-northwind"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice launches a semantic layer integration for spreadsheet and reporting tools",
+            "date": "Dec 29, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-18.svg"
+            },
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice completes an independent security assessment and publishes a plain-language summary",
+            "date": "Dec 6, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-23.svg"
+            },
+            "href": "/blog/lattice-joins-northwind"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice announces dates and location for its next annual Summit",
+            "date": "Nov 13, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-4.svg"
+            },
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice introduces event-based triggers so production jobs start when data arrives",
+            "date": "Oct 21, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-9.svg"
+            },
+            "href": "/blog/lattice-joins-northwind"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice expands its free developer plan with more seats and longer run history",
+            "date": "Sep 28, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-14.svg"
+            },
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice names its community award winners for outstanding contributions to the open project",
+            "date": "Sep 5, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-19.svg"
+            },
+            "href": "/blog/lattice-joins-northwind"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice announces a new office and engineering hub to serve customers across the region",
+            "date": "Aug 13, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-24.svg"
+            },
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice raises a new funding round to accelerate investment in its open-source core",
+            "date": "Jul 21, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-5.svg"
+            },
+            "href": "/blog/lattice-joins-northwind"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice launches data contracts, enforcing agreed columns and types on every build",
+            "date": "Jun 28, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-10.svg"
+            },
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice introduces review previews with sampled row diffs and downstream impact for every pull request",
+            "date": "Jun 5, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-15.svg"
+            },
+            "href": "/blog/lattice-joins-northwind"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice publishes an open specification for exposing project context to assistants and agents",
+            "date": "May 13, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-20.svg"
+            },
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice and a leading consulting partner announce a joint migration programme for legacy warehouses",
+            "date": "Apr 20, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-1.svg"
+            },
+            "href": "/blog/lattice-joins-northwind"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice expands its education programme with free courses and a new practitioner certification",
+            "date": "Mar 28, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-6.svg"
+            },
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice announces a strategic partnership with Cobalt DB to simplify deployment for joint customers",
+            "date": "Mar 5, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-11.svg"
+            },
+            "href": "/blog/lattice-joins-northwind"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice reports record growth in platform usage and community participation for the year",
+            "date": "Feb 10, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-16.svg"
+            },
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice welcomes a new chief technology officer from the open-source infrastructure world",
+            "date": "Jan 18, 2025",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-21.svg"
+            },
+            "href": "/blog/lattice-joins-northwind"
+          },
+          {
+            "tag": "Press",
+            "title": "Lattice announces the first annual community conference outside North America",
+            "date": "Dec 26, 2024",
+            "image": {
+              "assetRole": "resource.thumbnail",
+              "alt": "",
+              "ref": "/assets/pages/posts/cover-2.svg"
+            },
+            "href": "/blog/summit-announcements"
+          }
+        ],
+        "more": "View more"
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "cta.closing-band",
+      "variant": "plain",
+      "content": {
+        "title": "Press contact",
+        "body": "Reporters and analysts can reach our communications team at press@lattice.example."
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-light.svg"
+        },
+        "columns": [
+          {
+            "title": "Platform",
+            "links": [
+              {
+                "label": "Overview",
+                "href": "/product/lattice"
+              },
+              {
+                "label": "What is Lattice?",
+                "href": "/product/what-is-lattice"
+              },
+              {
+                "label": "Lattice for AI workflows",
+                "href": "/product/ai"
+              },
+              {
+                "label": "Customer stories",
+                "href": "/case-studies"
+              },
+              {
+                "label": "Connectors",
+                "href": "/product/integrations"
+              },
+              {
+                "label": "Plans and pricing",
+                "href": "/pricing"
+              }
+            ]
+          },
+          {
+            "title": "For Builders",
+            "links": [
+              {
+                "label": "Documentation",
+                "href": "#"
+              },
+              {
+                "label": "Quickstart guides",
+                "href": "#"
+              },
+              {
+                "label": "Supported data platforms",
+                "href": "/data-platforms/cobalt"
+              },
+              {
+                "label": "Engineering blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Editor extension",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "/about-us"
+              },
+              {
+                "label": "Belonging at Lattice",
+                "href": "/about-us/belonging"
+              },
+              {
+                "label": "Careers",
+                "href": "/about-us/careers"
+              },
+              {
+                "label": "Press",
+                "href": "/press"
+              }
+            ],
+            "badge": {
+              "label": "Join the team",
+              "linkIndex": 2
+            }
+          },
+          {
+            "title": "Learning",
+            "links": [
+              {
+                "label": "Resource hub",
+                "href": "/resources"
+              },
+              {
+                "label": "Lattice Academy",
+                "href": "/learn"
+              },
+              {
+                "label": "Certification",
+                "href": "/certification"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              }
+            ]
+          },
+          {
+            "title": "Community",
+            "links": [
+              {
+                "label": "Join the community",
+                "href": "/community/join"
+              },
+              {
+                "label": "Become a contributor",
+                "href": "/community"
+              },
+              {
+                "label": "Open source projects",
+                "href": "#"
+              },
+              {
+                "label": "Community forum",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Help & Support",
+            "links": [
+              {
+                "label": "Contact us",
+                "href": "/contact"
+              },
+              {
+                "label": "Professional services",
+                "href": "/services"
+              },
+              {
+                "label": "Find a partner",
+                "href": "/partner-directory"
+              },
+              {
+                "label": "System status",
+                "href": "#"
+              }
+            ]
+          }
+        ],
+        "newsletter": {
+          "title": "Subscribe today!",
+          "body": "A monthly digest of field notes, release highlights and practical modeling advice.",
+          "action": {
+            "label": "Join today",
+            "href": "/community/join"
+          }
+        },
+        "region": {
+          "title": "Select region",
+          "options": [
+            "Global",
+            "Europe",
+            "Asia Pacific"
+          ]
+        },
+        "social": {
+          "title": "Connect with us",
+          "links": [
+            {
+              "label": "GitHub",
+              "href": "#"
+            },
+            {
+              "label": "LinkedIn",
+              "href": "#"
+            },
+            {
+              "label": "YouTube",
+              "href": "#"
+            },
+            {
+              "label": "Instagram",
+              "href": "#"
+            },
+            {
+              "label": "X",
+              "href": "#"
+            },
+            {
+              "label": "Bluesky",
+              "href": "#"
+            },
+            {
+              "label": "RSS",
+              "href": "#"
+            }
+          ]
+        },
+        "copyright": "© 2026 Lattice, Inc. All rights reserved.",
+        "legalLinks": [
+          {
+            "label": "Privacy policy",
+            "href": "#"
+          },
+          {
+            "label": "Accessibility statement",
+            "href": "/legal/ai-principles"
+          },
+          {
+            "label": "Terms of service",
+            "href": "/terms-of-use"
+          },
+          {
+            "label": "Security",
+            "href": "/security"
+          },
+          {
+            "label": "Acceptable use",
+            "href": "/modern-slavery-statement"
+          },
+          {
+            "label": "Responsible AI principles",
+            "href": "/legal/ai-principles"
+          }
+        ],
+        "cookieLabel": "Cookie preferences"
+      },
+      "motion": {
+        "pattern": "accordion.toggle",
+        "reducedMotionFallback": "unchanged"
+      }
+    }
+  ]
+}

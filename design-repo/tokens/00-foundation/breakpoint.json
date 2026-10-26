@@ -29,7 +29,7 @@
     "breakpoint.ultrawide": {
       "value": "2100px",
       "category": "breakpoint",
-      "cite": "src/index.css:381"
+      "cite": "src/index.css:410"
     }
   }
 }

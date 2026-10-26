@@ -6,6 +6,6 @@
     "primitive.text-link"
   ],
   "evidence": [
-    "src/components/sections/TestiSlider.jsx:10-34"
+    "src/components/sections/TestiSlider.jsx:10-36"
   ]
 }

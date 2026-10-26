@@ -19,7 +19,7 @@
     "size.icon.32": {
       "value": "32px",
       "category": "iconSize",
-      "cite": "src/components/sections/Feat.jsx:16"
+      "cite": "src/components/sections/Feat.jsx:40"
     },
     "size.icon.40": {
       "value": "40px",
@@ -29,7 +29,12 @@
     "size.icon.56": {
       "value": "56px",
       "category": "iconSize",
-      "cite": "src/components/sections/Feat.jsx:16"
+      "cite": "src/components/sections/Feat.jsx:40"
+    },
+    "size.icon.28": {
+      "value": "28px",
+      "category": "iconSize",
+      "cite": "src/components/oneoffs/champions/Champions.jsx:178"
     }
   }
 }

@@ -721,7 +721,10 @@
       },
       "style": {
         "strokeShape": "stroke.s3",
-        "strokeGradient": "gradient.01"
+        "strokeGradient": "gradient.01",
+        "leadSize": "default",
+        "columns": "6/6",
+        "bottomPadding": "default"
       }
     },
     {
@@ -778,8 +781,11 @@
         "reducedMotionFallback": "show-immediately"
       },
       "style": {
+        "revealTrigger": "scroll",
         "headerAlign": "start",
-        "paddingTop": "default"
+        "paddingTop": "default",
+        "surface": "light",
+        "columns": "3"
       }
     },
     {
@@ -791,10 +797,18 @@
           "Lattice connects to Stratus so your team can design, test and ship models in one governed project, then keep them healthy in production."
         ],
         "bullets": [
-          "Version every model and review each change before it ships",
-          "Test data in Stratus on every run, not once a quarter",
-          "Document models automatically as part of every build you run",
-          "Share certified models across every workspace"
+          {
+            "text": "Version every model and review each change before it ships"
+          },
+          {
+            "text": "Test data in Stratus on every run, not once a quarter"
+          },
+          {
+            "text": "Document models automatically as part of every build you run"
+          },
+          {
+            "text": "Share certified models across every workspace"
+          }
         ],
         "media": {
           "assetRole": "illustration.diagram",
@@ -805,6 +819,10 @@
       "motion": {
         "pattern": "reveal.fade-up",
         "reducedMotionFallback": "show-immediately"
+      },
+      "style": {
+        "columns": "6/6",
+        "topPadding": "default"
       }
     },
     {

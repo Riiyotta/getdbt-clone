@@ -10,12 +10,13 @@
     "file": "src/components/Integrations.jsx",
     "export": "Integrations",
     "tag": "section",
-    "lines": "9-51",
-    "tagLine": 11
+    "lines": "19-47",
+    "tagLine": 23
   },
   "additionalSources": [],
-  "purpose": "Integrations block: eyebrow, heading-2, body and a button (5 cols) beside a 2x3 grid of bordered platform tiles (logo + name) that link to platform pages.",
+  "purpose": "Integrations block: eyebrow, heading-2, body and a button (5 cols) beside a 2-column grid of bordered platform tiles (logo + name) that link to platform or integration pages.",
   "retrievalEligible": true,
+  "placement": "main",
   "variants": {
     "default": {
       "description": "single rendering",
@@ -36,6 +37,26 @@
       "observedOn": [
         "/"
       ]
+    },
+    "labelled": {
+      "description": "page tiles: 40px icon (30 below 768), py 20 at every width, link target per tile",
+      "requiredFields": [
+        "body",
+        "eyebrow",
+        "primary",
+        "tiles",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "tiles": [
+          6,
+          6
+        ]
+      },
+      "observedOn": [
+        "/product/analyst"
+      ]
     }
   },
   "content": {
@@ -45,40 +66,40 @@
         "type": "text",
         "maxWords": 31,
         "maxChars": 191,
-        "observedIn": 1
+        "observedIn": 2
       },
       "eyebrow": {
         "type": "text",
-        "maxWords": 1,
-        "maxChars": 12,
-        "observedIn": 1
+        "maxWords": 4,
+        "maxChars": 20,
+        "observedIn": 2
       },
       "primary.href": {
         "type": "link",
-        "observedIn": 1
+        "observedIn": 2
       },
       "primary.label": {
         "type": "text",
-        "maxWords": 2,
-        "maxChars": 19,
-        "observedIn": 1
+        "maxWords": 3,
+        "maxChars": 21,
+        "observedIn": 2
       },
       "tiles": {
         "type": "list",
         "minItems": 6,
         "maxItems": 6,
-        "observedIn": 1
+        "observedIn": 2
       },
       "tiles[].href": {
         "type": "link",
-        "observedIn": 6
+        "observedIn": 12
       },
       "tiles[].logo": {
         "type": "asset",
         "referenceRoles": [
           "platform.logo"
         ],
-        "observedIn": 6,
+        "observedIn": 12,
         "generatedRoles": [
           "platform.placeholder-icon"
         ]
@@ -87,19 +108,19 @@
         "type": "text",
         "maxWords": 0,
         "maxChars": 0,
-        "observedIn": 6
+        "observedIn": 12
       },
       "tiles[].name": {
         "type": "text",
         "maxWords": 2,
         "maxChars": 9,
-        "observedIn": 6
+        "observedIn": 12
       },
       "title": {
         "type": "text",
-        "maxWords": 5,
-        "maxChars": 25,
-        "observedIn": 1
+        "maxWords": 11,
+        "maxChars": 65,
+        "observedIn": 2
       }
     }
   },
@@ -110,7 +131,7 @@
         "referenceRoles": [
           "platform.logo"
         ],
-        "observedIn": 6,
+        "observedIn": 12,
         "generatedRoles": [
           "platform.placeholder-icon"
         ]
@@ -126,7 +147,8 @@
     "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
   },
   "constraints": {
-    "maxPerPage": 1
+    "maxPerPage": 1,
+    "consecutiveVariants": []
   },
   "motion": {
     "allowedPatterns": [
@@ -138,7 +160,7 @@
     "reducedMotionFallback": {
       "static": "none-needed"
     },
-    "stagger": "none"
+    "stagger": "20/28 below 1024; hover border #99a1af over 300ms). No reveal."
   },
   "responsive": [
     {
@@ -150,14 +172,18 @@
       "behavior": "stacked, tiles one per row"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "/": [
         414
+      ],
+      "/product/analyst": [
+        484.8
       ]
     }
   },
   "evidence": [
-    "src/components/Integrations.jsx:9-51"
+    "src/components/Integrations.jsx:19-47"
   ]
 }

@@ -10,12 +10,13 @@
     "file": "src/components/FeaturePanel.jsx",
     "export": "FeaturePanel",
     "tag": "section",
-    "lines": "5-59",
-    "tagLine": 41
+    "lines": "17-78",
+    "tagLine": 60
   },
   "additionalSources": [],
-  "purpose": "Rounded gradient panel (grain overlay) with eyebrow, heading-3, body and a primary.dark button beside a product media image flush to the panel edge; alternates sides.",
+  "purpose": "Rounded gradient panel (grain overlay) with eyebrow, heading-3, body and a primary.dark button beside a product media image flush to the panel edge; alternates sides. The homepage and the assistant page use the same component.",
   "retrievalEligible": true,
+  "placement": "main",
   "variants": {
     "text-first": {
       "description": "text column left, media right",
@@ -29,11 +30,12 @@
       "forbiddenFields": [],
       "listSizes": {},
       "observedOn": [
-        "/"
+        "/",
+        "/product/assistant"
       ]
     },
     "media-first": {
-      "description": "media left, text right (text first below 1024)",
+      "description": "media left, text right (text first below 1024 on the homepage; source order below 1024 on product pages)",
       "requiredFields": [
         "body",
         "eyebrow",
@@ -44,7 +46,8 @@
       "forbiddenFields": [],
       "listSizes": {},
       "observedOn": [
-        "/"
+        "/",
+        "/product/assistant"
       ]
     }
   },
@@ -53,22 +56,22 @@
     "fields": {
       "body": {
         "type": "text",
-        "maxWords": 50,
-        "maxChars": 284,
-        "observedIn": 3
+        "maxWords": 66,
+        "maxChars": 372,
+        "observedIn": 7
       },
       "eyebrow": {
         "type": "text",
         "maxWords": 2,
         "maxChars": 13,
-        "observedIn": 3
+        "observedIn": 7
       },
       "media": {
         "type": "asset",
         "referenceRoles": [
           "product.screenshot"
         ],
-        "observedIn": 3,
+        "observedIn": 7,
         "generatedRoles": [
           "product.generated-visual"
         ]
@@ -77,23 +80,23 @@
         "type": "text",
         "maxWords": 11,
         "maxChars": 66,
-        "observedIn": 3
+        "observedIn": 7
       },
       "primary.href": {
         "type": "link",
-        "observedIn": 3
+        "observedIn": 7
       },
       "primary.label": {
         "type": "text",
         "maxWords": 5,
         "maxChars": 24,
-        "observedIn": 3
+        "observedIn": 7
       },
       "title": {
         "type": "text",
-        "maxWords": 8,
-        "maxChars": 47,
-        "observedIn": 3
+        "maxWords": 12,
+        "maxChars": 69,
+        "observedIn": 7
       }
     }
   },
@@ -104,7 +107,7 @@
         "referenceRoles": [
           "product.screenshot"
         ],
-        "observedIn": 3,
+        "observedIn": 7,
         "generatedRoles": [
           "product.generated-visual"
         ]
@@ -117,6 +120,12 @@
   ],
   "style": {
     "props": {
+      "mobileOrder": {
+        "kind": "enum",
+        "allowed": [
+          "source"
+        ]
+      },
       "panelGradient": {
         "kind": "token",
         "allowed": [
@@ -129,7 +138,8 @@
     "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
   },
   "constraints": {
-    "maxPerPage": 3
+    "maxPerPage": 4,
+    "consecutiveVariants": []
   },
   "motion": {
     "allowedPatterns": [
@@ -141,7 +151,7 @@
     "reducedMotionFallback": {
       "reveal.fade-up": "show-immediately"
     },
-    "stagger": "reveal targets with inline delays, see src/components/FeaturePanel.jsx:5-59"
+    "stagger": "Reveal: first column 0, second column 200 (media inner wrapper same as its column). "
   },
   "responsive": [
     {
@@ -157,16 +167,23 @@
       "behavior": "full-bleed panel, 48px padding, 8px dark divider below"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "/": [
         552.8,
         591.2,
         591.2
+      ],
+      "/product/assistant": [
+        557.6,
+        557.6,
+        543.2,
+        701.6
       ]
     }
   },
   "evidence": [
-    "src/components/FeaturePanel.jsx:5-59"
+    "src/components/FeaturePanel.jsx:17-78"
   ]
 }

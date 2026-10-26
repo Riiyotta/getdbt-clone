@@ -1,0 +1,423 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "T16",
+  "route": "/summit",
+  "theme": "event",
+  "brand": {
+    "name": "Lattice"
+  },
+  "meta": {
+    "title": "Summit"
+  },
+  "nodes": [
+    {
+      "section": "shell.event-subnav",
+      "variant": "default",
+      "content": {
+        "logo": {
+          "assetRole": "brand.event-mark",
+          "alt": "Forge 2026",
+          "ref": "/assets/oneoffs/summit/logo.svg"
+        },
+        "home": "/summit",
+        "columns": [
+          {
+            "links": [
+              {
+                "label": "Agenda",
+                "href": "#"
+              },
+              {
+                "label": "Speakers",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "links": [
+              {
+                "label": "Experience",
+                "href": "#"
+              },
+              {
+                "label": "Forge on tour",
+                "href": "#"
+              }
+            ]
+          }
+        ],
+        "cta": {
+          "label": "Get first access",
+          "href": "#"
+        },
+        "openLabel": "Open menu",
+        "closeLabel": "Close menu"
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "hero.event",
+      "variant": "default",
+      "content": {
+        "title": "Forge 2026 is a wrap. Thanks!",
+        "lead": "Missed a session? Every keynote and breakout is now streaming on demand.",
+        "cta": {
+          "label": "Stream the talks",
+          "href": "#"
+        },
+        "portraits": [
+          {
+            "assetRole": "photo.composite-scene",
+            "alt": "",
+            "ref": "/assets/oneoffs/summit/portrait-left.svg"
+          },
+          {
+            "assetRole": "photo.composite-scene",
+            "alt": "",
+            "ref": "/assets/oneoffs/summit/portrait-right.svg"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "event.photo-gallery",
+      "variant": "default",
+      "content": {
+        "photos": [
+          {
+            "assetRole": "photo.composite-scene",
+            "alt": "",
+            "ref": "/assets/oneoffs/summit/photo-1.svg"
+          },
+          {
+            "assetRole": "photo.composite-scene",
+            "alt": "",
+            "ref": "/assets/oneoffs/summit/photo-2.svg"
+          },
+          {
+            "assetRole": "photo.composite-scene",
+            "alt": "",
+            "ref": "/assets/oneoffs/summit/photo-3.svg"
+          },
+          {
+            "assetRole": "photo.composite-scene",
+            "alt": "",
+            "ref": "/assets/oneoffs/summit/photo-4.svg"
+          },
+          {
+            "assetRole": "photo.composite-scene",
+            "alt": "",
+            "ref": "/assets/oneoffs/summit/photo-5.svg"
+          },
+          {
+            "assetRole": "photo.composite-scene",
+            "alt": "",
+            "ref": "/assets/oneoffs/summit/photo-6.svg"
+          },
+          {
+            "assetRole": "photo.composite-scene",
+            "alt": "",
+            "ref": "/assets/oneoffs/summit/photo-7.svg"
+          },
+          {
+            "assetRole": "photo.composite-scene",
+            "alt": "",
+            "ref": "/assets/oneoffs/summit/photo-8.svg"
+          },
+          {
+            "assetRole": "photo.composite-scene",
+            "alt": "",
+            "ref": "/assets/oneoffs/summit/photo-9.svg"
+          },
+          {
+            "assetRole": "photo.composite-scene",
+            "alt": "",
+            "ref": "/assets/oneoffs/summit/photo-10.svg"
+          },
+          {
+            "assetRole": "photo.composite-scene",
+            "alt": "",
+            "ref": "/assets/oneoffs/summit/photo-11.svg"
+          },
+          {
+            "assetRole": "photo.composite-scene",
+            "alt": "",
+            "ref": "/assets/oneoffs/summit/photo-12.svg"
+          },
+          {
+            "assetRole": "photo.composite-scene",
+            "alt": "",
+            "ref": "/assets/oneoffs/summit/photo-13.svg"
+          },
+          {
+            "assetRole": "photo.composite-scene",
+            "alt": "",
+            "ref": "/assets/oneoffs/summit/photo-14.svg"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "marquee.photo-loop",
+        "reducedMotionFallback": "static-row"
+      }
+    },
+    {
+      "section": "event.recap",
+      "variant": "default",
+      "content": {
+        "title": "All the launches from Forge 2026",
+        "body": "Catch up on new features, product updates and roadmap notes shared from the stage.",
+        "cta": {
+          "label": "Read the recap post",
+          "href": "/blog/summit-announcements"
+        }
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "event.highlight-rows",
+      "variant": "default",
+      "content": {
+        "title": "Fresh drops",
+        "rows": [
+          {
+            "title": "Self-hosted or managed? A plain guide to picking your Lattice setup.",
+            "cta": {
+              "label": "Dig deeper",
+              "href": "/product/self-hosted-vs-platform"
+            }
+          },
+          {
+            "title": "Warm Cache skips rebuilding models whose inputs stayed put.",
+            "cta": {
+              "label": "Dig deeper",
+              "href": "/product/state"
+            }
+          },
+          {
+            "title": "Your assistant is guessing. Hand it real context about your data.",
+            "cta": {
+              "label": "Dig deeper",
+              "href": "/product/assistant"
+            }
+          },
+          {
+            "title": "Charts in code: reviewable dashboards that people and agents share.",
+            "cta": {
+              "label": "Dig deeper",
+              "href": "/product/charts"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "event.sponsor-logos",
+      "variant": "default",
+      "content": {
+        "title": "Made possible by our partners",
+        "tiers": [
+          {
+            "label": "Keystone",
+            "logos": [
+              {
+                "assetRole": "partner.wordmark",
+                "alt": "Corvane",
+                "ref": "/assets/oneoffs/summit/sponsor-tier1-1.svg"
+              },
+              {
+                "assetRole": "partner.wordmark",
+                "alt": "Hexwell",
+                "ref": "/assets/oneoffs/summit/sponsor-tier1-2.svg"
+              },
+              {
+                "assetRole": "partner.wordmark",
+                "alt": "Plinth",
+                "ref": "/assets/oneoffs/summit/sponsor-tier1-3.svg"
+              }
+            ]
+          },
+          {
+            "label": "Arch",
+            "logos": [
+              {
+                "assetRole": "partner.wordmark",
+                "alt": "Halyard",
+                "ref": "/assets/oneoffs/summit/sponsor-tier2-1.svg"
+              },
+              {
+                "assetRole": "partner.wordmark",
+                "alt": "Cinderpath Cloud",
+                "ref": "/assets/oneoffs/summit/sponsor-tier2-2.svg"
+              },
+              {
+                "assetRole": "partner.wordmark",
+                "alt": "Quillmark",
+                "ref": "/assets/oneoffs/summit/sponsor-tier2-3.svg"
+              },
+              {
+                "assetRole": "partner.wordmark",
+                "alt": "Veridian Ops",
+                "ref": "/assets/oneoffs/summit/sponsor-tier2-4.svg"
+              }
+            ]
+          },
+          {
+            "label": "Bridge",
+            "logos": [
+              {
+                "assetRole": "partner.wordmark",
+                "alt": "Orbitry",
+                "ref": "/assets/oneoffs/summit/sponsor-tier3-1.svg"
+              },
+              {
+                "assetRole": "partner.wordmark",
+                "alt": "Nimbal",
+                "ref": "/assets/oneoffs/summit/sponsor-tier3-2.svg"
+              },
+              {
+                "assetRole": "partner.wordmark",
+                "alt": "Glasswing",
+                "ref": "/assets/oneoffs/summit/sponsor-tier3-3.svg"
+              },
+              {
+                "assetRole": "partner.wordmark",
+                "alt": "Kettle AI",
+                "ref": "/assets/oneoffs/summit/sponsor-tier3-4.svg"
+              },
+              {
+                "assetRole": "partner.wordmark",
+                "alt": "Moraine",
+                "ref": "/assets/oneoffs/summit/sponsor-tier3-5.svg"
+              },
+              {
+                "assetRole": "partner.wordmark",
+                "alt": "Brightfold",
+                "ref": "/assets/oneoffs/summit/sponsor-tier3-6.svg"
+              }
+            ]
+          }
+        ],
+        "cta": {
+          "label": "See every sponsor",
+          "href": "#"
+        }
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "event.photo-band",
+      "variant": "default",
+      "content": {
+        "image": {
+          "assetRole": "photo.composite-scene",
+          "alt": "A packed keynote hall seen from the back rows",
+          "ref": "/assets/oneoffs/summit/audience.svg"
+        }
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "event.quote-band",
+      "variant": "default",
+      "content": {
+        "quote": "“Forge reminds me every year why I got into data: smart people, honest talks and bold ideas.”",
+        "name": "Ada Kowski",
+        "role": "Analytics Platform Manager, Saltmarsh Co"
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "event.closing-band",
+      "variant": "default",
+      "content": {
+        "title": "See you at\nthe next Forge",
+        "body": "Join practitioners and data leaders for three days of hands-on sessions, hallway chats and fresh ideas.",
+        "cta": {
+          "label": "Get first access",
+          "href": "#"
+        }
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "shell.event-footer",
+      "variant": "default",
+      "content": {
+        "wordmark": {
+          "assetRole": "brand.event-mark",
+          "alt": "Forge",
+          "ref": "/assets/oneoffs/summit/footer-wordmark.svg"
+        },
+        "columns": [
+          {
+            "links": [
+              {
+                "label": "Home",
+                "href": "/summit"
+              },
+              {
+                "label": "Waitlist",
+                "href": "#"
+              },
+              {
+                "label": "Event terms",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "links": [
+              {
+                "label": "Privacy notice",
+                "href": "#"
+              },
+              {
+                "label": "Event app privacy",
+                "href": "#"
+              },
+              {
+                "text": "Questions? Write to us at: ",
+                "label": "forge@lattice.example",
+                "href": "mailto:forge@lattice.example"
+              }
+            ]
+          }
+        ],
+        "tagline": "Build together. Ship with care. Repeat it.",
+        "copyright": "Copyright 2026 Lattice, Inc. All rights reserved."
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    }
+  ]
+}

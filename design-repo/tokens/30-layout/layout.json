@@ -62,7 +62,39 @@
       ">=1024": "120px"
     },
     "background": "surface.inverse",
-    "cite": "src/components/sections/TabsDark.jsx:15"
+    "cite": "src/components/sections/TabsDark.jsx:18"
+  },
+  "proseColumn": {
+    "maxWidth": "832px (legal.policy-body, lg and up; full container width below)",
+    "paddingY": {
+      "<768": "48px",
+      ">=768": "64px"
+    },
+    "token": "container.width.prose",
+    "cite": "src/components/legal/Policy.jsx:27"
+  },
+  "eventShell": {
+    "scope": "chrome 'event' (route /summit): own sub-nav + own footer; no announcement bar, no global footer",
+    "logoBox": {
+      "<640": "100vw - 4rem wide, height = width * 108 / 666",
+      "640": "340px wide",
+      "768": "440 x 71.35",
+      "1280": "493 x 80"
+    },
+    "navHeight": {
+      ">=1024": "80px, sticky top 0 (z 40)",
+      "<1024": "logo height, fixed bar + in-flow spacer"
+    },
+    "containerWide": "1728px max (container.width.summit-wide)",
+    "radius": "0 everywhere",
+    "hover": "instant colour swap (no transition)",
+    "cite": "src/styles/oneoffs.css:6-31"
+  },
+  "directoryShell": {
+    "scope": "chrome 'none' (route /partner-directory): minimal nav (64px), no footer",
+    "maxWidth": "1200px, px 16 (24 from 640)",
+    "grid": ">=1024: 275px filter column + 845px results column, gap 32; results grid 3 / 2 / 1 columns",
+    "cite": "src/components/oneoffs/directory/Directory.jsx:232"
   },
   "measuredContentLeftEdge": {
     "1440": 96,

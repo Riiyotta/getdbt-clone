@@ -16,6 +16,7 @@
   "additionalSources": [],
   "purpose": "Infinite horizontal marquee of 8 customer wordmarks (3 copies), overlapping the hero bottom by 85px.",
   "retrievalEligible": true,
+  "placement": "main",
   "variants": {
     "default": {
       "description": "single rendering",
@@ -85,7 +86,8 @@
   },
   "constraints": {
     "position": "after:hero",
-    "maxPerPage": 1
+    "maxPerPage": 1,
+    "consecutiveVariants": []
   },
   "motion": {
     "allowedPatterns": [
@@ -105,6 +107,7 @@
       "behavior": "1240px max track window; logos 120 wide, 184px pitch; height 200 (>=768) / 168 (<768)"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "/": [

@@ -1,0 +1,153 @@
+{
+  "id": "features.integration-strip",
+  "title": "Integration icon strip",
+  "semantic": {
+    "id": "features.integration-strip",
+    "category": "FEATURES"
+  },
+  "source": {
+    "id": "component:IntStrip",
+    "file": "src/components/sections/IntStrip.jsx",
+    "export": "IntStrip",
+    "tag": "section",
+    "lines": "8-38",
+    "tagLine": 10
+  },
+  "additionalSources": [],
+  "purpose": "Centred grey kicker + heading-2, a wrapping row of 6 bordered icon tiles (74px at >=768, 64 below) and a primary button.",
+  "retrievalEligible": true,
+  "placement": "main",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "cta",
+        "kicker",
+        "tiles",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "tiles": [
+          6,
+          6
+        ]
+      },
+      "observedOn": [
+        "/product/lattice",
+        "/product/what-is-lattice"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "cta.href": {
+        "type": "link",
+        "observedIn": 2
+      },
+      "cta.label": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 23,
+        "observedIn": 2
+      },
+      "kicker": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 22,
+        "observedIn": 2
+      },
+      "tiles": {
+        "type": "list",
+        "minItems": 6,
+        "maxItems": 6,
+        "observedIn": 2
+      },
+      "tiles[]": {
+        "type": "asset",
+        "referenceRoles": [
+          "platform.logo"
+        ],
+        "observedIn": 12,
+        "generatedRoles": [
+          "platform.placeholder-icon"
+        ]
+      },
+      "tiles[].alt": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 9,
+        "observedIn": 12
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 20,
+        "observedIn": 2
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "tiles[]": {
+        "type": "asset",
+        "referenceRoles": [
+          "platform.logo"
+        ],
+        "observedIn": 12,
+        "generatedRoles": [
+          "platform.placeholder-icon"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "platform.placeholder-icon"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal.fade-up"
+    ],
+    "requiredPatterns": [
+      "reveal.fade-up"
+    ],
+    "reducedMotionFallback": {
+      "reveal.fade-up": "show-immediately"
+    },
+    "stagger": "over 300ms) and a primary medium button. Reveal: wrapper 0, kicker 0, h2 100, tiles 200, button 400."
+  },
+  "responsive": [
+    {
+      "range": ">=768",
+      "behavior": "kicker 32/38.4, tiles 74px with 40px gaps"
+    },
+    {
+      "range": "<768",
+      "behavior": "kicker 24/32, tiles 64px, full-width button"
+    }
+  ],
+  "runtimeUi": [],
+  "measuredHeightsPx": {
+    "1440": {
+      "/product/what-is-lattice": [
+        434
+      ],
+      "/product/lattice": [
+        434
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/sections/IntStrip.jsx:8-38"
+  ]
+}

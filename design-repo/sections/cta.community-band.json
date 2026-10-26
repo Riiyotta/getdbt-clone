@@ -16,6 +16,7 @@
   "additionalSources": [],
   "purpose": "Blue gradient-12 band: eyebrow, heading-2, body, primary.dark + secondary.dark buttons, and a right column of 2-3 stat blocks behind a hairline divider.",
   "retrievalEligible": true,
+  "placement": "main",
   "variants": {
     "default": {
       "description": "single rendering",
@@ -36,6 +37,9 @@
       },
       "observedOn": [
         "/",
+        "/blog",
+        "/blog/lattice-joins-northwind",
+        "/blog/summit-announcements",
         "/industry/energy-utilities",
         "/industry/financial-services",
         "/industry/healthcare",
@@ -44,7 +48,8 @@
         "/product/cost-optimization",
         "/product/data-modernization",
         "/product/data-trust",
-        "/product/embedded-analytics"
+        "/product/embedded-analytics",
+        "/resources/state-of-data-teams"
       ]
     }
   },
@@ -55,57 +60,57 @@
         "type": "text",
         "maxWords": 43,
         "maxChars": 243,
-        "observedIn": 10
+        "observedIn": 14
       },
       "eyebrow": {
         "type": "text",
         "maxWords": 2,
         "maxChars": 17,
-        "observedIn": 10
+        "observedIn": 14
       },
       "primary.href": {
         "type": "link",
-        "observedIn": 10
+        "observedIn": 14
       },
       "primary.label": {
         "type": "text",
         "maxWords": 3,
         "maxChars": 18,
-        "observedIn": 10
+        "observedIn": 14
       },
       "secondary.href": {
         "type": "link",
-        "observedIn": 10
+        "observedIn": 14
       },
       "secondary.label": {
         "type": "text",
         "maxWords": 3,
         "maxChars": 21,
-        "observedIn": 10
+        "observedIn": 14
       },
       "stats": {
         "type": "list",
         "minItems": 2,
         "maxItems": 3,
-        "observedIn": 10
+        "observedIn": 14
       },
       "stats[].label": {
         "type": "text",
         "maxWords": 4,
         "maxChars": 24,
-        "observedIn": 25
+        "observedIn": 37
       },
       "stats[].number": {
         "type": "text",
         "maxWords": 2,
         "maxChars": 8,
-        "observedIn": 25
+        "observedIn": 37
       },
       "title": {
         "type": "text",
         "maxWords": 15,
         "maxChars": 92,
-        "observedIn": 10
+        "observedIn": 14
       }
     }
   },
@@ -119,7 +124,8 @@
     "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
   },
   "constraints": {
-    "maxPerPage": 1
+    "maxPerPage": 1,
+    "consecutiveVariants": []
   },
   "motion": {
     "allowedPatterns": [
@@ -143,16 +149,17 @@
       "behavior": "stacked; stats get a top border and come after the buttons"
     }
   ],
+  "runtimeUi": [],
   "measuredHeightsPx": {
     "1440": {
       "/": [
         453.2
       ],
-      "/product/data-modernization": [
-        453.2
-      ],
       "/product/embedded-analytics": [
         510.8
+      ],
+      "/product/data-modernization": [
+        453.2
       ],
       "/product/data-trust": [
         453.2
@@ -173,6 +180,18 @@
         453.2
       ],
       "/industry/telecommunications": [
+        453.2
+      ],
+      "/blog": [
+        453.2
+      ],
+      "/resources/state-of-data-teams": [
+        510.8
+      ],
+      "/blog/summit-announcements": [
+        453.2
+      ],
+      "/blog/lattice-joins-northwind": [
         453.2
       ]
     }

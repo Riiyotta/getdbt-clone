@@ -7,7 +7,8 @@ Checks (each prints PASS/FAIL/WARN):
   SCHEMAS            Draft-07 meta-validation of pagespec + section-contract schemas; every contract validates
   EXAMPLES           every reference + generated example: schema + semantic validator, 0 errors
   ROUTE_COVERAGE     every served route mapped exactly once; one reference example per implemented route; redirects resolve;
-                     (sibling clone present) routes.json == src/routes.js paths + '/'
+                     chrome variant per route == template == src/Layout.jsx CHROME (+ pins); (sibling clone present) routes.json ==
+                     src/routes.js paths + '/' and the implemented templates == src/App.jsx registry
   TEMPLATES          implemented templates have nodes; pending have none; template.routes == routes.json mapping
   ALLOWLIST_PARITY   allowlist ids == primitives/components/sections files; section 'settable' == contract + schema; version parity
   GRAPH_AGREEMENT    compatibility/graph.json rule ids == semantic_validate.GRAPH_RULES_IMPLEMENTED
@@ -46,13 +47,16 @@ PINNED_AVAILABILITY = {
     "resource.thumbnail": "reference-only", "resource.generated-thumbnail": "generation-safe",
     "award.badge": "reference-only", "rating.placeholder": "generation-safe",
     "icon.feature": "generation-safe", "person.fictional-avatar": "generation-safe",
+    "brand.event-mark": "reference-only", "product.lockup": "reference-only", "partner.wordmark": "reference-only", "figure.article-image": "reference-only",
     "person.real-photo": "blocked-for-generation", "thirdparty.real-mark": "blocked-for-generation", "store.badge": "blocked-for-generation",
     "link.clone-route": "reference-only", "link.placeholder": "generation-safe", "link.source-external": "blocked-for-generation",
     "copy.clone-placeholder": "reference-only", "copy.original": "generation-safe", "copy.source-site": "blocked-for-generation",
 }
 PINNED_FORBIDDEN_ALL_MODES = {"person.real-photo", "thirdparty.real-mark", "store.badge", "link.source-external", "copy.source-site"}
-RETRIEVAL_INELIGIBLE = {"shell.announcement-bar", "shell.mega-menu", "shell.mobile-drawer"}
-RUNTIME_UI_HINT = re.compile(r"(cookie|consent|banner|modal|dialog|drawer|overlay|preloader|cursor|ticker|toast|popover|mega-menu|announcement)", re.I)
+RETRIEVAL_INELIGIBLE = {"shell.announcement-bar", "shell.mega-menu", "shell.mobile-drawer", "cta.dev-path-dialog", "article.progress-bar", "listing.category-nav"}
+RUNTIME_UI_HINT = re.compile(r"(cookie|consent|banner|modal|dialog|drawer|overlay|preloader|cursor|ticker|toast|popover|mega-menu|announcement|progress bar|progress-bar|tooltip)", re.I)
+CHROME_BY_ROUTE = {"/summit": "event", "/partner-directory": "none"}  # duplicated on purpose: compared with semantic_validate and src/Layout.jsx
+HEROLESS_TEMPLATES = {"T5", "T6", "T7", "T8", "T9", "T10", "T11", "T14", "T17"}
 
 RESULTS = []
 
@@ -117,8 +121,8 @@ for f in ex_files:
 if modes.get("generated", 0) < 1:
     errs.append("no generated-mode example")
 gen_templates = {json.loads(f.read_text())["template"] for f in (REPO / "schema/examples/generated").glob("*.json")}
-if not {"T0"} <= gen_templates or len(gen_templates) < 2:
-    errs.append(f"generated examples must cover the home family and at least one content family; got {sorted(gen_templates)}")
+if not {"T0", "T8", "T11"} <= gen_templates or len(gen_templates) < 4:
+    errs.append(f"generated examples must cover the home family, an article (T8), a legal page (T11) and at least one marketing content family; got {sorted(gen_templates)}")
 rec("EXAMPLES", errs, warns, info=f"{len(ex_files)} examples ({modes}) -> 0 errors required")
 
 # ---------------------------------------------------------------- ROUTE_COVERAGE + TEMPLATES
@@ -143,8 +147,35 @@ for rd in routes_doc["redirects"]:
         errs.append(f"redirect {rd['from']} -> {rd['to']} targets an unmapped route")
     if rd["from"] in paths:
         errs.append(f"redirect source {rd['from']} is also a page route")
+if CHROME_BY_ROUTE != sv.CHROME_BY_ROUTE:
+    errs.append("CHROME_BY_ROUTE differs between verify_all and semantic_validate")
+for r in routes_doc["routes"]:
+    want = CHROME_BY_ROUTE.get(r["path"], "full")
+    if r.get("chrome") != want:
+        errs.append(f"{r['path']}: routes.json chrome {r.get('chrome')!r} != pinned {want!r}")
+    t = templates.get(r["template"])
+    if t and t.get("chrome") != want:
+        errs.append(f"{r['path']}: template {r['template']} chrome {t.get('chrome')!r} != route chrome {want!r}")
+    if t and t.get("theme") != sv.THEME_BY_CHROME[want]:
+        errs.append(f"{r['template']}: theme {t.get('theme')!r} != {sv.THEME_BY_CHROME[want]!r} required by chrome {want!r}")
+if HEROLESS_TEMPLATES != sv.HEROLESS_TEMPLATES:
+    errs.append("HEROLESS_TEMPLATES differs between verify_all and semantic_validate")
+def _options(n):
+    for o in (n["anyOf"] if "slot" in n else [n]):
+        yield from (o["sequence"] if "sequence" in o else [o])
+hero_less = {tid for tid, t in templates.items() if not any(contracts[o["section"]]["semantic"]["category"] == "HERO" for n in t["nodes"] for o in _options(n))}
+if hero_less != HEROLESS_TEMPLATES:
+    errs.append(f"hero-less templates computed from templates.json {sorted(hero_less)} != pinned {sorted(HEROLESS_TEMPLATES)}")
+one_hero = next((r for r in repo["graph"]["rules"] if r["id"] == "ONE_HERO"), {})
+if set(one_hero.get("exceptions", [])) != HEROLESS_TEMPLATES:
+    errs.append("graph ONE_HERO exceptions != pinned hero-less templates")
 warns = []
 if SIBLING:
+    _lay = (PROJECT / "src/Layout.jsx").read_text()
+    _m = re.search(r"const CHROME = \{(.*?)\n\}", _lay, re.S)
+    live_chrome = dict(re.findall(r"'([^']+)': '([a-z]+)'", _m.group(1))) if _m else {}
+    if live_chrome != CHROME_BY_ROUTE:
+        errs.append(f"src/Layout.jsx CHROME {live_chrome} != pinned {CHROME_BY_ROUTE}")
     src_paths = set(re.findall(r"path: '([^']+)'", (PROJECT / "src/routes.js").read_text())) | {"/"}
     if src_paths != set(paths):
         errs.append(f"routes.json drifted from src/routes.js: missing {sorted(src_paths - set(paths))}, extra {sorted(set(paths) - src_paths)}")
@@ -167,12 +198,18 @@ for tid, t in templates.items():
     if sorted(t["routes"]) != want:
         errs.append(f"{tid}.routes {t['routes']} != routes.json mapping {want}")
     for n in t["nodes"]:
-        for o in (n["anyOf"] if "slot" in n else [n]):
+        for o in _options(n):
             if o["section"] not in contracts:
                 errs.append(f"{tid} references unknown section {o['section']}")
             for v in o.get("variants", []):
                 if v not in contracts.get(o["section"], {}).get("variants", {}):
                     errs.append(f"{tid}: {o['section']} has no variant {v}")
+    if t.get("chrome") not in sv.CHROME_HEADS:
+        errs.append(f"{tid}: unknown chrome {t.get('chrome')!r}")
+    else:
+        ids = [n.get("section", "<slot>") for n in t["nodes"]]
+        if ids[:len(sv.CHROME_HEADS[t["chrome"]])] != sv.CHROME_HEADS[t["chrome"]] or (sv.CHROME_TAILS[t["chrome"]] and ids[-len(sv.CHROME_TAILS[t["chrome"]]):] != sv.CHROME_TAILS[t["chrome"]]):
+            errs.append(f"{tid}: node list does not open/close with the shell nodes of chrome {t['chrome']!r}")
 rec("TEMPLATES", errs)
 
 # ---------------------------------------------------------------- ALLOWLIST_PARITY
@@ -259,6 +296,10 @@ for sid, c in contracts.items():
         errs.append(f"{sid}: retrievalEligible {c['retrievalEligible']} contradicts the pin")
     if RUNTIME_UI_HINT.search(sid + " " + c["title"]) and sid not in RETRIEVAL_INELIGIBLE:
         errs.append(f"{sid} looks like runtime UI but is not pinned retrieval-ineligible")
+for sid, c in contracts.items():
+    want_pl = "overlay" if sid == sv.OVERLAY_DIALOG else "chrome" if c["semantic"]["category"] == "SHELL" else "main"
+    if c.get("placement") != want_pl:
+        errs.append(f"{sid}: placement {c.get('placement')!r} != {want_pl!r}")
 errs += [f"{r}: {m}" for r, m in sv.registry_pin_errors(repo)]
 rec("PINS", errs, info=f"{len(PINNED_AVAILABILITY)} roles, {len(RETRIEVAL_INELIGIBLE)} retrieval-ineligible sections")
 

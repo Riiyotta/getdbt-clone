@@ -756,7 +756,9 @@
         "reducedMotionFallback": "show-immediately"
       },
       "style": {
-        "paddingTop": "default"
+        "topPadding": "default",
+        "imagePlacement": "right",
+        "itemStyle": "headed"
       }
     },
     {
@@ -818,9 +820,12 @@
         "reducedMotionFallback": "show-immediately"
       },
       "style": {
-        "iconSize": "size.icon.32",
+        "revealTrigger": "scroll",
         "headerAlign": "start",
-        "paddingTop": "default"
+        "paddingTop": "default",
+        "surface": "light",
+        "columns": "4",
+        "iconSize": "size.icon.32"
       }
     },
     {

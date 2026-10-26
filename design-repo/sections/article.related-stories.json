@@ -1,0 +1,172 @@
+{
+  "id": "article.related-stories",
+  "title": "Related customer stories",
+  "semantic": {
+    "id": "article.related-stories",
+    "category": "ARTICLE"
+  },
+  "source": {
+    "id": "component:RelatedStories",
+    "file": "src/components/article/StorySections.jsx",
+    "export": "RelatedStories",
+    "tag": "section",
+    "lines": "24-47",
+    "tagLine": 26
+  },
+  "additionalSources": [],
+  "purpose": "Mono eyebrow, heading-2 and three bordered story cards (logo, heading-4 title link, summary, chevron link).",
+  "retrievalEligible": true,
+  "placement": "main",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "cards",
+        "eyebrow",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "cards": [
+          3,
+          3
+        ]
+      },
+      "observedOn": [
+        "/case-studies/basalt-health",
+        "/case-studies/halcyon",
+        "/case-studies/kestrel",
+        "/case-studies/meridian-partners"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "cards": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "observedIn": 4
+      },
+      "cards[].body": {
+        "type": "text",
+        "maxWords": 40,
+        "maxChars": 238,
+        "observedIn": 12
+      },
+      "cards[].href": {
+        "type": "link",
+        "observedIn": 12
+      },
+      "cards[].link": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 14,
+        "observedIn": 12
+      },
+      "cards[].logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "customer.logo"
+        ],
+        "observedIn": 12,
+        "generatedRoles": [
+          "customer.placeholder-logo"
+        ]
+      },
+      "cards[].logo.alt": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 9,
+        "observedIn": 12
+      },
+      "cards[].title": {
+        "type": "text",
+        "maxWords": 22,
+        "maxChars": 120,
+        "observedIn": 12
+      },
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 28,
+        "observedIn": 4
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 7,
+        "maxChars": 41,
+        "observedIn": 4
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "cards[].logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "customer.logo"
+        ],
+        "observedIn": 12,
+        "generatedRoles": [
+          "customer.placeholder-logo"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "customer.placeholder-logo"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "consecutiveVariants": []
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "requiredPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": {
+      "static": "none-needed"
+    },
+    "stagger": "summary, text link with the 6px chevron shift). No reveal."
+  },
+  "responsive": [
+    {
+      "range": ">=768",
+      "behavior": "three cards in a row (max 400 each)"
+    },
+    {
+      "range": "<768",
+      "behavior": "stacked, centred"
+    }
+  ],
+  "runtimeUi": [],
+  "measuredHeightsPx": {
+    "1440": {
+      "/case-studies/kestrel": [
+        783.6
+      ],
+      "/case-studies/meridian-partners": [
+        783.6
+      ],
+      "/case-studies/halcyon": [
+        783.6
+      ],
+      "/case-studies/basalt-health": [
+        783.6
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/article/StorySections.jsx:24-47"
+  ]
+}

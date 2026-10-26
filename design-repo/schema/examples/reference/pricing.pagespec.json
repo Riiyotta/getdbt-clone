@@ -1,0 +1,1970 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "T14",
+  "route": "/pricing",
+  "theme": "light",
+  "brand": {
+    "name": "Lattice"
+  },
+  "meta": {
+    "title": "Pricing"
+  },
+  "nodes": [
+    {
+      "section": "shell.announcement-bar",
+      "variant": "default",
+      "content": {
+        "slides": [
+          {
+            "text": "Lattice 4.0 is here with faster incremental builds, smarter tests, and a fresh lineage explorer.",
+            "href": "/blog/summit-announcements"
+          },
+          {
+            "text": "Join our live workshop on modeling patterns this month.",
+            "href": "/resources/webinars/charts-as-code"
+          },
+          {
+            "text": "New report: how two hundred data teams trimmed warehouse spend while shipping trusted models each week.",
+            "href": "/resources/state-of-data-teams"
+          },
+          {
+            "text": "Lattice Cloud now runs in three new regions across Europe and Asia. Check region availability.",
+            "href": "/blog/lattice-joins-northwind"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "carousel.autoplay",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.navbar",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-dark.svg"
+        },
+        "menuLabels": [
+          "Product",
+          "Solutions",
+          "Customers",
+          "Resources",
+          "Community"
+        ],
+        "plainLink": {
+          "label": "Pricing",
+          "href": "/pricing"
+        },
+        "secondaryAction": {
+          "label": "Get started",
+          "href": "/signup"
+        },
+        "primaryAction": {
+          "label": "Book a demo",
+          "href": "/contact"
+        }
+      },
+      "motion": {
+        "pattern": "nav.hide-on-scroll",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mega-menu",
+      "variant": "default",
+      "content": {
+        "menus": [
+          {
+            "trigger": "Product",
+            "groups": [
+              {
+                "label": "First steps",
+                "items": [
+                  {
+                    "title": "Why Lattice",
+                    "description": "How Lattice turns SQL into trusted products",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/product/what-is-lattice"
+                  },
+                  {
+                    "title": "Platform tour",
+                    "description": "Watch a ten-minute walkthrough of the full workspace",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/product/lattice"
+                  }
+                ]
+              },
+              {
+                "label": "Everything in the box",
+                "items": [
+                  {
+                    "title": "Build",
+                    "description": "Author models in the browser, a desktop editor or the command line",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/develop"
+                  },
+                  {
+                    "title": "Validate",
+                    "description": "Assert rules on every model",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/test-and-observe"
+                  },
+                  {
+                    "title": "Design",
+                    "description": "Split big projects by domain",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/mesh"
+                  },
+                  {
+                    "title": "Explore",
+                    "description": "Search docs, owners and lineage",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/catalog"
+                  },
+                  {
+                    "title": "Ship",
+                    "description": "Trigger runs on merge or a timer",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/deploy"
+                  },
+                  {
+                    "title": "Measure",
+                    "description": "Publish one definition of revenue to every tool that asks",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/semantic-layer"
+                  }
+                ]
+              }
+            ],
+            "featured": {
+              "title": "The modeling lifecycle",
+              "description": "Map how ideas move from first query to production model, with clear owners and checks at each step",
+              "thumbnail": {
+                "assetRole": "illustration.abstract",
+                "alt": "",
+                "ref": "/assets/menu/featured.svg"
+              },
+              "href": "/resources/analytics-lifecycle"
+            },
+            "side": {
+              "label": "Feature spotlight",
+              "links": [
+                {
+                  "label": "Smart state",
+                  "href": "/product/state"
+                },
+                {
+                  "label": "Guided setup",
+                  "href": "/product/assistant"
+                },
+                {
+                  "label": "Charts",
+                  "href": "/product/charts"
+                },
+                {
+                  "label": "Governance",
+                  "href": "/product/governance"
+                },
+                {
+                  "label": "Security",
+                  "href": "/security"
+                },
+                {
+                  "label": "Integrations",
+                  "href": "/product/integrations"
+                }
+              ],
+              "action": {
+                "label": "See the latest demo",
+                "href": "/resources/webinars/launch-showcase"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Solutions",
+            "groups": [
+              {
+                "label": "By need",
+                "items": [
+                  {
+                    "title": "Analytics",
+                    "description": "Give analysts a governed place to model data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/product/analyst"
+                  },
+                  {
+                    "title": "AI readiness",
+                    "description": "Feed assistants with well-described data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/build.svg"
+                    },
+                    "href": "/product/ai"
+                  }
+                ]
+              },
+              {
+                "label": "By team",
+                "items": [
+                  {
+                    "title": "Data engineers",
+                    "description": "Ship pipelines with tests built in",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/product/data-modernization"
+                  },
+                  {
+                    "title": "Analysts",
+                    "description": "Own models end to end in plain SQL",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/product/embedded-analytics"
+                  },
+                  {
+                    "title": "Platform leads",
+                    "description": "Standardize how every team builds",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/product/data-trust"
+                  },
+                  {
+                    "title": "Executives",
+                    "description": "Trust the numbers behind decisions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/product/cost-optimization"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "By industry",
+              "links": [
+                {
+                  "label": "Finance",
+                  "href": "/industry/financial-services"
+                },
+                {
+                  "label": "Retail",
+                  "href": "/industry/manufacturing"
+                },
+                {
+                  "label": "Healthcare",
+                  "href": "/industry/healthcare"
+                },
+                {
+                  "label": "Media",
+                  "href": "/industry/telecommunications"
+                },
+                {
+                  "label": "Public sector",
+                  "href": "/industry/energy-utilities"
+                },
+                {
+                  "label": "Software",
+                  "href": "/data-platforms/cobalt"
+                }
+              ],
+              "action": {
+                "label": "See every use case",
+                "href": "/product/data-modernization"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Customers",
+            "groups": [
+              {
+                "label": "Stories",
+                "items": [
+                  {
+                    "title": "Case studies",
+                    "description": "Read how teams run on Lattice",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/case-studies"
+                  },
+                  {
+                    "title": "Reviews",
+                    "description": "Independent ratings from practitioners",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/resources/on-demand"
+                  }
+                ]
+              },
+              {
+                "label": "By outcome",
+                "items": [
+                  {
+                    "title": "Data quality",
+                    "description": "Teams that caught issues earlier",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/case-studies/kestrel"
+                  },
+                  {
+                    "title": "Speed",
+                    "description": "Teams that shipped models faster",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/case-studies/meridian-partners"
+                  },
+                  {
+                    "title": "Cost",
+                    "description": "Teams that trimmed warehouse spend",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/case-studies/halcyon"
+                  },
+                  {
+                    "title": "Scale",
+                    "description": "Teams that grew past one project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/case-studies/basalt-health"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Featured",
+              "links": [
+                {
+                  "label": "Fernway",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Orbitly",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Kestrel",
+                  "href": "/case-studies/kestrel"
+                },
+                {
+                  "label": "Tidepool",
+                  "href": "/case-studies"
+                },
+                {
+                  "label": "Meridian",
+                  "href": "/case-studies/meridian-partners"
+                },
+                {
+                  "label": "Halcyon",
+                  "href": "/case-studies/halcyon"
+                }
+              ],
+              "action": {
+                "label": "View all customers",
+                "href": "/case-studies"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Resources",
+            "groups": [
+              {
+                "label": "Learn",
+                "items": [
+                  {
+                    "title": "Docs",
+                    "description": "Guides and reference for every feature",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Courses",
+                    "description": "Free self-paced training",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/learn"
+                  }
+                ]
+              },
+              {
+                "label": "Explore",
+                "items": [
+                  {
+                    "title": "Blog",
+                    "description": "Notes from the product team",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layout.svg"
+                    },
+                    "href": "/blog"
+                  },
+                  {
+                    "title": "Webinars",
+                    "description": "Live and recorded sessions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/resources/webinars"
+                  },
+                  {
+                    "title": "Reports",
+                    "description": "Research on modern data work",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/resources/state-of-data-teams"
+                  },
+                  {
+                    "title": "Templates",
+                    "description": "Starter projects you can fork",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "/resources/whitepaper-control-plane"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Popular",
+              "links": [
+                {
+                  "label": "Getting started",
+                  "href": "/learn"
+                },
+                {
+                  "label": "Best practices",
+                  "href": "/resources/analytics-lifecycle"
+                },
+                {
+                  "label": "Release notes",
+                  "href": "/blog/summit-announcements"
+                },
+                {
+                  "label": "Glossary",
+                  "href": "/resources"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Status",
+                  "href": "#"
+                }
+              ],
+              "action": {
+                "label": "Browse all resources",
+                "href": "/resources"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          },
+          {
+            "trigger": "Community",
+            "groups": [
+              {
+                "label": "Connect",
+                "items": [
+                  {
+                    "title": "Forum",
+                    "description": "Ask questions and share answers",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/blocks.svg"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Meetups",
+                    "description": "Find a group near you",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/ship.svg"
+                    },
+                    "href": "/events"
+                  }
+                ]
+              },
+              {
+                "label": "Contribute",
+                "items": [
+                  {
+                    "title": "Open source",
+                    "description": "Help build the core project",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/code.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Write a guide",
+                    "description": "Share what you have learned",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/book.svg"
+                    },
+                    "href": "/community"
+                  },
+                  {
+                    "title": "Speak",
+                    "description": "Present at a community event",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/layers.svg"
+                    },
+                    "href": "/summit"
+                  },
+                  {
+                    "title": "Champions",
+                    "description": "Join the ambassador program",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "/assets/menu/flask.svg"
+                    },
+                    "href": "/champions"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Get involved",
+              "links": [
+                {
+                  "label": "Code of conduct",
+                  "href": "/community"
+                },
+                {
+                  "label": "Chat space",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Events",
+                  "href": "/events"
+                },
+                {
+                  "label": "Newsletter",
+                  "href": "/community/join"
+                },
+                {
+                  "label": "Awards",
+                  "href": "/champions"
+                },
+                {
+                  "label": "Jobs board",
+                  "href": "/about-us/careers"
+                }
+              ],
+              "action": {
+                "label": "Join the community",
+                "href": "/community/join"
+              }
+            },
+            "strip": {
+              "label": "Get a working project on your own warehouse in a 30-minute call.",
+              "href": "/contact"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "menu.popover",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mobile-drawer",
+      "variant": "default",
+      "content": {
+        "accountActions": [
+          {
+            "label": "Log in",
+            "href": "#"
+          },
+          {
+            "label": "Create an account",
+            "href": "/signup"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "drawer.slide",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "pricing.plan-cards",
+      "variant": "default",
+      "content": {
+        "title": "Plans that grow with every model you ship",
+        "body": "Every plan includes builder seats and a monthly build allowance. As your project adds models and metric traffic, the plan grows with the value it delivers to you.",
+        "plans": [
+          {
+            "name": "Sketchpad",
+            "body": "For a single builder trying Lattice on a side project before the team joins in.",
+            "price": "Zero",
+            "allowances": [
+              "One builder seat",
+              "2,500 model builds each month",
+              "A single workspace"
+            ],
+            "cta": {
+              "label": "Start building",
+              "href": "/signup"
+            },
+            "featuresTitle": "Included",
+            "features": [
+              "Browser editor with live lineage",
+              "Two-step sign-in for every account",
+              "Scheduled runs with email digests",
+              "Pull request checks on your git host",
+              "One-click upgrade when your team grows past a single seat"
+            ]
+          },
+          {
+            "name": "Workshop",
+            "body": "For small teams shipping their first shared project together.",
+            "price": "$45 per maker/month",
+            "allowances": [
+              "Up to six builder seats",
+              "12,000 model builds each month",
+              "4,000 metric queries each month",
+              "Two workspaces"
+            ],
+            "cta": {
+              "label": "Try it for free",
+              "href": "/signup"
+            },
+            "featuresTitle": "Included",
+            "features": [
+              "All of Sketchpad, and:",
+              "Column search across every project",
+              "Metric definitions reviewed like code and served to any tool",
+              "Read-only API tokens"
+            ]
+          },
+          {
+            "name": "Atelier",
+            "body": "For data groups running many projects at the same time.",
+            "price": "Volume pricing",
+            "allowances": [
+              "Pooled builder seats",
+              "80,000 model builds each month",
+              "25,000 metric queries each month",
+              "Up to 25 workspaces"
+            ],
+            "cta": {
+              "label": "Talk to our team",
+              "href": "/contact"
+            },
+            "featuresTitle": "Included",
+            "features": [
+              "All of Workshop, and:",
+              "Column-level lineage previews",
+              "Cached metrics for dashboards",
+              "Cross-project references with contracts",
+              "Single sign-on, roles and automatic user provisioning",
+              "Priority help with response targets"
+            ]
+          },
+          {
+            "name": "Atelier Max",
+            "body": "For regulated teams that need private networking and dedicated hosting choices.",
+            "price": "Tailored quote",
+            "allowances": [
+              "Pooled builder seats",
+              "150,000 model builds each month",
+              "50,000 metric queries each month",
+              "No workspace cap"
+            ],
+            "cta": {
+              "label": "Talk to our team",
+              "href": "/contact"
+            },
+            "featuresTitle": "Included",
+            "features": [
+              "All of Atelier, and:",
+              "Private network links",
+              "Address allow-lists",
+              "Run Lattice inside your own cloud account (managed hosting)"
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "pricing.add-ons",
+      "variant": "default",
+      "content": {
+        "title": "Add-ons that scale with your usage",
+        "body": "Nothing to commit up front. Turn an add-on on for a self-hosted project or a hosted plan, and pay only for what runs. [Read how metering is calculated](#).",
+        "cards": [
+          {
+            "title": "Warm Cache",
+            "p1": "Warm Cache remembers what each model produced last time and skips work when nothing upstream moved. Fewer rebuilds mean shorter runs and lower warehouse bills for the whole team.",
+            "p2": "Billing counts each distinct model, check or snapshot that Warm Cache reuses on a given day, once.",
+            "items": [
+              "A 30-day trial with a free monthly allowance, [see the allowance](#)",
+              "Metered at $0.082 per reused node",
+              "Committed-use discounts for larger accounts: [ask our team](/contact)"
+            ],
+            "primary": {
+              "label": "Turn it on",
+              "href": "/signup"
+            },
+            "secondary": {
+              "label": "Learn more",
+              "href": "/product/state"
+            }
+          },
+          {
+            "title": "Model Muse",
+            "p1": "Model Muse is a drafting assistant that reads your project before it writes anything. It proposes models, tests and docs, then checks every suggestion against the rules you already set.",
+            "p2": "Choose a different engine for drafting, reviewing or explaining, and settle the bill per thousand tokens.",
+            "items": [
+              "Every provider model has its own [per-token rate](#)",
+              "A free trial plus a monthly allowance on every plan, listed below",
+              "Already have a provider contract? Plug in your own key and settle usage with that provider instead"
+            ],
+            "primary": {
+              "label": "Turn it on",
+              "href": "/signup"
+            },
+            "secondary": {
+              "label": "Learn more",
+              "href": "/product/assistant"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "comparison.plan-matrix",
+      "variant": "default",
+      "content": {
+        "title": "Every plan, side by side",
+        "heads": [
+          {
+            "name": "Sketchpad",
+            "price": "One builder seat",
+            "cta": {
+              "label": "Start building",
+              "href": "/signup"
+            }
+          },
+          {
+            "name": "Workshop",
+            "price": "$45/maker/month",
+            "cta": {
+              "label": "Try it for free",
+              "href": "/signup"
+            }
+          },
+          {
+            "name": "Atelier",
+            "price": "Volume pricing",
+            "cta": {
+              "label": "Talk to our team",
+              "href": "/contact"
+            }
+          },
+          {
+            "name": "Atelier Max",
+            "price": "Tailored quote",
+            "cta": {
+              "label": "Talk to our team",
+              "href": "/contact"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Seats, builds and limits",
+            "rows": [
+              {
+                "feature": "Builder seats",
+                "tooltip": "People who can edit models, run jobs and open pull requests. Viewers who only read docs and lineage are always free.",
+                "values": [
+                  {
+                    "kind": "note",
+                    "text": "1"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "6"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "Pooled"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "No cap"
+                  }
+                ]
+              },
+              {
+                "feature": "Workspaces",
+                "tooltip": "A workspace holds one git repository, its environments and its job schedule.",
+                "values": [
+                  {
+                    "kind": "note",
+                    "text": "1"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "2"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "25"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "No cap"
+                  }
+                ]
+              },
+              {
+                "feature": "Model builds per month",
+                "tooltip": "Each successful materialization of a model counts once. Failed or skipped builds are never billed.",
+                "values": [
+                  {
+                    "kind": "note",
+                    "text": "2,500"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "12,000"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "80,000"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "150,000"
+                  }
+                ]
+              },
+              {
+                "feature": "Metric queries per month",
+                "tooltip": "Requests answered by the metrics service, from any connected dashboard, notebook or spreadsheet.",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "4,000"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "25,000"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "50,000"
+                  }
+                ]
+              },
+              {
+                "feature": "Model Muse",
+                "tooltip": "The drafting assistant that proposes models, tests and docs grounded in your project. Usage beyond the allowance is metered per token.",
+                "values": [
+                  {
+                    "kind": "note",
+                    "text": "$80 in Muse credit across a 21-day trial, followed by metered usage at list rates"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "$80 in Muse credit across a 21-day trial, followed by metered usage at list rates"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "$120 a month in Muse credit per account, with extra usage billed as metered add-on"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "$240 a month in Muse credit per account, with extra usage billed as metered add-on"
+                  }
+                ]
+              },
+              {
+                "feature": "Warm Cache",
+                "tooltip": "Skips rebuilding models whose inputs did not change since the last run. Billed per distinct reused node per day.",
+                "values": [
+                  {
+                    "kind": "note",
+                    "text": "A 30-day trial, then metered usage billed per reused node"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "A 30-day trial, then metered usage billed per reused node"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "A 30-day trial, with later usage billed as a metered add-on"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "A 30-day trial, with later usage billed as a metered add-on"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Write and shape your models",
+            "rows": [
+              {
+                "feature": "Command line client",
+                "tooltip": "Run builds, tests and previews from your own terminal against the same project the browser editor uses.",
+                "values": [
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Desktop editor plugin",
+                "tooltip": "Autocomplete, inline lineage and compile previews inside the code editor your team already uses.",
+                "values": [
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Browser editor",
+                "tooltip": "A hosted editor with a file tree, a results pane and a live graph. Nothing to install.",
+                "values": [
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Query parsing and checks",
+                "tooltip": "Lattice reads every query before it runs, catching broken references and type mismatches early.",
+                "values": [
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Schedule, release and keep watch",
+            "rows": [
+              {
+                "feature": "Git integration",
+                "tooltip": "Connect any hosted git provider. Branches map to development environments automatically.",
+                "values": [
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Data tests",
+                "tooltip": "Declare expectations on columns and tables, and block a release when an expectation fails.",
+                "values": [
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Job schedules",
+                "tooltip": "Cron or event-based schedules for builds, tests and snapshots, with retry rules per job.",
+                "values": [
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Source freshness alerts",
+                "tooltip": "Warn or fail when an upstream table has not loaded new rows within the window you set.",
+                "values": [
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Run alerts and dashboards",
+                "tooltip": "Run history, timing charts and alerts sent to chat or email when a job slows down or fails.",
+                "values": [
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Pre-merge impact builds",
+                "tooltip": "Build and test only the models a pull request touches, plus everything downstream, before merging.",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Find and trust the right data",
+            "rows": [
+              {
+                "feature": "Project lineage graph",
+                "tooltip": "An interactive graph from sources to dashboards, filterable by owner, tag or freshness.",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Column-level lineage",
+                "tooltip": "Follow a single column through every transformation to see where its values come from.",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Searchable data catalog",
+                "tooltip": "Search models, columns, metrics and owners across every project in your account.",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Usage insights",
+                "tooltip": "See which models are queried most and which have gone unused, so cleanup is safe.",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Define metrics once, reuse them",
+            "rows": [
+              {
+                "feature": "Metrics service",
+                "tooltip": "Define a metric in code once and serve the same number to every connected tool.",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Metric result caching",
+                "tooltip": "Cache popular metric queries so dashboards load quickly without repeat warehouse spend.",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Work across teams and domains",
+            "rows": [
+              {
+                "feature": "Cross-project references",
+                "tooltip": "Let one project build on public models from another without copying code or data.",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Model contracts and versions",
+                "tooltip": "Publish a stable interface for a model, and ship breaking changes as a new version.",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Account-wide domain map",
+                "tooltip": "A single view of every project, its owners and the dependencies between them.",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Security, access and compliance",
+            "rows": [
+              {
+                "feature": "Encryption in transit and at rest",
+                "tooltip": "All traffic uses modern TLS, and stored artifacts are encrypted with managed keys.",
+                "values": [
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Two-step sign-in",
+                "tooltip": "Require a second factor for every user in the account, enforced by an admin setting.",
+                "values": [
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Audit trail export",
+                "tooltip": "Every sign-in, permission change and job edit is logged and exportable as structured events.",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Single sign-on",
+                "tooltip": "Sign in through your identity provider, with automatic account creation on first login.",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Role-based permissions",
+                "tooltip": "Grant read, develop or admin rights per project and per environment.",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Private network links",
+                "tooltip": "Reach your warehouse over a private connection instead of the public internet.",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Hosting region",
+                "tooltip": "Where your project metadata and run logs are stored. Dedicated tenancy is available on the top plan.",
+                "values": [
+                  {
+                    "kind": "note",
+                    "text": "Shared, single region"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "Shared, single region"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "Shared, choice of three regions"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "Dedicated tenancy in any supported cloud region"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Help & care",
+            "rows": [
+              {
+                "feature": "Community forum",
+                "tooltip": "Ask questions and share patterns with other Lattice builders, answered by peers and staff.",
+                "values": [
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Help desk",
+                "values": [
+                  {
+                    "kind": "note",
+                    "text": "Docs"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "Chat"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "Chat, email, calls"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "Chat, email, calls"
+                  }
+                ]
+              },
+              {
+                "feature": "Named success manager",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Response targets",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "Priority queue with a one-business-day first reply for every request"
+                  },
+                  {
+                    "kind": "note",
+                    "text": "Round-the-clock queue with a one-hour first reply for urgent tickets"
+                  }
+                ]
+              },
+              {
+                "feature": "Onboarding workshops",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              },
+              {
+                "feature": "Architecture reviews",
+                "values": [
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "empty"
+                  },
+                  {
+                    "kind": "check"
+                  },
+                  {
+                    "kind": "check"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "sticky.pin",
+        "reducedMotionFallback": "none-needed",
+        "additional": [
+          {
+            "pattern": "slider.drag",
+            "reducedMotionFallback": "unchanged"
+          }
+        ]
+      }
+    },
+    {
+      "section": "interactive.faq-accordion",
+      "variant": "default",
+      "content": {
+        "title": "Plan FAQs",
+        "body": "Answers to the questions teams ask most while choosing a plan for the first time.",
+        "items": [
+          {
+            "q": "Can I switch plans later on?",
+            "a": "Yes. Upgrades apply right away and are prorated. Downgrades take effect at the start of your next billing period, and nothing in your project is deleted."
+          },
+          {
+            "q": "What counts as a builder seat?",
+            "a": "Anyone who can edit models, run jobs or open pull requests. People who only browse docs, lineage and the catalog are free and unlimited on every plan."
+          },
+          {
+            "q": "What happens when we pass our monthly build allowance?",
+            "a": "Runs keep going. Extra builds are billed at the rate on your order form, and admins get an email when usage reaches 80% of the allowance."
+          },
+          {
+            "q": "Do you offer discounts for nonprofits?",
+            "a": "Registered nonprofits and teaching programs get Workshop at a reduced rate. Write to our team with proof of status and we will set it up."
+          },
+          {
+            "q": "Is a credit card required to start the Sketchpad or Workshop trial?",
+            "a": "No. Both start without payment details. You add a card only when you decide to keep Workshop after the trial ends."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "accordion.instant",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "interactive.faq-accordion",
+      "variant": "default",
+      "content": {
+        "title": "Billing and usage questions",
+        "body": "How invoices, meters and add-ons work once your team is up and running.",
+        "items": [
+          {
+            "q": "When are invoices sent?",
+            "a": "Monthly plans are invoiced on the day you subscribed. Annual Atelier contracts are invoiced up front, with usage overages billed each quarter."
+          },
+          {
+            "q": "Which payments work?",
+            "a": "Cards on monthly plans; cards, bank transfer or purchase orders on annual contracts."
+          },
+          {
+            "q": "How is Warm Cache usage metered?",
+            "a": "Each model, check or snapshot that Warm Cache reuses on a given day counts once, no matter how many runs reused it that day."
+          },
+          {
+            "q": "Can I cap spend on Model Muse tokens?",
+            "a": "It can. An owner sets a spending limit in settings; once Muse hits that limit it stops drafting until the following month begins."
+          },
+          {
+            "q": "Where can I see current usage?",
+            "a": "The Usage page in account settings shows builds, metric queries and add-on meters, updated hourly."
+          },
+          {
+            "q": "Do unused allowances carry over to the next month?",
+            "a": "No. Allowances reset on the first day of each billing month."
+          },
+          {
+            "q": "We run Lattice on our own servers. Can we keep that and pay only for add-ons?",
+            "a": "Yes. Both add-ons work with self-hosted projects. Connect the project to a free account and only metered usage is billed."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "accordion.instant",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.wordmark",
+          "alt": "Lattice",
+          "ref": "/assets/logo/logo-light.svg"
+        },
+        "columns": [
+          {
+            "title": "Platform",
+            "links": [
+              {
+                "label": "Overview",
+                "href": "/product/lattice"
+              },
+              {
+                "label": "What is Lattice?",
+                "href": "/product/what-is-lattice"
+              },
+              {
+                "label": "Lattice for AI workflows",
+                "href": "/product/ai"
+              },
+              {
+                "label": "Customer stories",
+                "href": "/case-studies"
+              },
+              {
+                "label": "Connectors",
+                "href": "/product/integrations"
+              },
+              {
+                "label": "Plans and pricing",
+                "href": "/pricing"
+              }
+            ]
+          },
+          {
+            "title": "For Builders",
+            "links": [
+              {
+                "label": "Documentation",
+                "href": "#"
+              },
+              {
+                "label": "Quickstart guides",
+                "href": "#"
+              },
+              {
+                "label": "Supported data platforms",
+                "href": "/data-platforms/cobalt"
+              },
+              {
+                "label": "Engineering blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Editor extension",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "/about-us"
+              },
+              {
+                "label": "Belonging at Lattice",
+                "href": "/about-us/belonging"
+              },
+              {
+                "label": "Careers",
+                "href": "/about-us/careers"
+              },
+              {
+                "label": "Press",
+                "href": "/press"
+              }
+            ],
+            "badge": {
+              "label": "Join the team",
+              "linkIndex": 2
+            }
+          },
+          {
+            "title": "Learning",
+            "links": [
+              {
+                "label": "Resource hub",
+                "href": "/resources"
+              },
+              {
+                "label": "Lattice Academy",
+                "href": "/learn"
+              },
+              {
+                "label": "Certification",
+                "href": "/certification"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              }
+            ]
+          },
+          {
+            "title": "Community",
+            "links": [
+              {
+                "label": "Join the community",
+                "href": "/community/join"
+              },
+              {
+                "label": "Become a contributor",
+                "href": "/community"
+              },
+              {
+                "label": "Open source projects",
+                "href": "#"
+              },
+              {
+                "label": "Community forum",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Help & Support",
+            "links": [
+              {
+                "label": "Contact us",
+                "href": "/contact"
+              },
+              {
+                "label": "Professional services",
+                "href": "/services"
+              },
+              {
+                "label": "Find a partner",
+                "href": "/partner-directory"
+              },
+              {
+                "label": "System status",
+                "href": "#"
+              }
+            ]
+          }
+        ],
+        "newsletter": {
+          "title": "Subscribe today!",
+          "body": "A monthly digest of field notes, release highlights and practical modeling advice.",
+          "action": {
+            "label": "Join today",
+            "href": "/community/join"
+          }
+        },
+        "region": {
+          "title": "Select region",
+          "options": [
+            "Global",
+            "Europe",
+            "Asia Pacific"
+          ]
+        },
+        "social": {
+          "title": "Connect with us",
+          "links": [
+            {
+              "label": "GitHub",
+              "href": "#"
+            },
+            {
+              "label": "LinkedIn",
+              "href": "#"
+            },
+            {
+              "label": "YouTube",
+              "href": "#"
+            },
+            {
+              "label": "Instagram",
+              "href": "#"
+            },
+            {
+              "label": "X",
+              "href": "#"
+            },
+            {
+              "label": "Bluesky",
+              "href": "#"
+            },
+            {
+              "label": "RSS",
+              "href": "#"
+            }
+          ]
+        },
+        "copyright": "© 2026 Lattice, Inc. All rights reserved.",
+        "legalLinks": [
+          {
+            "label": "Privacy policy",
+            "href": "#"
+          },
+          {
+            "label": "Accessibility statement",
+            "href": "/legal/ai-principles"
+          },
+          {
+            "label": "Terms of service",
+            "href": "/terms-of-use"
+          },
+          {
+            "label": "Security",
+            "href": "/security"
+          },
+          {
+            "label": "Acceptable use",
+            "href": "/modern-slavery-statement"
+          },
+          {
+            "label": "Responsible AI principles",
+            "href": "/legal/ai-principles"
+          }
+        ],
+        "cookieLabel": "Cookie preferences"
+      },
+      "motion": {
+        "pattern": "accordion.toggle",
+        "reducedMotionFallback": "unchanged"
+      }
+    }
+  ]
+}
