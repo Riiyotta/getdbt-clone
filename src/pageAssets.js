@@ -92,7 +92,7 @@ export const stats = {
   badge: img('stats/badge.svg', 869, 1000, 'Reviewers pick, fall 2026 badge'),
   award: img('stats/award.svg', 612, 705, 'Top rated platform, fall 2026 badge'),
   seals: img('stats/seals.svg', 328, 367, 'Encryption, key management and audit seals'),
-  certified: img('stats/certified.svg', 612, 612, 'Partner of the year award'),
+  certified: img('stats/certified.svg', 612, 612, 'Annual ecosystem honor badge'),
 }
 
 // Colour platform marks for dark logo tiles (30x30)

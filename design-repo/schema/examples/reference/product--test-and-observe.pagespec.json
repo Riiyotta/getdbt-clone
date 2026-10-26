@@ -755,7 +755,7 @@
       "content": {
         "eyebrow": "Quality on Lattice",
         "title": "Quality checks built into every step you take",
-        "body": "Lattice treats data quality as part of development rather than an afterthought. Tests live next to the models they protect, run on every change and every schedule, and report failures with the exact rows and upstream change that caused them.",
+        "body": "Quality checks in Lattice sit in the same project as your SQL. Each check is versioned with its model, runs automatically on every pull request and scheduled job, and points straight to the failing rows plus the upstream edit that broke them.",
         "cards": [
           {
             "icon": {

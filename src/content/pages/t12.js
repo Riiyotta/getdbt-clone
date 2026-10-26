@@ -744,7 +744,7 @@ export default {
           { q: 'Is there a scholarship program?', a: ['We fund a number of exam scholarships each year. ', { a: 'Read about belonging at Lattice', to: '/about-us/belonging' }, ' to learn more.'] },
           { q: 'Do questions change between versions?', a: 'Exams are refreshed when the product changes significantly, and every version is announced at least a month ahead.' },
           { q: 'Can my employer pay for the exam?', a: 'Yes. You can pay with a voucher code purchased by your company, or request an invoice at checkout.' },
-          { q: 'How soon will I get my results?', a: 'Results for most questions appear immediately. Scenario questions are scored within five business days.' },
+          { q: 'When do scores arrive?', a: 'Multiple-choice scores show up the moment you submit. Scenario answers get graded inside five working days.' },
           { q: 'Is there a practice exam?', a: ['A free practice exam is available in the ', { a: 'preparation courses', to: '/learn' }, '.'] },
           { q: 'Who writes the questions?', a: 'Questions are written by experienced practitioners and reviewed by our education team for accuracy and fairness.' },
         ],
@@ -797,7 +797,7 @@ export default {
           {
             image: cardImgs[3],
             title: 'On-demand courses', // 9-26
-            body: 'Work through structured lessons at your own pace, with quizzes and projects after every module.', // 82-98
+            body: 'Move through guided lessons on your own schedule, with a quiz and a small project closing each unit.', // 82-98
             cta: cta('Start learning', '#courses'),
           },
           {
@@ -852,7 +852,7 @@ export default {
                 tag: 'Advanced',
                 duration: '4 hours',
                 title: 'Incremental models',
-                body: 'Learn when and how to process only new or changed rows, choose the right strategy for your warehouse, and test incremental logic so that late-arriving data never slips through. Includes exercises on merge keys, lookback windows and full-refresh safeguards.',
+                body: 'Find out when to rebuild just the rows that arrived or changed since the last run, pick a merge approach that suits your warehouse, and check that logic so late-arriving records never slip past. Includes exercises on merge keys, lookback windows and full-refresh safeguards.',
                 cta: cta('Start course', '/signup'),
               },
               {
@@ -921,7 +921,7 @@ export default {
         type: 'heroSplit',
         stroke: 'S3',
         gradient: 'gradient-01',
-        title: 'A community for people who love data work', // 43/2
+        title: 'A home for people who love data work', // 43/2
         bigLead: true,
         // 134/3
         lead: 'Thousands of practitioners share patterns, answer questions and meet in person to make analytics engineering better for everyone.',
@@ -1065,7 +1065,7 @@ export default {
         type: 'checklist',
         variant: 'splitList',
         pt0: false,
-        title: 'A program built for consultancies and technology partners alike', // 44/2
+        title: 'A partner program for services and software', // 44/2
         paragraphs: [
           'Partners help customers plan migrations, build reliable projects and get more value from the platform.', // 106/2
           // 256/4
@@ -1080,6 +1080,7 @@ export default {
       {
         type: 'split',
         cols: '5/7',
+        pt0: true,
         title: 'Services partners', // 19
         // 212/3
         paragraphs: [
@@ -1124,7 +1125,7 @@ export default {
         body: 'Every engagement is led by experienced practitioners who have run large projects on the platform. We start by understanding your goals, then tailor the work to the size and skills of your team.',
         cards: [
           { icon: icons.target, title: 'Project strategy', body: 'Assess your current stack, agree on priorities and leave with a clear roadmap your whole team can follow.' }, // 12-18 / 103-110
-          { icon: icons.cloud, title: 'Migrations', body: 'Move legacy jobs and stored procedures into tested, documented models without disrupting daily reporting.' },
+          { icon: icons.cloud, title: 'Migrations', body: 'Move legacy jobs and stored procedures into tested, documented models without disrupting the daily reports people rely on.' },
           { icon: icons.team, title: 'Team enablement', body: 'Hands-on training and pairing that help your engineers and analysts adopt good habits from the start.' },
         ],
       },
