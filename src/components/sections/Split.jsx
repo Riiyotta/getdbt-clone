@@ -52,6 +52,7 @@ function Rich({ runs, at }) {
 }
 
 export default function Split({
+  id,
   variant = 'default',
   cols = '6/6',
   eyebrow,
@@ -140,7 +141,7 @@ export default function Split({
     </div>
   )
   return (
-    <section className={`section ${pt0 ? '!pt-0' : ''}`.trim()}>
+    <section id={id} className={`section ${pt0 ? '!pt-0' : ''}`.trim()}>
       <div className="container">
         <div {...revealRootProps} className="grid-container items-center">
           {textLeft ? (

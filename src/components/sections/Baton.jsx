@@ -11,11 +11,11 @@ import { useEffect, useId, useRef, useState } from 'react'
 // fill hidden at >=768 (visible below 768, where the original has no opacity class).
 // `still` (specs/T12-T13.md A, about-us hero S3 and values dark grid S6): no dash style, fill fully
 // visible, no observer.
-// Trigger: the original's stroke observer uses threshold 0.9. Several stroke boxes are wider or taller
-// than anything that can be on screen (S10 2240 wide in a 1440 section, S2 1306 tall, 1100+ tall dark
-// sections), where a plain 0.9 ratio would never fire, so the ratio is taken on the stroke's section
-// box against the largest visible extent: draw once >= 90% of min(section height, viewport height) is
-// in view.
+// Trigger: the original's stroke observer uses threshold 0.9. Most stroke boxes are wider than the
+// section that clips them (S10 2240 wide in a 1440 section) and some are taller than the viewport
+// (S2 1306), where a plain 0.9 area ratio could never be reached, so the ratio is taken vertically on
+// the stroke's own box: draw once the visible (clipped) height is >= 90% of min(the part of the box its
+// section can show, viewport height).
 const SHAPES = {
   // quote band (catalog, cost-optimization): x -48, 1536x438 at 1440
   S1: {
@@ -121,7 +121,11 @@ export default function Baton({ shape, gradient = 'gradient-01', dark = false, i
         const hit = entries.some((e) => {
           if (!e.isIntersecting) return false
           const viewH = e.rootBounds ? e.rootBounds.height : window.innerHeight
-          const max = Math.min(e.boundingClientRect.height, viewH)
+          // the part of the box its section can ever show (the clip container is the parent shell)
+          const b = e.boundingClientRect
+          const c = el.parentElement.getBoundingClientRect()
+          const showable = Math.min(b.bottom, c.bottom) - Math.max(b.top, c.top)
+          const max = Math.min(showable, viewH)
           return max > 0 && e.intersectionRect.height >= 0.9 * max - 0.5
         })
         if (hit) {
@@ -129,7 +133,7 @@ export default function Baton({ shape, gradient = 'gradient-01', dark = false, i
           io.disconnect()
         }
       },
-      { threshold: Array.from({ length: 41 }, (_, i) => i / 40) },
+      { threshold: Array.from({ length: 201 }, (_, i) => i / 200) },
     )
     io.observe(el)
     return () => io.disconnect()
@@ -137,9 +141,9 @@ export default function Baton({ shape, gradient = 'gradient-01', dark = false, i
 
   if (!s) return null
   return (
-    <div ref={ref} aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+    <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
       <div className={`baton-shell relative mx-auto h-full w-full max-w-[2100px] ${dark ? 'baton-dark' : ''}`}>
-        <div className={`${s.wrap} ${drawn ? 'baton-drawn' : ''} ${idle ? 'baton-idle' : ''} ${still ? 'baton-static' : ''}`}>
+        <div ref={ref} className={`${s.wrap} ${drawn ? 'baton-drawn' : ''} ${idle ? 'baton-idle' : ''} ${still ? 'baton-static' : ''}`}>
           <svg viewBox={`0 0 ${s.w} ${s.h}`} className={s.svg} fill="none">
             <defs>
               <mask id={id} maskUnits="userSpaceOnUse" x="0" y="0" width={s.w} height={s.h}>

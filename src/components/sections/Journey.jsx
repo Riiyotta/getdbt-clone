@@ -24,14 +24,14 @@ function Lines({ lines }) {
 // overlay: viewBox 1226x400 stretched over the 1248x400 row bottom
 function Overlay({ labels }) {
   const dots = [
-    [150, 300, 'fill-journey-ok'],
-    [456, 262, 'fill-journey-warn'],
-    [762, 200, 'fill-danger'],
-    [1070, 96, 'fill-orange-600'],
-    [150, 352, 'fill-journey-ok'],
-    [456, 340, 'fill-journey-warn'],
-    [762, 318, 'fill-danger'],
-    [1070, 250, 'fill-orange-600'],
+    [240, 375, 'fill-journey-ok'],
+    [456, 360, 'fill-journey-warn'],
+    [762, 340, 'fill-danger'],
+    [1070, 306, 'fill-orange-600'],
+    [240, 392, 'fill-journey-ok'],
+    [456, 384, 'fill-journey-warn'],
+    [762, 374, 'fill-danger'],
+    [1070, 356, 'fill-orange-600'],
   ]
   return (
     <svg
@@ -46,15 +46,15 @@ function Overlay({ labels }) {
           <stop offset="1" className="text-journey-amber" stopColor="currentColor" />
         </linearGradient>
       </defs>
-      <path d="M40 320C260 312 380 280 520 246C700 202 880 170 1186 60" stroke="url(#journey-curve)" strokeWidth="1.5" fill="none" />
-      <path d="M40 360C300 354 520 336 720 318C900 300 1040 280 1186 220" stroke="url(#journey-curve)" strokeWidth="1.5" fill="none" strokeDasharray="4 6" />
+      <path d="M210 375C360 374 520 362 700 344C900 324 1060 304 1186 284" stroke="url(#journey-curve)" strokeWidth="1.5" fill="none" />
+      <path d="M210 392C380 391 560 384 760 373C940 362 1080 350 1186 336" stroke="url(#journey-curve)" strokeWidth="1.5" fill="none" strokeDasharray="4 6" />
       {dots.map(([x, y, c]) => (
         <circle key={`${x}-${y}`} cx={x} cy={y} r="5" className={c} />
       ))}
-      <text x="8" y="306" className="fill-white/60 font-mono text-xs">
+      <text x="8" y="379" className="fill-white/60 font-mono text-xs">
         {labels[0]}
       </text>
-      <text x="8" y="378" className="fill-white/60 font-mono text-xs">
+      <text x="8" y="396" className="fill-white/60 font-mono text-xs">
         {labels[1]}
       </text>
     </svg>
