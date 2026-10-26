@@ -7,7 +7,7 @@ import { Img, TextLink } from '../sections/parts'
 export default function FeaturedStory({ logo, quote, name, role, cta }) {
   return (
     <section className="relative bg-cover bg-center py-12 md:py-[120px]">
-      <Baton shape="S10" gradient="gradient-01" />
+      <Baton shape="S10" gradient="gradient-01" tall />
       <div className="container">
         <div className="relative z-10 flex flex-col gap-8 rounded-2xl border border-ink-200 bg-blur p-12 backdrop-blur-md">
           <Img a={logo} className="h-[34px] w-[112px] object-contain object-left" />

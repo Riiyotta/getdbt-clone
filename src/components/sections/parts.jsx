@@ -72,9 +72,11 @@ export const crop = (a, w, h) => ({ ...a, ratio: `${w} / ${h}` })
 // paragraph #1e2939, one inline reveal span at 0ms, 9 of 12 columns (930 at 1440). The h2 keeps its
 // mb-4 even without a paragraph (measured on the original); a centred header spans all 12 columns.
 // `dark` (T12-T13 dark card grids): white h2 and paragraph, eyebrow #9786ff.
-export function SectionHeader({ eyebrow, title, body, center = false, before, children, span = 'lg:col-span-9', dark = false }) {
+// `revealOnLoad`: the root is revealed when the page mounts instead of on scroll (learn S2: on the
+// original it gets is-visible at hydration, ~1.2s, while still below the fold).
+export function SectionHeader({ eyebrow, title, body, center = false, before, children, span = 'lg:col-span-9', dark = false, revealOnLoad = false }) {
   return (
-    <div {...revealRootProps} className="relative z-10">
+    <div {...revealRootProps} {...(revealOnLoad ? { 'data-reveal-load': '' } : {})} className="relative z-10">
       <span {...reveal(0)}>
         <div className="grid-container">
           <div className={`col-span-full ${center ? 'text-center' : span}`}>

@@ -6,21 +6,27 @@ import SiteLink from '../SiteLink'
 
 // C-20 N-dev-modal (specs/T12-T13.md): the developer-path chooser behind hero `<button>` CTAs.
 // Overlay fixed inset-0 #101828 at 80% + 4px backdrop blur; panel max-w 1050 / max-h 90vh, r16,
-// white; enter 200ms ease-out from scale .95 / opacity 0. Close button top-right (24 icon, p-2,
+// white; enter 200ms ease-out from scale .95 / opacity 0, leave the same in reverse before unmount
+// (Headless UI Dialog on the original, measured on /product/dbt and /security); the overlay has no
+// transition (appears and goes instantly with the dialog). On open the dialog itself takes focus and
+// <html> gets overflow hidden, as on the original. Close button top-right (24 icon, p-2,
 // hover bg #f3f4f6). Header heading-2; rows heading-4 + paragraph + secondary button, divided by
 // 1px #e5e7eb. Escape and overlay click close; Tab is trapped inside; focus returns to the trigger.
 const FOCUSABLE = 'a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])'
+const LEAVE_MS = 200
 
-function Dialog({ onClose }) {
+function Dialog({ onClose, leaving }) {
   const panel = useRef(null)
-  const [shown, setShown] = useState(false)
+  const root = useRef(null)
+  const [entered, setEntered] = useState(false)
+  const shown = entered && !leaving
   const titleId = useId()
 
   useEffect(() => {
-    const raf = requestAnimationFrame(() => setShown(true))
-    const prevOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
-    panel.current?.querySelector(FOCUSABLE)?.focus()
+    const raf = requestAnimationFrame(() => setEntered(true))
+    const prevOverflow = document.documentElement.style.overflow
+    document.documentElement.style.overflow = 'hidden'
+    root.current?.focus()
     const onKey = (e) => {
       if (e.key === 'Escape') {
         e.preventDefault()
@@ -38,7 +44,7 @@ function Dialog({ onClose }) {
       } else if (!e.shiftKey && document.activeElement === last) {
         e.preventDefault()
         first.focus()
-      } else if (!panel.current.contains(document.activeElement)) {
+      } else if (!panel.current.contains(document.activeElement) || document.activeElement === root.current) {
         e.preventDefault()
         first.focus()
       }
@@ -46,23 +52,16 @@ function Dialog({ onClose }) {
     document.addEventListener('keydown', onKey)
     return () => {
       cancelAnimationFrame(raf)
-      document.body.style.overflow = prevOverflow
+      document.documentElement.style.overflow = prevOverflow
       document.removeEventListener('keydown', onKey)
     }
   }, [onClose])
 
   return createPortal(
-    <div className="fixed inset-0 z-60 flex items-center justify-center p-4">
-      <div
-        aria-hidden="true"
-        onClick={onClose}
-        className={`fixed inset-0 bg-ink-900/80 backdrop-blur-xs transition-opacity duration-200 ease-out ${shown ? 'opacity-100' : 'opacity-0'}`}
-      />
+    <div ref={root} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby={titleId} className="fixed inset-0 z-60 flex items-center justify-center p-4 outline-none">
+      <div aria-hidden="true" onClick={onClose} className="fixed inset-0 bg-ink-900/80 backdrop-blur-xs" />
       <div
         ref={panel}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby={titleId}
         className={`relative max-h-[90vh] w-full max-w-[1050px] overflow-y-auto rounded-2xl bg-white transition duration-200 ease-out ${
           shown ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
         }`}
@@ -104,17 +103,25 @@ function Dialog({ onClose }) {
 
 export default function DevModalButton({ children, className, ...props }) {
   const [open, setOpen] = useState(false)
+  const [leaving, setLeaving] = useState(false)
   const trigger = useRef(null)
+  const timer = useRef(0)
   const close = useRef(() => {
-    setOpen(false)
-    requestAnimationFrame(() => trigger.current?.focus())
+    setLeaving(true)
+    clearTimeout(timer.current)
+    timer.current = setTimeout(() => {
+      setOpen(false)
+      setLeaving(false)
+      trigger.current?.focus()
+    }, LEAVE_MS)
   }).current
+  useEffect(() => () => clearTimeout(timer.current), [])
   return (
     <>
       <button ref={trigger} type="button" aria-haspopup="dialog" className={className} onClick={() => setOpen(true)} {...props}>
         {children}
       </button>
-      {open && <Dialog onClose={close} />}
+      {open && <Dialog onClose={close} leaving={leaving} />}
     </>
   )
 }

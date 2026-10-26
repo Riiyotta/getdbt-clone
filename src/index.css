@@ -412,14 +412,15 @@
   .baton-shell::after { opacity: 1; }
 }
 /* draw-on: dashoffset (full length) -> 0 on a pathLength=1 mask path, 1s ease-in-out. The gap is a
-   little longer than the path and the start offset a little past it so no round cap shows early. */
-.baton-path {
-  stroke-dasharray: 1 1.1;
-  stroke-dashoffset: 1.05;
-  transition: stroke-dashoffset 1s ease-in-out;
-}
-.baton-drawn .baton-path { stroke-dashoffset: 0; }
+   little longer than the path and the start offset a little past it so no round cap shows early.
+   >=768 only: below 768 the original strokes are static and fully drawn (no dash style at all). */
 @media (min-width: theme('screens.md')) {
+  .baton-path {
+    stroke-dasharray: 1 1.1;
+    stroke-dashoffset: 1.05;
+    transition: stroke-dashoffset 1s ease-in-out;
+  }
+  .baton-drawn .baton-path { stroke-dashoffset: 0; }
   .baton-fill { opacity: 0; transition: opacity 250ms cubic-bezier(.4, 0, .2, 1); }
   .baton-drawn .baton-fill { opacity: 1; }
 }

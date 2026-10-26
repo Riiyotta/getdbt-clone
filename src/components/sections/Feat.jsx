@@ -145,6 +145,7 @@ export default function Feat({
   gradient = 'gradient-01',
   stillStroke = false,
   cols4 = false,
+  revealOnLoad = false,
 }) {
   const washed = wash ?? (variant === 'A' || variant === 'B')
   const grid = variant === 'D' || cols4 ? 'sm:grid-cols-2 lg:grid-cols-4' : variant === 'F' && cards.length === 4 ? 'md:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-3'
@@ -178,6 +179,7 @@ export default function Feat({
             body={body}
             center={center}
             dark={dark}
+            revealOnLoad={revealOnLoad}
             before={
               lockup && (
                 <div>

@@ -14,8 +14,9 @@ import { Btn } from './parts'
 // The wrappers are inline <span>s like the original's, so those items fade without translating.
 // The aside heading is an <h4> on the original (heading-4 styling).
 // T12-T13 additions (specs/T12-T13.md B "H-cta short additions"):
-//   `checklist` aside: space-y-6 rows of a 24x25 white check + 24/32 text; row k at 100+100k, its
-//     text +200
+//   `checklist` aside: space-y-6 list (100) of rows of a 24x25 white check + 24/32 text; row k and its
+//     check at 100+100k, its text +200 (as on dbt-learn; the original's extra zero-size spans inside
+//     and after each check are not reproduced)
 //   `stats` aside: 1px #e5e7eb divider (top below 768, left at >=768), md:pl-15, two stats
 //     (32/38.4 400 value + 18/28 label)
 //   `wide`: the left column spans all 12 columns (no aside); no buttons -> no button row
@@ -92,10 +93,10 @@ export default function CtaBand({ eyebrow, title, body, primary, secondary, asid
           )}
           {checklist && (
             <div {...reveal(100, asideCol)}>
-              <ul className="space-y-6">
+              <ul {...reveal(100, 'space-y-6')}>
                 {checklist.map((row, k) => (
                   <li key={row} {...reveal(100 + 100 * k, 'flex items-center gap-x-2')}>
-                    <CheckMark className="shrink-0 text-white" />
+                    <CheckMark {...reveal(100 + 100 * k, 'shrink-0 text-white')} />
                     <span {...reveal(300 + 100 * k, 'ml-2 font-sans text-2xl font-normal text-white')}>{row}</span>
                   </li>
                 ))}

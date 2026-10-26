@@ -22,6 +22,8 @@ function revealRoot(root) {
 // `key` (the route path) re-runs the scan so each newly rendered page gets observed.
 export default function useScrollReveal(key) {
   useEffect(() => {
+    // roots flagged data-reveal-load are revealed on mount (see SectionHeader `revealOnLoad`)
+    document.querySelectorAll('[data-reveal-root][data-reveal-load]:not([data-reveal-done])').forEach(revealRoot)
     const pending = () => [...document.querySelectorAll('[data-reveal-root]:not([data-reveal-done])')]
     if (!('IntersectionObserver' in window)) {
       pending().forEach(revealRoot)

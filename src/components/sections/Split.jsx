@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import { reveal, revealRootProps } from '../../hooks/useScrollReveal'
 import SiteLink from '../SiteLink'
 import { Btn, Img, VideoPoster } from './parts'
@@ -19,9 +18,11 @@ import { Btn, Img, VideoPoster } from './parts'
 // T12-T13 additions (specs/T12-T13.md B "N-split additions"):
 //  - `cols` = left/right widths at >=1024: '6/6' (default), '7/5', '5/7', '7/4' (media at col 9)
 //  - `poster` puts a 16:9 video poster in the media column of any variant
-//  - paragraphs may be rich: an array of strings and { b } (bold) / { a, to } (link) runs; each run
-//    fades in its own step (+100 from its paragraph), as on the original
-//  - bullets may carry a bold lead-in: { lead, text }
+//  - paragraphs may be rich: an array of strings and { b } (bold) / { a, to } (link) runs; every run,
+//    text runs included (as <span>s), fades in its own step: run j at paragraph + 100j (dbt-certification)
+//  - bullets may carry a bold lead-in: { lead, text } -> <strong> at the <li>'s delay, <span> text +100
+//  - `plainBody`: the paragraphs inside the *:mb-6 wrapper are not animated themselves (certification
+//    video split: only the wrapper fades)
 //  - `pt0` for the second and later rows of a run of splits
 const SPANS = {
   '6/6': ['lg:col-span-6', 'lg:col-span-6'],
@@ -32,12 +33,9 @@ const SPANS = {
 
 function Rich({ runs, at }) {
   if (typeof runs === 'string') return runs
-  let k = 0
   return runs.map((r, i) => {
-    if (typeof r === 'string') return <Fragment key={i}>{r}</Fragment>
-    k += 1
-    const d = at + k * 100
-    if (r.a)
+    const d = at + i * 100
+    if (typeof r === 'string') return <span key={i} {...reveal(d)}>{r}</span>
       return (
         <SiteLink key={i} to={r.to} {...reveal(d, 'link-styles font-medium text-purple-600 hover:underline')}>
           {r.a}
@@ -65,6 +63,7 @@ export default function Split({
   media,
   poster,
   pt0 = false,
+  plainBody = false,
 }) {
   const textLeft = variant === 'textLeft'
   const mediaBase = textLeft ? 200 : 0
@@ -101,7 +100,7 @@ export default function Split({
       <h2 {...reveal(titleAt, 'heading-2 mb-4 text-ink-950')}>{title}</h2>
       <div {...reveal(wrapAt, '[&>*:last-child]:mb-0 [&>*]:mb-6')}>
         {paragraphs.map((p, i) => (
-          <p key={i} {...reveal(wrapAt + i * 100, 'text-base text-ink-950')}>
+          <p key={i} {...(plainBody ? { className: 'text-base text-ink-950' } : reveal(wrapAt + i * 100, 'text-base text-ink-950'))}>
             <Rich runs={p} at={wrapAt + i * 100} />
           </p>
         ))}
@@ -113,7 +112,8 @@ export default function Split({
                   b
                 ) : (
                   <>
-                    <strong className="font-bold">{b.lead}</strong> {b.text}
+                    <strong {...reveal(listAt + i * 100, 'font-bold')}>{b.lead}</strong>
+                    <span {...reveal(listAt + i * 100 + 100)}> {b.text}</span>
                   </>
                 )}
               </li>

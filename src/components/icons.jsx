@@ -227,9 +227,9 @@ export function MinusIcon({ className = '' }) {
 }
 
 // plain check mark; size 24 (CTA checklist aside, 24x25 box), 16 (journey lists)
-export function CheckMark({ className = '', size = 24 }) {
+export function CheckMark({ className = '', size = 24, style }) {
   return (
-    <svg width={size} height={size === 24 ? 25 : size} viewBox="0 0 24 24" className={className} aria-hidden="true">
+    <svg width={size} height={size === 24 ? 25 : size} viewBox="0 0 24 24" className={className} style={style} aria-hidden="true">
       <path d="M5 12.5l4.5 4.5L19 7.5" {...stroke} strokeWidth={2} />
     </svg>
   )

@@ -12,7 +12,7 @@ import LeadForm, { FormCard } from './Form'
 export default function FormHeader({ breadcrumb, tag, title, h1 = 'heading-1', blocks = [], form, cover, stroke }) {
   return (
     <header className={`z-5 overflow-hidden bg-white py-12 md:py-16 ${stroke ? 'relative' : ''}`.trim()}>
-      {stroke && <Baton shape={stroke} gradient="gradient-01" />}
+      {stroke && <Baton shape={stroke} gradient="gradient-01" load />}
       <div className="container">
         <div className="relative z-10">
           {breadcrumb && <Breadcrumb {...breadcrumb} />}

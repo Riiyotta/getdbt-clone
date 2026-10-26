@@ -17,6 +17,7 @@ function page(p) {
         stroke: 'S4',
         gradient: 'gradient-01',
         square: true,
+        idleStroke: true,
         title: p.heroTitle, // 40, 2 lines
         lead: p.heroLead, // 125, 2 lines
         primary: cta(p.heroCta, '/contact'), // 37

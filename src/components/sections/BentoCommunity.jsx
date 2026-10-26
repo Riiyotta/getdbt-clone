@@ -10,13 +10,14 @@ import { Avatar, Img, TextLink } from './parts'
 //  C (4): meetups, one event row (date | orange left rule with a heading-5 link + 12/16 line)
 //  D (4): topics, 3 bordered rows (12/16 text | right-aligned link + 16 chevron, 4px shift)
 //  E (4): image of the week (318x173, r16)
-// Below 1024 every card spans the full row. No reveal.
+// Below 1024 every card spans the full row. No reveal. The S1 stroke never draws on the original
+// (section taller than the 0.9 trigger can reach; fill stays hidden at >=768), so it is `idle`.
 const card = 'rounded-2xl border border-ink-800 bg-blur-dark p-6 backdrop-blur-md lg:p-10'
 
 export default function BentoCommunity({ title, feature, member, meetup, topics, picture }) {
   return (
     <section className="relative z-5 overflow-hidden bg-ink-950 py-20 text-white md:py-16 lg:py-30">
-      <Baton shape="S1" dark />
+      <Baton shape="S1" dark idle />
       <div className="container relative z-10">
         <h2 className="heading-2 mb-10 text-white">{title}</h2>
         <div className="grid-container gap-6">

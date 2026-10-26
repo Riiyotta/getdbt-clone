@@ -9,6 +9,8 @@ import { PlayCircle } from '../icons'
 // `poster` = 1036-wide framed 16:9 placeholder (bg-blur, 1px #e5e7eb, r12, no padding: the
 // original's Lottie frame is 1036x584 holding a 1034x582 animation) with a centred
 // 80px play glyph (56 below 768), as specced in H for what-is-lattice.
+// The stroke draws as soon as it mounts (`load`); `idleStroke` = T4: the original's hero stroke never
+// draws and its fill stays hidden at >=768 (measured on financial-services, healthcare, manufacturing).
 const lines = (v) => (Array.isArray(v) ? v.map((t) => <span key={t} className="block">{t}</span>) : v)
 
 export default function HeroCenter({
@@ -23,12 +25,13 @@ export default function HeroCenter({
   stroke,
   gradient,
   square = false,
+  idleStroke = false,
   highlights,
 }) {
   const hasMedia = media || illustration || poster
   return (
     <header className={`relative z-5 overflow-hidden bg-white py-12 md:py-16 ${square ? 'lg:pb-0' : ''}`}>
-      <Baton shape={stroke} gradient={gradient} />
+      <Baton shape={stroke} gradient={gradient} idle={idleStroke} load />
       <div className="container relative z-10">
         <div className="grid-container mx-auto">
           <div className="col-span-full flex flex-col items-center text-center lg:col-span-8 lg:col-start-3">

@@ -8,7 +8,7 @@ import { Img } from '../sections/parts'
 export default function StoryHeader({ stroke = 'S10', logo, title, stats, quote, name, role }) {
   return (
     <header className="relative bg-white py-12 md:py-16 lg:py-30">
-      <Baton shape={stroke} gradient="gradient-01" />
+      <Baton shape={stroke} gradient="gradient-01" load />
       <div className="container">
         <div className="grid-container relative z-10 gap-8 lg:gap-6">
           <div className="col-span-full flex flex-col gap-y-8 lg:col-span-8 lg:gap-y-12">

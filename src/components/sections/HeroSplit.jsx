@@ -28,7 +28,7 @@ export default function HeroSplit({
 }) {
   return (
     <header className={`relative z-5 overflow-hidden bg-white py-12 md:py-16 ${flush ? 'lg:py-0' : ''} ${pb0 ? 'lg:pb-0' : ''}`.trim()}>
-      <Baton shape={stroke} gradient={gradient} still={stillStroke} />
+      <Baton shape={stroke} gradient={gradient} still={stillStroke} load />
       <div className="container relative z-10">
         <div className="grid-container items-center">
           <div className={`col-span-full md:col-span-4 ${wide ? 'lg:col-span-7' : 'lg:col-span-6'}`}>

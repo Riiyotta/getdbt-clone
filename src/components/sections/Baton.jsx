@@ -3,19 +3,34 @@ import { useEffect, useId, useRef, useState } from 'react'
 // N-baton (specs/T1-T4.md A): brush-stroke decoration. A gradient-filled <foreignObject> masked by a
 // thick round-capped stroke. The stroke paths below are original hand-drawn curves drawn for the
 // clone, sized to the spec's viewBoxes and wrapper boxes (the original's path data is not used).
-// Draw-on: stroke-dashoffset full -> 0 over 1s ease-in-out when the stroke enters the viewport
-// (IntersectionObserver, once); the fill fades 0 -> 1 over 250ms at >=768 (CSS in index.css).
-// `idle` (N-tabs-dark): measured on every original dark-tab section (develop, test-and-observe, mesh,
-// catalog, deploy, financial-services, healthcare) the stroke never runs -- the mask path gets no
-// dash style and the fill keeps md:opacity-0 even fully in view. So: no observer, full undashed path,
-// fill hidden at >=768 (visible below 768, where the original has no opacity class).
+// Draw-on: stroke-dashoffset full -> 0 over 1s ease-in-out; the fill fades 0 -> 1 over 250ms. Both only
+// at >=768: below 768 the original never sets a dash style (every stroke is static and fully drawn,
+// measured on T1-T13 originals at 375 and 767), so the dash rules live in an md media query (index.css).
+// Mount: the original's stroke is client-only (absent from the server HTML) and is inserted right
+// after hydration, ~0.8s after DOMContentLoaded; nothing is drawn before that. MOUNT_DELAY mirrors it
+// on the first page load (client-side route changes mount immediately).
+// Triggers (measured on the originals at 1440, see the T12-T13 animation fix):
+// - `load` (heroes): draw as soon as the stroke mounts.
+// - default: IntersectionObserver, threshold 0.9, on the section-sized shell (the original observes its
+//   `relative h-full w-full` wrapper, not the stroke). A section taller than viewport/0.9 never
+//   reaches it, so its stroke never draws and the fill stays hidden >=768 (e.g. community bento, T4).
+// `tall` (opt-in): if the clone's section is taller than viewport/0.9 only because its placeholder
+//   copy wraps to more lines than the original's (case-studies featured story: 1045 vs 931), draw once
+//   the section fills the viewport instead of never (min(0.9 x section, viewport) visible).
+// `idle` (N-tabs-dark, T4 heroes): no observer, full undashed path, fill hidden at >=768 (visible
+// below 768, where the original has no opacity class).
 // `still` (specs/T12-T13.md A, about-us hero S3 and values dark grid S6): no dash style, fill fully
 // visible, no observer.
-// Trigger: the original's stroke observer uses threshold 0.9. Most stroke boxes are wider than the
-// section that clips them (S10 2240 wide in a 1440 section) and some are taller than the viewport
-// (S2 1306), where a plain 0.9 area ratio could never be reached, so the ratio is taken vertically on
-// the stroke's own box: draw once the visible (clipped) height is >= 90% of min(the part of the box its
-// section can show, viewport height).
+const MOUNT_DELAY = 800
+
+function mountWait() {
+  if (typeof window === 'undefined' || !window.performance) return 0
+  const nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null
+  const dcl = nav && nav.domContentLoadedEventEnd ? nav.domContentLoadedEventEnd : null
+  if (dcl == null) return null // DOMContentLoaded has not fired yet
+  return Math.max(0, dcl + MOUNT_DELAY - performance.now())
+}
+
 const SHAPES = {
   // quote band (catalog, cost-optimization): x -48, 1536x438 at 1440
   S1: {
@@ -75,8 +90,9 @@ const SHAPES = {
     wrap: 'absolute -left-150 -right-150 top-5 mx-auto max-h-[853px] max-w-[2303px]',
     svg: 'block h-auto w-full',
   },
-  // S9 (T12-T13): zig-zag "N" rising to the right. Off-canvas with a 0x0 box at >=768 on the original,
-  // so it is only rendered below 768 (not measured there; the spec's mobile classes are used).
+  // S9 (T12-T13): zig-zag "N" rising to the right. At >=768 the original's visible stroke box sits at
+  // x = viewport width + 600 (2040 at 1440, 1368 at 768), fully clipped by its section, so it is only
+  // rendered below 768 (-40, +20, 615x416 at 375, matching the original).
   S9: {
     w: 1705,
     h: 1153,
@@ -103,67 +119,90 @@ const SHAPES = {
   },
 }
 
-export default function Baton({ shape, gradient = 'gradient-01', dark = false, idle = false, still = false }) {
+export default function Baton({ shape, gradient = 'gradient-01', dark = false, idle = false, still = false, load = false, tall = false }) {
   const s = SHAPES[shape]
   const ref = useRef(null)
+  const [mounted, setMounted] = useState(() => mountWait() === 0)
   const [drawn, setDrawn] = useState(false)
   const id = `baton${useId().replace(/[^a-zA-Z0-9]/g, '')}`
 
   useEffect(() => {
+    if (mounted) return undefined
+    let t
+    const arm = () => {
+      t = setTimeout(() => setMounted(true), mountWait() ?? MOUNT_DELAY)
+    }
+    if (mountWait() == null) {
+      document.addEventListener('DOMContentLoaded', arm, { once: true })
+      return () => {
+        document.removeEventListener('DOMContentLoaded', arm)
+        clearTimeout(t)
+      }
+    }
+    arm()
+    return () => clearTimeout(t)
+  }, [mounted])
+
+  useEffect(() => {
     const el = ref.current
-    if (!el || idle || still) return undefined
-    if (!('IntersectionObserver' in window)) {
-      setDrawn(true)
-      return undefined
+    if (!mounted || !el || idle || still) return undefined
+    if (load || !('IntersectionObserver' in window)) {
+      // let the undrawn state paint first so the transition runs
+      let r2
+      const r1 = requestAnimationFrame(() => {
+        r2 = requestAnimationFrame(() => setDrawn(true))
+      })
+      return () => {
+        cancelAnimationFrame(r1)
+        cancelAnimationFrame(r2)
+      }
+    }
+    const hit = (e) => {
+      if (!e.isIntersecting) return false
+      if (!tall) return e.intersectionRatio >= 0.9 - 1e-3
+      const viewH = e.rootBounds ? e.rootBounds.height : window.innerHeight
+      return e.intersectionRect.height >= Math.min(0.9 * e.boundingClientRect.height, viewH) - 0.5
     }
     const io = new IntersectionObserver(
       (entries) => {
-        const hit = entries.some((e) => {
-          if (!e.isIntersecting) return false
-          const viewH = e.rootBounds ? e.rootBounds.height : window.innerHeight
-          // the part of the box its section can ever show (the clip container is the parent shell)
-          const b = e.boundingClientRect
-          const c = el.parentElement.getBoundingClientRect()
-          const showable = Math.min(b.bottom, c.bottom) - Math.max(b.top, c.top)
-          const max = Math.min(showable, viewH)
-          return max > 0 && e.intersectionRect.height >= 0.9 * max - 0.5
-        })
-        if (hit) {
+        if (entries.some(hit)) {
           setDrawn(true)
           io.disconnect()
         }
       },
-      { threshold: Array.from({ length: 201 }, (_, i) => i / 200) },
+      { threshold: tall ? Array.from({ length: 101 }, (_, i) => i / 100) : 0.9 },
     )
     io.observe(el)
     return () => io.disconnect()
-  }, [idle, still])
+  }, [mounted, idle, still, load, tall])
 
   if (!s) return null
   return (
     <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-      <div className={`baton-shell relative mx-auto h-full w-full max-w-[2100px] ${dark ? 'baton-dark' : ''}`}>
-        <div ref={ref} className={`${s.wrap} ${drawn ? 'baton-drawn' : ''} ${idle ? 'baton-idle' : ''} ${still ? 'baton-static' : ''}`}>
-          <svg viewBox={`0 0 ${s.w} ${s.h}`} className={s.svg} fill="none">
-            <defs>
-              <mask id={id} maskUnits="userSpaceOnUse" x="0" y="0" width={s.w} height={s.h}>
-                <path
-                  className="baton-path"
-                  d={s.d}
-                  pathLength="1"
-                  stroke="white"
-                  strokeWidth="96"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="none"
-                />
-              </mask>
-            </defs>
-            <foreignObject x="0" y="0" width={s.w} height={s.h} mask={`url(#${id})`}>
-              <div className={`gradient-container ${gradient} baton-fill h-full w-full`} />
-            </foreignObject>
-          </svg>
-        </div>
+      <div ref={ref} className={`baton-shell relative mx-auto h-full w-full max-w-[2100px] ${dark ? 'baton-dark' : ''}`}>
+        {mounted && (
+          <div className={`${s.wrap} ${drawn ? 'baton-drawn' : ''} ${idle ? 'baton-idle' : ''} ${still ? 'baton-static' : ''}`}>
+            <svg viewBox={`0 0 ${s.w} ${s.h}`} className={s.svg} fill="none">
+              <defs>
+                <mask id={id} maskUnits="userSpaceOnUse" x="0" y="0" width={s.w} height={s.h}>
+                  <path
+                    className="baton-path"
+                    d={s.d}
+                    pathLength="1"
+                    stroke="white"
+                    strokeWidth="96"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    fill="none"
+                  />
+                </mask>
+              </defs>
+              <foreignObject x="0" y="0" width={s.w} height={s.h} mask={`url(#${id})`}>
+                <div className={`gradient-container ${gradient} baton-fill h-full w-full`} />
+              </foreignObject>
+            </svg>
+          </div>
+        )}
       </div>
     </div>
   )

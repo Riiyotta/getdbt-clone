@@ -704,6 +704,7 @@ export default {
         type: 'split',
         cols: '5/7',
         eyebrow: 'Watch now', // 9
+        plainBody: true,
         title: 'See what the exam covers', // 23
         poster: { ...photos[11], alt: 'Video: an instructor walks through the exam format' },
         paragraphs: ['Our education lead walks through the format, the topics and the study plan that most successful candidates follow in the weeks before their exam.'], // 144/2
@@ -776,6 +777,7 @@ export default {
       {
         type: 'feat',
         variant: 'D',
+        revealOnLoad: true,
         title: 'Everything you need to grow your data skills', // 42
         // 196/2
         body: 'Whether you write your first SQL query this week or already maintain hundreds of models, Lattice learning resources help you build confident habits and stay current with the platform.',
