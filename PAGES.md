@@ -307,3 +307,7 @@ Footer:
 - All forms (HubSpot `hsForm_*`, `/signup` custom form, reCAPTCHA) mount on the client and submit to third parties. Clone the visuals only.
 - Careers job links, some event cards (meetup.com) and all press "In the media" cards point off-site.
 - Cards on listing pages are partly client-rendered (filters, "Load more"/"View more"). Card counts above were taken after a full scroll at 1440.
+
+## Status update (design-repo refresh)
+
+This file is the original recon inventory and is kept as written (appended note only, so line citations stay valid). The clone has since built every template: all 18 templates (T0-T17) and all 71 routes are implemented and contracted in `design-repo/`, and `ia/` reflects that. Where a status above says "T0 (done)" or counts "pages to build", read it as the state at recon time.

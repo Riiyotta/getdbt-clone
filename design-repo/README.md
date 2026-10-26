@@ -4,7 +4,7 @@ Machine-validated design system + PageSpec contract extracted from the clone pro
 a structural/visual clone of a real company's marketing-site layouts, rebuilt for a **fictional brand, "Lattice"**.
 An AI can use it to compose new pages from real, measured sections without inventing colours, copy budgets or structure.
 
-Status: **design-review-pending**, not production-approved. Version 1.0.0 (PageSpec 1.0.0, allowlist 1.0.0).
+Status: **design-review-pending**, not production-approved. Version 1.1.0 (PageSpec 1.0.0, allowlist 1.0.0). Complete: all 18 templates and all 71 routes are implemented and contracted, with a reference example per route and a generation-safe example per template.
 
 ## Counts (recomputed by the build; extraction/verify_all.py checks this block against registry.manifest.json)
 
@@ -32,7 +32,7 @@ Status: **design-review-pending**, not production-approved. Version 1.0.0 (PageS
  "graphRules": 15,
  "allowlistEntries": 106,
  "referenceExamples": 71,
- "generatedExamples": 2,
+ "generatedExamples": 18,
  "measuredRoutes1440": 71
 }
 ```
@@ -40,12 +40,36 @@ Status: **design-review-pending**, not production-approved. Version 1.0.0 (PageS
 
 ## Scope
 
-- Implemented and contracted: tokens, site chrome (announcement bar, sticky nav, mega-menus, mobile drawer, footer),
-  the homepage (T0) and templates T1 product feature, T2 solution, T3 data platform, T4 industry (71 routes).
-- Registered as `status: pending` (routes + draft section sequences from the project's page inventory, no contracts):
-   (0 routes). They render a "being built" stand-in in the clone today; a later revision
-  must add their sections (decomposed per `decompositionNote`, never whole-page/whole-article sections) and flip them to implemented.
+- Implemented and contracted: tokens, site chrome (announcement bar, sticky nav, mega-menus, mobile drawer, footer, and the event and minimal chrome variants), and **all 18 templates, T0 to T17 (71 routes)**: homepage; T1 product feature, T2 solution, T3 data platform, T4 industry; T5 case-study detail, T6 content hub listing, T7 filterable card grid, T8 article; T9 asset landing, T10 form, T11 legal prose; T12 company/program, T13 product landing, T14 pricing, T15 community champions, T16 event microsite, T17 partner directory. `templates/templates.json` marks every one `implemented`, `routes/routes.json` marks every route `implemented`, and the sibling clone registers a page component for each (`src/App.jsx`: T0 is the index route, T1-T17 are in its `templates` map; every route has a content entry). 0 templates and 0 routes are pending.
+- `src/pages/ComingSoon.jsx` ("This page is being built") still exists in the clone, but only as the catch-all for paths that are not in the route table and as a guard for a route with no content entry. No served route reaches it. The `pending` template status remains valid in the schema for a future template that is registered before its contracts exist; none uses it today.
 - Source stack (documentation only): React ^18.3.1 + Vite ^5.4.10 + Tailwind CSS ^3.4.14 (tailwind.config.cjs, CommonJS) + react-router-dom ^6.28.0 (package.json ranges); dev server port 5197. Nothing in the contracts depends on it.
+
+### Generation-safe example coverage (one per template, so one per family)
+
+`extraction/verify_all.py` (check `GENERATED_COVERAGE`) fails if any implemented template lacks a `mode: "generated"` example, and the adversarial suite runs four leakage mutations (clone brand, proprietary logo role, non-reserved absolute URL, source-specific CTA; three for the partner directory, which has no CTA) against every one of them.
+
+| template | name | family | routes | generated example (schema/examples/generated/) |
+|---|---|---|---:|---|
+| T0 | home | marketing-home | 1 | `home.generated.pagespec.json` |
+| T1 | product-feature | marketing-product | 6 | `product-feature.generated.pagespec.json` |
+| T2 | solution | marketing-solution | 5 | `solution.generated.pagespec.json` |
+| T3 | data-platform | marketing-partner | 6 | `data-platform.generated.pagespec.json` |
+| T4 | industry | marketing-industry | 5 | `industry.generated.pagespec.json` |
+| T5 | case-study-detail | content-story | 4 | `case-study.generated.pagespec.json` |
+| T6 | content-hub-listing | content-listing | 3 | `content-hub-listing.generated.pagespec.json` |
+| T7 | filterable-card-grid | content-listing | 4 | `filterable-card-grid.generated.pagespec.json` |
+| T8 | article | content-article | 4 | `article.generated.pagespec.json` |
+| T9 | asset-landing | conversion-landing | 3 | `asset-landing.generated.pagespec.json` |
+| T10 | form-page | conversion-form | 4 | `form-page.generated.pagespec.json` |
+| T11 | legal-prose | legal | 3 | `legal.generated.pagespec.json` |
+| T12 | company-program | marketing-company | 10 | `company-program.generated.pagespec.json` |
+| T13 | product-landing | marketing-product-landing | 9 | `product-landing.generated.pagespec.json` |
+| T14 | pricing | marketing-pricing | 1 | `pricing.generated.pagespec.json` |
+| T15 | champions | community-program | 1 | `community-program.generated.pagespec.json` |
+| T16 | event-microsite | event | 1 | `event-microsite.generated.pagespec.json` |
+| T17 | partner-directory | directory | 1 | `partner-directory.generated.pagespec.json` |
+
+How the 14 newer examples were made: each starts from the structure of its family's representative reference page (same section sequence and variants, so the template pattern validates), keeps the chrome of the existing generated examples, and replaces every text field with original copy for the fictional brand "Wrenly", every asset with a generation-safe role and a `generate:` reference, and every link with a placeholder path or a reserved `.example` URL. They are structurally faithful rather than editorially polished: the copy is deliberately generic filler that respects each field's word and character budget, and long lists are trimmed to six items. Use them as a validated shape, not as finished marketing copy.
 
 ## Content and licensing (read before generating)
 
@@ -72,7 +96,7 @@ tokens/10-semantic|20-component|30-layout|themes/light.json
 tokens/llm/                 token-catalog.json, token-policy.json, component-allowlist.json
 primitives/ components/     building blocks with evidence
 sections/                   one closed contract per semantic section (source vs semantic split, variants, budgets, motion, responsive, measured heights)
-templates/templates.json    T0-T4 node patterns + T5-T17 pending
+templates/templates.json    T0-T17 node patterns (all implemented)
 routes/routes.json          every served route mapped once, redirects, fallback
 compatibility/graph.json    rhythm/position rules (each implemented in the validator)
 assets/asset-roles.json     closed media/link/copy roles with 3-way availability + licensing
@@ -93,9 +117,14 @@ python3 schema/semantic_validate.py <pagespec.json>
 Citations (`path:line`) point into the clone project root (the folder containing `design-repo/`). Standalone, those checks
 degrade to warnings. To rebuild the clone itself use its lockfile: `npm ci && npm run dev` (port 5197); never ship `node_modules`/`dist`.
 
+## Delivery
+
+This folder is the deliverable. No zip is shipped or tracked: a `design-repo.zip` next to the folder goes stale the moment any file changes, so it is git-ignored. If a zip is needed for transfer, create it fresh and last with the CLI zip tool from the parent folder (`zip -r design-repo.zip design-repo -x "*.DS_Store" -x "*__MACOSX*" -x "*__pycache__*"`), check it has no junk (`unzip -l design-repo.zip | grep -ic "__MACOSX\|\.DS_Store"` prints 0), and do not commit it.
+
 ## Known gaps (recorded, not hidden)
 
-- Pixel parity against the live original was not measured in this build; geometric parity against the specs' recorded original
-  heights is in `extraction/measured-values.json` (`specParity`): within 2px at 1440 on all representatives, larger below 1440.
+- Pixel parity against the live original was not measured in this build. Geometric parity against the specs' recorded original
+  heights (`extraction/measured-values.json` `specParity`) exists only for the homepage and the T1-T4 representatives (within 2px at 1440 on those, larger below 1440); T5-T17 have measured clone heights (`sectionHeights`, every route at 1440) but no per-section comparison against recorded original heights.
 - The clone's announcement autoplay and sliders have no reduced-motion rule (`tokens/00-foundation/motion-patterns.json` gap notes).
-- T15 (dark theme) and T16 (event sub-nav) will need a second theme and a chrome variant when built.
+- Wrapper gate: 13 pages warn that one section holds more than half of the page (long article, guide, listing and careers pages). 11 are whitelisted with a justification and a height cap, reviewed by a build agent (agent attestation, not a human sign-off); two (`/case-studies/kestrel` article.story-body 54%, `/events` listing.event-grid 60%) are plain warnings below the 60% error line. `verify_all.py` prints the first four; `wrapper_gate.py` returns all 13.
+- Generated examples are shape-faithful but use generic synthesized copy (see above).

@@ -1,0 +1,667 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "T17",
+  "route": "/find-a-partner",
+  "theme": "light",
+  "brand": {
+    "name": "Wrenly"
+  },
+  "meta": {
+    "title": "Find a partner"
+  },
+  "nodes": [
+    {
+      "section": "shell.minimal-nav",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "alt": "Wrenly",
+          "ref": "generate:placeholder-mark-1"
+        },
+        "homeLabel": "Home"
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "directory.header",
+      "variant": "default",
+      "content": {
+        "title": "Clear steps from first idea to finished page",
+        "body": "Clear ownership keeps handoffs short and questions easy to route."
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "directory.partner-locator",
+      "variant": "default",
+      "content": {
+        "filtersTitle": "Filters",
+        "clearAll": "Clear all",
+        "apply": "Apply filters",
+        "toggleFilters": "Show filters",
+        "groups": [
+          {
+            "key": "service",
+            "title": "Service type",
+            "options": [
+              "Education",
+              "Retail"
+            ]
+          },
+          {
+            "key": "tier",
+            "title": "Tier",
+            "options": [
+              "Media",
+              "Energy"
+            ]
+          },
+          {
+            "key": "regions",
+            "title": "Regions",
+            "options": [
+              "Agriculture",
+              "Product manager",
+              "Operations lead"
+            ]
+          }
+        ],
+        "search": "One place for every plan and every review",
+        "clearSearch": "Clear search",
+        "prev": "Previous",
+        "next": "Next",
+        "empty": "A calmer way to run a busy project",
+        "partners": [
+          {
+            "id": 1,
+            "name": "Tarnwick Foods",
+            "url": "https://meadow-1.example/practice",
+            "text": "Plain defaults get a new project running in an afternoon instead of a quarter.",
+            "service": "Guide",
+            "tier": "Roundup",
+            "regions": [
+              "Insight"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Tarnwick Foods",
+              "ref": "generate:placeholder-logo-2"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-3"
+            }
+          },
+          {
+            "id": 2,
+            "name": "Pebblebrook Energy",
+            "url": "https://harbour-2.example/practice",
+            "text": "Reviewers see the same preview that readers will see, so surprises stay rare.",
+            "service": "Playbook",
+            "tier": "Roundup",
+            "regions": [
+              "Product update"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Pebblebrook Energy",
+              "ref": "generate:placeholder-logo-4"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-5"
+            }
+          },
+          {
+            "id": 3,
+            "name": "Hollowell Transit",
+            "url": "https://summit-3.example/practice",
+            "text": "Built-in checks run on every change and report problems in words people can act on.",
+            "service": "Guide",
+            "tier": "Roundup",
+            "regions": [
+              "Product update"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Hollowell Transit",
+              "ref": "generate:placeholder-logo-6"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-7"
+            }
+          },
+          {
+            "id": 4,
+            "name": "Sandpiper Health",
+            "url": "https://willow-4.example/practice",
+            "text": "Wrenly keeps a readable history, so you can always see who changed what and why.",
+            "service": "Guide",
+            "tier": "Guide",
+            "regions": [
+              "Insight",
+              "Case study"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Sandpiper Health",
+              "ref": "generate:placeholder-logo-8"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-9"
+            }
+          },
+          {
+            "id": 5,
+            "name": "Larkspur Labs",
+            "url": "https://granite-5.example/practice",
+            "text": "Work moves forward without waiting on a single gatekeeper or a long approval chain.",
+            "service": "Playbook",
+            "tier": "Roundup",
+            "regions": [
+              "Insight"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Larkspur Labs",
+              "ref": "generate:placeholder-logo-10"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-11"
+            }
+          },
+          {
+            "id": 6,
+            "name": "Mapleton Supply",
+            "url": "https://orchard-6.example/practice",
+            "text": "Small teams and large ones use the same tools, tuned to how each group already works.",
+            "service": "Guide",
+            "tier": "Roundup",
+            "regions": [
+              "Product update"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Mapleton Supply",
+              "ref": "generate:placeholder-logo-12"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-13"
+            }
+          },
+          {
+            "id": 7,
+            "name": "Windmere Retail",
+            "url": "https://lantern-7.example/practice",
+            "text": "Share a finished result with a colleague in one step and keep editing your own copy.",
+            "service": "Guide",
+            "tier": "Roundup",
+            "regions": [
+              "Case study"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Windmere Retail",
+              "ref": "generate:placeholder-logo-14"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-15"
+            }
+          },
+          {
+            "id": 8,
+            "name": "Stonebridge Care",
+            "url": "https://compass-8.example/practice",
+            "text": "You decide what is public, what is internal and what stays in draft.",
+            "service": "Guide",
+            "tier": "Roundup",
+            "regions": [
+              "Insight"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Stonebridge Care",
+              "ref": "generate:placeholder-logo-16"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-17"
+            }
+          },
+          {
+            "id": 9,
+            "name": "Eastcombe Media",
+            "url": "https://beacon-9.example/practice",
+            "text": "Each project carries its own notes, owners and a short list of things still to do.",
+            "service": "Guide",
+            "tier": "Guide",
+            "regions": [
+              "Case study"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Eastcombe Media",
+              "ref": "generate:placeholder-logo-18"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-19"
+            }
+          },
+          {
+            "id": 10,
+            "name": "Brackenhall Bank",
+            "url": "https://prairie-10.example/practice",
+            "text": "Fewer meetings are needed when everyone can open the same page and see the same facts.",
+            "service": "Playbook",
+            "tier": "Roundup",
+            "regions": [
+              "Product update"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Brackenhall Bank",
+              "ref": "generate:placeholder-logo-20"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-21"
+            }
+          },
+          {
+            "id": 11,
+            "name": "Fennimore Learning",
+            "url": "https://delta-11.example/practice",
+            "text": "Reports refresh on a schedule you set, and the schedule is visible to everyone who reads them.",
+            "service": "Guide",
+            "tier": "Roundup",
+            "regions": [
+              "Insight"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Fennimore Learning",
+              "ref": "generate:placeholder-logo-22"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-23"
+            }
+          },
+          {
+            "id": 12,
+            "name": "Ravenscar Tools",
+            "url": "https://evergreen-12.example/practice",
+            "text": "A quiet dashboard beats a loud one, so alerts only fire when somebody needs to act.",
+            "service": "Guide",
+            "tier": "Guide",
+            "regions": [
+              "Insight"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Ravenscar Tools",
+              "ref": "generate:placeholder-logo-24"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-25"
+            }
+          },
+          {
+            "id": 13,
+            "name": "Oriel & Vane",
+            "url": "https://horizon-13.example/practice",
+            "text": "Our support group answers most questions within a working day and follows up until they are solved.",
+            "service": "Guide",
+            "tier": "Roundup",
+            "regions": [
+              "Product update",
+              "Case study"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Oriel & Vane",
+              "ref": "generate:placeholder-logo-26"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-27"
+            }
+          },
+          {
+            "id": 14,
+            "name": "Dunmore Cooperative",
+            "url": "https://tundra-14.example/practice",
+            "text": "Move between drafts, previews and published pages without losing your place. Clear ownership keeps handoffs short and questions easy to route.",
+            "service": "Guide",
+            "tier": "Roundup",
+            "regions": [
+              "Product update"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Dunmore Cooperative",
+              "ref": "generate:placeholder-logo-28"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-29"
+            }
+          },
+          {
+            "id": 15,
+            "name": "Thistledown Group",
+            "url": "https://lagoon-15.example/practice",
+            "text": "Guides, templates and worked examples help new teammates become productive in their first week.",
+            "service": "Guide",
+            "tier": "Roundup",
+            "regions": [
+              "Insight"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Thistledown Group",
+              "ref": "generate:placeholder-logo-30"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-31"
+            }
+          },
+          {
+            "id": 16,
+            "name": "Calloway Hotels",
+            "url": "https://alpine-16.example/practice",
+            "text": "Choose the plan that fits today and change it later without a migration project.",
+            "service": "Playbook",
+            "tier": "Roundup",
+            "regions": [
+              "Case study"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Calloway Hotels",
+              "ref": "generate:placeholder-logo-32"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-33"
+            }
+          },
+          {
+            "id": 17,
+            "name": "Penhallow Software",
+            "url": "https://meadow-17.example/practice",
+            "text": "Access is granted by role, so people see what they need and nothing more.",
+            "service": "Guide",
+            "tier": "Roundup",
+            "regions": [
+              "Product update"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Penhallow Software",
+              "ref": "generate:placeholder-logo-34"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-35"
+            }
+          },
+          {
+            "id": 18,
+            "name": "Goldcrest Dairy",
+            "url": "https://harbour-18.example/practice",
+            "text": "Every number on a page links back to the notes and source that produced it.",
+            "service": "Guide",
+            "tier": "Guide",
+            "regions": [
+              "Insight"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Goldcrest Dairy",
+              "ref": "generate:placeholder-logo-36"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-37"
+            }
+          },
+          {
+            "id": 19,
+            "name": "Marlpit Studios",
+            "url": "https://summit-19.example/practice",
+            "text": "Teams report that planning meetings are shorter once the plan lives in one place.",
+            "service": "Guide",
+            "tier": "Roundup",
+            "regions": [
+              "Product update"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Marlpit Studios",
+              "ref": "generate:placeholder-logo-38"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-39"
+            }
+          },
+          {
+            "id": 20,
+            "name": "Kellerby Works",
+            "url": "https://willow-20.example/practice",
+            "text": "We publish the roadmap openly and update it every quarter with what shipped and what slipped.",
+            "service": "Playbook",
+            "tier": "Roundup",
+            "regions": [
+              "Insight"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Kellerby Works",
+              "ref": "generate:placeholder-logo-40"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-41"
+            }
+          },
+          {
+            "id": 21,
+            "name": "Ottershaw Clinics",
+            "url": "https://granite-21.example/practice",
+            "text": "Customers can export their work at any time in open formats and take it elsewhere.",
+            "service": "Guide",
+            "tier": "Roundup",
+            "regions": [
+              "Case study"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Ottershaw Clinics",
+              "ref": "generate:placeholder-logo-42"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-43"
+            }
+          },
+          {
+            "id": 22,
+            "name": "Lowmarsh Paper",
+            "url": "https://orchard-22.example/practice",
+            "text": "Short feedback loops turn small improvements into steady progress over a season.",
+            "service": "Guide",
+            "tier": "Roundup",
+            "regions": [
+              "Product update"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Lowmarsh Paper",
+              "ref": "generate:placeholder-logo-44"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-45"
+            }
+          },
+          {
+            "id": 23,
+            "name": "Primrose Aviation",
+            "url": "https://lantern-23.example/practice",
+            "text": "The editor suggests the next step while you type and never changes anything on its own.",
+            "service": "Guide",
+            "tier": "Guide",
+            "regions": [
+              "Insight",
+              "Product update"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Primrose Aviation",
+              "ref": "generate:placeholder-logo-46"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-47"
+            }
+          },
+          {
+            "id": 24,
+            "name": "Quillfeather Press",
+            "url": "https://compass-24.example/practice",
+            "text": "Practical advice from people who run these projects every day, written without jargon.",
+            "service": "Playbook",
+            "tier": "Roundup",
+            "regions": [
+              "Case study"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Quillfeather Press",
+              "ref": "generate:placeholder-logo-48"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-49"
+            }
+          },
+          {
+            "id": 25,
+            "name": "Redbrook Cycles",
+            "url": "https://beacon-25.example/practice",
+            "text": "A single sign-in covers the whole workspace, including guests who only need to read.",
+            "service": "Guide",
+            "tier": "Roundup",
+            "regions": [
+              "Product update"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Redbrook Cycles",
+              "ref": "generate:placeholder-logo-50"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-51"
+            }
+          },
+          {
+            "id": 26,
+            "name": "Skerryvore Marine",
+            "url": "https://prairie-26.example/practice",
+            "text": "Comments stay attached to the line they discuss, even after the page is edited.",
+            "service": "Guide",
+            "tier": "Roundup",
+            "regions": [
+              "Insight"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Skerryvore Marine",
+              "ref": "generate:placeholder-logo-52"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-53"
+            }
+          },
+          {
+            "id": 27,
+            "name": "Tamsin Textiles",
+            "url": "https://delta-27.example/practice",
+            "text": "Schedules, owners and dependencies sit side by side so conflicts are caught early.",
+            "service": "Guide",
+            "tier": "Guide",
+            "regions": [
+              "Product update"
+            ],
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Tamsin Textiles",
+              "ref": "generate:placeholder-logo-54"
+            },
+            "badge": {
+              "assetRole": "rating.placeholder",
+              "alt": "",
+              "ref": "generate:placeholder-55"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed",
+        "additional": [
+          {
+            "pattern": "accordion.height",
+            "reducedMotionFallback": "unchanged"
+          }
+        ]
+      }
+    }
+  ]
+}

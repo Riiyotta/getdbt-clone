@@ -84,7 +84,10 @@ case("list over observed max", REF_T1, lambda s: node(s, "features.tabs-dark")["
 
 # ---------------------------------------------------------------- structural / template linkage
 case("template/node mismatch (T1 page declared as T3)", REF_T1, setp(["template"], "T3"), "TEMPLATE_SEQUENCE")
-case("pending template", REF_T1, setp(["template"], "T8"), "TEMPLATE_PENDING")
+# No shipped template is pending (T0-T17 are all implemented), so the pending rule is exercised on a synthetic
+# registry copy in which T1 is flagged pending; a real reference page for T1 must then be rejected.
+case("pending template (synthetic: T1 flagged pending in the registry copy)", REF_T1, lambda s: None, "TEMPLATE_PENDING",
+     lambda r: r["templates"]["T1"].update(status="pending"))
 case("required section removed", REF_T1, lambda s: s["nodes"].pop(idx(s, "editorial.resource-cards")), "TEMPLATE_SEQUENCE")
 case("sections reordered", REF_T1, lambda s: s["nodes"].insert(idx(s, "features.tabs-dark"), s["nodes"].pop(idx(s, "editorial.resource-cards"))), "TEMPLATE_SEQUENCE")
 case("second hero", REF_T1, lambda s: s["nodes"].insert(idx(s, "hero.split") + 1, copy.deepcopy(node(s, "hero.split"))), "ONE_HERO")
@@ -97,17 +100,20 @@ case("reference route not mapped to template", REF_T1, setp(["route"], "/product
 case("variant not allowed at this template position", REF_T1, lambda s: node(s, "hero.split").update(variant="flush"), "TEMPLATE_SEQUENCE")
 
 # ---------------------------------------------------------------- content contract
-case("maxWords overflow on a real field", REF_T1, lambda s: node(s, "hero.split")["content"].update(title="one two three four five six seven eight nine"), "MAX_WORDS")
+# one word past the contract's own budget for hero.split title (derived, so it tracks the contract instead of a hard-coded count)
+HERO_TITLE_MAX = BASE["contracts"]["hero.split"]["content"]["fields"]["title"]["maxWords"]
+case("maxWords overflow on a real field", REF_T1, lambda s: node(s, "hero.split")["content"].update(title=" ".join(["word"] * (HERO_TITLE_MAX + 1))), "MAX_WORDS")
 case("maxChars overflow on a real field", REF_T1, lambda s: node(s, "content.media-split")["content"].update(eyebrow="x" * 41), "SCHEMA")
 case("variant forbidden field (flush hero with badge)", REF_T3, lambda s: node(s, "hero.split")["content"].update(badge="New"), "VARIANT_FORBIDDEN_FIELD")
-case("variant required field missing", REF_T1, lambda s: node(s, "content.media-split")["content"].pop("primary"), "VARIANT_REQUIRED_FIELD")
+case("variant required field missing", REF_T1, lambda s: node(s, "content.media-split")["content"].pop("paragraphs"), "VARIANT_REQUIRED_FIELD")
 case("unknown variant", REF_T1, lambda s: node(s, "features.tabs-dark").update(variant="carousel"), "SCHEMA")
 case("variant list size (single quote band with 2 quotes)", J("schema/examples/reference/industry--healthcare.pagespec.json"),
      lambda s: node(s, "social-proof.quote-band")["content"]["quotes"].append(copy.deepcopy(node(s, "social-proof.quote-band")["content"]["quotes"][0])), "VARIANT_LIST_SIZE")
 
 # ---------------------------------------------------------------- motion
 case("motion pattern not allowed for section", REF_T1, lambda s: node(s, "hero.split").update(motion={"pattern": "marquee.loop", "reducedMotionFallback": "static-row"}), "MOTION_PATTERN_NOT_ALLOWED")
-case("required motion pattern missing", REF_T1, lambda s: node(s, "hero.split").update(motion={"pattern": "static", "reducedMotionFallback": "none-needed"}), "MOTION_REQUIRED_PATTERN")
+# features.card-grid requires reveal.fade-up but also allows stroke.still: swapping to the allowed-but-not-required pattern must be rejected
+case("required motion pattern missing", REF_T1, lambda s: node(s, "features.card-grid").update(motion={"pattern": "stroke.still", "reducedMotionFallback": BASE["motion"]["stroke.still"]["reducedMotionFallback"]}), "MOTION_REQUIRED_PATTERN")
 
 # ---------------------------------------------------------------- retrieval eligibility (node / contract / allowlist)
 case("runtime UI marked retrievable at node level", REF_T1, lambda s: node(s, "shell.mega-menu").update(retrievalEligible=True), "RUNTIME_UI_INELIGIBLE")
@@ -157,6 +163,91 @@ case("source-specific CTA", GEN_T1, lambda s: node(s, "cta.closing-band")["conte
 case("original site brand (reference mode)", REF_T1, lambda s: node(s, "hero.split")["content"].update(title="Build with dbt Labs."), "SOURCE_REAL_IDENTITY")
 case("real third-party platform name (reference mode)", REF_T3, lambda s: node(s, "hero.split")["content"].update(lead="Northwind, now on Snowflake."), "SOURCE_REAL_IDENTITY")
 case("original domain (generated mode)", GEN_HOME, lambda s: node(s, "editorial.news-band")["content"]["action"].update(href="https://www.getdbt.com/blog"), "SOURCE_REAL_IDENTITY")
+
+# ---------------------------------------------------------------- per-family generated examples
+# Every generation-safe example (one per template, so one per template family) gets the same four leakage mutations,
+# derived from the example itself (first content text field / first content asset / first content action).
+def _first_text(s):
+    for n in s["nodes"]:
+        if n["section"].startswith("shell."):
+            continue
+        fields = BASE["contracts"][n["section"]]["content"]["fields"]
+        for path, key, val in sv.leaves(n.get("content") or {}):
+            fd = fields.get(path)
+            if isinstance(val, str) and fd and fd["type"] == "text" and fd["maxWords"] >= 3 and key not in sv.NONCOPY_KEYS:
+                return n, path
+    raise AssertionError("no text field")
+
+
+def _set_path(content, path, value):
+    """set the first leaf at a '[]'-normalised path"""
+    parts = path.split(".")
+    cur = content
+    for i, p in enumerate(parts):
+        name, many = (p[:-2], True) if p.endswith("[]") else (p, False)
+        nxt = cur[name]
+        if many:
+            if i == len(parts) - 1:
+                nxt[0] = value
+                return
+            cur = nxt[0]
+        elif i == len(parts) - 1:
+            cur[name] = value
+        else:
+            cur = nxt
+
+
+def _brand_leak(s):
+    n, path = _first_text(s)
+    _set_path(n["content"], path, "Built with Lattice for every team")
+
+
+def _asset_leak(s):
+    # prefer a content asset; pages without one (pricing, legal) fall back to the chrome's brand mark
+    for shell in (False, True):
+        for n in s["nodes"]:
+            if n["section"].startswith("shell.") != shell:
+                continue
+            for _, a in sv.assets_in(n.get("content") or {}):
+                a["assetRole"] = "brand.wordmark"
+                return
+    raise AssertionError("no asset")
+
+
+def _url_leak(s):
+    for shell in (False, True):  # a content action if the page has one, else a chrome action
+        for n in s["nodes"]:
+            if n["section"].startswith("shell.") != shell:
+                continue
+            for a in sv.actions_in(n.get("content") or {}):
+                a["href"] = "https://www.example.com/start"
+                return
+    # a page with no action at all (the partner directory) leaks through an asset reference instead
+    for n in s["nodes"]:
+        for _, a in sv.assets_in(n.get("content") or {}):
+            a["ref"] = "https://www.example.com/mark.svg"
+            return
+    raise AssertionError("no action or asset")
+
+
+def _cta_leak(s):
+    for shell in (False, True):  # a content action if the page has one, else a chrome action
+        for n in s["nodes"]:
+            if n["section"].startswith("shell.") != shell:
+                continue
+            for a in sv.actions_in(n.get("content") or {}):
+                a["label"] = "Try Lattice"
+                return
+    raise AssertionError("no action")
+
+
+for _p in sorted((REPO / "schema/examples/generated").glob("*.generated.pagespec.json")):
+    _ex, _slug = json.loads(_p.read_text()), _p.name.split(".")[0]
+    case(f"[{_slug}] clone brand in copy", _ex, _brand_leak, "GENERATED_MODE_BRAND")
+    case(f"[{_slug}] proprietary logo role reused", _ex, _asset_leak, "GENERATED_MODE_ASSET")
+    case(f"[{_slug}] non-reserved absolute URL", _ex, _url_leak, "GENERATED_MODE_URL")
+    if any(True for _n in _ex["nodes"] for _ in sv.actions_in(_n.get("content") or {})):  # the partner directory has no CTA at all
+        case(f"[{_slug}] source-specific CTA", _ex, _cta_leak, "GENERATED_MODE_CTA")
 
 CONTROLS = [(p.relative_to(REPO), json.loads(p.read_text())) for p in sorted((REPO / "schema/examples").rglob("*.json"))] + [("schema/example.pagespec.json", J("schema/example.pagespec.json"))]
 

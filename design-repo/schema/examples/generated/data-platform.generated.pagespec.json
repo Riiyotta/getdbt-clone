@@ -1,0 +1,1242 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "T3",
+  "route": "/partners/harborline",
+  "theme": "light",
+  "brand": {
+    "name": "Wrenly"
+  },
+  "meta": {
+    "title": "Harborline integration"
+  },
+  "nodes": [
+    {
+      "section": "shell.announcement-bar",
+      "variant": "default",
+      "content": {
+        "slides": [
+          {
+            "text": "Wrenly 2.0 adds branch previews and quicker incremental runs.",
+            "href": "/news/release"
+          },
+          {
+            "text": "Sign up for the spring modeling clinic, held online every Thursday.",
+            "href": "/events/clinic"
+          },
+          {
+            "text": "Read our yearly survey on how analytics teams plan, test and ship their work.",
+            "href": "/reports/survey"
+          },
+          {
+            "text": "Wrenly now runs in two more hosting regions.",
+            "href": "/news/regions"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "carousel.autoplay",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.navbar",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "alt": "Wrenly",
+          "ref": "generate:wordmark-dark"
+        },
+        "menuLabels": [
+          "Platform",
+          "Solutions",
+          "Customers",
+          "Learn",
+          "Company"
+        ],
+        "plainLink": {
+          "label": "Pricing",
+          "href": "/pricing"
+        },
+        "secondaryAction": {
+          "label": "Sign up",
+          "href": "/signup"
+        },
+        "primaryAction": {
+          "label": "Talk to us",
+          "href": "/talk"
+        }
+      },
+      "motion": {
+        "pattern": "nav.hide-on-scroll",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mega-menu",
+      "variant": "default",
+      "content": {
+        "menus": [
+          {
+            "trigger": "Platform",
+            "groups": [
+              {
+                "label": "Start here",
+                "items": [
+                  {
+                    "title": "Overview",
+                    "description": "What the workspace does for a data team",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "/platform"
+                  },
+                  {
+                    "title": "Product tour",
+                    "description": "A short recorded walkthrough of the main screens",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "label": "Core tools",
+                "items": [
+                  {
+                    "title": "Author",
+                    "description": "Write transformations in the editor you like",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Check",
+                    "description": "Run assertions against each table",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Organize",
+                    "description": "Group work by business domain",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Discover",
+                    "description": "Find tables, owners and change history",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Release",
+                    "description": "Schedule and promote jobs safely",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Define",
+                    "description": "Keep one shared definition per metric",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  }
+                ]
+              }
+            ],
+            "featured": {
+              "title": "Field guide",
+              "description": "A practical guide to planning, reviewing and releasing analytics work as a small team",
+              "thumbnail": {
+                "assetRole": "illustration.abstract",
+                "alt": "",
+                "ref": "generate:gradient-thumb"
+              },
+              "href": "/guides/field-guide"
+            },
+            "side": {
+              "label": "Also new",
+              "links": [
+                {
+                  "label": "Run history",
+                  "href": "#"
+                },
+                {
+                  "label": "Setup helper",
+                  "href": "#"
+                },
+                {
+                  "label": "Dashboards",
+                  "href": "#"
+                },
+                {
+                  "label": "Access rules",
+                  "href": "#"
+                },
+                {
+                  "label": "Trust center",
+                  "href": "#"
+                },
+                {
+                  "label": "Connectors",
+                  "href": "#"
+                }
+              ],
+              "action": {
+                "label": "Watch the recap",
+                "href": "#"
+              }
+            },
+            "strip": {
+              "label": "Book a working session with our solutions team.",
+              "href": "/talk"
+            }
+          },
+          {
+            "trigger": "Solutions",
+            "groups": [
+              {
+                "label": "By goal",
+                "items": [
+                  {
+                    "title": "Quick reports",
+                    "description": "Ship new views without waiting on tickets",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Lower spend",
+                    "description": "Stop paying for repeated work",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "label": "By team",
+                "items": [
+                  {
+                    "title": "Engineers",
+                    "description": "Pipelines with reviews and tests",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Analysts",
+                    "description": "Self-serve tables you can trust",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Leaders",
+                    "description": "Clear ownership and costs",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Finance",
+                    "description": "Close the month with fewer surprises",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Popular",
+              "links": [
+                {
+                  "label": "Migrations",
+                  "href": "#"
+                },
+                {
+                  "label": "Data contracts",
+                  "href": "#"
+                },
+                {
+                  "label": "Embedded views",
+                  "href": "#"
+                },
+                {
+                  "label": "AI readiness",
+                  "href": "#"
+                },
+                {
+                  "label": "Cost reviews",
+                  "href": "#"
+                },
+                {
+                  "label": "Audits",
+                  "href": "#"
+                }
+              ],
+              "action": {
+                "label": "See all solutions",
+                "href": "#"
+              }
+            },
+            "strip": {
+              "label": "Talk with a specialist about your current stack.",
+              "href": "/talk"
+            }
+          },
+          {
+            "trigger": "Customers",
+            "groups": [
+              {
+                "label": "Stories",
+                "items": [
+                  {
+                    "title": "All stories",
+                    "description": "How teams of every size use Wrenly",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Video library",
+                    "description": "Short interviews with practitioners",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "label": "Highlights",
+                "items": [
+                  {
+                    "title": "Quality",
+                    "description": "Fewer broken dashboards",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Speed",
+                    "description": "From request to release in days",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Savings",
+                    "description": "Smaller monthly compute bills",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Growth",
+                    "description": "Scaling from one team to twenty",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Featured",
+              "links": [
+                {
+                  "label": "Larkspur Works",
+                  "href": "#"
+                },
+                {
+                  "label": "Harrowgate",
+                  "href": "#"
+                },
+                {
+                  "label": "Ashgrove",
+                  "href": "#"
+                },
+                {
+                  "label": "Tamarack",
+                  "href": "#"
+                },
+                {
+                  "label": "Velmora",
+                  "href": "#"
+                },
+                {
+                  "label": "Penrith",
+                  "href": "#"
+                }
+              ],
+              "action": {
+                "label": "Browse every story",
+                "href": "#"
+              }
+            },
+            "strip": {
+              "label": "Share your own story at the next user meetup.",
+              "href": "/meetups"
+            }
+          },
+          {
+            "trigger": "Learn",
+            "groups": [
+              {
+                "label": "Read",
+                "items": [
+                  {
+                    "title": "Articles",
+                    "description": "Notes from the people building Wrenly",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Guides",
+                    "description": "Step-by-step setup and patterns",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "label": "Watch and practice",
+                "items": [
+                  {
+                    "title": "Webinars",
+                    "description": "Live and recorded sessions",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Courses",
+                    "description": "Self-paced lessons with exercises",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Templates",
+                    "description": "Starter projects to copy",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Glossary",
+                    "description": "Plain definitions of common terms",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Quick links",
+              "links": [
+                {
+                  "label": "Docs",
+                  "href": "#"
+                },
+                {
+                  "label": "Changelog",
+                  "href": "#"
+                },
+                {
+                  "label": "Status",
+                  "href": "#"
+                },
+                {
+                  "label": "Roadmap",
+                  "href": "#"
+                },
+                {
+                  "label": "Forum",
+                  "href": "#"
+                },
+                {
+                  "label": "Events",
+                  "href": "#"
+                }
+              ],
+              "action": {
+                "label": "Open the docs",
+                "href": "#"
+              }
+            },
+            "strip": {
+              "label": "New to analytics engineering? Start with the free course.",
+              "href": "/courses"
+            }
+          },
+          {
+            "trigger": "Company",
+            "groups": [
+              {
+                "label": "About",
+                "items": [
+                  {
+                    "title": "Our story",
+                    "description": "Why we started and where we are going",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Careers",
+                    "description": "Open roles across every team",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "label": "Connect",
+                "items": [
+                  {
+                    "title": "Partners",
+                    "description": "Consultancies and technology partners",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Press",
+                    "description": "News and media resources",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Contact",
+                    "description": "Reach the right team quickly",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  },
+                  {
+                    "title": "Security",
+                    "description": "How we protect customer data",
+                    "icon": {
+                      "assetRole": "icon.feature",
+                      "alt": "",
+                      "ref": "generate:line-icon"
+                    },
+                    "href": "#"
+                  }
+                ]
+              }
+            ],
+            "side": {
+              "label": "Worldwide",
+              "links": [
+                {
+                  "label": "Meetups",
+                  "href": "#"
+                },
+                {
+                  "label": "Ambassadors",
+                  "href": "#"
+                },
+                {
+                  "label": "Open source",
+                  "href": "#"
+                },
+                {
+                  "label": "Newsletter",
+                  "href": "#"
+                },
+                {
+                  "label": "Brand assets",
+                  "href": "#"
+                },
+                {
+                  "label": "Accessibility",
+                  "href": "#"
+                }
+              ],
+              "action": {
+                "label": "Meet the team",
+                "href": "#"
+              }
+            },
+            "strip": {
+              "label": "We are hiring engineers, designers and educators.",
+              "href": "/careers"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "menu.popover",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "shell.mobile-drawer",
+      "variant": "default",
+      "content": {
+        "accountActions": [
+          {
+            "label": "Sign in",
+            "href": "/signin"
+          },
+          {
+            "label": "Create account",
+            "href": "/signup"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "drawer.slide",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "section": "hero.split",
+      "variant": "padded",
+      "content": {
+        "title": "Clear steps from first idea to finished page",
+        "lead": "Teams use one shared workspace so plans, checks and reviews stay in step. Clear ownership keeps handoffs short and questions easy to route.",
+        "primary": {
+          "label": "Talk to us",
+          "href": "/talk-to-us-eda4"
+        },
+        "secondary": {
+          "label": "See how it works",
+          "href": "/see-how-it-works-b783"
+        },
+        "media": {
+          "assetRole": "photo.generated-scene",
+          "alt": "Dashboard with a progress chart and a task list",
+          "ref": "generate:generated-scene-1"
+        }
+      },
+      "motion": {
+        "pattern": "stroke.draw-on",
+        "reducedMotionFallback": "render-final-state"
+      },
+      "style": {
+        "strokeShape": "stroke.s3",
+        "strokeGradient": "gradient.01",
+        "leadSize": "default",
+        "columns": "6/6",
+        "bottomPadding": "default"
+      }
+    },
+    {
+      "section": "features.card-grid",
+      "variant": "image-card",
+      "content": {
+        "title": "One place for every plan and every review",
+        "body": "Plain defaults get a new project running in an afternoon instead of a quarter. Reviewers see the same preview that readers will see, so surprises stay rare. Built-in checks run on every change and report problems in words people can act on. Wrenly keeps a readable history, so you can always see who changed what and why.",
+        "lockup": {
+          "image": {
+            "assetRole": "partner.placeholder-lockup",
+            "alt": "Team photo",
+            "ref": "generate:placeholder-lockup-2"
+          },
+          "href": "/page-eb4a"
+        },
+        "primary": {
+          "label": "See how it works",
+          "href": "/see-how-it-works-eb4a"
+        },
+        "cards": [
+          {
+            "image": {
+              "assetRole": "photo.generated-scene",
+              "alt": "",
+              "ref": "generate:generated-scene-3"
+            },
+            "title": "Keep every project moving",
+            "body": "Work moves forward without waiting on a single gatekeeper or a long approval chain. Small teams and large ones use the same tools, tuned to how each group already works.",
+            "action": {
+              "label": "See how it works",
+              "href": "/see-how-it-works-1e9f"
+            }
+          },
+          {
+            "image": {
+              "assetRole": "photo.generated-scene",
+              "alt": "",
+              "ref": "generate:generated-scene-4"
+            },
+            "title": "Join the conversation",
+            "body": "Share a finished result with a colleague in one step and keep editing your own copy.",
+            "action": {
+              "label": "See how it works",
+              "href": "/see-how-it-works-fd23"
+            }
+          },
+          {
+            "image": {
+              "assetRole": "photo.generated-scene",
+              "alt": "",
+              "ref": "generate:generated-scene-5"
+            },
+            "title": "Plan work that people can follow",
+            "body": "You decide what is public, what is internal and what stays in draft. Each project carries its own notes, owners and a short list of things still to do.",
+            "action": {
+              "label": "See how it works",
+              "href": "/see-how-it-works-1668"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      },
+      "style": {
+        "revealTrigger": "scroll",
+        "headerAlign": "start",
+        "paddingTop": "default",
+        "surface": "light",
+        "columns": "3"
+      }
+    },
+    {
+      "section": "content.statement",
+      "variant": "diagram",
+      "content": {
+        "title": "Review changes before anyone depends on them",
+        "body": "Fewer meetings are needed when everyone can open the same page and see the same facts. A quiet dashboard beats a loud one, so alerts only fire when somebody needs to act.",
+        "diagram": {
+          "assetRole": "illustration.generated-diagram",
+          "alt": "Diagram of a plan moving through review to release",
+          "ref": "generate:generated-diagram-6"
+        }
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      },
+      "style": {
+        "width": "column",
+        "background": "white",
+        "titleElement": "heading"
+      }
+    },
+    {
+      "section": "cta.gradient-card",
+      "variant": "default",
+      "content": {
+        "title": "Everything your team needs in one workspace",
+        "body": "Our support group answers most questions within a working day and follows up until they are solved.",
+        "primary": {
+          "label": "View details",
+          "href": "/view-details-eb4a"
+        }
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      }
+    },
+    {
+      "section": "social-proof.customer-tabs",
+      "variant": "default",
+      "content": {
+        "title": "Ready for the way your team works",
+        "body": "Move between drafts, previews and published pages without losing your place.",
+        "stories": [
+          {
+            "name": "Tarnwick Foods",
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Tarnwick Foods",
+              "ref": "generate:placeholder-logo-7"
+            },
+            "headline": "A calmer way to run a busy project",
+            "quote": "Guides, templates and worked examples help new teammates become productive in their first week. Choose the plan that fits today and change it later without a migration project. Access is granted by role, so people see what they need and nothing more. Every number on a page links back to the notes and source that produced it.",
+            "person": "Alpineton",
+            "role": "Head of Operations",
+            "stats": [
+              {
+                "number": "0",
+                "label": "See how it works"
+              },
+              {
+                "number": "100%",
+                "label": "See how it works"
+              }
+            ],
+            "action": {
+              "label": "Plan a visit",
+              "href": "/plan-a-visit-2888"
+            }
+          },
+          {
+            "name": "Hollowell Transit",
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Hollowell Transit",
+              "ref": "generate:placeholder-logo-8"
+            },
+            "headline": "Start small and grow at your pace",
+            "quote": "Teams report that planning meetings are shorter once the plan lives in one place. We publish the roadmap openly and update it every quarter with what shipped and what slipped. Customers can export their work at any time in open formats and take it elsewhere.",
+            "person": "Meadowwick",
+            "role": "Head of Operations",
+            "stats": [
+              {
+                "number": "70%",
+                "label": "See how it works"
+              },
+              {
+                "number": "140",
+                "label": "See how it works"
+              }
+            ],
+            "action": {
+              "label": "Plan a visit",
+              "href": "/plan-a-visit-f796"
+            }
+          },
+          {
+            "name": "Larkspur Labs",
+            "logo": {
+              "assetRole": "customer.placeholder-logo",
+              "alt": "Larkspur Labs",
+              "ref": "generate:placeholder-logo-9"
+            },
+            "headline": "Tools that stay out of your way",
+            "quote": "Short feedback loops turn small improvements into steady progress over a season. The editor suggests the next step while you type and never changes anything on its own. Practical advice from people who run these projects every day, written without jargon.",
+            "person": "Harbourly",
+            "role": "Head of Operations",
+            "stats": [
+              {
+                "number": "24",
+                "label": "See how it works"
+              },
+              {
+                "number": "45%",
+                "label": "See how it works"
+              }
+            ],
+            "action": {
+              "label": "Plan a visit",
+              "href": "/plan-a-visit-43f1"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "tabs.instant",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "editorial.resource-cards",
+      "variant": "default",
+      "content": {
+        "eyebrow": "Product update",
+        "title": "See the whole picture at a glance",
+        "body": "A single sign-in covers the whole workspace, including guests who only need to read.",
+        "cards": [
+          {
+            "image": {
+              "assetRole": "resource.generated-thumbnail",
+              "alt": "",
+              "ref": "generate:generated-thumbnail-10"
+            },
+            "tag": "Guide",
+            "title": "From draft to published in an afternoon",
+            "href": "/from-draft-to-published-in-a-1e9f"
+          },
+          {
+            "image": {
+              "assetRole": "resource.generated-thumbnail",
+              "alt": "",
+              "ref": "generate:generated-thumbnail-11"
+            },
+            "tag": "Community",
+            "title": "What teams build with Wrenly",
+            "href": "/what-teams-build-with-wrenly-53ef"
+          },
+          {
+            "image": {
+              "assetRole": "resource.generated-thumbnail",
+              "alt": "",
+              "ref": "generate:generated-thumbnail-12"
+            },
+            "tag": "Workshop",
+            "title": "Work together without the noise",
+            "href": "/work-together-without-the-no-bc0b"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      }
+    },
+    {
+      "section": "cta.closing-band",
+      "variant": "with-aside",
+      "content": {
+        "title": "A friendlier path to reliable results",
+        "body": "Comments stay attached to the line they discuss, even after the page is edited. Schedules, owners and dependencies sit side by side so conflicts are caught early.",
+        "primary": {
+          "label": "Talk to us",
+          "href": "/talk-to-us-eda4"
+        },
+        "secondary": {
+          "label": "View details",
+          "href": "/view-details-eb4a"
+        },
+        "aside": {
+          "title": "Open, readable and easy to audit",
+          "body": "Teams tell us the biggest change is how little time goes into status updates now.",
+          "action": {
+            "label": "Plan a visit",
+            "href": "/plan-a-visit-6972"
+          }
+        }
+      },
+      "motion": {
+        "pattern": "reveal.fade-up",
+        "reducedMotionFallback": "show-immediately"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "alt": "Wrenly",
+          "ref": "generate:wordmark-light"
+        },
+        "columns": [
+          {
+            "title": "Product",
+            "links": [
+              {
+                "label": "Overview",
+                "href": "#"
+              },
+              {
+                "label": "How it works",
+                "href": "#"
+              },
+              {
+                "label": "AI features",
+                "href": "#"
+              },
+              {
+                "label": "Customer stories",
+                "href": "#"
+              },
+              {
+                "label": "Connectors",
+                "href": "#"
+              },
+              {
+                "label": "Pricing",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Developers",
+            "links": [
+              {
+                "label": "Documentation",
+                "href": "#"
+              },
+              {
+                "label": "Setup guides",
+                "href": "#"
+              },
+              {
+                "label": "Supported engines",
+                "href": "#"
+              },
+              {
+                "label": "Tech blog",
+                "href": "#"
+              },
+              {
+                "label": "Editor plugin",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Company",
+            "links": [
+              {
+                "label": "About",
+                "href": "#"
+              },
+              {
+                "label": "Belonging",
+                "href": "#"
+              },
+              {
+                "label": "Careers",
+                "href": "#"
+              },
+              {
+                "label": "Newsroom",
+                "href": "#"
+              }
+            ],
+            "badge": {
+              "label": "We're hiring",
+              "linkIndex": 2
+            }
+          },
+          {
+            "title": "Learn",
+            "links": [
+              {
+                "label": "Learning hub",
+                "href": "#"
+              },
+              {
+                "label": "Courses",
+                "href": "#"
+              },
+              {
+                "label": "Certificates",
+                "href": "#"
+              },
+              {
+                "label": "Articles",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Community",
+            "links": [
+              {
+                "label": "Join us",
+                "href": "#"
+              },
+              {
+                "label": "Contribute",
+                "href": "#"
+              },
+              {
+                "label": "Open source",
+                "href": "#"
+              },
+              {
+                "label": "Forum",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Support",
+            "links": [
+              {
+                "label": "Contact",
+                "href": "#"
+              },
+              {
+                "label": "Services",
+                "href": "#"
+              },
+              {
+                "label": "Partners",
+                "href": "#"
+              },
+              {
+                "label": "Status page",
+                "href": "#"
+              }
+            ]
+          }
+        ],
+        "newsletter": {
+          "title": "Monthly digest",
+          "body": "One short email a month with product updates and modeling tips.",
+          "action": {
+            "label": "Subscribe",
+            "href": "#"
+          }
+        },
+        "region": {
+          "title": "Region",
+          "options": [
+            "Worldwide",
+            "EMEA",
+            "Americas"
+          ]
+        },
+        "social": {
+          "title": "Follow along",
+          "links": [
+            {
+              "label": "GitHub",
+              "href": "#"
+            },
+            {
+              "label": "LinkedIn",
+              "href": "#"
+            },
+            {
+              "label": "YouTube",
+              "href": "#"
+            },
+            {
+              "label": "Instagram",
+              "href": "#"
+            },
+            {
+              "label": "X",
+              "href": "#"
+            },
+            {
+              "label": "Bluesky",
+              "href": "#"
+            },
+            {
+              "label": "RSS",
+              "href": "#"
+            }
+          ]
+        },
+        "copyright": "© 2026 Wrenly Ltd.",
+        "legalLinks": [
+          {
+            "label": "Privacy",
+            "href": "#"
+          },
+          {
+            "label": "Accessibility",
+            "href": "#"
+          },
+          {
+            "label": "Terms",
+            "href": "#"
+          },
+          {
+            "label": "Security",
+            "href": "#"
+          },
+          {
+            "label": "Fair use",
+            "href": "#"
+          },
+          {
+            "label": "AI principles",
+            "href": "#"
+          }
+        ],
+        "cookieLabel": "Cookie settings"
+      },
+      "motion": {
+        "pattern": "accordion.toggle",
+        "reducedMotionFallback": "unchanged"
+      }
+    }
+  ]
+}

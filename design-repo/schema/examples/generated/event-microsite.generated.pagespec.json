@@ -1,0 +1,423 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "T16",
+  "route": "/forum",
+  "theme": "event",
+  "brand": {
+    "name": "Wrenly"
+  },
+  "meta": {
+    "title": "Annual forum"
+  },
+  "nodes": [
+    {
+      "section": "shell.event-subnav",
+      "variant": "default",
+      "content": {
+        "logo": {
+          "assetRole": "brand.placeholder-mark",
+          "alt": "Wrenly",
+          "ref": "generate:placeholder-mark-1"
+        },
+        "home": "/summit",
+        "columns": [
+          {
+            "links": [
+              {
+                "label": "Learn more",
+                "href": "#"
+              },
+              {
+                "label": "Get started",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "links": [
+              {
+                "label": "Talk to us",
+                "href": "#"
+              },
+              {
+                "label": "Plan a visit",
+                "href": "#"
+              }
+            ]
+          }
+        ],
+        "cta": {
+          "label": "Join the list",
+          "href": "#"
+        },
+        "openLabel": "Open menu",
+        "closeLabel": "Close menu"
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "hero.event",
+      "variant": "default",
+      "content": {
+        "title": "Made for teams of every size",
+        "lead": "Clear ownership keeps handoffs short and questions easy to route.",
+        "cta": {
+          "label": "Try it free",
+          "href": "#"
+        },
+        "portraits": [
+          {
+            "assetRole": "photo.generated-scene",
+            "alt": "",
+            "ref": "generate:generated-scene-2"
+          },
+          {
+            "assetRole": "photo.generated-scene",
+            "alt": "",
+            "ref": "generate:generated-scene-3"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "event.photo-gallery",
+      "variant": "default",
+      "content": {
+        "photos": [
+          {
+            "assetRole": "photo.generated-scene",
+            "alt": "",
+            "ref": "generate:generated-scene-4"
+          },
+          {
+            "assetRole": "photo.generated-scene",
+            "alt": "",
+            "ref": "generate:generated-scene-5"
+          },
+          {
+            "assetRole": "photo.generated-scene",
+            "alt": "",
+            "ref": "generate:generated-scene-6"
+          },
+          {
+            "assetRole": "photo.generated-scene",
+            "alt": "",
+            "ref": "generate:generated-scene-7"
+          },
+          {
+            "assetRole": "photo.generated-scene",
+            "alt": "",
+            "ref": "generate:generated-scene-8"
+          },
+          {
+            "assetRole": "photo.generated-scene",
+            "alt": "",
+            "ref": "generate:generated-scene-9"
+          },
+          {
+            "assetRole": "photo.generated-scene",
+            "alt": "",
+            "ref": "generate:generated-scene-10"
+          },
+          {
+            "assetRole": "photo.generated-scene",
+            "alt": "",
+            "ref": "generate:generated-scene-11"
+          },
+          {
+            "assetRole": "photo.generated-scene",
+            "alt": "",
+            "ref": "generate:generated-scene-12"
+          },
+          {
+            "assetRole": "photo.generated-scene",
+            "alt": "",
+            "ref": "generate:generated-scene-13"
+          },
+          {
+            "assetRole": "photo.generated-scene",
+            "alt": "",
+            "ref": "generate:generated-scene-14"
+          },
+          {
+            "assetRole": "photo.generated-scene",
+            "alt": "",
+            "ref": "generate:generated-scene-15"
+          },
+          {
+            "assetRole": "photo.generated-scene",
+            "alt": "",
+            "ref": "generate:generated-scene-16"
+          },
+          {
+            "assetRole": "photo.generated-scene",
+            "alt": "",
+            "ref": "generate:generated-scene-17"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "marquee.photo-loop",
+        "reducedMotionFallback": "static-row"
+      }
+    },
+    {
+      "section": "event.recap",
+      "variant": "default",
+      "content": {
+        "title": "Your plan, your pace, your rules",
+        "body": "Plain defaults get a new project running in an afternoon instead of a quarter.",
+        "cta": {
+          "label": "See how it works",
+          "href": "/see-how-it-works-53ef"
+        }
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "event.highlight-rows",
+      "variant": "default",
+      "content": {
+        "title": "See pricing",
+        "rows": [
+          {
+            "title": "Clear steps from first idea to finished page",
+            "cta": {
+              "label": "Browse all",
+              "href": "/browse-all-5ead"
+            }
+          },
+          {
+            "title": "One place for every plan and every review",
+            "cta": {
+              "label": "Browse all",
+              "href": "/browse-all-f79a"
+            }
+          },
+          {
+            "title": "A calmer way to run a busy project",
+            "cta": {
+              "label": "Browse all",
+              "href": "/browse-all-7cfe"
+            }
+          },
+          {
+            "title": "Everything your team needs in one workspace",
+            "cta": {
+              "label": "Browse all",
+              "href": "/browse-all-75d9"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "event.sponsor-logos",
+      "variant": "default",
+      "content": {
+        "title": "Simple tools for careful work",
+        "tiers": [
+          {
+            "label": "Browse",
+            "logos": [
+              {
+                "assetRole": "customer.placeholder-logo",
+                "alt": "Tarnwick Foods",
+                "ref": "generate:placeholder-logo-18"
+              },
+              {
+                "assetRole": "customer.placeholder-logo",
+                "alt": "Alpineton",
+                "ref": "generate:placeholder-logo-19"
+              },
+              {
+                "assetRole": "customer.placeholder-logo",
+                "alt": "Meadowwick",
+                "ref": "generate:placeholder-logo-20"
+              }
+            ]
+          },
+          {
+            "label": "Search",
+            "logos": [
+              {
+                "assetRole": "customer.placeholder-logo",
+                "alt": "Sandpiper Health",
+                "ref": "generate:placeholder-logo-21"
+              },
+              {
+                "assetRole": "customer.placeholder-logo",
+                "alt": "Larkspur Labs",
+                "ref": "generate:placeholder-logo-22"
+              },
+              {
+                "assetRole": "customer.placeholder-logo",
+                "alt": "Mapleton Supply",
+                "ref": "generate:placeholder-logo-23"
+              },
+              {
+                "assetRole": "customer.placeholder-logo",
+                "alt": "Windmere Retail",
+                "ref": "generate:placeholder-logo-24"
+              }
+            ]
+          },
+          {
+            "label": "Home",
+            "logos": [
+              {
+                "assetRole": "customer.placeholder-logo",
+                "alt": "Stonebridge Care",
+                "ref": "generate:placeholder-logo-25"
+              },
+              {
+                "assetRole": "customer.placeholder-logo",
+                "alt": "Eastcombe Media",
+                "ref": "generate:placeholder-logo-26"
+              },
+              {
+                "assetRole": "customer.placeholder-logo",
+                "alt": "Brackenhall Bank",
+                "ref": "generate:placeholder-logo-27"
+              },
+              {
+                "assetRole": "customer.placeholder-logo",
+                "alt": "Harbourly",
+                "ref": "generate:placeholder-logo-28"
+              },
+              {
+                "assetRole": "customer.placeholder-logo",
+                "alt": "Ravenscar Tools",
+                "ref": "generate:placeholder-logo-29"
+              },
+              {
+                "assetRole": "customer.placeholder-logo",
+                "alt": "Summitton",
+                "ref": "generate:placeholder-logo-30"
+              }
+            ]
+          }
+        ],
+        "cta": {
+          "label": "Save my seat",
+          "href": "#"
+        }
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "event.photo-band",
+      "variant": "default",
+      "content": {
+        "image": {
+          "assetRole": "photo.generated-scene",
+          "alt": "Editor beside a live preview of the page",
+          "ref": "generate:generated-scene-31"
+        }
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "event.quote-band",
+      "variant": "default",
+      "content": {
+        "quote": "Reviewers see the same preview that readers will see, so surprises stay rare.",
+        "name": "Maren",
+        "role": "Head of Operations"
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "event.closing-band",
+      "variant": "default",
+      "content": {
+        "title": "Know what changed and why",
+        "body": "Built-in checks run on every change and report problems in words people can act on.",
+        "cta": {
+          "label": "Join the list",
+          "href": "#"
+        }
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "section": "shell.event-footer",
+      "variant": "default",
+      "content": {
+        "wordmark": {
+          "assetRole": "brand.placeholder-mark",
+          "alt": "Wren",
+          "ref": "generate:placeholder-mark-32"
+        },
+        "columns": [
+          {
+            "links": [
+              {
+                "label": "Sign up",
+                "href": "/sign-up-b463"
+              },
+              {
+                "label": "Book a session",
+                "href": "#"
+              },
+              {
+                "label": "Learn more",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "links": [
+              {
+                "label": "Get started",
+                "href": "#"
+              },
+              {
+                "label": "Talk to us",
+                "href": "#"
+              },
+              {
+                "text": "See how it works",
+                "label": "Read the guide",
+                "href": "mailto:hello@wrenly.example"
+              }
+            ]
+          }
+        ],
+        "tagline": "Tools that stay out of your way",
+        "copyright": "See the whole picture at a glance"
+      },
+      "motion": {
+        "pattern": "static",
+        "reducedMotionFallback": "none-needed"
+      }
+    }
+  ]
+}

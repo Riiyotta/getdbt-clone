@@ -9045,8 +9045,12 @@
       "cite": "src/index.css:418-429"
     },
     {
-      "claim": "T5-T17 render the ComingSoon stand-in",
-      "cite": "src/App.jsx:25-34"
+      "claim": "T1-T17 are all registered page components (the earlier claim that T5-T17 render the ComingSoon stand-in is obsolete); ComingSoon only serves the '*' catch-all route",
+      "cite": "src/App.jsx:24-40"
+    },
+    {
+      "claim": "ComingSoon is also the guard for a route that has no content entry; every one of the 70 non-home routes has one (checked against src/routes.js and src/content/pages/*.js)",
+      "cite": "src/pages/templates/Sections.jsx:155-159"
     },
     {
       "claim": "homepage hero stroke and hidden video thumbnail intentionally not built",

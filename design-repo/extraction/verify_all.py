@@ -10,6 +10,7 @@ Checks (each prints PASS/FAIL/WARN):
                      chrome variant per route == template == src/Layout.jsx CHROME (+ pins); (sibling clone present) routes.json ==
                      src/routes.js paths + '/' and the implemented templates == src/App.jsx registry
   TEMPLATES          implemented templates have nodes; pending have none; template.routes == routes.json mapping
+  GENERATED_COVERAGE every implemented template (so every family) has a mode:generated example; manifest scope lists == templates.json
   ALLOWLIST_PARITY   allowlist ids == primitives/components/sections files; section 'settable' == contract + schema; version parity
   GRAPH_AGREEMENT    compatibility/graph.json rule ids == semantic_validate.GRAPH_RULES_IMPLEMENTED
   PINS               availability + forbidden-all-modes + retrieval pins: this file == semantic_validate == registries
@@ -211,6 +212,25 @@ for tid, t in templates.items():
         if ids[:len(sv.CHROME_HEADS[t["chrome"]])] != sv.CHROME_HEADS[t["chrome"]] or (sv.CHROME_TAILS[t["chrome"]] and ids[-len(sv.CHROME_TAILS[t["chrome"]]):] != sv.CHROME_TAILS[t["chrome"]]):
             errs.append(f"{tid}: node list does not open/close with the shell nodes of chrome {t['chrome']!r}")
 rec("TEMPLATES", errs)
+
+# ---------------------------------------------------------------- GENERATED_COVERAGE (R4: one generation-safe example per template family)
+errs = []
+gen_by_template = {}
+for f in sorted((REPO / "schema/examples/generated").glob("*.json")):
+    d = json.loads(f.read_text())
+    gen_by_template.setdefault(d["template"], []).append(f.name)
+for tid, t in templates.items():
+    if t["status"] == "implemented" and tid not in gen_by_template:
+        errs.append(f"{tid} ({t['name']}, family {t['family']}) is implemented but has no mode:generated example")
+for tid in gen_by_template:
+    if tid not in templates:
+        errs.append(f"generated example for unknown template {tid}")
+sc = manifest.get("scope", {})
+if sc.get("implementedTemplates") != [t for t, d in templates.items() if d["status"] == "implemented"]:
+    errs.append("manifest scope.implementedTemplates != templates.json status 'implemented'")
+if sc.get("pendingTemplates") != [t for t, d in templates.items() if d["status"] == "pending"]:
+    errs.append("manifest scope.pendingTemplates != templates.json status 'pending'")
+rec("GENERATED_COVERAGE", errs, info=f"{len(gen_by_template)}/{len(templates)} templates have a generated example, {len({t['family'] for t in templates.values()})} families")
 
 # ---------------------------------------------------------------- ALLOWLIST_PARITY
 errs = []
@@ -469,7 +489,7 @@ rec("WRAPPER_GATE", E, W, info=str(S))
 errs = []
 WIN_HOME = re.escape("C:" + "\\" + "Users" + "\\")  # built from pieces so this line never matches itself
 HOMES = "|".join("/" + d + r"/[A-Za-z0-9._-]+/" for d in ("Users", "home"))  # pieces, so a plain grep of this file stays clean
-ABS = re.compile(HOMES + r"|/private/(tmp|var)/|" + WIN_HOME)
+ABS = re.compile(HOMES + "|/pri" + r"vate/(tmp|var)/|" + WIN_HOME)  # pieces, so a plain grep of this file stays clean
 for p in REPO.rglob("*"):
     if p.is_file():
         if p.name in (".DS_Store", "Thumbs.db", "desktop.ini") or "__MACOSX" in p.parts or "__pycache__" in p.parts or p.suffix == ".pyc":

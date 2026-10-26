@@ -1,6 +1,6 @@
 {
   "repositoryId": "lattice-structural-clone.design-repo",
-  "repositoryVersion": "1.0.0",
+  "repositoryVersion": "1.1.0",
   "pageSpecVersion": "1.0.0",
   "allowlistVersion": "1.0.0",
   "versionFieldNote": "allowlistVersion is machine-checked (extraction/verify_all.py fails unless it equals tokens/llm/component-allowlist.json version); pageSpecVersion is machine-checked against the schema's const. repositoryVersion is documentation-only and hand-maintained.",
@@ -44,7 +44,7 @@
       "T17"
     ],
     "pendingTemplates": [],
-    "note": "pending templates are registered with routes and draft sequences only; no contracts were invented for components the clone has not built (src/App.jsx renders ComingSoon for them)."
+    "note": "all 18 templates (T0-T17) are implemented in the clone (src/App.jsx registers T1-T17, T0 is the index route) and every one has section contracts, a reference example per route and a mode:generated example. No template is pending; the 'pending' status is kept in the schema for a future template that is registered before its contracts exist. src/pages/ComingSoon.jsx remains only as the catch-all for unknown paths and the guard for a route without a content entry."
   },
   "counts": {
     "tokensInCatalog": 306,
@@ -68,7 +68,7 @@
     "graphRules": 15,
     "allowlistEntries": 106,
     "referenceExamples": 71,
-    "generatedExamples": 2,
+    "generatedExamples": 18,
     "measuredRoutes1440": 71
   },
   "entryPoints": {

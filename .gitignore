@@ -13,3 +13,6 @@ recon/
 __MACOSX/
 __pycache__/
 *.pyc
+
+# design-repo.zip is a generated artifact; never commit it beside the live folder (it goes stale)
+design-repo.zip
