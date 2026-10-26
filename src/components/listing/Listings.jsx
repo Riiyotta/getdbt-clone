@@ -180,12 +180,9 @@ export function OnDemandListing({ items, placeholder, options, search, empty, mo
   const [loading, setLoading] = useState(false)
   const [count, setCount] = useState(perPage)
   const timers = useRef([])
-  const first = useRef(true)
   useEffect(() => {
-    if (first.current) {
-      first.current = false
-      return undefined
-    }
+    // nothing to fetch when the controls already match the shown results (mount, StrictMode re-run)
+    if (filter === applied.filter && q === applied.q) return undefined
     const run = () => {
       setLoading(true)
       const t = setTimeout(() => {

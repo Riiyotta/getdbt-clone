@@ -35,7 +35,18 @@ export default function Inline({ text }) {
         {m[1]}
       </InlineLink>
     )
-    return <Fragment key={i}>{p}</Fragment>
+    // "\n" in plain text renders as a line break (whitepaper body paragraph)
+    const lines = p.split('\n')
+    return (
+      <Fragment key={i}>
+        {lines.map((l, j) => (
+          <Fragment key={j}>
+            {j > 0 && <br />}
+            {l}
+          </Fragment>
+        ))}
+      </Fragment>
+    )
   })
 }
 

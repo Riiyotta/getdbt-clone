@@ -217,10 +217,10 @@ export const reportBlocks = [
     'Full methodology and question list are in the downloadable report.',
     'Anonymised aggregate tables are included as a spreadsheet.',
   ]],
-  ['img', art.caption2, { caption: 'Respondents by role and region: analytics engineers formed the largest group in every region except South Asia, where data engineers were the most common role. Company size was spread fairly evenly, with slightly more answers from businesses of one to five thousand employees. Full breakdowns, including industry and team size by region, appear in the appendix of the downloadable report.', to: '#' }],
-  ['hr'],
   ['p', 'Thank you to everyone who took the time to answer. The survey only works because thousands of practitioners share their experience openly each year.'],
   ['p', 'The full report includes every chart in this summary, the complete question list and the aggregated tables behind each figure.'],
+  ['img', art.caption2, { caption: 'Respondents by role and region: analytics engineers formed the largest group in every region except South Asia, where data engineers were the most common role. Company size was spread fairly evenly, with slightly more answers from businesses of one to five thousand employees. Full breakdowns, including industry and team size by region, appear in the appendix of the downloadable report.', to: '#' }],
+  ['hr'],
 ]
 
 export const reportForm = {
