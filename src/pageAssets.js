@@ -211,3 +211,38 @@ export const articleImgs = {
   launchAgenda: img('misc/launch-agenda.svg', 1232, 1158, 'Agenda: five sessions with their running times'),
   principles: img('legal/principles.svg', 1832, 874, 'Four principle cards: human review, clear sources, private by default, measured quality'),
 }
+
+// ---------------------------------------------------------------- T14-T17 one-offs (specs/T14-T17.md)
+// Original placeholder artwork under public/assets/oneoffs/ (invented program, event, sponsors and
+// partners; people are abstract illustrated figures).
+const O = '/assets/oneoffs'
+const oimg = (path, width, height, alt = '') => ({ src: `${O}/${path}`, width, height, alt })
+
+export const champions = {
+  wordmark: oimg('champions/wordmark.svg', 428, 42, 'Lattice Pathfinders'),
+  hero: oimg('champions/hero.svg', 1180, 1042, 'Three community members talking around a workshop table'),
+  members: [1, 2, 3].map((n) => oimg(`champions/member-${n}.svg`, 636, 388)),
+  stories: Array.from({ length: 12 }, (_, i) => oimg(`champions/story-${i + 1}.svg`, 736, 414)),
+  icons: Object.fromEntries(['sparkle', 'book', 'team', 'globe', 'flask'].map((n) => [n, img(`icons/${n}.svg`, 32, 32)])),
+  light: Object.fromEntries(['badge', 'key', 'team', 'heart'].map((n) => [n, oimg(`champions/icon-${n}-light.svg`, 32, 32)])),
+  avatar: img('people/avatar-5.svg', 480, 480),
+}
+
+export const summit = {
+  logo: oimg('summit/logo.svg', 666, 108, 'Forge 2026'),
+  wordmark: oimg('summit/footer-wordmark.svg', 1662, 528, 'Forge'),
+  portraits: [oimg('summit/portrait-left.svg', 389, 660), oimg('summit/portrait-right.svg', 389, 660)],
+  photos: Array.from({ length: 14 }, (_, i) => oimg(`summit/photo-${i + 1}.svg`, 610, 458)),
+  audience: oimg('summit/audience.svg', 1440, 960, 'A packed keynote hall seen from the back rows'),
+  sponsors: {
+    t1: [['tier1-1', 'Corvane', 180, 80], ['tier1-2', 'Hexwell', 220, 80], ['tier1-3', 'Plinth', 300, 80]],
+    t2: [['tier2-1', 'Halyard', 300, 56], ['tier2-2', 'Cinderpath Cloud', 300, 48], ['tier2-3', 'Quillmark', 300, 65], ['tier2-4', 'Veridian Ops', 300, 52]],
+    t3: [['tier3-1', 'Orbitry', 140, 30], ['tier3-2', 'Nimbal', 150, 28], ['tier3-3', 'Glasswing', 150, 34], ['tier3-4', 'Kettle AI', 150, 30], ['tier3-5', 'Moraine', 110, 44], ['tier3-6', 'Brightfold', 140, 21]],
+  },
+}
+for (const k of ['t1', 't2', 't3']) summit.sponsors[k] = summit.sponsors[k].map(([f, alt, w, h]) => oimg(`summit/sponsor-${f}.svg`, w, h, alt))
+
+export const directory = {
+  logos: Array.from({ length: 27 }, (_, i) => oimg(`directory/partner-${i + 1}.svg`, 320, [90, 120, 70, 100][i % 4])),
+  badges: { Pioneer: oimg('directory/badge-gold.svg', 64, 64), Builder: oimg('directory/badge-silver.svg', 64, 64) },
+}

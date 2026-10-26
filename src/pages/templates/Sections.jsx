@@ -49,6 +49,27 @@ import GuideHeader from '../../components/article/GuideHeader'
 import { GuideBody, PostBody } from '../../components/article/ArticleBody'
 import FormHeader from '../../components/form/FormHeader'
 import { PolicyBody, PolicyHeader } from '../../components/legal/Policy'
+import { AddOns, PlanCards, PlanMatrix } from '../../components/oneoffs/pricing/Pricing'
+import {
+  ChampAbout,
+  ChampClosing,
+  ChampHero,
+  ChampItems,
+  ChampMembers,
+  ChampQuote,
+  ChampStories,
+} from '../../components/oneoffs/champions/Champions'
+import {
+  EventClosing,
+  EventHero,
+  EventMarquee,
+  EventMedia,
+  EventQuote,
+  EventRecap,
+  EventRows,
+  EventSponsors,
+} from '../../components/oneoffs/summit/Summit'
+import { DirHeader, Directory } from '../../components/oneoffs/directory/Directory'
 import ComingSoon from '../ComingSoon'
 
 // Section type (as used in src/content/pages/*.js) -> component
@@ -108,6 +129,27 @@ const registry = {
   formHeader: FormHeader,
   policyHeader: PolicyHeader,
   policyBody: PolicyBody,
+  // T14-T17 (specs/T14-T17.md B)
+  planCards: PlanCards,
+  addOns: AddOns,
+  planMatrix: PlanMatrix,
+  champHero: ChampHero,
+  champAbout: ChampAbout,
+  champMembers: ChampMembers,
+  champItems: ChampItems,
+  champQuote: ChampQuote,
+  champStories: ChampStories,
+  champClosing: ChampClosing,
+  eventHero: EventHero,
+  eventMarquee: EventMarquee,
+  eventRecap: EventRecap,
+  eventRows: EventRows,
+  eventSponsors: EventSponsors,
+  eventMedia: EventMedia,
+  eventQuote: EventQuote,
+  eventClosing: EventClosing,
+  dirHeader: DirHeader,
+  directory: Directory,
 }
 
 // Renders the content entry for the current route as an ordered list of sections.

@@ -1,0 +1,107 @@
+/* ------------------------------------------------------------------ */
+/* T14-T17 one-off pages (specs/T14-T17.md). Kept out of index.css.    */
+/* ------------------------------------------------------------------ */
+
+/* ---------------- T16 event microsite: theme scoped to the summit root ---------------- */
+.summit {
+  --summit-ink: #000;
+  --summit-orange: #fe6703;
+  --summit-pink: #ec71f6;
+  --summit-citron: #d8ff33;
+  --summit-bg: #fff;
+  --summit-fg: #111827;
+  --summit-container-wide-max-width: 1728px;
+  /* lockup box: 100vw - 4rem below 640, 340 at >=640, 440 x 71.35 at >=768, 493 x 80 at >=1280 */
+  --summit-logo-w: calc(100vw - 4rem);
+  --summit-logo-h: calc(var(--summit-logo-w) * 108 / 666);
+  --summit-logo-notch: calc(var(--summit-logo-h) * 39.8588 / 108);
+  background: var(--summit-bg);
+  color: var(--summit-fg);
+  font-family: Inter, Arial, sans-serif;
+}
+@media (min-width: 640px) {
+  .summit { --summit-logo-w: 340px; }
+}
+@media (min-width: 768px) {
+  .summit { --summit-logo-w: 440px; --summit-logo-h: 71.35px; }
+}
+@media (min-width: 1280px) {
+  .summit { --summit-logo-w: 493px; --summit-logo-h: 80px; }
+}
+.summit ::selection { background: var(--summit-citron); color: #000; }
+
+.summit-display { font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 500; }
+.summit-btn { font-family: 'Be Vietnam Pro', Archivo, Arial, sans-serif; font-weight: 800; }
+.summit-container-wide { width: 100%; max-width: var(--summit-container-wide-max-width); margin-inline: auto; }
+
+/* hero tucked under the nav: the full logo height below 1024, the logo notch at >=1024 */
+.summit-hero-tuck {
+  margin-top: calc(-1 * var(--summit-logo-h));
+  padding-top: var(--summit-logo-h);
+}
+@media (min-width: 1024px) {
+  .summit-hero-tuck {
+    margin-top: calc(-1 * var(--summit-logo-notch));
+    padding-top: var(--summit-logo-notch);
+  }
+}
+
+/* photo marquee: one set (14 photos + gaps) plus one gap per loop, 75.83s linear infinite */
+@keyframes scroll-sponsors {
+  from { transform: translate(0); }
+  to { transform: translateX(var(--scroll-width, -50%)); }
+}
+.animate-scroll-images {
+  --scroll-width: -3528px; /* 14 x 240 + 14 x 12 */
+  animation: scroll-sponsors 75.83s linear infinite;
+}
+@media (min-width: 768px) {
+  .animate-scroll-images { --scroll-width: -4550px; } /* 14 x 305 + 14 x 20 */
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll-images { animation: none; }
+}
+
+/* purple / black pixel dither (quote band top strip, footer strip) */
+.summit-dither {
+  background-color: #000;
+  background-image:
+    conic-gradient(#632ff5 25%, transparent 0 50%, #632ff5 0 75%, transparent 0),
+    conic-gradient(#632ff5 25%, transparent 0 50%, #632ff5 0 75%, transparent 0);
+  background-size: 6px 6px, 18px 12px;
+  background-position: 0 0, 3px 6px;
+}
+/* footer pixel strip: orange -> pink heat band with stepped pixels; blue / white checker */
+.summit-heat {
+  background-image:
+    conic-gradient(#ec71f6 25%, transparent 0 50%, #ec71f6 0 75%, transparent 0),
+    linear-gradient(90deg, #fe6703 0%, #fe6703 45%, #ec71f6 100%);
+  background-size: 14px 14px, 100% 100%;
+  background-position: right 0 top 0, 0 0;
+  background-repeat: repeat-y, no-repeat;
+}
+.summit-check {
+  background-color: #fff;
+  background-image: conic-gradient(#6b9aff 25%, transparent 0 50%, #6b9aff 0 75%, transparent 0);
+  background-size: 56px 28px;
+}
+.summit-tile {
+  background-color: #632ff5;
+  background-image:
+    conic-gradient(#000 25%, transparent 0 50%, #000 0 75%, transparent 0),
+    conic-gradient(#9c79ff 25%, transparent 0 50%, #9c79ff 0 75%, transparent 0);
+  background-size: 14px 14px, 28px 28px;
+  background-position: 0 0, 7px 7px;
+}
+
+/* ---------------- T17 partner directory: filter group collapse (height .35s ease) ---------------- */
+.mp-collapse {
+  overflow: hidden;
+  transition: height 0.35s;
+}
+.mp-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
