@@ -353,7 +353,7 @@ export default {
           { title: 'Catch issues before your stakeholders do', body: 'Tests and freshness checks run on every build, so broken data is stopped and fixed before it reaches a single dashboard, report or customer-facing metric.' },
           { title: 'Show where every number comes from', body: 'Column-level lineage traces each figure back to its source rows, so you can answer “where did this come from?” in seconds.' },
           { title: 'Make ownership visible to everyone', body: 'Every model has a named owner and a description, so people know who to ask and teams stop guessing about responsibility.' },
-          { title: 'Review every change before it ships', body: 'Changes go through pull requests with real data previews, so reviewers see the impact on downstream reports before approving.' },
+          { title: 'Inspect every change before release', body: 'Changes go through pull requests with real data previews, so reviewers see the impact on downstream reports before approving.' },
           { title: 'Agree on one definition of each metric', body: 'Metrics are defined once and served everywhere, ending the meetings spent arguing about whose version of revenue is right.' },
         ],
       },

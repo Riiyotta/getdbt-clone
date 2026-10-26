@@ -745,7 +745,7 @@
             "body": "Every model has a named owner and a description, so people know who to ask and teams stop guessing about responsibility."
           },
           {
-            "title": "Review every change before it ships",
+            "title": "Inspect every change before release",
             "body": "Changes go through pull requests with real data previews, so reviewers see the impact on downstream reports before approving."
           },
           {
