@@ -87,7 +87,7 @@ export default function CtaBand({ eyebrow, title, body, primary, secondary, asid
                 {checklist.map((row, k) => (
                   <li key={row} {...reveal(100 + 100 * k, 'flex items-center gap-x-2')}>
                     <CheckMark className="shrink-0 text-white" />
-                    <span {...reveal(300 + 100 * k, 'font-sans text-2xl font-normal text-white')}>{row}</span>
+                    <span {...reveal(300 + 100 * k, 'ml-2 font-sans text-2xl font-normal text-white')}>{row}</span>
                   </li>
                 ))}
               </ul>

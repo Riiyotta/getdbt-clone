@@ -22,10 +22,10 @@ export default function Leaders({ title, people, linkLabel }) {
               <div className="w-full">
                 <h3 className="heading-3 !mb-0 text-ink-950">{p.name}</h3>
                 <p className="mb-2 text-base text-ink-600">{p.role}</p>
-                <SiteLink to={p.to || '#'} className="button text medium w-auto pb-2 pl-0 pr-4 pt-0 hover:text-ink-950 hover:underline">
+                <SiteLink to={p.to || '#'} className="button text medium mb-2 w-fit pb-2 pl-0 pr-4 pt-0 hover:text-ink-950 hover:underline">
                   {linkLabel}
                 </SiteLink>
-                <div className="text-base text-ink-950 [&>*]:mb-6">
+                <div className="text-base text-ink-950 [&>*]:mb-6 [&>*:last-child]:mb-0">
                   {p.bio.map((t) => (
                     <p key={t}>{t}</p>
                   ))}

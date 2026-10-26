@@ -23,13 +23,13 @@ export default function IntStrip({ kicker, title, tiles, cta }) {
                   aria-label={t.alt}
                   className="flex items-center gap-2 rounded-2xl border border-ink-200 p-4 transition-all duration-300 ease-standard hover:border-ink-400"
                 >
-                  <Img a={t} alt="" className="h-[30px] max-w-[30px] rounded-2xl object-contain md:h-10 md:max-w-10" />
+                  <Img a={t} alt="" className="h-[30px] max-w-[30px] rounded-2xl object-contain md:h-10 md:max-w-[40px]" />
                 </SiteLink>
               ))}
             </div>
           </div>
-          <div {...reveal(400, 'mt-12')}>
-            <Btn cta={cta} variant="primary" size="medium" />
+          <div {...reveal(400, 'mt-12 w-full md:w-auto')}>
+            <Btn cta={cta} variant="primary" size="medium" className="w-full md:w-auto" />
           </div>
         </div>
       </div>

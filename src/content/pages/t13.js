@@ -112,7 +112,7 @@ export default {
         stroke: 'S10',
         gradient: 'gradient-01',
         eyebrow: 'Why Lattice', // 11
-        title: 'The trusted way to model your data.', // 37/2
+        title: 'The dependable way to model your data.', // 37/2
         // 216/3
         lead: 'Lattice turns scattered SQL into a shared, versioned project by borrowing the habits of software engineering. A fast engine compiles and runs every model, so analysts, engineers and agents can build on the same trusted work.',
         primary: cta('Get Lattice', '/signup'), // 11
@@ -129,18 +129,18 @@ export default {
         cards: [
           {
             icon: icons.shield,
-            title: 'Reliable from the first commit', // 17-32
+            title: 'Reliable from day one', // 17-32
             body: 'Every model is versioned, reviewed and tested before it reaches production. Problems surface in the editor or in review, not in a meeting with your stakeholders the following week.', // 114-186
           },
           {
             icon: icons.layers,
-            title: 'Built on open foundations',
-            body: 'Plain SQL and YAML in a git repository, running on the data platform you already pay for. Develop locally from a terminal or in the browser, and take your project anywhere.',
+            title: 'Open at every layer',
+            body: 'Plain SQL and YAML in a git repository, running on the data platform you already pay for. Develop locally or in the browser, and take it anywhere.',
           },
           {
             icon: icons.bolt,
             title: 'Quick to compile, cheap to run',
-            body: 'Large projects compile in seconds, and each run touches only the models that moved, so builders sit idle less and the warehouse burns fewer credits overall.',
+            body: 'Large projects compile in seconds, and each run touches only the models that moved, so the warehouse burns fewer credits.',
           },
         ],
       },
@@ -148,12 +148,12 @@ export default {
         type: 'tabsDark',
         stroke: 'S2',
         gradient: 'gradient-01',
-        title: 'Everything a team needs to ship data work.', // 38/2
+        title: 'Everything you need to ship data work.', // 38/2
         tabs: [
           {
             title: 'Models written in plain SQL', // 17-30
             // 170/3
-            body: 'Write each transformation as a select statement. Lattice works out the order to build them in, creates the tables and views, and keeps every dependency straight for you.',
+            body: 'Write each transformation as a plain select statement. Lattice works out the order to build them in, creates the tables and views, and keeps every single dependency straight for you.',
             media: tabsDark[1],
           },
           {
@@ -182,11 +182,11 @@ export default {
         type: 'split',
         variant: 'textLeft',
         eyebrow: 'One engine, everywhere', // 19
-        title: 'The engine behind it all', // 27/1
+        title: 'The engine that powers it all', // 27/1
         paragraphs: [
           // 301/4
-          'The open engine at the heart of Lattice reads your project, works out the dependency graph and compiles every model into SQL your warehouse understands. It runs the same way on a laptop, in a scheduled job or inside an agent workflow, so the result you preview while developing matches what runs in production every night.',
-          ['Teams start for free with ', { b: 'the open-source engine' }, ' and move to the hosted platform when they need more.'],
+          'The open engine inside Lattice reads your project, works out the dependency graph and compiles every model into SQL your warehouse understands. It runs the same way on a laptop, in a scheduled job or inside an agent workflow, so what you preview while building matches exactly what runs in production.',
+          ['Most teams start with ', { b: 'the open-source engine' }, ' and add the hosted platform as they grow.'],
         ],
         primary: cta('Install the engine', '/learn'), // 16
         tertiary: cta('Read docs', '/learn'), // 10
@@ -199,14 +199,14 @@ export default {
         title: 'Run the engine with a full team around it', // 32/2
         paragraphs: [
           // 292/4
-          'The hosted platform adds everything a growing team needs around the engine: a browser editor and visual canvas, scheduled jobs, alerts, a searchable catalog, governed metrics and an assistant that knows your project. Administrators get single sign-on, permissions and audit logs without running any servers.',
+          'The hosted platform adds what a growing team needs around the engine: a browser editor and visual canvas, scheduled jobs, alerts, a searchable catalog, governed metrics and an assistant that knows your project. Administrators get single sign-on, permissions and audit logs too.',
         ],
         primary: cta('Try it free', '/signup'), // 10
         media: crop(heroes.mesh, 612, 613),
       },
       {
         type: 'custTabs',
-        title: 'Proof from teams like yours', // 16
+        title: 'Proof from real teams', // 16
         stories: [
           story({
             name: 'Kestrel', // 9-18
@@ -216,12 +216,12 @@ export default {
             // 175/4
             summary: 'Kestrel moved four hundred production models onto state-aware builds and rebuilt its review process around small pull requests, cutting run times and catching issues sooner.',
             // 360/10
-            quote: 'We used to watch the nightly load creep past breakfast while everyone argued about which dashboard to believe. Moving the project onto Lattice changed both problems at once. Only the models that actually changed are rebuilt, every number arrives before the first meeting, and when something does look wrong we can trace it to a specific commit in a minute or two.',
+            quote: 'We used to watch the nightly load creep past breakfast while everyone argued about which dashboard to believe. Moving the project onto Lattice changed both of those problems at once. Only the models that actually changed are rebuilt, every number arrives before the first meeting, and when something looks wrong we can trace it to a specific commit in minutes.',
             person: 'Priya Raman',
             role: 'Head of Analytics Engineering',
             stats: [
               { number: '52%', label: 'shorter nightly runs after the move to state-aware builds' },
-              { number: '3x', label: 'more models shipped each sprint with tests and docs' },
+              { number: '2.5x', label: 'more models shipped each sprint with tests and docs' },
             ],
           }),
           story({
@@ -284,10 +284,10 @@ export default {
         eyebrow: 'Ready when you are. Start for free', // 32
         title: 'Build your first trusted model today', // 36/2
         // 177/2
-        body: 'Install the open engine on your laptop or open a free hosted workspace in your browser. Either way your project stays yours, in plain files you can move whenever you want.',
+        body: 'Install the open engine on your laptop or open a free hosted workspace in your browser. Either way your project stays yours, in plain files you can move or copy whenever you want.',
         primary: cta('Create an account', '/signup'), // 18
         secondary: cta('Install the open engine now', '/learn'), // 27
-        checklist: ['Free to start, no card', 'Runs on your data platform', 'Open, portable project files'], // 23-30
+        checklist: ['Free to start, no card', 'Runs on your data stack', 'Open, portable project files'], // 23-30
       },
     ],
   },

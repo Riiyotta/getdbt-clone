@@ -38,19 +38,19 @@ const learnMore = {
     {
       icon: icons.heart,
       title: 'Our values', // 9-17
-      body: 'The habits and commitments that shape how we hire, decide, ship and support each other every week.', // 74-113
+      body: 'The habits and commitments that shape how we hire, decide and ship together.', // 74-113
       cta: cta('Read our values', '/about-us/values'),
     },
     {
       icon: icons.book,
       title: 'Newsroom',
-      body: 'Announcements, coverage and product launches, gathered for reporters and curious readers alike.',
+      body: 'Official announcements, press coverage and launch notes, in one place for reporters and interested readers alike.',
       cta: cta('Visit the newsroom', '/press'),
     },
     {
       icon: icons.chart,
       title: 'Customer stories',
-      body: 'See how analytics teams of every size put Lattice to work and ship dependable, well-tested data products faster than before.',
+      body: 'See how analytics teams of every size put Lattice to work and ship trusted data faster.',
       cta: cta('Read customer stories', '/case-studies'),
     },
   ],
@@ -190,10 +190,10 @@ export default {
         people: [
           {
             name: 'Maya Okonkwo', // 10-15
-            role: 'Co-founder and Chief Executive Officer',
+            role: 'Co-founder, CEO',
             avatar: { ...avatars[0], alt: 'Illustrated portrait of Maya Okonkwo' },
             bio: [
-              'Maya started Lattice after a decade of running analytics teams that spent more time reconciling numbers than answering questions. She leads company strategy and still reviews the product roadmap every week with the teams who build it. Before Lattice she ran data platforms at two fast-growing marketplaces and taught evening classes on practical statistics.',
+              'Maya started Lattice after a decade of running analytics teams that spent more time reconciling numbers than answering questions. She leads company strategy and still reviews the product roadmap every week with the teams who build it. Before Lattice she ran data platforms at two fast-growing marketplaces, taught evening classes on practical statistics at a community college, and wrote a short field guide to metric definitions that is still passed around by new analysts.',
             ],
           },
           {
@@ -201,7 +201,7 @@ export default {
             role: 'Chief Revenue Officer',
             avatar: { ...avatars[3], alt: 'Illustrated portrait of Daniel Fairbourne' },
             bio: [
-              'Daniel leads sales, partnerships and customer success worldwide. He has spent twenty years helping software companies grow from their first enterprise customers to global teams, most recently as a regional sales leader at an infrastructure company. He cares most about customers who stay because the product earns it, and he coaches a youth football team on weekends.',
+              'Daniel leads sales, partnerships and customer success worldwide. He has spent twenty years helping software companies grow from their first enterprise customers to global teams, most recently as a regional sales leader at an infrastructure company. He cares most about customers who stay because the product earns it, and he asks every account team to spend time with practitioners rather than only buyers. Away from work he coaches a youth football team on weekends and keeps a well-used allotment garden that supplies most of his family’s summer vegetables.',
             ],
           },
           {
@@ -209,19 +209,19 @@ export default {
             role: 'Chief Product Officer',
             avatar: { ...avatars[1], alt: 'Illustrated portrait of Ingrid Solvang' },
             bio: [
-              'Ingrid leads product management, design and research. She joined Lattice from a developer tools company where she built the team behind its collaborative editor, and before that she worked as a data engineer at a public transit agency.',
-              'At Lattice she focuses on making the platform feel simple for a first-time analyst while staying powerful enough for teams that run thousands of models every day. She spends part of every week on calls with customers, and many roadmap items begin as notes from those conversations.',
-              'She holds a degree in human factors engineering, still writes SQL for her own team reporting, and mentors product managers who are moving into developer tools.',
+              'Ingrid leads product management, design and research. She joined Lattice from a developer tools company where she built the team behind its collaborative editor, and before that she worked as a data engineer at a public transit agency, where she rebuilt the ridership reporting that planners relied on every morning to schedule buses and trains across the whole regional network.',
+              'At Lattice she focuses on making the platform feel simple for a first-time analyst while staying powerful enough for large teams that run thousands of models every day. Many roadmap items begin as notes from her weekly customer calls.',
+              'She holds a degree in human factors engineering and still writes SQL for her own team reporting every quarter, mostly in the editor.',
             ],
           },
           {
             name: 'Rafael Mendonça',
-            role: 'Chief Technology Officer',
+            role: 'Chief Technology Officer and co-founder',
             avatar: { ...avatars[7], alt: 'Illustrated portrait of Rafael Mendonça' },
             bio: [
-              'Rafael leads engineering, infrastructure and security. He spent the early part of his career building query planners and storage engines, and later led the platform group at a large payments company, where his teams ran systems that processed billions of events a day.',
-              'At Lattice he oversees the engine, the hosted platform and the reliability practices behind them. He is a strong believer in boring, well-tested infrastructure and in giving engineers the time to fix what slows them down, and he publishes a short engineering update for the whole company every month.',
-              'Outside of work he restores old bicycles, volunteers as a mentor for early-career engineers, and helps organize a regional conference on database internals that welcomes first-time speakers.',
+              'Rafael leads engineering, infrastructure and security. He spent the early part of his career building query planners and storage engines, and later led the platform group at a large payments company, where his teams ran systems that processed billions of events a day across several regions and clouds.',
+              'At Lattice he oversees the engine, the hosted platform and the reliability practices behind them. He is a strong believer in boring, well-tested infrastructure and in giving engineers the time to fix what slows them down, and he publishes a short engineering update for the whole company every month. Outside of work he restores old bicycles, volunteers as a mentor for early-career engineers, and helps organize a regional conference on database internals that welcomes first-time speakers every year and keeps ticket prices low for students.',
+              'He lives near the coast with his family, two very loud rescue dogs and a patient old cat.',
             ],
           },
           {
@@ -229,7 +229,7 @@ export default {
             role: 'Chief People Officer',
             avatar: { ...avatars[4], alt: 'Illustrated portrait of Hana Whitlock' },
             bio: [
-              'Hana leads recruiting, people operations and workplace programs for a fully distributed company. She previously built people teams at two remote-first software firms and is happiest when a new hire says onboarding felt clear and human.',
+              'Hana leads recruiting, people operations and workplace programs for a fully distributed company. She previously built people teams at two remote-first software firms and is happiest when a new hire says onboarding felt clear and human. At Lattice she introduced written career frameworks, twice-yearly team gatherings and a mentoring program that pairs every new manager with an experienced peer.',
             ],
           },
           {
@@ -237,7 +237,7 @@ export default {
             role: 'Chief Financial Officer',
             avatar: { ...avatars[5], alt: 'Illustrated portrait of Theo Achterberg' },
             bio: [
-              'Theo leads finance, legal and business operations. He joined from a cloud software company where he guided the finance team through rapid international growth, and he started his career as an auditor. He believes a good forecast is a shared story about the business, written in numbers everyone can check for themselves. Outside the office he is an enthusiastic, if slow, long-distance runner and a volunteer treasurer for a local food bank, where he has kept the books balanced for six years running.',
+              'Theo leads finance, legal and business operations. He joined from a cloud software company where he guided the finance team through rapid international growth, and he started his career as an auditor. He believes a good forecast is a shared story about the business, written in numbers everyone can check for themselves, and he holds an open office hour each month for anyone who wants to understand how the company plans and spends. Outside the office he is an enthusiastic, if slow, long-distance runner and a volunteer treasurer for a local food bank, where he has kept the books balanced for six years running.',
             ],
           },
         ],
@@ -257,7 +257,7 @@ export default {
       {
         type: 'ctaBand',
         title: 'Start building with Lattice.', // 25/1
-        body: 'Plan, test and ship dependable data pipelines from the first model to a thousand of them.', // 92/1
+        body: 'Plan, test and ship dependable data pipelines, from your very first model to a thousand of them.', // 92/1
         primary: cta('Create a free account', '/signup'), // 20
         secondary: cta('Book your demo', '/contact'), // 14
         aside: asideCommunity,

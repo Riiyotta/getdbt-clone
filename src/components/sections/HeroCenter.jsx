@@ -6,7 +6,8 @@ import { PlayCircle } from '../icons'
 // below (1036 column). `square` = T4: image wrapper max-w 80%, header `lg:pb-0` (image flush bottom).
 // T12-T13 variants (specs/T12-T13.md B): text-only (no media); `title` / `lead` given as arrays
 // render as stacked block spans (self-hosting); `illustration` = inline-SVG stand-in with no radius;
-// `poster` = 1036-wide framed 16:9 placeholder (bg-blur, 1px #e5e7eb, r12, p-2) with a centred
+// `poster` = 1036-wide framed 16:9 placeholder (bg-blur, 1px #e5e7eb, r12, no padding: the
+// original's Lottie frame is 1036x584 holding a 1034x582 animation) with a centred
 // 80px play glyph (56 below 768), as specced in H for what-is-lattice.
 const lines = (v) => (Array.isArray(v) ? v.map((t) => <span key={t} className="block">{t}</span>) : v)
 
@@ -35,7 +36,7 @@ export default function HeroCenter({
             <h1 className="heading-1 text-ink-950">{lines(title)}</h1>
             {lead && <p className="lead mt-6 text-ink-950">{lines(lead)}</p>}
             {(primary || secondary) && (
-              <div className="mt-6 flex w-full flex-col justify-center gap-3 md:mt-10 md:w-auto md:flex-row">
+              <div className="mt-6 flex w-full flex-col justify-center gap-3 md:mt-10 md:w-auto md:flex-row md:items-center">
                 <Btn cta={primary} variant="primary" size="large" />
                 <Btn cta={secondary} variant="secondary" size="large" />
               </div>
@@ -62,8 +63,8 @@ export default function HeroCenter({
               )}
               {illustration && <Img a={illustration} priority className="mx-auto block h-auto w-full" />}
               {poster && (
-                <div className="rounded-xl border border-ink-200 bg-blur p-2 backdrop-blur-md">
-                  <div className="relative aspect-video w-full overflow-hidden rounded-lg" role="img" aria-label={poster.alt}>
+                <div className="overflow-hidden rounded-xl border border-ink-200 bg-blur backdrop-blur-md">
+                  <div className="relative aspect-video w-full overflow-hidden" role="img" aria-label={poster.alt}>
                     <Img a={poster} priority alt="" className="absolute inset-0 h-full w-full object-cover" />
                     <PlayCircle className="absolute left-1/2 top-1/2 size-14 -translate-x-1/2 -translate-y-1/2 text-orange-600 md:size-20" />
                   </div>

@@ -34,14 +34,14 @@ export default function HeroSplit({
           <div className={`col-span-full md:col-span-4 ${wide ? 'lg:col-span-7' : 'lg:col-span-6'}`}>
             {lockup && <Img a={lockup} eager className="mb-4 block max-h-[46px] w-auto object-contain" />}
             {badge && (
-              <span className="mb-4 inline-block rounded-badge bg-purple-100 p-1 font-mono text-xs font-medium text-purple-600">
+              <span className="mb-4 inline-block align-top rounded-badge bg-purple-100 p-1 font-mono text-xs font-medium text-purple-600">
                 {badge}
               </span>
             )}
             <h1 className="heading-1 mb-4 text-ink-950 lg:mb-6">{title}</h1>
             {lead && <p className={bigLead ? 'font-sans text-2xl font-normal text-ink-950' : 'lead text-ink-950'}>{lead}</p>}
             {(primary || secondary) && (
-              <div className="mt-8 flex flex-col gap-3 md:mt-10 md:flex-row">
+              <div className="mt-8 flex flex-col gap-3 md:mt-10 md:flex-row md:items-center">
                 <Btn cta={primary} variant="primary" size="large" />
                 <Btn cta={secondary} variant="secondary" size="large" />
               </div>

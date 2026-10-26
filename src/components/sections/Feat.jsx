@@ -21,7 +21,7 @@ import { Btn, Img, SectionHeader, TextLink } from './parts'
 //  `cols4` = the 4-column grid (294 cards). No header -> the grid starts 80 below the padding.
 
 function CardLink({ card, dark }) {
-  return <TextLink cta={card.cta} shift dark={dark} className="mt-auto w-full justify-between" />
+  return <TextLink cta={card.cta} shift dark={dark} className="mt-auto w-full justify-between pr-4" />
 }
 
 function Title({ card, className, dark }) {
