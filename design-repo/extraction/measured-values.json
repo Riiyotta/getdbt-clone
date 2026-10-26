@@ -8963,7 +8963,7 @@
       "cite": "src/hooks/useScrollReveal.js:3-11"
     },
     {
-      "claim": "specs/T1-T4.md T3: redshift (clone /data-platforms/northwind) section 2 is a statement 'without diagram (831)'",
+      "claim": "specs/T1-T4.md T3: the first platform page (clone /data-platforms/northwind), section 2 is a statement 'without diagram (831)'",
       "holds": "partially",
       "finding": "the clone renders a 16:9 video poster there (content comment: 'the original embeds a video player here'); measured 831.2px, matching the spec height. The spec wording omits the media block; contracts follow the code (content.statement#video).",
       "cite": "src/content/pages/t3.js:125-144"
@@ -9009,6 +9009,78 @@
       "holds": false,
       "finding": "the current clone renders the tabs-dark stroke `idle` (no draw-on; fill hidden at >=768), per a later measurement of the original noted in Baton.jsx. Changed by a concurrent motion pass during this build; features.tabs-dark motion is tabs.instant only.",
       "cite": "src/components/sections/Baton.jsx:20-22"
+    },
+    {
+      "claim": "PAGES.md / earlier IA: the summit page keeps the announcement bar and the global footer",
+      "holds": false,
+      "finding": "chrome 'event' renders only the summit sub-nav and the summit footer (no announcement bar, no global footer); the design-repo models it as its own shell nodes and chrome variant.",
+      "cite": "src/Layout.jsx:12-28"
+    },
+    {
+      "claim": "earlier IA: the partner directory has the global chrome",
+      "holds": false,
+      "finding": "chrome 'none': a 64px minimal nav and no footer.",
+      "cite": "src/Layout.jsx:39-48"
+    },
+    {
+      "claim": "PAGES.md: the self-hosted page has 6 comparison tables",
+      "holds": false,
+      "finding": "5 compareTable sections (asserted from src/content/pages/t13.js at build time).",
+      "cite": "src/content/pages/t13.js:334-335"
+    },
+    {
+      "claim": "PAGES.md: /product/lattice has dark tabs",
+      "holds": false,
+      "finding": "no tabsDark on the page (asserted at build time); it has a 6-card dark card grid (features.card-grid#border-card, surface dark).",
+      "cite": "src/content/pages/t13.js:119-120"
+    },
+    {
+      "claim": "earlier IA: the integrations directory has a filter",
+      "holds": false,
+      "finding": "no filter control exists; it is eight logo-card grids (features.card-grid#logo-card) in a row.",
+      "cite": "src/content/pages/t13.js:23-24"
+    },
+    {
+      "claim": "earlier IA: pricing has one FAQ, a billing toggle and a highlighted plan",
+      "holds": false,
+      "finding": "two FAQ accordions in a row, no toggle, four equal plan cards with no highlighted plan (asserted at build time).",
+      "cite": "src/components/oneoffs/pricing/Pricing.jsx:11-54"
+    },
+    {
+      "claim": "T14-T17 spec: the champions page has its own typeface",
+      "holds": false,
+      "finding": "it uses the site's standard families (font-sans / font-mono classes only; the summit-scoped fonts live in oneoffs.css under .summit).",
+      "cite": "src/components/oneoffs/champions/Champions.jsx:203-209"
+    },
+    {
+      "claim": "earlier IA: community.dark-quote-slider is a slider and community.story-grid is a grid",
+      "holds": false,
+      "finding": "the quote is one static quote with no controls (community.dark-quote); the stories are a draggable no-loop slider of 12 cards (community.story-slider).",
+      "cite": "src/components/oneoffs/champions/Champions.jsx:230-309"
+    },
+    {
+      "claim": "earlier IA: cta.champions-closing is a dark band",
+      "holds": false,
+      "finding": "half #fe6703 and half white (the section wrapper bg is ink-950 but both halves paint over it).",
+      "cite": "src/components/oneoffs/champions/Champions.jsx:321-349"
+    },
+    {
+      "claim": "earlier IA: event.highlight-cards are cards and event.media-block is a media block",
+      "holds": false,
+      "finding": "they are hairline-separated rows (event.highlight-rows) and a single photo (event.photo-band).",
+      "cite": "src/components/oneoffs/summit/Summit.jsx:131-158"
+    },
+    {
+      "claim": "T4 hero strokes draw on load like the other heroes",
+      "holds": false,
+      "finding": "the T4 heroes set idleStroke: they never draw and the fill stays hidden at >=768.",
+      "cite": "src/content/pages/t4.js:20"
+    },
+    {
+      "claim": "the developer-path dialog is unused",
+      "holds": false,
+      "finding": "hero buttons with dialog: true open it on /product/lattice, /product/governance, /product/integrations and /security; the leave animation (200ms ease-out) runs before unmount and the overlay has no transition.",
+      "cite": "src/content/pages/t13.js:9"
     }
   ],
   "citations": [

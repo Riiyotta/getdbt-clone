@@ -44,7 +44,12 @@
       "T17"
     ],
     "pendingTemplates": [],
-    "note": "pending templates are registered with routes and draft sequences only; no contracts were invented for components the clone has not built (src/App.jsx renders ComingSoon for them)."
+    "chromeVariants": {
+      "full": "T0-T15",
+      "event": "T16 (/summit)",
+      "none": "T17 (/partner-directory)"
+    },
+    "note": "every template T0-T17 and all 71 routes are implemented in the clone (src/App.jsx registers T1-T17); nothing is pending."
   },
   "counts": {
     "tokensInCatalog": 306,
@@ -68,7 +73,8 @@
     "graphRules": 15,
     "allowlistEntries": 106,
     "referenceExamples": 71,
-    "generatedExamples": 2,
+    "generatedExamples": 4,
+    "themes": 2,
     "measuredRoutes1440": 71
   },
   "entryPoints": {

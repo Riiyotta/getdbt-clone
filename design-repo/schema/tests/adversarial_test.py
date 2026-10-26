@@ -30,6 +30,17 @@ REF_T3 = J("schema/examples/reference/data-platforms--northwind.pagespec.json")
 REF_HOME = J("schema/examples/reference/home.pagespec.json")
 GEN_HOME = J("schema/examples/generated/home.generated.pagespec.json")
 GEN_T1 = J("schema/examples/generated/product-feature.generated.pagespec.json")
+GEN_ART = J("schema/examples/generated/article.generated.pagespec.json")
+GEN_LEGAL = J("schema/examples/generated/legal.generated.pagespec.json")
+REF_SUMMIT = J("schema/examples/reference/summit.pagespec.json")
+REF_DIR = J("schema/examples/reference/partner-directory.pagespec.json")
+REF_LAT = J("schema/examples/reference/product--lattice.pagespec.json")
+REF_POST = J("schema/examples/reference/blog--summit-announcements.pagespec.json")
+REF_GUIDE = J("schema/examples/reference/resources--analytics-lifecycle.pagespec.json")
+REF_BLOG = J("schema/examples/reference/blog.pagespec.json")
+REF_PRICING = J("schema/examples/reference/pricing.pagespec.json")
+REF_CASE = J("schema/examples/reference/case-studies--kestrel.pagespec.json")
+REF_CONTACT = J("schema/examples/reference/contact.pagespec.json")
 
 
 def idx(s, section, nth=0):
@@ -84,7 +95,7 @@ case("list over observed max", REF_T1, lambda s: node(s, "features.tabs-dark")["
 
 # ---------------------------------------------------------------- structural / template linkage
 case("template/node mismatch (T1 page declared as T3)", REF_T1, setp(["template"], "T3"), "TEMPLATE_SEQUENCE")
-case("pending template", REF_T1, setp(["template"], "T8"), "TEMPLATE_PENDING")
+case("pending template (registry status flipped)", REF_T1, lambda s: None, "TEMPLATE_PENDING", lambda r: r["templates"]["T1"].update(status="pending"))
 case("required section removed", REF_T1, lambda s: s["nodes"].pop(idx(s, "editorial.resource-cards")), "TEMPLATE_SEQUENCE")
 case("sections reordered", REF_T1, lambda s: s["nodes"].insert(idx(s, "features.tabs-dark"), s["nodes"].pop(idx(s, "editorial.resource-cards"))), "TEMPLATE_SEQUENCE")
 case("second hero", REF_T1, lambda s: s["nodes"].insert(idx(s, "hero.split") + 1, copy.deepcopy(node(s, "hero.split"))), "ONE_HERO")
@@ -97,17 +108,17 @@ case("reference route not mapped to template", REF_T1, setp(["route"], "/product
 case("variant not allowed at this template position", REF_T1, lambda s: node(s, "hero.split").update(variant="flush"), "TEMPLATE_SEQUENCE")
 
 # ---------------------------------------------------------------- content contract
-case("maxWords overflow on a real field", REF_T1, lambda s: node(s, "hero.split")["content"].update(title="one two three four five six seven eight nine"), "MAX_WORDS")
+case("maxWords overflow on a real field", REF_T1, lambda s: node(s, "hero.split")["content"].update(title=" ".join(["word"] * 40)), "MAX_WORDS")
 case("maxChars overflow on a real field", REF_T1, lambda s: node(s, "content.media-split")["content"].update(eyebrow="x" * 41), "SCHEMA")
 case("variant forbidden field (flush hero with badge)", REF_T3, lambda s: node(s, "hero.split")["content"].update(badge="New"), "VARIANT_FORBIDDEN_FIELD")
-case("variant required field missing", REF_T1, lambda s: node(s, "content.media-split")["content"].pop("primary"), "VARIANT_REQUIRED_FIELD")
+case("variant required field missing", REF_T1, lambda s: node(s, "hero.split")["content"].pop("title"), "VARIANT_REQUIRED_FIELD")
 case("unknown variant", REF_T1, lambda s: node(s, "features.tabs-dark").update(variant="carousel"), "SCHEMA")
 case("variant list size (single quote band with 2 quotes)", J("schema/examples/reference/industry--healthcare.pagespec.json"),
      lambda s: node(s, "social-proof.quote-band")["content"]["quotes"].append(copy.deepcopy(node(s, "social-proof.quote-band")["content"]["quotes"][0])), "VARIANT_LIST_SIZE")
 
 # ---------------------------------------------------------------- motion
 case("motion pattern not allowed for section", REF_T1, lambda s: node(s, "hero.split").update(motion={"pattern": "marquee.loop", "reducedMotionFallback": "static-row"}), "MOTION_PATTERN_NOT_ALLOWED")
-case("required motion pattern missing", REF_T1, lambda s: node(s, "hero.split").update(motion={"pattern": "static", "reducedMotionFallback": "none-needed"}), "MOTION_REQUIRED_PATTERN")
+case("required motion pattern missing", REF_T1, lambda s: node(s, "features.tabs-dark").update(motion={"pattern": "static", "reducedMotionFallback": "none-needed"}), "MOTION_REQUIRED_PATTERN")
 
 # ---------------------------------------------------------------- retrieval eligibility (node / contract / allowlist)
 case("runtime UI marked retrievable at node level", REF_T1, lambda s: node(s, "shell.mega-menu").update(retrievalEligible=True), "RUNTIME_UI_INELIGIBLE")
@@ -157,6 +168,54 @@ case("source-specific CTA", GEN_T1, lambda s: node(s, "cta.closing-band")["conte
 case("original site brand (reference mode)", REF_T1, lambda s: node(s, "hero.split")["content"].update(title="Build with dbt Labs."), "SOURCE_REAL_IDENTITY")
 case("real third-party platform name (reference mode)", REF_T3, lambda s: node(s, "hero.split")["content"].update(lead="Northwind, now on Snowflake."), "SOURCE_REAL_IDENTITY")
 case("original domain (generated mode)", GEN_HOME, lambda s: node(s, "editorial.news-band")["content"]["action"].update(href="https://www.getdbt.com/blog"), "SOURCE_REAL_IDENTITY")
+
+# ---------------------------------------------------------------- T5-T17: chrome variants, theme, hero exceptions, dialog, overlays, new pins
+def add_footer(s):
+    s["nodes"].append(copy.deepcopy(REF_HOME["nodes"][-1]))
+
+
+case("event page closed with the global footer", REF_SUMMIT, add_footer, "SHELL_ORDER")
+case("event page without its event footer", REF_SUMMIT, lambda s: s["nodes"].pop(), "SHELL_ORDER")
+case("event page opened with the global navbar", REF_SUMMIT, lambda s: s["nodes"].__setitem__(0, copy.deepcopy(REF_HOME["nodes"][1])), "CHROME_VARIANT")
+case("directory page given a footer", REF_DIR, add_footer, "CHROME_VARIANT")
+case("full-chrome page opened with the minimal nav", REF_T1, lambda s: s["nodes"].__setitem__(0, copy.deepcopy(REF_DIR["nodes"][0])), "SHELL_ORDER")
+case("event theme missing on the event page", REF_SUMMIT, setp(["theme"], "light"), "TEMPLATE_THEME")
+case("event theme on a full-chrome page", REF_T1, setp(["theme"], "event"), "TEMPLATE_THEME")
+case("route chrome pin: summit declared as another template", REF_SUMMIT, setp(["template"], "T17"), "CHROME_VARIANT")
+case("hero added to a hero-less template", REF_BLOG, lambda s: s["nodes"].insert(4, copy.deepcopy(node(REF_T1, "hero.split"))), "ONE_HERO")
+case("hero-less page on a template that needs one", REF_T1, lambda s: s["nodes"].pop(idx(s, "hero.split")), "ONE_HERO")
+case("two heroes on the champions page", J("schema/examples/reference/champions.pagespec.json"), lambda s: s["nodes"].insert(5, copy.deepcopy(node(s, "hero.champions-dark"))), "ONE_HERO")
+case("adjacent duplicate of a non-repeatable variant (pricing matrix)", REF_PRICING, lambda s: s["nodes"].insert(idx(s, "comparison.plan-matrix"), copy.deepcopy(node(s, "comparison.plan-matrix"))), "NO_ADJACENT_IDENTICAL")
+case("consecutive allowance removed from the contract (registry)", REF_PRICING, lambda s: None, "NO_ADJACENT_IDENTICAL", lambda r: r["contracts"]["interactive.faq-accordion"]["constraints"].update(consecutiveVariants=[]))
+case("action opens the dialog but the page has no dialog node", REF_LAT, lambda s: s["nodes"].pop(idx(s, "cta.dev-path-dialog")), "DIALOG_PAIRING")
+case("dialog node on a template that has no dialog slot", REF_T1, lambda s: s["nodes"].insert(idx(s, "shell.footer"), copy.deepcopy(node(REF_LAT, "cta.dev-path-dialog"))), "TEMPLATE_SEQUENCE")
+case("dialog node on a page where no action opens it", J("schema/examples/reference/product--state.pagespec.json"), lambda s: s["nodes"].insert(idx(s, "shell.footer"), copy.deepcopy(node(REF_LAT, "cta.dev-path-dialog"))), "DIALOG_PAIRING")
+case("dialog marked retrievable at node level", REF_LAT, lambda s: node(s, "cta.dev-path-dialog").update(retrievalEligible=True), "RUNTIME_UI_INELIGIBLE")
+case("progress bar marked retrievable at node level", REF_POST, lambda s: node(s, "article.progress-bar").update(retrievalEligible=True), "RUNTIME_UI_INELIGIBLE")
+case("category bar marked retrievable at node level", REF_BLOG, lambda s: node(s, "listing.category-nav").update(retrievalEligible=True), "RUNTIME_UI_INELIGIBLE")
+case("dialog contract flipped to eligible (registry)", REF_LAT, lambda s: None, "RETRIEVAL_PIN_MISMATCH", lambda r: r["contracts"]["cta.dev-path-dialog"].update(retrievalEligible=True))
+case("category-nav allowlist flipped to eligible (registry)", REF_BLOG, lambda s: None, "RETRIEVAL_PIN_MISMATCH", lambda r: [e.update(retrievalEligible=True) for e in r["allowlist"]["entries"] if e["id"] == "listing.category-nav"])
+case("content contract marked ineligible (listing grid, registry)", REF_BLOG, lambda s: None, "RETRIEVAL_PIN_MISMATCH", lambda r: r["contracts"]["listing.hub-grid"].update(retrievalEligible=False))
+case("runtime-looking contract not pinned (tooltip title, registry)", REF_PRICING, lambda s: None, "RETRIEVAL_PIN_MISMATCH", lambda r: r["contracts"]["pricing.add-ons"].update(title="Add-on tooltip cards"))
+case("article sequence mixes post and guide parts", REF_POST, lambda s: s["nodes"].__setitem__(idx(s, "article.post-body"), copy.deepcopy(node(REF_GUIDE, "article.guide-body"))), "TEMPLATE_SEQUENCE")
+case("T7 listing with two different listing grids", J("schema/examples/reference/events.pagespec.json"), lambda s: s["nodes"].insert(idx(s, "listing.event-grid") + 1, copy.deepcopy(node(J("schema/examples/reference/case-studies.pagespec.json"), "listing.case-grid"))), "TEMPLATE_SEQUENCE")
+case("form block with a field its kind does not have", REF_CONTACT, lambda s: node(s, "form.form-header")["content"]["blocks"][0].update(items=[]), "SCHEMA")
+case("invented prose block kind", REF_POST, lambda s: node(s, "article.post-body")["content"]["blocks"].append({"kind": "carousel", "text": "x"}), "SCHEMA")
+case("enum style value outside contract (event theme cannot set stroke)", REF_CASE, lambda s: node(s, "article.story-body")["style"].update(chapterLevel="h6"), "SCHEMA")
+case("closed form field type", REF_CONTACT, lambda s: node(s, "form.form-header")["content"]["form"]["fields"][0].update(type="slider"), "SCHEMA")
+case("href scheme outside the allowed set", REF_T1, lambda s: node(s, "cta.closing-band")["content"]["primary"].update(href="javascript:alert(1)"), "SCHEMA")
+case("registry loosens partner.wordmark to generation-safe", GEN_ART, lambda s: None, "REGISTRY_PIN_MISMATCH", lambda r: r["roles"]["roles"]["partner.wordmark"].update(availability="generation-safe"))
+case("new role missing from the code pins (registry gains a role)", GEN_ART, lambda s: None, "REGISTRY_PIN_MISMATCH", lambda r: r["roles"]["roles"].update({"sponsor.hero": copy.deepcopy(r["roles"]["roles"]["partner.wordmark"])}))
+case("event mark reused in a generated page", GEN_T1, lambda s: node(s, "shell.navbar")["content"]["brandMark"].update(assetRole="brand.event-mark"), "GENERATED_MODE_ASSET")
+case("article figure from the clone in a generated page", GEN_ART, lambda s: node(s, "article.post-body")["content"]["header"]["author"]["avatar"].update(ref="/assets/pages/people/avatar-1.svg"), "GENERATED_MODE_ASSET")
+case("clone person as article author (generated)", GEN_ART, lambda s: node(s, "article.post-body")["content"]["header"]["author"].update(name="Rhea Castellano"), "GENERATED_MODE_PERSON")
+case("clone sentence in a generated legal body", GEN_LEGAL, lambda s: node(s, "legal.policy-body")["content"]["blocks"][1].update(text=J("schema/examples/reference/modern-slavery-statement.pagespec.json")["nodes"][5]["content"]["blocks"][1]["text"]), "GENERATED_MODE_COPY")
+case("source mail domain in a generated page", GEN_ART, lambda s: node(s, "cta.community-band")["content"]["primary"].update(href="mailto:team@example.com"), "GENERATED_MODE_URL")
+case("original-site name in a generated article", GEN_ART, lambda s: node(s, "article.post-body")["content"]["header"].update(title="Why dbt Labs reviews every table change"), "SOURCE_REAL_IDENTITY")
+case("generated article over a block text budget", GEN_ART, lambda s: node(s, "article.post-body")["content"]["blocks"][0].update(text=" ".join(["word"] * 400)), "MAX_WORDS")
+case("unknown section on an event page", REF_SUMMIT, lambda s: s["nodes"].insert(3, {"section": "event.sponsor-wall", "variant": "default", "content": {}, "motion": {"pattern": "static", "reducedMotionFallback": "none-needed"}}), "SCHEMA")
+case("sticky pattern on a section that does not allow it", REF_SUMMIT, lambda s: node(s, "event.recap").update(motion={"pattern": "sticky.pin", "reducedMotionFallback": "none-needed"}), "MOTION_PATTERN_NOT_ALLOWED")
+case("wrong reduced-motion fallback for the linked scale", J("schema/examples/reference/champions.pagespec.json"), lambda s: node(s, "hero.champions-dark")["motion"].update(reducedMotionFallback="unchanged"), "SCHEMA")
 
 CONTROLS = [(p.relative_to(REPO), json.loads(p.read_text())) for p in sorted((REPO / "schema/examples").rglob("*.json"))] + [("schema/example.pagespec.json", J("schema/example.pagespec.json"))]
 

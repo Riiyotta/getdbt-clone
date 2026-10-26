@@ -32,7 +32,8 @@ Status: **design-review-pending**, not production-approved. Version 1.0.0 (PageS
  "graphRules": 15,
  "allowlistEntries": 106,
  "referenceExamples": 71,
- "generatedExamples": 2,
+ "generatedExamples": 4,
+ "themes": 2,
  "measuredRoutes1440": 71
 }
 ```
@@ -40,11 +41,15 @@ Status: **design-review-pending**, not production-approved. Version 1.0.0 (PageS
 
 ## Scope
 
-- Implemented and contracted: tokens, site chrome (announcement bar, sticky nav, mega-menus, mobile drawer, footer),
-  the homepage (T0) and templates T1 product feature, T2 solution, T3 data platform, T4 industry (71 routes).
-- Registered as `status: pending` (routes + draft section sequences from the project's page inventory, no contracts):
-   (0 routes). They render a "being built" stand-in in the clone today; a later revision
-  must add their sections (decomposed per `decompositionNote`, never whole-page/whole-article sections) and flip them to implemented.
+- All 18 templates (T0-T17) and all 71 routes are implemented and contracted: tokens, three chrome variants (full: announcement bar, sticky nav,
+  mega-menus, mobile drawer, footer; event: summit sub-nav + summit footer, no announcement bar, no global footer; none: minimal nav, no footer),
+  84 section contracts, 71 reference PageSpecs (one per route) and 4 generation-safe examples.
+- Template families: marketing (T0-T4, T12-T14), content (T5-T8 stories, listings, articles), conversion (T9 asset landing, T10 forms),
+  legal (T11), community program (T15), event microsite (T16), partner directory (T17).
+- Page-specific openers (listing header, story/guide header, form header, policy header, plan cards, directory header) are classified LISTING / ARTICLE /
+  FORM / LEGAL / PRICING / DIRECTORY, not HERO; the hero-less templates are named exceptions in the ONE_HERO rule.
+- Long single-DOM bodies (articles, guides, listings, policy text) are one section each, decomposed logically by chapter in their contract; 11 measured
+  hits above 60% of their page carry reviewed whitelist entries in extraction/measured-values.json (agent attestation, not a human sign-off).
 - Source stack (documentation only): React ^18.3.1 + Vite ^5.4.10 + Tailwind CSS ^3.4.14 (tailwind.config.cjs, CommonJS) + react-router-dom ^6.28.0 (package.json ranges); dev server port 5197. Nothing in the contracts depends on it.
 
 ## Content and licensing (read before generating)
@@ -68,11 +73,11 @@ commercial face). This repo contains **no** copy, logos, photos or brand artwork
 ```
 registry.manifest.json      status, versions, counts, entry points (all inside this folder)
 tokens/00-foundation/       colour, typography, radius, spacing(+container), breakpoint, elevation(+blur), motion, gradient, stroke, icon-size, z-index, motion-patterns
-tokens/10-semantic|20-component|30-layout|themes/light.json
+tokens/10-semantic|20-component|30-layout|themes/light.json + event.json
 tokens/llm/                 token-catalog.json, token-policy.json, component-allowlist.json
 primitives/ components/     building blocks with evidence
 sections/                   one closed contract per semantic section (source vs semantic split, variants, budgets, motion, responsive, measured heights)
-templates/templates.json    T0-T4 node patterns + T5-T17 pending
+templates/templates.json    T0-T17 node patterns (slots, sequences), chrome + theme per template
 routes/routes.json          every served route mapped once, redirects, fallback
 compatibility/graph.json    rhythm/position rules (each implemented in the validator)
 assets/asset-roles.json     closed media/link/copy roles with 3-way availability + licensing
@@ -95,7 +100,8 @@ degrade to warnings. To rebuild the clone itself use its lockfile: `npm ci && np
 
 ## Known gaps (recorded, not hidden)
 
-- Pixel parity against the live original was not measured in this build; geometric parity against the specs' recorded original
-  heights is in `extraction/measured-values.json` (`specParity`): within 2px at 1440 on all representatives, larger below 1440.
-- The clone's announcement autoplay and sliders have no reduced-motion rule (`tokens/00-foundation/motion-patterns.json` gap notes).
-- T15 (dark theme) and T16 (event sub-nav) will need a second theme and a chrome variant when built.
+- Pixel parity against the live original was not measured; geometric parity against the specs' recorded heights exists for the T0-T4 representatives
+  only (extraction/measured-values.json `specParity`: within 2px at 1440 except as listed, larger below 1440). T5-T17 have measured clone heights, no parity numbers.
+- The event theme loads its three fonts from a public font-stylesheet host at runtime (src/components/chrome/EventChrome.jsx); every other page is request-free.
+- Announcement autoplay and sliders have no reduced-motion rule (motion-patterns.json gap notes).
+- Forms never submit; the partner locator, listing filters and pricing tooltips are static client-side mocks (contract `runtimeUi`).

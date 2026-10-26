@@ -361,6 +361,19 @@ if SIBLING:
         tok = typo.get(f"font.size.{k}")
         if tok is None or tok["value"] != size or tok.get("lineHeight") != lh:
             errs.append(f"font.size.{k} drifted from tailwind.config.cjs ({size}/{lh})")
+    css1 = (PROJECT / "src/styles/oneoffs.css").read_text()
+    for var, tok in (("ink", "color.summit.ink"), ("orange", "color.summit.orange"), ("pink", "color.summit.pink"), ("citron", "color.summit.citron"), ("bg", "color.summit.bg"), ("fg", "color.summit.fg")):
+        m1 = re.search(rf"--summit-{var}: (#[0-9a-fA-F]{{3,6}})", css1)
+        v1 = m1 and m1.group(1).lower()
+        if v1 and len(v1) == 4:
+            v1 = "#" + "".join(ch * 2 for ch in v1[1:])
+        if tok not in cat or v1 is None or cat[tok]["value"].lower() != v1:
+            errs.append(f"{tok} = {cat.get(tok, {}).get('value')} but src/styles/oneoffs.css --summit-{var} is {v1}")
+    tw2 = (PROJECT / "tailwind.config.cjs").read_text()
+    for name, tok in (("danger", "color.danger"), ("pink: \\{ 700", "color.pink.700")):
+        m2 = re.search(rf"\b{name}: '(#[0-9a-fA-F]{{6}})'", tw2)
+        if not m2 or cat.get(tok, {}).get("value", "").lower() != m2.group(1).lower():
+            errs.append(f"{tok} drifted from tailwind.config.cjs")
 else:
     warns.append("no sibling tailwind.config.cjs: token-vs-source drift not checked")
 rec("TOKENS", errs, warns, info=f"{len(cat)} catalog tokens, {len(cats)} categories")
@@ -441,7 +454,7 @@ want = {
     "routes": len(paths), "routesImplemented": sum(1 for r in routes_doc["routes"] if r["status"] == "implemented"), "routesPending": sum(1 for r in routes_doc["routes"] if r["status"] == "pending"),
     "redirects": len(routes_doc["redirects"]), "assetRoles": len(roles), "assetRolesGenerationSafe": sum(1 for d in roles.values() if d["availability"] == "generation-safe"),
     "graphRules": len(repo["graph"]["rules"]), "allowlistEntries": len(al["entries"]), "referenceExamples": len(list((REPO / "schema/examples/reference").glob("*.json"))),
-    "generatedExamples": gen_n, "measuredRoutes1440": len(J("extraction/measured-values.json")["sectionHeights"]["routes"]),
+    "generatedExamples": gen_n, "themes": len(list((REPO / "tokens/themes").glob("*.json"))), "measuredRoutes1440": len(J("extraction/measured-values.json")["sectionHeights"]["routes"]),
 }
 if manifest["counts"] != want:
     errs.append(f"manifest counts drifted: " + ", ".join(f"{k} {manifest['counts'].get(k)}!={v}" for k, v in want.items() if manifest["counts"].get(k) != v) + (f" (keys {sorted(set(manifest['counts']) ^ set(want))})" if set(manifest["counts"]) != set(want) else ""))
