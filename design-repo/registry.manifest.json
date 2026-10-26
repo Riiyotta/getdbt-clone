@@ -44,7 +44,12 @@
       "T17"
     ],
     "pendingTemplates": [],
-    "note": "all 18 templates (T0-T17) are implemented in the clone (src/App.jsx registers T1-T17, T0 is the index route) and every one has section contracts, a reference example per route and a mode:generated example. No template is pending; the 'pending' status is kept in the schema for a future template that is registered before its contracts exist. src/pages/ComingSoon.jsx remains only as the catch-all for unknown paths and the guard for a route without a content entry."
+    "chromeVariants": {
+      "full": "T0-T15",
+      "event": "T16 (/summit)",
+      "none": "T17 (/partner-directory)"
+    },
+        "note": "all 18 templates (T0-T17) are implemented in the clone (src/App.jsx registers T1-T17, T0 is the index route) and every one has section contracts, a reference example per route and a mode:generated example. No template is pending; the 'pending' status is kept in the schema for a future template that is registered before its contracts exist. src/pages/ComingSoon.jsx remains only as the catch-all for unknown paths and the guard for a route without a content entry."
   },
   "counts": {
     "tokensInCatalog": 306,
@@ -69,6 +74,7 @@
     "allowlistEntries": 106,
     "referenceExamples": 71,
     "generatedExamples": 18,
+    "themes": 2,
     "measuredRoutes1440": 71
   },
   "entryPoints": {

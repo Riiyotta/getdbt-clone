@@ -33,6 +33,7 @@ Status: **design-review-pending**, not production-approved. Version 1.1.0 (PageS
  "allowlistEntries": 106,
  "referenceExamples": 71,
  "generatedExamples": 18,
+ "themes": 2,
  "measuredRoutes1440": 71
 }
 ```
@@ -42,6 +43,12 @@ Status: **design-review-pending**, not production-approved. Version 1.1.0 (PageS
 
 - Implemented and contracted: tokens, site chrome (announcement bar, sticky nav, mega-menus, mobile drawer, footer, and the event and minimal chrome variants), and **all 18 templates, T0 to T17 (71 routes)**: homepage; T1 product feature, T2 solution, T3 data platform, T4 industry; T5 case-study detail, T6 content hub listing, T7 filterable card grid, T8 article; T9 asset landing, T10 form, T11 legal prose; T12 company/program, T13 product landing, T14 pricing, T15 community champions, T16 event microsite, T17 partner directory. `templates/templates.json` marks every one `implemented`, `routes/routes.json` marks every route `implemented`, and the sibling clone registers a page component for each (`src/App.jsx`: T0 is the index route, T1-T17 are in its `templates` map; every route has a content entry). 0 templates and 0 routes are pending.
 - `src/pages/ComingSoon.jsx` ("This page is being built") still exists in the clone, but only as the catch-all for paths that are not in the route table and as a guard for a route with no content entry. No served route reaches it. The `pending` template status remains valid in the schema for a future template that is registered before its contracts exist; none uses it today.
+- Template families: marketing (T0-T4, T12-T14), content (T5-T8 stories, listings, articles), conversion (T9 asset landing, T10 forms),
+  legal (T11), community program (T15), event microsite (T16), partner directory (T17).
+- Page-specific openers (listing header, story/guide header, form header, policy header, plan cards, directory header) are classified LISTING / ARTICLE /
+  FORM / LEGAL / PRICING / DIRECTORY, not HERO; the hero-less templates are named exceptions in the ONE_HERO rule.
+- Long single-DOM bodies (articles, guides, listings, policy text) are one section each, decomposed logically by chapter in their contract; 11 measured
+  hits above 60% of their page carry reviewed whitelist entries in extraction/measured-values.json (agent attestation, not a human sign-off).
 - Source stack (documentation only): React ^18.3.1 + Vite ^5.4.10 + Tailwind CSS ^3.4.14 (tailwind.config.cjs, CommonJS) + react-router-dom ^6.28.0 (package.json ranges); dev server port 5197. Nothing in the contracts depends on it.
 
 ### Generation-safe example coverage (one per template, so one per family)
@@ -92,11 +99,11 @@ commercial face). This repo contains **no** copy, logos, photos or brand artwork
 ```
 registry.manifest.json      status, versions, counts, entry points (all inside this folder)
 tokens/00-foundation/       colour, typography, radius, spacing(+container), breakpoint, elevation(+blur), motion, gradient, stroke, icon-size, z-index, motion-patterns
-tokens/10-semantic|20-component|30-layout|themes/light.json
+tokens/10-semantic|20-component|30-layout|themes/light.json + event.json
 tokens/llm/                 token-catalog.json, token-policy.json, component-allowlist.json
 primitives/ components/     building blocks with evidence
 sections/                   one closed contract per semantic section (source vs semantic split, variants, budgets, motion, responsive, measured heights)
-templates/templates.json    T0-T17 node patterns (all implemented)
+templates/templates.json    T0-T17 node patterns (slots, sequences), chrome + theme per template
 routes/routes.json          every served route mapped once, redirects, fallback
 compatibility/graph.json    rhythm/position rules (each implemented in the validator)
 assets/asset-roles.json     closed media/link/copy roles with 3-way availability + licensing
@@ -128,3 +135,5 @@ This folder is the deliverable. No zip is shipped or tracked: a `design-repo.zip
 - The clone's announcement autoplay and sliders have no reduced-motion rule (`tokens/00-foundation/motion-patterns.json` gap notes).
 - Wrapper gate: 13 pages warn that one section holds more than half of the page (long article, guide, listing and careers pages). 11 are whitelisted with a justification and a height cap, reviewed by a build agent (agent attestation, not a human sign-off); two (`/case-studies/kestrel` article.story-body 54%, `/events` listing.event-grid 60%) are plain warnings below the 60% error line. `verify_all.py` prints the first four; `wrapper_gate.py` returns all 13.
 - Generated examples are shape-faithful but use generic synthesized copy (see above).
+- The event theme loads its three fonts from a public font-stylesheet host at runtime (src/components/chrome/EventChrome.jsx); every other page is request-free.
+- Forms never submit; the partner locator, listing filters and pricing tooltips are static client-side mocks (contract `runtimeUi`).
