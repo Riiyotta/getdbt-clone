@@ -19,7 +19,7 @@ export default function SearchInput({ value, onChange, placeholder, label, class
         <span
           role="button"
           tabIndex={0}
-          aria-label="Clear search"
+          aria-label="Clear search text"
           onClick={() => onChange('')}
           onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
