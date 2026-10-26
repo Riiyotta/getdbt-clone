@@ -49,7 +49,16 @@ export default function CtaBand({ eyebrow, title, body, primary, secondary, asid
               <h2 className="heading-2 mb-4 text-white">{title}</h2>
             </span>
             <span {...reveal(bodyAt)}>
-              <p className="text-base text-white">{body}</p>
+              {/* T7 /case-studies closing band carries two paragraphs (body as an array) */}
+              {Array.isArray(body) ? (
+                body.map((t, i) => (
+                  <p key={i} className={`text-base text-white ${i ? 'mt-4' : ''}`.trim()}>
+                    {t}
+                  </p>
+                ))
+              ) : (
+                <p className="text-base text-white">{body}</p>
+              )}
             </span>
             {buttons.length > 0 && (
               <div {...reveal(buttonsAt, 'mt-8 flex flex-col items-center gap-3 md:flex-row')}>

@@ -39,7 +39,7 @@ export default function BentoCommunity({ title, feature, member, meetup, topics,
               </div>
             </div>
             <p className="text-base text-white">{member.quote}</p>
-            <TextLink cta={member.cta} shift dark className="mt-auto w-full justify-between" />
+            <TextLink cta={member.cta} shift dark className="mt-auto w-full justify-between p-0" />
           </div>
           <div className={`col-span-full flex flex-col lg:col-span-4 ${card}`}>
             <p className="eyebrow-sm pb-10 text-purple-400">{meetup.eyebrow}</p>
@@ -57,7 +57,7 @@ export default function BentoCommunity({ title, feature, member, meetup, topics,
                 <p className="text-xs text-white/50">{meetup.place}</p>
               </div>
             </div>
-            <TextLink cta={meetup.cta} shift dark className="mt-auto w-full justify-between" />
+            <TextLink cta={meetup.cta} shift dark className="mt-auto w-full justify-between p-0" />
           </div>
           <div className={`col-span-full lg:col-span-4 ${card}`}>
             <p className="eyebrow-sm pb-10 text-purple-400">{topics.eyebrow}</p>

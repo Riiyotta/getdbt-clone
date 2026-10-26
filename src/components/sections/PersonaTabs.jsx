@@ -24,7 +24,7 @@ export default function PersonaTabs({ tabs }) {
                     <span className="text-sm text-ink-950">{c.label}</span>
                   </div>
                   <h3 className="heading-4 mb-6 text-ink-950">{c.title}</h3>
-                  <ul className="list-disc pl-8 text-base text-ink-950">
+                  <ul className="list-disc pl-8 text-base text-ink-950 [&>li]:pb-[3px]">
                     {c.items.map((it) => (
                       <li key={it}>{it}</li>
                     ))}

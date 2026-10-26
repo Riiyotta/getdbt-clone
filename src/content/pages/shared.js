@@ -1,3 +1,4 @@
+import { crop } from '../../components/sections/parts'
 // Shared content pools for the T1-T4 templates (original placeholder copy for "Lattice").
 // Lengths follow specs/T1-T4.md; targets are noted per field.
 import { cards as cardImgs, customers, platforms, resources as resImgs, stats as statImgs, tabsDark } from '../../pageAssets'
@@ -190,6 +191,16 @@ export const statsT2 = {
       body: 'Join an open community trading patterns, packages and reviews on how to build better data products.',
     },
   ],
+}
+// T13 (product/lattice section 10, product/integrations section 9): same bento as T2, but the
+// original's second card there has a one-line title and a two-line body, with a 133x173 image.
+export const statsT13 = {
+  ...statsT2,
+  cards: statsT2.cards.map((c, i) =>
+    i === 1
+      ? { ...c, title: '96% recommend', body: 'Rated 4.8 out of 5 by practitioners in production.', image: crop(statImgs.badge, 133, 173) }
+      : c,
+  ),
 }
 export const statsT4 = {
   title: 'Relied on daily. Proven in production.',

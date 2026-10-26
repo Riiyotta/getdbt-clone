@@ -27,12 +27,28 @@ import BentoCommunity from '../../components/sections/BentoCommunity'
 import PhotoTabs from '../../components/sections/PhotoTabs'
 import LogoBar from '../../components/sections/LogoBar'
 import IntStrip from '../../components/sections/IntStrip'
-import IntTiles from '../../components/sections/IntTiles'
+import Integrations from '../../components/Integrations'
 import Install from '../../components/sections/Install'
-import DemoPanel from '../../components/sections/DemoPanel'
+import FeaturePanel from '../../components/FeaturePanel'
 import Journey from '../../components/sections/Journey'
 import PersonaTabs from '../../components/sections/PersonaTabs'
 import CompareTable from '../../components/sections/CompareTable'
+import ListingHeader from '../../components/listing/ListingHeader'
+import CategoryNav from '../../components/listing/CategoryNav'
+import {
+  CaseStudiesListing,
+  EventsListing,
+  HubListing,
+  LatestPosts,
+  OnDemandListing,
+  PressGrid,
+} from '../../components/listing/Listings'
+import StoryHeader from '../../components/article/StoryHeader'
+import { RelatedStories, StoryBody } from '../../components/article/StorySections'
+import GuideHeader from '../../components/article/GuideHeader'
+import { GuideBody, PostBody } from '../../components/article/ArticleBody'
+import FormHeader from '../../components/form/FormHeader'
+import { PolicyBody, PolicyHeader } from '../../components/legal/Policy'
 import ComingSoon from '../ComingSoon'
 
 // Section type (as used in src/content/pages/*.js) -> component
@@ -66,12 +82,32 @@ const registry = {
   photoTabs: PhotoTabs,
   logoBar: LogoBar,
   intStrip: IntStrip,
-  intTiles: IntTiles,
+  // the homepage's labelled tiles and gradient panels are the same components on the original
+  intTiles: Integrations,
   install: Install,
-  demoPanel: DemoPanel,
+  demoPanel: ({ mediaLeft, ...p }) => <FeaturePanel {...p} mediaFirst={mediaLeft} textFirstMobile={false} />,
   journey: Journey,
   personaTabs: PersonaTabs,
   compareTable: CompareTable,
+  // T5-T8 (specs/T5-T8.md A, B)
+  storyHeader: StoryHeader,
+  storyBody: StoryBody,
+  related: RelatedStories,
+  listingHeader: ListingHeader,
+  categoryNav: CategoryNav,
+  hubListing: HubListing,
+  caseStudies: CaseStudiesListing,
+  events: EventsListing,
+  onDemand: OnDemandListing,
+  pressGrid: PressGrid,
+  postBody: PostBody,
+  latestPosts: LatestPosts,
+  guideHeader: GuideHeader,
+  guideBody: GuideBody,
+  // T9-T11 (specs/T9-T11.md B, E)
+  formHeader: FormHeader,
+  policyHeader: PolicyHeader,
+  policyBody: PolicyBody,
 }
 
 // Renders the content entry for the current route as an ordered list of sections.

@@ -32,7 +32,7 @@ export default function HeroSplit({
       <div className="container relative z-10">
         <div className="grid-container items-center">
           <div className={`col-span-full md:col-span-4 ${wide ? 'lg:col-span-7' : 'lg:col-span-6'}`}>
-            {lockup && <Img a={lockup} eager className="mb-4 block max-h-[46px] w-auto object-contain" />}
+            {lockup && <Img a={lockup} eager className="mb-6 block max-h-[46px] w-auto object-contain" />}
             {badge && (
               <span className="mb-4 inline-block align-top rounded-badge bg-purple-100 p-1 font-mono text-xs font-medium text-purple-600">
                 {badge}

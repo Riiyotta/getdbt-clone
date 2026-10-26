@@ -160,3 +160,54 @@ export const illus = {
 
 // Feature screenshots reused from the homepage (1920 wide) for demo panels and 16:9 tab media
 export const shots = assets.features
+
+// ---------------------------------------------------------------- T5-T11 (specs/T5-T8.md C, specs/T9-T11.md F)
+// Original placeholder artwork (generator: scratchpad gen/t5t11.mjs). Customer wordmarks are invented.
+export const covers = Array.from({ length: 24 }, (_, i) => img(`posts/cover-${i + 1}.svg`, 800, 452))
+export const eventImgs = Array.from({ length: 7 }, (_, i) => img(`events/event-${i + 1}.svg`, 640, 336))
+export const sessionImgs = Array.from({ length: 8 }, (_, i) => img(`sessions/session-${i + 1}.svg`, 480, 360))
+export const mediaImgs = Array.from({ length: 6 }, (_, i) => img(`press/media-${i + 1}.svg`, 960, 540))
+// invented customer wordmarks: stacked lockups (every third) are 200x80, the rest 240x64
+export const CUSTOMER_NAMES = [
+  'Larkmoor Bank', 'Northgate Outfitters', 'Pellucid Optics', 'Sablewood Media', 'Aldermoor Insurance', 'Cindervale Games',
+  'Brisa Mobility', 'Wavecrest Studios', 'Juniper Freightways', 'Ostrava Provisions', 'Gildmark Exchange', 'Pinecrest Mutual',
+  'Tessellate Health', 'Lumengrid Power', 'Veridia Energy', 'Saltmarsh Interactive', 'Kinfolk Journeys', 'Arborlane Education',
+  'Quayside Logistics', 'Mosswood Biotech', 'Redfern Therapeutics', 'Silverbirch Capital', 'Tundra Mobile', 'Coralridge Clinics',
+  'Ironbark Mining', 'Wexford Retail Group', 'Hollisgrey Legal', 'Thrushpay', 'Driftwood Stays', 'Cobblestone Grocers',
+  'Cirrusline Air', 'Emberly Foods', 'Granitefield Bank', 'Lanternfish Software', 'Oakhaven Realty', 'Brightmoor Schools',
+  'Halden Motors', 'Velvetine Cosmetics', 'Rookery Publishing', 'Marlow Freight', 'Quenby Labs', 'Tallgrass Agritech',
+  'Seabright Ports', 'Kiteline Telecom', 'Fieldstone Water', 'Pepperell Apparel', 'Norvale Utilities', 'Ashgrove Pharmacy',
+]
+export const customerLogos = Object.fromEntries(
+  CUSTOMER_NAMES.map((name, i) => [name, i % 3 === 2 ? img(`customers/cust-${i + 1}.svg`, 200, 80, name) : img(`customers/cust-${i + 1}.svg`, 240, 64, name)]),
+)
+const chartTitles = [
+  'Data team size', 'Share of the week by activity', 'Teams confident in their data, by year', 'Biggest blockers this year',
+  'Teams using AI help every day', 'Budget outlook for next year', 'Where production models run', 'Models with at least one test',
+  'Data incidents per month', 'Who owns business metrics', 'Tools in the average stack', 'Hiring plans by team size',
+  'Self-serve questions answered', 'Documentation coverage', 'What agents are used for', 'Trust in AI-generated answers',
+  'Weeks until a new hire ships', 'Visibility into warehouse cost', 'How changes get reviewed', 'Teams with data contracts',
+  'Shared metric definitions', 'Stakeholder satisfaction score', 'Skills teams want most', 'Career paths on offer', 'Priorities for next year',
+]
+const chartH = ['bars', 'hbars', 'line', 'hbars', 'donut', 'stack', 'bars', 'bars', 'line', 'donut', 'bars', 'stack', 'line', 'hbars', 'hbars', 'donut', 'bars', 'stack', 'hbars', 'line', 'donut', 'bars', 'hbars', 'stack', 'hbars']
+  .map((k) => (k === 'donut' ? 640 : k === 'hbars' ? 600 : 584))
+export const charts = chartTitles.map((t, i) => img(`charts/chart-${i + 1}.svg`, 1112, chartH[i], `Chart: ${t} (invented sample data)`))
+export const articleImgs = {
+  halcyonFlow: img('story/halcyon-flow.svg', 1600, 800, 'Diagram: sources flowing through staging and mart models to regulatory, assistant and board consumers'),
+  kestrelFlow: img('story/kestrel-flow.svg', 1093, 339, 'Diagram: nightly full reloads replaced by state-aware builds'),
+  summitUi: img('posts/summit-ui.svg', 2048, 1342, 'An editor with a model, passing tests and an assistant suggestion'),
+  lifecycleHero: img('guide/lifecycle-hero.svg', 720, 352, 'The six stages of the lifecycle around the Lattice mark'),
+  reportHero: img('guide/report-hero.svg', 720, 337, 'A bar chart card on a warm gradient'),
+  lifecycle1: img('guide/lifecycle-1.svg', 832, 425, 'Six lifecycle stages as cards'),
+  lifecycle2: img('guide/lifecycle-2.svg', 832, 832, 'The lifecycle drawn as a loop of six stages'),
+  lifecycle3: img('guide/lifecycle-3.svg', 792, 440, 'Four inputs to a well-formed request'),
+  lifecycle4: img('guide/lifecycle-4.svg', 832, 407, 'Five steps from alert to lesson learned'),
+  caption1: img('guide/caption-1.svg', 640, 420, 'Methodology summary card'),
+  caption2: img('guide/caption-2.svg', 640, 420, 'Respondent breakdown card'),
+  poster3: img('misc/poster-3.svg', 1600, 900, 'Video: a walkthrough of the new release'),
+  empty: img('misc/empty.svg', 320, 320, ''),
+  whitepaperCover: img('misc/whitepaper-cover.svg', 720, 931, 'Whitepaper cover: one shared layer for many teams'),
+  launchInline: img('misc/launch-inline.svg', 1800, 798, 'Launch showcase banner with three demo topics'),
+  launchAgenda: img('misc/launch-agenda.svg', 1232, 1158, 'Agenda: five sessions with their running times'),
+  principles: img('legal/principles.svg', 1832, 874, 'Four principle cards: human review, clear sources, private by default, measured quality'),
+}

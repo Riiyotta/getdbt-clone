@@ -4,7 +4,7 @@
 import { customers, heroes, icons, illus, intMarks, intWords, lockups, misc, shots, splits, tabsDark } from '../../pageAssets'
 import { assets } from '../../assets'
 import { crop } from '../../components/sections/parts'
-import { cta, pickResources, statsT2 } from './shared'
+import { cta, pickResources, statsT13 } from './shared'
 
 const dialog = (label) => ({ label, dialog: true })
 const shot = (i, w, h, alt) => crop({ ...shots[i], alt }, w, h)
@@ -186,7 +186,7 @@ export default {
         paragraphs: [
           // 301/4
           'The open engine inside Lattice reads your project, works out the dependency graph and compiles every model into SQL your warehouse understands. It runs the same way on a laptop, in a scheduled job or inside an agent workflow, so what you preview while building matches exactly what runs in production.',
-          ['Most teams start with ', { b: 'the open-source engine' }, ' and add the hosted platform as they grow.'],
+          ['Most teams start on ', { b: 'the open-source engine' }, ' and add the hosted platform as they grow.'],
         ],
         primary: cta('Install the engine', '/learn'), // 16
         tertiary: cta('Read docs', '/learn'), // 10
@@ -398,7 +398,7 @@ export default {
         primary: cta('Start a free trial', '/signup'),
         secondary: cta('Book a demo', '/contact'),
       },
-      { type: 'stats', ...statsT2 },
+      { type: 'stats', ...statsT13 },
       {
         type: 'resources',
         eyebrow: 'Learn more', // 10
@@ -483,12 +483,12 @@ export default {
         cols: '5/7',
         pt0: true,
         eyebrow: 'No rewrites needed', // 13
-        title: 'Works with the project you already have, with no changes to your models', // 57/3
+        title: 'Works with the project you already have, no rewrites', // 57/3
         paragraphs: [
           // 267/4
           'State reads the same project files as the rest of Lattice. There are no new configuration formats to learn and no special model types to adopt; you turn it on for a job and it starts recording what each model was built from on the very next run.',
           // 276/5
-          'If you ever need a full rebuild, a single flag forces one. Teams often keep a weekly full refresh as a safety net while every other run in the week uses State, which still captures most of the savings.',
+          [{ b: 'Need a full rebuild?' }, ' A single flag forces one whenever you want it. Teams often keep a weekly full refresh as a safety net while every other run in the week uses State, which still captures most of the savings. Every full refresh is labelled in the run log, so reviewers can always tell it apart.'],
         ],
         media: shot(0, 718, 404, 'Run timeline with reused and rebuilt models'),
       },
@@ -507,10 +507,10 @@ export default {
         eyebrow: 'Customer voices', // 14
         title: 'Teams running faster with State', // 21/2
         cards: [
-          { type: 'quote', quote: 'Our hourly job finishes in a few minutes now, which means analysts see fresh data before their next meeting rather than after it.', person: 'Ellis Moreau', role: 'Data Platform Engineer' }, // 82-330
-          { type: 'quote', quote: 'We kept a weekly full refresh as a safety net, and every other run uses State. That one change cut our nightly window by more than half and gave the on-call engineer back their mornings. The run log makes it easy to explain to anyone why a model was or was not rebuilt, which matters a lot when auditors ask. We also schedule jobs twice as often as before, so the sales team sees numbers that are hours fresher, and the monthly bill still went down.', person: 'Sofia Lindgren', role: 'Lead Analytics Engineer', cta: cta('Read the full customer story', '/case-studies') },
-          { type: 'quote', quote: 'Finance noticed the lower warehouse bill before we told them anything had changed.', person: 'Kwame Asante', role: 'Head of Data' },
-          { type: 'quote', quote: 'Turning it on took one setting. The savings showed up the same day, and we did not have to touch a single model to get them.', person: 'Rita Okoye', role: 'Senior Data Engineer' },
+          { type: 'quote', logo: customers.meridian, quote: 'We kept a weekly full refresh as a safety net, and every other run uses State. That one change cut our nightly window by more than half and gave the on-call engineer back their mornings. The run log makes it easy to explain to anyone why a model was or was not rebuilt, which matters a lot when auditors ask us about it.', person: 'Sofia Lindgren', role: 'Lead Analytics Engineer, Meridian Partners' }, // 82-330
+          { type: 'quote', logo: customers.orbitly, quote: 'Our hourly job finishes in a few minutes now, which means analysts see fresh data before their next meeting rather than after it. We also schedule jobs twice as often as before, so the sales team sees numbers that are hours fresher, and the monthly warehouse bill still went down.', person: 'Ellis Moreau', role: 'Data Platform Engineer' },
+          { type: 'quote', logo: customers.tidepool, quote: 'Turning it on took one setting. The savings showed up the same day, and we did not have to touch a single model to get them. Our reviewers did not even notice the switch.', person: 'Rita Okoye', role: 'Senior Data Engineer' },
+          { type: 'quote', logo: customers.kestrel, quote: 'Finance noticed the lower warehouse bill before we told them anything had changed.', person: 'Kwame Asante', role: 'Head of Data', cta: cta('Read the full customer story', '/case-studies') },
         ],
       },
       {
@@ -570,12 +570,12 @@ export default {
         primary: cta('Install the assistant', '/signup'), // 18
         tertiary: cta('Read the docs', '/learn'), // 11
         cards: [
-          { icon: icons.sparkle, title: 'Draft new models', body: 'Explain the table you want in everyday words and receive a draft that respects your naming and layering habits. It picks the right upstream sources, adds the joins you would expect and leaves clear comments where it made an assumption you should check.' },
-          { icon: icons.badge, title: 'Write tests for you', body: 'Suggests uniqueness, relationship and accepted-value checks based on the columns and joins in each model. It explains why each check matters, so reviewers can keep the useful ones and drop anything that would only add noise to the run.' },
-          { icon: icons.book, title: 'Document as you go', body: 'Generates descriptions for models and columns, ready for you to edit and commit alongside the code. Descriptions reuse the vocabulary already in your project, so the documentation reads as though one careful person wrote all of it.' },
-          { icon: icons.search, title: 'Explain any model', body: 'Ask why a number looks the way it does and get an answer that walks the lineage back to the sources. It names each model along the way and points to the transformation that changed the figure the most.' },
-          { icon: icons.bolt, title: 'Fix failing builds', body: 'Reads the error, finds the likely cause in your project and proposes a fix you can review and apply. When the cause sits upstream in someone else’s model, it tells you who owns it and drafts a note you can send them.' },
-          { icon: icons.lock, title: 'Respect your permissions', body: 'Works only with the projects and environments you can already access, and logs every action it takes. Administrators can limit it to development environments, require review for every change and switch it off for any project.' },
+          { icon: icons.sparkle, title: 'Draft new models from a plain request', body: 'Explain the table you want in everyday words and receive a draft that respects your naming and layering habits, with clear comments wherever it made an assumption you should check.' },
+          { icon: icons.badge, title: 'Write the tests you would have written', body: 'Suggests uniqueness, relationship and accepted-value checks based on the columns and joins in each model, and explains why each check matters.' },
+          { icon: icons.book, title: 'Document every model as you go', body: 'Generates descriptions for models and columns, ready to edit and commit alongside the code, in the vocabulary your project already uses.' },
+          { icon: icons.search, title: 'Explain any model in seconds', body: 'Ask why a number looks the way it does and get an answer that walks the lineage back to the sources.' },
+          { icon: icons.bolt, title: 'Fix failing builds before anyone notices', body: 'Reads the error, finds the likely cause in your project and proposes a fix you can review and apply, even when the cause sits upstream in another model.' },
+          { icon: icons.lock, title: 'Respect the permissions you already set', body: 'Works only with the projects and environments you can already access, logs every action it takes, and can be limited to development environments.' },
         ],
       },
       {
@@ -610,7 +610,7 @@ export default {
         eyebrow: 'Draft', // 5-11
         title: 'Go from a plain-language request to a reviewed, tested model', // 47-56
         // 173-375
-        body: 'Describe the table you need and the assistant drafts the SQL, the YAML and a starter set of tests. It follows your folder structure and naming rules, so the result looks like something a teammate wrote.',
+        body: 'Describe the table you need and the assistant drafts the SQL, the YAML and a starter set of tests, following your folder structure and naming rules.',
         cta: cta('Try drafting', '/signup'),
         media: shot(0, 824, 466, 'Draft model generated from a request'),
       },
@@ -620,7 +620,7 @@ export default {
         mediaLeft: true,
         eyebrow: 'Refactor',
         title: 'Rename a column across the project without breaking anything',
-        body: 'Ask for a rename and the assistant finds every model, test and document that refers to the column, proposes the edits as one change, and runs the affected tests before you merge. You review one diff instead of hunting through files.',
+        body: 'Ask for a rename and the assistant finds every model, test and document that uses the column, proposes the edits as one change and runs the affected tests.',
         cta: cta('See refactoring', '/signup'),
         media: shot(2, 824, 466, 'Project-wide rename preview'),
       },
@@ -628,8 +628,8 @@ export default {
         type: 'demoPanel',
         gradient: 'gradient-12',
         eyebrow: 'Debug',
-        title: 'Find out why a build failed in seconds, not an afternoon',
-        body: 'Point the assistant at a failed run. It reads the error and the lineage together, explains the likely cause in plain language and offers a fix you can apply with one click.',
+        title: 'Learn why a build failed in seconds, not hours',
+        body: 'Point the assistant at a failed run. It reads the error and the lineage together, explains the likely cause in plain language and offers a fix you can review and apply with one click. Nothing changes until you approve it.',
         cta: cta('See debugging', '/signup'),
         media: shot(1, 824, 466, 'Failed run explained with a suggested fix'),
       },
@@ -639,9 +639,9 @@ export default {
         mediaLeft: true,
         eyebrow: 'Explain',
         title: 'Understand an unfamiliar project on your very first day with the team',
-        body: 'New to a codebase? Ask the assistant to walk you through it. It summarizes each layer of the project, explains how the key models fit together, points out the tests that protect them, and links to the documentation for anything you want to read in more depth. Teams use it to shorten onboarding from weeks to days, and experienced engineers use it to get oriented quickly in a project they have not touched for a while.',
+        body: 'New to a codebase? Ask the assistant to walk you through it. It summarizes each layer of the project, explains how the key models fit together, points out the tests that protect them, and links to the documentation for anything you want to read in more depth. Teams use it to shorten onboarding from weeks to days, and experienced engineers use it to get oriented quickly.',
         cta: cta('Try explaining a project', '/signup'),
-        media: shot(0, 824, 550, 'Project overview generated for a new teammate'),
+        media: shot(0, 824, 535, 'Project overview generated for a new teammate'),
       },
       {
         type: 'feat',
@@ -719,9 +719,9 @@ export default {
         center: true,
         title: 'Everything you need to ship reliable dashboards', // 39
         cards: [
-          { icon: icons.chart, title: 'Charts in YAML', body: 'Describe each chart next to the model it reads from, with the same review process as any other change. Layouts, filters and colors live in one readable file per dashboard.', cta: cta('Read the docs', '/learn') },
-          { icon: icons.badge, title: 'Tested visuals', body: 'Check that every chart still renders and that its totals match the model before a change can merge.', cta: cta('See the tests', '/learn') },
-          { icon: icons.globe, title: 'Share anywhere', body: 'Publish dashboards to a hosted site, embed them in internal tools or export them for a slide deck, with access rules that follow your project.', cta: cta('Explore sharing', '/learn') },
+          { icon: icons.chart, title: 'Charts written in YAML beside your models', body: 'Describe each chart next to the model it reads from, with the same review process as any other change. Layouts, filters and colors live in one readable file.', cta: cta('Read the docs', '/learn') },
+          { icon: icons.badge, title: 'Visual tests before every merge', body: 'Check that every chart still renders and that its totals match the model before a change can merge, so broken visuals never reach the people who rely on them.', cta: cta('See the tests', '/learn') },
+          { icon: icons.globe, title: 'Share anywhere your team works', body: 'Publish dashboards to a hosted site, embed them in internal tools or export them for a slide deck, with access rules that follow your project.', cta: cta('Explore sharing', '/learn') },
         ],
       },
       {
@@ -891,18 +891,16 @@ export default {
         secondary: cta('Request a new integration', '/contact'), // 29
       },
       ...directory(),
-      { type: 'stats', ...statsT2 },
+      { type: 'stats', ...statsT13 },
       {
         type: 'resources',
+        eyebrow: 'Learn more', // 10
         title: 'Get more from your integrations', // 28
+        body: 'Guides and recorded sessions on connecting ingestion, orchestration and BI tools to one shared, tested data layer.', // 126/1
         cards: res(['controlPlane', 'showcase', 'charts'], [
-          'Coordinating many tools around one shared data layer',
-          'Launch showcase: new connectors this season',
-          'Charts as code, live',
-        ], [
-          'How a shared context layer keeps ingestion, orchestration and BI tools in sync.',
-          'Product leads walk through the newest connectors and what they unlock.',
-          'Keep dashboards beside the models that power them, reviewed with their SQL.',
+          'Coordinating many tools around one shared data layer', // 46
+          'Launch showcase: the newest connectors added this season', // 54
+          'Charts as code, live', // 17
         ]),
       },
       {
@@ -945,6 +943,7 @@ export default {
         type: 'checklist',
         variant: 'split',
         pt0: false,
+        plainItems: true,
         eyebrow: 'Grounded in context', // 19
         title: 'Answers built on the models and metrics you trust', // 58/2
         // 265/3
@@ -959,11 +958,12 @@ export default {
       {
         type: 'tabsDark',
         stroke: 'S9',
+        caption: false,
         title: 'Built for the questions people actually ask', // 39/2
         // 226/4
         body: 'Ask follow-ups, compare periods, break results down by any dimension and save useful answers for later. The analyst keeps track of the conversation, so each new question builds on the last one without starting over from scratch.',
         tabs: [
-          { title: 'Ask in plain language', body: 'Type a question the way you would ask a colleague and get a chart, a table and a short written summary in return.', media: tabsDark[5] },
+          { title: 'Ask in plain language', body: 'Type a question the way you would ask a colleague and get a chart, a table and a short written summary in return, usually within a few seconds.', media: tabsDark[5] },
           { title: 'Follow up naturally', body: 'Ask why a number moved, filter to a region or compare with last year without restating the original question.', media: tabsDark[7] },
           { title: 'Check the working', body: 'Open the SQL, the metrics and the models behind any answer, and see the tests that passed on the latest run.', media: tabsDark[4] },
           { title: 'Share with confidence', body: 'Save an answer to a shared space or send it to a channel, complete with the context someone needs to verify it.', media: tabsDark[8] },
@@ -987,7 +987,7 @@ export default {
       {
         type: 'checklist',
         variant: 'split',
-        eyebrow: 'For data teams',
+        plainItems: true,
         title: 'Stay in control of definitions and access',
         body: 'Decide which models and metrics the analyst may use, review the questions people ask, and improve descriptions where answers fall short. Every query respects the permissions of the person asking.',
         items: [
@@ -1009,9 +1009,9 @@ export default {
         type: 'checklist',
         variant: 'split',
         imageLeft: true,
-        eyebrow: 'For business teams',
-        title: 'Get answers without waiting in a queue',
-        body: 'Ask about pipeline, revenue, usage or operations and get a clear answer with a chart in seconds. When you need more detail, ask a follow-up or open the SQL to share with an analyst.',
+        plainItems: true,
+        title: 'Answers without the queue',
+        body: 'Ask about revenue, usage or operations and get a clear answer and a chart in seconds.',
         items: [
           { icon: icons.chart, title: 'Charts and summaries generated for every answer' },
           { icon: icons.team, title: 'Share answers with teammates in a single click' },
@@ -1022,9 +1022,9 @@ export default {
       {
         type: 'checklist',
         variant: 'split',
-        eyebrow: 'For leaders',
+        plainItems: true,
         title: 'One version of the truth across every team',
-        body: 'Because the analyst reads the same certified definitions as your dashboards, leaders get consistent numbers whether they open a report, ask a question or read a weekly summary.',
+        body: 'Leaders get the same certified numbers in reports, questions and weekly summaries.',
         items: [
           { icon: icons.target, title: 'The same metric definitions everywhere you look' },
           { icon: icons.clock, title: 'Weekly summaries delivered automatically by email' },
@@ -1050,10 +1050,10 @@ export default {
         type: 'testiSlider',
         eyebrow: 'Results from early customers', // 27
         title: 'Teams getting faster answers from the data they already trust', // 50/4
-        body: 'Early customers are cutting request queues and giving more people direct access to reliable numbers every day.', // 116/3
+        body: 'Early customers are cutting their request queues and giving more people direct access to reliable numbers every day.', // 116/3
         cta: cta('Request access for your team', '/contact'), // 25
         cards: [
-          { type: 'quote', logo: customers.orbitly, quote: 'The analyst answers the routine questions, which leaves our team free for the hard ones. Sales leaders used to wait two days for a pipeline breakdown; now they ask, check the lineage and move on. Our request queue shrank by half in the first month, and the questions that still reach us are the interesting ones that need a person.', person: 'Jonah Reyes', role: 'VP, Data and Insights', cta: cta('Read the story', '/case-studies') },
+          { type: 'quote', logo: customers.orbitly, quote: 'The analyst answers the routine questions, which leaves our team free for the hard ones. Sales leaders used to wait two days for a pipeline breakdown; now they ask, check the lineage and move on. Our request queue shrank by half in the first month, and the questions that still reach us are the interesting ones that need a person to think them through.', person: 'Jonah Reyes', role: 'VP, Data and Insights', cta: cta('Read the story', '/case-studies') },
           { type: 'metric', logo: customers.tidepool, metric: '5x', line: 'more people asking questions of trusted data each week, with no growth in the request queue', cta: cta('Read the story', '/case-studies') },
           { type: 'quote', logo: customers.kestrel, quote: 'Answers match our dashboards because they use the same metrics. That consistency is what won our leadership team over.', person: 'Priya Raman', role: 'Head of Analytics Engineering', cta: cta('Read the story', '/case-studies/kestrel') },
           { type: 'quote', logo: customers.basalt, quote: 'Clinical managers get capacity answers in seconds, and every one of them is traceable to the source.', person: 'Dr. Mei Lin', role: 'Director, Clinical Informatics', cta: cta('Read the story', '/case-studies/basalt-health') },
@@ -1261,9 +1261,9 @@ export default {
         ['Job webhooks and APIs', null, true],
       ]),
       table('Discovery and metrics', [
-        ['Generated documentation site', 'You build, host and refresh the static site on your own servers', true],
-        ['Searchable catalog with lineage', 'Lineage graph only, generated with the docs and not searchable', true],
-        ['Shared metric definitions', 'Definitions only, with no serving layer', true],
+        ['Generated documentation site', 'You build, host and refresh the site on your own servers', true],
+        ['Searchable catalog with lineage', 'Lineage graph only, no search', 'Included, with search across every model, column, metric, owner and tag'],
+        ['Shared metric definitions', true, true],
         ['Metrics served to BI tools and agents', null, true],
       ]),
       table('Security, administration and support', [

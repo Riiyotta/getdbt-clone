@@ -11,7 +11,7 @@ import { Img } from './parts'
 // T12-T13 (specs/T12-T13.md B): optional `eyebrow` (#9786ff); no `body` -> the tablist sits 48 below
 // the h2; `stroke` replaces the idle S6 with a drawing stroke (what-is-lattice S2) or another shape
 // ('S9' analyst, mobile only); `stroke: null` = none (assistant); `wide` = 16:9 media with no radius.
-export default function TabsDark({ eyebrow, title, body, tabs, gradient = 'gradient-01', stroke = 'S6', wide = false }) {
+export default function TabsDark({ eyebrow, title, body, tabs, gradient = 'gradient-01', stroke = 'S6', wide = false, caption = true }) {
   const { selected, listProps, tabProps, panelProps } = useTabs(tabs.length, 'horizontal')
   const active = tabs[selected]
   return (
@@ -60,8 +60,9 @@ export default function TabsDark({ eyebrow, title, body, tabs, gradient = 'gradi
               <p className="mt-4 text-base text-white">{active.body}</p>
             </div>
             <div className="rounded-2xl border border-inverse-line bg-blur-dark p-6 backdrop-blur-md">
-              {/* the original's frame ends with an empty caption <p>, so the image keeps its mb-6 (636 tall) */}
-              <div className="mb-6">
+              {/* the original's frame ends with an empty caption <p>, so the image keeps its mb-6 (636 tall);
+                  `caption: false` (analyst) has no caption and a 612-tall frame */}
+              <div className={caption ? 'mb-6' : ''}>
                 <Img a={active.media} className={`block h-auto w-full ${wide ? '' : 'rounded-2xl'}`} />
               </div>
             </div>

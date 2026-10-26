@@ -7,11 +7,13 @@ import { RichText } from './parts'
 // 24/28.8 500 #4a5565, #030711 on hover and while open; 18px plus (closed) / minus (open) in a 24 box,
 // #6a7282; focus-visible 2px #632ff5 ring, 4px offset. Instant open/close; items independent.
 // The original has no aria-expanded; the clone adds aria-expanded / aria-controls. No reveal.
-function Item({ q, a }) {
+// `compact` (specs/T9-T11.md B-3, T9 webinar body): question sans 16/19.2 500, closed item 72 tall,
+// item spacing left to the surrounding prose rhythm (mb 24), panel content passed as children.
+export function FaqItem({ q, a, compact = false, children }) {
   const [open, setOpen] = useState(false)
   const id = useId()
   return (
-    <div className="mb-4 rounded-2xl bg-ink-100 last:mb-0">
+    <div className={`rounded-2xl bg-ink-100 ${compact ? '' : 'mb-4 last:mb-0'}`.trim()}>
       {/* the original puts the h3 inside the button; here the button sits inside the h3 (valid HTML,
           same rendering) */}
       <h3>
@@ -23,7 +25,11 @@ function Item({ q, a }) {
           onClick={() => setOpen((o) => !o)}
           className="accordion-item-header group flex w-full cursor-pointer items-center justify-between rounded px-6 py-6 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-4 sm:px-12"
         >
-          <span className={`font-sans text-h3 font-medium group-hover:text-ink-950 ${open ? 'text-ink-950' : 'text-ink-600'}`}>{q}</span>
+          <span
+            className={`font-sans font-medium group-hover:text-ink-950 ${compact ? 'text-base leading-[19.2px]' : 'text-h3'} ${open ? 'text-ink-950' : 'text-ink-600'}`}
+          >
+            {q}
+          </span>
           <span className="ml-8 flex h-6 w-6 shrink-0 items-center justify-center rounded p-0.5 text-ink-500 sm:ml-16">
             {open ? <MinusIcon /> : <PlusIcon />}
           </span>
@@ -31,9 +37,11 @@ function Item({ q, a }) {
       </h3>
       {open && (
         <div id={`${id}-panel`} role="region" aria-labelledby={`${id}-btn`} className="accordion-item-copy px-6 pb-6 sm:px-12">
-          <p className="text-base text-ink-950">
-            <RichText runs={a} />
-          </p>
+          {children || (
+            <p className="text-base text-ink-950">
+              <RichText runs={a} />
+            </p>
+          )}
         </div>
       )}
     </div>
@@ -48,7 +56,7 @@ export default function Faq({ title, body, items }) {
         {body && <p className="mx-auto max-w-[820px] text-center text-base text-ink-950">{body}</p>}
         <div className="lg:mt-12">
           {items.map((it) => (
-            <Item key={it.q} q={it.q} a={it.a} />
+            <FaqItem key={it.q} q={it.q} a={it.a} />
           ))}
         </div>
       </div>

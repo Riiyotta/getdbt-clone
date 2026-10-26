@@ -12,7 +12,7 @@ import { Img } from './parts'
 // at c*200 > *:mb-6 wrapper (same) > list div (same) > row j at col+j*100 { icon (row), text div
 // +100 { h5 +100, p +200 } }, then the trailing empty <p> at col+100.
 
-function Item({ item, i, Icon = CheckCircle, last, at, exact = false }) {
+function Item({ item, i, Icon = CheckCircle, last, at, exact = false, plain = false }) {
   const d = at ?? i * 100
   return (
     <div {...reveal(d, `flex gap-3 ${last ? '' : 'mb-6'}`)}>
@@ -21,7 +21,11 @@ function Item({ item, i, Icon = CheckCircle, last, at, exact = false }) {
       </span>
       <div {...(exact ? reveal(d + 100) : {})}>
         {/* measured: the title keeps mb-3 even without a paragraph (34px rows) */}
-        <h3 {...reveal(d + 100, 'heading-5 mb-3 text-ink-950')}>{item.title}</h3>
+        {plain ? (
+          <p {...reveal(d + 200, 'text-base text-ink-950')}>{item.title}</p>
+        ) : (
+          <h3 {...reveal(d + 100, 'heading-5 mb-3 text-ink-950')}>{item.title}</h3>
+        )}
         {item.body ? (
           <p {...reveal(d + 200, 'text-base text-ink-950')}>{item.body}</p>
         ) : (
@@ -39,12 +43,12 @@ function List({ items, Icon, offset = 0 }) {
 }
 
 // *:mb-6 wrapper > list div > rows (exact per-element targets, as the columns layout) + trailing <p>
-function ExactList({ items, at }) {
+function ExactList({ items, at, plain = false }) {
   return (
     <div {...reveal(at, '[&>*:last-child]:mb-0 [&>*]:mb-6')}>
       <div {...reveal(at)}>
         {items.map((item, j) => (
-          <Item key={item.title} item={item} at={at + j * 100} exact last={j === items.length - 1} />
+          <Item key={item.title} item={item} at={at + j * 100} exact plain={plain} last={j === items.length - 1} />
         ))}
       </div>
       <p {...reveal(at + 100)} />
@@ -64,6 +68,7 @@ export default function Checklist({
   before,
   after,
   pt0 = true,
+  plainItems = false,
 }) {
   const shell = `section ${pt0 ? '!pt-0' : ''}`
   if (variant === 'split') {
@@ -72,6 +77,8 @@ export default function Checklist({
     // *:mb-6 wrapper > list div > row j { icon, text div { h5, p } } + trailing <p>; then the image
     // column > div > img. Text-first: text 0 / image 200; image-first: image 0 / text 200.
     // ai (3 items, no eyebrow): 24 targets at 0-400ms.
+    // `plainItems` (T13 analyst): each item is a single 16/24 paragraph next to the icon, rows 48
+    // apart (the T2 rows use a heading-5 title with mb-3).
     const textBase = imageLeft ? 200 : 0
     const imageBase = imageLeft ? 0 : 200
     let step = textBase
@@ -89,7 +96,7 @@ export default function Checklist({
         {eyebrow && <p {...reveal(eyebrowAt, 'eyebrow mb-4')}>{eyebrow}</p>}
         <h2 {...reveal(titleAt, 'heading-2 mb-4 text-ink-950')}>{title}</h2>
         <p {...reveal(bodyAt, 'mb-6 text-base text-ink-950')}>{body}</p>
-        <ExactList items={items} at={listAt} />
+        <ExactList items={items} at={listAt} plain={plainItems} />
       </div>
     )
     const imageCol = (
@@ -121,7 +128,8 @@ export default function Checklist({
   }
   if (variant === 'splitList') {
     // partners section 1 (specs/T12-T13.md B): col-5 h2 + paragraphs | col-7 three icon items with
-    // heading-5 + paragraph. Per-element reveal as N-split, items staggered 100ms.
+    // heading-5 + paragraph. Per-element reveal as N-split, items staggered 100ms. The original's list
+    // wrapper keeps a 24px bottom margin (*:mb-6), so the list column is 24 taller than its rows.
     const listAt = 200
     return (
       <section className={shell}>
@@ -137,7 +145,7 @@ export default function Checklist({
                 ))}
               </div>
             </div>
-            <div {...reveal(listAt, 'col-span-full lg:col-span-7')}>
+            <div {...reveal(listAt, 'col-span-full pb-6 lg:col-span-7')}>
               {items.map((item, j) => (
                 <Item key={item.title} item={item} at={listAt + j * 100} exact last={j === items.length - 1} />
               ))}

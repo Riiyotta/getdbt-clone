@@ -72,7 +72,7 @@ export default function TestiSlider({ eyebrow, title, body, cta, cards }) {
             </div>
             {overflow && (
               <div className="flex h-8 justify-between">
-                <ul className="mt-4 flex h-4 pl-1">
+                <ul className="mt-4 flex h-4 gap-2 pl-1">
                   {pages.map((p, i) => (
                     <li key={p} className="flex h-4 items-end">
                       <button
@@ -98,9 +98,9 @@ export default function TestiSlider({ eyebrow, title, body, cta, cards }) {
                       aria-label={label}
                       disabled={disabled}
                       onClick={fn}
-                      className="flex size-[19px] items-center justify-center bg-transparent text-ink-950 opacity-70 hover:opacity-90 disabled:opacity-30"
+                      className="flex size-[19px] items-center justify-center rounded-full bg-transparent text-ink-950 opacity-70 hover:opacity-90 disabled:opacity-30"
                     >
-                      <Icon width={24} height={24} className="shrink-0" />
+                      <Icon width={19} height={19} className="shrink-0" />
                     </button>
                   ))}
                 </div>

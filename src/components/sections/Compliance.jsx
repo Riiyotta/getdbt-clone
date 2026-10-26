@@ -12,7 +12,7 @@ export default function Compliance({ title, rows }) {
           {rows.map((r) => (
             <div key={r.title} className="flex flex-wrap justify-between">
               <div className="mb-8 flex w-full justify-center md:mb-0 md:w-1/4 md:pr-4">
-                <Img a={r.badge} className="block h-auto max-w-full" />
+                <Img a={r.badge} className="block h-auto max-w-full self-start" />
               </div>
               <div className="w-full md:w-3/4 md:pl-4">
                 <h3 className="heading-3 !mb-3 text-ink-950">{r.title}</h3>

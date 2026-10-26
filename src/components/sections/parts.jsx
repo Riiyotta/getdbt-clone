@@ -110,7 +110,7 @@ export function RichText({ runs }) {
     if (typeof r === 'string') return <span key={i}>{r}</span>
     if (r.a)
       return (
-        <SiteLink key={i} to={r.to} className="font-medium text-purple-600 hover:underline">
+        <SiteLink key={i} to={r.to} className="text-purple-600 hover:underline">
           {r.a}
         </SiteLink>
       )

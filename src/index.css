@@ -458,3 +458,61 @@
     animation: none;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* T5-T11 additions (specs/T5-T8.md, specs/T9-T11.md)                  */
+/* ------------------------------------------------------------------ */
+@layer components {
+  /* tag chip: mono 12/16 500 #632ff5 on #ecebff, padding 4, radius 4 */
+  .tag { @apply rounded-badge bg-purple-100 p-1 font-mono text-xs font-medium text-purple-600; }
+
+  /* .link-styles: #632ff5 underline (auto thickness/offset); underline removed on hover */
+  .link-styles { @apply text-purple-600 underline hover:no-underline; }
+
+  /* article.prose-chapter (T5-T8 A-15) / legal.policy-part (T9-T11 E-2).
+     Every direct child of the flow (and of each chapter wrapper) gets mb 24; the last gets 0. */
+  .prose-flow { @apply text-base text-ink-950; }
+  .prose-flow > *,
+  .prose-chapter > * { margin-bottom: 24px; }
+  .prose-flow > .prose-chapter { margin-bottom: 0; }
+  .prose-flow > :last-child,
+  .prose-flow > .prose-chapter:last-child > :last-child { margin-bottom: 0; }
+  :is(.prose-flow, .prose-chapter) > h2 { @apply heading-2 scroll-mt-24 text-ink-950; }
+  :is(.prose-flow, .prose-chapter) > h3 { @apply heading-3 scroll-mt-24 text-ink-950; }
+  :is(.prose-flow, .prose-chapter) > h4 { @apply heading-4 text-ink-950; }
+  :is(.prose-flow, .prose-chapter) > h5 { @apply heading-5 text-ink-950; }
+  :is(.prose-flow, .prose-chapter) > :is(ul, ol) { @apply ml-4 mt-2 pl-4 marker:text-xl marker:text-ink-500; }
+  :is(.prose-flow, .prose-chapter) > ul { @apply list-disc; }
+  :is(.prose-flow, .prose-chapter) > ol { @apply list-decimal; }
+  :is(.prose-flow, .prose-chapter) > hr { @apply border-t border-current; }
+  .prose-flow ul ul { @apply mb-4 ml-4 mt-2 list-disc pl-4; }
+  .prose-flow strong { @apply font-bold; }
+  .prose-flow em { @apply italic; }
+  /* inline code: mono 12/16 500, #3d189a on #f6f5ff, padding 2 4, radius 4 */
+  .prose-flow code { @apply rounded-badge bg-purple-50 px-1 py-0.5 font-mono text-xs font-medium text-purple-900; }
+
+  /* Form system (T9-T11 A-1..A-5) */
+  .form-label { @apply block text-base; }
+  .form-label > span { @apply text-sm text-ink-950; }
+  .form-input {
+    @apply block h-[50px] w-full rounded-xl border border-ink-300 bg-transparent px-6 py-3 text-base text-ink-500 outline-none placeholder:text-ink-500 focus:shadow-focus disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  textarea.form-input { @apply h-[74px]; }
+  select.form-input { @apply appearance-none; }
+  /* select chevron: 16x16 black down-chevron drawn on the wrapper, right 10, vertically centred */
+  .select-wrap { position: relative; }
+  .select-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    margin: auto 0;
+    pointer-events: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M4 6l4 4 4-4' fill='none' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / 16px 16px;
+  }
+  .form-help { @apply mt-2 text-xs text-ink-500; }
+  .form-error { @apply mt-1 block text-sm text-pink-700; }
+}

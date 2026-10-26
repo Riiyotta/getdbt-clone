@@ -257,7 +257,7 @@ export default {
       {
         type: 'ctaBand',
         title: 'Start building with Lattice.', // 25/1
-        body: 'Plan, test and ship dependable data pipelines, from your very first model to a thousand of them.', // 92/1
+        body: 'Plan, validate and ship dependable data pipelines, from a single model to thousands of them.', // 92/1
         primary: cta('Create a free account', '/signup'), // 20
         secondary: cta('Book your demo', '/contact'), // 14
         aside: asideCommunity,
@@ -353,8 +353,8 @@ export default {
         body: 'Values describe what we care about; principles describe how that shows up on an ordinary Tuesday. The ten principles below came out of a year of retrospectives, interviews and long written threads in which people across every team described the moments when working here felt best and the moments when it felt hardest. We keep them short on purpose. They are not rules to be enforced but shared defaults that help a fast-growing, fully remote company make consistent choices without waiting for someone to approve them. When a principle stops helping, anyone can propose a change, and the proposal is reviewed in the open like any other.',
         cards: [
           {
-            title: 'Context before requests', // 12-34
-            body: 'Before asking a colleague for help, share what you have already tried and why it matters. Good context turns a vague request into a five-minute answer and saves both people from a long thread of follow-up questions. Link the relevant document, the error message and the deadline you are working toward.',
+            title: 'Share your context before you ask', // 12-34
+            body: 'Before asking a colleague for help, share what you have already tried and why it matters. Good context turns a vague request into a five-minute answer and saves both people from a long thread of follow-up questions. Link the relevant document and the error.',
           },
           {
             title: 'Default to asynchronous',
@@ -381,16 +381,16 @@ export default {
             body: 'Deep work needs long, uninterrupted blocks. Teams agree on quiet hours, batch their notifications and respect calendars that say no, because the hardest problems rarely get solved in fifteen-minute gaps.',
           },
           {
-            title: 'Write the decision down where others can find it later',
-            body: 'Every meaningful decision gets a short record: the options considered, the choice made, and who made it. Future teammates will thank you, and so will you in six months when the question comes back. Decision records live next to the code or document they affect and use one short shared template.',
+            title: 'Write decisions down',
+            body: 'Every meaningful decision gets a short record: the options considered, the choice made, and who made it. Future teammates will thank you, and so will you in six months when the question comes back. Decision records live next to the code or document they affect and use one short shared template. Anyone can comment on a record, and old records are never deleted.',
           },
           {
             title: 'Be generous with credit',
             body: 'Highlight the people behind good outcomes, especially those whose work is less visible. A culture of recognition makes it easier to ask for help and easier to offer it.',
           },
           {
-            title: 'Keep the customer in the room',
-            body: 'Bring real examples, quotes and data from customers into planning and review. It keeps debates grounded and reminds us who the work is for.',
+            title: 'Keep customers close',
+            body: 'Bring real examples, quotes and data from customers into planning and review. It keeps debates grounded and reminds us who the work is for. Every product team joins at least two customer calls each month.',
           },
         ],
       },
@@ -575,52 +575,53 @@ export default {
       {
         type: 'compliance',
         title: 'Our audits', // 10
-        // rows: heading 3-14ch, prose 109-780ch / 1-7 lines with an inline link
+        // rows: heading 3-14ch, prose 109-780ch / 1-7 lines with an inline link. Row order follows the
+        // original's badge shapes (five wide marks, two square seals, a short and a tall mark).
         rows: [
           {
             badge: badges[0],
             title: 'Trustframe',
-            body: ['An independent audit firm reviews our security, availability and confidentiality controls every year and issues a full report covering the twelve months before the review. The report describes each control, how the auditors tested it and any exceptions they found, along with our response to them. Customers and prospects under a confidentiality agreement can ', { a: 'request the latest report', to: '/contact' }, ' through their account team at any time. A bridge letter covering the months since the last audit period is also available on request.'],
+            body: ['An independent audit firm reviews our security, availability and confidentiality controls every year and issues a full report covering the twelve months before the review. The report describes each control, how the auditors tested it and any exceptions they found, along with our response to them. The scope covers the hosted platform, the infrastructure it runs on, the people who operate it and the vendors we rely on, and it is mapped to the common criteria used by most enterprise procurement teams. Customers and prospects under a confidentiality agreement can ', { a: 'request the latest report', to: '/contact' }, ' through their account team at any time. A bridge letter covering the months since the last audit period is also available on request, and we share the next audit date well in advance.'],
           },
           {
             badge: badges[1],
             title: 'Cloudward',
-            body: ['Our information security management system is certified against a placeholder cloud standard that covers risk assessment, asset management, supplier review, incident handling and continual improvement. The certificate is renewed every three years with surveillance audits in between, and the scope includes every production environment that runs the hosted platform, the teams who operate it and the offices they work from. Findings from each audit are tracked to closure by our governance team and reported to leadership every quarter, together with the status of any open remediation work and the owner responsible for it. ', { a: 'Contact us', to: '/contact' }, ' for the current certificate and statement of applicability.'],
-          },
-          {
-            badge: badges[2],
-            title: 'Privacy seal',
-            body: ['We maintain a privacy program aligned with a placeholder privacy framework, covering data mapping, retention, subject requests and vendor review. Our data processing terms are available to every customer, and we publish a list of subprocessors that we update before any change takes effect. Every employee completes privacy training when they join and once a year after that, and new features go through a privacy review before launch, with a written assessment for anything that touches personal information. Customers can reach our privacy team directly with questions about how a specific feature handles their information. ', { a: 'Read our privacy terms', to: '/terms-of-use' }, '.'],
-          },
-          {
-            badge: badges[3],
-            title: 'Assured seal',
-            body: ['A placeholder assurance mark confirming that our hosted platform meets baseline requirements for cloud services used by public bodies.'],
-          },
-          {
-            badge: badges[4],
-            title: 'Datasafe',
-            body: ['Our data-handling practices are registered with a placeholder registry that reviews how service providers store, transfer and delete customer information. The registration covers our hosting regions in North America, Europe and the Asia Pacific region, and it is reviewed annually. The review looks at retention schedules, deletion procedures, backup encryption and the controls we use to keep each region separate, so that metadata created in one region is never replicated to another without your instruction. Deletion requests are confirmed in writing once they complete. ', { a: 'Ask for details', to: '/contact' }, '.'],
-          },
-          {
-            badge: badges[5],
-            title: 'Healthguard',
-            body: ['Customers that work with protected health information can sign a placeholder business associate agreement with us. Eligible plans include additional logging, encryption key options and support processes designed for healthcare workloads. Our team reviews each deployment with you before any regulated data flows through models built on the platform, and we document the shared responsibilities in plain language. Because Lattice runs transformations inside your own warehouse, the regulated rows themselves remain under your controls, while we protect the code, logs and metadata that describe them. Access by our own support staff is limited, logged and granted only for a specific ticket. ', { a: 'Talk to our healthcare team', to: '/contact' }, ' to learn which plans qualify.'],
+            body: ['Our information security management system is certified against a placeholder cloud standard that covers risk assessment, asset management, supplier review, incident handling and continual improvement. The certificate is renewed every three years with surveillance audits in between, and the scope includes every production environment that runs the hosted platform, the teams who operate it and the offices they work from. Findings from each audit are tracked to closure by our governance team and reported to leadership every quarter, together with the status of any open remediation work and the owner responsible for it, so nothing is left without a clear owner and a realistic next step. ', { a: 'Contact us', to: '/contact' }, ' for the current certificate and statement of applicability.'],
           },
           {
             badge: badges[6],
             title: 'Openaudit',
-            body: ['A placeholder controls report for teams that need a lighter summary of our security program to share with their own stakeholders and procurement reviewers. It covers the same control areas as the full audit report, including access management, change management, encryption, monitoring and vendor oversight, but it is written for a general audience and can be shared without a confidentiality agreement. Many customers attach it to internal risk reviews and vendor questionnaires, which shortens procurement for both sides. ', { a: 'Download a copy', to: '/contact' }, '.'],
-          },
-          {
-            badge: badges[7],
-            title: 'Global seal',
-            body: ['Our cross-border transfer practices follow a placeholder framework for moving personal data between regions, with standard contractual terms available on request. We assess each transfer for the protections available in the destination country, document the supplementary measures we apply, and review those assessments whenever the legal landscape changes. Customers can choose to keep all project metadata in a single region. ', { a: 'Contact legal', to: '/contact' }, '.'],
+            body: ['A placeholder controls report for teams that need a lighter summary of our security program to share with their own stakeholders and procurement reviewers. It covers the same control areas as the full audit report, including access management, change management, encryption, monitoring and vendor oversight, but it is written for a general audience and can be shared without a confidentiality agreement. Many customers attach it to internal risk reviews and vendor questionnaires, which shortens procurement for both sides. The summary is refreshed after every annual audit and lists the period it covers on the first page, so reviewers always know how current it is and which version they are reading. ', { a: 'Download a copy', to: '/contact' }, ' whenever you need one.'],
           },
           {
             badge: badges[8],
             title: 'Payshield',
-            body: ['Payments for self-serve plans are processed by a placeholder provider that holds the highest level of card-industry validation. Lattice never stores full card numbers on its own systems: the payment form is served directly by the provider, and our platform only ever receives a token that identifies the card for future charges. Invoices, receipts and billing contacts are managed from the account settings page, where administrators can update payment details, download past invoices and switch to invoiced billing on annual plans. Every change to billing details is recorded in the audit log. ', { a: 'Billing questions', to: '/contact' }, '.'],
+            body: ['Payments for self-serve plans are processed by a placeholder provider that holds the highest level of card-industry validation. Lattice never stores full card numbers on its own systems: the payment form is served directly by the provider, and our platform only ever receives a token that identifies the card for future charges. Invoices, receipts and billing contacts are managed from the account settings page, where administrators can update payment details, download past invoices and switch to invoiced billing on annual plans. Every change to billing details is recorded in the audit log, and only administrators can view it. Receipts are emailed to the billing contact as soon as a charge clears. ', { a: 'Billing questions', to: '/contact' }, ' go straight to our finance team.'],
+          },
+          {
+            badge: badges[7],
+            title: 'Global seal',
+            body: ['Our cross-border transfer practices follow a placeholder framework for moving personal data between regions, with standard contractual terms available on request. We assess each transfer for the protections available in the destination country, document the supplementary measures we apply, and review those assessments whenever the legal landscape changes. Customers can choose to keep all project metadata in a single region, and support staff outside that region only see what a specific ticket requires. Our transfer register is kept current, reviewed by counsel every quarter, and shared with enterprise customers during security reviews. ', { a: 'Contact legal', to: '/contact' }, ' with any questions about where your data lives.'],
+          },
+          {
+            badge: badges[2],
+            title: 'Privacy seal',
+            body: ['We maintain a privacy program aligned with a placeholder privacy framework, covering data mapping, retention, subject requests and vendor review. Our data processing terms are available to every customer, and we publish a list of subprocessors that we update before any change takes effect. Every employee completes privacy training when they join and once a year after that, and new features go through a privacy review before launch, with a written assessment for anything that touches personal information. Customers can reach our privacy team directly with questions about how a specific feature handles their information, and we answer most requests within five business days, including requests to export or delete personal data. ', { a: 'Read our privacy terms', to: '/terms-of-use' }, ' for the full details of how we handle personal data.'],
+          },
+          {
+            badge: badges[3],
+            title: 'Assured seal',
+            body: ['A placeholder assurance mark confirming that our hosted platform meets baseline requirements for cloud services used by public bodies, including documented incident response, regional hosting and regular independent testing of the service.'],
+          },
+          {
+            badge: badges[4],
+            title: 'Datasafe',
+            body: ['Our data-handling practices are registered with a placeholder data protection registry. ', { a: 'Ask for details', to: '/contact' }, '.'],
+          },
+          {
+            badge: badges[5],
+            title: 'Healthguard',
+            body: ['Customers that work with protected health information can sign a placeholder business associate agreement with us. Eligible plans include additional logging, encryption key options and support processes designed for healthcare workloads. Because Lattice runs transformations inside your own warehouse, the regulated rows themselves stay under your controls, while we protect the code, logs and metadata that describe them and the people who maintain them. ', { a: 'Talk to our healthcare team', to: '/contact' }, ' to learn which plans qualify.'],
           },
         ],
       },

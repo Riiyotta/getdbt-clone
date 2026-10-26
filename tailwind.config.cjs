@@ -74,6 +74,8 @@ module.exports = {
         },
         // T12-T13 spec tokens
         danger: '#ff4141', // journey "x" icons, journey red dot
+        // T5-T11 spec tokens (specs/T5-T8.md, specs/T9-T11.md)
+        pink: { 700: '#c20059' }, // form error message text
         journey: {
           green: 'rgb(146,196,48)', // status badge text/border (bg = same at 20%)
           yellow: 'rgb(255,204,37)',
@@ -132,6 +134,10 @@ module.exports = {
         glow: '0 0 100px 40px rgba(255,0,255,.3)',
         // highlighted journey card (self-hosting)
         ember: '0 0 40px rgba(255,90,0,.35)',
+        // T9-T11 A-5: form field focus ring (2px white offset + 2px #632ff5), no outline
+        focus: '0 0 0 2px #fff, 0 0 0 4px #632ff5',
+        // T5-T8 A-15 table body ring (ring-2 ring-terminal-black-50 ring-offset-8)
+        tbody: '0 0 0 8px #fff, 0 0 0 10px #f9fafb',
       },
       backdropBlur: {
         xs: '4px',
