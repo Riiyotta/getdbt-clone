@@ -1,0 +1,12 @@
+{
+  "id": "component.section-header",
+  "title": "Section header",
+  "description": "eyebrow -> heading-2 (mb-16) -> paragraph #1e2939 in 9 of 12 columns (centred variant spans 12); one reveal span at 0ms.",
+  "uses": [
+    "primitive.eyebrow",
+    "primitive.heading"
+  ],
+  "evidence": [
+    "src/components/sections/parts.jsx:57-73"
+  ]
+}

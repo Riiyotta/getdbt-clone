@@ -1,0 +1,12 @@
+{
+  "id": "primitive.text-link",
+  "title": "Text link with chevron",
+  "description": ".button.text: full-width flex, label + 24px chevron, hover text #632ff5.",
+  "uses": [
+    "text.accent",
+    "size.icon.24"
+  ],
+  "evidence": [
+    "src/components/sections/parts.jsx:21-35"
+  ]
+}

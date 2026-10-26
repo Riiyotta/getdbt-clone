@@ -1,0 +1,172 @@
+{
+  "id": "features.gradient-panel",
+  "title": "Gradient feature panel",
+  "semantic": {
+    "id": "features.gradient-panel",
+    "category": "FEATURES"
+  },
+  "source": {
+    "id": "component:FeaturePanel",
+    "file": "src/components/FeaturePanel.jsx",
+    "export": "FeaturePanel",
+    "tag": "section",
+    "lines": "5-59",
+    "tagLine": 41
+  },
+  "additionalSources": [],
+  "purpose": "Rounded gradient panel (grain overlay) with eyebrow, heading-3, body and a primary.dark button beside a product media image flush to the panel edge; alternates sides.",
+  "retrievalEligible": true,
+  "variants": {
+    "text-first": {
+      "description": "text column left, media right",
+      "requiredFields": [
+        "body",
+        "eyebrow",
+        "media",
+        "primary",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {},
+      "observedOn": [
+        "/"
+      ]
+    },
+    "media-first": {
+      "description": "media left, text right (text first below 1024)",
+      "requiredFields": [
+        "body",
+        "eyebrow",
+        "media",
+        "primary",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {},
+      "observedOn": [
+        "/"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "body": {
+        "type": "text",
+        "maxWords": 50,
+        "maxChars": 284,
+        "observedIn": 3
+      },
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 13,
+        "observedIn": 3
+      },
+      "media": {
+        "type": "asset",
+        "referenceRoles": [
+          "product.screenshot"
+        ],
+        "observedIn": 3,
+        "generatedRoles": [
+          "product.generated-visual"
+        ]
+      },
+      "media.alt": {
+        "type": "text",
+        "maxWords": 11,
+        "maxChars": 66,
+        "observedIn": 3
+      },
+      "primary.href": {
+        "type": "link",
+        "observedIn": 3
+      },
+      "primary.label": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 24,
+        "observedIn": 3
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 8,
+        "maxChars": 47,
+        "observedIn": 3
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "media": {
+        "type": "asset",
+        "referenceRoles": [
+          "product.screenshot"
+        ],
+        "observedIn": 3,
+        "generatedRoles": [
+          "product.generated-visual"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "product.generated-visual"
+  ],
+  "style": {
+    "props": {
+      "panelGradient": {
+        "kind": "token",
+        "allowed": [
+          "gradient.02",
+          "gradient.05",
+          "gradient.12"
+        ]
+      }
+    },
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 3
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal.fade-up"
+    ],
+    "requiredPatterns": [
+      "reveal.fade-up"
+    ],
+    "reducedMotionFallback": {
+      "reveal.fade-up": "show-immediately"
+    },
+    "stagger": "reveal targets with inline delays, see src/components/FeaturePanel.jsx:5-59"
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "text 4 cols / media 8 cols, media flush to the bottom + outer edge"
+    },
+    {
+      "range": "768-1023",
+      "behavior": "stacked inside a 16px-radius panel"
+    },
+    {
+      "range": "<768",
+      "behavior": "full-bleed panel, 48px padding, 8px dark divider below"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/": [
+        552.8,
+        591.2,
+        591.2
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/FeaturePanel.jsx:5-59"
+  ]
+}

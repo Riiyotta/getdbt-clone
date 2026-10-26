@@ -1,0 +1,250 @@
+{
+  "id": "social-proof.testimonial-slider",
+  "title": "Testimonial slider",
+  "semantic": {
+    "id": "social-proof.testimonial-slider",
+    "category": "SOCIAL_PROOF"
+  },
+  "source": {
+    "id": "component:TestiSlider",
+    "file": "src/components/sections/TestiSlider.jsx",
+    "export": "TestiSlider",
+    "tag": "section",
+    "lines": "36-110",
+    "tagLine": 41
+  },
+  "additionalSources": [
+    {
+      "id": "component:Testimonials (homepage)",
+      "file": "src/components/Testimonials.jsx",
+      "export": "Testimonials",
+      "tag": "section",
+      "lines": "45-129",
+      "tagLine": 54
+    }
+  ],
+  "purpose": "Header column (heading-2, body, optional button) beside a slider of quote or metric cards (logo, quote/metric, text link).",
+  "retrievalEligible": true,
+  "variants": {
+    "home": {
+      "description": "homepage: eyebrow + secondary button, 2 cards",
+      "requiredFields": [
+        "action",
+        "body",
+        "cards",
+        "eyebrow",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "cards": [
+          2,
+          2
+        ]
+      },
+      "observedOn": [
+        "/"
+      ]
+    },
+    "industry": {
+      "description": "T4: no eyebrow, 2-4 cards moving 2 per step",
+      "requiredFields": [
+        "body",
+        "cards",
+        "title"
+      ],
+      "forbiddenFields": [
+        "eyebrow"
+      ],
+      "listSizes": {
+        "cards": [
+          2,
+          4
+        ]
+      },
+      "observedOn": [
+        "/industry/energy-utilities",
+        "/industry/financial-services",
+        "/industry/healthcare",
+        "/industry/manufacturing",
+        "/industry/telecommunications"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "action.href": {
+        "type": "link",
+        "observedIn": 5
+      },
+      "action.label": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 26,
+        "observedIn": 5
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 36,
+        "maxChars": 225,
+        "observedIn": 6
+      },
+      "cards": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 4,
+        "observedIn": 6
+      },
+      "cards[].action.href": {
+        "type": "link",
+        "observedIn": 16
+      },
+      "cards[].action.label": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 26,
+        "observedIn": 16
+      },
+      "cards[].kind": {
+        "type": "enum",
+        "observedIn": 16
+      },
+      "cards[].line": {
+        "type": "text",
+        "maxWords": 16,
+        "maxChars": 94,
+        "observedIn": 7
+      },
+      "cards[].logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "customer.logo"
+        ],
+        "observedIn": 16,
+        "generatedRoles": [
+          "customer.placeholder-logo"
+        ]
+      },
+      "cards[].logo.alt": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 17,
+        "observedIn": 16
+      },
+      "cards[].metric": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 9,
+        "observedIn": 7
+      },
+      "cards[].person": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 13,
+        "observedIn": 9
+      },
+      "cards[].quote": {
+        "type": "text",
+        "maxWords": 52,
+        "maxChars": 306,
+        "observedIn": 9
+      },
+      "cards[].role": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 30,
+        "observedIn": 9
+      },
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 15,
+        "observedIn": 1
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 7,
+        "maxChars": 42,
+        "observedIn": 6
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "cards[].logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "customer.logo"
+        ],
+        "observedIn": 16,
+        "generatedRoles": [
+          "customer.placeholder-logo"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "customer.placeholder-logo"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "slider.drag"
+    ],
+    "requiredPatterns": [
+      "slider.drag"
+    ],
+    "reducedMotionFallback": {
+      "slider.drag": "unchanged"
+    },
+    "stagger": "none"
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "4/8 columns, 2 cards per view; controls only when slides overflow"
+    },
+    {
+      "range": "<1024",
+      "behavior": "1 card per view with pagination bars + arrows"
+    },
+    {
+      "range": "<768",
+      "behavior": "stacked"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/": [
+        624
+      ],
+      "/industry/financial-services": [
+        628
+      ],
+      "/industry/healthcare": [
+        684
+      ],
+      "/industry/manufacturing": [
+        596
+      ],
+      "/industry/energy-utilities": [
+        684
+      ],
+      "/industry/telecommunications": [
+        680
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/sections/TestiSlider.jsx:36-110",
+    "src/components/Testimonials.jsx:45-129"
+  ]
+}

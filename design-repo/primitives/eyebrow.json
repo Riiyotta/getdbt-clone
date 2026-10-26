@@ -1,0 +1,12 @@
+{
+  "id": "primitive.eyebrow",
+  "title": "Eyebrow",
+  "description": "IBM Plex Mono 16/24 500 #632ff5 (white / #9786ff on dark; 14/20 small variant).",
+  "uses": [
+    "font.family.mono",
+    "text.accent"
+  ],
+  "evidence": [
+    "src/index.css:72-73"
+  ]
+}

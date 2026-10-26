@@ -1,0 +1,12 @@
+{
+  "id": "primitive.slider-pagination",
+  "title": "Slider pagination bar",
+  "description": "14x4 bars, radius 16, margin 3, opacity .7, active #632ff5 / inactive #ccc, transform .2s linear.",
+  "uses": [
+    "indicator.slider-active",
+    "indicator.slider-inactive"
+  ],
+  "evidence": [
+    "src/components/sections/TestiSlider.jsx:71-86"
+  ]
+}

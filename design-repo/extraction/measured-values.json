@@ -1,0 +1,4631 @@
+{
+  "note": "build-time evidence ledger. Citations are 'path:line[-line]' relative to the clone project root (the folder that contains design-repo/). extraction/verify_all.py re-reads them when that source tree is beside this folder and degrades to warnings when design-repo/ is used standalone.",
+  "sourceStack": {
+    "documentationOnly": true,
+    "value": "React ^18.3.1 + Vite ^5.4.10 + Tailwind CSS ^3.4.14 (tailwind.config.cjs, CommonJS) + react-router-dom ^6.28.0 (package.json ranges); dev server port 5197",
+    "cite": "package.json:1-24"
+  },
+  "sectionHeights": {
+    "viewport": 1440,
+    "unit": "px",
+    "measuredAt": "2026-10-26",
+    "method": "headless Chromium 1440x900, reduced motion, full scroll to settle lazy images, then getBoundingClientRect of every direct child of <main> plus the announcement bar, nav and footer; each child mapped in order to the route's reference PageSpec node",
+    "routes": {
+      "/": {
+        "template": "T0",
+        "docHeightPx": 6985,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "text-only",
+            "heightPx": 497.6,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.logo-marquee",
+            "variant": "default",
+            "heightPx": 200,
+            "topPx": 557,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.news-band",
+            "variant": "default",
+            "heightPx": 285,
+            "topPx": 757,
+            "position": "relative"
+          },
+          {
+            "section": "content.statement",
+            "variant": "line",
+            "heightPx": 204.8,
+            "topPx": 1042,
+            "position": "relative"
+          },
+          {
+            "section": "features.gradient-panel",
+            "variant": "text-first",
+            "heightPx": 552.8,
+            "topPx": 1246,
+            "position": "relative"
+          },
+          {
+            "section": "features.gradient-panel",
+            "variant": "media-first",
+            "heightPx": 591.2,
+            "topPx": 1799,
+            "position": "relative"
+          },
+          {
+            "section": "features.gradient-panel",
+            "variant": "text-first",
+            "heightPx": 591.2,
+            "topPx": 2390,
+            "position": "relative"
+          },
+          {
+            "section": "features.integration-tiles",
+            "variant": "default",
+            "heightPx": 414,
+            "topPx": 2982,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "bordered-link",
+            "heightPx": 818.8,
+            "topPx": 3396,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "diagram",
+            "heightPx": 537,
+            "topPx": 4214,
+            "position": "relative"
+          },
+          {
+            "section": "cta.ide-card",
+            "variant": "default",
+            "heightPx": 400,
+            "topPx": 4751,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.testimonial-slider",
+            "variant": "home",
+            "heightPx": 624,
+            "topPx": 5151,
+            "position": "relative"
+          },
+          {
+            "section": "cta.community-band",
+            "variant": "default",
+            "heightPx": 453.2,
+            "topPx": 5775,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/develop": {
+        "template": "T1",
+        "docHeightPx": 6310,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "padded",
+            "heightPx": 740,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "media-left",
+            "heightPx": 481.6,
+            "topPx": 884,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "wash-icon",
+            "heightPx": 703.2,
+            "topPx": 1366,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-dark",
+            "variant": "default",
+            "heightPx": 1080.2,
+            "topPx": 2069,
+            "position": "relative"
+          },
+          {
+            "section": "cta.gradient-card",
+            "variant": "default",
+            "heightPx": 417.6,
+            "topPx": 3149,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 934.6,
+            "topPx": 3567,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 739.4,
+            "topPx": 4501,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 313.6,
+            "topPx": 5241,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/test-and-observe": {
+        "template": "T1",
+        "docHeightPx": 5977,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "padded",
+            "heightPx": 740,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "media-left",
+            "heightPx": 457.6,
+            "topPx": 884,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "wash-icon",
+            "heightPx": 578.4,
+            "topPx": 1342,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-dark",
+            "variant": "default",
+            "heightPx": 876,
+            "topPx": 1920,
+            "position": "relative"
+          },
+          {
+            "section": "cta.gradient-card",
+            "variant": "default",
+            "heightPx": 417.6,
+            "topPx": 2796,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 878.6,
+            "topPx": 3214,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 739.4,
+            "topPx": 4092,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 389.2,
+            "topPx": 4832,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/mesh": {
+        "template": "T1",
+        "docHeightPx": 5930,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "padded",
+            "heightPx": 740,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "media-left",
+            "heightPx": 500.8,
+            "topPx": 884,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "wash-icon",
+            "heightPx": 578.4,
+            "topPx": 1385,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-dark",
+            "variant": "default",
+            "heightPx": 880.2,
+            "topPx": 1963,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 365.2,
+            "topPx": 2843,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 878.6,
+            "topPx": 3209,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 773,
+            "topPx": 4087,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 313.6,
+            "topPx": 4860,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/catalog": {
+        "template": "T1",
+        "docHeightPx": 5743,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "padded",
+            "heightPx": 634,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "media-left",
+            "heightPx": 467.2,
+            "topPx": 778,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "wash-icon",
+            "heightPx": 588,
+            "topPx": 1245,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-dark",
+            "variant": "default",
+            "heightPx": 971.4,
+            "topPx": 1833,
+            "position": "relative"
+          },
+          {
+            "section": "cta.gradient-card",
+            "variant": "default",
+            "heightPx": 393.6,
+            "topPx": 2805,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.quote-band",
+            "variant": "slider",
+            "heightPx": 655,
+            "topPx": 3198,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 768.2,
+            "topPx": 3853,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 365.2,
+            "topPx": 4621,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/deploy": {
+        "template": "T1",
+        "docHeightPx": 6017,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "padded",
+            "heightPx": 525.8,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "media-left",
+            "heightPx": 539.2,
+            "topPx": 670,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "wash-icon",
+            "heightPx": 612,
+            "topPx": 1209,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-dark",
+            "variant": "default",
+            "heightPx": 1090.8,
+            "topPx": 1821,
+            "position": "relative"
+          },
+          {
+            "section": "cta.gradient-card",
+            "variant": "default",
+            "heightPx": 417.6,
+            "topPx": 2912,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 878.6,
+            "topPx": 3329,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 739.4,
+            "topPx": 4208,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 313.6,
+            "topPx": 4947,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/semantic-layer": {
+        "template": "T1",
+        "docHeightPx": 6202,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "padded",
+            "heightPx": 740,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "media-left",
+            "heightPx": 539.2,
+            "topPx": 884,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "wash-icon",
+            "heightPx": 636,
+            "topPx": 1423,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-dark",
+            "variant": "default",
+            "heightPx": 951.2,
+            "topPx": 2059,
+            "position": "relative"
+          },
+          {
+            "section": "cta.gradient-card",
+            "variant": "default",
+            "heightPx": 451.2,
+            "topPx": 3010,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 878.6,
+            "topPx": 3462,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 792.2,
+            "topPx": 4340,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 313.6,
+            "topPx": 5132,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/data-modernization": {
+        "template": "T2",
+        "docHeightPx": 7556,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "media",
+            "heightPx": 1096.1,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "content.statement",
+            "variant": "plain",
+            "heightPx": 315.2,
+            "topPx": 1240,
+            "position": "relative"
+          },
+          {
+            "section": "features.checklist",
+            "variant": "columns",
+            "heightPx": 299.2,
+            "topPx": 1555,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "four-column",
+            "heightPx": 658.4,
+            "topPx": 1854,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-light",
+            "variant": "default",
+            "heightPx": 885,
+            "topPx": 2513,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 838.6,
+            "topPx": 3398,
+            "position": "relative"
+          },
+          {
+            "section": "cta.community-band",
+            "variant": "default",
+            "heightPx": 453.2,
+            "topPx": 4236,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.stats-bento",
+            "variant": "default",
+            "heightPx": 912.8,
+            "topPx": 4690,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 825.8,
+            "topPx": 5602,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "plain",
+            "heightPx": 371.6,
+            "topPx": 6428,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/ai": {
+        "template": "T2",
+        "docHeightPx": 7820,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "media",
+            "heightPx": 1082.6,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.checklist",
+            "variant": "split",
+            "heightPx": 464,
+            "topPx": 1227,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "four-column",
+            "heightPx": 687.2,
+            "topPx": 1691,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-light",
+            "variant": "default",
+            "heightPx": 883,
+            "topPx": 2378,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "video",
+            "heightPx": 472.3,
+            "topPx": 3261,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 838.6,
+            "topPx": 3733,
+            "position": "relative"
+          },
+          {
+            "section": "cta.gradient-card",
+            "variant": "default",
+            "heightPx": 499.2,
+            "topPx": 4572,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 708.2,
+            "topPx": 5071,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.stats-bento",
+            "variant": "default",
+            "heightPx": 937.4,
+            "topPx": 5779,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "plain",
+            "heightPx": 347.6,
+            "topPx": 6716,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/embedded-analytics": {
+        "template": "T2",
+        "docHeightPx": 7744,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "media",
+            "heightPx": 1096.1,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.checklist",
+            "variant": "split",
+            "heightPx": 566.4,
+            "topPx": 1240,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "four-column",
+            "heightPx": 792.8,
+            "topPx": 1806,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-light",
+            "variant": "default",
+            "heightPx": 913,
+            "topPx": 2599,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 878.6,
+            "topPx": 3512,
+            "position": "relative"
+          },
+          {
+            "section": "cta.community-band",
+            "variant": "default",
+            "heightPx": 510.8,
+            "topPx": 4391,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.stats-bento",
+            "variant": "default",
+            "heightPx": 912.8,
+            "topPx": 4902,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 801.8,
+            "topPx": 5814,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "plain",
+            "heightPx": 371.6,
+            "topPx": 6616,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/data-trust": {
+        "template": "T2",
+        "docHeightPx": 7559,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "media",
+            "heightPx": 956.6,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.checklist",
+            "variant": "grid",
+            "heightPx": 651.2,
+            "topPx": 1101,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "four-column",
+            "heightPx": 768.8,
+            "topPx": 1752,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-light",
+            "variant": "default",
+            "heightPx": 885,
+            "topPx": 2521,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 838.6,
+            "topPx": 3406,
+            "position": "relative"
+          },
+          {
+            "section": "cta.community-band",
+            "variant": "default",
+            "heightPx": 453.2,
+            "topPx": 4244,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.stats-bento",
+            "variant": "default",
+            "heightPx": 912.8,
+            "topPx": 4697,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 821,
+            "topPx": 5610,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "plain",
+            "heightPx": 371.6,
+            "topPx": 6431,
+            "position": "relative"
+          }
+        ]
+      },
+      "/product/cost-optimization": {
+        "template": "T2",
+        "docHeightPx": 8088,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "media",
+            "heightPx": 1228.6,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.checklist",
+            "variant": "split",
+            "heightPx": 566.4,
+            "topPx": 1373,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-light",
+            "variant": "default",
+            "heightPx": 941,
+            "topPx": 1939,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.quote-band",
+            "variant": "single",
+            "heightPx": 655,
+            "topPx": 2880,
+            "position": "relative"
+          },
+          {
+            "section": "features.checklist",
+            "variant": "before-after",
+            "heightPx": 382.4,
+            "topPx": 3535,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 838.6,
+            "topPx": 3917,
+            "position": "relative"
+          },
+          {
+            "section": "cta.community-band",
+            "variant": "default",
+            "heightPx": 453.2,
+            "topPx": 4756,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.stats-bento",
+            "variant": "default",
+            "heightPx": 912.8,
+            "topPx": 5209,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 838.2,
+            "topPx": 6122,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "plain",
+            "heightPx": 371.6,
+            "topPx": 6960,
+            "position": "relative"
+          }
+        ]
+      },
+      "/data-platforms/cobalt": {
+        "template": "T3",
+        "docHeightPx": 5760,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "padded",
+            "heightPx": 602.3,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "image-card",
+            "heightPx": 1088.5,
+            "topPx": 746,
+            "position": "relative"
+          },
+          {
+            "section": "content.statement",
+            "variant": "diagram",
+            "heightPx": 773.6,
+            "topPx": 1835,
+            "position": "relative"
+          },
+          {
+            "section": "cta.gradient-card",
+            "variant": "default",
+            "heightPx": 417.6,
+            "topPx": 2608,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 880.6,
+            "topPx": 3026,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 708.2,
+            "topPx": 3907,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 389.2,
+            "topPx": 4615,
+            "position": "relative"
+          }
+        ]
+      },
+      "/data-platforms/northwind": {
+        "template": "T3",
+        "docHeightPx": 5801,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "flush",
+            "heightPx": 612,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "image-card",
+            "heightPx": 944.5,
+            "topPx": 756,
+            "position": "relative"
+          },
+          {
+            "section": "content.statement",
+            "variant": "video",
+            "heightPx": 831.2,
+            "topPx": 1700,
+            "position": "relative"
+          },
+          {
+            "section": "cta.gradient-card",
+            "variant": "default",
+            "heightPx": 417.6,
+            "topPx": 2532,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 1026.6,
+            "topPx": 2949,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 679.4,
+            "topPx": 3976,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 389.2,
+            "topPx": 4655,
+            "position": "relative"
+          }
+        ]
+      },
+      "/data-platforms/quarry": {
+        "template": "T3",
+        "docHeightPx": 6358,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "flush",
+            "heightPx": 612,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "image-card",
+            "heightPx": 997.3,
+            "topPx": 756,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 484.2,
+            "topPx": 1753,
+            "position": "relative"
+          },
+          {
+            "section": "cta.gradient-card",
+            "variant": "default",
+            "heightPx": 417.6,
+            "topPx": 2237,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 878.6,
+            "topPx": 2655,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 708.2,
+            "topPx": 3534,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.stats-bento",
+            "variant": "default",
+            "heightPx": 912.8,
+            "topPx": 4242,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 446.8,
+            "topPx": 5155,
+            "position": "relative"
+          }
+        ]
+      },
+      "/data-platforms/helixa": {
+        "template": "T3",
+        "docHeightPx": 5565,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "flush",
+            "heightPx": 612,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "image-card",
+            "heightPx": 910.9,
+            "topPx": 756,
+            "position": "relative"
+          },
+          {
+            "section": "content.statement",
+            "variant": "diagram",
+            "heightPx": 773.6,
+            "topPx": 1667,
+            "position": "relative"
+          },
+          {
+            "section": "cta.gradient-card",
+            "variant": "default",
+            "heightPx": 417.6,
+            "topPx": 2440,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 822.6,
+            "topPx": 2858,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 739.4,
+            "topPx": 3681,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 389.2,
+            "topPx": 4420,
+            "position": "relative"
+          }
+        ]
+      },
+      "/data-platforms/stratus": {
+        "template": "T3",
+        "docHeightPx": 5495,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "flush",
+            "heightPx": 612,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "image-card",
+            "heightPx": 968.5,
+            "topPx": 756,
+            "position": "relative"
+          },
+          {
+            "section": "content.media-split",
+            "variant": "text-left",
+            "heightPx": 439.2,
+            "topPx": 1724,
+            "position": "relative"
+          },
+          {
+            "section": "cta.gradient-card",
+            "variant": "default",
+            "heightPx": 475.2,
+            "topPx": 2164,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.customer-tabs",
+            "variant": "default",
+            "heightPx": 1026.6,
+            "topPx": 2639,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 684.2,
+            "topPx": 3665,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 389.2,
+            "topPx": 4350,
+            "position": "relative"
+          }
+        ]
+      },
+      "/data-platforms/driftway": {
+        "template": "T3",
+        "docHeightPx": 4880,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.split",
+            "variant": "flush",
+            "heightPx": 612,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "image-card",
+            "heightPx": 992.5,
+            "topPx": 756,
+            "position": "relative"
+          },
+          {
+            "section": "content.statement",
+            "variant": "video",
+            "heightPx": 831.2,
+            "topPx": 1748,
+            "position": "relative"
+          },
+          {
+            "section": "cta.gradient-card",
+            "variant": "default",
+            "heightPx": 417.6,
+            "topPx": 2580,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 679.4,
+            "topPx": 2997,
+            "position": "relative"
+          },
+          {
+            "section": "cta.closing-band",
+            "variant": "with-aside",
+            "heightPx": 446.8,
+            "topPx": 3677,
+            "position": "relative"
+          }
+        ]
+      },
+      "/industry/financial-services": {
+        "template": "T4",
+        "docHeightPx": 7792,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "square",
+            "heightPx": 1262.4,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "four-column",
+            "heightPx": 591.2,
+            "topPx": 1406,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.quote-band",
+            "variant": "single",
+            "heightPx": 655,
+            "topPx": 1998,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "wash-icon",
+            "heightPx": 474.4,
+            "topPx": 2653,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-dark",
+            "variant": "default",
+            "heightPx": 1107.4,
+            "topPx": 3127,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.testimonial-slider",
+            "variant": "industry",
+            "heightPx": 628,
+            "topPx": 4234,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 755.4,
+            "topPx": 4862,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.stats-bento",
+            "variant": "default",
+            "heightPx": 964.6,
+            "topPx": 5618,
+            "position": "relative"
+          },
+          {
+            "section": "cta.community-band",
+            "variant": "default",
+            "heightPx": 453.2,
+            "topPx": 6582,
+            "position": "relative"
+          }
+        ]
+      },
+      "/industry/healthcare": {
+        "template": "T4",
+        "docHeightPx": 7937,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "square",
+            "heightPx": 1262.4,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "four-column",
+            "heightPx": 680.8,
+            "topPx": 1406,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.quote-band",
+            "variant": "single",
+            "heightPx": 655,
+            "topPx": 2087,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "wash-icon",
+            "heightPx": 450.4,
+            "topPx": 2742,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-dark",
+            "variant": "default",
+            "heightPx": 1073.8,
+            "topPx": 3193,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.testimonial-slider",
+            "variant": "industry",
+            "heightPx": 684,
+            "topPx": 4266,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 813,
+            "topPx": 4950,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.stats-bento",
+            "variant": "default",
+            "heightPx": 964.6,
+            "topPx": 5763,
+            "position": "relative"
+          },
+          {
+            "section": "cta.community-band",
+            "variant": "default",
+            "heightPx": 453.2,
+            "topPx": 6728,
+            "position": "relative"
+          }
+        ]
+      },
+      "/industry/manufacturing": {
+        "template": "T4",
+        "docHeightPx": 7706,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "square",
+            "heightPx": 1262.4,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "four-column",
+            "heightPx": 623.2,
+            "topPx": 1406,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.quote-band",
+            "variant": "single",
+            "heightPx": 655,
+            "topPx": 2030,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "wash-icon",
+            "heightPx": 431.2,
+            "topPx": 2685,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-dark",
+            "variant": "default",
+            "heightPx": 1097.8,
+            "topPx": 3116,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.testimonial-slider",
+            "variant": "industry",
+            "heightPx": 596,
+            "topPx": 4214,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 722.6,
+            "topPx": 4810,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.stats-bento",
+            "variant": "default",
+            "heightPx": 964.6,
+            "topPx": 5532,
+            "position": "relative"
+          },
+          {
+            "section": "cta.community-band",
+            "variant": "default",
+            "heightPx": 453.2,
+            "topPx": 6497,
+            "position": "relative"
+          }
+        ]
+      },
+      "/industry/energy-utilities": {
+        "template": "T4",
+        "docHeightPx": 7757,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "square",
+            "heightPx": 1254.1,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "four-column",
+            "heightPx": 623.2,
+            "topPx": 1398,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.quote-band",
+            "variant": "single",
+            "heightPx": 655,
+            "topPx": 2021,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "wash-icon",
+            "heightPx": 450.4,
+            "topPx": 2676,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-dark",
+            "variant": "default",
+            "heightPx": 1049.8,
+            "topPx": 3127,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.testimonial-slider",
+            "variant": "industry",
+            "heightPx": 684,
+            "topPx": 4176,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 722.6,
+            "topPx": 4860,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.stats-bento",
+            "variant": "default",
+            "heightPx": 964.6,
+            "topPx": 5583,
+            "position": "relative"
+          },
+          {
+            "section": "cta.community-band",
+            "variant": "default",
+            "heightPx": 453.2,
+            "topPx": 6548,
+            "position": "relative"
+          }
+        ]
+      },
+      "/industry/telecommunications": {
+        "template": "T4",
+        "docHeightPx": 7812,
+        "chrome": {
+          "shell.announcement-bar": {
+            "heightPx": 53,
+            "position": "static"
+          },
+          "shell.navbar": {
+            "heightPx": 91,
+            "position": "sticky"
+          },
+          "shell.footer": {
+            "heightPx": 756.2,
+            "position": "static"
+          }
+        },
+        "nodes": [
+          {
+            "section": "hero.center",
+            "variant": "square",
+            "heightPx": 1231.3,
+            "topPx": 144,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "four-column",
+            "heightPx": 623.2,
+            "topPx": 1375,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.quote-band",
+            "variant": "single",
+            "heightPx": 655,
+            "topPx": 1998,
+            "position": "relative"
+          },
+          {
+            "section": "features.card-grid",
+            "variant": "wash-icon",
+            "heightPx": 402.4,
+            "topPx": 2653,
+            "position": "relative"
+          },
+          {
+            "section": "features.tabs-dark",
+            "variant": "default",
+            "heightPx": 1179.4,
+            "topPx": 3056,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.testimonial-slider",
+            "variant": "industry",
+            "heightPx": 680,
+            "topPx": 4235,
+            "position": "relative"
+          },
+          {
+            "section": "editorial.resource-cards",
+            "variant": "default",
+            "heightPx": 722.6,
+            "topPx": 4915,
+            "position": "relative"
+          },
+          {
+            "section": "social-proof.stats-bento",
+            "variant": "default",
+            "heightPx": 964.6,
+            "topPx": 5638,
+            "position": "relative"
+          },
+          {
+            "section": "cta.community-band",
+            "variant": "default",
+            "heightPx": 453.2,
+            "topPx": 6602,
+            "position": "relative"
+          }
+        ]
+      }
+    }
+  },
+  "responsiveHeights": {
+    "note": "representative route per implemented template at 1280/768/375 (same method)",
+    "byViewport": {
+      "1280": {
+        "/": {
+          "docHeightPx": 7184,
+          "nodeHeightsPx": [
+            497.6,
+            200,
+            285,
+            204.8,
+            600.8,
+            677.6,
+            591.2,
+            427.2,
+            842.8,
+            537,
+            400,
+            652,
+            453.2
+          ]
+        },
+        "/product/develop": {
+          "docHeightPx": 6360,
+          "nodeHeightsPx": [
+            692,
+            481.6,
+            703.2,
+            1137.8,
+            417.6,
+            934.6,
+            779,
+            313.6
+          ]
+        },
+        "/product/data-modernization": {
+          "docHeightPx": 7574,
+          "nodeHeightsPx": [
+            1050.9,
+            315.2,
+            299.2,
+            716,
+            885,
+            838.6,
+            453.2,
+            936.8,
+            807.8,
+            371.6
+          ]
+        },
+        "/data-platforms/cobalt": {
+          "docHeightPx": 5763,
+          "nodeHeightsPx": [
+            565.1,
+            1088.5,
+            773.6,
+            417.6,
+            880.6,
+            690.2,
+            446.8
+          ]
+        },
+        "/industry/financial-services": {
+          "docHeightPx": 7886,
+          "nodeHeightsPx": [
+            1198.4,
+            615.2,
+            655,
+            474.4,
+            1197,
+            628,
+            786,
+            978.3,
+            453.2
+          ]
+        }
+      },
+      "768": {
+        "/": {
+          "docHeightPx": 8387,
+          "nodeHeightsPx": [
+            487.2,
+            200,
+            275.4,
+            185.6,
+            861.1,
+            860.1,
+            859.4,
+            460.8,
+            914.8,
+            515.2,
+            534.4,
+            628,
+            525.2
+          ]
+        },
+        "/product/develop": {
+          "docHeightPx": 6740,
+          "nodeHeightsPx": [
+            462.8,
+            620.8,
+            842.4,
+            1263.4,
+            398.4,
+            954.2,
+            682.4,
+            350.8
+          ]
+        },
+        "/product/data-modernization": {
+          "docHeightPx": 8920,
+          "nodeHeightsPx": [
+            861.3,
+            276.8,
+            440.8,
+            838.4,
+            921,
+            950.2,
+            501.2,
+            1882.9,
+            682.4,
+            400.4
+          ]
+        },
+        "/data-platforms/cobalt": {
+          "docHeightPx": 5908,
+          "nodeHeightsPx": [
+            576.4,
+            1049.3,
+            673.4,
+            398.4,
+            1034.2,
+            598.4,
+            413.2
+          ]
+        },
+        "/industry/financial-services": {
+          "docHeightPx": 9988,
+          "nodeHeightsPx": [
+            1009.6,
+            838.4,
+            567.7,
+            594.4,
+            1325.8,
+            600,
+            593.2,
+            2793.1,
+            501.2
+          ]
+        }
+      },
+      "375": {
+        "/": {
+          "docHeightPx": 10688,
+          "nodeHeightsPx": [
+            668,
+            168,
+            333,
+            211.2,
+            648.1,
+            676.4,
+            676.1,
+            968.8,
+            1757.2,
+            740.2,
+            820.8,
+            966.8,
+            865.4
+          ]
+        },
+        "/product/develop": {
+          "docHeightPx": 8946,
+          "nodeHeightsPx": [
+            857.8,
+            765.1,
+            1424.8,
+            1124.8,
+            488.8,
+            974.4,
+            1427,
+            610.8
+          ]
+        },
+        "/product/data-modernization": {
+          "docHeightPx": 10767,
+          "nodeHeightsPx": [
+            755.3,
+            355.2,
+            836.8,
+            1392.8,
+            644,
+            908,
+            865.4,
+            1749.1,
+            1559,
+            428.4
+          ]
+        },
+        "/data-platforms/cobalt": {
+          "docHeightPx": 8302,
+          "nodeHeightsPx": [
+            897.8,
+            2152.5,
+            524.8,
+            428.8,
+            1083.2,
+            1292.6,
+            649.2
+          ]
+        },
+        "/industry/financial-services": {
+          "docHeightPx": 11127,
+          "nodeHeightsPx": [
+            909.4,
+            1476.8,
+            551.7,
+            976.8,
+            1177.6,
+            848.8,
+            932.7,
+            2204.9,
+            775
+          ]
+        }
+      }
+    }
+  },
+  "renderedStyleSamples": {
+    "note": "computed styles sampled from the rendered clone (getComputedStyle) to confirm the token layer matches what actually renders",
+    "samples": {
+      "1440:/": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "64px",
+          "lineHeight": "76.8px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "24px",
+          "lineHeight": "28.8px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(99, 47, 245)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "lead": {
+          "fontFamily": "Outfit",
+          "fontSize": "18px",
+          "lineHeight": "28px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 96,
+          "width": 1248,
+          "paddingLeft": "0px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "64px 0px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600"
+        ]
+      },
+      "1440:/product/develop": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "64px",
+          "lineHeight": "76.8px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "24px",
+          "lineHeight": "28.8px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(99, 47, 245)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "lead": {
+          "fontFamily": "Outfit",
+          "fontSize": "18px",
+          "lineHeight": "28px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 96,
+          "width": 1248,
+          "paddingLeft": "0px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "64px 0px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600"
+        ]
+      },
+      "1440:/industry/financial-services": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "64px",
+          "lineHeight": "76.8px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "24px",
+          "lineHeight": "28.8px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(99, 47, 245)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "lead": {
+          "fontFamily": "Outfit",
+          "fontSize": "18px",
+          "lineHeight": "28px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 96,
+          "width": 1248,
+          "paddingLeft": "0px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "0px 0px 64px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600"
+        ]
+      },
+      "1024:/": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "32px",
+          "lineHeight": "38.4px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "20px",
+          "lineHeight": "24px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(99, 47, 245)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "lead": {
+          "fontFamily": "Outfit",
+          "fontSize": "18px",
+          "lineHeight": "28px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 0,
+          "width": 1024,
+          "paddingLeft": "64px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "64px 0px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600"
+        ]
+      },
+      "1024:/product/develop": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "32px",
+          "lineHeight": "38.4px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "20px",
+          "lineHeight": "24px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(99, 47, 245)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "lead": {
+          "fontFamily": "Outfit",
+          "fontSize": "18px",
+          "lineHeight": "28px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 0,
+          "width": 1024,
+          "paddingLeft": "64px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "64px 0px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600"
+        ]
+      },
+      "1024:/industry/financial-services": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "32px",
+          "lineHeight": "38.4px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "20px",
+          "lineHeight": "24px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(99, 47, 245)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "lead": {
+          "fontFamily": "Outfit",
+          "fontSize": "18px",
+          "lineHeight": "28px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 0,
+          "width": 1024,
+          "paddingLeft": "64px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "0px 0px 64px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600"
+        ]
+      },
+      "375:/": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "32px",
+          "lineHeight": "38.4px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "20px",
+          "lineHeight": "24px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(99, 47, 245)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "lead": {
+          "fontFamily": "Outfit",
+          "fontSize": "18px",
+          "lineHeight": "28px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 0,
+          "width": 375,
+          "paddingLeft": "24px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "48px 0px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600"
+        ]
+      },
+      "375:/product/develop": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "32px",
+          "lineHeight": "38.4px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "20px",
+          "lineHeight": "24px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(99, 47, 245)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "lead": {
+          "fontFamily": "Outfit",
+          "fontSize": "18px",
+          "lineHeight": "28px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 0,
+          "width": 375,
+          "paddingLeft": "24px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "48px 0px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600"
+        ]
+      },
+      "375:/industry/financial-services": {
+        "h1": {
+          "fontFamily": "Outfit",
+          "fontSize": "48px",
+          "lineHeight": "57.6px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h2": {
+          "fontFamily": "Outfit",
+          "fontSize": "32px",
+          "lineHeight": "38.4px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "h4": {
+          "fontFamily": "Outfit",
+          "fontSize": "20px",
+          "lineHeight": "24px",
+          "fontWeight": "600",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "eyebrow": {
+          "fontFamily": "\"IBM Plex Mono\"",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(99, 47, 245)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "lead": {
+          "fontFamily": "Outfit",
+          "fontSize": "18px",
+          "lineHeight": "28px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "padding": "0px"
+        },
+        "btnPrimary": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "500",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(254, 103, 3)",
+          "borderRadius": "12px",
+          "padding": "8px 16px"
+        },
+        "nav": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "24px 0px"
+        },
+        "footer": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(3, 7, 17)",
+          "borderRadius": "0px",
+          "padding": "48px 0px 0px"
+        },
+        "container": {
+          "x": 0,
+          "width": 375,
+          "paddingLeft": "24px"
+        },
+        "section": {
+          "fontFamily": "Outfit",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400",
+          "color": "rgb(3, 7, 17)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "padding": "0px 0px 48px"
+        },
+        "fonts": [
+          "IBM Plex Mono 500",
+          "Outfit 400",
+          "Outfit 500",
+          "Outfit 600"
+        ]
+      }
+    }
+  },
+  "specParity": {
+    "note": "clone section heights vs the ORIGINAL site's heights recorded in the project's own specs (CLONE_SPEC.md page map, specs/T1-T4.md section tables). This is geometric parity per section, NOT a pixel comparison: no live-site capture was made in this build.",
+    "byRoute": {
+      "/": {
+        "template": "T0",
+        "comparisons": [
+          {
+            "viewport": 1440,
+            "index": 0,
+            "specLabel": "Hero",
+            "section": "hero.center",
+            "specOriginalPx": 498,
+            "clonePx": 497.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 1440,
+            "index": 1,
+            "specLabel": "Logo marquee (margin-top −85px, overlaps hero)",
+            "section": "social-proof.logo-marquee",
+            "specOriginalPx": 200,
+            "clonePx": 200,
+            "deltaPx": 0
+          },
+          {
+            "viewport": 1440,
+            "index": 2,
+            "specLabel": "Dark news band (partner announcement)",
+            "section": "editorial.news-band",
+            "specOriginalPx": 285,
+            "clonePx": 285,
+            "deltaPx": 0
+          },
+          {
+            "viewport": 1440,
+            "index": 3,
+            "specLabel": "Statement (single centered line)",
+            "section": "content.statement",
+            "specOriginalPx": 205,
+            "clonePx": 204.8,
+            "deltaPx": -0.2
+          },
+          {
+            "viewport": 1440,
+            "index": 4,
+            "specLabel": "Feature panel 1: text left, GIF right (gradient-05)",
+            "section": "features.gradient-panel",
+            "specOriginalPx": 553,
+            "clonePx": 552.8,
+            "deltaPx": -0.2
+          },
+          {
+            "viewport": 1440,
+            "index": 5,
+            "specLabel": "Feature panel 2: GIF left, text right (gradient-02)",
+            "section": "features.gradient-panel",
+            "specOriginalPx": 591,
+            "clonePx": 591.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 1440,
+            "index": 6,
+            "specLabel": "Feature panel 3: text left, GIF right (gradient-12)",
+            "section": "features.gradient-panel",
+            "specOriginalPx": 591,
+            "clonePx": 591.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 1440,
+            "index": 7,
+            "specLabel": "Integrations (text + 2×3 logo tiles)",
+            "section": "features.integration-tiles",
+            "specOriginalPx": 414,
+            "clonePx": 414,
+            "deltaPx": 0
+          },
+          {
+            "viewport": 1440,
+            "index": 8,
+            "specLabel": "three-card grid",
+            "section": "features.card-grid",
+            "specOriginalPx": 819,
+            "clonePx": 818.8,
+            "deltaPx": -0.2
+          },
+          {
+            "viewport": 1440,
+            "index": 9,
+            "specLabel": "Cost/orchestration split (text + diagram SVG)",
+            "section": "content.media-split",
+            "specOriginalPx": 537,
+            "clonePx": 537,
+            "deltaPx": 0
+          },
+          {
+            "viewport": 1440,
+            "index": 10,
+            "specLabel": "IDE card (gradient-26, 2×2 tiles)",
+            "section": "cta.ide-card",
+            "specOriginalPx": 400,
+            "clonePx": 400,
+            "deltaPx": 0
+          },
+          {
+            "viewport": 1440,
+            "index": 11,
+            "specLabel": "Testimonials (text + Splide slider, 2 cards)",
+            "section": "social-proof.testimonial-slider",
+            "specOriginalPx": 624,
+            "clonePx": 624,
+            "deltaPx": 0
+          },
+          {
+            "viewport": 1440,
+            "index": 12,
+            "specLabel": "Community CTA + stats (gradient-12 + circles)",
+            "section": "cta.community-band",
+            "specOriginalPx": 453,
+            "clonePx": 453.2,
+            "deltaPx": 0.2
+          }
+        ],
+        "maxAbsDeltaPxByViewport": {
+          "1440": 0.4
+        },
+        "within2pxAt1440": true,
+        "documentHeight": {
+          "1440": {
+            "specOriginalPx": 6986,
+            "clonePx": 6985,
+            "deltaPx": -1
+          },
+          "1280": {
+            "specOriginalPx": 7185,
+            "clonePx": 7184,
+            "deltaPx": -1
+          },
+          "768": {
+            "specOriginalPx": 8388,
+            "clonePx": 8387,
+            "deltaPx": -1
+          },
+          "375": {
+            "specOriginalPx": 10688,
+            "clonePx": 10688,
+            "deltaPx": 0
+          }
+        }
+      },
+      "/product/develop": {
+        "template": "T1",
+        "comparisons": [
+          {
+            "viewport": 1440,
+            "index": 0,
+            "specLabel": "hero",
+            "section": "hero.split",
+            "specOriginalPx": 740,
+            "clonePx": 740,
+            "deltaPx": 0
+          },
+          {
+            "viewport": 1440,
+            "index": 1,
+            "specLabel": "intro split",
+            "section": "content.media-split",
+            "specOriginalPx": 482,
+            "clonePx": 481.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 1440,
+            "index": 2,
+            "specLabel": "3 cards",
+            "section": "features.card-grid",
+            "specOriginalPx": 703,
+            "clonePx": 703.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 1440,
+            "index": 3,
+            "specLabel": "features",
+            "section": "features.tabs-dark",
+            "specOriginalPx": 1079,
+            "clonePx": 1080.2,
+            "deltaPx": 1.2
+          },
+          {
+            "viewport": 1440,
+            "index": 4,
+            "specLabel": "CTA card",
+            "section": "cta.gradient-card",
+            "specOriginalPx": 418,
+            "clonePx": 417.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 1440,
+            "index": 5,
+            "specLabel": "customer tabs",
+            "section": "social-proof.customer-tabs",
+            "specOriginalPx": 935,
+            "clonePx": 934.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 1440,
+            "index": 6,
+            "specLabel": "resources",
+            "section": "editorial.resource-cards",
+            "specOriginalPx": 739,
+            "clonePx": 739.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 1440,
+            "index": 7,
+            "specLabel": "closing CTA",
+            "section": "cta.closing-band",
+            "specOriginalPx": 314,
+            "clonePx": 313.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 1280,
+            "index": 0,
+            "specLabel": "hero",
+            "section": "hero.split",
+            "specOriginalPx": 692,
+            "clonePx": 692,
+            "deltaPx": 0
+          },
+          {
+            "viewport": 1280,
+            "index": 1,
+            "specLabel": "intro split",
+            "section": "content.media-split",
+            "specOriginalPx": 482,
+            "clonePx": 481.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 1280,
+            "index": 2,
+            "specLabel": "3 cards",
+            "section": "features.card-grid",
+            "specOriginalPx": 703,
+            "clonePx": 703.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 1280,
+            "index": 3,
+            "specLabel": "features",
+            "section": "features.tabs-dark",
+            "specOriginalPx": 1137,
+            "clonePx": 1137.8,
+            "deltaPx": 0.8
+          },
+          {
+            "viewport": 1280,
+            "index": 4,
+            "specLabel": "CTA card",
+            "section": "cta.gradient-card",
+            "specOriginalPx": 418,
+            "clonePx": 417.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 1280,
+            "index": 5,
+            "specLabel": "customer tabs",
+            "section": "social-proof.customer-tabs",
+            "specOriginalPx": 935,
+            "clonePx": 934.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 1280,
+            "index": 6,
+            "specLabel": "resources",
+            "section": "editorial.resource-cards",
+            "specOriginalPx": 721,
+            "clonePx": 779,
+            "deltaPx": 58
+          },
+          {
+            "viewport": 1280,
+            "index": 7,
+            "specLabel": "closing CTA",
+            "section": "cta.closing-band",
+            "specOriginalPx": 314,
+            "clonePx": 313.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 768,
+            "index": 0,
+            "specLabel": "hero",
+            "section": "hero.split",
+            "specOriginalPx": 463,
+            "clonePx": 462.8,
+            "deltaPx": -0.2
+          },
+          {
+            "viewport": 768,
+            "index": 1,
+            "specLabel": "intro split",
+            "section": "content.media-split",
+            "specOriginalPx": 597,
+            "clonePx": 620.8,
+            "deltaPx": 23.8
+          },
+          {
+            "viewport": 768,
+            "index": 2,
+            "specLabel": "3 cards",
+            "section": "features.card-grid",
+            "specOriginalPx": 842,
+            "clonePx": 842.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 768,
+            "index": 3,
+            "specLabel": "features",
+            "section": "features.tabs-dark",
+            "specOriginalPx": 1263,
+            "clonePx": 1263.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 768,
+            "index": 4,
+            "specLabel": "CTA card",
+            "section": "cta.gradient-card",
+            "specOriginalPx": 398,
+            "clonePx": 398.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 768,
+            "index": 5,
+            "specLabel": "customer tabs",
+            "section": "social-proof.customer-tabs",
+            "specOriginalPx": 926,
+            "clonePx": 954.2,
+            "deltaPx": 28.2
+          },
+          {
+            "viewport": 768,
+            "index": 6,
+            "specLabel": "resources",
+            "section": "editorial.resource-cards",
+            "specOriginalPx": 682,
+            "clonePx": 682.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 768,
+            "index": 7,
+            "specLabel": "closing CTA",
+            "section": "cta.closing-band",
+            "specOriginalPx": 351,
+            "clonePx": 350.8,
+            "deltaPx": -0.2
+          },
+          {
+            "viewport": 375,
+            "index": 0,
+            "specLabel": "hero",
+            "section": "hero.split",
+            "specOriginalPx": 858,
+            "clonePx": 857.8,
+            "deltaPx": -0.2
+          },
+          {
+            "viewport": 375,
+            "index": 1,
+            "specLabel": "intro split",
+            "section": "content.media-split",
+            "specOriginalPx": 741,
+            "clonePx": 765.1,
+            "deltaPx": 24.1
+          },
+          {
+            "viewport": 375,
+            "index": 2,
+            "specLabel": "3 cards",
+            "section": "features.card-grid",
+            "specOriginalPx": 1449,
+            "clonePx": 1424.8,
+            "deltaPx": -24.2
+          },
+          {
+            "viewport": 375,
+            "index": 3,
+            "specLabel": "features",
+            "section": "features.tabs-dark",
+            "specOriginalPx": 1101,
+            "clonePx": 1124.8,
+            "deltaPx": 23.8
+          },
+          {
+            "viewport": 375,
+            "index": 4,
+            "specLabel": "CTA card",
+            "section": "cta.gradient-card",
+            "specOriginalPx": 489,
+            "clonePx": 488.8,
+            "deltaPx": -0.2
+          },
+          {
+            "viewport": 375,
+            "index": 5,
+            "specLabel": "customer tabs",
+            "section": "social-proof.customer-tabs",
+            "specOriginalPx": 946,
+            "clonePx": 974.4,
+            "deltaPx": 28.4
+          },
+          {
+            "viewport": 375,
+            "index": 6,
+            "specLabel": "resources",
+            "section": "editorial.resource-cards",
+            "specOriginalPx": 1389,
+            "clonePx": 1427,
+            "deltaPx": 38
+          },
+          {
+            "viewport": 375,
+            "index": 7,
+            "specLabel": "closing CTA",
+            "section": "cta.closing-band",
+            "specOriginalPx": 587,
+            "clonePx": 610.8,
+            "deltaPx": 23.8
+          }
+        ],
+        "maxAbsDeltaPxByViewport": {
+          "1440": 1.2,
+          "1280": 58,
+          "768": 28.2,
+          "375": 38
+        },
+        "within2pxAt1440": true,
+        "documentHeight": {
+          "1440": {
+            "specOriginalPx": 6310,
+            "clonePx": 6310,
+            "deltaPx": 0
+          },
+          "1280": {
+            "specOriginalPx": 6302,
+            "clonePx": 6360,
+            "deltaPx": 58
+          },
+          "768": {
+            "specOriginalPx": 6689,
+            "clonePx": 6740,
+            "deltaPx": 51
+          },
+          "375": {
+            "specOriginalPx": 8832,
+            "clonePx": 8946,
+            "deltaPx": 114
+          }
+        }
+      },
+      "/product/data-modernization": {
+        "template": "T2",
+        "comparisons": [
+          {
+            "viewport": 1440,
+            "index": 0,
+            "specLabel": "hero",
+            "section": "hero.center",
+            "specOriginalPx": 1096,
+            "clonePx": 1096.1,
+            "deltaPx": 0.1
+          },
+          {
+            "viewport": 1440,
+            "index": 1,
+            "specLabel": "problem statement",
+            "section": "content.statement",
+            "specOriginalPx": 315,
+            "clonePx": 315.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 1440,
+            "index": 2,
+            "specLabel": "checklist (4)",
+            "section": "features.checklist",
+            "specOriginalPx": 299,
+            "clonePx": 299.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 1440,
+            "index": 3,
+            "specLabel": "4 cards + 2 buttons",
+            "section": "features.card-grid",
+            "specOriginalPx": 658,
+            "clonePx": 658.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 1440,
+            "index": 4,
+            "specLabel": "product tabs (3)",
+            "section": "features.tabs-light",
+            "specOriginalPx": 885,
+            "clonePx": 885,
+            "deltaPx": 0
+          },
+          {
+            "viewport": 1440,
+            "index": 5,
+            "specLabel": "customer tabs (2)",
+            "section": "social-proof.customer-tabs",
+            "specOriginalPx": 839,
+            "clonePx": 838.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 1440,
+            "index": 6,
+            "specLabel": "community band",
+            "section": "cta.community-band",
+            "specOriginalPx": 453,
+            "clonePx": 453.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 1440,
+            "index": 7,
+            "specLabel": "trust bento",
+            "section": "social-proof.stats-bento",
+            "specOriginalPx": 913,
+            "clonePx": 912.8,
+            "deltaPx": -0.2
+          },
+          {
+            "viewport": 1440,
+            "index": 8,
+            "specLabel": "resources (3)",
+            "section": "editorial.resource-cards",
+            "specOriginalPx": 826,
+            "clonePx": 825.8,
+            "deltaPx": -0.2
+          },
+          {
+            "viewport": 1440,
+            "index": 9,
+            "specLabel": "closing CTA",
+            "section": "cta.closing-band",
+            "specOriginalPx": 372,
+            "clonePx": 371.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 1280,
+            "index": 0,
+            "specLabel": "hero",
+            "section": "hero.center",
+            "specOriginalPx": 1051,
+            "clonePx": 1050.9,
+            "deltaPx": -0.1
+          },
+          {
+            "viewport": 1280,
+            "index": 1,
+            "specLabel": "problem statement",
+            "section": "content.statement",
+            "specOriginalPx": 315,
+            "clonePx": 315.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 1280,
+            "index": 2,
+            "specLabel": "checklist (4)",
+            "section": "features.checklist",
+            "specOriginalPx": 323,
+            "clonePx": 299.2,
+            "deltaPx": -23.8
+          },
+          {
+            "viewport": 1280,
+            "index": 3,
+            "specLabel": "4 cards + 2 buttons",
+            "section": "features.card-grid",
+            "specOriginalPx": 716,
+            "clonePx": 716,
+            "deltaPx": 0
+          },
+          {
+            "viewport": 1280,
+            "index": 4,
+            "specLabel": "product tabs (3)",
+            "section": "features.tabs-light",
+            "specOriginalPx": 913,
+            "clonePx": 885,
+            "deltaPx": -28
+          },
+          {
+            "viewport": 1280,
+            "index": 5,
+            "specLabel": "customer tabs (2)",
+            "section": "social-proof.customer-tabs",
+            "specOriginalPx": 839,
+            "clonePx": 838.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 1280,
+            "index": 6,
+            "specLabel": "community band",
+            "section": "cta.community-band",
+            "specOriginalPx": 453,
+            "clonePx": 453.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 1280,
+            "index": 7,
+            "specLabel": "trust bento",
+            "section": "social-proof.stats-bento",
+            "specOriginalPx": 967,
+            "clonePx": 936.8,
+            "deltaPx": -30.2
+          },
+          {
+            "viewport": 1280,
+            "index": 8,
+            "specLabel": "resources (3)",
+            "section": "editorial.resource-cards",
+            "specOriginalPx": 808,
+            "clonePx": 807.8,
+            "deltaPx": -0.2
+          },
+          {
+            "viewport": 1280,
+            "index": 9,
+            "specLabel": "closing CTA",
+            "section": "cta.closing-band",
+            "specOriginalPx": 372,
+            "clonePx": 371.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 768,
+            "index": 0,
+            "specLabel": "hero",
+            "section": "hero.center",
+            "specOriginalPx": 861,
+            "clonePx": 861.3,
+            "deltaPx": 0.3
+          },
+          {
+            "viewport": 768,
+            "index": 1,
+            "specLabel": "problem statement",
+            "section": "content.statement",
+            "specOriginalPx": 277,
+            "clonePx": 276.8,
+            "deltaPx": -0.2
+          },
+          {
+            "viewport": 768,
+            "index": 2,
+            "specLabel": "checklist (4)",
+            "section": "features.checklist",
+            "specOriginalPx": 462,
+            "clonePx": 440.8,
+            "deltaPx": -21.2
+          },
+          {
+            "viewport": 768,
+            "index": 3,
+            "specLabel": "4 cards + 2 buttons",
+            "section": "features.card-grid",
+            "specOriginalPx": 838,
+            "clonePx": 838.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 768,
+            "index": 4,
+            "specLabel": "product tabs (3)",
+            "section": "features.tabs-light",
+            "specOriginalPx": 921,
+            "clonePx": 921,
+            "deltaPx": 0
+          },
+          {
+            "viewport": 768,
+            "index": 5,
+            "specLabel": "customer tabs (2)",
+            "section": "social-proof.customer-tabs",
+            "specOriginalPx": 914,
+            "clonePx": 950.2,
+            "deltaPx": 36.2
+          },
+          {
+            "viewport": 768,
+            "index": 6,
+            "specLabel": "community band",
+            "section": "cta.community-band",
+            "specOriginalPx": 501,
+            "clonePx": 501.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 768,
+            "index": 7,
+            "specLabel": "trust bento",
+            "section": "social-proof.stats-bento",
+            "specOriginalPx": 1883,
+            "clonePx": 1882.9,
+            "deltaPx": -0.1
+          },
+          {
+            "viewport": 768,
+            "index": 8,
+            "specLabel": "resources (3)",
+            "section": "editorial.resource-cards",
+            "specOriginalPx": 706,
+            "clonePx": 682.4,
+            "deltaPx": -23.6
+          },
+          {
+            "viewport": 768,
+            "index": 9,
+            "specLabel": "closing CTA",
+            "section": "cta.closing-band",
+            "specOriginalPx": 400,
+            "clonePx": 400.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 375,
+            "index": 0,
+            "specLabel": "hero",
+            "section": "hero.center",
+            "specOriginalPx": 755,
+            "clonePx": 755.3,
+            "deltaPx": 0.3
+          },
+          {
+            "viewport": 375,
+            "index": 1,
+            "specLabel": "problem statement",
+            "section": "content.statement",
+            "specOriginalPx": 394,
+            "clonePx": 355.2,
+            "deltaPx": -38.8
+          },
+          {
+            "viewport": 375,
+            "index": 2,
+            "specLabel": "checklist (4)",
+            "section": "features.checklist",
+            "specOriginalPx": 839,
+            "clonePx": 836.8,
+            "deltaPx": -2.2
+          },
+          {
+            "viewport": 375,
+            "index": 3,
+            "specLabel": "4 cards + 2 buttons",
+            "section": "features.card-grid",
+            "specOriginalPx": 1383,
+            "clonePx": 1392.8,
+            "deltaPx": 9.8
+          },
+          {
+            "viewport": 375,
+            "index": 4,
+            "specLabel": "product tabs (3)",
+            "section": "features.tabs-light",
+            "specOriginalPx": 672,
+            "clonePx": 644,
+            "deltaPx": -28
+          },
+          {
+            "viewport": 375,
+            "index": 5,
+            "specLabel": "customer tabs (2)",
+            "section": "social-proof.customer-tabs",
+            "specOriginalPx": 889,
+            "clonePx": 908,
+            "deltaPx": 19
+          },
+          {
+            "viewport": 375,
+            "index": 6,
+            "specLabel": "community band",
+            "section": "cta.community-band",
+            "specOriginalPx": 841,
+            "clonePx": 865.4,
+            "deltaPx": 24.4
+          },
+          {
+            "viewport": 375,
+            "index": 7,
+            "specLabel": "trust bento",
+            "section": "social-proof.stats-bento",
+            "specOriginalPx": 1725,
+            "clonePx": 1749.1,
+            "deltaPx": 24.1
+          },
+          {
+            "viewport": 375,
+            "index": 8,
+            "specLabel": "resources (3)",
+            "section": "editorial.resource-cards",
+            "specOriginalPx": 1559,
+            "clonePx": 1559,
+            "deltaPx": 0
+          },
+          {
+            "viewport": 375,
+            "index": 9,
+            "specLabel": "closing CTA",
+            "section": "cta.closing-band",
+            "specOriginalPx": 452,
+            "clonePx": 428.4,
+            "deltaPx": -23.6
+          }
+        ],
+        "maxAbsDeltaPxByViewport": {
+          "1440": 0.4,
+          "1280": 30.2,
+          "768": 36.2,
+          "375": 38.8
+        },
+        "within2pxAt1440": true,
+        "documentHeight": {
+          "1440": {
+            "specOriginalPx": 7557,
+            "clonePx": 7556,
+            "deltaPx": -1
+          },
+          "1280": {
+            "specOriginalPx": 7658,
+            "clonePx": 7574,
+            "deltaPx": -84
+          },
+          "768": {
+            "specOriginalPx": 8930,
+            "clonePx": 8920,
+            "deltaPx": -10
+          },
+          "375": {
+            "specOriginalPx": 10784,
+            "clonePx": 10767,
+            "deltaPx": -17
+          }
+        }
+      },
+      "/data-platforms/cobalt": {
+        "template": "T3",
+        "comparisons": [
+          {
+            "viewport": 1440,
+            "index": 0,
+            "specLabel": "hero",
+            "section": "hero.split",
+            "specOriginalPx": 603,
+            "clonePx": 602.3,
+            "deltaPx": -0.7
+          },
+          {
+            "viewport": 1440,
+            "index": 1,
+            "specLabel": "lockup + 3 image cards",
+            "section": "features.card-grid",
+            "specOriginalPx": 1089,
+            "clonePx": 1088.5,
+            "deltaPx": -0.5
+          },
+          {
+            "viewport": 1440,
+            "index": 2,
+            "specLabel": "integration statement + diagram",
+            "section": "content.statement",
+            "specOriginalPx": 774,
+            "clonePx": 773.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 1440,
+            "index": 3,
+            "specLabel": "CTA card (1 button)",
+            "section": "cta.gradient-card",
+            "specOriginalPx": 394,
+            "clonePx": 417.6,
+            "deltaPx": 23.6
+          },
+          {
+            "viewport": 1440,
+            "index": 4,
+            "specLabel": "customer tabs (3)",
+            "section": "social-proof.customer-tabs",
+            "specOriginalPx": 881,
+            "clonePx": 880.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 1440,
+            "index": 5,
+            "specLabel": "(3)",
+            "section": "editorial.resource-cards",
+            "specOriginalPx": 708,
+            "clonePx": 708.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 1440,
+            "index": 6,
+            "specLabel": "closing CTA",
+            "section": "cta.closing-band",
+            "specOriginalPx": 389,
+            "clonePx": 389.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 1280,
+            "index": 0,
+            "specLabel": "hero",
+            "section": "hero.split",
+            "specOriginalPx": 565,
+            "clonePx": 565.1,
+            "deltaPx": 0.1
+          },
+          {
+            "viewport": 1280,
+            "index": 1,
+            "specLabel": "lockup + 3 image cards",
+            "section": "features.card-grid",
+            "specOriginalPx": 1089,
+            "clonePx": 1088.5,
+            "deltaPx": -0.5
+          },
+          {
+            "viewport": 1280,
+            "index": 2,
+            "specLabel": "integration statement + diagram",
+            "section": "content.statement",
+            "specOriginalPx": 774,
+            "clonePx": 773.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 1280,
+            "index": 3,
+            "specLabel": "CTA card (1 button)",
+            "section": "cta.gradient-card",
+            "specOriginalPx": 394,
+            "clonePx": 417.6,
+            "deltaPx": 23.6
+          },
+          {
+            "viewport": 1280,
+            "index": 4,
+            "specLabel": "customer tabs (3)",
+            "section": "social-proof.customer-tabs",
+            "specOriginalPx": 937,
+            "clonePx": 880.6,
+            "deltaPx": -56.4
+          },
+          {
+            "viewport": 1280,
+            "index": 5,
+            "specLabel": "(3)",
+            "section": "editorial.resource-cards",
+            "specOriginalPx": 690,
+            "clonePx": 690.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 1280,
+            "index": 6,
+            "specLabel": "closing CTA",
+            "section": "cta.closing-band",
+            "specOriginalPx": 447,
+            "clonePx": 446.8,
+            "deltaPx": -0.2
+          },
+          {
+            "viewport": 768,
+            "index": 0,
+            "specLabel": "hero",
+            "section": "hero.split",
+            "specOriginalPx": 576,
+            "clonePx": 576.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 768,
+            "index": 1,
+            "specLabel": "lockup + 3 image cards",
+            "section": "features.card-grid",
+            "specOriginalPx": 1049,
+            "clonePx": 1049.3,
+            "deltaPx": 0.3
+          },
+          {
+            "viewport": 768,
+            "index": 2,
+            "specLabel": "integration statement + diagram",
+            "section": "content.statement",
+            "specOriginalPx": 673,
+            "clonePx": 673.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 768,
+            "index": 3,
+            "specLabel": "CTA card (1 button)",
+            "section": "cta.gradient-card",
+            "specOriginalPx": 374,
+            "clonePx": 398.4,
+            "deltaPx": 24.4
+          },
+          {
+            "viewport": 768,
+            "index": 4,
+            "specLabel": "customer tabs (3)",
+            "section": "social-proof.customer-tabs",
+            "specOriginalPx": 1039,
+            "clonePx": 1034.2,
+            "deltaPx": -4.8
+          },
+          {
+            "viewport": 768,
+            "index": 5,
+            "specLabel": "(3)",
+            "section": "editorial.resource-cards",
+            "specOriginalPx": 598,
+            "clonePx": 598.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 768,
+            "index": 6,
+            "specLabel": "closing CTA",
+            "section": "cta.closing-band",
+            "specOriginalPx": 413,
+            "clonePx": 413.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 375,
+            "index": 0,
+            "specLabel": "hero",
+            "section": "hero.split",
+            "specOriginalPx": 956,
+            "clonePx": 897.8,
+            "deltaPx": -58.2
+          },
+          {
+            "viewport": 375,
+            "index": 1,
+            "specLabel": "lockup + 3 image cards",
+            "section": "features.card-grid",
+            "specOriginalPx": 2152,
+            "clonePx": 2152.5,
+            "deltaPx": 0.5
+          },
+          {
+            "viewport": 375,
+            "index": 2,
+            "specLabel": "integration statement + diagram",
+            "section": "content.statement",
+            "specOriginalPx": 525,
+            "clonePx": 524.8,
+            "deltaPx": -0.2
+          },
+          {
+            "viewport": 375,
+            "index": 3,
+            "specLabel": "CTA card (1 button)",
+            "section": "cta.gradient-card",
+            "specOriginalPx": 467,
+            "clonePx": 428.8,
+            "deltaPx": -38.2
+          },
+          {
+            "viewport": 375,
+            "index": 4,
+            "specLabel": "customer tabs (3)",
+            "section": "social-proof.customer-tabs",
+            "specOriginalPx": 1056,
+            "clonePx": 1083.2,
+            "deltaPx": 27.2
+          },
+          {
+            "viewport": 375,
+            "index": 5,
+            "specLabel": "(3)",
+            "section": "editorial.resource-cards",
+            "specOriginalPx": 1293,
+            "clonePx": 1292.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 375,
+            "index": 6,
+            "specLabel": "closing CTA",
+            "section": "cta.closing-band",
+            "specOriginalPx": 649,
+            "clonePx": 649.2,
+            "deltaPx": 0.2
+          }
+        ],
+        "maxAbsDeltaPxByViewport": {
+          "1440": 23.6,
+          "1280": 56.4,
+          "768": 24.4,
+          "375": 58.2
+        },
+        "within2pxAt1440": false,
+        "documentHeight": {
+          "1440": {
+            "specOriginalPx": 5738,
+            "clonePx": 5760,
+            "deltaPx": 22
+          },
+          "1280": {
+            "specOriginalPx": 5795,
+            "clonePx": 5763,
+            "deltaPx": -32
+          },
+          "768": {
+            "specOriginalPx": 5890,
+            "clonePx": 5908,
+            "deltaPx": 18
+          },
+          "375": {
+            "specOriginalPx": 8372,
+            "clonePx": 8302,
+            "deltaPx": -70
+          }
+        }
+      },
+      "/industry/financial-services": {
+        "template": "T4",
+        "comparisons": [
+          {
+            "viewport": 1440,
+            "index": 0,
+            "specLabel": "hero",
+            "section": "hero.center",
+            "specOriginalPx": 1262,
+            "clonePx": 1262.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 1440,
+            "index": 1,
+            "specLabel": "common use cases (4)",
+            "section": "features.card-grid",
+            "specOriginalPx": 591,
+            "clonePx": 591.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 1440,
+            "index": 2,
+            "specLabel": "quote",
+            "section": "social-proof.quote-band",
+            "specOriginalPx": 655,
+            "clonePx": 655,
+            "deltaPx": 0
+          },
+          {
+            "viewport": 1440,
+            "index": 3,
+            "specLabel": "unlocking (3)",
+            "section": "features.card-grid",
+            "specOriginalPx": 474,
+            "clonePx": 474.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 1440,
+            "index": 4,
+            "specLabel": "features",
+            "section": "features.tabs-dark",
+            "specOriginalPx": 1106,
+            "clonePx": 1107.4,
+            "deltaPx": 1.4
+          },
+          {
+            "viewport": 1440,
+            "index": 5,
+            "specLabel": "customer slider (4)",
+            "section": "social-proof.testimonial-slider",
+            "specOriginalPx": 628,
+            "clonePx": 628,
+            "deltaPx": 0
+          },
+          {
+            "viewport": 1440,
+            "index": 6,
+            "specLabel": "customer stories (2)",
+            "section": "editorial.resource-cards",
+            "specOriginalPx": 755,
+            "clonePx": 755.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 1440,
+            "index": 7,
+            "specLabel": "trust bento",
+            "section": "social-proof.stats-bento",
+            "specOriginalPx": 964,
+            "clonePx": 964.6,
+            "deltaPx": 0.6
+          },
+          {
+            "viewport": 1440,
+            "index": 8,
+            "specLabel": "community band",
+            "section": "cta.community-band",
+            "specOriginalPx": 453,
+            "clonePx": 453.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 1280,
+            "index": 0,
+            "specLabel": "hero",
+            "section": "hero.center",
+            "specOriginalPx": 1198,
+            "clonePx": 1198.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 1280,
+            "index": 1,
+            "specLabel": "common use cases (4)",
+            "section": "features.card-grid",
+            "specOriginalPx": 615,
+            "clonePx": 615.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 1280,
+            "index": 2,
+            "specLabel": "quote",
+            "section": "social-proof.quote-band",
+            "specOriginalPx": 655,
+            "clonePx": 655,
+            "deltaPx": 0
+          },
+          {
+            "viewport": 1280,
+            "index": 3,
+            "specLabel": "unlocking (3)",
+            "section": "features.card-grid",
+            "specOriginalPx": 503,
+            "clonePx": 474.4,
+            "deltaPx": -28.6
+          },
+          {
+            "viewport": 1280,
+            "index": 4,
+            "specLabel": "features",
+            "section": "features.tabs-dark",
+            "specOriginalPx": 1252,
+            "clonePx": 1197,
+            "deltaPx": -55
+          },
+          {
+            "viewport": 1280,
+            "index": 5,
+            "specLabel": "customer slider (4)",
+            "section": "social-proof.testimonial-slider",
+            "specOriginalPx": 656,
+            "clonePx": 628,
+            "deltaPx": -28
+          },
+          {
+            "viewport": 1280,
+            "index": 6,
+            "specLabel": "customer stories (2)",
+            "section": "editorial.resource-cards",
+            "specOriginalPx": 786,
+            "clonePx": 786,
+            "deltaPx": 0
+          },
+          {
+            "viewport": 1280,
+            "index": 7,
+            "specLabel": "trust bento",
+            "section": "social-proof.stats-bento",
+            "specOriginalPx": 978,
+            "clonePx": 978.3,
+            "deltaPx": 0.3
+          },
+          {
+            "viewport": 1280,
+            "index": 8,
+            "specLabel": "community band",
+            "section": "cta.community-band",
+            "specOriginalPx": 453,
+            "clonePx": 453.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 768,
+            "index": 0,
+            "specLabel": "hero",
+            "section": "hero.center",
+            "specOriginalPx": 1010,
+            "clonePx": 1009.6,
+            "deltaPx": -0.4
+          },
+          {
+            "viewport": 768,
+            "index": 1,
+            "specLabel": "common use cases (4)",
+            "section": "features.card-grid",
+            "specOriginalPx": 838,
+            "clonePx": 838.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 768,
+            "index": 2,
+            "specLabel": "quote",
+            "section": "social-proof.quote-band",
+            "specOriginalPx": 572,
+            "clonePx": 567.7,
+            "deltaPx": -4.3
+          },
+          {
+            "viewport": 768,
+            "index": 3,
+            "specLabel": "unlocking (3)",
+            "section": "features.card-grid",
+            "specOriginalPx": 594,
+            "clonePx": 594.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 768,
+            "index": 4,
+            "specLabel": "features",
+            "section": "features.tabs-dark",
+            "specOriginalPx": 1278,
+            "clonePx": 1325.8,
+            "deltaPx": 47.8
+          },
+          {
+            "viewport": 768,
+            "index": 5,
+            "specLabel": "customer slider (4)",
+            "section": "social-proof.testimonial-slider",
+            "specOriginalPx": 628,
+            "clonePx": 600,
+            "deltaPx": -28
+          },
+          {
+            "viewport": 768,
+            "index": 6,
+            "specLabel": "customer stories (2)",
+            "section": "editorial.resource-cards",
+            "specOriginalPx": 593,
+            "clonePx": 593.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 768,
+            "index": 7,
+            "specLabel": "trust bento",
+            "section": "social-proof.stats-bento",
+            "specOriginalPx": 2791,
+            "clonePx": 2793.1,
+            "deltaPx": 2.1
+          },
+          {
+            "viewport": 768,
+            "index": 8,
+            "specLabel": "community band",
+            "section": "cta.community-band",
+            "specOriginalPx": 501,
+            "clonePx": 501.2,
+            "deltaPx": 0.2
+          },
+          {
+            "viewport": 375,
+            "index": 0,
+            "specLabel": "hero",
+            "section": "hero.center",
+            "specOriginalPx": 909,
+            "clonePx": 909.4,
+            "deltaPx": 0.4
+          },
+          {
+            "viewport": 375,
+            "index": 1,
+            "specLabel": "common use cases (4)",
+            "section": "features.card-grid",
+            "specOriginalPx": 1477,
+            "clonePx": 1476.8,
+            "deltaPx": -0.2
+          },
+          {
+            "viewport": 375,
+            "index": 2,
+            "specLabel": "quote",
+            "section": "social-proof.quote-band",
+            "specOriginalPx": 556,
+            "clonePx": 551.7,
+            "deltaPx": -4.3
+          },
+          {
+            "viewport": 375,
+            "index": 3,
+            "specLabel": "unlocking (3)",
+            "section": "features.card-grid",
+            "specOriginalPx": 953,
+            "clonePx": 976.8,
+            "deltaPx": 23.8
+          },
+          {
+            "viewport": 375,
+            "index": 4,
+            "specLabel": "features",
+            "section": "features.tabs-dark",
+            "specOriginalPx": 1186,
+            "clonePx": 1177.6,
+            "deltaPx": -8.4
+          },
+          {
+            "viewport": 375,
+            "index": 5,
+            "specLabel": "customer slider (4)",
+            "section": "social-proof.testimonial-slider",
+            "specOriginalPx": 877,
+            "clonePx": 848.8,
+            "deltaPx": -28.2
+          },
+          {
+            "viewport": 375,
+            "index": 6,
+            "specLabel": "customer stories (2)",
+            "section": "editorial.resource-cards",
+            "specOriginalPx": 971,
+            "clonePx": 932.7,
+            "deltaPx": -38.3
+          },
+          {
+            "viewport": 375,
+            "index": 7,
+            "specLabel": "trust bento",
+            "section": "social-proof.stats-bento",
+            "specOriginalPx": 2251,
+            "clonePx": 2204.9,
+            "deltaPx": -46.1
+          },
+          {
+            "viewport": 375,
+            "index": 8,
+            "specLabel": "community band",
+            "section": "cta.community-band",
+            "specOriginalPx": 751,
+            "clonePx": 775,
+            "deltaPx": 24
+          }
+        ],
+        "maxAbsDeltaPxByViewport": {
+          "1440": 1.4,
+          "1280": 55,
+          "768": 47.8,
+          "375": 46.1
+        },
+        "within2pxAt1440": true,
+        "documentHeight": {
+          "1440": {
+            "specOriginalPx": 7791,
+            "clonePx": 7792,
+            "deltaPx": 1
+          },
+          "1280": {
+            "specOriginalPx": 7998,
+            "clonePx": 7886,
+            "deltaPx": -112
+          },
+          "768": {
+            "specOriginalPx": 9971,
+            "clonePx": 9988,
+            "deltaPx": 17
+          },
+          "375": {
+            "specOriginalPx": 11204,
+            "clonePx": 11127,
+            "deltaPx": -77
+          }
+        }
+      }
+    }
+  },
+  "cloneQuality": {
+    "runnable": "clean install = `npm ci` then `npm run dev` (port 5197) / `npm run build`; package-lock.json present. node_modules and dist are never shipped with the design-repo.",
+    "pixelParity": "NOT MEASURED in this build (no live-original capture; the build is scoped to the clone). Prior audits by other agents claim homepage within 1px and T1-T4 representatives within +/-2px at 1440 - recorded here as unverified-by-this-pass; the geometric specParity above is this pass's own measurement.",
+    "perSectionGate": {
+      "1440": "every compared section within 2px at 1440 on all 5 representatives = False",
+      "otherViewports": "1280/768/375 sections of the T1-T4 representatives deviate by up to 58.2px (text wrapping of the placeholder copy differs below 1440; the specs' member pages were only matched at 1440). Reported as measured, not gated."
+    }
+  },
+  "wrapperGateWhitelist": [],
+  "preExistingClaimChecks": [
+    {
+      "claim": "CLONE_SPEC.md section 3: reveal IntersectionObserver threshold 0.25 + rootMargin '0px 0px -40px 0px' (marked inferred)",
+      "holds": false,
+      "finding": "the clone's code uses threshold 0.3 (>= 1023px) / 0.1 below, no rootMargin, observer delay 100ms on mobile, read from the original's code; the spec's inferred values were superseded. The design-repo records the code values.",
+      "cite": "src/hooks/useScrollReveal.js:3-11"
+    },
+    {
+      "claim": "specs/T1-T4.md T3: redshift (clone /data-platforms/northwind) section 2 is a statement 'without diagram (831)'",
+      "holds": "partially",
+      "finding": "the clone renders a 16:9 video poster there (content comment: 'the original embeds a video player here'); measured 831.2px, matching the spec height. The spec wording omits the media block; contracts follow the code (content.statement#video).",
+      "cite": "src/content/pages/t3.js:125-144"
+    },
+    {
+      "claim": "PAGES.md T4 section 5 is a 'logo/tech grid'",
+      "holds": false,
+      "finding": "already corrected in specs/T1-T4.md (it is the testimonial slider); the clone and this repo use social-proof.testimonial-slider#industry.",
+      "cite": "specs/T1-T4.md:361"
+    },
+    {
+      "claim": "PAGES.md T1 hero has 1 CTA",
+      "holds": false,
+      "finding": "every T1 hero renders primary + secondary (variant requiredFields include secondary).",
+      "cite": "src/components/sections/HeroSplit.jsx:21-22"
+    },
+    {
+      "claim": "PAGES.md: N-feat variants A and B differ (bottom-frequency wash vs photo wash)",
+      "holds": "partially",
+      "finding": "in the clone both render the same .bottom-frequency CSS wash (Feat.jsx `wash = variant === 'A' || variant === 'B'`), so they are one variant (wash-icon) here.",
+      "cite": "src/components/sections/Feat.jsx:52"
+    },
+    {
+      "claim": "brief: 'carousel 8s/500ms' and 'slider 400ms cubic-bezier(.25,1,.5,1)'",
+      "holds": true,
+      "finding": "announcement bar autoplays every 8000ms with a 500ms transition; all sliders use 400ms cubic-bezier(.25,1,.5,1) and never autoplay.",
+      "cite": "src/hooks/useSlider.js:5-7"
+    },
+    {
+      "claim": "brief: homepage within 1px / T1-T4 within +/-2px at 1440 (prior audit)",
+      "holds": "geometric-only",
+      "finding": "geometric re-check against the specs' recorded original heights: at 1440 every section of the 5 representatives is within 23.6px; homepage document heights at 1440/1280/768/375 are within 1px. Below 1440 the T1-T4 representatives deviate up to 58.2px per section, so a +/-2px claim holds at 1440 only. Pixel parity was not re-measured.",
+      "cite": "extraction/measured-values.json specParity"
+    },
+    {
+      "claim": "reduced motion handling",
+      "holds": "partially",
+      "finding": "reveal, marquee and brush strokes have prefers-reduced-motion rules; the announcement autoplay and sliders do not (recorded as a gap in motion-patterns.json, not enforced).",
+      "cite": "src/index.css:419-428"
+    },
+    {
+      "claim": "specs/T1-T4.md N-baton: the S6 stroke behind N-tabs-dark draws on when it enters the viewport",
+      "holds": false,
+      "finding": "the current clone renders the tabs-dark stroke `idle` (no draw-on; fill hidden at >=768), per a later measurement of the original noted in Baton.jsx. Changed by a concurrent motion pass during this build; features.tabs-dark motion is tabs.instant only.",
+      "cite": "src/components/sections/Baton.jsx:8-10"
+    }
+  ],
+  "citations": [
+    {
+      "claim": "reveal trigger {\"type\": \"intersection-once\", \"observedUnit\": \"each [data-reveal-root]; all reveal targets inside it start together\", \"mobileBelowPx\": 1023, \"thresholdDesktop\": 0.3, \"thresholdMobile\": 0.1, \"rootMargin\": \"none\", \"observerDelayMsDesktop\": 0, \"observerDelayMsMobile\": 100, \"observerDelayNote\": \"IntersectionObserver v2 `delay` option (honoured by Chromium; ignored elsewhere)\"}",
+      "cite": "src/hooks/useScrollReveal.js:3-11"
+    },
+    {
+      "claim": "fadeUp 400ms cubic-bezier(0,0,0,1) forwards",
+      "cite": "tailwind.config.cjs:160"
+    },
+    {
+      "claim": "nav hide rule: hidden when scrollY > first section top and scrolling down; 200ms standard",
+      "cite": "src/components/Navbar.jsx:42-44"
+    },
+    {
+      "claim": "mega-menu close delay 300ms, panel 200ms ease-in-out, 2-frame lag",
+      "cite": "src/components/Navbar.jsx:20-21"
+    },
+    {
+      "claim": "marquee 30s linear infinite",
+      "cite": "tailwind.config.cjs:161"
+    },
+    {
+      "claim": "announcement autoplay 8000ms, 500ms ease-in-out",
+      "cite": "src/components/AnnouncementBar.jsx:24-66"
+    },
+    {
+      "claim": "slider 400ms cubic-bezier(.25,1,.5,1), no autoplay",
+      "cite": "src/hooks/useSlider.js:5-7"
+    },
+    {
+      "claim": "brush stroke draw-on 1s ease-in-out, fill 250ms at >=768, reduced motion renders final state",
+      "cite": "src/index.css:387-399"
+    },
+    {
+      "claim": "T5-T17 render the ComingSoon stand-in",
+      "cite": "src/App.jsx:12-21"
+    },
+    {
+      "claim": "homepage hero stroke and hidden video thumbnail intentionally not built",
+      "cite": "src/components/Hero.jsx:3-4"
+    },
+    {
+      "claim": "fonts: Outfit (substitute for the original's commercial display/text faces) + IBM Plex Mono",
+      "cite": "tailwind.config.cjs:2-22"
+    }
+  ]
+}

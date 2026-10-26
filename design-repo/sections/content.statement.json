@@ -1,0 +1,221 @@
+{
+  "id": "content.statement",
+  "title": "Centred statement",
+  "semantic": {
+    "id": "content.statement",
+    "category": "CONTENT"
+  },
+  "source": {
+    "id": "component:Statement",
+    "file": "src/components/sections/Statement.jsx",
+    "export": "Statement",
+    "tag": "section",
+    "lines": "5-23",
+    "tagLine": 7
+  },
+  "additionalSources": [
+    {
+      "id": "component:Statement (homepage line)",
+      "file": "src/components/Statement.jsx",
+      "export": "Statement",
+      "tag": "section",
+      "lines": "4-12",
+      "tagLine": 6
+    }
+  ],
+  "purpose": "Centred heading (+ paragraph) in an 832px column; T3 adds a diagram or a 16:9 video poster below. Homepage 'line' variant is a single heading-3 sentence.",
+  "retrievalEligible": true,
+  "variants": {
+    "line": {
+      "description": "homepage: one heading-3 sentence, no paragraph",
+      "requiredFields": [
+        "title"
+      ],
+      "forbiddenFields": [
+        "body",
+        "diagram",
+        "video"
+      ],
+      "listSizes": {},
+      "observedOn": [
+        "/"
+      ]
+    },
+    "plain": {
+      "description": "heading-2 + paragraph",
+      "requiredFields": [
+        "body",
+        "title"
+      ],
+      "forbiddenFields": [
+        "diagram",
+        "video"
+      ],
+      "listSizes": {},
+      "observedOn": [
+        "/product/data-modernization"
+      ]
+    },
+    "diagram": {
+      "description": "+ 832x468 diagram image",
+      "requiredFields": [
+        "body",
+        "diagram",
+        "title"
+      ],
+      "forbiddenFields": [
+        "video"
+      ],
+      "listSizes": {},
+      "observedOn": [
+        "/data-platforms/cobalt",
+        "/data-platforms/helixa"
+      ]
+    },
+    "video": {
+      "description": "+ 16:9 poster with play glyph (no third-party player)",
+      "requiredFields": [
+        "body",
+        "title",
+        "video"
+      ],
+      "forbiddenFields": [
+        "diagram"
+      ],
+      "listSizes": {},
+      "observedOn": [
+        "/data-platforms/driftway",
+        "/data-platforms/northwind"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "body": {
+        "type": "text",
+        "maxWords": 47,
+        "maxChars": 277,
+        "observedIn": 5
+      },
+      "diagram": {
+        "type": "asset",
+        "referenceRoles": [
+          "illustration.diagram"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "illustration.generated-diagram"
+        ]
+      },
+      "diagram.alt": {
+        "type": "text",
+        "maxWords": 13,
+        "maxChars": 86,
+        "observedIn": 2
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 17,
+        "maxChars": 105,
+        "observedIn": 6
+      },
+      "video": {
+        "type": "asset",
+        "referenceRoles": [
+          "video.poster"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "video.placeholder-poster"
+        ]
+      },
+      "video.alt": {
+        "type": "text",
+        "maxWords": 7,
+        "maxChars": 43,
+        "observedIn": 2
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "diagram": {
+        "type": "asset",
+        "referenceRoles": [
+          "illustration.diagram"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "illustration.generated-diagram"
+        ]
+      },
+      "video": {
+        "type": "asset",
+        "referenceRoles": [
+          "video.poster"
+        ],
+        "observedIn": 2,
+        "generatedRoles": [
+          "video.placeholder-poster"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "illustration.generated-diagram",
+    "video.placeholder-poster"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "requiredPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": {
+      "static": "none-needed"
+    },
+    "stagger": "integration diagram (832x468) or a 16:9 video poster below. No reveal."
+  },
+  "responsive": [
+    {
+      "range": "all",
+      "behavior": "832px max column, centred; text wraps, media scales to column width"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/": [
+        204.8
+      ],
+      "/product/data-modernization": [
+        315.2
+      ],
+      "/data-platforms/cobalt": [
+        773.6
+      ],
+      "/data-platforms/northwind": [
+        831.2
+      ],
+      "/data-platforms/helixa": [
+        773.6
+      ],
+      "/data-platforms/driftway": [
+        831.2
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/sections/Statement.jsx:5-23",
+    "src/components/Statement.jsx:4-12"
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": "shell.mobile-drawer",
+  "title": "Mobile navigation drawer",
+  "semantic": {
+    "id": "shell.mobile-drawer",
+    "category": "SHELL"
+  },
+  "source": {
+    "id": "block:Navbar.drawer",
+    "file": "src/components/Navbar.jsx",
+    "export": null,
+    "tag": "div",
+    "lines": "231-297",
+    "tagLine": 232
+  },
+  "additionalSources": [],
+  "purpose": "Below 1024: full-height drawer listing the 5 menu categories (drill-down sub-level with Back), the plain link and 2 account links, plus a fixed bottom bar with the two nav CTAs.",
+  "retrievalEligible": false,
+  "retrievalIneligibleReason": "Drawer overlay toggled by the hamburger below 1024; navigation UI only, never page content.",
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "accountActions"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "accountActions": [
+          2,
+          2
+        ]
+      },
+      "observedOn": [
+        "/",
+        "/data-platforms/cobalt",
+        "/data-platforms/driftway",
+        "/data-platforms/helixa",
+        "/data-platforms/northwind",
+        "/data-platforms/quarry",
+        "/data-platforms/stratus",
+        "/industry/energy-utilities",
+        "/industry/financial-services",
+        "/industry/healthcare",
+        "/industry/manufacturing",
+        "/industry/telecommunications",
+        "/product/ai",
+        "/product/catalog",
+        "/product/cost-optimization",
+        "/product/data-modernization",
+        "/product/data-trust",
+        "/product/deploy",
+        "/product/develop",
+        "/product/embedded-analytics",
+        "/product/mesh",
+        "/product/semantic-layer",
+        "/product/test-and-observe"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "accountActions": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "observedIn": 23
+      },
+      "accountActions[].href": {
+        "type": "link",
+        "observedIn": 46
+      },
+      "accountActions[].label": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 17,
+        "observedIn": 46
+      }
+    }
+  },
+  "assets": {
+    "fields": {},
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "position": "after:shell.mega-menu",
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "drawer.slide"
+    ],
+    "requiredPatterns": [
+      "drawer.slide"
+    ],
+    "reducedMotionFallback": {
+      "drawer.slide": "unchanged"
+    },
+    "stagger": "none"
+  },
+  "responsive": [
+    {
+      "range": "<1024",
+      "behavior": "drawer height calc(100vh - 90px), 64px rows 20/28 600; fixed bottom bar with small buttons"
+    },
+    {
+      "range": ">=1024",
+      "behavior": "not rendered"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "nav": 91,
+      "announcement": 53,
+      "footer": 756.2
+    }
+  },
+  "evidence": [
+    "src/components/Navbar.jsx:231-297"
+  ]
+}

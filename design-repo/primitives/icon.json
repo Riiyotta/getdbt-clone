@@ -1,0 +1,12 @@
+{
+  "id": "primitive.icon",
+  "title": "Inline UI icon",
+  "description": "generic inline SVG glyphs (chevrons 16/24, arrows 20x21/24, search, menu, close, quote, play, social).",
+  "uses": [
+    "size.icon.16",
+    "size.icon.24"
+  ],
+  "evidence": [
+    "src/components/icons.jsx:1-200"
+  ]
+}

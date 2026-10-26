@@ -1,0 +1,195 @@
+{
+  "id": "features.tabs-dark",
+  "title": "Dark vertical tabs showcase",
+  "semantic": {
+    "id": "features.tabs-dark",
+    "category": "FEATURES"
+  },
+  "source": {
+    "id": "component:TabsDark",
+    "file": "src/components/sections/TabsDark.jsx",
+    "export": "TabsDark",
+    "tag": "section",
+    "lines": "11-69",
+    "tagLine": 15
+  },
+  "additionalSources": [],
+  "purpose": "Dark band: heading-2 + paragraph + vertical tablist (active tab shows its description, 3px orange bar) beside the active tab's media in a blur-dark frame; brush stroke behind.",
+  "retrievalEligible": true,
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "body",
+        "tabs",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "tabs": [
+          3,
+          6
+        ]
+      },
+      "observedOn": [
+        "/industry/energy-utilities",
+        "/industry/financial-services",
+        "/industry/healthcare",
+        "/industry/manufacturing",
+        "/industry/telecommunications",
+        "/product/catalog",
+        "/product/deploy",
+        "/product/develop",
+        "/product/mesh",
+        "/product/semantic-layer",
+        "/product/test-and-observe"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "body": {
+        "type": "text",
+        "maxWords": 41,
+        "maxChars": 278,
+        "observedIn": 11
+      },
+      "tabs": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 6,
+        "observedIn": 11
+      },
+      "tabs[].body": {
+        "type": "text",
+        "maxWords": 55,
+        "maxChars": 331,
+        "observedIn": 53
+      },
+      "tabs[].media": {
+        "type": "asset",
+        "referenceRoles": [
+          "product.screenshot"
+        ],
+        "observedIn": 53,
+        "generatedRoles": [
+          "product.generated-visual"
+        ]
+      },
+      "tabs[].media.alt": {
+        "type": "text",
+        "maxWords": 11,
+        "maxChars": 68,
+        "observedIn": 53
+      },
+      "tabs[].title": {
+        "type": "text",
+        "maxWords": 13,
+        "maxChars": 71,
+        "observedIn": 53
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 15,
+        "maxChars": 87,
+        "observedIn": 11
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "tabs[].media": {
+        "type": "asset",
+        "referenceRoles": [
+          "product.screenshot"
+        ],
+        "observedIn": 53,
+        "generatedRoles": [
+          "product.generated-visual"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "product.generated-visual"
+  ],
+  "style": {
+    "props": {
+      "strokeGradient": {
+        "kind": "token",
+        "allowed": [
+          "gradient.01",
+          "gradient.12"
+        ]
+      }
+    },
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "tabs.instant"
+    ],
+    "requiredPatterns": [
+      "tabs.instant"
+    ],
+    "reducedMotionFallback": {
+      "tabs.instant": "none-needed"
+    },
+    "stagger": "title + description above the media. Instant panel swap, no autoplay, no reveal."
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "tablist vertical in 5 cols, media 6 cols from col 7"
+    },
+    {
+      "range": "<1024",
+      "behavior": "horizontal scroll tab strip with 2px bottom bar; panel shows its own title + description above the media"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/product/develop": [
+        1080.2
+      ],
+      "/product/test-and-observe": [
+        876
+      ],
+      "/product/mesh": [
+        880.2
+      ],
+      "/product/catalog": [
+        971.4
+      ],
+      "/product/deploy": [
+        1090.8
+      ],
+      "/product/semantic-layer": [
+        951.2
+      ],
+      "/industry/financial-services": [
+        1107.4
+      ],
+      "/industry/healthcare": [
+        1073.8
+      ],
+      "/industry/manufacturing": [
+        1097.8
+      ],
+      "/industry/energy-utilities": [
+        1049.8
+      ],
+      "/industry/telecommunications": [
+        1179.4
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/sections/TabsDark.jsx:11-69"
+  ]
+}

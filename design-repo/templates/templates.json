@@ -1,0 +1,880 @@
+{
+  "note": "one template per page shape. nodes are structured objects; a PageSpec's node sequence (section#variant) must match its template's node pattern (schema/semantic_validate.py TEMPLATE_SEQUENCE).",
+  "templates": {
+    "T0": {
+      "id": "T0",
+      "name": "home",
+      "title": "Homepage",
+      "family": "marketing-home",
+      "status": "implemented",
+      "representativeRoute": "/",
+      "routes": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "section": "shell.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mega-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mobile-drawer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.center",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "text-only"
+          ]
+        },
+        {
+          "section": "social-proof.logo-marquee",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.news-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.statement",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "line"
+          ]
+        },
+        {
+          "section": "features.gradient-panel",
+          "required": true,
+          "repeatable": true,
+          "variants": [
+            "text-first",
+            "media-first"
+          ],
+          "minCount": 3,
+          "maxCount": 3
+        },
+        {
+          "section": "features.integration-tiles",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.card-grid",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "bordered-link"
+          ]
+        },
+        {
+          "section": "content.media-split",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "diagram"
+          ]
+        },
+        {
+          "section": "cta.ide-card",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.testimonial-slider",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "home"
+          ]
+        },
+        {
+          "section": "cta.community-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": "CLONE_SPEC.md (homepage page map); src/pages/Home.jsx"
+    },
+    "T1": {
+      "id": "T1",
+      "name": "product-feature",
+      "title": "Product feature page",
+      "family": "marketing-product",
+      "status": "implemented",
+      "representativeRoute": "/product/develop",
+      "routes": [
+        "/product/develop",
+        "/product/test-and-observe",
+        "/product/mesh",
+        "/product/catalog",
+        "/product/deploy",
+        "/product/semantic-layer"
+      ],
+      "nodes": [
+        {
+          "section": "shell.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mega-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mobile-drawer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.split",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "padded"
+          ]
+        },
+        {
+          "section": "content.media-split",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "media-left"
+          ]
+        },
+        {
+          "section": "features.card-grid",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "wash-icon"
+          ]
+        },
+        {
+          "section": "features.tabs-dark",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "slot": "mid-cta",
+          "anyOf": [
+            {
+              "section": "cta.gradient-card"
+            },
+            {
+              "section": "cta.closing-band",
+              "variants": [
+                "with-aside"
+              ]
+            }
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "slot": "proof",
+          "anyOf": [
+            {
+              "section": "social-proof.customer-tabs"
+            },
+            {
+              "section": "social-proof.quote-band",
+              "variants": [
+                "slider"
+              ]
+            }
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.resource-cards",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.closing-band",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "with-aside"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": "specs/T1-T4.md T1; src/content/pages/t1.js"
+    },
+    "T2": {
+      "id": "T2",
+      "name": "solution",
+      "title": "Solution / use-case page",
+      "family": "marketing-solution",
+      "status": "implemented",
+      "representativeRoute": "/product/data-modernization",
+      "routes": [
+        "/product/ai",
+        "/product/embedded-analytics",
+        "/product/data-modernization",
+        "/product/data-trust",
+        "/product/cost-optimization"
+      ],
+      "nodes": [
+        {
+          "section": "shell.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mega-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mobile-drawer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.center",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "media"
+          ]
+        },
+        {
+          "section": "content.statement",
+          "required": false,
+          "repeatable": false,
+          "variants": [
+            "plain"
+          ]
+        },
+        {
+          "section": "features.checklist",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "columns",
+            "split",
+            "grid"
+          ]
+        },
+        {
+          "section": "features.card-grid",
+          "required": false,
+          "repeatable": false,
+          "variants": [
+            "four-column"
+          ]
+        },
+        {
+          "section": "features.tabs-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.media-split",
+          "required": false,
+          "repeatable": false,
+          "variants": [
+            "video"
+          ]
+        },
+        {
+          "section": "social-proof.quote-band",
+          "required": false,
+          "repeatable": false,
+          "variants": [
+            "single"
+          ]
+        },
+        {
+          "section": "features.checklist",
+          "required": false,
+          "repeatable": false,
+          "variants": [
+            "before-after"
+          ]
+        },
+        {
+          "section": "social-proof.customer-tabs",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "slot": "mid-cta",
+          "anyOf": [
+            {
+              "section": "cta.community-band"
+            },
+            {
+              "section": "cta.gradient-card"
+            }
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.stats-bento",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.resource-cards",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.stats-bento",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "cta.closing-band",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "plain"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": "specs/T1-T4.md T2; src/content/pages/t2.js"
+    },
+    "T3": {
+      "id": "T3",
+      "name": "data-platform",
+      "title": "Data-platform partner page",
+      "family": "marketing-partner",
+      "status": "implemented",
+      "representativeRoute": "/data-platforms/cobalt",
+      "routes": [
+        "/data-platforms/northwind",
+        "/data-platforms/quarry",
+        "/data-platforms/helixa",
+        "/data-platforms/stratus",
+        "/data-platforms/driftway",
+        "/data-platforms/cobalt"
+      ],
+      "nodes": [
+        {
+          "section": "shell.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mega-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mobile-drawer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.split",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "padded",
+            "flush"
+          ]
+        },
+        {
+          "section": "features.card-grid",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "image-card"
+          ]
+        },
+        {
+          "slot": "integration",
+          "anyOf": [
+            {
+              "section": "content.statement",
+              "variants": [
+                "plain",
+                "diagram",
+                "video"
+              ]
+            },
+            {
+              "section": "content.media-split",
+              "variants": [
+                "text-left"
+              ]
+            }
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.gradient-card",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.customer-tabs",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.resource-cards",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.stats-bento",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "cta.closing-band",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "with-aside"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": "specs/T1-T4.md T3; src/content/pages/t3.js"
+    },
+    "T4": {
+      "id": "T4",
+      "name": "industry",
+      "title": "Industry page",
+      "family": "marketing-industry",
+      "status": "implemented",
+      "representativeRoute": "/industry/financial-services",
+      "routes": [
+        "/industry/financial-services",
+        "/industry/healthcare",
+        "/industry/manufacturing",
+        "/industry/energy-utilities",
+        "/industry/telecommunications"
+      ],
+      "nodes": [
+        {
+          "section": "shell.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mega-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.mobile-drawer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.center",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "square"
+          ]
+        },
+        {
+          "section": "features.card-grid",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "four-column"
+          ]
+        },
+        {
+          "section": "social-proof.quote-band",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "single"
+          ]
+        },
+        {
+          "section": "features.card-grid",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "wash-icon"
+          ]
+        },
+        {
+          "section": "features.tabs-dark",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.testimonial-slider",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "industry"
+          ]
+        },
+        {
+          "section": "editorial.resource-cards",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.stats-bento",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.community-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": "specs/T1-T4.md T4; src/content/pages/t4.js"
+    },
+    "T5": {
+      "id": "T5",
+      "name": "case-study-detail",
+      "title": "Case-study detail",
+      "family": "pending",
+      "status": "pending",
+      "routes": [
+        "/case-studies/kestrel",
+        "/case-studies/meridian-partners",
+        "/case-studies/halcyon",
+        "/case-studies/basalt-health"
+      ],
+      "draftSequence": [
+        "header: H1, customer logo, stats row",
+        "body: meta column (industry etc.) + prose with h2/h3, inline images and pull quotes",
+        "related customer stories (H-cards3, 3 cards)",
+        "closing CTA band (short)"
+      ],
+      "decompositionNote": "the measured body is ~4796px at 1440: it must be decomposed into story-header / meta / prose-chapter / quote / related sections (R6), never one whole-article section",
+      "nodes": [],
+      "evidence": "PAGES.md section 3 (T5); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+    },
+    "T6": {
+      "id": "T6",
+      "name": "content-hub-listing",
+      "title": "Content hub listing with category nav",
+      "family": "pending",
+      "status": "pending",
+      "routes": [
+        "/blog",
+        "/resources/webinars",
+        "/resources"
+      ],
+      "draftSequence": [
+        "listing header (plain H1)",
+        "pill category nav + search (N-listing)",
+        "featured item + card grid with load-more",
+        "closing CTA band (short or community)"
+      ],
+      "decompositionNote": "split listing header, category nav, featured item and card grid into separate sections",
+      "nodes": [],
+      "evidence": "PAGES.md section 3 (T6); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+    },
+    "T7": {
+      "id": "T7",
+      "name": "filterable-card-grid",
+      "title": "Filterable card grid listing",
+      "family": "pending",
+      "status": "pending",
+      "routes": [
+        "/case-studies",
+        "/resources/on-demand",
+        "/events",
+        "/press"
+      ],
+      "draftSequence": [
+        "listing header (H1)",
+        "toolbar: search / filter panel / multi-select",
+        "card grid + view-more",
+        "closing CTA band (absent on the press variant, which ends with a media-contact block)"
+      ],
+      "decompositionNote": "filters panel is runtime UI (retrievalEligible false)",
+      "nodes": [],
+      "evidence": "PAGES.md section 3 (T7); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+    },
+    "T8": {
+      "id": "T8",
+      "name": "article",
+      "title": "Article / long-form with sticky rail",
+      "family": "pending",
+      "status": "pending",
+      "routes": [
+        "/resources/analytics-lifecycle",
+        "/resources/state-of-data-teams",
+        "/blog/summit-announcements",
+        "/blog/lattice-joins-northwind"
+      ],
+      "draftSequence": [
+        "breadcrumb + article header (H1, author, date) or guide hero with download CTA",
+        "prose body with sticky right rail (share links or TOC)",
+        "latest-posts card row",
+        "closing CTA band"
+      ],
+      "decompositionNote": "pages measure 10031-30277px at 1440: decompose into article-header / body-chapter (one per h2) / rail / related; the rail is runtime UI",
+      "nodes": [],
+      "evidence": "PAGES.md section 3 (T8); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+    },
+    "T9": {
+      "id": "T9",
+      "name": "asset-landing",
+      "title": "Asset / webinar landing",
+      "family": "pending",
+      "status": "pending",
+      "routes": [
+        "/resources/webinars/launch-showcase",
+        "/resources/whitepaper-control-plane",
+        "/resources/webinars/charts-as-code"
+      ],
+      "draftSequence": [
+        "header: breadcrumb, eyebrow, H1, two-column body (copy + static form)",
+        "optional logo strip",
+        "optional split"
+      ],
+      "decompositionNote": "forms are static (no submission); form is a CONVERSION section",
+      "nodes": [],
+      "evidence": "PAGES.md section 3 (T9); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+    },
+    "T10": {
+      "id": "T10",
+      "name": "form-page",
+      "title": "Form page",
+      "family": "pending",
+      "status": "pending",
+      "routes": [
+        "/contact",
+        "/signup",
+        "/community/join",
+        "/report-a-problem"
+      ],
+      "draftSequence": [
+        "two-column header with static form",
+        "optional 3-card row",
+        "optional stats bento"
+      ],
+      "decompositionNote": "form blocks are CTA/CONVERSION-classed; no live endpoints (link.source-external is blocked)",
+      "nodes": [],
+      "evidence": "PAGES.md section 3 (T10); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+    },
+    "T11": {
+      "id": "T11",
+      "name": "legal-prose",
+      "title": "Legal / policy prose",
+      "family": "pending",
+      "status": "pending",
+      "routes": [
+        "/modern-slavery-statement",
+        "/terms-of-use",
+        "/legal/ai-principles"
+      ],
+      "draftSequence": [
+        "header (H1; absent on one member, which starts with an H2)",
+        "prose in an 832px column with numbered h2/h3"
+      ],
+      "decompositionNote": "one member is 16206px tall: legal header + one section per heading-bounded part (R6), never a single whole-document section",
+      "nodes": [],
+      "evidence": "PAGES.md section 3 (T11); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+    },
+    "T12": {
+      "id": "T12",
+      "name": "company-program",
+      "title": "Company / program page",
+      "family": "pending",
+      "status": "pending",
+      "routes": [
+        "/security",
+        "/certification",
+        "/learn",
+        "/community",
+        "/about-us",
+        "/about-us/values",
+        "/about-us/careers",
+        "/about-us/belonging",
+        "/partners",
+        "/services"
+      ],
+      "draftSequence": [
+        "hero",
+        "stacked shared content sections (splits, card grids, dark grids, FAQ, tabs)",
+        "closing CTA band (absent on some members)"
+      ],
+      "decompositionNote": "careers member is 22566px: split the open-roles list from its filters (filters are runtime UI)",
+      "nodes": [],
+      "evidence": "PAGES.md section 3 (T12); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+    },
+    "T13": {
+      "id": "T13",
+      "name": "product-landing",
+      "title": "Product landing (bespoke composition)",
+      "family": "pending",
+      "status": "pending",
+      "routes": [
+        "/product/what-is-lattice",
+        "/product/lattice",
+        "/product/state",
+        "/product/assistant",
+        "/product/charts",
+        "/product/governance",
+        "/product/integrations",
+        "/product/analyst",
+        "/product/self-hosted-vs-platform"
+      ],
+      "draftSequence": [
+        "hero",
+        "shared T1/T2 sections in page-specific orders (tabs-dark, splits, customer tabs, logo rows, comparison tables, FAQ, image bands)",
+        "closing CTA band"
+      ],
+      "decompositionNote": "comparison tables and FAQs need their own section contracts",
+      "nodes": [],
+      "evidence": "PAGES.md section 3 (T13); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+    },
+    "T14": {
+      "id": "T14",
+      "name": "pricing",
+      "title": "Pricing",
+      "family": "pending",
+      "status": "pending",
+      "routes": [
+        "/pricing"
+      ],
+      "draftSequence": [
+        "plan cards header (holds the H1)",
+        "add-ons",
+        "feature-comparison table (collapsible groups)",
+        "two FAQ accordions"
+      ],
+      "decompositionNote": "comparison table groups and FAQs are separate sections",
+      "nodes": [],
+      "evidence": "PAGES.md section 3 (T14); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+    },
+    "T15": {
+      "id": "T15",
+      "name": "champions",
+      "title": "Community champions (dark theme)",
+      "family": "pending",
+      "status": "pending",
+      "routes": [
+        "/champions"
+      ],
+      "draftSequence": [
+        "dark hero",
+        "dark about",
+        "champions grid",
+        "5 cards",
+        "dark quote slider",
+        "stories grid",
+        "dark support cards",
+        "dark closing"
+      ],
+      "decompositionNote": "uses a dark theme the token layer does not yet declare (themes/light only)",
+      "nodes": [],
+      "evidence": "PAGES.md section 3 (T15); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+    },
+    "T16": {
+      "id": "T16",
+      "name": "event-microsite",
+      "title": "Event microsite",
+      "family": "pending",
+      "status": "pending",
+      "routes": [
+        "/summit"
+      ],
+      "draftSequence": [
+        "own event sub-nav (no global mega-menu nav)",
+        "hero",
+        "image gallery",
+        "recap",
+        "4 cards",
+        "sponsor logos",
+        "media",
+        "two black closing sections"
+      ],
+      "decompositionNote": "replaces shell.navbar with an event sub-nav; sponsor logos are third-party marks (thirdparty.real-mark is forbidden)",
+      "nodes": [],
+      "evidence": "PAGES.md section 3 (T16); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+    },
+    "T17": {
+      "id": "T17",
+      "name": "partner-directory",
+      "title": "Partner directory",
+      "family": "pending",
+      "status": "pending",
+      "routes": [
+        "/partner-directory"
+      ],
+      "draftSequence": [
+        "minimal nav (logo + Home)",
+        "static mock of a third-party partner locator: filter sidebar, search, pagination, partner cards"
+      ],
+      "decompositionNote": "no global nav or footer; the original is a third-party widget and must be mocked statically",
+      "nodes": [],
+      "evidence": "PAGES.md section 3 (T17); src/routes.js. Not implemented in the clone (src/App.jsx renders the ComingSoon stand-in), so no section contracts exist yet."
+    }
+  }
+}

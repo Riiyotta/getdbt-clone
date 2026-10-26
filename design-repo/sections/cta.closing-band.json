@@ -1,0 +1,232 @@
+{
+  "id": "cta.closing-band",
+  "title": "Closing CTA band",
+  "semantic": {
+    "id": "cta.closing-band",
+    "category": "CTA"
+  },
+  "source": {
+    "id": "component:CtaBand",
+    "file": "src/components/sections/CtaBand.jsx",
+    "export": "CtaBand",
+    "tag": "section",
+    "lines": "15-78",
+    "tagLine": 31
+  },
+  "additionalSources": [],
+  "purpose": "Blue gradient-12 band with concentric circles: heading-2, paragraph, primary.dark + secondary.dark large buttons; optional right column with heading-4, paragraph and arrow link.",
+  "retrievalEligible": true,
+  "variants": {
+    "with-aside": {
+      "description": "T1/T3: left 7 cols + right 4 cols aside, no divider",
+      "requiredFields": [
+        "aside",
+        "body",
+        "primary",
+        "secondary",
+        "title"
+      ],
+      "forbiddenFields": [
+        "eyebrow"
+      ],
+      "listSizes": {},
+      "observedOn": [
+        "/data-platforms/cobalt",
+        "/data-platforms/driftway",
+        "/data-platforms/helixa",
+        "/data-platforms/northwind",
+        "/data-platforms/quarry",
+        "/data-platforms/stratus",
+        "/product/catalog",
+        "/product/deploy",
+        "/product/develop",
+        "/product/mesh",
+        "/product/semantic-layer",
+        "/product/test-and-observe"
+      ]
+    },
+    "plain": {
+      "description": "T2: eyebrow + heading + paragraph + buttons",
+      "requiredFields": [
+        "body",
+        "eyebrow",
+        "primary",
+        "secondary",
+        "title"
+      ],
+      "forbiddenFields": [
+        "aside"
+      ],
+      "listSizes": {},
+      "observedOn": [
+        "/product/ai",
+        "/product/cost-optimization",
+        "/product/data-modernization",
+        "/product/data-trust",
+        "/product/embedded-analytics"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "aside.action.href": {
+        "type": "link",
+        "observedIn": 13
+      },
+      "aside.action.label": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 18,
+        "observedIn": 13
+      },
+      "aside.body": {
+        "type": "text",
+        "maxWords": 17,
+        "maxChars": 117,
+        "observedIn": 13
+      },
+      "aside.title": {
+        "type": "text",
+        "maxWords": 9,
+        "maxChars": 49,
+        "observedIn": 13
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 31,
+        "maxChars": 188,
+        "observedIn": 18
+      },
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 11,
+        "observedIn": 5
+      },
+      "primary.href": {
+        "type": "link",
+        "observedIn": 18
+      },
+      "primary.label": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 17,
+        "observedIn": 18
+      },
+      "secondary.href": {
+        "type": "link",
+        "observedIn": 18
+      },
+      "secondary.label": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 26,
+        "observedIn": 18
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 14,
+        "maxChars": 78,
+        "observedIn": 18
+      }
+    }
+  },
+  "assets": {
+    "fields": {},
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 2
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal.fade-up"
+    ],
+    "requiredPatterns": [
+      "reveal.fade-up"
+    ],
+    "reducedMotionFallback": {
+      "reveal.fade-up": "show-immediately"
+    },
+    "stagger": "Reveal, one-for-one with the original's ScrollAnimate output (develop, snowflake, data-modernization): grid 0 > left col 0 > <span> per item stepping 100ms from 0 (eyebrow?, h2, p), then the button row at the next step with each button in its own <span> (row + 0 / +100); aside col 100 > space-y-6 100 > <span> h 100, <span> p 200, <span> link 300. develop: 12 targets 0-300 | data-modernization (eyebrow, no aside): 8 targets 0-400. The wrappers are inline <span>s like the original's, so those items fade without translating."
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "7 cols + 4 cols aside"
+    },
+    {
+      "range": "768-1023",
+      "behavior": "4 + 3 cols"
+    },
+    {
+      "range": "<768",
+      "behavior": "stacked; aside below the buttons"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/product/develop": [
+        313.6
+      ],
+      "/product/test-and-observe": [
+        389.2
+      ],
+      "/product/mesh": [
+        365.2,
+        313.6
+      ],
+      "/product/catalog": [
+        365.2
+      ],
+      "/product/deploy": [
+        313.6
+      ],
+      "/product/semantic-layer": [
+        313.6
+      ],
+      "/product/data-modernization": [
+        371.6
+      ],
+      "/product/ai": [
+        347.6
+      ],
+      "/product/embedded-analytics": [
+        371.6
+      ],
+      "/product/data-trust": [
+        371.6
+      ],
+      "/product/cost-optimization": [
+        371.6
+      ],
+      "/data-platforms/cobalt": [
+        389.2
+      ],
+      "/data-platforms/northwind": [
+        389.2
+      ],
+      "/data-platforms/quarry": [
+        446.8
+      ],
+      "/data-platforms/helixa": [
+        389.2
+      ],
+      "/data-platforms/stratus": [
+        389.2
+      ],
+      "/data-platforms/driftway": [
+        446.8
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/sections/CtaBand.jsx:15-78"
+  ]
+}

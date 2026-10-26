@@ -1,0 +1,145 @@
+{
+  "id": "cta.ide-card",
+  "title": "Editor choice card",
+  "semantic": {
+    "id": "cta.ide-card",
+    "category": "CTA"
+  },
+  "source": {
+    "id": "component:IdeCard",
+    "file": "src/components/IdeCard.jsx",
+    "export": "IdeCard",
+    "tag": "section",
+    "lines": "6-34",
+    "tagLine": 8
+  },
+  "additionalSources": [],
+  "purpose": "One clickable gradient-26 card: heading-2 + paragraph beside a 2x2 grid of white tiles naming editor/install options; a conversion/install prompt.",
+  "retrievalEligible": true,
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "body",
+        "tiles",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "tiles": [
+          4,
+          4
+        ]
+      },
+      "observedOn": [
+        "/"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "body": {
+        "type": "text",
+        "maxWords": 22,
+        "maxChars": 143,
+        "observedIn": 1
+      },
+      "tiles": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 4,
+        "observedIn": 1
+      },
+      "tiles[].icon": {
+        "type": "asset",
+        "referenceRoles": [
+          "icon.feature"
+        ],
+        "observedIn": 4,
+        "generatedRoles": [
+          "icon.feature"
+        ]
+      },
+      "tiles[].icon.alt": {
+        "type": "text",
+        "maxWords": 0,
+        "maxChars": 0,
+        "observedIn": 4
+      },
+      "tiles[].label": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 11,
+        "observedIn": 4
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 21,
+        "observedIn": 1
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "tiles[].icon": {
+        "type": "asset",
+        "referenceRoles": [
+          "icon.feature"
+        ],
+        "observedIn": 4,
+        "generatedRoles": [
+          "icon.feature"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "icon.feature"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal.fade-up"
+    ],
+    "requiredPatterns": [
+      "reveal.fade-up"
+    ],
+    "reducedMotionFallback": {
+      "reveal.fade-up": "show-immediately"
+    },
+    "stagger": "reveal targets with inline delays, see src/components/IdeCard.jsx:6-34"
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "row: text half / tiles half (2 columns)"
+    },
+    {
+      "range": "640-1023",
+      "behavior": "stacked, tiles 2 columns"
+    },
+    {
+      "range": "<640",
+      "behavior": "tiles 1 column"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/": [
+        400
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/IdeCard.jsx:6-34"
+  ]
+}

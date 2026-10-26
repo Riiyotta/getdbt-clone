@@ -1,0 +1,1150 @@
+{
+  "$comment": "Hand-edited source of truth for the Lattice clone's IA. IA.md and matrix.csv are generated from this file by build.mjs. Section ids and template ids (T0-T17) mirror design-repo/sections/*.json and design-repo/templates/templates.json; sections that design-repo has no contract for yet carry no `contract` field. Routes are the clone's own paths from src/routes.js (original-site URLs are deliberately not recorded). Redirects are documented in README.md (the ia.json schema has no slot for non-rendering routes).",
+  "meta": {
+    "title": "Lattice clone: information architecture",
+    "source": "Clone project /Users/riyaghosh/V3/getdbt (fictional brand Lattice): src/routes.js, src/App.jsx, src/content/pages/*.js, PAGES.md, specs/T1-T4.md, specs/T12-T13.md, CLONE_SPEC.md, design-repo/",
+    "status": "draft: implemented templates measured from src, planned templates from specs and PAGES.md",
+    "productionApproved": false,
+    "totalRoutes": 71,
+    "totalTemplates": 18,
+    "generatedBy": "ia-builder skill (build.mjs / validate.mjs copied unchanged)"
+  },
+  "categories": {
+    "SHELL": "Site chrome rendered outside <main>: announcement strip, navigation, menus, footer, and the reduced navs that replace them on two one-off pages.",
+    "HERO": "The page-opening header block that holds the page's H1.",
+    "SOCIAL_PROOF": "Customer evidence: logos, quotes, customer stories, stat bands.",
+    "FEATURES": "Product and capability explanation: card grids, checklists, tabbed showcases, gradient panels, integration blocks.",
+    "CONTENT": "General text-and-media rows that are neither a feature grid nor proof: statements and media splits.",
+    "CTA": "Conversion blocks: gradient cards, closing bands, install prompts, and the dialog some hero buttons open.",
+    "EDITORIAL": "News, announcements and links out to resources or community content.",
+    "INTERACTIVE": "Disclosure and tab widgets whose main job is switching or expanding content (accordions and content-specific tab sets).",
+    "LISTING": "Collection and directory pages: listing headers, category navigation, filters, card grids.",
+    "ARTICLE": "Long-form reading blocks: article and story headers, prose chapters, side rails, breadcrumbs.",
+    "FORM": "Static (non-submitting) form blocks.",
+    "LEGAL": "Policy and legal document blocks.",
+    "COMPANY": "Company and program blocks: people, open roles, compliance, certification programs.",
+    "COMPARISON": "Side-by-side comparison blocks: feature tables and maturity columns.",
+    "PRICING": "Plan and add-on offer blocks.",
+    "COMMUNITY": "Blocks unique to the dark-theme community champions page.",
+    "EVENT": "Blocks unique to the event microsite.",
+    "DIRECTORY": "Blocks of the statically mocked partner locator."
+  },
+  "sections": {
+    "shell.announcement-bar": {
+      "category": "SHELL",
+      "description": "Rotating one-line announcement strip above the navigation: linked slides with previous/next arrows, autoplaying; hidden below 1024px.",
+      "scope": "Every page except the partner directory: all full-chrome pages plus the event microsite (70 routes).",
+      "implementedBy": "src/components/AnnouncementBar.jsx > AnnouncementBar",
+      "contract": "design-repo/sections/shell.announcement-bar.json"
+    },
+    "shell.navbar": {
+      "category": "SHELL",
+      "description": "Sticky global navigation: brand mark, mega-menu triggers plus one plain link, search, secondary and primary CTAs and an account button on desktop; logo, search and hamburger below 1024px.",
+      "scope": "All full-chrome pages (69 routes); replaced by the event sub-nav on the event microsite and by the minimal nav on the partner directory.",
+      "implementedBy": "src/components/Navbar.jsx > Navbar",
+      "contract": "design-repo/sections/shell.navbar.json"
+    },
+    "shell.mega-menu": {
+      "category": "SHELL",
+      "description": "Popover card opened from each navbar trigger: two groups of icon + title + description items, an optional featured item with thumbnail, a grey side column of links and a coloured footer strip.",
+      "scope": "Mounted with the global navbar on all full-chrome pages (69 routes).",
+      "implementedBy": "src/components/MegaMenu.jsx > MegaMenu",
+      "contract": "design-repo/sections/shell.mega-menu.json"
+    },
+    "shell.mobile-drawer": {
+      "category": "SHELL",
+      "description": "Below 1024px: full-height drawer listing the menu categories with a drill-down sub-level and Back control, the plain link and account links, and a fixed bottom bar holding the two nav CTAs.",
+      "scope": "Mounted with the global navbar on all full-chrome pages (69 routes).",
+      "implementedBy": "src/components/Navbar.jsx (drawer block)",
+      "contract": "design-repo/sections/shell.mobile-drawer.json"
+    },
+    "shell.event-subnav": {
+      "category": "SHELL",
+      "description": "Transparent event-specific navigation bar (event name plus agenda, speakers, experience, tour and waitlist links) that replaces the global navbar and mega-menus; uses the event's own display face.",
+      "scope": "Event microsite only (1 route)."
+    },
+    "shell.minimal-nav": {
+      "category": "SHELL",
+      "description": "Minimal white navigation row: brand mark and a single Home link; no menus, search or CTAs.",
+      "scope": "Partner directory only (1 route)."
+    },
+    "shell.footer": {
+      "category": "SHELL",
+      "description": "Dark footer: light brand mark, link columns (one link with a badge), newsletter block, region select, social icons, copyright with legal links and a cookie-preferences button.",
+      "scope": "Every page except the partner directory (70 routes).",
+      "implementedBy": "src/components/Footer.jsx > Footer",
+      "contract": "design-repo/sections/shell.footer.json"
+    },
+    "hero.center": {
+      "category": "HERO",
+      "description": "Centred page header: optional eyebrow, H1, lead, one or two large buttons, and either no media (text-only) or a large rounded image / illustration / 16:9 poster below; brush stroke behind on media variants.",
+      "scope": "Homepage (text-only), solution and industry pages, and some company and product-landing pages (30 routes across the templates that list it).",
+      "implementedBy": "src/components/sections/HeroCenter.jsx > HeroCenter; homepage: src/components/Hero.jsx > Hero",
+      "contract": "design-repo/sections/hero.center.json"
+    },
+    "hero.split": {
+      "category": "HERO",
+      "description": "Two-column page header: H1, lead and one or two large buttons on the left, rounded image / video poster / illustration on the right (6/6 or 7/5), optional tag chip or product lockup above the H1; padded or flush-bottom; brush stroke behind.",
+      "scope": "Product feature and data-platform pages, plus most company pages and several product landings (31 routes across the templates that list it).",
+      "implementedBy": "src/components/sections/HeroSplit.jsx > HeroSplit",
+      "contract": "design-repo/sections/hero.split.json"
+    },
+    "hero.champions-dark": {
+      "category": "HERO",
+      "description": "Near-black full-width community-program header with the page's own display face; opens the dark-theme sequence.",
+      "scope": "Community champions page only (1 route)."
+    },
+    "hero.event": {
+      "category": "HERO",
+      "description": "Event microsite header in the event's display face, sitting under the event sub-nav.",
+      "scope": "Event microsite only (1 route)."
+    },
+    "social-proof.logo-marquee": {
+      "category": "SOCIAL_PROOF",
+      "description": "Infinite horizontal marquee of customer wordmarks that overlaps the bottom edge of the hero.",
+      "scope": "Homepage only (1 route).",
+      "implementedBy": "src/components/LogoMarquee.jsx > LogoMarquee",
+      "contract": "design-repo/sections/social-proof.logo-marquee.json"
+    },
+    "social-proof.logo-bar": {
+      "category": "SOCIAL_PROOF",
+      "description": "Static 'trusted by' row: centred small heading above a single wrapping row of about six customer wordmarks; no motion (distinct from the homepage marquee).",
+      "scope": "Asset/webinar landings and product landings (12 routes across the templates that list it).",
+      "implementedBy": "src/components/sections/LogoBar.jsx > LogoBar"
+    },
+    "social-proof.customer-tabs": {
+      "category": "SOCIAL_PROOF",
+      "description": "Heading and paragraph, a left-aligned tab row of customer names, and per tab a logo, headline, optional summary, button, a quote card and two stat cards.",
+      "scope": "Product feature, solution, data-platform and product-landing pages (26 routes across the templates that list it; absent on some members).",
+      "implementedBy": "src/components/sections/CustTabs.jsx > CustTabs",
+      "contract": "design-repo/sections/social-proof.customer-tabs.json"
+    },
+    "social-proof.quote-band": {
+      "category": "SOCIAL_PROOF",
+      "description": "One bordered blur card holding a customer quote (icon or logo, large quote, attribution), or a one-per-view slider of such quotes with pagination bars; optional brush stroke or soft wash behind.",
+      "scope": "Product feature (one member), solution (one member), industry and product-landing pages (25 routes across the templates that list it).",
+      "implementedBy": "src/components/sections/QuoteBand.jsx > QuoteBand",
+      "contract": "design-repo/sections/social-proof.quote-band.json"
+    },
+    "social-proof.testimonial-slider": {
+      "category": "SOCIAL_PROOF",
+      "description": "Header column (eyebrow, heading, body, optional button) beside a horizontal slider of quote or metric cards (logo, quote or big metric, text link) with arrows and pagination bars.",
+      "scope": "Homepage, industry pages and several product landings (15 routes across the templates that list it).",
+      "implementedBy": "src/components/sections/TestiSlider.jsx > TestiSlider; homepage: src/components/Testimonials.jsx > Testimonials",
+      "contract": "design-repo/sections/social-proof.testimonial-slider.json"
+    },
+    "social-proof.stats-bento": {
+      "category": "SOCIAL_PROOF",
+      "description": "Dark 'trusted at scale' band: optional eyebrow, heading, and four blur-dark cards in an alternating 7+5 / 5+7 bento, each with eyebrow, stat heading, body and an optional image or logo-tile row.",
+      "scope": "Solution, industry, form and product-landing pages, plus one data-platform member (29 routes across the templates that list it).",
+      "implementedBy": "src/components/sections/Stats.jsx > Stats",
+      "contract": "design-repo/sections/social-proof.stats-bento.json"
+    },
+    "features.gradient-panel": {
+      "category": "FEATURES",
+      "description": "Rounded gradient panel with grain: small eyebrow, heading, body and a dark primary button in one column, product media flush to the panel's edge in the other; consecutive panels alternate sides.",
+      "scope": "Homepage only (1 route).",
+      "implementedBy": "src/components/FeaturePanel.jsx > FeaturePanel",
+      "contract": "design-repo/sections/features.gradient-panel.json"
+    },
+    "features.demo-panel": {
+      "category": "FEATURES",
+      "description": "Product-landing demo row: full-container gradient panel with grain, a narrow text column (small eyebrow, heading, paragraph, dark primary button) and a wide screenshot sitting on the panel bottom edge; rows alternate sides and alternate two gradients, separated by a dark rule below 768px. Structurally close to features.gradient-panel but built and measured separately.",
+      "scope": "Product landings only (9 routes across the template that lists it; rendered by the assistant member).",
+      "implementedBy": "src/components/sections/DemoPanel.jsx > DemoPanel"
+    },
+    "features.integration-tiles": {
+      "category": "FEATURES",
+      "description": "Text column (eyebrow, heading, body, button) beside a two-column grid of six bordered tiles, each an integration icon plus label; tile border darkens on hover.",
+      "scope": "Homepage only (1 route).",
+      "implementedBy": "src/components/Integrations.jsx > Integrations",
+      "contract": "design-repo/sections/features.integration-tiles.json"
+    },
+    "features.integration-tile-grid": {
+      "category": "FEATURES",
+      "description": "Text column (eyebrow, heading, paragraph, button) at five of twelve columns beside an offset two-column grid of bordered icon + large-label tiles that are not links; tile border darkens on hover. Structurally close to the homepage features.integration-tiles but built and measured separately.",
+      "scope": "Product landings only (9 routes across the template that lists it; rendered by the analyst member).",
+      "implementedBy": "src/components/sections/IntTiles.jsx > IntTiles"
+    },
+    "features.integration-strip": {
+      "category": "FEATURES",
+      "description": "Centred grey kicker and heading above a single wrapping row of square icon-only integration tiles and one button; tiles darken their border on hover.",
+      "scope": "Product landings only (9 routes).",
+      "implementedBy": "src/components/sections/IntStrip.jsx > IntStrip"
+    },
+    "features.card-grid": {
+      "category": "FEATURES",
+      "description": "Section header (eyebrow, heading, paragraph, optional buttons or lockup) above a three- or four-column grid of cards: icon cards on a wash, bordered link cards, image cards, plain or dark bordered cards, or stat cards (big number + label).",
+      "scope": "The most reused content block: homepage plus every marketing, form and company template that lists it (46 routes across the templates that list it).",
+      "implementedBy": "src/components/sections/Feat.jsx > Feat; homepage: src/components/WhyCards.jsx > WhyCards",
+      "contract": "design-repo/sections/features.card-grid.json"
+    },
+    "features.checklist": {
+      "category": "FEATURES",
+      "description": "Icon checklist of capabilities: two columns of titled items, a split with heading + items beside an image, a before/after pair, or a three-column grid of titled items.",
+      "scope": "Solution pages, plus company and product-landing pages that use the split variant (24 routes across the templates that list it).",
+      "implementedBy": "src/components/sections/Checklist.jsx > Checklist",
+      "contract": "design-repo/sections/features.checklist.json"
+    },
+    "features.tabs-dark": {
+      "category": "FEATURES",
+      "description": "Dark band: heading (+ optional paragraph) and a vertical tablist where the active tab expands its description, beside that tab's media in a blur-dark frame; brush stroke behind.",
+      "scope": "Product feature, industry and product-landing pages (20 routes across the templates that list it).",
+      "implementedBy": "src/components/sections/TabsDark.jsx > TabsDark",
+      "contract": "design-repo/sections/features.tabs-dark.json"
+    },
+    "features.tabs-light": {
+      "category": "FEATURES",
+      "description": "Light centred tab row with an underline on the active tab; each tab shows a short description and one square image.",
+      "scope": "Solution pages only (5 routes).",
+      "implementedBy": "src/components/sections/TabsLight.jsx > TabsLight",
+      "contract": "design-repo/sections/features.tabs-light.json"
+    },
+    "content.statement": {
+      "category": "CONTENT",
+      "description": "Centred heading (+ paragraph) in a narrow reading column; variants add a diagram or a video poster below, a single-sentence line, an eyebrow, or a light grey band.",
+      "scope": "Homepage, solution, data-platform and product-landing pages (21 routes across the templates that list it).",
+      "implementedBy": "src/components/sections/Statement.jsx > Statement; homepage: src/components/Statement.jsx > Statement",
+      "contract": "design-repo/sections/content.statement.json"
+    },
+    "content.media-split": {
+      "category": "CONTENT",
+      "description": "Two-column row: eyebrow, heading, one or two paragraphs (optional bullets) and buttons beside an image, diagram or video poster; column ratios 6/6, 7/5, 5/7; media left or right.",
+      "scope": "Homepage and most marketing templates, plus asset landings and company pages (40 routes across the templates that list it).",
+      "implementedBy": "src/components/sections/Split.jsx > Split; homepage: src/components/DiagramSection.jsx > DiagramSection",
+      "contract": "design-repo/sections/content.media-split.json"
+    },
+    "cta.ide-card": {
+      "category": "CTA",
+      "description": "One clickable gradient card: heading and paragraph beside a two-by-two grid of white tiles naming editor/install options.",
+      "scope": "Homepage only (1 route).",
+      "implementedBy": "src/components/IdeCard.jsx > IdeCard",
+      "contract": "design-repo/sections/cta.ide-card.json"
+    },
+    "cta.gradient-card": {
+      "category": "CTA",
+      "description": "Mid-page conversion card on a warm gradient with grain: heading, paragraph, a dark primary button and an optional dark tertiary button.",
+      "scope": "Product feature, data-platform, one solution member and several product landings (26 routes across the templates that list it).",
+      "implementedBy": "src/components/sections/CtaCard.jsx > CtaCard",
+      "contract": "design-repo/sections/cta.gradient-card.json"
+    },
+    "cta.closing-band": {
+      "category": "CTA",
+      "description": "Short blue gradient band with concentric circles: heading, paragraph, zero to two dark buttons, and an optional right column (heading + paragraph + arrow link, a three-row checklist, or two stats).",
+      "scope": "The default page closer on every marketing, listing, case-study and company template that lists it (51 routes across the templates that list it).",
+      "implementedBy": "src/components/sections/CtaBand.jsx > CtaBand",
+      "contract": "design-repo/sections/cta.closing-band.json"
+    },
+    "cta.community-band": {
+      "category": "CTA",
+      "description": "Long blue gradient band: eyebrow, heading, body, two dark buttons, and a right column of two or three stat blocks behind a hairline divider.",
+      "scope": "Homepage, solution, industry pages, and as the alternate closer on hub listings and blog posts (18 routes across the templates that list it).",
+      "implementedBy": "src/components/CommunityCta.jsx > CommunityCta",
+      "contract": "design-repo/sections/cta.community-band.json"
+    },
+    "cta.dev-path-dialog": {
+      "category": "CTA",
+      "description": "Modal dialog opened by some hero buttons: dimmed blurred overlay, white panel with close button, heading, then rows of path title + description + secondary button divided by hairlines. Overlay, not an in-flow section.",
+      "scope": "Opened from hero buttons on company and product-landing pages (19 routes across the templates that list it).",
+      "implementedBy": "src/components/sections/DevModal.jsx > DevModalButton (opened via parts.jsx > Btn when cta.dialog is set)"
+    },
+    "cta.champions-closing": {
+      "category": "CTA",
+      "description": "Dark closing band inviting the visitor to join the champions program, in the page's dark theme.",
+      "scope": "Community champions page only (1 route)."
+    },
+    "editorial.news-band": {
+      "category": "EDITORIAL",
+      "description": "Dark band with a co-brand lockup, one news headline and a read-more link.",
+      "scope": "Homepage only (1 route).",
+      "implementedBy": "src/components/NewsBand.jsx > NewsBand",
+      "contract": "design-repo/sections/editorial.news-band.json"
+    },
+    "editorial.dark-news-strip": {
+      "category": "EDITORIAL",
+      "description": "Compact dark strip: eyebrow, heading and paragraph on the left, one outlined light button on the right; no lockup (differs from the homepage news band).",
+      "scope": "Company/program pages (careers member) (10 routes across the template that lists it).",
+      "implementedBy": "src/components/sections/NewsStrip.jsx > NewsStrip"
+    },
+    "editorial.resource-cards": {
+      "category": "EDITORIAL",
+      "description": "Header (eyebrow, heading, optional paragraph) above two to four resource / story / post cards: 16:9 image link, optional tag chip, title link, optional paragraph or byline.",
+      "scope": "Related-reading row on product feature, solution, data-platform, industry, case-study, article, company and product-landing pages (49 routes across the templates that list it).",
+      "implementedBy": "src/components/sections/Resources.jsx > Resources",
+      "contract": "design-repo/sections/editorial.resource-cards.json"
+    },
+    "editorial.community-bento": {
+      "category": "EDITORIAL",
+      "description": "Dark bento of community updates: a wide feature card with square image, a member quote card, a meetup date card, a topics list card and an image-of-the-week card.",
+      "scope": "Company/program pages (community member) (10 routes across the template that lists it).",
+      "implementedBy": "src/components/sections/BentoCommunity.jsx > BentoCommunity"
+    },
+    "interactive.faq-accordion": {
+      "category": "INTERACTIVE",
+      "description": "Centred heading (+ optional paragraph) above grey rounded accordion items: question row with plus/minus glyph, instant independent expand/collapse revealing prose.",
+      "scope": "Company pages, product landings and pricing (20 routes across the templates that list it).",
+      "implementedBy": "src/components/sections/Faq.jsx > Faq"
+    },
+    "interactive.course-tabs": {
+      "category": "INTERACTIVE",
+      "description": "Text column (eyebrow, heading, paragraph, button) beside a light flex-grow tab row whose panels list course cards (16:9 image, tag + duration, title, paragraph, chevron link).",
+      "scope": "Company/program pages (learning member) (10 routes across the template that lists it).",
+      "implementedBy": "src/components/sections/CourseTabs.jsx > CourseTabs"
+    },
+    "interactive.photo-tabs": {
+      "category": "INTERACTIVE",
+      "description": "Left-aligned header and button above a flex-grow light tab row; each panel is a mirrored mosaic of one large and two small square photos per column.",
+      "scope": "Company/program pages (community member) (10 routes across the template that lists it).",
+      "implementedBy": "src/components/sections/PhotoTabs.jsx > PhotoTabs"
+    },
+    "interactive.install-tabs": {
+      "category": "INTERACTIVE",
+      "description": "Centred header above a two-tab light tablist; each panel is a bordered card holding one shell-command row (prompt glyph, monospace command, copy button).",
+      "scope": "Product landings only (9 routes).",
+      "implementedBy": "src/components/sections/Install.jsx > Install"
+    },
+    "interactive.persona-tabs": {
+      "category": "INTERACTIVE",
+      "description": "Centred icon tabs (one per persona); each panel shows a before card and an after card side by side, each with a code chip, heading and bullet list.",
+      "scope": "Product landings only (9 routes).",
+      "implementedBy": "src/components/sections/PersonaTabs.jsx > PersonaTabs"
+    },
+    "listing.header": {
+      "category": "LISTING",
+      "description": "Plain listing header: H1 only, no buttons or media.",
+      "scope": "Hub listings and filterable card-grid listings (7 routes across the templates that list it)."
+    },
+    "listing.category-nav": {
+      "category": "LISTING",
+      "description": "Blurred pill navigation linking to category sub-listings, with a search input beside it.",
+      "scope": "Hub listings only (3 routes)."
+    },
+    "listing.filter-toolbar": {
+      "category": "LISTING",
+      "description": "Search input plus a client-side filter control (filters panel or multi-select dropdown); runtime UI, absent on the press member.",
+      "scope": "Filterable card-grid listings only (4 routes)."
+    },
+    "listing.featured-item": {
+      "category": "LISTING",
+      "description": "One large featured card (wide image, category eyebrow, title, byline) above the listing grid.",
+      "scope": "Hub listings only (3 routes)."
+    },
+    "listing.card-grid": {
+      "category": "LISTING",
+      "description": "Three-column grid of listing cards (image, category and read-time eyebrow, title, author and date) ending in a client-side load-more / view-more button; the press member has two such grids.",
+      "scope": "Hub listings and filterable card-grid listings (7 routes across the templates that list it)."
+    },
+    "listing.media-contact": {
+      "category": "LISTING",
+      "description": "Plain text block with press-contact details that closes the press listing instead of a CTA band.",
+      "scope": "Filterable card-grid listings (press member) (4 routes across the template that lists it)."
+    },
+    "article.breadcrumb": {
+      "category": "ARTICLE",
+      "description": "Breadcrumb row (section / category / title) at the top of the header.",
+      "scope": "Articles and asset/webinar landings (7 routes across the templates that list it)."
+    },
+    "article.post-header": {
+      "category": "ARTICLE",
+      "description": "Blog-post header: H1, author and last-edited date; no buttons or media.",
+      "scope": "Articles (blog-post members) (4 routes across the template that lists it)."
+    },
+    "article.guide-header": {
+      "category": "ARTICLE",
+      "description": "Hero-style header for long-form guides and reports: H1, author link, a download button and a second CTA.",
+      "scope": "Articles (guide and report members) (4 routes across the template that lists it)."
+    },
+    "article.story-header": {
+      "category": "ARTICLE",
+      "description": "Case-study header: H1, customer logo and a row of headline stats.",
+      "scope": "Case-study details only (4 routes)."
+    },
+    "article.story-meta": {
+      "category": "ARTICLE",
+      "description": "Left meta column beside the story body: small labelled facts (industry and similar) as heading-labelled rows.",
+      "scope": "Case-study details only (4 routes)."
+    },
+    "article.prose-chapter": {
+      "category": "ARTICLE",
+      "description": "One heading-bounded chapter of long-form prose (a heading plus paragraphs, sub-headings, inline images, tables or an embedded video poster). Repeats once per chapter; never one whole-article section.",
+      "scope": "Case-study details and articles (8 routes across the templates that list it)."
+    },
+    "article.pull-quote": {
+      "category": "ARTICLE",
+      "description": "Inline customer quote set off within the story body.",
+      "scope": "Case-study details only (4 routes)."
+    },
+    "article.sticky-rail": {
+      "category": "ARTICLE",
+      "description": "Sticky right rail beside the article body column holding share links (posts) or a table-of-contents anchor list (guides); runtime UI.",
+      "scope": "Articles only (4 routes)."
+    },
+    "form.form-header": {
+      "category": "FORM",
+      "description": "Two-column page header: copy (eyebrow, H1, intro, optional sub-sections or logo row) beside a static form panel with privacy fine print; some members have only a button in place of the form. No submission.",
+      "scope": "Asset/webinar landings and form pages (7 routes across the templates that list it)."
+    },
+    "form.download-form": {
+      "category": "FORM",
+      "description": "Standalone static download form section that ends a long-form report.",
+      "scope": "Articles (report member) (4 routes across the template that lists it)."
+    },
+    "legal.policy-header": {
+      "category": "LEGAL",
+      "description": "Policy page header: H1 only. Absent on one member, which starts directly with a section heading.",
+      "scope": "Legal/policy pages (3 routes across the template that lists it)."
+    },
+    "legal.policy-part": {
+      "category": "LEGAL",
+      "description": "One heading-bounded part of a policy document in a centred narrow column with numbered headings; repeats per part, never one whole-document section.",
+      "scope": "Legal/policy pages only (3 routes)."
+    },
+    "company.leadership-list": {
+      "category": "COMPANY",
+      "description": "Centred heading above a vertical list of large bordered person cards: round avatar, name, role line, profile link and a short bio.",
+      "scope": "Company/program pages (about member) (10 routes across the template that lists it).",
+      "implementedBy": "src/components/sections/Leaders.jsx > Leaders"
+    },
+    "company.people-grid": {
+      "category": "COMPANY",
+      "description": "Centred heading above a wrapping row of avatar + name + role tiles (no bio).",
+      "scope": "Company/program pages (about member) (10 routes across the template that lists it).",
+      "implementedBy": "src/components/sections/Board.jsx > Board"
+    },
+    "company.role-filter": {
+      "category": "COMPANY",
+      "description": "Department filter for the open-roles list: a non-sticky vertical button list on desktop, a single-select dropdown below 1024px; filters instantly. Runtime UI.",
+      "scope": "Company/program pages (careers member) (10 routes across the template that lists it).",
+      "implementedBy": "src/components/sections/Jobs.jsx > Jobs (department filter part)"
+    },
+    "company.role-list": {
+      "category": "COMPANY",
+      "description": "Open roles grouped by department: tag chip per group, then rows of role title link, location with pin icon and an apply button.",
+      "scope": "Company/program pages (careers member) (10 routes across the template that lists it).",
+      "implementedBy": "src/components/sections/Jobs.jsx > Jobs (grouped list part)"
+    },
+    "company.compliance-rows": {
+      "category": "COMPANY",
+      "description": "Centred heading above stacked rows of a certification badge (left quarter) and a heading + prose description (right three quarters).",
+      "scope": "Company/program pages (security member) (10 routes across the template that lists it).",
+      "implementedBy": "src/components/sections/Compliance.jsx > Compliance"
+    },
+    "company.program-list": {
+      "category": "COMPANY",
+      "description": "Two-column block: heading, paragraphs and button on the left; a list of icon + title + paragraph + tertiary button program items on the right.",
+      "scope": "Company/program pages (certification member) (10 routes across the template that lists it).",
+      "implementedBy": "src/components/sections/CertList.jsx > CertList"
+    },
+    "comparison.journey-columns": {
+      "category": "COMPARISON",
+      "description": "Dark band of four maturity columns (three outlined, the last highlighted with a glow) listing labelled facts, status badges and x/check lists, with a decorative curve overlay.",
+      "scope": "Product landings (self-hosted comparison member) (9 routes across the template that lists it).",
+      "implementedBy": "src/components/sections/Journey.jsx > Journey"
+    },
+    "comparison.compare-table": {
+      "category": "COMPARISON",
+      "description": "Left-aligned heading above a two-option feature table: zebra rows, check marks or info notes per cell, outlined rounded body; repeats once per feature group.",
+      "scope": "Product landings (self-hosted comparison member) (9 routes across the template that lists it).",
+      "implementedBy": "src/components/sections/CompareTable.jsx > CompareTable"
+    },
+    "comparison.plan-matrix": {
+      "category": "COMPARISON",
+      "description": "Multi-plan feature comparison table with collapsible feature groups and icon cells, one column per plan.",
+      "scope": "Pricing only (1 route)."
+    },
+    "pricing.plan-cards": {
+      "category": "PRICING",
+      "description": "Pricing header that holds the H1 above a row of plan cards (plan name, price block, feature list, button).",
+      "scope": "Pricing only (1 route)."
+    },
+    "pricing.add-ons": {
+      "category": "PRICING",
+      "description": "Light band of two add-on offer cards below the plans.",
+      "scope": "Pricing only (1 route)."
+    },
+    "community.about-band": {
+      "category": "COMMUNITY",
+      "description": "Dark about-the-program band following the dark hero.",
+      "scope": "Community champions page only (1 route)."
+    },
+    "community.member-grid": {
+      "category": "COMMUNITY",
+      "description": "Grid of featured member portraits.",
+      "scope": "Community champions page only (1 route)."
+    },
+    "community.activity-cards": {
+      "category": "COMMUNITY",
+      "description": "Row of cards describing what program members do, on a light band.",
+      "scope": "Community champions page only (1 route)."
+    },
+    "community.dark-quote-slider": {
+      "category": "COMMUNITY",
+      "description": "Dark one-per-view slider of member quotes (blockquote cards) with slider controls.",
+      "scope": "Community champions page only (1 route)."
+    },
+    "community.story-grid": {
+      "category": "COMMUNITY",
+      "description": "Large image grid of member stories.",
+      "scope": "Community champions page only (1 route)."
+    },
+    "community.support-cards": {
+      "category": "COMMUNITY",
+      "description": "Dark band of four cards describing how the program supports members.",
+      "scope": "Community champions page only (1 route)."
+    },
+    "event.photo-gallery": {
+      "category": "EVENT",
+      "description": "Large photo gallery from past editions of the event.",
+      "scope": "Event microsite only (1 route)."
+    },
+    "event.recap": {
+      "category": "EVENT",
+      "description": "Recap block summarising the previous edition.",
+      "scope": "Event microsite only (1 route)."
+    },
+    "event.highlight-cards": {
+      "category": "EVENT",
+      "description": "Row of four highlight cards for what is new at the event.",
+      "scope": "Event microsite only (1 route)."
+    },
+    "event.sponsor-logos": {
+      "category": "EVENT",
+      "description": "Grid of sponsor marks (placeholder marks only in the clone).",
+      "scope": "Event microsite only (1 route)."
+    },
+    "event.media-block": {
+      "category": "EVENT",
+      "description": "Media (video poster) section of the event microsite.",
+      "scope": "Event microsite only (1 route)."
+    },
+    "event.closing-bands": {
+      "category": "EVENT",
+      "description": "Black closing section with heading and call to action; appears twice in a row at the end of the microsite.",
+      "scope": "Event microsite only (1 route)."
+    },
+    "directory.filter-sidebar": {
+      "category": "DIRECTORY",
+      "description": "Static mock of the partner-locator filter sidebar: checkbox groups (type, tier, region) and an apply button.",
+      "scope": "Partner directory only (1 route)."
+    },
+    "directory.partner-results": {
+      "category": "DIRECTORY",
+      "description": "Static mock of the partner results: keyword search, partner cards and previous / numbered / next pagination.",
+      "scope": "Partner directory only (1 route)."
+    }
+  },
+  "templates": [
+    {
+      "id": "T0",
+      "slug": "home",
+      "name": "T0 Homepage [implemented]",
+      "status": "implemented",
+      "designRepoStatus": "implemented",
+      "routeCount": 1,
+      "routes": [
+        "/"
+      ],
+      "chrome": "full",
+      "renderedBy": "src/pages/Home.jsx",
+      "sections": [
+        "shell.announcement-bar",
+        "shell.navbar",
+        "shell.mega-menu",
+        "shell.mobile-drawer",
+        "hero.center",
+        "social-proof.logo-marquee",
+        "editorial.news-band",
+        "content.statement",
+        "features.gradient-panel",
+        "features.integration-tiles",
+        "features.card-grid",
+        "content.media-split",
+        "cta.ide-card",
+        "social-proof.testimonial-slider",
+        "cta.community-band",
+        "shell.footer"
+      ],
+      "notes": [
+        "features.gradient-panel repeats three times (text-first, media-first, text-first)."
+      ]
+    },
+    {
+      "id": "T1",
+      "slug": "product-feature",
+      "name": "T1 Product feature [implemented]",
+      "status": "implemented",
+      "designRepoStatus": "implemented",
+      "routeCount": 6,
+      "routes": [
+        "/product/develop",
+        "/product/test-and-observe",
+        "/product/mesh",
+        "/product/catalog",
+        "/product/deploy",
+        "/product/semantic-layer"
+      ],
+      "chrome": "full",
+      "renderedBy": "src/pages/templates/T1.jsx + src/content/pages/t1.js",
+      "sections": [
+        "shell.announcement-bar",
+        "shell.navbar",
+        "shell.mega-menu",
+        "shell.mobile-drawer",
+        "hero.split",
+        "content.media-split",
+        "features.card-grid",
+        "features.tabs-dark",
+        "cta.gradient-card",
+        "social-proof.customer-tabs",
+        "social-proof.quote-band",
+        "editorial.resource-cards",
+        "cta.closing-band",
+        "shell.footer"
+      ],
+      "notes": [
+        "Mid-CTA slot: cta.gradient-card on 5 routes; /product/mesh uses a second cta.closing-band there instead.",
+        "Proof slot: social-proof.customer-tabs on 5 routes; /product/catalog uses social-proof.quote-band (slider) instead."
+      ]
+    },
+    {
+      "id": "T2",
+      "slug": "solution",
+      "name": "T2 Solution [implemented]",
+      "status": "implemented",
+      "designRepoStatus": "implemented",
+      "routeCount": 5,
+      "routes": [
+        "/product/ai",
+        "/product/embedded-analytics",
+        "/product/data-modernization",
+        "/product/data-trust",
+        "/product/cost-optimization"
+      ],
+      "chrome": "full",
+      "renderedBy": "src/pages/templates/T2.jsx + src/content/pages/t2.js",
+      "sections": [
+        "shell.announcement-bar",
+        "shell.navbar",
+        "shell.mega-menu",
+        "shell.mobile-drawer",
+        "hero.center",
+        "content.statement",
+        "features.checklist",
+        "features.card-grid",
+        "features.tabs-light",
+        "content.media-split",
+        "social-proof.quote-band",
+        "social-proof.customer-tabs",
+        "cta.community-band",
+        "cta.gradient-card",
+        "social-proof.stats-bento",
+        "editorial.resource-cards",
+        "cta.closing-band",
+        "shell.footer"
+      ],
+      "notes": [
+        "content.statement only on /product/data-modernization; features.card-grid absent on /product/cost-optimization.",
+        "content.media-split (video) only on /product/ai; social-proof.quote-band and a second features.checklist (before-after) only on /product/cost-optimization.",
+        "Mid-CTA slot: cta.community-band on 4 routes, cta.gradient-card on /product/ai.",
+        "social-proof.stats-bento sits before the resources row on 4 routes and after it on /product/ai."
+      ]
+    },
+    {
+      "id": "T3",
+      "slug": "data-platform",
+      "name": "T3 Data platform [implemented]",
+      "status": "implemented",
+      "designRepoStatus": "implemented",
+      "routeCount": 6,
+      "routes": [
+        "/data-platforms/northwind",
+        "/data-platforms/quarry",
+        "/data-platforms/helixa",
+        "/data-platforms/stratus",
+        "/data-platforms/driftway",
+        "/data-platforms/cobalt"
+      ],
+      "chrome": "full",
+      "renderedBy": "src/pages/templates/T3.jsx + src/content/pages/t3.js",
+      "sections": [
+        "shell.announcement-bar",
+        "shell.navbar",
+        "shell.mega-menu",
+        "shell.mobile-drawer",
+        "hero.split",
+        "features.card-grid",
+        "content.statement",
+        "content.media-split",
+        "cta.gradient-card",
+        "social-proof.customer-tabs",
+        "editorial.resource-cards",
+        "social-proof.stats-bento",
+        "cta.closing-band",
+        "shell.footer"
+      ],
+      "notes": [
+        "Integration slot: content.statement on 4 routes, content.media-split (text-left) on /data-platforms/quarry and /data-platforms/stratus.",
+        "social-proof.customer-tabs absent on /data-platforms/driftway; social-proof.stats-bento only on /data-platforms/quarry."
+      ]
+    },
+    {
+      "id": "T4",
+      "slug": "industry",
+      "name": "T4 Industry [implemented]",
+      "status": "implemented",
+      "designRepoStatus": "implemented",
+      "routeCount": 5,
+      "routes": [
+        "/industry/financial-services",
+        "/industry/healthcare",
+        "/industry/manufacturing",
+        "/industry/energy-utilities",
+        "/industry/telecommunications"
+      ],
+      "chrome": "full",
+      "renderedBy": "src/pages/templates/T4.jsx + src/content/pages/t4.js",
+      "sections": [
+        "shell.announcement-bar",
+        "shell.navbar",
+        "shell.mega-menu",
+        "shell.mobile-drawer",
+        "hero.center",
+        "features.card-grid",
+        "social-proof.quote-band",
+        "features.tabs-dark",
+        "social-proof.testimonial-slider",
+        "editorial.resource-cards",
+        "social-proof.stats-bento",
+        "cta.community-band",
+        "shell.footer"
+      ],
+      "notes": [
+        "Identical order on all 5 routes. features.card-grid appears twice: four-column use cases before the quote band, wash-icon cards after it."
+      ]
+    },
+    {
+      "id": "T5",
+      "slug": "case-study-detail",
+      "name": "T5 Case-study detail [planned]",
+      "status": "planned",
+      "designRepoStatus": "pending",
+      "routeCount": 4,
+      "routes": [
+        "/case-studies/kestrel",
+        "/case-studies/meridian-partners",
+        "/case-studies/halcyon",
+        "/case-studies/basalt-health"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.announcement-bar",
+        "shell.navbar",
+        "shell.mega-menu",
+        "shell.mobile-drawer",
+        "article.story-header",
+        "article.story-meta",
+        "article.prose-chapter",
+        "article.pull-quote",
+        "editorial.resource-cards",
+        "cta.closing-band",
+        "shell.footer"
+      ],
+      "notes": [
+        "Sequence from PAGES.md T5 + design-repo decompositionNote (story-header / meta / prose-chapter / quote / related)."
+      ]
+    },
+    {
+      "id": "T6",
+      "slug": "content-hub-listing",
+      "name": "T6 Content hub listing [planned]",
+      "status": "planned",
+      "designRepoStatus": "pending",
+      "routeCount": 3,
+      "routes": [
+        "/blog",
+        "/resources/webinars",
+        "/resources"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.announcement-bar",
+        "shell.navbar",
+        "shell.mega-menu",
+        "shell.mobile-drawer",
+        "listing.header",
+        "listing.category-nav",
+        "listing.featured-item",
+        "listing.card-grid",
+        "cta.closing-band",
+        "cta.community-band",
+        "shell.footer"
+      ],
+      "notes": [
+        "Closer is cta.closing-band, except /blog which closes on cta.community-band."
+      ]
+    },
+    {
+      "id": "T7",
+      "slug": "filterable-card-grid",
+      "name": "T7 Filterable card grid [planned]",
+      "status": "planned",
+      "designRepoStatus": "pending",
+      "routeCount": 4,
+      "routes": [
+        "/case-studies",
+        "/resources/on-demand",
+        "/events",
+        "/press"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.announcement-bar",
+        "shell.navbar",
+        "shell.mega-menu",
+        "shell.mobile-drawer",
+        "listing.header",
+        "listing.filter-toolbar",
+        "listing.card-grid",
+        "listing.media-contact",
+        "cta.closing-band",
+        "shell.footer"
+      ],
+      "notes": [
+        "/press has no filter toolbar, two card grids, and ends on listing.media-contact with no CTA band."
+      ]
+    },
+    {
+      "id": "T8",
+      "slug": "article",
+      "name": "T8 Article with sticky rail [planned]",
+      "status": "planned",
+      "designRepoStatus": "pending",
+      "routeCount": 4,
+      "routes": [
+        "/resources/analytics-lifecycle",
+        "/resources/state-of-data-teams",
+        "/blog/summit-announcements",
+        "/blog/lattice-joins-northwind"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.announcement-bar",
+        "shell.navbar",
+        "shell.mega-menu",
+        "shell.mobile-drawer",
+        "article.breadcrumb",
+        "article.post-header",
+        "article.guide-header",
+        "article.prose-chapter",
+        "article.sticky-rail",
+        "form.download-form",
+        "editorial.resource-cards",
+        "cta.community-band",
+        "cta.closing-band",
+        "shell.footer"
+      ],
+      "notes": [
+        "Blog posts: post-header, prose with share rail, latest-posts row, community band.",
+        "Guide/report: guide-header, prose with TOC rail, (report only) download form, closing band."
+      ]
+    },
+    {
+      "id": "T9",
+      "slug": "asset-landing",
+      "name": "T9 Asset / webinar landing [planned]",
+      "status": "planned",
+      "designRepoStatus": "pending",
+      "routeCount": 3,
+      "routes": [
+        "/resources/webinars/launch-showcase",
+        "/resources/whitepaper-control-plane",
+        "/resources/webinars/charts-as-code"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.announcement-bar",
+        "shell.navbar",
+        "shell.mega-menu",
+        "shell.mobile-drawer",
+        "article.breadcrumb",
+        "form.form-header",
+        "social-proof.logo-bar",
+        "content.media-split",
+        "shell.footer"
+      ],
+      "notes": [
+        "Logo bar and media split only on the launch-showcase member; the whitepaper member shows a download button instead of a form. No CTA band."
+      ]
+    },
+    {
+      "id": "T10",
+      "slug": "form-page",
+      "name": "T10 Form page [planned]",
+      "status": "planned",
+      "designRepoStatus": "pending",
+      "routeCount": 4,
+      "routes": [
+        "/contact",
+        "/signup",
+        "/community/join",
+        "/report-a-problem"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.announcement-bar",
+        "shell.navbar",
+        "shell.mega-menu",
+        "shell.mobile-drawer",
+        "form.form-header",
+        "features.card-grid",
+        "social-proof.stats-bento",
+        "shell.footer"
+      ],
+      "notes": [
+        "Card grid only on /contact; stats bento on /contact and /signup; the other two are header-only."
+      ]
+    },
+    {
+      "id": "T11",
+      "slug": "legal-prose",
+      "name": "T11 Legal / policy prose [planned]",
+      "status": "planned",
+      "designRepoStatus": "pending",
+      "routeCount": 3,
+      "routes": [
+        "/modern-slavery-statement",
+        "/terms-of-use",
+        "/legal/ai-principles"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.announcement-bar",
+        "shell.navbar",
+        "shell.mega-menu",
+        "shell.mobile-drawer",
+        "legal.policy-header",
+        "legal.policy-part",
+        "shell.footer"
+      ],
+      "notes": [
+        "/terms-of-use has no policy header. No CTA band."
+      ]
+    },
+    {
+      "id": "T12",
+      "slug": "company-program",
+      "name": "T12 Company / program [registered, content pending]",
+      "status": "registered-content-pending",
+      "designRepoStatus": "pending",
+      "routeCount": 10,
+      "routes": [
+        "/security",
+        "/certification",
+        "/learn",
+        "/community",
+        "/about-us",
+        "/about-us/values",
+        "/about-us/careers",
+        "/about-us/belonging",
+        "/partners",
+        "/services"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.announcement-bar",
+        "shell.navbar",
+        "shell.mega-menu",
+        "shell.mobile-drawer",
+        "hero.split",
+        "hero.center",
+        "editorial.dark-news-strip",
+        "features.checklist",
+        "features.card-grid",
+        "company.leadership-list",
+        "company.people-grid",
+        "company.role-filter",
+        "company.role-list",
+        "content.media-split",
+        "company.compliance-rows",
+        "company.program-list",
+        "interactive.course-tabs",
+        "editorial.community-bento",
+        "interactive.photo-tabs",
+        "interactive.faq-accordion",
+        "editorial.resource-cards",
+        "cta.closing-band",
+        "cta.dev-path-dialog",
+        "shell.footer"
+      ],
+      "notes": [
+        "Union of the 10 members' sequences from specs/T12-T13.md D-1/D-2; each member uses a subset in its own order.",
+        "Hero: hero.split on 8 members, hero.center (text-only) on /about-us/belonging and /partners.",
+        "No closing band on /about-us/careers and /partners; /community has a mid-page closing band as well.",
+        "Registered in src/App.jsx during this IA run; T12.jsx imports src/content/pages/t12.js, which did not exist yet, so no member route renders and section order is still taken from the spec. Flip status to implemented once the content module lands and its per-route sequences are checked."
+      ],
+      "renderedBy": "src/pages/templates/T12.jsx + src/content/pages/t12.js (content module not yet present)"
+    },
+    {
+      "id": "T13",
+      "slug": "product-landing",
+      "name": "T13 Product landing [registered, content pending]",
+      "status": "registered-content-pending",
+      "designRepoStatus": "pending",
+      "routeCount": 9,
+      "routes": [
+        "/product/what-is-lattice",
+        "/product/lattice",
+        "/product/state",
+        "/product/assistant",
+        "/product/charts",
+        "/product/governance",
+        "/product/integrations",
+        "/product/analyst",
+        "/product/self-hosted-vs-platform"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.announcement-bar",
+        "shell.navbar",
+        "shell.mega-menu",
+        "shell.mobile-drawer",
+        "hero.center",
+        "hero.split",
+        "social-proof.logo-bar",
+        "interactive.install-tabs",
+        "content.media-split",
+        "features.checklist",
+        "features.card-grid",
+        "features.tabs-dark",
+        "features.demo-panel",
+        "content.statement",
+        "comparison.journey-columns",
+        "interactive.persona-tabs",
+        "social-proof.customer-tabs",
+        "social-proof.quote-band",
+        "social-proof.testimonial-slider",
+        "comparison.compare-table",
+        "features.integration-tile-grid",
+        "features.integration-strip",
+        "cta.gradient-card",
+        "interactive.faq-accordion",
+        "social-proof.stats-bento",
+        "editorial.resource-cards",
+        "cta.closing-band",
+        "cta.dev-path-dialog",
+        "shell.footer"
+      ],
+      "notes": [
+        "Bespoke compositions: union of the 9 members' sequences from specs/T12-T13.md E-1/E-2; no single fixed order.",
+        "/product/assistant ends on resources (no closing band); /product/charts ends on cta.gradient-card.",
+        "features.demo-panel repeats four times on /product/assistant; features.integration-tile-grid only on /product/analyst.",
+        "/product/integrations stacks one features.card-grid (logo-card variant G) per integration category instead of a dedicated directory component (no filter, no in-page nav).",
+        "Registered in src/App.jsx during this IA run; T13.jsx imports src/content/pages/t13.js, which did not exist yet, so no member route renders and section order is still taken from the spec. Flip status to implemented once the content module lands and its per-route sequences are checked."
+      ],
+      "renderedBy": "src/pages/templates/T13.jsx + src/content/pages/t13.js (content module not yet present)"
+    },
+    {
+      "id": "T14",
+      "slug": "pricing",
+      "name": "T14 Pricing [planned]",
+      "status": "planned",
+      "designRepoStatus": "pending",
+      "routeCount": 1,
+      "routes": [
+        "/pricing"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.announcement-bar",
+        "shell.navbar",
+        "shell.mega-menu",
+        "shell.mobile-drawer",
+        "pricing.plan-cards",
+        "pricing.add-ons",
+        "comparison.plan-matrix",
+        "interactive.faq-accordion",
+        "shell.footer"
+      ],
+      "notes": [
+        "Two FAQ accordions in a row. No separate hero: the plan-cards header holds the H1. No CTA band."
+      ]
+    },
+    {
+      "id": "T15",
+      "slug": "champions",
+      "name": "T15 Community champions (dark theme) [planned]",
+      "status": "planned",
+      "designRepoStatus": "pending",
+      "routeCount": 1,
+      "routes": [
+        "/champions"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.announcement-bar",
+        "shell.navbar",
+        "shell.mega-menu",
+        "shell.mobile-drawer",
+        "hero.champions-dark",
+        "community.about-band",
+        "community.member-grid",
+        "community.activity-cards",
+        "community.dark-quote-slider",
+        "community.story-grid",
+        "community.support-cards",
+        "cta.champions-closing",
+        "shell.footer"
+      ],
+      "notes": [
+        "Needs a dark theme the design-repo token layer does not declare yet."
+      ]
+    },
+    {
+      "id": "T16",
+      "slug": "event-microsite",
+      "name": "T16 Event microsite [planned]",
+      "status": "planned",
+      "designRepoStatus": "pending",
+      "routeCount": 1,
+      "routes": [
+        "/summit"
+      ],
+      "chrome": "event-subnav",
+      "sections": [
+        "shell.announcement-bar",
+        "shell.event-subnav",
+        "hero.event",
+        "event.photo-gallery",
+        "event.recap",
+        "event.highlight-cards",
+        "event.sponsor-logos",
+        "event.media-block",
+        "event.closing-bands",
+        "shell.footer"
+      ],
+      "notes": [
+        "Global navbar, mega-menus and drawer are replaced by the event sub-nav; announcement bar and footer stay."
+      ]
+    },
+    {
+      "id": "T17",
+      "slug": "partner-directory",
+      "name": "T17 Partner directory [planned]",
+      "status": "planned",
+      "designRepoStatus": "pending",
+      "routeCount": 1,
+      "routes": [
+        "/partner-directory"
+      ],
+      "chrome": "none",
+      "sections": [
+        "shell.minimal-nav",
+        "directory.filter-sidebar",
+        "directory.partner-results"
+      ],
+      "notes": [
+        "No global chrome (no announcement bar, navbar or footer). Static mock of a third-party locator widget."
+      ]
+    }
+  ]
+}

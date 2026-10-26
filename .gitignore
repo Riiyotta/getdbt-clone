@@ -1,0 +1,15 @@
+# dependencies and build output (rebuilt with `npm ci` / `npm run build`)
+node_modules/
+dist/
+
+# full-page screenshots of the original site, used only for local measurement
+recon/
+
+# local dev server log
+.dev.log
+
+# OS / editor junk
+.DS_Store
+__MACOSX/
+__pycache__/
+*.pyc

@@ -1,0 +1,189 @@
+{
+  "$schemaNote": "flat token map: path -> {value, category, cite}. Values resolved from the clone's real token sources (tailwind.config.cjs, src/index.css, component files).",
+  "tokens": {
+    "font.family.display": {
+      "value": [
+        "Outfit",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "\"Helvetica Neue\"",
+        "\"Segoe UI\"",
+        "Ubuntu",
+        "Roboto",
+        "Noto",
+        "Arial",
+        "sans-serif"
+      ],
+      "cite": "tailwind.config.cjs:84",
+      "category": "fontFamily"
+    },
+    "font.family.sans": {
+      "value": [
+        "Outfit",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "\"Helvetica Neue\"",
+        "\"Segoe UI\"",
+        "Ubuntu",
+        "Roboto",
+        "Noto",
+        "Arial",
+        "sans-serif"
+      ],
+      "cite": "tailwind.config.cjs:85",
+      "category": "fontFamily"
+    },
+    "font.family.mono": {
+      "value": [
+        "\"IBM Plex Mono\"",
+        "ui-monospace",
+        "\"Cascadia Code\"",
+        "\"Source Code Pro\"",
+        "Menlo",
+        "Consolas",
+        "monospace"
+      ],
+      "cite": "tailwind.config.cjs:86",
+      "category": "fontFamily"
+    },
+    "font.size.h1": {
+      "value": "48px",
+      "lineHeight": "57.6px",
+      "category": "fontSize",
+      "cite": "tailwind.config.cjs:90"
+    },
+    "font.size.h1-xl": {
+      "value": "64px",
+      "lineHeight": "76.8px",
+      "category": "fontSize",
+      "cite": "tailwind.config.cjs:91"
+    },
+    "font.size.h2": {
+      "value": "32px",
+      "lineHeight": "38.4px",
+      "category": "fontSize",
+      "cite": "tailwind.config.cjs:92"
+    },
+    "font.size.h2-xl": {
+      "value": "48px",
+      "lineHeight": "57.6px",
+      "category": "fontSize",
+      "cite": "tailwind.config.cjs:93"
+    },
+    "font.size.h3": {
+      "value": "24px",
+      "lineHeight": "28.8px",
+      "category": "fontSize",
+      "cite": "tailwind.config.cjs:94"
+    },
+    "font.size.h3-xl": {
+      "value": "32px",
+      "lineHeight": "38.4px",
+      "category": "fontSize",
+      "cite": "tailwind.config.cjs:95"
+    },
+    "font.size.h4": {
+      "value": "20px",
+      "lineHeight": "24px",
+      "category": "fontSize",
+      "cite": "tailwind.config.cjs:96"
+    },
+    "font.size.h4-xl": {
+      "value": "24px",
+      "lineHeight": "28.8px",
+      "category": "fontSize",
+      "cite": "tailwind.config.cjs:97"
+    },
+    "font.size.h5": {
+      "value": "18px",
+      "lineHeight": "21.6px",
+      "category": "fontSize",
+      "cite": "tailwind.config.cjs:98"
+    },
+    "font.size.stat": {
+      "value": "32px",
+      "lineHeight": "38.4px",
+      "category": "fontSize",
+      "cite": "tailwind.config.cjs:99"
+    },
+    "font.size.metric": {
+      "value": "64px",
+      "lineHeight": "64px",
+      "category": "fontSize",
+      "cite": "tailwind.config.cjs:100"
+    },
+    "font.size.badge": {
+      "value": "10px",
+      "lineHeight": "14.29px",
+      "category": "fontSize",
+      "cite": "tailwind.config.cjs:101"
+    },
+    "font.size.stat-lg": {
+      "value": "88px",
+      "lineHeight": "88px",
+      "category": "fontSize",
+      "cite": "tailwind.config.cjs:103"
+    },
+    "font.size.lead": {
+      "value": "18px",
+      "lineHeight": "28px",
+      "category": "fontSize",
+      "cite": "tailwind-default-scale (rendered: extraction/measured-values.json renderedStyleSamples)"
+    },
+    "font.size.base": {
+      "value": "16px",
+      "lineHeight": "24px",
+      "category": "fontSize",
+      "cite": "tailwind-default-scale (rendered: extraction/measured-values.json renderedStyleSamples)"
+    },
+    "font.size.sm": {
+      "value": "14px",
+      "lineHeight": "20px",
+      "category": "fontSize",
+      "cite": "tailwind-default-scale (rendered: extraction/measured-values.json renderedStyleSamples)"
+    },
+    "font.size.xs": {
+      "value": "12px",
+      "lineHeight": "16px",
+      "category": "fontSize",
+      "cite": "tailwind-default-scale (rendered: extraction/measured-values.json renderedStyleSamples)"
+    },
+    "font.size.2xl": {
+      "value": "24px",
+      "lineHeight": "32px",
+      "category": "fontSize",
+      "cite": "tailwind-default-scale (rendered: extraction/measured-values.json renderedStyleSamples)"
+    },
+    "font.size.xl": {
+      "value": "20px",
+      "lineHeight": "28px",
+      "category": "fontSize",
+      "cite": "tailwind-default-scale (rendered: extraction/measured-values.json renderedStyleSamples)"
+    },
+    "font.weight.400": {
+      "value": 400,
+      "category": "fontWeight",
+      "cite": "CLONE_SPEC.md:155-181"
+    },
+    "font.weight.500": {
+      "value": 500,
+      "category": "fontWeight",
+      "cite": "CLONE_SPEC.md:155-181"
+    },
+    "font.weight.600": {
+      "value": 600,
+      "category": "fontWeight",
+      "cite": "CLONE_SPEC.md:155-181"
+    },
+    "font.weight.700": {
+      "value": 700,
+      "category": "fontWeight",
+      "cite": "CLONE_SPEC.md:155-181"
+    },
+    "font.tracking.display": {
+      "value": "-0.008em",
+      "category": "letterSpacing",
+      "cite": "tailwind.config.cjs:82"
+    }
+  }
+}

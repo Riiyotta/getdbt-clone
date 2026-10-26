@@ -1,0 +1,75 @@
+{
+  "container": {
+    "<640": {
+      "width": "100%",
+      "paddingX": "24px"
+    },
+    "640": {
+      "maxWidth": "640px",
+      "paddingX": "32px"
+    },
+    "768": {
+      "maxWidth": "768px",
+      "paddingX": "40px"
+    },
+    "1024": {
+      "maxWidth": "1024px",
+      "paddingX": "64px"
+    },
+    "1280": {
+      "maxWidth": "1152px",
+      "paddingX": "0"
+    },
+    "1440": {
+      "maxWidth": "1248px",
+      "paddingX": "0"
+    },
+    "cite": "src/index.css:25-44"
+  },
+  "grid": {
+    "<640": {
+      "columns": 4,
+      "gap": "16px"
+    },
+    "640": {
+      "columns": 8,
+      "gap": "16px"
+    },
+    "768": {
+      "columns": 8,
+      "gap": "24px"
+    },
+    "1024": {
+      "columns": 12,
+      "gap": "24px"
+    },
+    "cite": "src/index.css:46-59"
+  },
+  "sectionShell": {
+    "paddingY": {
+      "<768": "48px",
+      ">=768": "64px"
+    },
+    "background": "surface.page",
+    "position": "relative",
+    "zIndex": "z.5",
+    "cite": "src/index.css:62-64"
+  },
+  "darkSectionShell": {
+    "paddingY": {
+      "<768": "80px",
+      "768-1023": "64px",
+      ">=1024": "120px"
+    },
+    "background": "surface.inverse",
+    "cite": "src/components/sections/TabsDark.jsx:15"
+  },
+  "measuredContentLeftEdge": {
+    "1440": 96,
+    "1280": 64,
+    "1024": 64,
+    "768": 40,
+    "375": 24,
+    "cite": "extraction/measured-values.json renderedStyleSamples + CLONE_SPEC.md:20-30"
+  }
+}

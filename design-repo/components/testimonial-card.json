@@ -1,0 +1,11 @@
+{
+  "id": "component.testimonial-card",
+  "title": "Testimonial card",
+  "description": "bordered card p-40: logo 100x50 -> quote (icon, 18/28 quote, attribution) or metric (64/64 400 + 18/28 line) -> text link pinned bottom.",
+  "uses": [
+    "primitive.text-link"
+  ],
+  "evidence": [
+    "src/components/sections/TestiSlider.jsx:10-34"
+  ]
+}

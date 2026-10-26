@@ -1,0 +1,12 @@
+{
+  "id": "primitive.heading",
+  "title": "Heading roles",
+  "description": "heading-1..5: display family 600, -0.008em tracking; sizes switch at 1280 (h1 48->64, h2 32->48, h3 24->32, h4 20->24, h5 18).",
+  "uses": [
+    "font.family.display",
+    "font.tracking.display"
+  ],
+  "evidence": [
+    "src/index.css:67-74"
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "note": "single registry of source-identity patterns used by schema/semantic_validate.py. Patterns are derived from the real project (cited). The originalSite group is a DENY-LIST ONLY: those names never appear in the clone's content and are listed solely so no PageSpec (any mode) can introduce them.",
+  "cloneBrand": {
+    "patterns": [
+      "\\blattice\\b"
+    ],
+    "caseInsensitive": true,
+    "evidence": [
+      "src/assets.js:11",
+      "src/content.js:1-347"
+    ]
+  },
+  "cloneFictionalEntities": {
+    "names": [
+      "Basalt Health",
+      "Cobalt",
+      "Cobalt DB",
+      "Driftway",
+      "Fernway",
+      "Ferrocene",
+      "Halcyon",
+      "Helixa",
+      "Kestrel",
+      "Meridian",
+      "Meridian Partners",
+      "Northwind",
+      "Orbitly",
+      "Quarry",
+      "Stratus",
+      "Tidepool"
+    ],
+    "caseInsensitive": false,
+    "evidence": [
+      "src/assets.js:14-22",
+      "src/pageAssets.js:99"
+    ]
+  },
+  "clonePersons": {
+    "names": [
+      "Ana Kowalski",
+      "Dr. Mei Lin",
+      "Grace Okafor",
+      "Jonah Reyes",
+      "Jordan Ellis",
+      "Lukas Brenner",
+      "Priya Raman",
+      "Tomas Ekberg"
+    ],
+    "evidence": "every `person` field in src/content.js and src/content/pages/*.js (fictional people of the clone)"
+  },
+  "originalSite": {
+    "names": [
+      "dbt",
+      "dbt Labs",
+      "getdbt",
+      "Coalesce",
+      "Fivetran",
+      "Snowflake",
+      "BigQuery",
+      "Databricks",
+      "Redshift",
+      "Microsoft Fabric",
+      "McDonald's",
+      "Nasdaq",
+      "Bilt",
+      "Enpal"
+    ],
+    "domains": [
+      "(^|[./])(get)?dbt\\.com",
+      "(^|[./])fivetran\\.com"
+    ],
+    "caseInsensitive": true,
+    "evidence": [
+      "src/routes.js:10-41"
+    ],
+    "appliesInModes": [
+      "reference",
+      "generated"
+    ]
+  },
+  "storeAndMarketplace": {
+    "domains": [
+      "apps\\.apple\\.com",
+      "testflight\\.apple\\.com",
+      "play\\.google\\.com",
+      "chromewebstore\\.google\\.com",
+      "marketplace\\.visualstudio\\.com"
+    ],
+    "words": [
+      "\\bapp store\\b",
+      "\\bgoogle play\\b",
+      "\\btestflight\\b"
+    ],
+    "note": "generic store/marketplace marks and links; the clone has none (blocked in every mode)"
+  },
+  "cta": {
+    "verbs": [
+      "get",
+      "try",
+      "download",
+      "explore",
+      "see",
+      "start",
+      "book",
+      "install",
+      "join",
+      "meet",
+      "read",
+      "watch"
+    ],
+    "rule": "an action label that starts with one of these verbs and names any cloneBrand / cloneFictionalEntities / originalSite name is a source-specific CTA"
+  },
+  "rating": {
+    "patterns": [
+      "\\b[0-5](\\.[0-9])?\\s*(/|out of)\\s*5\\b",
+      "★",
+      "\\b(G2|Gartner|Capterra|TrustRadius|Forrester)\\b",
+      "\\breviewers'? pick\\b",
+      "\\btop rated\\b",
+      "\\bpartner of the year\\b"
+    ],
+    "evidence": "src/pageAssets.js:91-95 (clone award badges) + generic review-platform names"
+  },
+  "allowedPlaceholderDomains": [
+    "\\.example$",
+    "\\.invalid$"
+  ]
+}

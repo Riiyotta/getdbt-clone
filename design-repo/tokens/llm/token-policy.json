@@ -1,0 +1,153 @@
+{
+  "version": "1.0.0",
+  "themes": [
+    "light"
+  ],
+  "categories": [
+    "blur",
+    "breakpoint",
+    "color",
+    "container",
+    "duration",
+    "easing",
+    "elevation",
+    "fontFamily",
+    "fontSize",
+    "fontWeight",
+    "gradient",
+    "iconSize",
+    "letterSpacing",
+    "radius",
+    "spacing",
+    "stroke",
+    "zIndex"
+  ],
+  "overrides": "PageSpecs carry styling only through node.style props listed in styleProps (schema-closed per section). There is no per-instance colour, spacing or font override field; any style value must be a catalog token path of an allowed category and one of the values observed in the clone for that section (theme/token combination).",
+  "styleProps": {
+    "strokeGradient": {
+      "kind": "token",
+      "categories": [
+        "gradient"
+      ],
+      "allowedBySection": {
+        "hero.split": [
+          "gradient.01",
+          "gradient.02",
+          "gradient.05"
+        ],
+        "hero.center": [
+          "gradient.01"
+        ],
+        "features.tabs-dark": [
+          "gradient.01",
+          "gradient.12"
+        ]
+      }
+    },
+    "strokeShape": {
+      "kind": "token",
+      "categories": [
+        "stroke"
+      ],
+      "allowedBySection": {
+        "hero.split": [
+          "stroke.s3",
+          "stroke.s4",
+          "stroke.s5"
+        ],
+        "hero.center": [
+          "stroke.s4",
+          "stroke.s8"
+        ],
+        "social-proof.quote-band": [
+          "stroke.s1"
+        ]
+      }
+    },
+    "headerAlign": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "features.card-grid": [
+          "center",
+          "start"
+        ]
+      }
+    },
+    "iconSize": {
+      "kind": "token",
+      "categories": [
+        "iconSize"
+      ],
+      "allowedBySection": {
+        "features.card-grid": [
+          "size.icon.32",
+          "size.icon.56"
+        ]
+      }
+    },
+    "paddingTop": {
+      "kind": "enum",
+      "categories": [],
+      "allowedBySection": {
+        "features.card-grid": [
+          "default",
+          "none"
+        ],
+        "features.checklist": [
+          "default",
+          "none"
+        ]
+      }
+    },
+    "panelGradient": {
+      "kind": "token",
+      "categories": [
+        "gradient"
+      ],
+      "allowedBySection": {
+        "features.gradient-panel": [
+          "gradient.02",
+          "gradient.05",
+          "gradient.12"
+        ]
+      }
+    }
+  },
+  "rawValueRestrictions": {
+    "blur": "only blur tokens from the catalog",
+    "breakpoint": "only breakpoint tokens from the catalog",
+    "color": "raw hex/rgb/hsl/oklab forbidden; use color.* or semantic text.*/surface.*/border.* tokens",
+    "container": "only container tokens from the catalog",
+    "duration": "only duration tokens from the catalog",
+    "easing": "only easing tokens from the catalog",
+    "elevation": "only elevation tokens from the catalog",
+    "fontFamily": "only font.family.display|sans|mono (Outfit / IBM Plex Mono stacks)",
+    "fontSize": "only font.size.* roles",
+    "fontWeight": "only fontWeight tokens from the catalog",
+    "gradient": "only gradient.* (verbatim from src/index.css)",
+    "iconSize": "only iconSize tokens from the catalog",
+    "letterSpacing": "only letterSpacing tokens from the catalog",
+    "radius": "only radius.*",
+    "spacing": "raw px/rem/em forbidden; use space.* tokens",
+    "stroke": "only stroke.s1|s3|s4|s5|s6|s8",
+    "zIndex": "only zIndex tokens from the catalog"
+  },
+  "unsupportedFonts": [
+    "polymath",
+    "polymath-text",
+    "bugrino",
+    "inter-variable-fallback",
+    "Inter",
+    "Helvetica Neue"
+  ],
+  "unsupportedFontsEvidence": "CLONE_SPEC.md:142-146",
+  "rejects": [
+    "TOKEN_UNKNOWN",
+    "TOKEN_RAW_COLOR",
+    "TOKEN_ARBITRARY_SPACING",
+    "TOKEN_UNSUPPORTED_FONT",
+    "TOKEN_INVALID_COMBINATION",
+    "THEME_UNSUPPORTED"
+  ]
+}

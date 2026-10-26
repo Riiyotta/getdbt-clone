@@ -1,0 +1,11 @@
+{
+  "id": "component.menu-item",
+  "title": "Mega-menu item",
+  "description": "294x70 link: 40x40 icon tile (20px icon) + title 14/20 500 + description 12/16 #4a5565; hover bg #f9fafb.",
+  "uses": [
+    "primitive.icon"
+  ],
+  "evidence": [
+    "src/components/MegaMenu.jsx:6-21"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "primitive.tab-dark",
+  "title": "Dark tab",
+  "description": "24/32 600 display title (16/24 500 below 1024), active white + 3px orange left bar (2px bottom bar below 1024), inactive 50% white.",
+  "uses": [
+    "indicator.active",
+    "text.inverse-tertiary"
+  ],
+  "evidence": [
+    "src/components/sections/TabsDark.jsx:26-50"
+  ]
+}

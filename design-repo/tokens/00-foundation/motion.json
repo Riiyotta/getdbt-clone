@@ -1,0 +1,75 @@
+{
+  "$schemaNote": "flat token map: path -> {value, category, cite}. Values resolved from the clone's real token sources (tailwind.config.cjs, src/index.css, component files).",
+  "tokens": {
+    "duration.150": {
+      "value": "150ms",
+      "category": "duration",
+      "cite": "src/index.css:95"
+    },
+    "duration.200": {
+      "value": "200ms",
+      "category": "duration",
+      "cite": "src/components/Navbar.jsx:181"
+    },
+    "duration.250": {
+      "value": "250ms",
+      "category": "duration",
+      "cite": "tailwind.config.cjs:146"
+    },
+    "duration.300": {
+      "value": "300ms",
+      "category": "duration",
+      "cite": "src/components/Navbar.jsx:20"
+    },
+    "duration.400": {
+      "value": "400ms",
+      "category": "duration",
+      "cite": "tailwind.config.cjs:147"
+    },
+    "duration.500": {
+      "value": "500ms",
+      "category": "duration",
+      "cite": "src/components/AnnouncementBar.jsx:66"
+    },
+    "duration.1000": {
+      "value": "1000ms",
+      "category": "duration",
+      "cite": "src/index.css:390"
+    },
+    "duration.8000": {
+      "value": "8000ms",
+      "category": "duration",
+      "cite": "src/components/AnnouncementBar.jsx:26"
+    },
+    "duration.30000": {
+      "value": "30000ms",
+      "category": "duration",
+      "cite": "tailwind.config.cjs:161"
+    },
+    "easing.standard": {
+      "value": "cubic-bezier(.4,0,.2,1)",
+      "category": "easing",
+      "cite": "tailwind.config.cjs:141"
+    },
+    "easing.reveal": {
+      "value": "cubic-bezier(0,0,0,1)",
+      "category": "easing",
+      "cite": "tailwind.config.cjs:142"
+    },
+    "easing.slider": {
+      "value": "cubic-bezier(.25,1,.5,1)",
+      "category": "easing",
+      "cite": "tailwind.config.cjs:143"
+    },
+    "easing.in-out": {
+      "value": "ease-in-out",
+      "category": "easing",
+      "cite": "src/index.css:390"
+    },
+    "easing.linear": {
+      "value": "linear",
+      "category": "easing",
+      "cite": "tailwind.config.cjs:161"
+    }
+  }
+}

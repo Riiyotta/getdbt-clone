@@ -1,0 +1,434 @@
+{
+  "id": "features.card-grid",
+  "title": "Feature card grid",
+  "semantic": {
+    "id": "features.card-grid",
+    "category": "FEATURES"
+  },
+  "source": {
+    "id": "component:Feat",
+    "file": "src/components/sections/Feat.jsx",
+    "export": "Feat",
+    "tag": "section",
+    "lines": "39-92",
+    "tagLine": 56
+  },
+  "additionalSources": [
+    {
+      "id": "component:WhyCards (homepage)",
+      "file": "src/components/WhyCards.jsx",
+      "export": "WhyCards",
+      "tag": "section",
+      "lines": "7-51",
+      "tagLine": 9
+    }
+  ],
+  "purpose": "Section header (eyebrow, heading-2, paragraph, optional buttons/lockup) above a 3- or 4-column grid of feature cards (icon or image cards).",
+  "retrievalEligible": true,
+  "variants": {
+    "bordered-link": {
+      "description": "homepage 'why' grid: bordered blur cards, 56px icon, text link",
+      "requiredFields": [
+        "body",
+        "cards",
+        "eyebrow",
+        "title"
+      ],
+      "forbiddenFields": [
+        "lockup",
+        "primary",
+        "tertiary"
+      ],
+      "listSizes": {
+        "cards": [
+          3,
+          3
+        ]
+      },
+      "observedOn": [
+        "/"
+      ]
+    },
+    "wash-icon": {
+      "description": "source variants A+B (identical render in the clone): icon cards on the bottom-frequency colour wash",
+      "requiredFields": [
+        "cards",
+        "title"
+      ],
+      "forbiddenFields": [
+        "lockup",
+        "primary",
+        "tertiary"
+      ],
+      "listSizes": {
+        "cards": [
+          3,
+          3
+        ]
+      },
+      "observedOn": [
+        "/industry/energy-utilities",
+        "/industry/financial-services",
+        "/industry/healthcare",
+        "/industry/manufacturing",
+        "/industry/telecommunications",
+        "/product/catalog",
+        "/product/deploy",
+        "/product/develop",
+        "/product/mesh",
+        "/product/semantic-layer",
+        "/product/test-and-observe"
+      ]
+    },
+    "four-column": {
+      "description": "source variant D: 4-column icon cards",
+      "requiredFields": [
+        "body",
+        "cards",
+        "title"
+      ],
+      "forbiddenFields": [
+        "lockup"
+      ],
+      "listSizes": {
+        "cards": [
+          4,
+          4
+        ]
+      },
+      "observedOn": [
+        "/industry/energy-utilities",
+        "/industry/financial-services",
+        "/industry/healthcare",
+        "/industry/manufacturing",
+        "/industry/telecommunications",
+        "/product/ai",
+        "/product/data-modernization",
+        "/product/data-trust",
+        "/product/embedded-analytics"
+      ]
+    },
+    "image-card": {
+      "description": "source variant C: bordered blur cards with a 4:3 image and a text link",
+      "requiredFields": [
+        "body",
+        "cards",
+        "title"
+      ],
+      "forbiddenFields": [
+        "tertiary"
+      ],
+      "listSizes": {
+        "cards": [
+          3,
+          3
+        ]
+      },
+      "observedOn": [
+        "/data-platforms/cobalt",
+        "/data-platforms/driftway",
+        "/data-platforms/helixa",
+        "/data-platforms/northwind",
+        "/data-platforms/quarry",
+        "/data-platforms/stratus"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "body": {
+        "type": "text",
+        "maxWords": 67,
+        "maxChars": 410,
+        "observedIn": 25
+      },
+      "cards": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 4,
+        "observedIn": 27
+      },
+      "cards[].action.href": {
+        "type": "link",
+        "observedIn": 21
+      },
+      "cards[].action.label": {
+        "type": "text",
+        "maxWords": 7,
+        "maxChars": 36,
+        "observedIn": 21
+      },
+      "cards[].body": {
+        "type": "text",
+        "maxWords": 50,
+        "maxChars": 309,
+        "observedIn": 90
+      },
+      "cards[].icon": {
+        "type": "asset",
+        "referenceRoles": [
+          "icon.feature"
+        ],
+        "observedIn": 72,
+        "generatedRoles": [
+          "icon.feature"
+        ]
+      },
+      "cards[].icon.alt": {
+        "type": "text",
+        "maxWords": 0,
+        "maxChars": 0,
+        "observedIn": 72
+      },
+      "cards[].image": {
+        "type": "asset",
+        "referenceRoles": [
+          "photo.composite-scene"
+        ],
+        "observedIn": 18,
+        "generatedRoles": [
+          "photo.generated-scene"
+        ]
+      },
+      "cards[].image.alt": {
+        "type": "text",
+        "maxWords": 0,
+        "maxChars": 0,
+        "observedIn": 18
+      },
+      "cards[].title": {
+        "type": "text",
+        "maxWords": 7,
+        "maxChars": 49,
+        "observedIn": 90
+      },
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 31,
+        "observedIn": 17
+      },
+      "lockup.href": {
+        "type": "link",
+        "observedIn": 1
+      },
+      "lockup.image": {
+        "type": "asset",
+        "referenceRoles": [
+          "partner.lockup"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "partner.placeholder-lockup"
+        ]
+      },
+      "lockup.image.alt": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 23,
+        "observedIn": 1
+      },
+      "primary.href": {
+        "type": "link",
+        "observedIn": 5
+      },
+      "primary.label": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 27,
+        "observedIn": 5
+      },
+      "tertiary.href": {
+        "type": "link",
+        "observedIn": 3
+      },
+      "tertiary.label": {
+        "type": "text",
+        "maxWords": 7,
+        "maxChars": 40,
+        "observedIn": 3
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 15,
+        "maxChars": 73,
+        "observedIn": 27
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "cards[].icon": {
+        "type": "asset",
+        "referenceRoles": [
+          "icon.feature"
+        ],
+        "observedIn": 72,
+        "generatedRoles": [
+          "icon.feature"
+        ]
+      },
+      "cards[].image": {
+        "type": "asset",
+        "referenceRoles": [
+          "photo.composite-scene"
+        ],
+        "observedIn": 18,
+        "generatedRoles": [
+          "photo.generated-scene"
+        ]
+      },
+      "lockup.image": {
+        "type": "asset",
+        "referenceRoles": [
+          "partner.lockup"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "partner.placeholder-lockup"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "icon.feature",
+    "partner.placeholder-lockup",
+    "photo.generated-scene"
+  ],
+  "style": {
+    "props": {
+      "headerAlign": {
+        "kind": "enum",
+        "allowed": [
+          "center",
+          "start"
+        ]
+      },
+      "iconSize": {
+        "kind": "token",
+        "allowed": [
+          "size.icon.32",
+          "size.icon.56"
+        ]
+      },
+      "paddingTop": {
+        "kind": "enum",
+        "allowed": [
+          "default",
+          "none"
+        ]
+      }
+    },
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 2
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal.fade-up"
+    ],
+    "requiredPatterns": [
+      "reveal.fade-up"
+    ],
+    "reducedMotionFallback": {
+      "reveal.fade-up": "show-immediately"
+    },
+    "stagger": "Only the header carries a reveal (one span at 0ms). | reveal targets with inline delays, see src/components/WhyCards.jsx:7-51"
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "3 columns (4 for four-column), gap 24"
+    },
+    {
+      "range": "768-1023",
+      "behavior": "3 columns (2x2 for four-column)"
+    },
+    {
+      "range": "<768",
+      "behavior": "1 column, gap 40"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/": [
+        818.8
+      ],
+      "/product/develop": [
+        703.2
+      ],
+      "/product/test-and-observe": [
+        578.4
+      ],
+      "/product/mesh": [
+        578.4
+      ],
+      "/product/catalog": [
+        588
+      ],
+      "/product/deploy": [
+        612
+      ],
+      "/product/semantic-layer": [
+        636
+      ],
+      "/product/data-modernization": [
+        658.4
+      ],
+      "/product/ai": [
+        687.2
+      ],
+      "/product/embedded-analytics": [
+        792.8
+      ],
+      "/product/data-trust": [
+        768.8
+      ],
+      "/data-platforms/cobalt": [
+        1088.5
+      ],
+      "/data-platforms/northwind": [
+        944.5
+      ],
+      "/data-platforms/quarry": [
+        997.3
+      ],
+      "/data-platforms/helixa": [
+        910.9
+      ],
+      "/data-platforms/stratus": [
+        968.5
+      ],
+      "/data-platforms/driftway": [
+        992.5
+      ],
+      "/industry/financial-services": [
+        591.2,
+        474.4
+      ],
+      "/industry/healthcare": [
+        680.8,
+        450.4
+      ],
+      "/industry/manufacturing": [
+        623.2,
+        431.2
+      ],
+      "/industry/energy-utilities": [
+        623.2,
+        450.4
+      ],
+      "/industry/telecommunications": [
+        623.2,
+        402.4
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/sections/Feat.jsx:39-92",
+    "src/components/WhyCards.jsx:7-51"
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "editorial.news-band",
+  "title": "News band",
+  "semantic": {
+    "id": "editorial.news-band",
+    "category": "EDITORIAL"
+  },
+  "source": {
+    "id": "component:NewsBand",
+    "file": "src/components/NewsBand.jsx",
+    "export": "NewsBand",
+    "tag": "section",
+    "lines": "7-34",
+    "tagLine": 9
+  },
+  "additionalSources": [],
+  "purpose": "Dark announcement band: co-brand lockup, one heading-3 news headline and a 'read more' link.",
+  "retrievalEligible": true,
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "action",
+        "headline",
+        "lockup"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {},
+      "observedOn": [
+        "/"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "action.href": {
+        "type": "link",
+        "observedIn": 1
+      },
+      "action.label": {
+        "type": "text",
+        "maxWords": 5,
+        "maxChars": 23,
+        "observedIn": 1
+      },
+      "headline": {
+        "type": "text",
+        "maxWords": 9,
+        "maxChars": 64,
+        "observedIn": 1
+      },
+      "lockup": {
+        "type": "asset",
+        "referenceRoles": [
+          "partner.lockup"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "partner.placeholder-lockup"
+        ]
+      },
+      "lockup.alt": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 19,
+        "observedIn": 1
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "lockup": {
+        "type": "asset",
+        "referenceRoles": [
+          "partner.lockup"
+        ],
+        "observedIn": 1,
+        "generatedRoles": [
+          "partner.placeholder-lockup"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "partner.placeholder-lockup"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal.fade-up"
+    ],
+    "requiredPatterns": [
+      "reveal.fade-up"
+    ],
+    "reducedMotionFallback": {
+      "reveal.fade-up": "show-immediately"
+    },
+    "stagger": "reveal targets with inline delays, see src/components/NewsBand.jsx:7-34"
+  },
+  "responsive": [
+    {
+      "range": "all",
+      "behavior": "py 40, flex column gap 24; headline wraps (3 lines at 375)"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/": [
+        285
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/NewsBand.jsx:7-34"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "component.brush-stroke",
+  "title": "Brush stroke decoration",
+  "description": "absolutely positioned SVG: a gradient-filled foreignObject masked by a 96px round-capped stroke path; 2100px max shell with side fades visible only >= 2100px; draws on when it enters the viewport.",
+  "uses": [
+    "stroke.s5",
+    "gradient.01"
+  ],
+  "evidence": [
+    "src/components/sections/Baton.jsx:63-114"
+  ]
+}

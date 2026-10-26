@@ -1,0 +1,11 @@
+{
+  "id": "primitive.video-poster",
+  "title": "Video poster",
+  "description": "16:9 poster with a centred 80px blur play button; no third-party player embedded.",
+  "uses": [
+    "surface.blur"
+  ],
+  "evidence": [
+    "src/components/sections/parts.jsx:76-85"
+  ]
+}

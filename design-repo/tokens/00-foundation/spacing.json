@@ -1,0 +1,97 @@
+{
+  "$schemaNote": "flat token map: path -> {value, category, cite}. Values resolved from the clone's real token sources (tailwind.config.cjs, src/index.css, component files).",
+  "tokens": {
+    "space.30": {
+      "value": "7.5rem",
+      "px": 120,
+      "category": "spacing",
+      "cite": "tailwind.config.cjs:77"
+    },
+    "space.50": {
+      "value": "12.5rem",
+      "px": 200,
+      "category": "spacing",
+      "cite": "tailwind.config.cjs:78"
+    },
+    "space.px4": {
+      "value": "4px",
+      "px": 4,
+      "category": "spacing",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px8": {
+      "value": "8px",
+      "px": 8,
+      "category": "spacing",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px12": {
+      "value": "12px",
+      "px": 12,
+      "category": "spacing",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px16": {
+      "value": "16px",
+      "px": 16,
+      "category": "spacing",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px24": {
+      "value": "24px",
+      "px": 24,
+      "category": "spacing",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px32": {
+      "value": "32px",
+      "px": 32,
+      "category": "spacing",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px40": {
+      "value": "40px",
+      "px": 40,
+      "category": "spacing",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px48": {
+      "value": "48px",
+      "px": 48,
+      "category": "spacing",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px64": {
+      "value": "64px",
+      "px": 64,
+      "category": "spacing",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px80": {
+      "value": "80px",
+      "px": 80,
+      "category": "spacing",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "container.width.xl": {
+      "value": "1152px",
+      "category": "container",
+      "cite": "tailwind.config.cjs:124"
+    },
+    "container.width.2xl": {
+      "value": "1248px",
+      "category": "container",
+      "cite": "tailwind.config.cjs:125"
+    },
+    "container.width.marquee": {
+      "value": "1240px",
+      "category": "container",
+      "cite": "tailwind.config.cjs:131"
+    },
+    "container.width.megamenu": {
+      "value": "846px",
+      "category": "container",
+      "cite": "tailwind.config.cjs:126"
+    }
+  }
+}

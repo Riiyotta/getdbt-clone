@@ -1,0 +1,45 @@
+{
+  "$schemaNote": "flat token map: path -> {value, category, cite}. Values resolved from the clone's real token sources (tailwind.config.cjs, src/index.css, component files).",
+  "tokens": {
+    "elevation.primary": {
+      "value": "0 32px 64px -16px rgba(3,7,17,.24)",
+      "category": "elevation",
+      "cite": "tailwind.config.cjs:112"
+    },
+    "elevation.glow": {
+      "value": "0 0 100px 40px rgba(255,0,255,.3)",
+      "category": "elevation",
+      "cite": "tailwind.config.cjs:113"
+    },
+    "blur.xs": {
+      "value": "4px",
+      "category": "blur",
+      "cite": "tailwind.config.cjs:116"
+    },
+    "blur.sm": {
+      "value": "8px",
+      "category": "blur",
+      "cite": "tailwind.config.cjs:117"
+    },
+    "blur.md": {
+      "value": "12px",
+      "category": "blur",
+      "cite": "tailwind.config.cjs:118"
+    },
+    "blur.lg": {
+      "value": "16px",
+      "category": "blur",
+      "cite": "tailwind.config.cjs:119"
+    },
+    "blur.xl": {
+      "value": "24px",
+      "category": "blur",
+      "cite": "tailwind.config.cjs:120"
+    },
+    "blur.3xl": {
+      "value": "64px",
+      "category": "blur",
+      "cite": "tailwind.config.cjs:121"
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "note": "closed motion vocabulary. PageSpec node.motion.pattern must be one of these keys and reducedMotionFallback must equal the pattern's value (schema-enforced).",
+  "patterns": {
+    "static": {
+      "description": "no motion on the section (hover colour transitions only)",
+      "reducedMotionFallback": "none-needed",
+      "evidence": "specs/T1-T4.md:33"
+    },
+    "reveal.fade-up": {
+      "description": "scroll reveal: keyframes fadeUp (opacity 0->1, translateY 1.25rem->0), 400ms cubic-bezier(0,0,0,1) forwards, paused until the observed root gets .is-visible once; stagger only via inline animation-delay",
+      "durationToken": "duration.400",
+      "easingToken": "easing.reveal",
+      "trigger": {
+        "type": "intersection-once",
+        "observedUnit": "each [data-reveal-root]; all reveal targets inside it start together",
+        "mobileBelowPx": 1023,
+        "thresholdDesktop": 0.3,
+        "thresholdMobile": 0.1,
+        "rootMargin": "none",
+        "observerDelayMsDesktop": 0,
+        "observerDelayMsMobile": 100,
+        "observerDelayNote": "IntersectionObserver v2 `delay` option (honoured by Chromium; ignored elsewhere)"
+      },
+      "staggerMsAllowed": [
+        0,
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700
+      ],
+      "reducedMotionFallback": "show-immediately",
+      "evidence": [
+        "src/hooks/useScrollReveal.js:3-11",
+        "src/index.css:411-417",
+        "tailwind.config.cjs:160"
+      ]
+    },
+    "stroke.draw-on": {
+      "description": "brush-stroke mask path stroke-dashoffset full->0 over 1s ease-in-out when the stroke enters the viewport (once); fill fades 0->1 over 250ms standard at >=768; an `idle` stroke (used by features.tabs-dark) never draws: full path, fill hidden at >=768, so it is decoration, not motion",
+      "durationToken": "duration.1000",
+      "easingToken": "easing.in-out",
+      "reducedMotionFallback": "render-final-state",
+      "evidence": [
+        "src/components/sections/Baton.jsx:1-82",
+        "src/index.css:387-399"
+      ]
+    },
+    "marquee.loop": {
+      "description": "logo track translate(-2%) -> translate(-35.35%), 30s linear infinite, 3 copies of the logo set, no hover pause",
+      "durationToken": "duration.30000",
+      "easingToken": "easing.linear",
+      "reducedMotionFallback": "static-row",
+      "evidence": [
+        "tailwind.config.cjs:154-157",
+        "src/index.css:425"
+      ]
+    },
+    "carousel.autoplay": {
+      "description": "announcement slides step translateX(-n*100%) every 8000ms with a 500ms ease-in-out transition; clone slides at both ends, silent jump ~500ms after landing on a clone",
+      "durationToken": "duration.500",
+      "intervalToken": "duration.8000",
+      "easingToken": "easing.in-out",
+      "reducedMotionFallback": "unchanged",
+      "gap": "the clone does not stop autoplay under prefers-reduced-motion (no rule in src/index.css or AnnouncementBar.jsx); generated pages SHOULD pause autoplay — recorded as a known gap, not enforced",
+      "evidence": [
+        "src/components/AnnouncementBar.jsx:24-51"
+      ]
+    },
+    "slider.drag": {
+      "description": "hand-built slider: perPage 2 at >=1024 / 1 below, gap 1rem, 400ms cubic-bezier(.25,1,.5,1) track transition, draggable (50px threshold, not measured), no autoplay; controls only when slides overflow",
+      "durationToken": "duration.400",
+      "easingToken": "easing.slider",
+      "reducedMotionFallback": "unchanged",
+      "evidence": [
+        "src/hooks/useSlider.js:1-67"
+      ]
+    },
+    "tabs.instant": {
+      "description": "WAI-ARIA tabs, automatic activation; panels swap instantly (no transition, no autoplay)",
+      "reducedMotionFallback": "none-needed",
+      "evidence": [
+        "src/hooks/useTabs.js:1-49",
+        "specs/T1-T4.md:139"
+      ]
+    },
+    "nav.hide-on-scroll": {
+      "description": "sticky nav: inline top -navH when scrollY > top of the first <section> AND scrolling down; top 0 on any upward scroll; transition all 200ms standard",
+      "durationToken": "duration.200",
+      "easingToken": "easing.standard",
+      "reducedMotionFallback": "unchanged",
+      "evidence": [
+        "src/components/Navbar.jsx:42-69"
+      ]
+    },
+    "menu.popover": {
+      "description": "mega-menu opens on hover/click; mouseleave closes after 300ms; panel opacity 0->1 + translateY(-8px)->0 over 200ms ease-in-out, starting ~2 frames after the trigger state flips; switching triggers cross-fades",
+      "durationToken": "duration.200",
+      "closeDelayToken": "duration.300",
+      "reducedMotionFallback": "unchanged",
+      "evidence": [
+        "src/components/Navbar.jsx:20-21",
+        "src/components/Navbar.jsx:173-186"
+      ]
+    },
+    "drawer.slide": {
+      "description": "mobile drawer, hamburger/close icons and bottom bar: opacity + translate 8px, 250ms standard",
+      "durationToken": "duration.250",
+      "easingToken": "easing.standard",
+      "reducedMotionFallback": "unchanged",
+      "evidence": [
+        "src/components/Navbar.jsx:116"
+      ]
+    },
+    "accordion.toggle": {
+      "description": "footer columns become accordions below 1024: content mounts instantly, chevron rotates 200ms standard",
+      "durationToken": "duration.200",
+      "reducedMotionFallback": "unchanged",
+      "evidence": [
+        "src/components/Footer.jsx:28-48"
+      ]
+    }
+  }
+}

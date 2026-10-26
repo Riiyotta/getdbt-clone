@@ -1,0 +1,155 @@
+{
+  "id": "cta.gradient-card",
+  "title": "Gradient CTA card",
+  "semantic": {
+    "id": "cta.gradient-card",
+    "category": "CTA"
+  },
+  "source": {
+    "id": "component:CtaCard",
+    "file": "src/components/sections/CtaCard.jsx",
+    "export": "CtaCard",
+    "tag": "section",
+    "lines": "6-23",
+    "tagLine": 8
+  },
+  "additionalSources": [],
+  "purpose": "Conversion card on gradient-05 with grain: heading-2, paragraph, primary.dark (+ optional tertiary.dark) large buttons.",
+  "retrievalEligible": true,
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "body",
+        "primary",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {},
+      "observedOn": [
+        "/data-platforms/cobalt",
+        "/data-platforms/driftway",
+        "/data-platforms/helixa",
+        "/data-platforms/northwind",
+        "/data-platforms/quarry",
+        "/data-platforms/stratus",
+        "/product/ai",
+        "/product/catalog",
+        "/product/deploy",
+        "/product/develop",
+        "/product/semantic-layer",
+        "/product/test-and-observe"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "body": {
+        "type": "text",
+        "maxWords": 37,
+        "maxChars": 227,
+        "observedIn": 12
+      },
+      "primary.href": {
+        "type": "link",
+        "observedIn": 12
+      },
+      "primary.label": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 17,
+        "observedIn": 12
+      },
+      "tertiary.href": {
+        "type": "link",
+        "observedIn": 5
+      },
+      "tertiary.label": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 11,
+        "observedIn": 5
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 13,
+        "maxChars": 71,
+        "observedIn": 12
+      }
+    }
+  },
+  "assets": {
+    "fields": {},
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal.fade-up"
+    ],
+    "requiredPatterns": [
+      "reveal.fade-up"
+    ],
+    "reducedMotionFallback": {
+      "reveal.fade-up": "show-immediately"
+    },
+    "stagger": "tertiary.dark large. Reveal: the inner relative z-10 block fades up at 0ms."
+  },
+  "responsive": [
+    {
+      "range": "all",
+      "behavior": "p-40 card in the container; buttons stack full width below 768"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/product/develop": [
+        417.6
+      ],
+      "/product/test-and-observe": [
+        417.6
+      ],
+      "/product/catalog": [
+        393.6
+      ],
+      "/product/deploy": [
+        417.6
+      ],
+      "/product/semantic-layer": [
+        451.2
+      ],
+      "/product/ai": [
+        499.2
+      ],
+      "/data-platforms/cobalt": [
+        417.6
+      ],
+      "/data-platforms/northwind": [
+        417.6
+      ],
+      "/data-platforms/quarry": [
+        417.6
+      ],
+      "/data-platforms/helixa": [
+        417.6
+      ],
+      "/data-platforms/stratus": [
+        475.2
+      ],
+      "/data-platforms/driftway": [
+        417.6
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/sections/CtaCard.jsx:6-23"
+  ]
+}

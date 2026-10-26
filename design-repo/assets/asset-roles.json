@@ -1,0 +1,355 @@
+{
+  "version": "1.0.0",
+  "availabilityEnum": [
+    "reference-only",
+    "generation-safe",
+    "blocked-for-generation"
+  ],
+  "generationPolicyEnum": [
+    "reference-reuse-only",
+    "may-generate-new",
+    "user-supplied",
+    "must-not-fabricate",
+    "must-not-reuse-live-endpoint"
+  ],
+  "licensing": "The clone mirrors the LAYOUT of a real, live company's marketing site but contains only original placeholder material for a fictional brand ('Lattice'): original copy, original SVG artwork, and OFL fonts (Outfit as a substitute for the original's commercial face, IBM Plex Mono). Generators must never reproduce or fabricate: real company logos/wordmarks (including the original site owner's), real customers' or partners' marks, real people's photos or likenesses, real review scores/badges, the original site's copy, its URLs/endpoints, or its commercial fonts. In generated mode only generation-safe roles may be used; reference-only roles name the clone's own fictional brand and entities and are for reconstruction only.",
+  "forbiddenInAllModes": [
+    "person.real-photo",
+    "thirdparty.real-mark",
+    "store.badge",
+    "link.source-external",
+    "copy.source-site"
+  ],
+  "roles": {
+    "brand.wordmark": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "reference-reuse-only",
+      "description": "the clone's fictional 'Lattice' wordmark (nav 139x32, footer 147x34). Identifies the source brand: never reused in generated pages.",
+      "usedBySections": [
+        "shell.footer",
+        "shell.navbar"
+      ],
+      "generationSafeSubstitutes": [
+        "brand.placeholder-mark",
+        "brand.user-supplied-mark"
+      ]
+    },
+    "brand.placeholder-mark": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "neutral text-style wordmark block for the generated page's own (fictional or user) brand, same box sizes as brand.wordmark.",
+      "usedBySections": []
+    },
+    "brand.user-supplied-mark": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "user-supplied",
+      "description": "a mark the requesting user supplies for their own brand.",
+      "usedBySections": []
+    },
+    "customer.logo": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "reference-reuse-only",
+      "description": "fictional customer wordmarks of the clone (marquee 120 wide, story logos 130x100 box, slider 100x50 box, quote band max 112 wide).",
+      "usedBySections": [
+        "social-proof.customer-tabs",
+        "social-proof.logo-marquee",
+        "social-proof.quote-band",
+        "social-proof.testimonial-slider"
+      ],
+      "generationSafeSubstitutes": [
+        "customer.placeholder-logo"
+      ]
+    },
+    "customer.placeholder-logo": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "grey (#99a1af) wordmark rectangle with an invented company name; keep the source box sizes and height variety.",
+      "usedBySections": []
+    },
+    "partner.lockup": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "reference-reuse-only",
+      "description": "co-brand lockups of the clone (news-band pill 326x71, 'powered by' 275x56).",
+      "usedBySections": [
+        "editorial.news-band",
+        "features.card-grid"
+      ],
+      "generationSafeSubstitutes": [
+        "partner.placeholder-lockup"
+      ]
+    },
+    "partner.placeholder-lockup": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "neutral rounded pill with two short grey wordmark blocks.",
+      "usedBySections": []
+    },
+    "platform.logo": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "reference-reuse-only",
+      "description": "fictional data-platform marks (integration tiles 30x30 in 40x40, stats tiles 30x30 in 48x48).",
+      "usedBySections": [
+        "features.integration-tiles",
+        "social-proof.stats-bento"
+      ],
+      "generationSafeSubstitutes": [
+        "platform.placeholder-icon"
+      ]
+    },
+    "platform.placeholder-icon": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "generic rounded-square or circle glyph, 30x30.",
+      "usedBySections": []
+    },
+    "product.screenshot": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "reference-reuse-only",
+      "description": "original placeholder mockups of the fictional Lattice product UI (heroes, feature panels, tab media).",
+      "usedBySections": [
+        "features.gradient-panel",
+        "features.tabs-dark",
+        "features.tabs-light",
+        "hero.center",
+        "hero.split"
+      ],
+      "generationSafeSubstitutes": [
+        "product.generated-visual"
+      ]
+    },
+    "product.generated-visual": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "a new UI mockup or abstract product visual in the site palette (ink neutrals, purple #632ff5, orange #fe6703); must not depict any real product.",
+      "usedBySections": []
+    },
+    "illustration.diagram": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "reference-reuse-only",
+      "description": "clone diagrams (pipeline DAG 555x409, lifecycle loops 1224x600, layered platform diagram 832x468).",
+      "usedBySections": [
+        "content.media-split",
+        "content.statement"
+      ],
+      "generationSafeSubstitutes": [
+        "illustration.generated-diagram"
+      ]
+    },
+    "illustration.generated-diagram": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "new neutral diagram: white node cards, #e5e7eb borders, connector lines; generic tiles instead of any logos.",
+      "usedBySections": []
+    },
+    "illustration.abstract": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "abstract soft purple/orange gradient shape (mega-menu featured thumbnail 124x61).",
+      "usedBySections": [
+        "shell.mega-menu"
+      ]
+    },
+    "photo.composite-scene": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "reference-reuse-only",
+      "description": "the clone's abstract gradient 'photo' compositions (T3 heroes, image cards, checklist split images).",
+      "usedBySections": [
+        "features.card-grid",
+        "features.checklist",
+        "hero.split"
+      ],
+      "generationSafeSubstitutes": [
+        "photo.generated-scene"
+      ]
+    },
+    "photo.generated-scene": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "a new abstract or illustrated scene; any people shown must be fictional/illustrative, never a real person's likeness.",
+      "usedBySections": []
+    },
+    "video.poster": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "reference-reuse-only",
+      "description": "16:9 poster stand-ins with a play glyph (no third-party player is embedded).",
+      "usedBySections": [
+        "content.media-split",
+        "content.statement"
+      ],
+      "generationSafeSubstitutes": [
+        "video.placeholder-poster"
+      ]
+    },
+    "video.placeholder-poster": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "neutral 16:9 poster with a centred play glyph; never embed a third-party player.",
+      "usedBySections": []
+    },
+    "resource.thumbnail": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "reference-reuse-only",
+      "description": "16:9 resource-card artwork (800x452).",
+      "usedBySections": [
+        "editorial.resource-cards"
+      ],
+      "generationSafeSubstitutes": [
+        "resource.generated-thumbnail"
+      ]
+    },
+    "resource.generated-thumbnail": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "new 16:9 gradient or abstract thumbnail; no co-branding.",
+      "usedBySections": []
+    },
+    "award.badge": {
+      "kind": "media",
+      "availability": "reference-only",
+      "generationPolicy": "reference-reuse-only",
+      "description": "fictional review/award badges and security seals in the stats bento.",
+      "usedBySections": [
+        "social-proof.stats-bento"
+      ],
+      "generationSafeSubstitutes": [
+        "rating.placeholder"
+      ]
+    },
+    "rating.placeholder": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "clearly placeholder rating/award badge (e.g. 'Sample badge'); never a real review platform's mark or a real score.",
+      "usedBySections": []
+    },
+    "icon.feature": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "generic line icons (feature cards 32/56px, mega-menu 20px in 40px tiles, IDE tiles 40px, 'why' icons 56px). Generic glyphs, safe to redraw.",
+      "usedBySections": [
+        "cta.ide-card",
+        "features.card-grid",
+        "shell.mega-menu"
+      ]
+    },
+    "person.fictional-avatar": {
+      "kind": "media",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "illustrated or generated avatar of a fictional person (not used by the clone; available for generated testimonials).",
+      "usedBySections": []
+    },
+    "person.real-photo": {
+      "kind": "media",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "photo or likeness of a real, identifiable person. Forbidden in every mode: the clone contains none.",
+      "usedBySections": [],
+      "generationSafeSubstitutes": [
+        "person.fictional-avatar"
+      ],
+      "forbiddenInAllModes": true
+    },
+    "thirdparty.real-mark": {
+      "kind": "media",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "any real company's logo/wordmark (the original site's owner, its real customers, real data platforms, review sites). Forbidden in every mode.",
+      "usedBySections": [],
+      "generationSafeSubstitutes": [
+        "customer.placeholder-logo",
+        "platform.placeholder-icon",
+        "brand.placeholder-mark"
+      ],
+      "forbiddenInAllModes": true
+    },
+    "store.badge": {
+      "kind": "media",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "app-store / marketplace marks. The clone has none; forbidden in every mode.",
+      "usedBySections": [],
+      "generationSafeSubstitutes": [
+        "brand.placeholder-mark"
+      ],
+      "forbiddenInAllModes": true
+    },
+    "link.clone-route": {
+      "kind": "link",
+      "availability": "reference-only",
+      "generationPolicy": "reference-reuse-only",
+      "description": "the clone's internal routes (routes/routes.json). Routes whose slug names the source brand or its fictional entities are source identity.",
+      "usedBySections": [],
+      "generationSafeSubstitutes": [
+        "link.placeholder"
+      ]
+    },
+    "link.placeholder": {
+      "kind": "link",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "relative paths with no source names, '#', or absolute URLs on reserved .example / .invalid domains only.",
+      "usedBySections": []
+    },
+    "link.source-external": {
+      "kind": "link",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-reuse-live-endpoint",
+      "description": "the original live site's domains, docs/forum/status hosts, social profiles, form/submission endpoints and store links.",
+      "usedBySections": [],
+      "generationSafeSubstitutes": [
+        "link.placeholder"
+      ],
+      "forbiddenInAllModes": true
+    },
+    "copy.clone-placeholder": {
+      "kind": "copy",
+      "availability": "reference-only",
+      "generationPolicy": "reference-reuse-only",
+      "description": "the clone's own Lattice placeholder copy (src/content*). Fingerprinted in schema/source-copy-fingerprints.json.",
+      "usedBySections": [],
+      "generationSafeSubstitutes": [
+        "copy.original"
+      ]
+    },
+    "copy.original": {
+      "kind": "copy",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "newly written copy within each field's maxWords/maxChars budget.",
+      "usedBySections": []
+    },
+    "copy.source-site": {
+      "kind": "copy",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "the live original site's marketing copy. Never present in this project (CLONE_SPEC records lengths only) and forbidden in every mode.",
+      "usedBySections": [],
+      "generationSafeSubstitutes": [
+        "copy.original"
+      ],
+      "forbiddenInAllModes": true
+    }
+  }
+}

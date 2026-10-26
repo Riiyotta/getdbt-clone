@@ -1,0 +1,30 @@
+{
+  "$schemaNote": "flat token map: path -> {value, category, cite}. Values resolved from the clone's real token sources (tailwind.config.cjs, src/index.css, component files).",
+  "tokens": {
+    "radius.badge": {
+      "value": "4px",
+      "category": "radius",
+      "cite": "tailwind.config.cjs:106"
+    },
+    "radius.lg": {
+      "value": "8px",
+      "category": "radius",
+      "cite": "tailwind.config.cjs:107"
+    },
+    "radius.xl": {
+      "value": "12px",
+      "category": "radius",
+      "cite": "tailwind.config.cjs:108"
+    },
+    "radius.2xl": {
+      "value": "16px",
+      "category": "radius",
+      "cite": "tailwind.config.cjs:109"
+    },
+    "radius.none": {
+      "value": "0px",
+      "category": "radius",
+      "cite": "ASSET_MANIFEST.md:13"
+    }
+  }
+}

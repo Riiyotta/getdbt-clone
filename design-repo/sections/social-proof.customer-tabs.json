@@ -1,0 +1,254 @@
+{
+  "id": "social-proof.customer-tabs",
+  "title": "Customer story tabs",
+  "semantic": {
+    "id": "social-proof.customer-tabs",
+    "category": "SOCIAL_PROOF"
+  },
+  "source": {
+    "id": "component:CustTabs",
+    "file": "src/components/sections/CustTabs.jsx",
+    "export": "CustTabs",
+    "tag": "section",
+    "lines": "10-56",
+    "tagLine": 14
+  },
+  "additionalSources": [],
+  "purpose": "Heading + paragraph, a left-aligned tab row of customer names, and per tab: logo, headline, optional summary, button, a quote card and two stat cards.",
+  "retrievalEligible": true,
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "stories",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "stories": [
+          2,
+          3
+        ]
+      },
+      "observedOn": [
+        "/data-platforms/cobalt",
+        "/data-platforms/helixa",
+        "/data-platforms/northwind",
+        "/data-platforms/quarry",
+        "/data-platforms/stratus",
+        "/product/ai",
+        "/product/cost-optimization",
+        "/product/data-modernization",
+        "/product/data-trust",
+        "/product/deploy",
+        "/product/develop",
+        "/product/embedded-analytics",
+        "/product/mesh",
+        "/product/semantic-layer",
+        "/product/test-and-observe"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "body": {
+        "type": "text",
+        "maxWords": 21,
+        "maxChars": 112,
+        "observedIn": 11
+      },
+      "stories": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 3,
+        "observedIn": 15
+      },
+      "stories[].action.href": {
+        "type": "link",
+        "observedIn": 41
+      },
+      "stories[].action.label": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 19,
+        "observedIn": 41
+      },
+      "stories[].headline": {
+        "type": "text",
+        "maxWords": 10,
+        "maxChars": 69,
+        "observedIn": 41
+      },
+      "stories[].logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "customer.logo"
+        ],
+        "observedIn": 41,
+        "generatedRoles": [
+          "customer.placeholder-logo"
+        ]
+      },
+      "stories[].logo.alt": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 17,
+        "observedIn": 41
+      },
+      "stories[].name": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 17,
+        "observedIn": 41
+      },
+      "stories[].person": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 13,
+        "observedIn": 41
+      },
+      "stories[].quote": {
+        "type": "text",
+        "maxWords": 58,
+        "maxChars": 338,
+        "observedIn": 41
+      },
+      "stories[].role": {
+        "type": "text",
+        "maxWords": 7,
+        "maxChars": 48,
+        "observedIn": 41
+      },
+      "stories[].stats": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 2,
+        "observedIn": 41
+      },
+      "stories[].stats[].label": {
+        "type": "text",
+        "maxWords": 15,
+        "maxChars": 90,
+        "observedIn": 82
+      },
+      "stories[].stats[].number": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 16,
+        "observedIn": 82
+      },
+      "stories[].summary": {
+        "type": "text",
+        "maxWords": 32,
+        "maxChars": 194,
+        "observedIn": 3
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 7,
+        "maxChars": 36,
+        "observedIn": 15
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "stories[].logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "customer.logo"
+        ],
+        "observedIn": 41,
+        "generatedRoles": [
+          "customer.placeholder-logo"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "customer.placeholder-logo"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "tabs.instant"
+    ],
+    "requiredPatterns": [
+      "tabs.instant"
+    ],
+    "reducedMotionFallback": {
+      "tabs.instant": "none-needed"
+    },
+    "stagger": "Instant swap, no autoplay, no reveal."
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "4 cols story / 8 cols cards (quote card + stacked stats)"
+    },
+    {
+      "range": "<1024",
+      "behavior": "card row scrolls horizontally; full-width button under the cards"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/product/develop": [
+        934.6
+      ],
+      "/product/test-and-observe": [
+        878.6
+      ],
+      "/product/mesh": [
+        878.6
+      ],
+      "/product/deploy": [
+        878.6
+      ],
+      "/product/semantic-layer": [
+        878.6
+      ],
+      "/product/data-modernization": [
+        838.6
+      ],
+      "/product/ai": [
+        838.6
+      ],
+      "/product/embedded-analytics": [
+        878.6
+      ],
+      "/product/data-trust": [
+        838.6
+      ],
+      "/product/cost-optimization": [
+        838.6
+      ],
+      "/data-platforms/cobalt": [
+        880.6
+      ],
+      "/data-platforms/northwind": [
+        1026.6
+      ],
+      "/data-platforms/quarry": [
+        878.6
+      ],
+      "/data-platforms/helixa": [
+        822.6
+      ],
+      "/data-platforms/stratus": [
+        1026.6
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/sections/CustTabs.jsx:10-56"
+  ]
+}

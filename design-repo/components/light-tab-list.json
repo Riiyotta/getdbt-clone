@@ -1,0 +1,11 @@
+{
+  "id": "component.light-tab-list",
+  "title": "Light tab list",
+  "description": "flex row gap 24, hairline bottom border, scrolls below 768; shared by tabs-light (centred) and customer-tabs (left).",
+  "uses": [
+    "primitive.tab-light"
+  ],
+  "evidence": [
+    "src/components/sections/TabsLight.jsx:6-28"
+  ]
+}

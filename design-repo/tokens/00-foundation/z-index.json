@@ -1,0 +1,15 @@
+{
+  "$schemaNote": "flat token map: path -> {value, category, cite}. Values resolved from the clone's real token sources (tailwind.config.cjs, src/index.css, component files).",
+  "tokens": {
+    "z.5": {
+      "value": "5",
+      "category": "zIndex",
+      "cite": "tailwind.config.cjs:137"
+    },
+    "z.60": {
+      "value": "60",
+      "category": "zIndex",
+      "cite": "tailwind.config.cjs:138"
+    }
+  }
+}

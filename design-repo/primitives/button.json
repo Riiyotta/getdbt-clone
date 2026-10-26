@@ -1,0 +1,14 @@
+{
+  "id": "primitive.button",
+  "title": "Button",
+  "description": "inline-flex .button: radius 12, 500 16/24 (small 14/20); sizes small/medium/large (8x16, 8x16, 12x24 padding; 40/48px tall); variants primary/secondary/tertiary/text + .dark versions; 150ms standard transitions; hover sheen gradients; focus ring 3px offset 4.",
+  "uses": [
+    "action.primary.bg",
+    "radius.xl",
+    "duration.150",
+    "easing.standard"
+  ],
+  "evidence": [
+    "src/index.css:79-189"
+  ]
+}

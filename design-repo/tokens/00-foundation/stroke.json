@@ -1,0 +1,47 @@
+{
+  "$schemaNote": "flat token map: path -> {value, category, cite}. Values resolved from the clone's real token sources (tailwind.config.cjs, src/index.css, component files).",
+  "tokens": {
+    "stroke.s1": {
+      "value": "viewBox 0 0 2427 692",
+      "strokeWidth": 96,
+      "category": "stroke",
+      "cite": "src/components/sections/Baton.jsx:13-19",
+      "note": "original hand-drawn clone path (path data intentionally not copied into the design-repo)"
+    },
+    "stroke.s3": {
+      "value": "viewBox 0 0 2428 582",
+      "strokeWidth": 96,
+      "category": "stroke",
+      "cite": "src/components/sections/Baton.jsx:21-27",
+      "note": "original hand-drawn clone path (path data intentionally not copied into the design-repo)"
+    },
+    "stroke.s4": {
+      "value": "viewBox 0 0 2427 516",
+      "strokeWidth": 96,
+      "category": "stroke",
+      "cite": "src/components/sections/Baton.jsx:29-35",
+      "note": "original hand-drawn clone path (path data intentionally not copied into the design-repo)"
+    },
+    "stroke.s5": {
+      "value": "viewBox 0 0 2506 697",
+      "strokeWidth": 96,
+      "category": "stroke",
+      "cite": "src/components/sections/Baton.jsx:37-43",
+      "note": "original hand-drawn clone path (path data intentionally not copied into the design-repo)"
+    },
+    "stroke.s6": {
+      "value": "viewBox 0 0 1276 899",
+      "strokeWidth": 96,
+      "category": "stroke",
+      "cite": "src/components/sections/Baton.jsx:45-51",
+      "note": "original hand-drawn clone path (path data intentionally not copied into the design-repo)"
+    },
+    "stroke.s8": {
+      "value": "viewBox 0 0 2277 847",
+      "strokeWidth": 96,
+      "category": "stroke",
+      "cite": "src/components/sections/Baton.jsx:53-59",
+      "note": "original hand-drawn clone path (path data intentionally not copied into the design-repo)"
+    }
+  }
+}

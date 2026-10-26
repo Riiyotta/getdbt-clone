@@ -1,0 +1,160 @@
+{
+  "$schemaNote": "flat token map: path -> {value, category, cite}. Values resolved from the clone's real token sources (tailwind.config.cjs, src/index.css, component files).",
+  "tokens": {
+    "color.ink.50": {
+      "value": "#f9fafb",
+      "cite": "tailwind.config.cjs:44",
+      "category": "color"
+    },
+    "color.ink.100": {
+      "value": "#f3f4f6",
+      "cite": "tailwind.config.cjs:43",
+      "category": "color"
+    },
+    "color.ink.200": {
+      "value": "#e5e7eb",
+      "cite": "tailwind.config.cjs:42",
+      "category": "color"
+    },
+    "color.ink.300": {
+      "value": "#d1d5dc",
+      "cite": "tailwind.config.cjs:41",
+      "category": "color"
+    },
+    "color.ink.400": {
+      "value": "#99a1af",
+      "cite": "tailwind.config.cjs:40",
+      "category": "color"
+    },
+    "color.ink.500": {
+      "value": "#6a7282",
+      "cite": "tailwind.config.cjs:39",
+      "category": "color"
+    },
+    "color.ink.600": {
+      "value": "#4a5565",
+      "cite": "tailwind.config.cjs:38",
+      "category": "color"
+    },
+    "color.ink.700": {
+      "value": "#364153",
+      "cite": "tailwind.config.cjs:37",
+      "category": "color"
+    },
+    "color.ink.800": {
+      "value": "#1e2939",
+      "cite": "tailwind.config.cjs:36",
+      "category": "color"
+    },
+    "color.ink.900": {
+      "value": "#101828",
+      "cite": "tailwind.config.cjs:35",
+      "category": "color"
+    },
+    "color.ink.950": {
+      "value": "#030711",
+      "cite": "tailwind.config.cjs:34",
+      "category": "color"
+    },
+    "color.purple.50": {
+      "value": "#f6f5ff",
+      "cite": "tailwind.config.cjs:47",
+      "category": "color"
+    },
+    "color.purple.100": {
+      "value": "#ecebff",
+      "cite": "tailwind.config.cjs:48",
+      "category": "color"
+    },
+    "color.purple.400": {
+      "value": "#9786ff",
+      "cite": "tailwind.config.cjs:49",
+      "category": "color"
+    },
+    "color.purple.600": {
+      "value": "#632ff5",
+      "cite": "tailwind.config.cjs:50",
+      "category": "color"
+    },
+    "color.purple.700": {
+      "value": "#5720e1",
+      "cite": "tailwind.config.cjs:51",
+      "category": "color"
+    },
+    "color.purple.900": {
+      "value": "#3d189a",
+      "cite": "tailwind.config.cjs:52",
+      "category": "color"
+    },
+    "color.orange.50": {
+      "value": "#fff9f5",
+      "cite": "tailwind.config.cjs:55",
+      "category": "color"
+    },
+    "color.orange.400": {
+      "value": "#ff9e5f",
+      "cite": "tailwind.config.cjs:56",
+      "category": "color"
+    },
+    "color.orange.500": {
+      "value": "#fe8331",
+      "cite": "tailwind.config.cjs:57",
+      "category": "color"
+    },
+    "color.orange.600": {
+      "value": "#fe6703",
+      "cite": "tailwind.config.cjs:58",
+      "category": "color"
+    },
+    "color.orange.700": {
+      "value": "#dd5604",
+      "cite": "tailwind.config.cjs:59",
+      "category": "color"
+    },
+    "color.sun": {
+      "value": "#ffcc25",
+      "cite": "tailwind.config.cjs:61",
+      "category": "color"
+    },
+    "color.dot": {
+      "value": "#cccccc",
+      "cite": "tailwind.config.cjs:62",
+      "category": "color"
+    },
+    "color.cobalt": {
+      "value": "#062ae0",
+      "cite": "tailwind.config.cjs:64",
+      "category": "color"
+    },
+    "color.blur-dark": {
+      "value": "rgba(16,24,40,.7)",
+      "cite": "tailwind.config.cjs:67",
+      "category": "color"
+    },
+    "color.blur": {
+      "value": "rgba(255,255,255,.9)",
+      "cite": "tailwind.config.cjs:69",
+      "category": "color"
+    },
+    "color.inverse.secondary": {
+      "value": "rgba(255,255,255,.8)",
+      "cite": "tailwind.config.cjs:70",
+      "category": "color"
+    },
+    "color.inverse.tertiary": {
+      "value": "rgba(255,255,255,.5)",
+      "cite": "tailwind.config.cjs:70",
+      "category": "color"
+    },
+    "color.inverse.line": {
+      "value": "rgba(255,255,255,.1)",
+      "cite": "tailwind.config.cjs:70",
+      "category": "color"
+    },
+    "color.white": {
+      "value": "#ffffff",
+      "cite": "src/index.css:109",
+      "category": "color"
+    }
+  }
+}

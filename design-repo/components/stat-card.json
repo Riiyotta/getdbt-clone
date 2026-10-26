@@ -1,0 +1,12 @@
+{
+  "id": "component.stat-card",
+  "title": "Stat card",
+  "description": "blur-dark card, border #1e2939, radius 16, p-40: mono eyebrow #9786ff -> heading-3 white -> paragraph; optional 1/3 image or 48px platform tiles.",
+  "uses": [
+    "primitive.eyebrow",
+    "primitive.image"
+  ],
+  "evidence": [
+    "src/components/sections/Stats.jsx:19-44"
+  ]
+}

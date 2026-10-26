@@ -1,0 +1,187 @@
+{
+  "id": "social-proof.quote-band",
+  "title": "Quote band",
+  "semantic": {
+    "id": "social-proof.quote-band",
+    "category": "SOCIAL_PROOF"
+  },
+  "source": {
+    "id": "component:QuoteBand",
+    "file": "src/components/sections/QuoteBand.jsx",
+    "export": "QuoteBand",
+    "tag": "section",
+    "lines": "25-75",
+    "tagLine": 31
+  },
+  "additionalSources": [],
+  "purpose": "One bordered blur card holding a customer quote (icon, logo, 24/32 quote, attribution), or a 1-per-view slider of quotes; optional brush stroke behind.",
+  "retrievalEligible": true,
+  "variants": {
+    "slider": {
+      "description": "several quotes, pagination bars, no arrows",
+      "requiredFields": [
+        "quotes"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "quotes": [
+          5,
+          5
+        ]
+      },
+      "observedOn": [
+        "/product/catalog"
+      ]
+    },
+    "single": {
+      "description": "one quote",
+      "requiredFields": [
+        "quotes"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "quotes": [
+          1,
+          1
+        ]
+      },
+      "observedOn": [
+        "/industry/energy-utilities",
+        "/industry/financial-services",
+        "/industry/healthcare",
+        "/industry/manufacturing",
+        "/industry/telecommunications",
+        "/product/cost-optimization"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "quotes": {
+        "type": "list",
+        "minItems": 1,
+        "maxItems": 5,
+        "observedIn": 7
+      },
+      "quotes[].logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "customer.logo"
+        ],
+        "observedIn": 11,
+        "generatedRoles": [
+          "customer.placeholder-logo"
+        ]
+      },
+      "quotes[].logo.alt": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 17,
+        "observedIn": 11
+      },
+      "quotes[].person": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 13,
+        "observedIn": 11
+      },
+      "quotes[].quote": {
+        "type": "text",
+        "maxWords": 54,
+        "maxChars": 324,
+        "observedIn": 11
+      },
+      "quotes[].role": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 30,
+        "observedIn": 11
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "quotes[].logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "customer.logo"
+        ],
+        "observedIn": 11,
+        "generatedRoles": [
+          "customer.placeholder-logo"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "customer.placeholder-logo"
+  ],
+  "style": {
+    "props": {
+      "strokeShape": {
+        "kind": "token",
+        "allowed": [
+          "stroke.s1"
+        ]
+      }
+    },
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "slider.drag",
+      "static",
+      "stroke.draw-on"
+    ],
+    "requiredPatterns": [],
+    "reducedMotionFallback": {
+      "slider.drag": "unchanged",
+      "static": "none-needed",
+      "stroke.draw-on": "render-final-state"
+    },
+    "stagger": "pagination bars and no arrows (catalog). `stroke` adds N-baton S1 behind the card. No reveal."
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "card vertically centred in a 375/415px min-height container, py 120"
+    },
+    {
+      "range": "<768",
+      "behavior": "py 48"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/product/catalog": [
+        655
+      ],
+      "/product/cost-optimization": [
+        655
+      ],
+      "/industry/financial-services": [
+        655
+      ],
+      "/industry/healthcare": [
+        655
+      ],
+      "/industry/manufacturing": [
+        655
+      ],
+      "/industry/energy-utilities": [
+        655
+      ],
+      "/industry/telecommunications": [
+        655
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/sections/QuoteBand.jsx:25-75"
+  ]
+}

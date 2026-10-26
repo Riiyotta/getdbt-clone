@@ -1,0 +1,271 @@
+{
+  "id": "features.checklist",
+  "title": "Checklist",
+  "semantic": {
+    "id": "features.checklist",
+    "category": "FEATURES"
+  },
+  "source": {
+    "id": "component:Checklist",
+    "file": "src/components/sections/Checklist.jsx",
+    "export": "Checklist",
+    "tag": "section",
+    "lines": "37-133",
+    "tagLine": 41
+  },
+  "additionalSources": [],
+  "purpose": "Icon checklist of capabilities/benefits: two columns of titled items, a split with an image, a before/after pair, or a 3-column grid.",
+  "retrievalEligible": true,
+  "variants": {
+    "columns": {
+      "description": "two columns of icon + heading-5 + paragraph (pt-0)",
+      "requiredFields": [
+        "items"
+      ],
+      "forbiddenFields": [
+        "after",
+        "before",
+        "body",
+        "image",
+        "title"
+      ],
+      "listSizes": {
+        "items": [
+          4,
+          4
+        ]
+      },
+      "observedOn": [
+        "/product/data-modernization"
+      ]
+    },
+    "split": {
+      "description": "heading-2 + paragraph + single-line items (7 cols) beside an image (5 cols)",
+      "requiredFields": [
+        "body",
+        "image",
+        "items",
+        "title"
+      ],
+      "forbiddenFields": [
+        "after",
+        "before"
+      ],
+      "listSizes": {
+        "items": [
+          2,
+          3
+        ]
+      },
+      "observedOn": [
+        "/product/ai",
+        "/product/cost-optimization",
+        "/product/embedded-analytics"
+      ]
+    },
+    "grid": {
+      "description": "heading-2 + paragraph, 3-col grid of 5 shield-icon items with heading-3 titles",
+      "requiredFields": [
+        "body",
+        "items",
+        "title"
+      ],
+      "forbiddenFields": [
+        "after",
+        "before",
+        "image"
+      ],
+      "listSizes": {
+        "items": [
+          5,
+          5
+        ]
+      },
+      "observedOn": [
+        "/product/data-trust"
+      ]
+    },
+    "before-after": {
+      "description": "two columns, heading-2 + 3 items with x / check icons",
+      "requiredFields": [
+        "after",
+        "before"
+      ],
+      "forbiddenFields": [
+        "body",
+        "image",
+        "items",
+        "title"
+      ],
+      "listSizes": {},
+      "observedOn": [
+        "/product/cost-optimization"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "after.items": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "observedIn": 1
+      },
+      "after.items[].title": {
+        "type": "text",
+        "maxWords": 7,
+        "maxChars": 43,
+        "observedIn": 3
+      },
+      "after.title": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 5,
+        "observedIn": 1
+      },
+      "before.items": {
+        "type": "list",
+        "minItems": 3,
+        "maxItems": 3,
+        "observedIn": 1
+      },
+      "before.items[].title": {
+        "type": "text",
+        "maxWords": 7,
+        "maxChars": 42,
+        "observedIn": 3
+      },
+      "before.title": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 6,
+        "observedIn": 1
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 28,
+        "maxChars": 201,
+        "observedIn": 4
+      },
+      "image": {
+        "type": "asset",
+        "referenceRoles": [
+          "photo.composite-scene"
+        ],
+        "observedIn": 3,
+        "generatedRoles": [
+          "photo.generated-scene"
+        ]
+      },
+      "image.alt": {
+        "type": "text",
+        "maxWords": 9,
+        "maxChars": 60,
+        "observedIn": 3
+      },
+      "items": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 5,
+        "observedIn": 5
+      },
+      "items[].body": {
+        "type": "text",
+        "maxWords": 37,
+        "maxChars": 230,
+        "observedIn": 14
+      },
+      "items[].title": {
+        "type": "text",
+        "maxWords": 7,
+        "maxChars": 42,
+        "observedIn": 17
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 16,
+        "maxChars": 67,
+        "observedIn": 4
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "image": {
+        "type": "asset",
+        "referenceRoles": [
+          "photo.composite-scene"
+        ],
+        "observedIn": 3,
+        "generatedRoles": [
+          "photo.generated-scene"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "photo.generated-scene"
+  ],
+  "style": {
+    "props": {
+      "paddingTop": {
+        "kind": "enum",
+        "allowed": [
+          "default",
+          "none"
+        ]
+      }
+    },
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 2
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal.fade-up"
+    ],
+    "requiredPatterns": [
+      "reveal.fade-up"
+    ],
+    "reducedMotionFallback": {
+      "reveal.fade-up": "show-immediately"
+    },
+    "stagger": "Reveal: item rows staggered by 100ms; icon + title +100, paragraph +200. columns (data-modernization) follows the original one-for-one (28 targets at 0-500ms): column c at c*200 > *:mb-6 wrapper (same) > list div (same) > row j at col+j*100 { icon (row), text div +100 { h5 +100, p +200 } }, then the trailing empty <p> at col+100."
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "per variant: 6/6, 7/5, 6/6, or 3 columns"
+    },
+    {
+      "range": "<1024",
+      "behavior": "stacked single column"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/product/data-modernization": [
+        299.2
+      ],
+      "/product/ai": [
+        464
+      ],
+      "/product/embedded-analytics": [
+        566.4
+      ],
+      "/product/data-trust": [
+        651.2
+      ],
+      "/product/cost-optimization": [
+        566.4,
+        382.4
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/sections/Checklist.jsx:37-133"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "component.gradient-surface",
+  "title": "Gradient surface + grain",
+  "description": ".gradient-container: relative; ::before fractal-noise grain (multiply .7 by default, overlay 1 on gradient-02/05, multiply .6 on gradient-12) above the gradient and below z-10 content.",
+  "uses": [
+    "gradient.grain"
+  ],
+  "evidence": [
+    "src/index.css:195-217"
+  ]
+}

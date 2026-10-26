@@ -1,0 +1,229 @@
+{
+  "id": "social-proof.stats-bento",
+  "title": "Stats bento",
+  "semantic": {
+    "id": "social-proof.stats-bento",
+    "category": "SOCIAL_PROOF"
+  },
+  "source": {
+    "id": "component:Stats",
+    "file": "src/components/sections/Stats.jsx",
+    "export": "Stats",
+    "tag": "section",
+    "lines": "11-60",
+    "tagLine": 14
+  },
+  "additionalSources": [],
+  "purpose": "Dark 'trusted at scale' band: optional eyebrow, heading-2, 4 blur-dark cards in a 7+5 / 5+7 bento with eyebrow, heading-3, body, optional image or platform-tile row.",
+  "retrievalEligible": true,
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "cards",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "cards": [
+          4,
+          4
+        ]
+      },
+      "observedOn": [
+        "/data-platforms/quarry",
+        "/industry/energy-utilities",
+        "/industry/financial-services",
+        "/industry/healthcare",
+        "/industry/manufacturing",
+        "/industry/telecommunications",
+        "/product/ai",
+        "/product/cost-optimization",
+        "/product/data-modernization",
+        "/product/data-trust",
+        "/product/embedded-analytics"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "cards": {
+        "type": "list",
+        "minItems": 4,
+        "maxItems": 4,
+        "observedIn": 11
+      },
+      "cards[].body": {
+        "type": "text",
+        "maxWords": 19,
+        "maxChars": 110,
+        "observedIn": 33
+      },
+      "cards[].eyebrow": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 20,
+        "observedIn": 44
+      },
+      "cards[].image": {
+        "type": "asset",
+        "referenceRoles": [
+          "award.badge"
+        ],
+        "observedIn": 22,
+        "generatedRoles": [
+          "rating.placeholder"
+        ]
+      },
+      "cards[].image.alt": {
+        "type": "text",
+        "maxWords": 6,
+        "maxChars": 42,
+        "observedIn": 22
+      },
+      "cards[].tiles": {
+        "type": "list",
+        "minItems": 5,
+        "maxItems": 5,
+        "observedIn": 5
+      },
+      "cards[].tiles[].href": {
+        "type": "link",
+        "observedIn": 25
+      },
+      "cards[].tiles[].logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "platform.logo"
+        ],
+        "observedIn": 25,
+        "generatedRoles": [
+          "platform.placeholder-icon"
+        ]
+      },
+      "cards[].tiles[].logo.alt": {
+        "type": "text",
+        "maxWords": 1,
+        "maxChars": 9,
+        "observedIn": 25
+      },
+      "cards[].title": {
+        "type": "text",
+        "maxWords": 9,
+        "maxChars": 47,
+        "observedIn": 44
+      },
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 22,
+        "observedIn": 5
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 6,
+        "maxChars": 38,
+        "observedIn": 11
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "cards[].image": {
+        "type": "asset",
+        "referenceRoles": [
+          "award.badge"
+        ],
+        "observedIn": 22,
+        "generatedRoles": [
+          "rating.placeholder"
+        ]
+      },
+      "cards[].tiles[].logo": {
+        "type": "asset",
+        "referenceRoles": [
+          "platform.logo"
+        ],
+        "observedIn": 25,
+        "generatedRoles": [
+          "platform.placeholder-icon"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "platform.placeholder-icon",
+    "rating.placeholder"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal.fade-up"
+    ],
+    "requiredPatterns": [
+      "reveal.fade-up"
+    ],
+    "reducedMotionFallback": {
+      "reveal.fade-up": "show-immediately"
+    },
+    "stagger": "Reveal (with eyebrow, T2): eyebrow 0 / h2 200 / grid 400 / cards 400-700. (no eyebrow, T4):  h2 0 / grid 200 / cards 200-500."
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "rows 7+5 / 5+7 of 12, text 2/3 + media 1/3"
+    },
+    {
+      "range": "<1024",
+      "behavior": "cards full width, media below text"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/product/data-modernization": [
+        912.8
+      ],
+      "/product/ai": [
+        937.4
+      ],
+      "/product/embedded-analytics": [
+        912.8
+      ],
+      "/product/data-trust": [
+        912.8
+      ],
+      "/product/cost-optimization": [
+        912.8
+      ],
+      "/data-platforms/quarry": [
+        912.8
+      ],
+      "/industry/financial-services": [
+        964.6
+      ],
+      "/industry/healthcare": [
+        964.6
+      ],
+      "/industry/manufacturing": [
+        964.6
+      ],
+      "/industry/energy-utilities": [
+        964.6
+      ],
+      "/industry/telecommunications": [
+        964.6
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/sections/Stats.jsx:11-60"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "primitive.image",
+  "title": "Image",
+  "description": "<img> from an asset record; width/height attributes, lazy except heroes (eager/priority).",
+  "uses": [
+    "image.radius"
+  ],
+  "evidence": [
+    "src/components/sections/parts.jsx:38-52"
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "features.tabs-light",
+  "title": "Light centred tabs",
+  "semantic": {
+    "id": "features.tabs-light",
+    "category": "FEATURES"
+  },
+  "source": {
+    "id": "component:TabsLight",
+    "file": "src/components/sections/TabsLight.jsx",
+    "export": "TabsLight",
+    "tag": "section",
+    "lines": "31-53",
+    "tagLine": 35
+  },
+  "additionalSources": [],
+  "purpose": "Centred light tab row (orange underline) with a description and a square image per tab.",
+  "retrievalEligible": true,
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "tabs"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "tabs": [
+          2,
+          4
+        ]
+      },
+      "observedOn": [
+        "/product/ai",
+        "/product/cost-optimization",
+        "/product/data-modernization",
+        "/product/data-trust",
+        "/product/embedded-analytics"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "tabs": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 4,
+        "observedIn": 5
+      },
+      "tabs[].body": {
+        "type": "text",
+        "maxWords": 45,
+        "maxChars": 263,
+        "observedIn": 15
+      },
+      "tabs[].label": {
+        "type": "text",
+        "maxWords": 7,
+        "maxChars": 49,
+        "observedIn": 15
+      },
+      "tabs[].lead": {
+        "type": "text",
+        "maxWords": 7,
+        "maxChars": 43,
+        "observedIn": 4
+      },
+      "tabs[].media": {
+        "type": "asset",
+        "referenceRoles": [
+          "product.screenshot"
+        ],
+        "observedIn": 15,
+        "generatedRoles": [
+          "product.generated-visual"
+        ]
+      },
+      "tabs[].media.alt": {
+        "type": "text",
+        "maxWords": 9,
+        "maxChars": 62,
+        "observedIn": 15
+      }
+    }
+  },
+  "assets": {
+    "fields": {
+      "tabs[].media": {
+        "type": "asset",
+        "referenceRoles": [
+          "product.screenshot"
+        ],
+        "observedIn": 15,
+        "generatedRoles": [
+          "product.generated-visual"
+        ]
+      }
+    },
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [
+    "product.generated-visual"
+  ],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "tabs.instant"
+    ],
+    "requiredPatterns": [
+      "tabs.instant"
+    ],
+    "reducedMotionFallback": {
+      "tabs.instant": "none-needed"
+    },
+    "stagger": "N-tabs-light (specs/T1-T4.md A): centred tabbed media (T2). Instant swap, no autoplay, no reveal."
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "10-col centred column, tabs centred"
+    },
+    {
+      "range": "<768",
+      "behavior": "tab row scrolls horizontally, image full width"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/product/data-modernization": [
+        885
+      ],
+      "/product/ai": [
+        883
+      ],
+      "/product/embedded-analytics": [
+        913
+      ],
+      "/product/data-trust": [
+        885
+      ],
+      "/product/cost-optimization": [
+        941
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/sections/TabsLight.jsx:31-53"
+  ]
+}

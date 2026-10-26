@@ -1,0 +1,338 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "section contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "semantic",
+    "source",
+    "additionalSources",
+    "purpose",
+    "retrievalEligible",
+    "variants",
+    "content",
+    "assets",
+    "generatedAssetRoles",
+    "style",
+    "constraints",
+    "motion",
+    "responsive",
+    "measuredHeightsPx",
+    "evidence"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(shell|hero|content|features|social-proof|editorial|cta)\\.[a-z0-9-]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "semantic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "category"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "SHELL",
+            "HERO",
+            "CONTENT",
+            "FEATURES",
+            "SOCIAL_PROOF",
+            "EDITORIAL",
+            "CTA"
+          ]
+        }
+      }
+    },
+    "source": {
+      "$ref": "#/definitions/source"
+    },
+    "additionalSources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/source"
+      }
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 20
+    },
+    "retrievalEligible": {
+      "type": "boolean"
+    },
+    "retrievalIneligibleReason": {
+      "type": "string",
+      "minLength": 30
+    },
+    "variants": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "description",
+          "requiredFields",
+          "forbiddenFields",
+          "listSizes",
+          "observedOn"
+        ],
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "requiredFields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "forbiddenFields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "listSizes": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "observedOn": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "content": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "budgetRule",
+        "fields"
+      ],
+      "properties": {
+        "budgetRule": {
+          "type": "string"
+        },
+        "fields": {
+          "type": "object"
+        }
+      }
+    },
+    "assets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fields",
+        "note"
+      ],
+      "properties": {
+        "fields": {
+          "type": "object"
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "generatedAssetRoles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "style": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "props",
+        "note"
+      ],
+      "properties": {
+        "props": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "allowed"
+            ],
+            "properties": {
+              "kind": {
+                "enum": [
+                  "token",
+                  "enum"
+                ]
+              },
+              "allowed": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              }
+            }
+          }
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "maxPerPage"
+      ],
+      "properties": {
+        "maxPerPage": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "position": {
+          "type": "string"
+        }
+      }
+    },
+    "motion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowedPatterns",
+        "requiredPatterns",
+        "reducedMotionFallback",
+        "stagger"
+      ],
+      "properties": {
+        "allowedPatterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "requiredPatterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reducedMotionFallback": {
+          "type": "object"
+        },
+        "stagger": {
+          "type": "string"
+        }
+      }
+    },
+    "responsive": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "range",
+          "behavior"
+        ],
+        "properties": {
+          "range": {
+            "type": "string"
+          },
+          "behavior": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "measuredHeightsPx": {
+      "type": "object"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[^\\s:]+:[0-9]+(-[0-9]+)?$"
+      },
+      "minItems": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "retrievalEligible": {
+            "const": false
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "retrievalIneligibleReason"
+        ]
+      }
+    }
+  ],
+  "definitions": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "file",
+        "export",
+        "tag",
+        "lines",
+        "tagLine"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^(component|block):"
+        },
+        "file": {
+          "type": "string",
+          "pattern": "^src/"
+        },
+        "export": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tag": {
+          "type": "string"
+        },
+        "lines": {
+          "type": "string",
+          "pattern": "^[0-9]+-[0-9]+$"
+        },
+        "tagLine": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

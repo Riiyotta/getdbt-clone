@@ -1,0 +1,31 @@
+{
+  "note": "component-scoped aliases; button rules: src/index.css .button block; cards/tabs: specs/T1-T4.md section A",
+  "cite": [
+    "src/index.css:79-188",
+    "specs/T1-T4.md:31-224"
+  ],
+  "tokens": {
+    "button.radius": "radius.xl",
+    "button.font": "font.family.sans",
+    "button.weight": "font.weight.500",
+    "button.transition": "duration.150",
+    "button.size.small.text": "font.size.sm",
+    "button.size.medium.text": "font.size.base",
+    "button.size.large.text": "font.size.base",
+    "card.radius": "radius.2xl",
+    "card.border": "border.default",
+    "card.padding": "space.px40",
+    "image.radius": "radius.2xl",
+    "panel-media.radius": "radius.lg",
+    "chip.radius": "radius.badge",
+    "tab.indicator.light": "indicator.active",
+    "tab.indicator.dark": "indicator.active",
+    "megamenu.width": "container.width.megamenu",
+    "megamenu.shadow": "elevation.primary",
+    "section.padding.mobile": "space.px48",
+    "section.padding.desktop": "space.px64",
+    "section.padding.dark-lg": "space.30",
+    "grid.gap.mobile": "space.px16",
+    "grid.gap.desktop": "space.px24"
+  }
+}

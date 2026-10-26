@@ -1,0 +1,183 @@
+{
+  "id": "cta.community-band",
+  "title": "Community CTA band with stats",
+  "semantic": {
+    "id": "cta.community-band",
+    "category": "CTA"
+  },
+  "source": {
+    "id": "component:CommunityCta",
+    "file": "src/components/CommunityCta.jsx",
+    "export": "CommunityCta",
+    "tag": "section",
+    "lines": "11-62",
+    "tagLine": 13
+  },
+  "additionalSources": [],
+  "purpose": "Blue gradient-12 band: eyebrow, heading-2, body, primary.dark + secondary.dark buttons, and a right column of 2-3 stat blocks behind a hairline divider.",
+  "retrievalEligible": true,
+  "variants": {
+    "default": {
+      "description": "single rendering",
+      "requiredFields": [
+        "body",
+        "eyebrow",
+        "primary",
+        "secondary",
+        "stats",
+        "title"
+      ],
+      "forbiddenFields": [],
+      "listSizes": {
+        "stats": [
+          2,
+          3
+        ]
+      },
+      "observedOn": [
+        "/",
+        "/industry/energy-utilities",
+        "/industry/financial-services",
+        "/industry/healthcare",
+        "/industry/manufacturing",
+        "/industry/telecommunications",
+        "/product/cost-optimization",
+        "/product/data-modernization",
+        "/product/data-trust",
+        "/product/embedded-analytics"
+      ]
+    }
+  },
+  "content": {
+    "budgetRule": "maxWords/maxChars = the maximum observed in the clone's own content for this field across every rendered instance (schema/examples/reference/*); list sizes = observed min/max. Never exceed; shorter is allowed.",
+    "fields": {
+      "body": {
+        "type": "text",
+        "maxWords": 43,
+        "maxChars": 243,
+        "observedIn": 10
+      },
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 17,
+        "observedIn": 10
+      },
+      "primary.href": {
+        "type": "link",
+        "observedIn": 10
+      },
+      "primary.label": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 18,
+        "observedIn": 10
+      },
+      "secondary.href": {
+        "type": "link",
+        "observedIn": 10
+      },
+      "secondary.label": {
+        "type": "text",
+        "maxWords": 3,
+        "maxChars": 21,
+        "observedIn": 10
+      },
+      "stats": {
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 3,
+        "observedIn": 10
+      },
+      "stats[].label": {
+        "type": "text",
+        "maxWords": 4,
+        "maxChars": 24,
+        "observedIn": 25
+      },
+      "stats[].number": {
+        "type": "text",
+        "maxWords": 2,
+        "maxChars": 8,
+        "observedIn": 25
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 15,
+        "maxChars": 92,
+        "observedIn": 10
+      }
+    }
+  },
+  "assets": {
+    "fields": {},
+    "note": "reference mode may use referenceRoles; generated mode must use generatedRoles (generation-safe only). See assets/asset-roles.json."
+  },
+  "generatedAssetRoles": [],
+  "style": {
+    "props": {},
+    "note": "token props take token-catalog paths only (tokens/llm/token-catalog.json); allowed values = values observed in the clone (tokens/llm/token-policy.json styleProps)."
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "reveal.fade-up"
+    ],
+    "requiredPatterns": [
+      "reveal.fade-up"
+    ],
+    "reducedMotionFallback": {
+      "reveal.fade-up": "show-immediately"
+    },
+    "stagger": "Reveal structure mirrors the original's 19 targets: the container is the observed (non-animated) root; nested stagger steps of 100ms. The <span> wrappers are inline like the original's, so only their opacity animates; the two CTA spans are flex items (blockified) and also translate. Reused as the T2/T4 \"H-cta long\" band: pass `content` (same shape as content.community) and optional `primaryTo` / `secondaryTo`; the homepage renders it with the defaults (\"#\" links)."
+  },
+  "responsive": [
+    {
+      "range": ">=1024",
+      "behavior": "7 cols + 4 cols stats with left border and 60px padding"
+    },
+    {
+      "range": "<768",
+      "behavior": "stacked; stats get a top border and come after the buttons"
+    }
+  ],
+  "measuredHeightsPx": {
+    "1440": {
+      "/": [
+        453.2
+      ],
+      "/product/data-modernization": [
+        453.2
+      ],
+      "/product/embedded-analytics": [
+        510.8
+      ],
+      "/product/data-trust": [
+        453.2
+      ],
+      "/product/cost-optimization": [
+        453.2
+      ],
+      "/industry/financial-services": [
+        453.2
+      ],
+      "/industry/healthcare": [
+        453.2
+      ],
+      "/industry/manufacturing": [
+        453.2
+      ],
+      "/industry/energy-utilities": [
+        453.2
+      ],
+      "/industry/telecommunications": [
+        453.2
+      ]
+    }
+  },
+  "evidence": [
+    "src/components/CommunityCta.jsx:11-62"
+  ]
+}

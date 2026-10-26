@@ -1,0 +1,12 @@
+{
+  "id": "component.icon-card",
+  "title": "Icon card",
+  "description": "max-w 400 transparent card: 32/56px icon box (mb-40) -> heading-4 (mb-12) -> paragraph #1e2939.",
+  "uses": [
+    "primitive.icon",
+    "primitive.heading"
+  ],
+  "evidence": [
+    "src/components/sections/Feat.jsx:12-22"
+  ]
+}

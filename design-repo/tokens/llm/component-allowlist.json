@@ -1,0 +1,781 @@
+{
+  "version": "1.0.0",
+  "note": "closed list of everything an AI may place or set. Section entries list every settable node property (variant values, top-level content keys, style props); extraction/verify_all.py checks parity with the contract files and with schema/pagespec.schema.json.",
+  "entries": [
+    {
+      "id": "primitive.button",
+      "kind": "primitive",
+      "file": "primitives/button.json"
+    },
+    {
+      "id": "primitive.text-link",
+      "kind": "primitive",
+      "file": "primitives/text-link.json"
+    },
+    {
+      "id": "primitive.tag-chip",
+      "kind": "primitive",
+      "file": "primitives/tag-chip.json"
+    },
+    {
+      "id": "primitive.eyebrow",
+      "kind": "primitive",
+      "file": "primitives/eyebrow.json"
+    },
+    {
+      "id": "primitive.heading",
+      "kind": "primitive",
+      "file": "primitives/heading.json"
+    },
+    {
+      "id": "primitive.image",
+      "kind": "primitive",
+      "file": "primitives/image.json"
+    },
+    {
+      "id": "primitive.video-poster",
+      "kind": "primitive",
+      "file": "primitives/video-poster.json"
+    },
+    {
+      "id": "primitive.tab-light",
+      "kind": "primitive",
+      "file": "primitives/tab-light.json"
+    },
+    {
+      "id": "primitive.tab-dark",
+      "kind": "primitive",
+      "file": "primitives/tab-dark.json"
+    },
+    {
+      "id": "primitive.slider-pagination",
+      "kind": "primitive",
+      "file": "primitives/slider-pagination.json"
+    },
+    {
+      "id": "primitive.icon",
+      "kind": "primitive",
+      "file": "primitives/icon.json"
+    },
+    {
+      "id": "component.section-header",
+      "kind": "component",
+      "file": "components/section-header.json"
+    },
+    {
+      "id": "component.icon-card",
+      "kind": "component",
+      "file": "components/icon-card.json"
+    },
+    {
+      "id": "component.image-card",
+      "kind": "component",
+      "file": "components/image-card.json"
+    },
+    {
+      "id": "component.resource-card",
+      "kind": "component",
+      "file": "components/resource-card.json"
+    },
+    {
+      "id": "component.quote-card",
+      "kind": "component",
+      "file": "components/quote-card.json"
+    },
+    {
+      "id": "component.stat-card",
+      "kind": "component",
+      "file": "components/stat-card.json"
+    },
+    {
+      "id": "component.testimonial-card",
+      "kind": "component",
+      "file": "components/testimonial-card.json"
+    },
+    {
+      "id": "component.brush-stroke",
+      "kind": "component",
+      "file": "components/brush-stroke.json"
+    },
+    {
+      "id": "component.gradient-surface",
+      "kind": "component",
+      "file": "components/gradient-surface.json"
+    },
+    {
+      "id": "component.menu-item",
+      "kind": "component",
+      "file": "components/menu-item.json"
+    },
+    {
+      "id": "component.light-tab-list",
+      "kind": "component",
+      "file": "components/light-tab-list.json"
+    },
+    {
+      "id": "content.media-split",
+      "kind": "section",
+      "file": "sections/content.media-split.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "diagram",
+          "media-left",
+          "text-left",
+          "video"
+        ],
+        "content": [
+          "bullets",
+          "eyebrow",
+          "media",
+          "paragraphs",
+          "primary",
+          "tertiary",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "reveal.fade-up"
+        ],
+        "assetRoles": [
+          "illustration.generated-diagram",
+          "video.placeholder-poster"
+        ]
+      }
+    },
+    {
+      "id": "content.statement",
+      "kind": "section",
+      "file": "sections/content.statement.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "diagram",
+          "line",
+          "plain",
+          "video"
+        ],
+        "content": [
+          "body",
+          "diagram",
+          "title",
+          "video"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "illustration.generated-diagram",
+          "video.placeholder-poster"
+        ]
+      }
+    },
+    {
+      "id": "cta.closing-band",
+      "kind": "section",
+      "file": "sections/cta.closing-band.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "plain",
+          "with-aside"
+        ],
+        "content": [
+          "aside",
+          "body",
+          "eyebrow",
+          "primary",
+          "secondary",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "reveal.fade-up"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "cta.community-band",
+      "kind": "section",
+      "file": "sections/cta.community-band.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "eyebrow",
+          "primary",
+          "secondary",
+          "stats",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "reveal.fade-up"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "cta.gradient-card",
+      "kind": "section",
+      "file": "sections/cta.gradient-card.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "primary",
+          "tertiary",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "reveal.fade-up"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "cta.ide-card",
+      "kind": "section",
+      "file": "sections/cta.ide-card.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "tiles",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "reveal.fade-up"
+        ],
+        "assetRoles": [
+          "icon.feature"
+        ]
+      }
+    },
+    {
+      "id": "editorial.news-band",
+      "kind": "section",
+      "file": "sections/editorial.news-band.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "action",
+          "headline",
+          "lockup"
+        ],
+        "style": [],
+        "motion": [
+          "reveal.fade-up"
+        ],
+        "assetRoles": [
+          "partner.placeholder-lockup"
+        ]
+      }
+    },
+    {
+      "id": "editorial.resource-cards",
+      "kind": "section",
+      "file": "sections/editorial.resource-cards.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "cards",
+          "eyebrow",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "reveal.fade-up"
+        ],
+        "assetRoles": [
+          "resource.generated-thumbnail"
+        ]
+      }
+    },
+    {
+      "id": "features.card-grid",
+      "kind": "section",
+      "file": "sections/features.card-grid.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "bordered-link",
+          "four-column",
+          "image-card",
+          "wash-icon"
+        ],
+        "content": [
+          "body",
+          "cards",
+          "eyebrow",
+          "lockup",
+          "primary",
+          "tertiary",
+          "title"
+        ],
+        "style": [
+          "headerAlign",
+          "iconSize",
+          "paddingTop"
+        ],
+        "motion": [
+          "reveal.fade-up"
+        ],
+        "assetRoles": [
+          "icon.feature",
+          "partner.placeholder-lockup",
+          "photo.generated-scene"
+        ]
+      }
+    },
+    {
+      "id": "features.checklist",
+      "kind": "section",
+      "file": "sections/features.checklist.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "before-after",
+          "columns",
+          "grid",
+          "split"
+        ],
+        "content": [
+          "after",
+          "before",
+          "body",
+          "image",
+          "items",
+          "title"
+        ],
+        "style": [
+          "paddingTop"
+        ],
+        "motion": [
+          "reveal.fade-up"
+        ],
+        "assetRoles": [
+          "photo.generated-scene"
+        ]
+      }
+    },
+    {
+      "id": "features.gradient-panel",
+      "kind": "section",
+      "file": "sections/features.gradient-panel.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "media-first",
+          "text-first"
+        ],
+        "content": [
+          "body",
+          "eyebrow",
+          "media",
+          "primary",
+          "title"
+        ],
+        "style": [
+          "panelGradient"
+        ],
+        "motion": [
+          "reveal.fade-up"
+        ],
+        "assetRoles": [
+          "product.generated-visual"
+        ]
+      }
+    },
+    {
+      "id": "features.integration-tiles",
+      "kind": "section",
+      "file": "sections/features.integration-tiles.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "eyebrow",
+          "primary",
+          "tiles",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "static"
+        ],
+        "assetRoles": [
+          "platform.placeholder-icon"
+        ]
+      }
+    },
+    {
+      "id": "features.tabs-dark",
+      "kind": "section",
+      "file": "sections/features.tabs-dark.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "tabs",
+          "title"
+        ],
+        "style": [
+          "strokeGradient"
+        ],
+        "motion": [
+          "tabs.instant"
+        ],
+        "assetRoles": [
+          "product.generated-visual"
+        ]
+      }
+    },
+    {
+      "id": "features.tabs-light",
+      "kind": "section",
+      "file": "sections/features.tabs-light.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "tabs"
+        ],
+        "style": [],
+        "motion": [
+          "tabs.instant"
+        ],
+        "assetRoles": [
+          "product.generated-visual"
+        ]
+      }
+    },
+    {
+      "id": "hero.center",
+      "kind": "section",
+      "file": "sections/hero.center.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "media",
+          "square",
+          "text-only"
+        ],
+        "content": [
+          "eyebrow",
+          "highlights",
+          "lead",
+          "media",
+          "primary",
+          "secondary",
+          "title"
+        ],
+        "style": [
+          "strokeGradient",
+          "strokeShape"
+        ],
+        "motion": [
+          "static",
+          "stroke.draw-on"
+        ],
+        "assetRoles": [
+          "product.generated-visual"
+        ]
+      }
+    },
+    {
+      "id": "hero.split",
+      "kind": "section",
+      "file": "sections/hero.split.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "flush",
+          "padded"
+        ],
+        "content": [
+          "badge",
+          "lead",
+          "media",
+          "primary",
+          "secondary",
+          "title"
+        ],
+        "style": [
+          "strokeGradient",
+          "strokeShape"
+        ],
+        "motion": [
+          "stroke.draw-on"
+        ],
+        "assetRoles": [
+          "photo.generated-scene",
+          "product.generated-visual"
+        ]
+      }
+    },
+    {
+      "id": "shell.announcement-bar",
+      "kind": "section",
+      "file": "sections/shell.announcement-bar.json",
+      "retrievalEligible": false,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "slides"
+        ],
+        "style": [],
+        "motion": [
+          "carousel.autoplay"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "shell.footer",
+      "kind": "section",
+      "file": "sections/shell.footer.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "brandMark",
+          "columns",
+          "cookieLabel",
+          "copyright",
+          "legalLinks",
+          "newsletter",
+          "region",
+          "social"
+        ],
+        "style": [],
+        "motion": [
+          "accordion.toggle"
+        ],
+        "assetRoles": [
+          "brand.placeholder-mark",
+          "brand.user-supplied-mark"
+        ]
+      }
+    },
+    {
+      "id": "shell.mega-menu",
+      "kind": "section",
+      "file": "sections/shell.mega-menu.json",
+      "retrievalEligible": false,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "menus"
+        ],
+        "style": [],
+        "motion": [
+          "menu.popover"
+        ],
+        "assetRoles": [
+          "icon.feature",
+          "illustration.abstract"
+        ]
+      }
+    },
+    {
+      "id": "shell.mobile-drawer",
+      "kind": "section",
+      "file": "sections/shell.mobile-drawer.json",
+      "retrievalEligible": false,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "accountActions"
+        ],
+        "style": [],
+        "motion": [
+          "drawer.slide"
+        ],
+        "assetRoles": []
+      }
+    },
+    {
+      "id": "shell.navbar",
+      "kind": "section",
+      "file": "sections/shell.navbar.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "brandMark",
+          "menuLabels",
+          "plainLink",
+          "primaryAction",
+          "secondaryAction"
+        ],
+        "style": [],
+        "motion": [
+          "nav.hide-on-scroll"
+        ],
+        "assetRoles": [
+          "brand.placeholder-mark",
+          "brand.user-supplied-mark"
+        ]
+      }
+    },
+    {
+      "id": "social-proof.customer-tabs",
+      "kind": "section",
+      "file": "sections/social-proof.customer-tabs.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "body",
+          "stories",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "tabs.instant"
+        ],
+        "assetRoles": [
+          "customer.placeholder-logo"
+        ]
+      }
+    },
+    {
+      "id": "social-proof.logo-marquee",
+      "kind": "section",
+      "file": "sections/social-proof.logo-marquee.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "logos"
+        ],
+        "style": [],
+        "motion": [
+          "marquee.loop"
+        ],
+        "assetRoles": [
+          "customer.placeholder-logo"
+        ]
+      }
+    },
+    {
+      "id": "social-proof.quote-band",
+      "kind": "section",
+      "file": "sections/social-proof.quote-band.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "single",
+          "slider"
+        ],
+        "content": [
+          "quotes"
+        ],
+        "style": [
+          "strokeShape"
+        ],
+        "motion": [
+          "slider.drag",
+          "static",
+          "stroke.draw-on"
+        ],
+        "assetRoles": [
+          "customer.placeholder-logo"
+        ]
+      }
+    },
+    {
+      "id": "social-proof.stats-bento",
+      "kind": "section",
+      "file": "sections/social-proof.stats-bento.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "default"
+        ],
+        "content": [
+          "cards",
+          "eyebrow",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "reveal.fade-up"
+        ],
+        "assetRoles": [
+          "platform.placeholder-icon",
+          "rating.placeholder"
+        ]
+      }
+    },
+    {
+      "id": "social-proof.testimonial-slider",
+      "kind": "section",
+      "file": "sections/social-proof.testimonial-slider.json",
+      "retrievalEligible": true,
+      "settable": {
+        "variant": [
+          "home",
+          "industry"
+        ],
+        "content": [
+          "action",
+          "body",
+          "cards",
+          "eyebrow",
+          "title"
+        ],
+        "style": [],
+        "motion": [
+          "slider.drag"
+        ],
+        "assetRoles": [
+          "customer.placeholder-logo"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "primitive.tab-light",
+  "title": "Light tab",
+  "description": "16/24 500 label, active #030711 + 2px orange bottom bar, inactive #6a7282.",
+  "uses": [
+    "indicator.active",
+    "text.quaternary"
+  ],
+  "evidence": [
+    "src/components/sections/TabsLight.jsx:6-28"
+  ]
+}

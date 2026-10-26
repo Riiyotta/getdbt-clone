@@ -1,0 +1,35 @@
+{
+  "$schemaNote": "flat token map: path -> {value, category, cite}. Values resolved from the clone's real token sources (tailwind.config.cjs, src/index.css, component files).",
+  "tokens": {
+    "size.icon.16": {
+      "value": "16px",
+      "category": "iconSize",
+      "cite": "src/components/MegaMenu.jsx:2"
+    },
+    "size.icon.20": {
+      "value": "20px",
+      "category": "iconSize",
+      "cite": "src/components/MegaMenu.jsx:13"
+    },
+    "size.icon.24": {
+      "value": "24px",
+      "category": "iconSize",
+      "cite": "src/components/sections/parts.jsx:3"
+    },
+    "size.icon.32": {
+      "value": "32px",
+      "category": "iconSize",
+      "cite": "src/components/sections/Feat.jsx:16"
+    },
+    "size.icon.40": {
+      "value": "40px",
+      "category": "iconSize",
+      "cite": "src/components/MegaMenu.jsx:12"
+    },
+    "size.icon.56": {
+      "value": "56px",
+      "category": "iconSize",
+      "cite": "src/components/sections/Feat.jsx:16"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "component.resource-card",
+  "title": "Resource card",
+  "description": "16:9 image link (radius 16) -> optional tag chip 32px below -> heading-4 title link (hover underline) -> optional paragraph.",
+  "uses": [
+    "primitive.image",
+    "primitive.tag-chip"
+  ],
+  "evidence": [
+    "src/components/sections/Resources.jsx:15-32"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "primitive.tag-chip",
+  "title": "Tag chip",
+  "description": "mono 12/16 500, #632ff5 on #ecebff, padding 4, radius 4.",
+  "uses": [
+    "chip.bg",
+    "chip.text",
+    "radius.badge"
+  ],
+  "evidence": [
+    "src/components/sections/Resources.jsx:22"
+  ]
+}

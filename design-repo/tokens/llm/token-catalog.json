@@ -1,0 +1,1251 @@
+{
+  "version": "1.0.0",
+  "note": "flat catalog of every token path an AI may reference; generated from tokens/00-foundation, 10-semantic, 20-component. extraction/verify_all.py fails if it drifts from those files (and, when the clone source sits beside this folder, from tailwind.config.cjs).",
+  "count": 192,
+  "tokens": {
+    "color.ink.50": {
+      "value": "#f9fafb",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:44"
+    },
+    "color.ink.100": {
+      "value": "#f3f4f6",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:43"
+    },
+    "color.ink.200": {
+      "value": "#e5e7eb",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:42"
+    },
+    "color.ink.300": {
+      "value": "#d1d5dc",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:41"
+    },
+    "color.ink.400": {
+      "value": "#99a1af",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:40"
+    },
+    "color.ink.500": {
+      "value": "#6a7282",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:39"
+    },
+    "color.ink.600": {
+      "value": "#4a5565",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:38"
+    },
+    "color.ink.700": {
+      "value": "#364153",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:37"
+    },
+    "color.ink.800": {
+      "value": "#1e2939",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:36"
+    },
+    "color.ink.900": {
+      "value": "#101828",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:35"
+    },
+    "color.ink.950": {
+      "value": "#030711",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:34"
+    },
+    "color.purple.50": {
+      "value": "#f6f5ff",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:47"
+    },
+    "color.purple.100": {
+      "value": "#ecebff",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:48"
+    },
+    "color.purple.400": {
+      "value": "#9786ff",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:49"
+    },
+    "color.purple.600": {
+      "value": "#632ff5",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:50"
+    },
+    "color.purple.700": {
+      "value": "#5720e1",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:51"
+    },
+    "color.purple.900": {
+      "value": "#3d189a",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:52"
+    },
+    "color.orange.50": {
+      "value": "#fff9f5",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:55"
+    },
+    "color.orange.400": {
+      "value": "#ff9e5f",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:56"
+    },
+    "color.orange.500": {
+      "value": "#fe8331",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:57"
+    },
+    "color.orange.600": {
+      "value": "#fe6703",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:58"
+    },
+    "color.orange.700": {
+      "value": "#dd5604",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:59"
+    },
+    "color.sun": {
+      "value": "#ffcc25",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:61"
+    },
+    "color.dot": {
+      "value": "#cccccc",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:62"
+    },
+    "color.cobalt": {
+      "value": "#062ae0",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:64"
+    },
+    "color.blur-dark": {
+      "value": "rgba(16,24,40,.7)",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:67"
+    },
+    "color.blur": {
+      "value": "rgba(255,255,255,.9)",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:69"
+    },
+    "color.inverse.secondary": {
+      "value": "rgba(255,255,255,.8)",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:70"
+    },
+    "color.inverse.tertiary": {
+      "value": "rgba(255,255,255,.5)",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:70"
+    },
+    "color.inverse.line": {
+      "value": "rgba(255,255,255,.1)",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:70"
+    },
+    "color.white": {
+      "value": "#ffffff",
+      "category": "color",
+      "layer": "foundation",
+      "cite": "src/index.css:109"
+    },
+    "font.family.display": {
+      "value": [
+        "Outfit",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "\"Helvetica Neue\"",
+        "\"Segoe UI\"",
+        "Ubuntu",
+        "Roboto",
+        "Noto",
+        "Arial",
+        "sans-serif"
+      ],
+      "category": "fontFamily",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:84"
+    },
+    "font.family.sans": {
+      "value": [
+        "Outfit",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "\"Helvetica Neue\"",
+        "\"Segoe UI\"",
+        "Ubuntu",
+        "Roboto",
+        "Noto",
+        "Arial",
+        "sans-serif"
+      ],
+      "category": "fontFamily",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:85"
+    },
+    "font.family.mono": {
+      "value": [
+        "\"IBM Plex Mono\"",
+        "ui-monospace",
+        "\"Cascadia Code\"",
+        "\"Source Code Pro\"",
+        "Menlo",
+        "Consolas",
+        "monospace"
+      ],
+      "category": "fontFamily",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:86"
+    },
+    "font.size.h1": {
+      "value": "48px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:90"
+    },
+    "font.size.h1-xl": {
+      "value": "64px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:91"
+    },
+    "font.size.h2": {
+      "value": "32px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:92"
+    },
+    "font.size.h2-xl": {
+      "value": "48px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:93"
+    },
+    "font.size.h3": {
+      "value": "24px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:94"
+    },
+    "font.size.h3-xl": {
+      "value": "32px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:95"
+    },
+    "font.size.h4": {
+      "value": "20px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:96"
+    },
+    "font.size.h4-xl": {
+      "value": "24px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:97"
+    },
+    "font.size.h5": {
+      "value": "18px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:98"
+    },
+    "font.size.stat": {
+      "value": "32px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:99"
+    },
+    "font.size.metric": {
+      "value": "64px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:100"
+    },
+    "font.size.badge": {
+      "value": "10px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:101"
+    },
+    "font.size.stat-lg": {
+      "value": "88px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:103"
+    },
+    "font.size.lead": {
+      "value": "18px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind-default-scale (rendered: extraction/measured-values.json renderedStyleSamples)"
+    },
+    "font.size.base": {
+      "value": "16px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind-default-scale (rendered: extraction/measured-values.json renderedStyleSamples)"
+    },
+    "font.size.sm": {
+      "value": "14px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind-default-scale (rendered: extraction/measured-values.json renderedStyleSamples)"
+    },
+    "font.size.xs": {
+      "value": "12px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind-default-scale (rendered: extraction/measured-values.json renderedStyleSamples)"
+    },
+    "font.size.2xl": {
+      "value": "24px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind-default-scale (rendered: extraction/measured-values.json renderedStyleSamples)"
+    },
+    "font.size.xl": {
+      "value": "20px",
+      "category": "fontSize",
+      "layer": "foundation",
+      "cite": "tailwind-default-scale (rendered: extraction/measured-values.json renderedStyleSamples)"
+    },
+    "font.weight.400": {
+      "value": 400,
+      "category": "fontWeight",
+      "layer": "foundation",
+      "cite": "CLONE_SPEC.md:155-181"
+    },
+    "font.weight.500": {
+      "value": 500,
+      "category": "fontWeight",
+      "layer": "foundation",
+      "cite": "CLONE_SPEC.md:155-181"
+    },
+    "font.weight.600": {
+      "value": 600,
+      "category": "fontWeight",
+      "layer": "foundation",
+      "cite": "CLONE_SPEC.md:155-181"
+    },
+    "font.weight.700": {
+      "value": 700,
+      "category": "fontWeight",
+      "layer": "foundation",
+      "cite": "CLONE_SPEC.md:155-181"
+    },
+    "font.tracking.display": {
+      "value": "-0.008em",
+      "category": "letterSpacing",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:82"
+    },
+    "radius.badge": {
+      "value": "4px",
+      "category": "radius",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:106"
+    },
+    "radius.lg": {
+      "value": "8px",
+      "category": "radius",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:107"
+    },
+    "radius.xl": {
+      "value": "12px",
+      "category": "radius",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:108"
+    },
+    "radius.2xl": {
+      "value": "16px",
+      "category": "radius",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:109"
+    },
+    "radius.none": {
+      "value": "0px",
+      "category": "radius",
+      "layer": "foundation",
+      "cite": "ASSET_MANIFEST.md:13"
+    },
+    "space.30": {
+      "value": "7.5rem",
+      "category": "spacing",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:77"
+    },
+    "space.50": {
+      "value": "12.5rem",
+      "category": "spacing",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:78"
+    },
+    "space.px4": {
+      "value": "4px",
+      "category": "spacing",
+      "layer": "foundation",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px8": {
+      "value": "8px",
+      "category": "spacing",
+      "layer": "foundation",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px12": {
+      "value": "12px",
+      "category": "spacing",
+      "layer": "foundation",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px16": {
+      "value": "16px",
+      "category": "spacing",
+      "layer": "foundation",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px24": {
+      "value": "24px",
+      "category": "spacing",
+      "layer": "foundation",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px32": {
+      "value": "32px",
+      "category": "spacing",
+      "layer": "foundation",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px40": {
+      "value": "40px",
+      "category": "spacing",
+      "layer": "foundation",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px48": {
+      "value": "48px",
+      "category": "spacing",
+      "layer": "foundation",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px64": {
+      "value": "64px",
+      "category": "spacing",
+      "layer": "foundation",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "space.px80": {
+      "value": "80px",
+      "category": "spacing",
+      "layer": "foundation",
+      "cite": "tailwind-default-scale (4px grid; used by section shell py-12/16, grid gaps, card p-10)"
+    },
+    "container.width.xl": {
+      "value": "1152px",
+      "category": "container",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:124"
+    },
+    "container.width.2xl": {
+      "value": "1248px",
+      "category": "container",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:125"
+    },
+    "container.width.marquee": {
+      "value": "1240px",
+      "category": "container",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:131"
+    },
+    "container.width.megamenu": {
+      "value": "846px",
+      "category": "container",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:126"
+    },
+    "breakpoint.sm": {
+      "value": "640px",
+      "category": "breakpoint",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:30"
+    },
+    "breakpoint.md": {
+      "value": "768px",
+      "category": "breakpoint",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:30"
+    },
+    "breakpoint.lg": {
+      "value": "1024px",
+      "category": "breakpoint",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:30"
+    },
+    "breakpoint.xl": {
+      "value": "1280px",
+      "category": "breakpoint",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:30"
+    },
+    "breakpoint.2xl": {
+      "value": "1440px",
+      "category": "breakpoint",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:30"
+    },
+    "breakpoint.ultrawide": {
+      "value": "2100px",
+      "category": "breakpoint",
+      "layer": "foundation",
+      "cite": "src/index.css:381"
+    },
+    "elevation.primary": {
+      "value": "0 32px 64px -16px rgba(3,7,17,.24)",
+      "category": "elevation",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:112"
+    },
+    "elevation.glow": {
+      "value": "0 0 100px 40px rgba(255,0,255,.3)",
+      "category": "elevation",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:113"
+    },
+    "blur.xs": {
+      "value": "4px",
+      "category": "blur",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:116"
+    },
+    "blur.sm": {
+      "value": "8px",
+      "category": "blur",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:117"
+    },
+    "blur.md": {
+      "value": "12px",
+      "category": "blur",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:118"
+    },
+    "blur.lg": {
+      "value": "16px",
+      "category": "blur",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:119"
+    },
+    "blur.xl": {
+      "value": "24px",
+      "category": "blur",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:120"
+    },
+    "blur.3xl": {
+      "value": "64px",
+      "category": "blur",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:121"
+    },
+    "duration.150": {
+      "value": "150ms",
+      "category": "duration",
+      "layer": "foundation",
+      "cite": "src/index.css:95"
+    },
+    "duration.200": {
+      "value": "200ms",
+      "category": "duration",
+      "layer": "foundation",
+      "cite": "src/components/Navbar.jsx:181"
+    },
+    "duration.250": {
+      "value": "250ms",
+      "category": "duration",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:146"
+    },
+    "duration.300": {
+      "value": "300ms",
+      "category": "duration",
+      "layer": "foundation",
+      "cite": "src/components/Navbar.jsx:20"
+    },
+    "duration.400": {
+      "value": "400ms",
+      "category": "duration",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:147"
+    },
+    "duration.500": {
+      "value": "500ms",
+      "category": "duration",
+      "layer": "foundation",
+      "cite": "src/components/AnnouncementBar.jsx:66"
+    },
+    "duration.1000": {
+      "value": "1000ms",
+      "category": "duration",
+      "layer": "foundation",
+      "cite": "src/index.css:390"
+    },
+    "duration.8000": {
+      "value": "8000ms",
+      "category": "duration",
+      "layer": "foundation",
+      "cite": "src/components/AnnouncementBar.jsx:26"
+    },
+    "duration.30000": {
+      "value": "30000ms",
+      "category": "duration",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:161"
+    },
+    "easing.standard": {
+      "value": "cubic-bezier(.4,0,.2,1)",
+      "category": "easing",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:141"
+    },
+    "easing.reveal": {
+      "value": "cubic-bezier(0,0,0,1)",
+      "category": "easing",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:142"
+    },
+    "easing.slider": {
+      "value": "cubic-bezier(.25,1,.5,1)",
+      "category": "easing",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:143"
+    },
+    "easing.in-out": {
+      "value": "ease-in-out",
+      "category": "easing",
+      "layer": "foundation",
+      "cite": "src/index.css:390"
+    },
+    "easing.linear": {
+      "value": "linear",
+      "category": "easing",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:161"
+    },
+    "gradient.01": {
+      "value": "background-color: rgb(255, 174, 0); background-image: radial-gradient(65% 60% at 70% 45%, rgba(255, 135, 7, 0.9) 20%, transparent 50%), radial-gradient(40% 100% at 73% 65%, rgb(255, 38, 0) 15%, transparent 34%), radial-gradient(40% 100% at 66% 90%, rgba(255, 38, 0, 0.9) 15%, transparent 30%), radial-gradient(85% 100% at 48% 45%, rgba(255, 135, 7, 0.7) 20%, transparent 45%);",
+      "category": "gradient",
+      "layer": "foundation",
+      "cite": "src/index.css:288-294"
+    },
+    "gradient.02": {
+      "value": "background-color: rgb(255, 140, 0); background-image: radial-gradient(48% 30% at 90% 19%, rgba(106, 0, 255, 0.4) 35%, transparent 70%), radial-gradient(38% 50% at 90% 39%, transparent 70%), radial-gradient(20% 10% at 65% 34%, rgba(76, 0, 255, 0.3) 5%, transparent 90%), radial-gradient(circle at 105% 88%, rgb(68, 0, 255) 10%, transparent 25%), radial-gradient(40% 100% at 57% 95%, rgba(68, 0, 255, 0.6) 15%, transparent 25%), radial-gradient(68% 38% at 52% 43%, rgba(60, 0, 255, 0.8) 5%, transparent 50%), radial-gradient(48% 38% at 42% 53%, rgba(106, 0, 255, 0.8) 25%, transparent 50%), radial-gradient(20% 25% at 65% 70%, rgba(190, 79, 255, 0.5) 50%, transparent 100%), radial-gradient(48% 30% at 52% 65%, rgb(106, 0, 255) 35%, transparent 70%), radial-gradient(48% 38% at 62% 83%, rgba(106, 0, 255, 0.8) 25%, transparent 50%), radial-gradient(48% 30% at 62% 85%, rgb(106, 0, 255) 35%, transparent 70%), radial-gradient(48% 38% at 70% 99%, rgba(106, 0, 255, 0.8) 25%, transparent 50%), radial-gradient(48% 30% at 70% 99%, rgb(106, 0, 255) 35%, transparent 70%), radial-gradient(circle at 2% 5%, rgb(255, 182, 10) 5%, transparent 20%), radial-gradient(70% 90% at 90% 70%, rgb(127, 61, 232) 30%, transparent 90%), radial-gradient(100% 140% at 70% 70%, rgb(255, 140, 0) 40%, transparent 50%);",
+      "category": "gradient",
+      "layer": "foundation",
+      "cite": "src/index.css:249-267"
+    },
+    "gradient.05": {
+      "value": "background-color: rgb(255, 140, 0); background-image: radial-gradient(25% 40% at 100% 53%, rgb(255, 222, 57) 10%, transparent 50%), radial-gradient(35% 90% at 95% 80%, rgb(255, 222, 57) 10%, rgba(255, 140, 0, 0.7) 70%, transparent 100%), radial-gradient(38% 38% at 60% 78%, rgb(255, 114, 27) 20%, rgba(190, 67, 176, 0.65) 60%, transparent 130%), radial-gradient(47% 10% at 50% 40%, rgb(99, 85, 253) 25%, rgba(97, 83, 253, 0.5) 56%, transparent 60%), radial-gradient(69% 30% at 30% 27%, rgb(99, 85, 253) 37%, transparent 66%), radial-gradient(80% 20% at 30% 40%, rgb(99, 85, 253) 65%, transparent 100%), radial-gradient(60% 40% at 10% 50%, rgb(63, 79, 255) 40%, transparent 80%), radial-gradient(45% 15% at 45% 40%, rgb(99, 85, 253) 60%, rgba(99, 85, 253, 0.6) 68%, transparent 90%), radial-gradient(40% 20% at 90% 110%, rgb(99, 85, 253) 65%, rgba(99, 85, 253, 0.8) 75%, transparent 100%), radial-gradient(70% 200% at 0 50%, rgb(99, 85, 253) 40%, rgba(190, 67, 176, 0.85) 60%, transparent 80%), radial-gradient(40% 30% at 30% 34%, rgba(177, 85, 253, 0.7) 80%, transparent 100%);",
+      "category": "gradient",
+      "layer": "foundation",
+      "cite": "src/index.css:230-243"
+    },
+    "gradient.12": {
+      "value": "background-color: rgb(6, 42, 224); background-image: radial-gradient(circle at -35% 10%, rgb(118, 85, 253) 12%, transparent 60%), radial-gradient(circle at -35% 100%, rgb(118, 85, 253) 35%, transparent 60%), radial-gradient(circle at 70% -30%, rgb(35, 218, 255) 22%, transparent 50%), radial-gradient(circle at 48% 30%, rgb(6, 42, 224) 20%, transparent 70%), radial-gradient(circle at 65% 110%, rgb(6, 42, 224) 15%, transparent 45%), radial-gradient(circle at 100% 100%, rgb(35, 218, 255) 40%, transparent 70%);",
+      "category": "gradient",
+      "layer": "foundation",
+      "cite": "src/index.css:273-281"
+    },
+    "gradient.26": {
+      "value": "background: linear-gradient(90deg, rgb(255, 85, 15) 35%, rgb(255, 140, 30) 55%, rgb(255, 195, 60) 65%, rgb(255, 225, 90) 75%, rgb(255, 240, 105));",
+      "category": "gradient",
+      "layer": "foundation",
+      "cite": "src/index.css:296-299"
+    },
+    "gradient.announcement-bar": {
+      "value": "background-color: #632ff5; background-image: linear-gradient(to right, #632ff5 80%, #fe8331);",
+      "category": "gradient",
+      "layer": "foundation",
+      "cite": "src/index.css:219-222"
+    },
+    "gradient.bottom-frequency": {
+      "value": "background-color: #fff; background-image: radial-gradient(800px 220px at 20% 100%, rgba(120, 83, 253, 0.35) 10%, transparent 100%), radial-gradient(400px 220px at 50% 100%, rgba(213, 53, 194, 0.15) 30%, transparent 100%), radial-gradient(600px 220px at 65% 100%, rgba(255, 156, 56, 0.3) 30%, transparent 100%), radial-gradient(800px 220px at 84% 100%, rgba(255, 222, 56, 0.25) 30%, transparent 100%);",
+      "category": "gradient",
+      "layer": "foundation",
+      "cite": "src/index.css:344-350"
+    },
+    "gradient.circle-overlay": {
+      "value": "content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 125vw; max-width: 125%; aspect-ratio: 1 / 1; border-radius: 50%; opacity: 0.64; z-index: 1; pointer-events: none; background-blend-mode: multiply; background-position: 50% center; background-repeat: no-repeat; background-size: cover; background-image: radial-gradient(circle, rgb(0, 170, 255) 0, rgb(0, 170, 255) 20%, transparent 20.1%), radial-gradient(circle, transparent 0, rgb(0, 136, 255) 40%, transparent 40.1%), radial-gradient(circle, transparent 0, rgb(0, 136, 255) 60%, transparent 60.1%), radial-gradient(circle, transparent 0, rgb(0, 136, 255) 80%, transparent 80.1%), radial-gradient(circle at 100% 0, rgb(0, 136, 255) 0, transparent 80%); box-shadow: theme('boxShadow.glow');",
+      "category": "gradient",
+      "layer": "foundation",
+      "cite": "src/index.css:307-330"
+    },
+    "gradient.grain": {
+      "value": "fractal-noise SVG tile (feTurbulence baseFrequency .8, 3 octaves) 250px, opacity .7, mix-blend multiply; per-gradient overrides",
+      "category": "gradient",
+      "layer": "foundation",
+      "cite": "src/index.css:198-212"
+    },
+    "stroke.s1": {
+      "value": "viewBox 0 0 2427 692",
+      "category": "stroke",
+      "layer": "foundation",
+      "cite": "src/components/sections/Baton.jsx:13-19"
+    },
+    "stroke.s3": {
+      "value": "viewBox 0 0 2428 582",
+      "category": "stroke",
+      "layer": "foundation",
+      "cite": "src/components/sections/Baton.jsx:21-27"
+    },
+    "stroke.s4": {
+      "value": "viewBox 0 0 2427 516",
+      "category": "stroke",
+      "layer": "foundation",
+      "cite": "src/components/sections/Baton.jsx:29-35"
+    },
+    "stroke.s5": {
+      "value": "viewBox 0 0 2506 697",
+      "category": "stroke",
+      "layer": "foundation",
+      "cite": "src/components/sections/Baton.jsx:37-43"
+    },
+    "stroke.s6": {
+      "value": "viewBox 0 0 1276 899",
+      "category": "stroke",
+      "layer": "foundation",
+      "cite": "src/components/sections/Baton.jsx:45-51"
+    },
+    "stroke.s8": {
+      "value": "viewBox 0 0 2277 847",
+      "category": "stroke",
+      "layer": "foundation",
+      "cite": "src/components/sections/Baton.jsx:53-59"
+    },
+    "size.icon.16": {
+      "value": "16px",
+      "category": "iconSize",
+      "layer": "foundation",
+      "cite": "src/components/MegaMenu.jsx:2"
+    },
+    "size.icon.20": {
+      "value": "20px",
+      "category": "iconSize",
+      "layer": "foundation",
+      "cite": "src/components/MegaMenu.jsx:13"
+    },
+    "size.icon.24": {
+      "value": "24px",
+      "category": "iconSize",
+      "layer": "foundation",
+      "cite": "src/components/sections/parts.jsx:3"
+    },
+    "size.icon.32": {
+      "value": "32px",
+      "category": "iconSize",
+      "layer": "foundation",
+      "cite": "src/components/sections/Feat.jsx:16"
+    },
+    "size.icon.40": {
+      "value": "40px",
+      "category": "iconSize",
+      "layer": "foundation",
+      "cite": "src/components/MegaMenu.jsx:12"
+    },
+    "size.icon.56": {
+      "value": "56px",
+      "category": "iconSize",
+      "layer": "foundation",
+      "cite": "src/components/sections/Feat.jsx:16"
+    },
+    "z.5": {
+      "value": "5",
+      "category": "zIndex",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:137"
+    },
+    "z.60": {
+      "value": "60",
+      "category": "zIndex",
+      "layer": "foundation",
+      "cite": "tailwind.config.cjs:138"
+    },
+    "text.primary": {
+      "value": "{color.ink.950}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.ink.950",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "text.secondary": {
+      "value": "{color.ink.800}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.ink.800",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "text.tertiary": {
+      "value": "{color.ink.600}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.ink.600",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "text.quaternary": {
+      "value": "{color.ink.500}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.ink.500",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "text.disabled": {
+      "value": "{color.ink.400}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.ink.400",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "text.inverse": {
+      "value": "{color.white}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.white",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "text.inverse-secondary": {
+      "value": "{color.inverse.secondary}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.inverse.secondary",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "text.inverse-tertiary": {
+      "value": "{color.inverse.tertiary}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.inverse.tertiary",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "text.accent": {
+      "value": "{color.purple.600}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.purple.600",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "text.accent-inverse": {
+      "value": "{color.purple.400}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.purple.400",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "text.on-gradient-card": {
+      "value": "{color.ink.50}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.ink.50",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "surface.page": {
+      "value": "{color.white}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.white",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "surface.inverse": {
+      "value": "{color.ink.950}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.ink.950",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "surface.subtle": {
+      "value": "{color.ink.50}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.ink.50",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "surface.blur": {
+      "value": "{color.blur}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.blur",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "surface.blur-dark": {
+      "value": "{color.blur-dark}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.blur-dark",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "surface.cta-band": {
+      "value": "{gradient.12}",
+      "category": "gradient",
+      "layer": "semantic",
+      "resolves": "gradient.12",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "surface.cta-card": {
+      "value": "{gradient.05}",
+      "category": "gradient",
+      "layer": "semantic",
+      "resolves": "gradient.05",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "surface.announcement": {
+      "value": "{gradient.announcement-bar}",
+      "category": "gradient",
+      "layer": "semantic",
+      "resolves": "gradient.announcement-bar",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "surface.feature-wash": {
+      "value": "{gradient.bottom-frequency}",
+      "category": "gradient",
+      "layer": "semantic",
+      "resolves": "gradient.bottom-frequency",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "border.default": {
+      "value": "{color.ink.200}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.ink.200",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "border.hover": {
+      "value": "{color.ink.400}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.ink.400",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "border.inverse": {
+      "value": "{color.ink.800}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.ink.800",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "border.inverse-hover": {
+      "value": "{color.ink.700}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.ink.700",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "border.inverse-subtle": {
+      "value": "{color.inverse.line}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.inverse.line",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "border.form-inverse": {
+      "value": "{color.ink.600}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.ink.600",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "action.primary.bg": {
+      "value": "{color.orange.600}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.orange.600",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "action.primary.text": {
+      "value": "{color.ink.950}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.ink.950",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "action.primary.hover-sheen": {
+      "value": "{color.sun}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.sun",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "action.secondary.hover-bg": {
+      "value": "{color.ink.800}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.ink.800",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "action.focus-ring": {
+      "value": "{color.orange.600}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.orange.600",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "action.disabled.bg": {
+      "value": "{color.ink.100}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.ink.100",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "action.disabled.text": {
+      "value": "{color.ink.400}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.ink.400",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "indicator.active": {
+      "value": "{color.orange.600}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.orange.600",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "indicator.slider-active": {
+      "value": "{color.purple.600}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.purple.600",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "indicator.slider-inactive": {
+      "value": "{color.dot}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.dot",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "chip.bg": {
+      "value": "{color.purple.100}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.purple.100",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "chip.text": {
+      "value": "{color.purple.600}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.purple.600",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "badge.bg": {
+      "value": "{color.purple.600}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.purple.600",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "menu.strip.bg": {
+      "value": "{color.purple.600}",
+      "category": "color",
+      "layer": "semantic",
+      "resolves": "color.purple.600",
+      "cite": "tokens/10-semantic/semantic.json"
+    },
+    "button.radius": {
+      "value": "{radius.xl}",
+      "category": "radius",
+      "layer": "component",
+      "resolves": "radius.xl",
+      "cite": "tokens/20-component/component.json"
+    },
+    "button.font": {
+      "value": "{font.family.sans}",
+      "category": "fontFamily",
+      "layer": "component",
+      "resolves": "font.family.sans",
+      "cite": "tokens/20-component/component.json"
+    },
+    "button.weight": {
+      "value": "{font.weight.500}",
+      "category": "fontWeight",
+      "layer": "component",
+      "resolves": "font.weight.500",
+      "cite": "tokens/20-component/component.json"
+    },
+    "button.transition": {
+      "value": "{duration.150}",
+      "category": "duration",
+      "layer": "component",
+      "resolves": "duration.150",
+      "cite": "tokens/20-component/component.json"
+    },
+    "button.size.small.text": {
+      "value": "{font.size.sm}",
+      "category": "fontSize",
+      "layer": "component",
+      "resolves": "font.size.sm",
+      "cite": "tokens/20-component/component.json"
+    },
+    "button.size.medium.text": {
+      "value": "{font.size.base}",
+      "category": "fontSize",
+      "layer": "component",
+      "resolves": "font.size.base",
+      "cite": "tokens/20-component/component.json"
+    },
+    "button.size.large.text": {
+      "value": "{font.size.base}",
+      "category": "fontSize",
+      "layer": "component",
+      "resolves": "font.size.base",
+      "cite": "tokens/20-component/component.json"
+    },
+    "card.radius": {
+      "value": "{radius.2xl}",
+      "category": "radius",
+      "layer": "component",
+      "resolves": "radius.2xl",
+      "cite": "tokens/20-component/component.json"
+    },
+    "card.border": {
+      "value": "{border.default}",
+      "category": "color",
+      "layer": "component",
+      "resolves": "border.default",
+      "cite": "tokens/20-component/component.json"
+    },
+    "card.padding": {
+      "value": "{space.px40}",
+      "category": "spacing",
+      "layer": "component",
+      "resolves": "space.px40",
+      "cite": "tokens/20-component/component.json"
+    },
+    "image.radius": {
+      "value": "{radius.2xl}",
+      "category": "radius",
+      "layer": "component",
+      "resolves": "radius.2xl",
+      "cite": "tokens/20-component/component.json"
+    },
+    "panel-media.radius": {
+      "value": "{radius.lg}",
+      "category": "radius",
+      "layer": "component",
+      "resolves": "radius.lg",
+      "cite": "tokens/20-component/component.json"
+    },
+    "chip.radius": {
+      "value": "{radius.badge}",
+      "category": "radius",
+      "layer": "component",
+      "resolves": "radius.badge",
+      "cite": "tokens/20-component/component.json"
+    },
+    "tab.indicator.light": {
+      "value": "{indicator.active}",
+      "category": "color",
+      "layer": "component",
+      "resolves": "indicator.active",
+      "cite": "tokens/20-component/component.json"
+    },
+    "tab.indicator.dark": {
+      "value": "{indicator.active}",
+      "category": "color",
+      "layer": "component",
+      "resolves": "indicator.active",
+      "cite": "tokens/20-component/component.json"
+    },
+    "megamenu.width": {
+      "value": "{container.width.megamenu}",
+      "category": "container",
+      "layer": "component",
+      "resolves": "container.width.megamenu",
+      "cite": "tokens/20-component/component.json"
+    },
+    "megamenu.shadow": {
+      "value": "{elevation.primary}",
+      "category": "elevation",
+      "layer": "component",
+      "resolves": "elevation.primary",
+      "cite": "tokens/20-component/component.json"
+    },
+    "section.padding.mobile": {
+      "value": "{space.px48}",
+      "category": "spacing",
+      "layer": "component",
+      "resolves": "space.px48",
+      "cite": "tokens/20-component/component.json"
+    },
+    "section.padding.desktop": {
+      "value": "{space.px64}",
+      "category": "spacing",
+      "layer": "component",
+      "resolves": "space.px64",
+      "cite": "tokens/20-component/component.json"
+    },
+    "section.padding.dark-lg": {
+      "value": "{space.30}",
+      "category": "spacing",
+      "layer": "component",
+      "resolves": "space.30",
+      "cite": "tokens/20-component/component.json"
+    },
+    "grid.gap.mobile": {
+      "value": "{space.px16}",
+      "category": "spacing",
+      "layer": "component",
+      "resolves": "space.px16",
+      "cite": "tokens/20-component/component.json"
+    },
+    "grid.gap.desktop": {
+      "value": "{space.px24}",
+      "category": "spacing",
+      "layer": "component",
+      "resolves": "space.px24",
+      "cite": "tokens/20-component/component.json"
+    }
+  }
+}

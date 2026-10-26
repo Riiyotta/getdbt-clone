@@ -1,0 +1,12 @@
+{
+  "id": "component.image-card",
+  "title": "Image card",
+  "description": "bordered blur card p 16/16/24: 4:3 image (radius 8 box) -> heading-4 link -> paragraph -> text link pinned bottom.",
+  "uses": [
+    "primitive.image",
+    "primitive.text-link"
+  ],
+  "evidence": [
+    "src/components/sections/Feat.jsx:24-37"
+  ]
+}

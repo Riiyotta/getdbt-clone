@@ -1,0 +1,11 @@
+{
+  "id": "component.quote-card",
+  "title": "Quote card",
+  "description": "quote icon -> logo (max 112) -> 24/32 600 quote -> 14/20 attribution (name #030711, role #6a7282).",
+  "uses": [
+    "primitive.icon"
+  ],
+  "evidence": [
+    "src/components/sections/QuoteBand.jsx:10-23"
+  ]
+}

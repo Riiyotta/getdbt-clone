@@ -1,0 +1,35 @@
+{
+  "$schemaNote": "flat token map: path -> {value, category, cite}. Values resolved from the clone's real token sources (tailwind.config.cjs, src/index.css, component files).",
+  "tokens": {
+    "breakpoint.sm": {
+      "value": "640px",
+      "category": "breakpoint",
+      "cite": "tailwind.config.cjs:30"
+    },
+    "breakpoint.md": {
+      "value": "768px",
+      "category": "breakpoint",
+      "cite": "tailwind.config.cjs:30"
+    },
+    "breakpoint.lg": {
+      "value": "1024px",
+      "category": "breakpoint",
+      "cite": "tailwind.config.cjs:30"
+    },
+    "breakpoint.xl": {
+      "value": "1280px",
+      "category": "breakpoint",
+      "cite": "tailwind.config.cjs:30"
+    },
+    "breakpoint.2xl": {
+      "value": "1440px",
+      "category": "breakpoint",
+      "cite": "tailwind.config.cjs:30"
+    },
+    "breakpoint.ultrawide": {
+      "value": "2100px",
+      "category": "breakpoint",
+      "cite": "src/index.css:381"
+    }
+  }
+}
